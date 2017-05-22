@@ -1,4 +1,4 @@
-Unfortunately, there are many different versions of the nex library which are not backwards compatible. This page lists which versions are used by games, and wheter the game has debug symbols.
+Unfortunately, there are many different versions of the nex library which are not backwards compatible, and even game-specific patches. This page lists which versions are used by games, and wheter the game has debug symbols.
 
 * MM = Match Making
 * DS = Data Store
