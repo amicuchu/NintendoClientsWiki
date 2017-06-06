@@ -1,4 +1,5 @@
 The following method names are merely guesses, based on what the method does.
+
 | Method ID | Method Name |
 | --- | --- |
 | 1 | GetAllInformation |
