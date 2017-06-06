@@ -1,3 +1,4 @@
+The following method names are merely guesses, based on what the method does.
 | Method ID | Method Name |
 | --- | --- |
 | 1 | GetAllInformation |
@@ -12,7 +13,7 @@
 | 10 | ? |
 | 11 | ? |
 | 12 | ? |
-| 13 | ? |
+| 13 | UpdatePresence |
 | 14 | ? |
 | 15 | ? |
 | 16 | ? |
