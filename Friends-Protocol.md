@@ -1,4 +1,5 @@
 | Method ID | Method Name |
+| --- | --- |
 | 1 | GetAllInformation |
 | 2 | ? |
 | 3 | ? |
