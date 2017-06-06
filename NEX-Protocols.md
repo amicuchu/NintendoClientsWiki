@@ -14,7 +14,7 @@
 | 0x32 | [[Match making "ext" | Match Making Protocol Ext]] |
 | 0x64 | [[Nintendo notification events | Nintendo Notification Event Protocol]] |
 | 0x65 | Friends-related? |
-| 0x66 | Friends |
+| 0x66 | [[Friends | Friends Protocol]] |
 | 0x6D | [[Matchmake extension | Matchmake Extension Protocol]] |
 | 0x6E | [[Utility | Utility Protocol]] |
 | 0x70 | [[Ranking | Ranking Protocol]] |
