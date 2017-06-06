@@ -4,7 +4,7 @@
 | 0x03 | NAT traversal |
 | 0x0A | [[Ticket granting (Kerberos authentication) | Authentication Protocol]] |
 | 0x0B | [[Secure connection | Secure Protocol]] |
-| 0x0E | [[Notification events | Notification Event Protocol]] |
+| 0x0E | [[Notification events | Notification Protocol]] |
 | 0x12 | [[Health | Health Protocol]] |
 | 0x13 | [[Monitoring | Monitoring Protocol]] |
 | 0x15 | [[Match making | Match Making Protocol]] |
