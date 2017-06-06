@@ -1,9 +1,9 @@
 | ID | Protocol |
 | --- | --- |
-| 0x01 | Remote log device|
+| 0x01 | Remote log device |
 | 0x03 | NAT traversal |
-| 0x0A | Ticket granting (Kerberos authentication) |
-| 0x0B | Secure connection |
+| 0x0A | [Ticket granting (Kerberos authentication)](wiki/Authentication-Protocol) |
+| 0x0B | [Secure connection](Secure-Protocol) |
 | 0x0E | Notification events |
 | 0x12 | Health |
 | 0x13 | Monitoring (health) |
