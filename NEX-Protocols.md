@@ -16,8 +16,8 @@
 | 0x65 | Friends-related? |
 | 0x66 | Friends |
 | 0x6D | [[Matchmake extension | Matchmake Extension Protocol]] |
-| 0x6E | Utility |
+| 0x6E | [[Utility | Utility Protocol]] |
 | 0x70 | [[Ranking | Ranking Protocol]] |
 | 0x73 | [[Data store | Data Store Protocol]] |
-| 0x7A | Ranking 2 |
+| 0x7A | [[Ranking 2 | Ranking Protocol 2]] |
 | 0x?? | [[NAT traversal report (internal) | NAT Traversal Report Internal Protocol]] |
