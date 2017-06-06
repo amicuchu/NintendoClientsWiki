@@ -5,6 +5,6 @@ Each game server got two different servers: an authentication server and a secur
 | 1 | Login |
 | 2 | LoginEx |
 | 3 | RequestTicket |
-| 4 | GetPid |
+| 4 | GetPID |
 | 5 | GetName |
 | 6 | LoginWithContext |
