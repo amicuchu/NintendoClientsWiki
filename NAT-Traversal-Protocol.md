@@ -1,3 +1,6 @@
+[[NEX Protocols]] > NAT Traversal (0x03)
+---
+
 | Method ID | Method Name |
 | --- | --- |
 | 1 | RequestProbeInitiation |
