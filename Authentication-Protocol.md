@@ -1,3 +1,6 @@
+[[NEX Protocols]] > Authentication (0x0A)
+---
+
 Each game server got two different servers: an authentication server and a secure server. This is the only protocol that runs on the authentication server. Other protocols are only available on the secure server.
 
 | Method ID | Method Name |
