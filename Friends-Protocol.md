@@ -1,3 +1,5 @@
+## [[NEX Protocols]] > Friends (0x66)
+
 The following method names are merely guesses, based on what the method does.
 
 | Method ID | Method Name |
