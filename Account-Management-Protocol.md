@@ -1,3 +1,5 @@
+## [[NEX Protocols]] > Account Management (0x19)
+
 | Method ID | Method Name |
 | --- | --- |
 | 1 | CreateAccount |
