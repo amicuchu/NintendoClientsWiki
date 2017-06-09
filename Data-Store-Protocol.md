@@ -1,3 +1,5 @@
+## [[NEX Protocols]] > Data Store (0x73)
+
 | Method ID | Method Name |
 | --- | --- |
 | 1 | PrepareGetObjectV1 |
