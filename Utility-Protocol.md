@@ -1,3 +1,5 @@
+## [[NEX Protocols]] > Utility (0x6E)
+
 | Method ID | Method Name |
 | --- | --- |
 | 1 | AcquireNexUniqueId |
