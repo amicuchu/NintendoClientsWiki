@@ -1,3 +1,5 @@
+## [[NEX Protocols]] > Match Making Ext (0x32)
+
 | Method ID | Method Name |
 | --- | --- |
 | 1 | EndParticipation |
