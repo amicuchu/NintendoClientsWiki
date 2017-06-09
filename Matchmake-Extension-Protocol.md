@@ -1,3 +1,5 @@
+## [[NEX Protocols]] > Matchmake Extension (0x6D)
+
 | Method ID | Method Name |
 | --- | --- |
 | 1 | CloseParticipation |
