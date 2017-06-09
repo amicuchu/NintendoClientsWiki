@@ -1,3 +1,5 @@
+## [[NEX Protocols]] > Secure Connection (0x0B)
+
 | Method ID | Method Name |
 | --- | --- |
 | 1 | Register |
