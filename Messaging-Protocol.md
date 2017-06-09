@@ -1,3 +1,5 @@
+## [[NEX Protocols]] > Messaging (0x17)
+
 | Method ID | Method Name |
 | --- | --- |
 | 1 | DeliverMessage |
