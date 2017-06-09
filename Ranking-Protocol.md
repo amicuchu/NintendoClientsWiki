@@ -1,3 +1,5 @@
+## [[NEX Protocols]] > Ranking (0x70)
+
 | Method ID | Method Name |
 | --- | --- |
 | 1 | UploadScore |
