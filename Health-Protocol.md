@@ -1,3 +1,5 @@
+## [[NEX Protocols]] > Health (0x12)
+
 | Method ID | Method Name |
 | --- | --- |
 | 1 | PingDaemon |
