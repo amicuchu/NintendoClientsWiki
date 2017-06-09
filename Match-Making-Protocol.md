@@ -1,3 +1,5 @@
+## [[NEX Protocols]] > Match Making (0x15)
+
 | Method ID | Method Name |
 | --- | --- |
 | 1 | RegisterGathering |
