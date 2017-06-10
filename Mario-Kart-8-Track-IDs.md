@@ -34,7 +34,7 @@ Mario Kart 8 uses less random ids to access rankings than donkey kong. Here's a 
 ||
 | Leaf | DS Wario Stadium | 46 |
 | Leaf | GCN Sherbet Land | 37 |
-| Leaf | 3DS Music Park | 54 |
+| Leaf | 3DS Music Park | 39 |
 | Leaf | N64 Yoshi Valley | 45 |
 ||
 | Lightning | DS Tick-Tock Clock | 44 |
