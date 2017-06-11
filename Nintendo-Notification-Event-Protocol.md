@@ -3,4 +3,4 @@
 | Method ID | Method Name |
 | --- | --- |
 | 1 | ProcessNintendoNotificationEvent |
-| 2 | ? (only used in iosu) |
+| 2 | ProcessNintendoNotificationEvent (iosu) |
