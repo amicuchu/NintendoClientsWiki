@@ -1,207 +1,237 @@
-| Code | Library | Description |
-| --- | --- | --- |
-| 106-0102 | NEX | Core::Unknown |
-| 106-0103 | NEX | Core::NotImplemented |
-| 106-0104 | NEX | Core::InvalidPointer |
-| 106-0105 | NEX | Core::OperationAborted |
-| 106-0106 | NEX | Core::Exception |
-| 106-0107 | NEX | Core::AccessDenied |
-| 106-0108 | NEX | Core::InvalidHandle |
-| 106-0109 | NEX | Core::InvalidIndex |
-| 106-0110 | NEX | Core::OutOfMemory |
-| 106-0111 | NEX | Core::InvalidArgument |
-| 106-0112 | NEX | Core::Timeout |
-| 106-0113 | NEX | Core::InitializationFailure |
-| 106-0114 | NEX | Core::CallInitiationFailure |
-| 106-0115 | NEX | Core::RegistrationError |
-| 106-0116 | NEX | Core::BufferOverflow |
-| 106-0117 | NEX | Core::InvalidLockState |
-| 106-0118 | NEX | Core::InvalidSequence |
-| 106-0301 | NEX | RendezVous::ConnectionFailure |
-| 106-0302 | NEX | RendezVous::NotAuthenticated |
-| 106-0303 | NEX | RendezVous::InvalidUsername |
-| 106-0304 | NEX | RendezVous::InvalidPassword |
-| 106-0305 | NEX | RendezVous::UsernameAlreadyExists |
-| 106-0306 | NEX | RendezVous::AccountDisabled |
-| 106-0307 | NEX | RendezVous::AccountExpired |
-| 106-0308 | NEX | RendezVous::ConcurrentLoginDenied |
-| 106-0309 | NEX | RendezVous::EncryptionFailure |
-| 106-0310 | NEX | RendezVous::InvalidPID |
-| 106-0311 | NEX | RendezVous::MaxConnectionsReached |
-| 106-0312 | NEX | RendezVous::InvalidGID |
-| 106-0313 | NEX | RendezVous::InvalidControlScriptID |
-| 106-0314 | NEX | RendezVous::InvalidOperationInLiveEnvironment |
-| 106-0315 | NEX | RendezVous::DuplicateEntry |
-| 106-0316 | NEX | RendezVous::ControlScriptFailure |
-| 106-0317 | NEX | RendezVous::ClassNotFound |
-| 106-0318 | NEX | RendezVous::SessionVoid |
-| 106-0320 | NEX | RendezVous::DDLMismatch |
-| 106-0321 | NEX | RendezVous::InvalidConfiguration |
-| 106-0322 | NEX | RendezVous::SessionFull |
-| 106-0323 | NEX | RendezVous::InvalidGatheringPassword |
-| 106-0324 | NEX | RendezVous::WithoutParticipationPeriod |
-| 106-0325 | NEX | RendezVous::PersistentGatheringCreationMax |
-| 106-0326 | NEX | RendezVous::PersistentGatheringParticipationMax |
-| 106-0327 | NEX | RendezVous::DeniedByParticipants |
-| 106-0328 | NEX | RendezVous::ParticipantInBlackList |
-| 106-0329 | NEX | RendezVous::GameServerMaintenance |
-| 106-0330 | NEX | RendezVous::OperationPostpone |
-| 106-0331 | NEX | RendezVous::OutOfRatingRange |
-| 106-0332 | NEX | RendezVous::ConnectionDisconnected |
-| 106-0333 | NEX | RendezVous::InvalidOperation |
-| 106-0334 | NEX | RendezVous::NotParticipatedGathering |
-| 106-0335 | NEX | RendezVous::MatchmakeSessionUserPasswordUnmatch |
-| 106-0336 | NEX | RendezVous::MatchmakeSessionSystemPasswordUnmatch |
-| 106-0337 | NEX | RendezVous::UserIsOffline |
-| 106-0338 | NEX | RendezVous::AlreadyParticipatedGathering |
-| 106-0339 | NEX | RendezVous::PermissionDenied |
-| 106-0340 | NEX | RendezVous::NotFriend |
-| 106-0341 | NEX | RendezVous::SessionClosed |
-| 106-0342 | NEX | RendezVous::DatabaseTemporarilyUnavailable |
-| 106-0343 | NEX | RendezVous::InvalidUniqueId |
-| 106-0344 | NEX | RendezVous::MatchmakingWithdrawn |
-| 106-0345 | NEX | RendezVous::LimitExceeded |
-| 106-0401 | NEX | PythonCore::Exception |
-| 106-0402 | NEX | PythonCore::TypeError |
-| 106-0403 | NEX | PythonCore::IndexError |
-| 106-0404 | NEX | PythonCore::InvalidReference |
-| 106-0405 | NEX | PythonCore::CallFailure |
-| 106-0406 | NEX | PythonCore::MemoryError |
-| 106-0407 | NEX | PythonCore::KeyError |
-| 106-0408 | NEX | PythonCore::OperationError |
-| 106-0409 | NEX | PythonCore::ConversionError |
-| 106-0410 | NEX | PythonCore::ValidationError |
-| 106-0501 | NEX | Transport::Unknown |
-| 106-0502 | NEX | Transport::ConnectionFailure |
-| 106-0503 | NEX | Transport::InvalidUrl |
-| 106-0504 | NEX | Transport::InvalidKey |
-| 106-0505 | NEX | Transport::InvalidURLType |
-| 106-0506 | NEX | Transport::DuplicateEndpoint |
-| 106-0507 | NEX | Transport::IOError |
-| 106-0508 | NEX | Transport::Timeout |
-| 106-0509 | NEX | Transport::ConnectionReset |
-| 106-0510 | NEX | Transport::IncorrectRemoteAuthentication |
-| 106-0511 | NEX | Transport::ServerRequestError |
-| 106-0512 | NEX | Transport::DecompressionFailure |
-| 106-0513 | NEX | Transport::ReliableSendBufferFullFatal |
-| 106-0514 | NEX | Transport::UPnPCannotInit |
-| 106-0515 | NEX | Transport::UPnPCannotAddMapping |
-| 106-0516 | NEX | Transport::NatPMPCannotInit |
-| 106-0517 | NEX | Transport::NatPMPCannotAddMapping |
-| 106-0519 | NEX | Transport::UnsupportedNAT |
-| 106-0520 | NEX | Transport::DnsError |
-| 106-0521 | NEX | Transport::ProxyError |
-| 106-0522 | NEX | Transport::DataRemaining |
-| 106-0523 | NEX | Transport::NoBuffer |
-| 106-0524 | NEX | Transport::NotFound |
-| 106-0525 | NEX | Transport::TemporaryServerError |
-| 106-0526 | NEX | Transport::PermanentServerError |
-| 106-0527 | NEX | Transport::ServiceUnavailable |
-| 106-0528 | NEX | Transport::ReliableSendBufferFull |
-| 106-0529 | NEX | Transport::InvalidStation |
-| 106-0530 | NEX | Transport::InvalidSubStreamID |
-| 106-0531 | NEX | Transport::PacketBufferFull |
-| 106-0532 | NEX | Transport::NatTraversalError |
-| 106-0533 | NEX | Transport::NatCheckError |
-| 106-0602 | NEX | DOCore::StationNotReached |
-| 106-0603 | NEX | DOCore::TargetStationDisconnect |
-| 106-0604 | NEX | DOCore::LocalStationLeaving |
-| 106-0605 | NEX | DOCore::ObjectNotFound |
-| 106-0606 | NEX | DOCore::InvalidRole |
-| 106-0607 | NEX | DOCore::CallTimeout |
-| 106-0608 | NEX | DOCore::RMCDispatchFailed |
-| 106-0609 | NEX | DOCore::MigrationInProgress |
-| 106-0610 | NEX | DOCore::NoAuthority |
-| 106-0611 | NEX | DOCore::NoTargetStationSpecified |
-| 106-0612 | NEX | DOCore::JoinFailed |
-| 106-0613 | NEX | DOCore::JoinDenied |
-| 106-0614 | NEX | DOCore::ConnectivityTestFailed |
-| 106-0615 | NEX | DOCore::Unknown |
-| 106-0616 | NEX | DOCore::UnfreedReferences |
-| 106-0617 | NEX | DOCore::JobTerminationFailed |
-| 106-0618 | NEX | DOCore::InvalidState |
-| 106-0619 | NEX | DOCore::FaultRecoveryFatal |
-| 106-0620 | NEX | DOCore::FaultRecoveryJobProcessFailed |
-| 106-0621 | NEX | DOCore::StationInconsitency |
-| 106-0622 | NEX | DOCore::AbnormalMasterState |
-| 106-0623 | NEX | DOCore::VersionMismatch |
-| 106-0702 | NEX | FPD::NotInitialized |
-| 106-0703 | NEX | FPD::AlreadyInitialized |
-| 106-0704 | NEX | FPD::NotConnected |
-| 106-0705 | NEX | FPD::Connected |
-| 106-0706 | NEX | FPD::InitializationFailure |
-| 106-0707 | NEX | FPD::OutOfMemory |
-| 106-0708 | NEX | FPD::RmcFailed |
-| 106-0709 | NEX | FPD::InvalidArgument |
-| 106-0710 | NEX | FPD::InvalidLocalAccountID |
-| 106-0711 | NEX | FPD::InvalidPrincipalID |
-| 106-0712 | NEX | FPD::InvalidLocalFriendCode |
-| 106-0713 | NEX | FPD::LocalAccountNotExists |
-| 106-0714 | NEX | FPD::LocalAccountNotLoaded |
-| 106-0715 | NEX | FPD::LocalAccountAlreadyLoaded |
-| 106-0716 | NEX | FPD::FriendAlreadyExists |
-| 106-0717 | NEX | FPD::FriendNotExists |
-| 106-0718 | NEX | FPD::FriendNumMax |
-| 106-0719 | NEX | FPD::NotFriend |
-| 106-0720 | NEX | FPD::FileIO |
-| 106-0721 | NEX | FPD::P2PInternetProhibited |
-| 106-0722 | NEX | FPD::Unknown |
-| 106-0801 | NEX | Authentication::NASAuthenticateError |
-| 106-0802 | NEX | Authentication::TokenParseError |
-| 106-0803 | NEX | Authentication::HttpConnectionError |
-| 106-0804 | NEX | Authentication::HttpDNSError |
-| 106-0805 | NEX | Authentication::HttpGetProxySetting |
-| 106-0806 | NEX | Authentication::TokenExpired |
-| 106-0807 | NEX | Authentication::ValidationFailed |
-| 106-0808 | NEX | Authentication::InvalidParam |
-| 106-0809 | NEX | Authentication::PrincipalIdUnmatched |
-| 106-0810 | NEX | Authentication::MoveCountUnmatch |
-| 106-0811 | NEX | Authentication::UnderMaintenance |
-| 106-0812 | NEX | Authentication::UnsupportedVersion |
-| 106-0813 | NEX | Authentication::ServerVersionIsOld |
-| 106-0814 | NEX | Authentication::Unknown |
-| 106-0815 | NEX | Authentication::ClientVersionIsOld |
-| 106-1101 | NEX | Ranking::NotInitialized |
-| 106-1102 | NEX | Ranking::InvalidArgument |
-| 106-1103 | NEX | Ranking::RegistrationError |
-| 106-1105 | NEX | Ranking::NotFound |
-| 106-1106 | NEX | Ranking::InvalidScore |
-| 106-1107 | NEX | Ranking::InvalidDataSize |
-| 106-1109 | NEX | Ranking::PermissionDenied |
-| 106-1110 | NEX | Ranking::Unknown |
-| 106-1111 | NEX | Ranking::NotImplemented |
-| 106-1201 | NEX | DataStore::Unknown |
-| 106-1202 | NEX | DataStore::InvalidArgument |
-| 106-1203 | NEX | DataStore::PermissionDenied |
-| 106-1204 | NEX | DataStore::NotFound |
-| 106-1205 | NEX | DataStore::AlreadyLocked |
-| 106-1206 | NEX | DataStore::UnderReviewing |
-| 106-1207 | NEX | DataStore::Expired |
-| 106-1208 | NEX | DataStore::InvalidCheckToken |
-| 106-1209 | NEX | DataStore::SystemFileError |
-| 106-1210 | NEX | DataStore::OverCapacity |
-| 106-1211 | NEX | DataStore::OperationNotAllowed |
-| 106-1212 | NEX | DataStore::InvalidPassword |
-| 106-1213 | NEX | DataStore::ValueNotEqual |
-| 106-1500 | NEX | ServiceItem::Unknown |
-| 106-1501 | NEX | ServiceItem::InvalidArgument |
-| 106-1502 | NEX | ServiceItem::EShopUnknownHttpError |
-| 106-1503 | NEX | ServiceItem::EShopResponseParseError |
-| 106-1504 | NEX | ServiceItem::NotOwned |
-| 106-1505 | NEX | ServiceItem::InvalidLimitationType |
-| 106-1506 | NEX | ServiceItem::ConsumptionRightShortage |
-| 106-1801 | NEX | MatchmakeReferee::Unknown |
-| 106-1802 | NEX | MatchmakeReferee::InvalidArgument |
-| 106-1803 | NEX | MatchmakeReferee::AlreadyExists |
-| 106-1804 | NEX | MatchmakeReferee::NotParticipatedGathering |
-| 106-1805 | NEX | MatchmakeReferee::NotParticipatedRound |
-| 106-1806 | NEX | MatchmakeReferee::StatsNotFound |
-| 106-1807 | NEX | MatchmakeReferee::RoundNotFound |
-| 106-1808 | NEX | MatchmakeReferee::RoundArbitrated |
-| 106-1901 | NEX | Subscriber::Unknown |
-| 106-1902 | NEX | Subscriber::InvalidArgument |
-| 106-1903 | NEX | Subscriber::OverLimit |
-| 106-1904 | NEX | Subscriber::PermissionDenied |
-| 106-2001 | NEX | Ranking2::Unknown |
-| 106-2002 | NEX | Ranking2::InvalidArgument |
-| 106-2003 | NEX | Ranking2::InvalidScore |
+# Table of Contents
+1. [NEX Error Codes (106-XXXX)](#nex-error-codes)
+2. [FS Error Codes (150-XXXX)](#fs-error-codes)
+
+# NEX Error Codes
+| Code | Description |
+| --- | --- |
+| 106-0102 | Core::Unknown |
+| 106-0103 | Core::NotImplemented |
+| 106-0104 | Core::InvalidPointer |
+| 106-0105 | Core::OperationAborted |
+| 106-0106 | Core::Exception |
+| 106-0107 | Core::AccessDenied |
+| 106-0108 | Core::InvalidHandle |
+| 106-0109 | Core::InvalidIndex |
+| 106-0110 | Core::OutOfMemory |
+| 106-0111 | Core::InvalidArgument |
+| 106-0112 | Core::Timeout |
+| 106-0113 | Core::InitializationFailure |
+| 106-0114 | Core::CallInitiationFailure |
+| 106-0115 | Core::RegistrationError |
+| 106-0116 | Core::BufferOverflow |
+| 106-0117 | Core::InvalidLockState |
+| 106-0118 | Core::InvalidSequence |
+| 106-0301 | RendezVous::ConnectionFailure |
+| 106-0302 | RendezVous::NotAuthenticated |
+| 106-0303 | RendezVous::InvalidUsername |
+| 106-0304 | RendezVous::InvalidPassword |
+| 106-0305 | RendezVous::UsernameAlreadyExists |
+| 106-0306 | RendezVous::AccountDisabled |
+| 106-0307 | RendezVous::AccountExpired |
+| 106-0308 | RendezVous::ConcurrentLoginDenied |
+| 106-0309 | RendezVous::EncryptionFailure |
+| 106-0310 | RendezVous::InvalidPID |
+| 106-0311 | RendezVous::MaxConnectionsReached |
+| 106-0312 | RendezVous::InvalidGID |
+| 106-0313 | RendezVous::InvalidControlScriptID |
+| 106-0314 | RendezVous::InvalidOperationInLiveEnvironment |
+| 106-0315 | RendezVous::DuplicateEntry |
+| 106-0316 | RendezVous::ControlScriptFailure |
+| 106-0317 | RendezVous::ClassNotFound |
+| 106-0318 | RendezVous::SessionVoid |
+| 106-0320 | RendezVous::DDLMismatch |
+| 106-0321 | RendezVous::InvalidConfiguration |
+| 106-0322 | RendezVous::SessionFull |
+| 106-0323 | RendezVous::InvalidGatheringPassword |
+| 106-0324 | RendezVous::WithoutParticipationPeriod |
+| 106-0325 | RendezVous::PersistentGatheringCreationMax |
+| 106-0326 | RendezVous::PersistentGatheringParticipationMax |
+| 106-0327 | RendezVous::DeniedByParticipants |
+| 106-0328 | RendezVous::ParticipantInBlackList |
+| 106-0329 | RendezVous::GameServerMaintenance |
+| 106-0330 | RendezVous::OperationPostpone |
+| 106-0331 | RendezVous::OutOfRatingRange |
+| 106-0332 | RendezVous::ConnectionDisconnected |
+| 106-0333 | RendezVous::InvalidOperation |
+| 106-0334 | RendezVous::NotParticipatedGathering |
+| 106-0335 | RendezVous::MatchmakeSessionUserPasswordUnmatch |
+| 106-0336 | RendezVous::MatchmakeSessionSystemPasswordUnmatch |
+| 106-0337 | RendezVous::UserIsOffline |
+| 106-0338 | RendezVous::AlreadyParticipatedGathering |
+| 106-0339 | RendezVous::PermissionDenied |
+| 106-0340 | RendezVous::NotFriend |
+| 106-0341 | RendezVous::SessionClosed |
+| 106-0342 | RendezVous::DatabaseTemporarilyUnavailable |
+| 106-0343 | RendezVous::InvalidUniqueId |
+| 106-0344 | RendezVous::MatchmakingWithdrawn |
+| 106-0345 | RendezVous::LimitExceeded |
+| 106-0401 | PythonCore::Exception |
+| 106-0402 | PythonCore::TypeError |
+| 106-0403 | PythonCore::IndexError |
+| 106-0404 | PythonCore::InvalidReference |
+| 106-0405 | PythonCore::CallFailure |
+| 106-0406 | PythonCore::MemoryError |
+| 106-0407 | PythonCore::KeyError |
+| 106-0408 | PythonCore::OperationError |
+| 106-0409 | PythonCore::ConversionError |
+| 106-0410 | PythonCore::ValidationError |
+| 106-0501 | Transport::Unknown |
+| 106-0502 | Transport::ConnectionFailure |
+| 106-0503 | Transport::InvalidUrl |
+| 106-0504 | Transport::InvalidKey |
+| 106-0505 | Transport::InvalidURLType |
+| 106-0506 | Transport::DuplicateEndpoint |
+| 106-0507 | Transport::IOError |
+| 106-0508 | Transport::Timeout |
+| 106-0509 | Transport::ConnectionReset |
+| 106-0510 | Transport::IncorrectRemoteAuthentication |
+| 106-0511 | Transport::ServerRequestError |
+| 106-0512 | Transport::DecompressionFailure |
+| 106-0513 | Transport::ReliableSendBufferFullFatal |
+| 106-0514 | Transport::UPnPCannotInit |
+| 106-0515 | Transport::UPnPCannotAddMapping |
+| 106-0516 | Transport::NatPMPCannotInit |
+| 106-0517 | Transport::NatPMPCannotAddMapping |
+| 106-0519 | Transport::UnsupportedNAT |
+| 106-0520 | Transport::DnsError |
+| 106-0521 | Transport::ProxyError |
+| 106-0522 | Transport::DataRemaining |
+| 106-0523 | Transport::NoBuffer |
+| 106-0524 | Transport::NotFound |
+| 106-0525 | Transport::TemporaryServerError |
+| 106-0526 | Transport::PermanentServerError |
+| 106-0527 | Transport::ServiceUnavailable |
+| 106-0528 | Transport::ReliableSendBufferFull |
+| 106-0529 | Transport::InvalidStation |
+| 106-0530 | Transport::InvalidSubStreamID |
+| 106-0531 | Transport::PacketBufferFull |
+| 106-0532 | Transport::NatTraversalError |
+| 106-0533 | Transport::NatCheckError |
+| 106-0602 | DOCore::StationNotReached |
+| 106-0603 | DOCore::TargetStationDisconnect |
+| 106-0604 | DOCore::LocalStationLeaving |
+| 106-0605 | DOCore::ObjectNotFound |
+| 106-0606 | DOCore::InvalidRole |
+| 106-0607 | DOCore::CallTimeout |
+| 106-0608 | DOCore::RMCDispatchFailed |
+| 106-0609 | DOCore::MigrationInProgress |
+| 106-0610 | DOCore::NoAuthority |
+| 106-0611 | DOCore::NoTargetStationSpecified |
+| 106-0612 | DOCore::JoinFailed |
+| 106-0613 | DOCore::JoinDenied |
+| 106-0614 | DOCore::ConnectivityTestFailed |
+| 106-0615 | DOCore::Unknown |
+| 106-0616 | DOCore::UnfreedReferences |
+| 106-0617 | DOCore::JobTerminationFailed |
+| 106-0618 | DOCore::InvalidState |
+| 106-0619 | DOCore::FaultRecoveryFatal |
+| 106-0620 | DOCore::FaultRecoveryJobProcessFailed |
+| 106-0621 | DOCore::StationInconsitency |
+| 106-0622 | DOCore::AbnormalMasterState |
+| 106-0623 | DOCore::VersionMismatch |
+| 106-0702 | FPD::NotInitialized |
+| 106-0703 | FPD::AlreadyInitialized |
+| 106-0704 | FPD::NotConnected |
+| 106-0705 | FPD::Connected |
+| 106-0706 | FPD::InitializationFailure |
+| 106-0707 | FPD::OutOfMemory |
+| 106-0708 | FPD::RmcFailed |
+| 106-0709 | FPD::InvalidArgument |
+| 106-0710 | FPD::InvalidLocalAccountID |
+| 106-0711 | FPD::InvalidPrincipalID |
+| 106-0712 | FPD::InvalidLocalFriendCode |
+| 106-0713 | FPD::LocalAccountNotExists |
+| 106-0714 | FPD::LocalAccountNotLoaded |
+| 106-0715 | FPD::LocalAccountAlreadyLoaded |
+| 106-0716 | FPD::FriendAlreadyExists |
+| 106-0717 | FPD::FriendNotExists |
+| 106-0718 | FPD::FriendNumMax |
+| 106-0719 | FPD::NotFriend |
+| 106-0720 | FPD::FileIO |
+| 106-0721 | FPD::P2PInternetProhibited |
+| 106-0722 | FPD::Unknown |
+| 106-0801 | Authentication::NASAuthenticateError |
+| 106-0802 | Authentication::TokenParseError |
+| 106-0803 | Authentication::HttpConnectionError |
+| 106-0804 | Authentication::HttpDNSError |
+| 106-0805 | Authentication::HttpGetProxySetting |
+| 106-0806 | Authentication::TokenExpired |
+| 106-0807 | Authentication::ValidationFailed |
+| 106-0808 | Authentication::InvalidParam |
+| 106-0809 | Authentication::PrincipalIdUnmatched |
+| 106-0810 | Authentication::MoveCountUnmatch |
+| 106-0811 | Authentication::UnderMaintenance |
+| 106-0812 | Authentication::UnsupportedVersion |
+| 106-0813 | Authentication::ServerVersionIsOld |
+| 106-0814 | Authentication::Unknown |
+| 106-0815 | Authentication::ClientVersionIsOld |
+| 106-1101 | Ranking::NotInitialized |
+| 106-1102 | Ranking::InvalidArgument |
+| 106-1103 | Ranking::RegistrationError |
+| 106-1105 | Ranking::NotFound |
+| 106-1106 | Ranking::InvalidScore |
+| 106-1107 | Ranking::InvalidDataSize |
+| 106-1109 | Ranking::PermissionDenied |
+| 106-1110 | Ranking::Unknown |
+| 106-1111 | Ranking::NotImplemented |
+| 106-1201 | DataStore::Unknown |
+| 106-1202 | DataStore::InvalidArgument |
+| 106-1203 | DataStore::PermissionDenied |
+| 106-1204 | DataStore::NotFound |
+| 106-1205 | DataStore::AlreadyLocked |
+| 106-1206 | DataStore::UnderReviewing |
+| 106-1207 | DataStore::Expired |
+| 106-1208 | DataStore::InvalidCheckToken |
+| 106-1209 | DataStore::SystemFileError |
+| 106-1210 | DataStore::OverCapacity |
+| 106-1211 | DataStore::OperationNotAllowed |
+| 106-1212 | DataStore::InvalidPassword |
+| 106-1213 | DataStore::ValueNotEqual |
+| 106-1500 | ServiceItem::Unknown |
+| 106-1501 | ServiceItem::InvalidArgument |
+| 106-1502 | ServiceItem::EShopUnknownHttpError |
+| 106-1503 | ServiceItem::EShopResponseParseError |
+| 106-1504 | ServiceItem::NotOwned |
+| 106-1505 | ServiceItem::InvalidLimitationType |
+| 106-1506 | ServiceItem::ConsumptionRightShortage |
+| 106-1801 | MatchmakeReferee::Unknown |
+| 106-1802 | MatchmakeReferee::InvalidArgument |
+| 106-1803 | MatchmakeReferee::AlreadyExists |
+| 106-1804 | MatchmakeReferee::NotParticipatedGathering |
+| 106-1805 | MatchmakeReferee::NotParticipatedRound |
+| 106-1806 | MatchmakeReferee::StatsNotFound |
+| 106-1807 | MatchmakeReferee::RoundNotFound |
+| 106-1808 | MatchmakeReferee::RoundArbitrated |
+| 106-1901 | Subscriber::Unknown |
+| 106-1902 | Subscriber::InvalidArgument |
+| 106-1903 | Subscriber::OverLimit |
+| 106-1904 | Subscriber::PermissionDenied |
+| 106-2001 | Ranking2::Unknown |
+| 106-2002 | Ranking2::InvalidArgument |
+| 106-2003 | Ranking2::InvalidScore |
+
+# FS Error Codes
+## Format: 150-10XY
+| X | Volume State |
+| --- | --- |
+| 0 | FS_VOLSTATE_INITIAL |
+| 1 | FS_VOLSTATE_NO_MEDIA |
+| 2 | FS_VOLSTATE_INVALID_MEDIA |
+| 3 | FS_VOLSTATE_DIRTY_MEDIA |
+| 4 | FS_VOLSTATE_MEDIA_ERROR |
+| 5 | FS_VOLSTATE_DATA_CORRUPTED |
+| 6 | FS_VOLSTATE_WRITE_PROTECTED |
+| 7 | FS_VOLSTATE_WRONG_MEDIA |
+| 8 | FS_VOLSTATE_JOURNAL_FULL |
+| 9 | FS_VOLSTATE_FATAL |
+
+| Y | Device |
+| --- | --- |
+| 0 | Disc ("odd") |
+| 1 | Internal storage ("mlc") |
+| 2 | USB ("usb") |
+| 3 | SD card ("sdcard") |
+
+## Format: 150-3030
+Fatal error
