@@ -4,3 +4,4 @@ Welcome to the NintendoClients wiki!
 * [[Network Library Versions]]
 * [[NEX Protocols]]
 * [[PIA Protocols]]
+* [[Wii U Error Codes]]
