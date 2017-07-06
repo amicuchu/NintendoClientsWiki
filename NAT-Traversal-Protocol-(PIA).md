@@ -1,4 +1,4 @@
-[[PIA Protocols]] > NAT Traversal (0x100)
+[[PIA Protocols]] > NAT Traversal (0x400)
 ---
 
 | Message ID | Description |
