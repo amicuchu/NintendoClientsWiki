@@ -1,7 +1,7 @@
 | Type | Protocol |
 | --- | --- |
 | 0x0100 | [[Station Protocol]] |
-| 0x0200 | Mesh Protocol / Session Protocol (?) |
+| 0x0200 | [[Mesh Protocol]] |
 | 0x0210 | Sync Clock Protocol |
 | 0x0400 | [[NEX NAT Traversal Protocol|NAT Traversal Protocol (PIA)]] |
 | 0x0500 | Bandwidth Checker Protocol |
