@@ -13,4 +13,4 @@ The length of the secure key is always 32 bytes, except in communication with th
 ## Kerberos Encryption
 First, the data is encrypted with RC4 using the Kerberos key. Then a HMAC of the encrypted data (also using the Kerberos key) is appended to the data. The decryption process is basically the reverse: first check the HMAC, then decrypt using the Kerberos key.
 
-[Buffer]: [Buffer]: NEX-Common-Types#buffer
+[Buffer]: NEX-Common-Types#buffer
