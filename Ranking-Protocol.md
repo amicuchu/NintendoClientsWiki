@@ -86,7 +86,7 @@ This method does not return anything.
 | Uint32 | Base rank (0 is world record) |
 | Uint8 | Desired number of rankings |
 
-#### Ranking Calculation
+#### Rank Calculation
 | Value | Description |
 | --- | --- |
 | 0 | Standard ranking (1224) |
