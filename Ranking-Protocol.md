@@ -2,21 +2,21 @@
 
 | Method ID | Method Name |
 | --- | --- |
-| 1 | UploadScore |
-| 2 | DeleteScore |
-| 3 | DeleteAllScores |
-| 4 | UploadCommonData |
-| 5 | DeleteCommonData |
-| 6 | GetCommonData |
-| 7 | ChangeAttributes |
-| 8 | ChangeAllAttributes |
-| 9 | GetRanking |
-| 10 | GetApproxOrder |
-| 11 | GetStats |
-| 12 | GetRankingByPIDList |
-| 13 | GetRankingByUniqueIdList |
-| 14 | GetCachedTopXRanking |
-| 15 | GetCachedTopXRankings |
+| 1 | [UploadScore](#1-uploadscore) |
+| 2 | [DeleteScore](#2-deletescore) |
+| 3 | [DeleteAllScores](#3-deleteallscores) |
+| 4 | [UploadCommonData](#4-uploadcommondata) |
+| 5 | [DeleteCommonData](#5-deletecommondata) |
+| 6 | [GetCommonData](#6-getcommondata) |
+| 7 | [ChangeAttributes](#7-changeattributes) |
+| 8 | [ChangeAllAttributes](#8-changeallattributes) |
+| 9 | [GetRanking](#9-getranking) |
+| 10 | [GetApproxOrder](#10-getapproxorder) |
+| 11 | [GetStats](#11-getstats) |
+| 12 | [GetRankingByPIDList](#12-getrankingbypidlist) |
+| 13 | [GetRankingByUniqueIdList](#13-getrankingbyuniqueidlist) |
+| 14 | [GetCachedTopXRanking](#14-getcachedtopxranking) |
+| 15 | [GetCachedTopXRankings](#15-getcachedtopxrankings) |
 
 # (1) UploadScore
 
