@@ -76,10 +76,18 @@ The client should place the connection id into the RVCID field of its client sta
 Same as response for the [Register](#1-register) method.
 
 # (5) TestConnectivity
+This method takes no parameters and returns no values.
 
 # (6) UpdateUrls
 
 # (7) ReplaceUrl
+## Request
+| Type | Description |
+| [StationURL] | Old station url |
+| [StationURL] | New station url |
+
+## Response
+This method does not return anything.
 
 # (8) SendReport
 
