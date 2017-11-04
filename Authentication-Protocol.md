@@ -89,8 +89,37 @@ Same as response for the [Login](#1-login) method.
 | [Buffer] | [Kerberos ticket](Kerberos-Authentication#kerberos-ticket) |
 
 # (4) GetPID
+This is the reverse of the [GetName](5-getname) method. It converts a given string to a PID that can be used in a station url.
+
+## Request
+| Type | Description |
+| --- | --- |
+| [String] | Name |
+
+## Response
+| Type | Description |
+| --- | --- |
+| Uint32 | PID |
 
 # (5) GetName
+This is the reverse of the [GetPID](4-getpid) method. It returns the name of a given station url PID.
+
+## Request
+| Type | Description |
+| --- | --- |
+| Uint32 | PID |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [String] | Name |
+
+The following mapping seems to be used on all official servers:
+
+| PID | Name |
+| --- | --- |
+| 1 | Quazal Authentication |
+| 2 | Quazal Rendez-Vous |
 
 # (6) LoginWithContext
 
