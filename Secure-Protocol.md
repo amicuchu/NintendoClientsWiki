@@ -91,6 +91,15 @@ This method takes no parameters and returns no values.
 This method does not return anything.
 
 # (8) SendReport
+## Request
+| Type | Description |
+| --- | --- |
+| Uint32 | Unknown |
+| Uint16 | Data length |
+| Bytes | Data |
+
+## Response
+This method does not return anything.
 
 [List]: NEX-Common-Types#list
 [String]: NEX-Common-Types#string
