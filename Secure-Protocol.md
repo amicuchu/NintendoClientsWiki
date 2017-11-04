@@ -29,6 +29,23 @@ The secure server keeps a list of client urls that can be registered (added) and
 The client should place the connection id into the RVCID field of its client station urls.
 
 # (2) RequestConnectionData
+## Request
+| Type | Description |
+| --- | --- |
+| Uint32 | CID of station url |
+| Uint32 | PID of station url |
+
+## Response
+| Type | Description |
+| --- | --- |
+| Bool | Unknown |
+| [List]&lt;[ConnectionData](#connection-data)&gt; | Connection data |
+
+### Connection Data ([Structure])
+| Type | Description |
+| --- | --- |
+| [StationURL] | Station url |
+| Uint32 | Connection id |
 
 # (3) RequestUrls
 
@@ -59,3 +76,4 @@ Same as response for the [Register](#1-register) method.
 [String]: NEX-Common-Types#string
 [StationURL]: NEX-Common-Types#station-url
 [Data]: NEX-Common-Types#any-data-holder
+[Structure]: NEX-Common-Types#structure
