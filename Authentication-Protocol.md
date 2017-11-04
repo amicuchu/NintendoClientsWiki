@@ -89,7 +89,7 @@ Same as response for the [Login](#1-login) method.
 | [Buffer] | [Kerberos ticket](Kerberos-Authentication#kerberos-ticket) |
 
 # (4) GetPID
-This is the reverse of the [GetName](5-getname) method. It converts a given string to a PID that can be used in a station url.
+This is the reverse of the [GetName](#5-getname) method. It converts a given string to a PID that can be used in a station url.
 
 ## Request
 | Type | Description |
@@ -102,7 +102,7 @@ This is the reverse of the [GetName](5-getname) method. It converts a given stri
 | Uint32 | PID |
 
 # (5) GetName
-This is the reverse of the [GetPID](4-getpid) method. It returns the name of a given station url PID.
+This is the reverse of the [GetPID](#4-getpid) method. It returns the name of a given station url PID.
 
 ## Request
 | Type | Description |
