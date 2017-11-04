@@ -5,6 +5,7 @@
 4. [DateTime](#date-time)
 5. [StationURL](#station-url)
 6. [Structure](#structure)
+7. [Data](#any-data-holder)
 
 # String
 | Type | Description |
@@ -74,5 +75,15 @@ NEX v3.5.0 introduced a versioning system to structures. Before v3.5.0 their con
 | Uint8 | Version |
 | Uint32 | Content length |
 | | Content |
+
+# Any Data Holder
+NEX has a class that can hold any object derived from nn::nex::Data. When these are transmitted as part of request or response data, some meta data is sent along with them, so the other side can properly identify and decode the object.
+
+| Type | Description |
+| --- | --- |
+| [String] | Type name |
+| Uint32 | Length of data, including the next length field |
+| Uint32 | Length of data |
+| | Object data |
 
 [String]: #string
