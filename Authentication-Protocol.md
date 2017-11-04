@@ -100,3 +100,4 @@ Same as response for the [Login](#login-1) method.
 [StationURL]: NEX-Common-Types#station-url
 [List]: NEX-Common-Types#list
 [DateTime]: NEX-Common-Types#date-time
+[Data]: NEX-Common-Types#any-data-holder
