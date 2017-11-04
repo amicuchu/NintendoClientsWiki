@@ -26,6 +26,8 @@ The secure server keeps a list of client urls that can be registered (added) and
 | Uint32 | Connection id |
 | [StationURL] | Public client url, as perceived by the server |
 
+The client should place the connection id into the RVCID field of its client station urls.
+
 # (2) RequestConnectionData
 
 # (3) RequestUrls
