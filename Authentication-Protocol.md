@@ -52,6 +52,28 @@ Examples:
 | MK8 | `prudps:/sid=1;port=59201;address=52.10.188.163;PID=2;stream=10;type=2;CID=1` |
 
 # (2) LoginEx
+## Request
+| Type | Description |
+| --- | --- |
+| [String] | Username (user pid) |
+| [Data]&lt;[AuthenticationInfo](#authentication-info)&gt; | Authentication info |
+
+### Authentication Info
+| Type | Description |
+| --- | --- |
+| [String] | Token, as received from the account server |
+| Uint32 | Unknown, always 3? |
+| Uint8 | Unknown, always 1? |
+| Uint32 | Client version (see table below) |
+
+| NEX Version | Client version |
+| --- | --- |
+| 3.4.0 | 3 |
+| 3.5.4AMK (MK8) | 2002 |
+| 3.8.10AMA (SMM) | 3017 |
+
+## Response
+Same as response for the [Login](#login-1) method.
 
 # (3) RequestTicket
 ## Request
