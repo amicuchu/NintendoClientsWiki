@@ -48,6 +48,17 @@ The client should place the connection id into the RVCID field of its client sta
 | Uint32 | Connection id |
 
 # (3) RequestUrls
+## Request
+| Type | Description |
+| --- | --- |
+| Uint32 | CID |
+| Uint32 | PID |
+
+## Response
+| Type | Description |
+| --- | --- |
+| Bool | Unknown |
+| [List]&lt;[StationURL]&gt; | Station urls |
 
 # (4) RegisterEx
 ## Request
