@@ -2,7 +2,7 @@
 | --- | --- |
 | 0x01 | [Remote log device](Remote-Log-Device-Protocol) |
 | 0x03 | [NAT traversal](NAT-Traversal-Protocol) |
-| 0x0A | [Ticket granting (Kerberos authentication)](Authentication-Protocol) |
+| 0x0A | [Authentication](Authentication-Protocol) |
 | 0x0B | [Secure connection](Secure-Protocol) |
 | 0x0E | [Notification events](Notification-Protocol) |
 | 0x12 | [Health](Health-Protocol) |
