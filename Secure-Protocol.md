@@ -31,6 +31,19 @@ The secure server keeps a list of client urls that can be registered (added) and
 # (3) RequestUrls
 
 # (4) RegisterEx
+## Request
+| Type | Description |
+| --- | --- |
+| [List]&lt;[String]&gt; | Local client urls |
+| [Data]&lt;[NintendoLoginData](#nintendo-login-data)&gt; | Login data |
+
+### Nintendo Login Data
+| Type | Description |
+| --- | --- |
+| [String] | Token (received from the account server) |
+
+## Response
+Same as response for the [Register](#1-register) method.
 
 # (5) TestConnectivity
 
@@ -43,3 +56,4 @@ The secure server keeps a list of client urls that can be registered (added) and
 [List]: NEX-Common-Types#list
 [String]: NEX-Common-Types#string
 [StationURL]: NEX-Common-Types#station-url
+[Data]: NEX-Common-Types#any-data-holder
