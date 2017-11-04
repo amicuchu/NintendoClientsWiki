@@ -73,7 +73,7 @@ Examples:
 | 3.8.10AMA (SMM) | 3017 |
 
 ## Response
-Same as response for the [Login](#login-1) method.
+Same as response for the [Login](#1-login) method.
 
 # (3) RequestTicket
 ## Request
