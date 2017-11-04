@@ -83,6 +83,7 @@ This method takes no parameters and returns no values.
 # (7) ReplaceUrl
 ## Request
 | Type | Description |
+| --- | --- |
 | [StationURL] | Old station url |
 | [StationURL] | New station url |
 
