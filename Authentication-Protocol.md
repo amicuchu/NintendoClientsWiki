@@ -40,7 +40,7 @@ Examples of server build names:
 | --- | --- | --- |
 | [StationURL] | Any | Secure server address |
 | [List]&lt;byte&gt; | Any | Unknown, official servers send an empty list |
-| [StationURL] | Any | Unknown, official servers send an empty url, that is, just "prudp:/" |
+| [StationURL] | Any | Unknown, official servers send an empty string |
 | [DateTime] | V1 | Server time |
 
 Examples:
