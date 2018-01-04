@@ -1,5 +1,28 @@
 PRUDP is a transport layer protocol on top of UDP whose purpose is to achieve reliability, and optionally encryption and compression. There are two version of this protocol ([V0](#v0-format) and [V1](#v1-format)), but these are pretty similar. The only difference lies in the way the packets are encoded. All values are encoded in little endian byte order
 
+## Common
+### Source/Destination Port
+These are "virtual ports", probably to distinguish between connections if a single game/app opens multiple connections at once, although no games actually seem to do this. It's unclear how exactly they're calculated, but normally, the server is identified by 0xA1 and the client by 0xAF.
+
+### Type and flags
+This field is made by concatening a 4-bit type value to 12 bits of packet flags. For example, in a PING packet with FLAG_RELIABLE and FLAG_NEED_ACK this value would be set to 0x0064 (but remember everything is little endian so it would be stored as 0x64 0x00).
+
+| Mask | Description |
+| --- | --- |
+| 0x001 | FLAG_ACK: This is an acknowledgement packet |
+| 0x002 | FLAG_RELIABLE: This packet is supposed to be reliable |
+| 0x004 | FLAG_NEED_ACK: This packet must be acknowledged |
+| 0x008 | FLAG_HAS_SIZE: This packet includes its payload size |
+| 0x200 | FLAG_ACK2: This packet acknowledges multiples packets at once. The payload contains information on which packets are acknowledged. |
+
+| Value | Type |
+| --- | --- |
+| 0 | SYN |
+| 1 | CONNECT |
+| 2 | DATA |
+| 3 | DISCONNECT |
+| 4 | PING |
+
 ## V0 Format
 This format is only used by the friends server, and possibly some 3DS games.
 
