@@ -5,7 +5,7 @@ PRUDP is a transport layer protocol on top of UDP whose purpose is to achieve re
 These are "virtual ports", probably to distinguish between connections if a single game/app opens multiple connections at once, although no games actually seem to do this. It's unclear how exactly they're calculated, but normally, the server is identified by 0xA1 and the client by 0xAF.
 
 ### Type and flags
-This field is made by concatening a 4-bit type value to 12 bits of packet flags. For example, in a PING packet with FLAG_RELIABLE and FLAG_NEED_ACK this value would be set to 0x0064 (but remember everything is little endian so it would be stored as 0x64 0x00).
+This field is made by concatening a 4-bit type value to 12 bits of packet flags. For example, a PING packet with FLAG_RELIABLE and FLAG_NEED_ACK would have this value set to 0x0064 (but remember everything is little endian so it would be stored as 0x64 0x00).
 
 | Mask | Description |
 | --- | --- |
