@@ -1,7 +1,7 @@
 PRUDP is a transport layer protocol on top of UDP whose purpose is to achieve reliability, and optionally encryption and compression. There are two version of this protocol ([V0](#v0-format) and [V1](#v1-format)), but these are pretty similar. The only difference lies in the way the packets are encoded. All values are encoded in little endian byte order
 
 ## Common
-### Source/Destination Port
+### Source/destination port
 These are "virtual ports", probably to distinguish between connections if a single game/app opens multiple connections at once, although no games actually seem to do this. It's unclear how exactly they're calculated, but normally, the server is identified by 0xA1 and the client by 0xAF.
 
 ### Type and flags
@@ -13,7 +13,7 @@ This field is made by concatening a 4-bit type value to 12 bits of packet flags.
 | 0x002 | FLAG_RELIABLE: This packet is supposed to be reliable |
 | 0x004 | FLAG_NEED_ACK: This packet must be acknowledged |
 | 0x008 | FLAG_HAS_SIZE: This packet includes its payload size |
-| 0x200 | FLAG_ACK2: This packet acknowledges multiples packets at once. The payload contains information on which packets are acknowledged. |
+| 0x200 | FLAG_MULTI_ACK: This packet acknowledges multiples packets at once. The payload contains information on which packets are acknowledged. |
 
 | Value | Type |
 | --- | --- |
@@ -23,10 +23,16 @@ This field is made by concatening a 4-bit type value to 12 bits of packet flags.
 | 3 | DISCONNECT |
 | 4 | PING |
 
+### Session ID
+This is a random value generated at the start of each session. The server's session id is not necessarily the same as the client's session id.
+
+### Sequence id
+This is an incrementing value used to ensure that packets arrive in correct order. The sequence id of client-to-server packets is separate from the sequence id of server-to-client packets.
+
 ## V0 Format
 This format is only used by the friends server, and possibly some 3DS games.
 
-### Packet Header
+### Packet header
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 1 | Source port |
@@ -74,7 +80,7 @@ This format is used by all Wii U games and apps, except for friends services, an
 | | Packet-specific data |
 | | Payload |
 
-### Packet Header
+### Packet header
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x2 | 1 | PRUDP version (always 1) |
@@ -87,7 +93,7 @@ This format is used by all Wii U games and apps, except for friends services, an
 | 0xB | 1 | Always 0 |
 | 0xC | 2 | Sequence id |
 
-### Packet-Specific Data:
+### Packet-specific data
 | Only present if | Size | Description |
 | --- | --- | --- |
 | Type is SYN or CONNECT | 2 | 0x00 0x04 |
