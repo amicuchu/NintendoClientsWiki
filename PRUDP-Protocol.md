@@ -57,7 +57,7 @@ This format is only used by the friends server, and possibly some 3DS games.
 | 0x1 | 1 | [Destination port](#sourcedestination-port) |
 | 0x2 | 2 | [Type and flags](#type-and-flags) |
 | 0x4 | 1 | [Session id](#session-id) |
-| 0x5 | 4 | Packet signature |
+| 0x5 | 4 | [Packet signature](#packet-signature) |
 | 0x9 | 2 | [Sequence id](#sequence-id) |
 
 Packet-specific data:
@@ -93,13 +93,13 @@ checksum = calc_checksum(sum(ACCESS_KEY), packet_data)
 ```
 
 ## V1 Format
-This format is used by all Wii U games and apps, except for friends services, and possibly some 3DS games.
+This format is used by all Wii U games and apps except for friends services, and possibly some 3DS games.
 
 | Size | Description |
 | --- | --- |
 | 2 | Magic number: 0xEA 0xD0 |
 | 12 | Packet header |
-| 16 | Packet signature |
+| 16 | [Packet signature](#packet-signature-1) |
 | | Packet-specific data |
 | | Payload |
 
