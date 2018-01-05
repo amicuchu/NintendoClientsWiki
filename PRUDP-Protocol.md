@@ -1,6 +1,13 @@
-PRUDP is a transport layer protocol on top of UDP whose purpose is to achieve reliability. There are two version of this protocol ([V0](#v0-format) and [V1](#v1-format)), but these are pretty similar. The only difference lies in the way the packets are encoded. All values are encoded in little endian byte order
+PRUDP is a transport layer protocol on top of UDP whose aim is to reliably send UDP packets. There are two version of this protocol ([V0](#v0-format) and [V1](#v1-format)), but these are pretty similar. The only difference lies in the way the packets are encoded. All values are encoded in little endian byte order
 
-## Common
+### Basic operation
+When a client connects to a server, it sends a SYN packet. As soon as this packet is acknowledged by the server, it sends a CONNECT packet. When this packet has been acknowledged too, a connection has been made and the client and server can start sending DATA packets. If the client wants to close the connection, it sends a DISCONNECT packet. This packet is acknowledged three times by the server, presumably to ensure the client receives the ACK.
+
+The following techniques are used to achieve this reliability:
+* A packet that has FLAG_NEED_ACK set must be acknowledged by the receiver. If the sender doesn't receive an acknowledgement after a certain amount of time it will resend the packet.
+* A [sequence id](#sequence-id) is sent along with a packet, so the receiver can reorder packets if necessary.
+* Both client and server send PING packets to each other after a certain amount of time has passed.
+
 ### Encryption
 All packet payloads are encrypted using RC4, with separate streams for client-to-server packets and server-to-client packets. The connection to the authentication server is encrypted using a default key that's always the same: "CD&ML". The connection to the secure server is encrypted using the secure key from the [Kerberos ticket](Kerberos-Authentication#kerberos-ticket).
 
@@ -35,6 +42,11 @@ This is an incrementing value used to ensure that packets arrive in correct orde
 ### Fragment id
 Big data packets are split into smaller ones. The fragment ids assigned to packets are counting downwards towards zero. This way the receiver knows how many fragments are left until a full packet has been received. For example, if a message is split into three fragments, the first fragment will have fragment id 2, the second one will have fragment id 1, and the last one fragment id 0.
 
+### Connection signature
+The server sends its connection signature in its response to the client's SYN packet. The client sends its connection signature in the CONNECT packet. Other SYN/CONNECT packets have this field set to 0.
+
+If present, the connection signature is the first 4 bytes of a HMAC based on the perceived ip and port of the other end point. However, the key used to calculate this hash seems to be initialized to a random value, thus resulting in an unverifiable hash.
+
 ## V0 Format
 This format is only used by the friends server, and possibly some 3DS games.
 
@@ -52,12 +64,11 @@ Packet-specific data:
 
 | Only present if | Size | Description |
 | --- | --- | --- |
-| Type is SYN or CONNECT | 4 | Connection signature |
+| Type is SYN or CONNECT | 4 | [Connection signature](#connection-signature) |
 | Type is DATA | 1 | [Fragment id](#fragment-id) |
 | Flags & FLAG_HAS_SIZE | 2 | Payload size |
 
-#### Connection signature
-The server sends its connection signature in its response to the client's SYN packet. The client sends its connection signature in the CONNECT packet. Other SYN/CONNECT packets have this field set to 0. If present, the connection signature is the first 4 bytes of a HMAC hash based on the perceived ip and port of the other end point. However, the key used to calculate this hash seems to be initialized to a random value, thus resulting in an unreproducible hash. The other end point can't verify this hash.
+### Packet signature
 
 ### Payload
 The header is followed by the payload with a 1-byte checksum appended to it. The checksum is calculated over the whole packet (both header and encrypted payload), and uses the following algorithm (the example code is written in python):
@@ -102,13 +113,15 @@ This format is used by all Wii U games and apps, except for friends services, an
 | 0xB | 1 | Always 0 |
 | 0xC | 2 | [Sequence id](#sequence-id) |
 
+### Packet signature
+
 ### Packet-specific data
 | Only present if | Size | Description |
 | --- | --- | --- |
 | Type is SYN or CONNECT | 2 | 0x00 0x04 |
 | Type is SYN or CONNECT | 4 | Supported functions (unknown purpose) |
 | Type is SYN or CONNECT | 2 | 0x01 0x10 |
-| Type is SYN or CONNECT | 16 | Connection signature |
+| Type is SYN or CONNECT | 16 | [Connection signature](#connection-signature) |
 | Type is CONNECT | 2 | 0x03 0x02 |
 | Type is CONNECT | 2 | Unknown, random integer |
 | Type is SYN or CONNECT | 4 | 0x04 0x01 0x00 |
