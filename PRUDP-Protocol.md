@@ -9,7 +9,7 @@ The following techniques are used to achieve this reliability:
 * To keep the connection alive, both client and server send PING packets to each other after a certain amount of time has passed.
 
 ### Encryption
-All packet payloads are encrypted using RC4, with separate streams for client-to-server packets and server-to-client packets. The connection to the authentication server is encrypted using a default key that's always the same: "CD&ML". The connection to the secure server is encrypted using the secure key from the [Kerberos ticket](Kerberos-Authentication#kerberos-ticket).
+All payloads are encrypted using RC4, with separate streams for client-to-server packets and server-to-client packets. The connection to the authentication server is encrypted using a default key that's always the same: "CD&ML". The connection to the secure server is encrypted using the secure key from the [Kerberos ticket](Kerberos-Authentication#kerberos-ticket).
 
 ### Source/destination port
 These are "virtual ports", probably to distinguish between connections if a single game/app opens multiple connections at once, although no games actually seem to do this. It's unclear how exactly they're calculated, but normally, the server is identified by 0xA1 and the client by 0xAF.
@@ -118,6 +118,7 @@ This format is used by all Wii U games and apps, except for friends services, an
 
 ### Packet signature
 The packet signature is the HMAC of the following data, with the key being the MD5 hash of the access key:
+
 | Size | Description |
 | --- | --- |
 | 8 | Bytes 0x4 - 0xC of the packet header |
@@ -125,7 +126,7 @@ The packet signature is the HMAC of the following data, with the key being the M
 | 4 | Sum of all access key bytes (little endian) |
 | 16 | Connection signature, or 16 zero-bytes if it has not yet been received |
 | | Packet-specific data |
-| | Packet payload |
+| | Payload |
 
 ### Packet-specific data
 | Only present if | Size | Description |
