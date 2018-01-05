@@ -56,6 +56,9 @@ Packet-specific data:
 | Type is DATA | 1 | [Fragment id](#fragment-id) |
 | Flags & FLAG_HAS_SIZE | 2 | Payload size |
 
+#### Connection signature
+The server sends its connection signature in its response to the client's SYN packet. The client sends its connection signature in the CONNECT packet. Other SYN/CONNECT packets have this field set to 0. If present, the connection signature is the first 4 bytes of a HMAC hash based on the perceived ip and port of the other end point. However, the key used to calculate this hash seems to be initialized to a random value, thus resulting in an unreproducible hash. The other end point can't verify this hash.
+
 ### Payload
 The header is followed by the payload with a 1-byte checksum appended to it. The checksum is calculated over the whole packet (both header and encrypted payload), and uses the following algorithm (the example code is written in python):
 ```python
@@ -103,7 +106,7 @@ This format is used by all Wii U games and apps, except for friends services, an
 | Only present if | Size | Description |
 | --- | --- | --- |
 | Type is SYN or CONNECT | 2 | 0x00 0x04 |
-| Type is SYN or CONNECT | 4 | Supported functions |
+| Type is SYN or CONNECT | 4 | Supported functions (unknown purpose) |
 | Type is SYN or CONNECT | 2 | 0x01 0x10 |
 | Type is SYN or CONNECT | 16 | Connection signature |
 | Type is CONNECT | 2 | 0x03 0x02 |
