@@ -33,7 +33,7 @@ This is a random value generated at the start of each session. The server's sess
 This is an incrementing value used to ensure that packets arrive in correct order. The sequence id of client-to-server packets is separate from the sequence id of server-to-client packets.
 
 ### Fragment id
-Big data packets are split into smaller ones.
+Big data packets are split into smaller ones. The fragment ids assigned to packets are counting downwards towards zero. This way the receiver knows how many fragments are left until a full packet has been received. For example, if a message is split into three fragments, the first fragment will have fragment id 2, the second one will have fragment id 1, and the last one fragment id 0.
 
 ## V0 Format
 This format is only used by the friends server, and possibly some 3DS games.
@@ -53,7 +53,7 @@ Packet-specific data:
 | Only present if | Size | Description |
 | --- | --- | --- |
 | Type is SYN or CONNECT | 4 | Connection signature |
-| Type is DATA | 1 | Fragment id |
+| Type is DATA | 1 | [Fragment id](#fragment-id) |
 | Flags & FLAG_HAS_SIZE | 2 | Payload size |
 
 ### Payload
@@ -110,4 +110,4 @@ This format is used by all Wii U games and apps, except for friends services, an
 | Type is CONNECT | 2 | Unknown, random integer |
 | Type is SYN or CONNECT | 4 | 0x04 0x01 0x00 |
 | Type is DATA | 2 | 0x02 0x01 |
-| Type is DATA | 1 | Fragment id |
+| Type is DATA | 1 | [Fragment id](#fragment-id) |
