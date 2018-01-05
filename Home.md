@@ -5,4 +5,5 @@ Welcome to the NintendoClients wiki!
 * [[NEX Protocols]]
 * [[PIA Protocols]]
 * [[PRUDP Protocol]]
+* [[RMC Protocol]]
 * [[Wii U Error Codes]]
