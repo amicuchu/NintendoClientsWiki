@@ -1,6 +1,9 @@
-PRUDP is a transport layer protocol on top of UDP whose purpose is to achieve reliability, and optionally encryption and compression. There are two version of this protocol ([V0](#v0-format) and [V1](#v1-format)), but these are pretty similar. The only difference lies in the way the packets are encoded. All values are encoded in little endian byte order
+PRUDP is a transport layer protocol on top of UDP whose purpose is to achieve reliability. There are two version of this protocol ([V0](#v0-format) and [V1](#v1-format)), but these are pretty similar. The only difference lies in the way the packets are encoded. All values are encoded in little endian byte order
 
 ## Common
+### Encryption
+All packet payloads are encrypted using RC4, with separate streams for client-to-server packets and server-to-client packets. The connection to the authentication server is encrypted using a default key that's always the same: "CD&ML". The connection to the secure server is encrypted using the secure key from the [Kerberos ticket](Kerberos-Authentication#kerberos-ticket).
+
 ### Source/destination port
 These are "virtual ports", probably to distinguish between connections if a single game/app opens multiple connections at once, although no games actually seem to do this. It's unclear how exactly they're calculated, but normally, the server is identified by 0xA1 and the client by 0xAF.
 
