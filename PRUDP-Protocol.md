@@ -26,11 +26,14 @@ This field is made by concatening a 4-bit type value to 12 bits of packet flags.
 | 3 | DISCONNECT |
 | 4 | PING |
 
-### Session ID
+### Session id
 This is a random value generated at the start of each session. The server's session id is not necessarily the same as the client's session id.
 
 ### Sequence id
 This is an incrementing value used to ensure that packets arrive in correct order. The sequence id of client-to-server packets is separate from the sequence id of server-to-client packets.
+
+### Fragment id
+Big data packets are split into smaller ones.
 
 ## V0 Format
 This format is only used by the friends server, and possibly some 3DS games.
@@ -38,12 +41,12 @@ This format is only used by the friends server, and possibly some 3DS games.
 ### Packet header
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 1 | Source port |
-| 0x1 | 1 | Destination port |
-| 0x2 | 2 | Type and flags |
-| 0x4 | 1 | Session id |
+| 0x0 | 1 | [Source port](#sourcedestination-port) |
+| 0x1 | 1 | [Destination port](#sourcedestination-port) |
+| 0x2 | 2 | [Type and flags](#type-and-flags) |
+| 0x4 | 1 | [Session id](#session-id) |
 | 0x5 | 4 | Packet signature |
-| 0x9 | 2 | Sequence id |
+| 0x9 | 2 | [Sequence id](#sequence-id) |
 
 Packet-specific data:
 
@@ -89,12 +92,12 @@ This format is used by all Wii U games and apps, except for friends services, an
 | 0x2 | 1 | PRUDP version (always 1) |
 | 0x3 | 1 | Length of packet-specific data |
 | 0x4 | 2 | Payload size |
-| 0x6 | 1 | Source port |
-| 0x7 | 1 | Destination port |
-| 0x8 | 2 | Type and flags |
-| 0xA | 1 | Session id |
+| 0x6 | 1 | [Source port](#sourcedestination-port) |
+| 0x7 | 1 | [Destination port](#sourcedestination-port) |
+| 0x8 | 2 | [Type and flags](#type-and-flags) |
+| 0xA | 1 | [Session id](#session-id) |
 | 0xB | 1 | Always 0 |
-| 0xC | 2 | Sequence id |
+| 0xC | 2 | [Sequence id](#sequence-id) |
 
 ### Packet-specific data
 | Only present if | Size | Description |
