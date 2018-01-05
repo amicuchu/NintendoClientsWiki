@@ -6,7 +6,7 @@ When a client connects to a server, it sends a SYN packet. As soon as this packe
 The following techniques are used to achieve this reliability:
 * A packet that has FLAG_NEED_ACK set must be acknowledged by the receiver. If the sender doesn't receive an acknowledgement after a certain amount of time it will resend the packet.
 * A [sequence id](#sequence-id) is sent along with a packet, so the receiver can reorder packets if necessary.
-* Both client and server send PING packets to each other after a certain amount of time has passed.
+* To keep the connection alive, both client and server send PING packets to each other after a certain amount of time has passed.
 
 ### Encryption
 All packet payloads are encrypted using RC4, with separate streams for client-to-server packets and server-to-client packets. The connection to the authentication server is encrypted using a default key that's always the same: "CD&ML". The connection to the secure server is encrypted using the secure key from the [Kerberos ticket](Kerberos-Authentication#kerberos-ticket).
@@ -69,6 +69,9 @@ Packet-specific data:
 | Flags & FLAG_HAS_SIZE | 2 | Payload size |
 
 ### Packet signature
+* In DATA packets with an empty payload the packet signature is always set to 0x12345678.
+* In all other DATA packets the signature is the first 4 bytes of the HMAC of the encrypted payload, with the key being the MD5 hash of the access key.
+* In all other packets the signature is the connection signature that has been received while the connection was made.
 
 ### Payload
 The header is followed by the payload with a 1-byte checksum appended to it. The checksum is calculated over the whole packet (both header and encrypted payload), and uses the following algorithm (the example code is written in python):
