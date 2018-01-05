@@ -106,17 +106,26 @@ This format is used by all Wii U games and apps, except for friends services, an
 ### Packet header
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x2 | 1 | PRUDP version (always 1) |
-| 0x3 | 1 | Length of packet-specific data |
-| 0x4 | 2 | Payload size |
-| 0x6 | 1 | [Source port](#sourcedestination-port) |
-| 0x7 | 1 | [Destination port](#sourcedestination-port) |
-| 0x8 | 2 | [Type and flags](#type-and-flags) |
-| 0xA | 1 | [Session id](#session-id) |
-| 0xB | 1 | Always 0 |
-| 0xC | 2 | [Sequence id](#sequence-id) |
+| 0x0 | 1 | PRUDP version (always 1) |
+| 0x1 | 1 | Length of packet-specific data |
+| 0x2 | 2 | Payload size |
+| 0x4 | 1 | [Source port](#sourcedestination-port) |
+| 0x5 | 1 | [Destination port](#sourcedestination-port) |
+| 0x6 | 2 | [Type and flags](#type-and-flags) |
+| 0x8 | 1 | [Session id](#session-id) |
+| 0x9 | 1 | Always 0 |
+| 0xA | 2 | [Sequence id](#sequence-id) |
 
 ### Packet signature
+The packet signature is the HMAC of the following data, with the key being the MD5 hash of the access key:
+| Size | Description |
+| --- | --- |
+| 8 | Bytes 0x4 - 0xC of the packet header |
+| 0, 16 or 32 | The secure key (not present in a connection to the authentication server) |
+| 4 | Sum of all access key bytes (little endian) |
+| 16 | Connection signature, or 16 zero-bytes if it has not yet been received |
+| | Packet-specific data |
+| | Packet payload |
 
 ### Packet-specific data
 | Only present if | Size | Description |
