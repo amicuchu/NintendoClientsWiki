@@ -9,7 +9,7 @@ The following techniques are used to achieve reliability:
 * To keep the connection alive, both client and server send PING packets to each other after a certain amount of time has passed.
 
 ### Encryption
-All payloads are encrypted using RC4, with separate streams for client-to-server packets and server-to-client packets. The connection to the authentication server is encrypted using a default key that's always the same: "CD&ML". The connection to the secure server is encrypted using the secure key from the [Kerberos ticket](Kerberos-Authentication#kerberos-ticket).
+All payloads are encrypted using RC4, with separate streams for client-to-server packets and server-to-client packets. The connection to the authentication server is encrypted using a default key that's always the same: `CD&ML`. The connection to the secure server is encrypted using the secure key from the [Kerberos ticket](Kerberos-Authentication#kerberos-ticket).
 
 ### Source/destination port
 These are "virtual ports", probably to distinguish between connections if a single game/app opens multiple connections at once, although no games actually seem to do this. It's unclear how exactly they're calculated, but normally, the server is identified by 0xA1 and the client by 0xAF.
