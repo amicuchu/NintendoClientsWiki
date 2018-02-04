@@ -3,7 +3,7 @@ PRUDP is a transport layer protocol on top of UDP whose aim is to reliably send 
 ### Basic operation
 When a client connects to a server, it sends a SYN packet. As soon as this packet is acknowledged by the server, it sends a CONNECT packet. When this packet has been acknowledged too, a connection has been made and the client and server can start sending DATA packets. If the client wants to close the connection, it sends a DISCONNECT packet. This packet is acknowledged three times by the server, presumably to ensure the client receives the ACK.
 
-The following techniques are used to achieve this reliability:
+The following techniques are used to achieve reliability:
 * A packet that has FLAG_NEED_ACK set must be acknowledged by the receiver. If the sender doesn't receive an acknowledgement after a certain amount of time it will resend the packet.
 * A [sequence id](#sequence-id) is sent along with a packet, so the receiver can reorder packets if necessary.
 * To keep the connection alive, both client and server send PING packets to each other after a certain amount of time has passed.
