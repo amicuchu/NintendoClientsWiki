@@ -1,5 +1,5 @@
 ## Overview
-The account server uses HTTP requests with XML body.
+The account server responds to HTTP requests with XML body.
 
 The Wii U's client certificate is needed to connect to these servers.
 
