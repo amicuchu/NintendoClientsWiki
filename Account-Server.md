@@ -110,8 +110,8 @@ Example response:
 ```
 <OAuth20>
   <access_token>
-    <token>ee5cdb25b746aa3934a42516fec22369</token>
-    <refresh_token>b9c1f1fd111883c88b11af5ecb2e65e025e532a1</refresh_token>
+    <token>...</token>
+    <refresh_token>...</refresh_token>
     <expires_in>3600</expires_in>
   </access_token>
 </OAuth20>
@@ -130,6 +130,21 @@ Example response:
 ### GET /people/@me/profile
 
 ### GET /provider/nex_token/@me
+Provides login information and location of game server.
+
+| Param | Description |
+| --- | --- |
+| game_server_id | Game server id |
+
+Example response:
+```
+<nex_token>
+  <host>34.208.166.202</host>
+  <nex_password>...</nex_password>
+  <pid>1798037410</pid>
+  <port>43220</port>
+  <token>...</token>
+</nex_token>
 
 ### GET /provider/service_token/@me
 
