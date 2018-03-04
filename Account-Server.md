@@ -145,6 +145,7 @@ Example response:
   <port>43220</port>
   <token>...</token>
 </nex_token>
+```
 
 ### GET /provider/service_token/@me
 
