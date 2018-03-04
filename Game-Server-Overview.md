@@ -14,6 +14,8 @@ Each game server actually consists of two servers: an authentication server and 
 ### Game server identification
 Each game server has a unique game server id and a sandbox access key. The game server id is used to determine the location of the game server, either by DNS lookup (Switch) or from an external server (3DS/Wii U). The access key is used to calculate the PRUDP packet checksum. It's known by both the client and the server, but never sent throught the connection.
 
+List of game server ids and access keys: [[Game Server List]]
+
 ## 3DS
 Login information is requested from the NASC server. Packets are encoded using [PRUDP V0](PRUDP-Protocol#v0-format).
 
