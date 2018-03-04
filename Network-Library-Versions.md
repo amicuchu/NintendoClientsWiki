@@ -6,6 +6,7 @@ Unfortunately, there are many different versions of the nex library which are no
 * MS = Messaging
 * UT = Utility
 
+# Wii U
 | Game | NEX Modules | PIA Modules | Debug Symbols |
 | --- | --- | --- | --- |
 | Sonic & All-Stars Racing Transformed | NEX_3_0_1_4<br>NEX_MM_3_0_1<br>NEX_RK_3_0_1 | None | Yes |
@@ -40,3 +41,8 @@ Unfortunately, there are many different versions of the nex library which are no
 | Axiom Verge | NEX_3_10_0 | None | Yes |
 | Pokkén Tournament | NEX_DS_3_10_0<br>NEX_RK_3_10_0<br>NEX_3_10_0<br>NEX_MM_3_10_0 | PIA_4_10_0<br>PIA_COMMON_4_10_0<br>PIA_INET_4_10_0<br>_DEV_PIA_DEBUG<br>PIA_TRANSPORT_4_10_0<br>PIA_SESSION_4_10_0 | Yes |
 | Lost Reavers | NEX_3_10_0<br>NEX_MM_3_10_0<br>NEX_MS_3_10_0<br>NEX_RK_3_10_0<br>NEX_DS_3_10_0 | None | Yes |
+
+# Switch
+| Game | NEX Modules | PIA Modules | Debug Symbols |
+| --- | --- | --- | --- |
+| Cave Story | NEX-4_0_3<br>NEX_RK-4_0_3 | None | Yes |
