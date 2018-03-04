@@ -1,5 +1,6 @@
 Welcome to the NintendoClients wiki!
 ## Protocol documentation
+* [[Game Server Overview]]
 * [[PRUDP Protocol]]
 * [[RMC Protocol]]
 * [[NEX Protocols]]
