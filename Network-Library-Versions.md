@@ -46,3 +46,4 @@ Unfortunately, there are many different versions of the nex library which are no
 | Game | NEX Modules | PIA Modules | Debug Symbols |
 | --- | --- | --- | --- |
 | Cave Story | NEX-4_0_3<br>NEX_RK-4_0_3 | None | Yes |
+| Mario Kart 8 | NEX-4_0_7-apptrbs<br>NEX-DebugLoginDirect<br>NEX_MM-4_0_7<br>NEX_DS-4_0_7<br>NEX_RK-4_0_7 | PiaCommon-5_2_5<br>Pia-5_2_5<br>PiaInet-5_2_5<br>PiaLan-5_2_5<br>PiaSession-5_2_5<br>PiaTransport-5_2_5<br>PiaLocal-5_2_5 | No |
