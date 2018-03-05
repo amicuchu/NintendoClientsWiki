@@ -8,7 +8,7 @@ As stated on the [[Game Server Overview]] page, NEX is actually a Nintendo-versi
 | 0x0A | Yes | [Authentication](Authentication-Protocol) |
 | 0x0B | Yes | [Secure connection](Secure-Protocol) |
 | 0x0E | Yes | [Notification events](Notification-Protocol) |
-| 0x10 | No | Simple authentication |
+| 0x10 | No | [Simple authentication](Simple-Authentication-Protocol) |
 | 0x11 | No | Siege |
 | 0x12 | Yes | [Health](Health-Protocol) |
 | 0x13 | Yes | [Monitoring](Monitoring-Protocol) |
