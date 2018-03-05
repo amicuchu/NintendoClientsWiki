@@ -42,6 +42,8 @@ As stated on the [[Game Server Overview]] page, NEX is actually a Nintendo-versi
 
 ## Nintendo Only
 
+| ID | Protocol |
+| --- | --- |
 | 0x64 | [Nintendo notification events](Nintendo-Notification-Event-Protocol) |
 | 0x65 | Friends-related? |
 | 0x66 | [Friends](Friends-Protocol) |
