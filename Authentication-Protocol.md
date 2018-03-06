@@ -24,7 +24,7 @@ Each game server got two different servers: an authentication server and a secur
 | Uint32 | Result code (also see [errors.py](https://github.com/Kinnay/NintendoClients/blob/master/nintendo/nex/errors.py)) |
 | Uint32 | User pid |
 | [Buffer] | [Kerberos ticket](Kerberos-Authentication#kerberos-ticket) |
-| [ConnectionData](#connection-data-structure) | Connection info for secure server |
+| [ConnectionData](NEX-Common-Types#rendez-vous-connection-data-structure) | Connection info for secure server |
 | [String] | Server build name |
 
 Examples of server build names:
@@ -34,22 +34,6 @@ Examples of server build names:
 | Friends | branch:origin/feature/45925_FixAutoReconnect build:3_10_11_2006_0 |
 | DKC:TF | branch:origin/release/ngs/3.4.x.3 build:3_4_8_3_0 |
 | MK8 | branch:origin/project/wup-amk build:3_5_10_2010_0 |
-
-### Connection Data ([Structure])
-| Type | Version | Description |
-| --- | --- | --- |
-| [StationURL] | Any | Secure server address |
-| [List]&lt;byte&gt; | Any | Unknown, official servers send an empty list |
-| [StationURL] | Any | Unknown, official servers send an empty string |
-| [DateTime] | V1 | Server time |
-
-Examples:
-
-| Server | Station url |
-| --- | --- |
-| Friends | `prudps:/stream=10;type=2;PID=2;port=60091;address=35.162.205.114;sid=1;CID=1` |
-| DKC:TF | `prudps:/port=43221;CID=1;address=34.208.166.202;PID=2;stream=10;type=2;sid=1` |
-| MK8 | `prudps:/sid=1;port=59201;address=52.10.188.163;PID=2;stream=10;type=2;CID=1` |
 
 # (2) LoginEx
 ## Request
