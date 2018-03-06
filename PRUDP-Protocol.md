@@ -150,8 +150,8 @@ This format is used by Nintendo Switch games.
 | --- | --- |
 | 2 | Magic number: 0x80 0x00 |
 | 2 | Payload size |
-| 1 | ? |
-| 1 | ? |
+| 1 | Source port |
+| 1 | Dest port |
 | 1 | ? |
 | 1 | [Fragment id](#fragment-id) |
 | 2 | [Type and flags](#type-and-flags) |
