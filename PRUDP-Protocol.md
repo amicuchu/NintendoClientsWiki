@@ -139,7 +139,7 @@ The packet signature is the HMAC of the following data, with the key being the M
 | Type is SYN or CONNECT | 16 | [Connection signature](#connection-signature) |
 | Type is CONNECT | 2 | 0x03 0x02 |
 | Type is CONNECT | 2 | Unknown, random integer |
-| Type is SYN or CONNECT | 4 | 0x04 0x01 0x00 |
+| Type is SYN or CONNECT | 3 | 0x04 0x01 0x00 |
 | Type is DATA | 2 | 0x02 0x01 |
 | Type is DATA | 1 | [Fragment id](#fragment-id) |
 
@@ -156,5 +156,14 @@ This format is used by Nintendo Switch games.
 | 1 | [Fragment id](#fragment-id) |
 | 2 | [Type and flags](#type-and-flags) |
 | 2 | [Sequence id](#sequence-id) |
-| ? | Unknown |
-| | Payload |
+
+Packet-specific data:
+
+| Only present if | Size | Description |
+| --- | --- | --- |
+| Type is SYN or CONNECT | 2 | 0x00 0x04 |
+| Type is SYN or CONNECT | 4 | Supported functions (unknown purpose) |
+| Type is SYN and Flags & FLAG_ACK | 2 | 0x01 0x10 |
+| Type is SYN and Flags & FLAG_ACK | 16 | [Connection signature](#connection-signature) |
+| Type is CONNECT and not Flags & FLAG_ACK | 2 | 0x80 0x10 |
+| Type is CONNECT and not Flags & FLAG_ACK | 16 | Packet signature |
