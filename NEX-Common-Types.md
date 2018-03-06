@@ -87,3 +87,21 @@ NEX has a class that can hold any object derived from nn::nex::Data. When these 
 | | Object data |
 
 [String]: #string
+
+# Rendez-Vous Connection Data ([Structure](#structure))
+Nintendo does not use any special protocols.
+
+| Type | Version | Description |
+| --- | --- | --- |
+| [StationURL](#station-url) | Any | Server address (regular protocols) |
+| [List](#list)&lt;byte&gt; | Any | Special protocols |
+| [StationURL](#station-url) | Any | Server address (special protocols) |
+| [DateTime](#date-time) | V1 | Server time |
+
+Examples:
+
+| Game | Secure server |
+| --- | --- |
+| Friends | `prudps:/stream=10;type=2;PID=2;port=60091;address=35.162.205.114;sid=1;CID=1` |
+| DKC:TF | `prudps:/port=43221;CID=1;address=34.208.166.202;PID=2;stream=10;type=2;sid=1` |
+| MK8 | `prudps:/sid=1;port=59201;address=52.10.188.163;PID=2;stream=10;type=2;CID=1` |
