@@ -153,7 +153,7 @@ This format is used by Nintendo Switch games.
 | 1 | ? |
 | 1 | ? |
 | 1 | ? |
-| 1 | ? |
+| 1 | [Fragment id](#fragment-id) |
 | 2 | [Type and flags](#type-and-flags) |
 | 2 | [Sequence id](#sequence-id) |
 | ? | Unknown |
