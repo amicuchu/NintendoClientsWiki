@@ -31,7 +31,7 @@ Interestingly, this protocol has methods referencing the Wii U, even though this
 | Uint32 | Result code |
 | Uint32 | User pid |
 | [RVConnectionData](NEX-Common-Types#rendez-vous-connection-data-structure) | Connection info for secure server |
-| [String] | Result message |
+| [String] | Response message |
 
 # (4) Login
 # (5) LoginWithSubAccount
