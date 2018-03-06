@@ -24,7 +24,7 @@ Each game server got two different servers: an authentication server and a secur
 | Uint32 | Result code (also see [errors.py](https://github.com/Kinnay/NintendoClients/blob/master/nintendo/nex/errors.py)) |
 | Uint32 | User pid |
 | [Buffer] | [Kerberos ticket](Kerberos-Authentication#kerberos-ticket) |
-| [ConnectionData](NEX-Common-Types#rendez-vous-connection-data-structure) | Connection info for secure server |
+| [RVConnectionData](NEX-Common-Types#rendez-vous-connection-data-structure) | Connection info for secure server |
 | [String] | Server build name |
 
 Examples of server build names:
