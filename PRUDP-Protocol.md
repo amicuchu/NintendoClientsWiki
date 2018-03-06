@@ -140,3 +140,19 @@ The packet signature is the HMAC of the following data, with the key being the M
 | Type is SYN or CONNECT | 4 | 0x04 0x01 0x00 |
 | Type is DATA | 2 | 0x02 0x01 |
 | Type is DATA | 1 | [Fragment id](#fragment-id) |
+
+## Lite Format
+This format is used by Nintendo Switch games.
+
+| Size | Description |
+| --- | --- |
+| 2 | Magic number: 0x80 0x00 |
+| 2 | Payload size |
+| 1 | ? |
+| 1 | ? |
+| 1 | ? |
+| 1 | ? |
+| 2 | [Type and flags](#type-and-flags) |
+| 2 | [Sequence id](#sequence-id) |
+| ? | Unknown |
+| | Payload |
