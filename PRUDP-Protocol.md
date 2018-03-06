@@ -1,6 +1,6 @@
 PRUDP is a transport layer protocol on top of UDP whose aim is to reliably send UDP packets. There are two version of this protocol ([V0](#v0-format) and [V1](#v1-format)), but these are pretty similar. The only difference lies in the way the packets are encoded. All values are encoded in little endian byte order.
 
-On the Nintendo Switch, NEX can be configured to use TCP or WebSockets instead of UDP. In that case the [Lite encoding](#lite-format) is used.
+On the Nintendo Switch, NEX can be configured to use TCP or WebSockets instead of UDP. In that case, the '[Lite](#lite-format)'-encoding is used.
 
 ### Basic operation
 When a client connects to a server, it sends a SYN packet. As soon as this packet is acknowledged by the server, it sends a CONNECT packet. When this packet has been acknowledged too, a connection has been made and the client and server can start sending DATA packets. If the client wants to close the connection, it sends a DISCONNECT packet. This packet is acknowledged three times by the server, presumably to ensure the client receives the ACK.
