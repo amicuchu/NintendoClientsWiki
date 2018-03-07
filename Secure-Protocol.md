@@ -15,57 +15,57 @@
 The secure server keeps a list of client urls that can be registered (added) and replaced by the client.
 
 ## Request
-| Type | Description |
-| --- | --- |
-| [List]&lt;[String]&gt; | Local client urls |
+| Type | Name | Description |
+| --- | --- | --- |
+| [List]&lt;[StationURL]&gt; | vecMyURLs | Local client urls |
 
 ## Response
-| Type | Description |
-| --- | --- |
-| Uint32 | Result code |
-| Uint32 | Connection id |
-| [StationURL] | Public client url, as perceived by the server |
+| Type | Name | Description |
+| --- | --- | --- |
+| Uint32 | %retval% | Result code |
+| Uint32 | pidConnectionID | Connection id |
+| [StationURL] | urlPublic |Public client url, as perceived by the server |
 
 The client should place the connection id into the RVCID field of its client station urls.
 
 # (2) RequestConnectionData
 ## Request
-| Type | Description |
-| --- | --- |
-| Uint32 | CID of station url |
-| Uint32 | PID of station url |
+| Type | Name | Description |
+| --- | --- | --- |
+| Uint32 | cidTarget | CID of station url |
+| Uint32 | pidTarget | PID of station url |
 
 ## Response
-| Type | Description |
-| --- | --- |
-| Bool | Unknown |
-| [List]&lt;[ConnectionData](#connection-data)&gt; | Connection data |
+| Type | Name | Description |
+| --- | --- | --- |
+| Bool | %retval% | Result |
+| [List]&lt;[ConnectionData](#connection-data)&gt; | pvecConnectionsData| Connection data |
 
 ### Connection Data ([Structure])
-| Type | Description |
-| --- | --- |
-| [StationURL] | Station url |
-| Uint32 | Connection id |
+| Type | Name | Description |
+| --- | --- | --- |
+| [StationURL] | m_StationUrl | Station url |
+| Uint32 | m_ConnectionID | Connection id |
 
 # (3) RequestUrls
 ## Request
-| Type | Description |
-| --- | --- |
-| Uint32 | CID |
-| Uint32 | PID |
+| Type | Name | Description |
+| --- | --- | --- |
+| Uint32 | cidTarget | CID |
+| Uint32 | pidTarget | PID |
 
 ## Response
-| Type | Description |
-| --- | --- |
-| Bool | Unknown |
-| [List]&lt;[StationURL]&gt; | Station urls |
+| Type | Name | Description |
+| --- | --- | --- |
+| Bool | %retval% | Result |
+| [List]&lt;[StationURL]&gt; | plstURLs | Station urls |
 
 # (4) RegisterEx
 ## Request
-| Type | Description |
-| --- | --- |
-| [List]&lt;[String]&gt; | Local client urls |
-| [Data]&lt;[NintendoLoginData](#nintendo-login-data)&gt; | Login data |
+| Type | Name | Description |
+| --- | --- | --- |
+| [List]&lt;[String]&gt; | vecMyURLs | Local client urls |
+| [Data]&lt;[NintendoLoginData](#nintendo-login-data)&gt; | hCustomData | Login data |
 
 ### Nintendo Login Data
 | Type | Description |
@@ -82,25 +82,25 @@ This method takes no parameters and returns no values.
 
 # (7) ReplaceUrl
 ## Request
-| Type | Description |
-| --- | --- |
-| [StationURL] | Old station url |
-| [StationURL] | New station url |
+| Type | Name | Description |
+| --- | --- | --- |
+| [StationURL] | target | Old station url |
+| [StationURL] | url | New station url |
 
 ## Response
 This method does not return anything.
 
 # (8) SendReport
 ## Request
-| Type | Description |
-| --- | --- |
-| Uint32 | Unknown |
-| Uint16 | Data length |
-| Bytes | Data |
+| Type | Name | Description |
+| --- | --- | --- |
+| Uint32 | reportId | |
+| [Buffer] | reportData | Data |
 
 ## Response
 This method does not return anything.
 
+[Buffer]: NEX-Common-Types#buffer
 [List]: NEX-Common-Types#list
 [String]: NEX-Common-Types#string
 [StationURL]: NEX-Common-Types#station-url
