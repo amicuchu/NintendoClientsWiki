@@ -13,8 +13,12 @@ The following techniques are used to achieve reliability:
 ### Encryption
 All payloads are encrypted using RC4, with separate streams for client-to-server packets and server-to-client packets. The connection to the authentication server is encrypted using a default key that's always the same: `CD&ML`. The connection to the secure server is encrypted using the secure key from the [Kerberos ticket](Kerberos-Authentication#kerberos-ticket).
 
-### Source/destination port
-These are "virtual ports", probably to distinguish between connections if a single game/app opens multiple connections at once, although no games actually seem to do this. It's unclear how exactly they're calculated, but normally, the server is identified by 0xA1 and the client by 0xAF.
+### Virtual ports
+These are used to distinguish between connections if a single game/app opens multiple connections at once. In practice, no game runs more than one connection at once, however.
+
+**V0 and V1**: The four most significant bits contain the stream type. This is always 0xA in Nintendo games. The four least significant bits contain the port number. The client port starts at 0xF and decrements on every new connection. The server port starts at 0x1 and increments on every new connection. In practice (since no game actually connects to more than one server at once), the server is always identified by 0xA1 and the client by 0xAF.
+
+**Lite (Switch)**: Unknown. The stream type seems to be stored separately from the port number somehow.
 
 ### Type and flags
 This field is made by concatening a 4-bit type value to 12 bits of packet flags. For example, a PING packet with FLAG_RELIABLE and FLAG_NEED_ACK would have this value set to 0x0064 (but remember everything is little endian so it would be stored as 0x64 0x00).
@@ -55,8 +59,8 @@ This format is only used by the friends server, and possibly some 3DS games.
 ### Packet header
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 1 | [Source port](#sourcedestination-port) |
-| 0x1 | 1 | [Destination port](#sourcedestination-port) |
+| 0x0 | 1 | [Source port](#virtual-ports) |
+| 0x1 | 1 | [Destination port](#virtual-ports) |
 | 0x2 | 2 | [Type and flags](#type-and-flags) |
 | 0x4 | 1 | [Session id](#session-id) |
 | 0x5 | 4 | [Packet signature](#packet-signature) |
@@ -111,8 +115,8 @@ This format is used by all Wii U games and apps except for friends services, and
 | 0x0 | 1 | PRUDP version (always 1) |
 | 0x1 | 1 | Length of packet-specific data |
 | 0x2 | 2 | Payload size |
-| 0x4 | 1 | [Source port](#sourcedestination-port) |
-| 0x5 | 1 | [Destination port](#sourcedestination-port) |
+| 0x4 | 1 | [Source port](#virtual-ports) |
+| 0x5 | 1 | [Destination port](#virtual-ports) |
 | 0x6 | 2 | [Type and flags](#type-and-flags) |
 | 0x8 | 1 | [Session id](#session-id) |
 | 0x9 | 1 | Always 0 |
