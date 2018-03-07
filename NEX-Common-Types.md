@@ -1,11 +1,13 @@
 # Table of Contents
 1. [String](#string)
 2. [Buffer](#buffer)
-3. [List](#list)
-4. [DateTime](#date-time)
-5. [StationURL](#station-url)
-6. [Structure](#structure)
-7. [Data](#any-data-holder)
+3. [qBuffer](#qbuffer)
+4. [List](#list)
+5. [DateTime](#date-time)
+6. [StationURL](#station-url)
+7. [Structure](#structure)
+8. [Data](#any-data-holder)
+9. [RVConnectionData](#rendez-vous-connection-data-structure)
 
 # String
 | Type | Description |
@@ -17,6 +19,12 @@
 | Type | Description |
 | --- | --- |
 | Uint32 | Length |
+| Bytes | Data |
+
+# qBuffer
+| Type | Description |
+| --- | --- |
+| Uint16 | Length |
 | Bytes | Data |
 
 # List
@@ -91,12 +99,12 @@ NEX has a class that can hold any object derived from nn::nex::Data. When these 
 # Rendez-Vous Connection Data ([Structure](#structure))
 Nintendo does not use any special protocols.
 
-| Type | Version | Description |
-| --- | --- | --- |
-| [StationURL](#station-url) | Any | Server address (regular protocols) |
-| [List](#list)&lt;byte&gt; | Any | Special protocols |
-| [StationURL](#station-url) | Any | Server address (special protocols) |
-| [DateTime](#date-time) | V1 | Server time |
+| Type | Version | Name | Description |
+| --- | --- | --- | --- |
+| [StationURL](#station-url) | Any | m_urlRegularProtocols | Server address (regular protocols) |
+| [List](#list)&lt;byte&gt; | Any | m_lstSpecialProtocols | Special protocols |
+| [StationURL](#station-url) | Any | m_urlSpecialProtocols | Server address (special protocols) |
+| [DateTime](#date-time) | V1 | m_currentUTCTime | Time |
 
 Examples:
 
