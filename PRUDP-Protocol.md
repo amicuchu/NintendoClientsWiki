@@ -59,8 +59,8 @@ This format is only used by the friends server, and possibly some 3DS games.
 ### Packet header
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 1 | [Source port](#virtual-ports) |
-| 0x1 | 1 | [Destination port](#virtual-ports) |
+| 0x0 | 1 | [Source](#virtual-ports) |
+| 0x1 | 1 | [Destination](#virtual-ports) |
 | 0x2 | 2 | [Type and flags](#type-and-flags) |
 | 0x4 | 1 | [Session id](#session-id) |
 | 0x5 | 4 | [Packet signature](#packet-signature) |
@@ -115,8 +115,8 @@ This format is used by all Wii U games and apps except for friends services, and
 | 0x0 | 1 | PRUDP version (always 1) |
 | 0x1 | 1 | Length of packet-specific data |
 | 0x2 | 2 | Payload size |
-| 0x4 | 1 | [Source port](#virtual-ports) |
-| 0x5 | 1 | [Destination port](#virtual-ports) |
+| 0x4 | 1 | [Source](#virtual-ports) |
+| 0x5 | 1 | [Destination](#virtual-ports) |
 | 0x6 | 2 | [Type and flags](#type-and-flags) |
 | 0x8 | 1 | [Session id](#session-id) |
 | 0x9 | 1 | Always 0 |
