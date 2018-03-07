@@ -19,19 +19,19 @@ Interestingly, this protocol has methods referencing the Wii U, even though this
 # (2) LoginWithToken
 # (3) LoginWithTokenEx
 ## Request
-| Type | Description |
-| --- | --- |
-| [String] | Token |
-| [RVConnectionData](NEX-Common-Types#rendez-vous-connection-data-structure) | Connection info for secure server |
-| [Data] | Login data |
+| Type | Name | Description |
+| --- | --- | --- |
+| [String] | strToken | Token |
+| [RVConnectionData](NEX-Common-Types#rendez-vous-connection-data-structure) | pConnectionData | Connection info for secure server |
+| [Data] | oAnyData | Login data |
 
 ## Response
-| Type | Description |
-| --- | --- |
-| Uint32 | Result code |
-| Uint32 | User pid |
-| [RVConnectionData](NEX-Common-Types#rendez-vous-connection-data-structure) | Connection info for secure server |
-| [String] | Response message |
+| Type | Name | Description |
+| --- | --- | --- |
+| Uint32 | %retval% Result code |
+| Uint32 | pidPrincipal | User pid |
+| [RVConnectionData](NEX-Common-Types#rendez-vous-connection-data-structure) | pConnectionData | Connection info for secure server |
+| [String] | strReturnMsg | Response message |
 
 # (4) Login
 # (5) LoginWithSubAccount
