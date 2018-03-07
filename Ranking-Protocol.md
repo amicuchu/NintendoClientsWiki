@@ -24,19 +24,19 @@
 
 # (3) DeleteAllScores
 ## Request
-| Type | Description |
-| --- | --- |
-| Uint64 | Unknown |
+| Type | Name | Description |
+| --- | --- | --- |
+| Uint64 | uniqueId | |
 
 ## Response
 This method does not return anything.
 
 # (4) UploadCommonData
 ## Request
-| Type | Description |
-| --- | --- |
-| [Buffer] | Data |
-| Uint64 | Data id |
+| Type | Name | Description |
+| --- | --- | --- |
+| [Buffer] | commonData | Data |
+| Uint64 | uniqueId | Data id |
 
 ## Response
 This method does not return anything.
@@ -45,14 +45,14 @@ This method does not return anything.
 
 # (6) GetCommonData
 ## Request
-| Type | Description |
-| --- | --- |
-| Uint64 | Data id |
+| Type | Name | Description |
+| --- | --- | --- |
+| Uint64 | uniqueId | Data id |
 
 ## Response
-| Type | Description |
-| --- | --- |
-| [Buffer] | Data |
+| Type | Name | Description |
+| --- | --- | --- |
+| [Buffer] | commonData | Data |
 
 # (7) ChangeAttributes
 
@@ -61,13 +61,13 @@ This method does not return anything.
 # (9) GetRanking
 
 ## Request
-| Type | Description |
-| --- | --- |
-| Uint8 | Mode |
-| Uint32 | Category (probably game-specific) |
-| RankingOrderParam | A bunch of parameters |
-| Uint64 | Unknown |
-| Uint32 | Unknown |
+| Type | Name | Description |
+| --- | --- | --- |
+| Uint8 | rankingMode | Mode |
+| Uint32 | category | Category (game-specific) |
+| RankingOrderParam | orderParam | A bunch of parameters |
+| Uint64 | uniqueId | |
+| Uint32 | principalId | |
 
 ### Ranking Mode
 | Value | Description |
@@ -77,14 +77,14 @@ This method does not return anything.
 | 4 | Own ranking only
 
 ### Ranking Order Param ([Structure])
-| Type | Description |
-| --- | --- |
-| Uint8 | Rank calculation |
-| Uint8 | Filter index |
-| Uint8 | Filter number |
-| Uint8 | Time scope |
-| Uint32 | Base rank (0 is world record) |
-| Uint8 | Desired number of rankings |
+| Type | Name | Description |
+| --- | --- | --- |
+| Uint8 | orderCalculation | Rank calculation |
+| Uint8 | groupIndex | Filter index |
+| Uint8 | groupNum | Filter number |
+| Uint8 | timeScope | Time scope |
+| Uint32 | offset | Base rank (0 is world record) |
+| Uint8 | length | Desired number of rankings |
 
 #### Rank Calculation
 | Value | Description |
@@ -93,28 +93,28 @@ This method does not return anything.
 | 1 | Ordinal ranking (1234) |
 
 ## Response
-| Type | Description |
-| --- | --- |
-| RankingResult | The result |
+| Type | Name | Description |
+| --- | --- | --- |
+| RankingResult | pResult | The result |
 
 ### Ranking Result ([Structure])
-| Type | Description |
-| --- | --- |
-| [List]&lt;RankingRankData&gt; | Rankings |
-| Uint32 | Total number of ranking entries on the server |
-| [DateTime] | Unknown date time |
+| Type | Name | Description |
+| --- | --- | --- |
+| [List]&lt;RankingRankData&gt; | rankDataList | Rankings |
+| Uint32 | totalCount | Total number of ranking entries on the server |
+| [DateTime] | sinceTime | |
 
 #### Ranking Rank Data ([Structure])
-| Type | Description |
-| --- | --- |
-| Uint32 | User pid |
-| Uint64 | Unknown |
-| Uint32 | Rank |
-| Uint32 | Category |
-| Uint32 | Score |
-| [Buffer] | Data 1 |
-| Uint64 | Additional info |
-| [Buffer] | Data 2 |
+| Type | Name | Description |
+| --- | --- | --- |
+| Uint32 | principalId | User pid |
+| Uint64 | uniqueId | |
+| Uint32 | order | Rank |
+| Uint32 | category | Category |
+| Uint32 | score | Score |
+| [List]&lt;byte&gt; | groups | Filters |
+| Uint64 | param | Additional info |
+| [Buffer] | commonData | Additional data |
 
 # (10) GetApproxOrder
 
