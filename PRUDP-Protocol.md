@@ -16,9 +16,20 @@ All payloads are encrypted using RC4, with separate streams for client-to-server
 ### Virtual ports
 These are used to distinguish between connections if a single game/app opens multiple connections at once. In practice, no game runs more than one connection at once, however.
 
-**V0 and V1**: The four most significant bits contain the stream type. This is always 0xA in Nintendo games. The four least significant bits contain the port number. The client port is the highest unused port number &le; 0xF. The server port is the lowest unused port number &ge; 1. In practice (since no game actually connects to more than one server at once), the server is always identified by 0xA1 and the client by 0xAF.
+The stream type is always RVSecure (0xA) in Nintendo games.
+
+**V0 and V1**: The four most significant bits contain the stream type. The four least significant bits contain the port number. The client port is the highest unused port number &le; 0xF. The server port is the lowest unused port number &ge; 1. In practice (since no game actually connects to more than one server at once), the server is always identified by 0xA1 and the client by 0xAF.
 
 **Lite (Switch)**: The port number now uses 8 bits instead of 4. The client port is the highest unused port number &le; 0x1F. The stream types are stored into a separate byte.
+
+| Stream type | Name | Stream type | Name |
+| --- | --- | --- | --- |
+| 1 | DO | 7 | NATEcho |
+| 2 | RV | 8 | Routing |
+| 3 | OldRVSec | 9 | Game |
+| 4 | SBMGMT | 10 | RVSecure |
+| 5 | NAT | 11 | Relay |
+| 6 | SessionDiscovery | | |
 
 ### Type and flags
 This field is made by concatening a 4-bit type value to 12 bits of packet flags. For example, a PING packet with FLAG_RELIABLE and FLAG_NEED_ACK would have this value set to 0x0064 (but remember everything is little endian so it would be stored as 0x64 0x00).
@@ -152,7 +163,8 @@ This format is used by Nintendo Switch games.
 
 | Size | Description |
 | --- | --- |
-| 2 | Magic number: 0x80 0x00 |
+| 1 | Magic number: 0x80 |
+| 1 | Length of packet-specific data |
 | 2 | Payload size |
 | 1 | 0xXY (X = source stream type, Y = destination stream type) |
 | 1 | [Source port](#virtual-ports) |
