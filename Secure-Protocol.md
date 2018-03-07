@@ -94,13 +94,13 @@ This method does not return anything.
 ## Request
 | Type | Name | Description |
 | --- | --- | --- |
-| Uint32 | reportId | |
-| [Buffer] | reportData | Data |
+| Uint32 | reportId | Report id |
+| [qBuffer] | reportData | Data |
 
 ## Response
 This method does not return anything.
 
-[Buffer]: NEX-Common-Types#buffer
+[qBuffer]: NEX-Common-Types#qbuffer
 [List]: NEX-Common-Types#list
 [String]: NEX-Common-Types#string
 [StationURL]: NEX-Common-Types#station-url
