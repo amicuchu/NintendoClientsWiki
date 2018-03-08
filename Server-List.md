@@ -30,7 +30,6 @@
 
 ## Switch
 * ctest.cdn.nintendo.net
-* sun.hac.lp1.d4c.nintendo.net
 * ecs-lp1.hac.shop.nintendo.net
 * beach.hac.lp1.eshop.nintendo.net
 * bugyo.hac.lp1.eshop.nintendo.ent
@@ -41,6 +40,8 @@
 * app-b01.lp1.npns.srv.nintendo.net
 * aqua.hac.lp1.d4c.nintendo.net
 * sun.hac.lp1.d4c.nintendo.net
+* superfly.hac.lp1.d4c.nintendo.net
+* atum.hac.lp1.d4c.nintendo.net
 * receive-lp1.dg.srv.nintendo.net
 * dauth-lp1.ndas.srv.nintendo.net
 * aauth-lp1.ndas.srv.nintendo.net
