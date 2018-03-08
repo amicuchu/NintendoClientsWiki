@@ -64,10 +64,27 @@ The server sends its connection signature in its response to the client's SYN pa
 
 If present, the connection signature is the first 4 bytes of a HMAC based on the perceived ip and port of the other end point. However, the key used to calculate this hash seems to be initialized to a random value, thus resulting in an unverifiable hash.
 
+### Optional data
+Starting with PRUDP V1, packet-specific data is encoded like this:
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 1 | Option id |
+| 0x1 | 1 | Value size |
+| 0x2 | | Value |
+
+| Option id | Size | Description |
+| --- | --- | --- |
+| 0 | 4 | Supported functions (unknown purpose) |
+| 1 | 16 | [Connection signature](#connection-signature) |
+| 2 | 1 | [Fragment id](#fragment-id) |
+| 3 | 2 | Unknown (random integer) |
+| 4 | 1 | Unknown (always 0) |
+| 0x80 | 16 | Packet signature |
+
 ## V0 Format
 This format is only used by the friends server, and possibly some 3DS games.
 
-### Packet header
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 1 | [Source](#virtual-ports) |
@@ -76,6 +93,9 @@ This format is only used by the friends server, and possibly some 3DS games.
 | 0x4 | 1 | [Session id](#session-id) |
 | 0x5 | 4 | [Packet signature](#packet-signature) |
 | 0x9 | 2 | [Sequence id](#sequence-id) |
+| 0xB | | Packet-specific data |
+| | | Payload |
+| | 1 | Checksum |
 
 Packet-specific data:
 
@@ -90,19 +110,19 @@ Packet-specific data:
 * In all other DATA packets the signature is the first 4 bytes of the HMAC of the encrypted payload, with the key being the MD5 hash of the access key.
 * In all other packets the signature is the connection signature that has been received while the connection was made.
 
-### Payload
-The header is followed by the payload with a 1-byte checksum appended to it. The checksum is calculated over the whole packet (both header and encrypted payload), and uses the following algorithm (the example code is written in python):
+### Checksum
+The checksum is calculated over the whole packet (both header and encrypted payload), and uses the following algorithm (the example code is written in python):
 ```python
 def calc_checksum(checksum, data):
 	#Little endian!
-	words = struct.unpack_from("<" + "I" * (len(data) // 4), data)
+	words = struct.unpack_from("<%iI" %(len(data) // 4), data)
 	temp = sum(words) & 0xFFFFFFFF #32-bit
 	
 	#Add the sum of the remaining bytes to the checksum
 	checksum += sum(data[-(len(data) & 3):])
 	
 	#And the sum of the bytes of the temporary checksum
-	checksum += sum(struct.pack("<I", temp))
+	checksum += sum(struct.pack("I", temp))
 	
 	return checksum & 0xFF #8-bit checksum
 	
@@ -146,40 +166,37 @@ The packet signature is the HMAC of the following data, with the key being the M
 | | Payload |
 
 ### Packet-specific data
-| Only present if | Size | Description |
-| --- | --- | --- |
-| Type is SYN or CONNECT | 2 | 0x00 0x04 |
-| Type is SYN or CONNECT | 4 | Supported functions (unknown purpose) |
-| Type is SYN or CONNECT | 2 | 0x01 0x10 |
-| Type is SYN or CONNECT | 16 | [Connection signature](#connection-signature) |
-| Type is CONNECT | 2 | 0x03 0x02 |
-| Type is CONNECT | 2 | Unknown, random integer |
-| Type is SYN or CONNECT | 3 | 0x04 0x01 0x00 |
-| Type is DATA | 2 | 0x02 0x01 |
-| Type is DATA | 1 | [Fragment id](#fragment-id) |
+See [optional data](#optional-data).
+
+| Option id | Only present if |
+| --- | --- |
+| 0 | Type is SYN or CONNECT |
+| 1 | Type is SYN or CONNECT |
+| 2 | Type is DATA |
+| 3 | Type is CONNECT |
+| 4 | Type is SYN or CONNECT |
 
 ## Lite Format
 This format is used by Nintendo Switch games.
 
-| Size | Description |
-| --- | --- |
-| 1 | Magic number: 0x80 |
-| 1 | Length of packet-specific data |
-| 2 | Payload size |
-| 1 | 0xXY (X = source stream type, Y = destination stream type) |
-| 1 | [Source port](#virtual-ports) |
-| 1 | [Destination port](#virtual-ports) |
-| 1 | [Fragment id](#fragment-id) |
-| 2 | [Type and flags](#type-and-flags) |
-| 2 | [Sequence id](#sequence-id) |
-
-Packet-specific data:
-
-| Only present if | Size | Description |
+| Offset | Size | Description |
 | --- | --- | --- |
-| Type is SYN or CONNECT | 2 | 0x00 0x04 |
-| Type is SYN or CONNECT | 4 | Supported functions (unknown purpose) |
-| Type is SYN and Flags & FLAG_ACK | 2 | 0x01 0x10 |
-| Type is SYN and Flags & FLAG_ACK | 16 | [Connection signature](#connection-signature) |
-| Type is CONNECT and not Flags & FLAG_ACK | 2 | 0x80 0x10 |
-| Type is CONNECT and not Flags & FLAG_ACK | 16 | Packet signature |
+| 0x0 | 1 | Magic number: 0x80 |
+| 0x1 | 1 | Length of packet-specific data |
+| 0x2 | 2 | Payload size |
+| 0x4 | 1 | 0xXY (X = source stream type, Y = destination stream type) |
+| 0x5 | 1 | [Source port](#virtual-ports) |
+| 0x6 | 1 | [Destination port](#virtual-ports) |
+| 0x7 | 1 | [Fragment id](#fragment-id) |
+| 0x8 | 2 | [Type and flags](#type-and-flags) |
+| 0xA | 2 | [Sequence id](#sequence-id) |
+| 0xC | | Packet-specific data |
+| | Payload |
+
+Packet-specific data (see [optional data](#optional-data)):
+
+| Option id | Only present if |
+| --- | --- |
+| 0 | Type is SYN or CONNECT |
+| 1 | Type is SYN and Flags & FLAG_ACK |
+| 0x80 | Type is CONNECT and not Flags & FLAG_ACK |
