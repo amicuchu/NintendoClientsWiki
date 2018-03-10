@@ -60,7 +60,9 @@ This is an incrementing value used to ensure that packets arrive in correct orde
 Big data packets are split into smaller ones. The last fragment always has fragment id 0. Other fragments have an incrementing fragment id starting at 1.
 
 For example, if a packet is split into four fragments, they will have the following fragment ids:
+
 | Fragment | Fragment id |
+| --- | --- |
 | First | 1 |
 | Second | 2 |
 | Third | 3 |
