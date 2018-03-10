@@ -57,7 +57,14 @@ This is a random value generated at the start of each session. The server's sess
 This is an incrementing value used to ensure that packets arrive in correct order. The sequence id of client-to-server packets is separate from the sequence id of server-to-client packets.
 
 ### Fragment id
-Big data packets are split into smaller ones. The fragment ids assigned to packets are counting downwards towards zero. This way the receiver knows how many fragments are left until a full packet has been received. For example, if a message is split into three fragments, the first fragment will have fragment id 2, the second one will have fragment id 1, and the last one fragment id 0.
+Big data packets are split into smaller ones. The last fragment always has fragment id 0. Other fragments have an incrementing fragment id starting at 1.
+
+For example, if a packet is split into four fragments, they will have the following fragment ids:
+| Fragment | Fragment id |
+| First | 1 |
+| Second | 2 |
+| Third | 3 |
+| Fourth | 0 |
 
 ### Connection signature
 The server sends its connection signature in its response to the client's SYN packet. The client sends its connection signature in the CONNECT packet. Other SYN/CONNECT packets have this field set to 0.
