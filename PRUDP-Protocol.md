@@ -50,7 +50,7 @@ This field is made by concatening a 4-bit type value to 12 bits of packet flags.
 | 3 | DISCONNECT |
 | 4 | PING |
 
-### Aggregate Ack
+### Aggregate acknowledgement
 To acknowledge multiple packets at once, send a DATA packet with FLAG_MULTI_ACK. All packets up to the specified packet id will be acknowledged. Since the version can only be specified in the [V1](#v1-format) header, [V0](#v0-format) might not support aggregate acks. The payload should contain the following data:
 
 #### Old version
