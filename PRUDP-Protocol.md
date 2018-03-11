@@ -174,7 +174,7 @@ This format is used by all Wii U games and apps except for friends services, and
 | 0x5 | 1 | [Destination](#virtual-ports) |
 | 0x6 | 2 | [Type and flags](#type-and-flags) |
 | 0x8 | 1 | [Session id](#session-id) |
-| 0x9 | 1 | ]Multi-ack](#aggregate-ack) version |
+| 0x9 | 1 | [Multi-ack](#aggregate-acknowledgement) version |
 | 0xA | 2 | [Sequence id](#sequence-id) |
 
 ### Packet signature
