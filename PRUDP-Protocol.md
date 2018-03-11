@@ -50,6 +50,21 @@ This field is made by concatening a 4-bit type value to 12 bits of packet flags.
 | 3 | DISCONNECT |
 | 4 | PING |
 
+### Aggregate Ack
+To acknowledge multiple packets at once, send a DATA packet with FLAG_MULTI_ACK. All packets up to the specified packet id will be acknowledged. Since the version can only be specified in the [V1](#v1-format) header, [V0](#v0-format) might not support aggregate acks. The payload should contain the following data:
+
+#### Old version
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 2 | Packet id |
+
+#### New version
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 1 | Unknown (always 0?) |
+| 0x1 | 1 | Unknown (always 0?) |
+| 0x2 | 2 | Packet id |
+
 ### Session id
 This is a random value generated at the start of each session. The server's session id is not necessarily the same as the client's session id.
 
@@ -159,7 +174,7 @@ This format is used by all Wii U games and apps except for friends services, and
 | 0x5 | 1 | [Destination](#virtual-ports) |
 | 0x6 | 2 | [Type and flags](#type-and-flags) |
 | 0x8 | 1 | [Session id](#session-id) |
-| 0x9 | 1 | Always 0 |
+| 0x9 | 1 | ]Multi-ack](#aggregate-ack) version |
 | 0xA | 2 | [Sequence id](#sequence-id) |
 
 ### Packet signature
