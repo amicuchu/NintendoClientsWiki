@@ -86,7 +86,7 @@ For example, if a packet is split into four fragments, they will have the follow
 ### Connection signature
 The server sends its connection signature in its response to the client's SYN packet. The client sends its connection signature in the CONNECT packet. Other SYN/CONNECT packets have this field set to 0.
 
-If present, the connection signature is the first 4 bytes of a HMAC based on the perceived ip and port of the other end point. However, the key used to calculate this hash seems to be initialized to a random value, thus resulting in an unverifiable hash.
+If present, the connection signature is the first 4 bytes of a HMAC based on the perceived ip and port of the other end point. However, the key used to calculate this hash seems to be random, thus giving an unverifiable hash.
 
 ### Optional data
 Starting with PRUDP V1, packet-specific data is encoded like this:
