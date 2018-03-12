@@ -104,7 +104,7 @@ Starting with PRUDP V1, packet-specific data is encoded like this:
 | 2 | 1 | [Fragment id](#fragment-id) |
 | 3 | 2 | Unknown (random integer) |
 | 4 | 1 | Unknown (always 0) |
-| 0x80 | 16 | Packet signature |
+| 0x80 | 16 | [Connection signature](#connection-signature) |
 
 ## V0 Format
 This format is only used by the friends server, and possibly some 3DS games.
