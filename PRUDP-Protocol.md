@@ -10,6 +10,30 @@ The following techniques are used to achieve reliability:
 * A [sequence id](#sequence-id) is sent along with a packet, so the receiver can reorder packets if necessary.
 * To keep the connection alive, both client and server send PING packets to each other after a certain amount of time has passed.
 
+### Secure server connection
+While the payload should be empty when connecting to the authentication server, the secure server requires the following data to be in the payload of the CONNECT packet:
+
+#### Connection request
+| Type | Description |
+| --- | --- |
+| [Buffer] | Kerberos ticket data |
+| [Buffer] | [Kerberos-encrypted](Kerberos-Authentication) request data |
+
+Request data:
+
+| Type | Description |
+| --- | --- |
+| Uint32 | User pid |
+| Uint32 | CID of secure server station url |
+| Uint32 | Response check value |
+
+#### Connectoin response
+The CONNECT acknowledgement packet contains a [Buffer] with the following data:
+
+| Type | Description |
+| --- | --- |
+| Uint32 | Response check value + 1 |
+
 ### Encryption
 All payloads are encrypted using RC4, with separate streams for client-to-server packets and server-to-client packets. The connection to the authentication server is encrypted using a default key that's always the same: `CD&ML`. The connection to the secure server is encrypted using the secure key from the [Kerberos ticket](Kerberos-Authentication#kerberos-ticket).
 
@@ -224,3 +248,5 @@ Packet-specific data (see [optional data](#optional-data)):
 | 0 | Type is SYN or CONNECT |
 | 1 | Type is SYN and Flags & FLAG_ACK |
 | 0x80 | Type is CONNECT and not Flags & FLAG_ACK |
+
+[Buffer]: NEX-Common-Types#buffer
