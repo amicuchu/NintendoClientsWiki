@@ -27,7 +27,7 @@ Request data:
 | Uint32 | CID of secure server station url |
 | Uint32 | Response check value |
 
-#### Connectoin response
+#### Connection response
 The CONNECT acknowledgement packet contains a [Buffer] with the following data:
 
 | Type | Description |
