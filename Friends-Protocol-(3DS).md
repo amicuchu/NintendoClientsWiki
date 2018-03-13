@@ -19,7 +19,7 @@
 | 15 | ? |
 | 16 | ? |
 | 17 | [SyncFriend](#17-syncfriend) |
-| 18 | UpdatePresence |
+| 18 | [UpdatePresence](#18-updatepresence) |
 | 19 | UpdateFavoriteGameKey  |
 | 20 | UpdateComment |
 | 21 | ? |
@@ -33,26 +33,10 @@
 ## Request
 | Type | Description |
 | --- | --- |
-| [Data]&lt;[MyProfile](#myprofile)&gt; | Profile data |
-
-### MyProfile
-| Type | Description |
-| --- | --- |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
-| Uint64 | Unknown |
-| [String] | Unknown |
-| [String] | Unknown |
+| [MyProfile](#myprofile) | Profile data |
 
 ## Response
 This method does not return anything
-
-[String]: NEX-Common-Types#string
-[List]: NEX-Common-Types#list
-[Data]: NEX-Common-Types#any-data-holder
 
 # (17) SyncFriend
 ## Request
@@ -65,11 +49,58 @@ This method does not return anything
 ## Response
 | Type | Description |
 | --- | --- |
-| [List]&lt;[Data]&lt;[FriendRelationship](#friendrelationship)&gt;&gt; | Friend list |
+| [List]&lt;[FriendRelationship](#friendrelationship)&gt; | Friend list |
 
-# FriendRelationship
+# (18) UpdatePresence
+## Request
+| Type | Description |
+| --- | --- |
+| [NintendoPresence](#nintendopresence) | Presence info |
+| Bool | Unknown |
+
+## Response
+This method does not return anything.
+
+#Types
+## FriendRelationship
 | Type | Description |
 | --- | --- |
 | Uint32 | Unknown |
 | Uint64 | Unknown |
 | Uint8 | Unknown |
+
+## GameKey
+| Type | Description |
+| --- | --- |
+| Uint64 | Title id |
+| Uint16 | Title version |
+
+## MyProfile
+| Type | Description |
+| --- | --- |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint64 | Unknown |
+| [String] | Unknown |
+| [String] | Unknown |
+
+## NintendoPresence
+| Type | Description |
+| --- | --- |
+| Uint32 | Unknown |
+| [GameKey](#gamekey) | Game key |
+| [String] | Message |
+| Uint32 | Unknown |
+| Uint8 | Unknown |
+| Uint32 | Game server id? |
+| Uint32 | Unknown |
+| Uint32 | User pid? |
+| Uint32 | Gathering id? |
+| [Buffer] | Unknown |
+
+[String]: NEX-Common-Types#string
+[List]: NEX-Common-Types#list
+[Buffer]: NEX-Common-Types#buffer
