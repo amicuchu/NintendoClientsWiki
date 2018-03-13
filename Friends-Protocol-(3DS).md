@@ -10,13 +10,13 @@
 | 6 | GetFriendMii |
 | 7 | ? |
 | 8 | ? |
-| 9 | GetPrincipalIDByLocalFriendCode |
-| 10 | ? |
+| 9 | ? |
+| 10 | [GetFriendRelationships](#10-getfriendrelationships) |
 | 11 | [AddFriendByPrincipalID](#11-addfriendbyprincipalid) |
 | 12 | ? |
 | 13 | ? |
 | 14 | ? |
-| 15 | ? |
+| 15 | [GetAllFriends](#15-getallfriends) |
 | 16 | ? |
 | 17 | [SyncFriend](#17-syncfriend) |
 | 18 | [UpdatePresence](#18-updatepresence) |
@@ -76,6 +76,17 @@ This method does not return anything.
 ## Response
 This method does not return anything
 
+# (10) GetFriendRelationships
+## Request
+| Type | Description |
+| --- | --- |
+| [List]&lt;Uint32&gt; | Unknown |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[FriendRelationship](#friendrelationship)&gt; | Friend relationships |
+
 # (11) AddFriendByPrincipalID
 ## Request
 | Type | Description |
@@ -87,6 +98,15 @@ This method does not return anything
 | Type | Description |
 | --- | --- |
 | [FriendRelationship](#friendrelationship) | Friend relationship |
+
+# (15) GetAllFriends
+## Request
+This method does not take any request data.
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[FriendRelationship](#friendrelationship) | Friend relationships |
 
 # (17) SyncFriend
 ## Request
