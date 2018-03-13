@@ -2,12 +2,12 @@
 
 | Method ID | Method Name |
 | --- | --- |
-| 1 | ? |
-| 2 | ? |
+| 1 | UpdateProfile |
+| 2 | UpdateMii |
 | 3 | ? |
 | 4 | ? |
 | 5 | UpdatePreference |
-| 6 | GetFriendMiiInformation |
+| 6 | GetMii |
 | 7 | ? |
 | 8 | ? |
 | 9 | GetPrincipalIDByLocalFriendCode |
@@ -21,7 +21,7 @@
 | 17 | SyncFriend |
 | 18 | UpdatePresence |
 | 19 | UpdateFavoriteGameKey  |
-| 20 | ? |
+| 20 | UpdateComment |
 | 21 | ? |
 | 22 | GetPresence |
 | 23 | ? |
