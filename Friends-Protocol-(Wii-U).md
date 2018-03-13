@@ -22,3 +22,5 @@ The following method names are merely guesses, based on what the method does.
 | 16 | ? |
 | 17 | ? |
 | 18 | ? |
+| 19 | ? |
+| 20 | ? |
