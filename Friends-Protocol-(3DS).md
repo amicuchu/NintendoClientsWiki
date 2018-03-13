@@ -106,7 +106,7 @@ This method does not take any request data.
 ## Response
 | Type | Description |
 | --- | --- |
-| [List]&lt;[FriendRelationship](#friendrelationship) | Friend relationships |
+| [List]&lt;[FriendRelationship](#friendrelationship)&gt; | Friend relationships |
 
 # (17) SyncFriend
 ## Request
