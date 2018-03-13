@@ -23,7 +23,7 @@
 | 19 | [UpdateFavoriteGameKey](#19-updatefavoritegamekey)  |
 | 20 | [UpdateComment](#20-updatecomment) |
 | 21 | ? |
-| 22 | GetPresence |
+| 22 | [GetFriendPresence](#22-getfriendpresence) |
 | 23 | ? |
 | 24 | ? |
 | 25 | [GetFriendPersistentInfo](#25-getfriendpersistentinfo) |
@@ -129,6 +129,17 @@ This method does not return anything.
 ## Response
 This method does not return anything
 
+# (22) GetFriendPresence
+## Request
+| Type | Description |
+| --- | --- |
+| [List]&lt;Uint32&gt; | Unknown |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[FriendPresence](#friendpresence)&gt; | Friend presence list |
+
 # (25) GetFriendPersistentInfo
 ## Request
 | Type | Description |
@@ -155,6 +166,12 @@ This method does not return anything
 | [DateTime] | Unknown |
 | [DateTime] | Unknown |
 | [DateTime] | Unknown |
+
+## FriendPresence
+| Type | Description |
+| --- | --- |
+| Uint32 | Unknown |
+| [NintendoPresence](#nintendopresence) | Nintendo presence |
 
 ## FriendRelationship
 | Type | Description |
