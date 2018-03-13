@@ -26,7 +26,7 @@
 | 22 | GetPresence |
 | 23 | ? |
 | 24 | ? |
-| 25 | GetPersistentInfo |
+| 25 | [GetFriendPersistentInfo](#25-getfriendpersistentinfo) |
 | 26 | ? |
 
 # (1) UpdateProfile
@@ -129,7 +129,30 @@ This method does not return anything.
 ## Response
 This method does not return anything
 
+# (25) GetFriendPersistentInfo
+## Request
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[FriendPersistentInfo](#friendpersistentinfo)&gt; | Persistent info |
+
 # Types
+## FriendPersistentInfo
+| Type | Description |
+| --- | --- |
+| Uint32 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| [GameKey](#gamekey) | Game key |
+| [String] | Unknown |
+| [DateTime] | Unknown |
+| [DateTime] | Unknown |
+| [DateTime] | Unknown |
+
 ## FriendRelationship
 | Type | Description |
 | --- | --- |
@@ -189,7 +212,6 @@ This method does not return anything
 | Type | Description |
 | --- | --- |
 | [GameKey](#gamekey) | Game key |
-| Uint64 | Unknown |
 | [DateTime] | Date time |
 
 [String]: NEX-Common-Types#string
