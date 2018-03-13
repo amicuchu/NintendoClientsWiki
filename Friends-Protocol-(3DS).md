@@ -12,7 +12,7 @@
 | 8 | ? |
 | 9 | GetPrincipalIDByLocalFriendCode |
 | 10 | ? |
-| 11 | AddFriendByPrincipalID |
+| 11 | [AddFriendByPrincipalID](#addfriendbyprincipalid) |
 | 12 | ? |
 | 13 | ? |
 | 14 | ? |
@@ -75,6 +75,18 @@ This method does not return anything.
 
 ## Response
 This method does not return anything
+
+# (11) AddFriendByPrincipalID
+## Request
+| Type | Description |
+| --- | --- |
+| Uint64 | Unknown |
+| Uint32 | Principal id |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [FriendRelationship](#friendrelationship) | Friend relationship |
 
 # (17) SyncFriend
 ## Request
