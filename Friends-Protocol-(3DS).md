@@ -61,7 +61,7 @@ This method does not return anything
 ## Response
 This method does not return anything.
 
-#Types
+# Types
 ## FriendRelationship
 | Type | Description |
 | --- | --- |
