@@ -2,25 +2,21 @@
 
 | Method ID | Method Name |
 | --- | --- |
-| 1 | [UploadScore](#1-uploadscore) |
-| 2 | [DeleteScore](#2-deletescore) |
+| 1 | UploadScore |
+| 2 | DeleteScore |
 | 3 | [DeleteAllScores](#3-deleteallscores) |
 | 4 | [UploadCommonData](#4-uploadcommondata) |
-| 5 | [DeleteCommonData](#5-deletecommondata) |
+| 5 | DeleteCommonData |
 | 6 | [GetCommonData](#6-getcommondata) |
-| 7 | [ChangeAttributes](#7-changeattributes) |
-| 8 | [ChangeAllAttributes](#8-changeallattributes) |
+| 7 | ChangeAttributes |
+| 8 | ChangeAllAttributes |
 | 9 | [GetRanking](#9-getranking) |
-| 10 | [GetApproxOrder](#10-getapproxorder) |
-| 11 | [GetStats](#11-getstats) |
-| 12 | [GetRankingByPIDList](#12-getrankingbypidlist) |
-| 13 | [GetRankingByUniqueIdList](#13-getrankingbyuniqueidlist) |
-| 14 | [GetCachedTopXRanking](#14-getcachedtopxranking) |
-| 15 | [GetCachedTopXRankings](#15-getcachedtopxrankings) |
-
-# (1) UploadScore
-
-# (2) DeleteScore
+| 10 | GetApproxOrder |
+| 11 | GetStats |
+| 12 | GetRankingByPIDList |
+| 13 | GetRankingByUniqueIdList |
+| 14 | GetCachedTopXRanking |
+| 15 | GetCachedTopXRankings |
 
 # (3) DeleteAllScores
 ## Request
@@ -41,8 +37,6 @@ This method does not return anything.
 ## Response
 This method does not return anything.
 
-# (5) DeleteCommonData
-
 # (6) GetCommonData
 ## Request
 | Type | Name | Description |
@@ -54,12 +48,7 @@ This method does not return anything.
 | --- | --- | --- |
 | [Buffer] | commonData | Data |
 
-# (7) ChangeAttributes
-
-# (8) ChangeAllAttributes
-
 # (9) GetRanking
-
 ## Request
 | Type | Name | Description |
 | --- | --- | --- |
@@ -115,18 +104,6 @@ This method does not return anything.
 | [List]&lt;byte&gt; | groups | Filters |
 | Uint64 | param | Additional info |
 | [Buffer] | commonData | Additional data |
-
-# (10) GetApproxOrder
-
-# (11) GetStats
-
-# (12) GetRankingByPIDList
-
-# (13) GetRankingByUniqueIdList
-
-# (14) GetCachedTopXRanking
-
-# (15) GetCachedTopXRankings
 
 [Buffer]: NEX-Common-Types#buffer
 [Structure]: NEX-Common-Types#structure
