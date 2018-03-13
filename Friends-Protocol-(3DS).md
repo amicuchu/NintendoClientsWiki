@@ -131,6 +131,9 @@ This method does not return anything
 
 # (25) GetFriendPersistentInfo
 ## Request
+| Type | Description |
+| --- | --- |
+| [List]&gt;Uint32&gt; | Unknown |
 
 ## Response
 | Type | Description |
