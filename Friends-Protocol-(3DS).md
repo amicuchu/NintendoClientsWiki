@@ -3,11 +3,11 @@
 | Method ID | Method Name |
 | --- | --- |
 | 1 | [UpdateProfile](#1-updateprofile) |
-| 2 | UpdateMii |
-| 3 | ? |
-| 4 | ? |
-| 5 | UpdatePreference |
-| 6 | GetMii |
+| 2 | [UpdateMii](#2-updatemii) |
+| 3 | [UpdateMiiList](#3-updatemiilist) |
+| 4 | [UpdatePlayedGames](#4-updateplayedgames) |
+| 5 | [UpdatePreference](#5-updatepreference) |
+| 6 | GetFriendMii |
 | 7 | ? |
 | 8 | ? |
 | 9 | GetPrincipalIDByLocalFriendCode |
@@ -34,6 +34,44 @@
 | Type | Description |
 | --- | --- |
 | [MyProfile](#myprofile) | Profile data |
+
+## Response
+This method does not return anything
+
+# (2) UpdateMii
+## Request
+| Type | Description |
+| --- | --- |
+| [Mii](#mii) | Mii |
+
+## Response
+This method does not return anything
+
+# (3) UpdateMiiList
+## Request
+| Type | Description |
+| --- | --- |
+| [MiiList](#miilist) | Mii list |
+
+## Response
+This method does not return anything.
+
+# (4) UpdatePlayedGames
+## Request
+| Type | Description |
+| --- | --- |
+| [List]&lt;[PlayedGame](#playedgame)&gt; | Played games |
+
+## Response
+This method does not return anything.
+
+# (5) UpdatePreference
+## Request
+| Type | Description |
+| --- | --- |
+| Bool | Unknown |
+| Bool | Unknown |
+| Bool | Unknown |
 
 ## Response
 This method does not return anything
@@ -75,6 +113,22 @@ This method does not return anything.
 | Uint64 | Title id |
 | Uint16 | Title version |
 
+## Mii
+| Type | Description |
+| --- | --- |
+| [String] | Unknown |
+| Bool | Unknown |
+| Uint8 | Unknown |
+| [Buffer] | Mii data |
+
+## MiiList
+| Type | Description |
+| --- | --- |
+| [String] | Unknown |
+| Bool | Unknown |
+| Uint8 | Unknown |
+| [List]&lt;[Buffer]&gt; | Mii data list |
+
 ## MyProfile
 | Type | Description |
 | --- | --- |
@@ -101,6 +155,14 @@ This method does not return anything.
 | Uint32 | Unknown |
 | [Buffer] | Unknown |
 
+## PlayedGame
+| Type | Description |
+| --- | --- |
+| [GameKey](#gamekey) | Game key |
+| Uint64 | Unknown |
+| [DateTime] | Date time |
+
 [String]: NEX-Common-Types#string
 [List]: NEX-Common-Types#list
 [Buffer]: NEX-Common-Types#buffer
+[DateTime]: NEX-Common-Types#datetime
