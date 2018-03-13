@@ -95,10 +95,10 @@ This method does not return anything.
 | [String] | Message |
 | Uint32 | Unknown |
 | Uint8 | Unknown |
-| Uint32 | Game server id? |
 | Uint32 | Unknown |
-| Uint32 | User pid? |
-| Uint32 | Gathering id? |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
 | [Buffer] | Unknown |
 
 [String]: NEX-Common-Types#string
