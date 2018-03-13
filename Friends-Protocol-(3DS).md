@@ -18,7 +18,7 @@
 | 14 | ? |
 | 15 | ? |
 | 16 | ? |
-| 17 | SyncFriend |
+| 17 | [SyncFriend](#17-syncfriend) |
 | 18 | UpdatePresence |
 | 19 | UpdateFavoriteGameKey  |
 | 20 | UpdateComment |
@@ -51,4 +51,25 @@
 This method does not return anything
 
 [String]: NEX-Common-Types#string
+[List]: NEX-Common-Types#list
 [Data]: NEX-Common-Types#any-data-holder
+
+# (17) SyncFriend
+## Request
+| Type | Description |
+| --- | --- |
+| Uint64 | Unknown |
+| [List]&lt;Uint32&gt; | Unknown |
+| [List]&lt;Uint64&gt; | Unknown |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[Data]&lt;[FriendRelationship](#friendrelationship)&gt;&gt; | Friend list |
+
+# FriendRelationship
+| Type | Description |
+| --- | --- |
+| Uint32 | Unknown |
+| Uint64 | Unknown |
+| Uint8 | Unknown |
