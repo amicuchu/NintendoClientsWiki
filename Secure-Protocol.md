@@ -7,8 +7,8 @@
 | 3 | [RequestUrls](#3-requesturls) |
 | 4 | [RegisterEx](#4-registerex) |
 | 5 | [TestConnectivity](#5-testconnectivity) |
-| 6 | [UpdateUrls](#6-updateurls) |
-| 7 | [ReplaceUrl](#7-replaceurl) |
+| 6 | UpdateURLs |
+| 7 | [ReplaceURL](#7-replaceurl) |
 | 8 | [SendReport](#8-sendreport) |
 
 # (1) Register
@@ -78,9 +78,7 @@ Same as response for the [Register](#1-register) method.
 # (5) TestConnectivity
 This method takes no parameters and returns no values.
 
-# (6) UpdateUrls
-
-# (7) ReplaceUrl
+# (7) ReplaceURL
 ## Request
 | Type | Name | Description |
 | --- | --- | --- |
