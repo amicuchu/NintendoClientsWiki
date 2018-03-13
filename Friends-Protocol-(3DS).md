@@ -20,8 +20,8 @@
 | 16 | ? |
 | 17 | [SyncFriend](#17-syncfriend) |
 | 18 | [UpdatePresence](#18-updatepresence) |
-| 19 | UpdateFavoriteGameKey  |
-| 20 | UpdateComment |
+| 19 | [UpdateFavoriteGameKey](#19-updatefavoritegamekey)  |
+| 20 | [UpdateComment](#20-updatecomment) |
 | 21 | ? |
 | 22 | GetPresence |
 | 23 | ? |
@@ -109,7 +109,25 @@ This method does not return anything
 | Bool | Unknown |
 
 ## Response
+This method does not return anything
+
+# (19) UpdateFavoriteGameKey
+## Request
+| Type | Description |
+| --- | --- |
+| [GameKey](#gamekey) | Game key |
+
+## Response
 This method does not return anything.
+
+# (20) UpdateComment
+## Request
+| Type | Description |
+| --- | --- |
+| [String] | Comment |
+
+## Response
+This method does not return anything
 
 # Types
 ## FriendRelationship
