@@ -165,4 +165,4 @@ This method does not return anything.
 [String]: NEX-Common-Types#string
 [List]: NEX-Common-Types#list
 [Buffer]: NEX-Common-Types#buffer
-[DateTime]: NEX-Common-Types#datetime
+[DateTime]: NEX-Common-Types#date-time
