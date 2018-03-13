@@ -2,7 +2,7 @@
 
 | Method ID | Method Name |
 | --- | --- |
-| 1 | UpdateProfile |
+| 1 | [UpdateProfile](#1-updateprofile) |
 | 2 | UpdateMii |
 | 3 | ? |
 | 4 | ? |
@@ -28,3 +28,27 @@
 | 24 | ? |
 | 25 | GetPersistentInfo |
 | 26 | ? |
+
+# (1) UpdateProfile
+## Request
+| Type | Description |
+| --- | --- |
+| [Data]&lt;[MyProfile](#myprofile)&gt; | Profile data |
+
+### MyProfile
+| Type | Description |
+| --- | --- |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint64 | Unknown |
+| [String] | Unknown |
+| [String] | Unknown |
+
+## Response
+This method does not return anything
+
+[String]: NEX-Common-Types#string
+[Data]: NEX-Common-Types#any-data-holder
