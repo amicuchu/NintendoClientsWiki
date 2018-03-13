@@ -12,7 +12,7 @@
 | 8 | ? |
 | 9 | GetPrincipalIDByLocalFriendCode |
 | 10 | ? |
-| 11 | [AddFriendByPrincipalID](#addfriendbyprincipalid) |
+| 11 | [AddFriendByPrincipalID](#11-addfriendbyprincipalid) |
 | 12 | ? |
 | 13 | ? |
 | 14 | ? |
