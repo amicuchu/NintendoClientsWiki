@@ -133,7 +133,7 @@ This method does not return anything
 ## Request
 | Type | Description |
 | --- | --- |
-| [List]&gt;Uint32&gt; | Unknown |
+| [List]&lt;Uint32&gt; | Unknown |
 
 ## Response
 | Type | Description |
