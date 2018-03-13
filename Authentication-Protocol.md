@@ -11,7 +11,7 @@ Each game server got two different servers: an authentication server and a secur
 | 3 | [RequestTicket](#3-requestticket) |
 | 4 | [GetPID](#4-getpid) |
 | 5 | [GetName](#5-getname) |
-| 6 | [LoginWithContext](#6-loginwithcontext) |
+| 6 | LoginWithContext |
 
 # (1) Login
 Alternative name: ValidateAndRequestTicket
@@ -109,8 +109,6 @@ The following mapping seems to be used on all official servers:
 | --- | --- |
 | 1 | Quazal Authentication |
 | 2 | Quazal Rendez-Vous |
-
-# (6) LoginWithContext
 
 [String]: NEX-Common-Types#string
 [Buffer]: NEX-Common-Types#buffer
