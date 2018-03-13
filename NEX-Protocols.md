@@ -45,8 +45,8 @@ As stated on the [[Game Server Overview]] page, NEX is actually a Nintendo-versi
 | ID | Protocol |
 | --- | --- |
 | 0x64 | [Nintendo notification events](Nintendo-Notification-Event-Protocol) |
-| 0x65 | Friends (3DS) |
-| 0x66 | [Friends](Friends-Protocol) (Wii U) |
+| 0x65 | [Friends (3DS)](Friends-Protocol-(3DS)) |
+| 0x66 | [Friends (Wii U)](Friends-Protocol-(Wii-U)) |
 | 0x6D | [Matchmake extension](Matchmake-Extension-Protocol) |
 | 0x6E | [Utility](Utility-Protocol) |
 | 0x70 | [Ranking](Ranking-Protocol) |
