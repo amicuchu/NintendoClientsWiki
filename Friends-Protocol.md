@@ -1,4 +1,4 @@
-## [[NEX Protocols]] > Friends (0x66)
+## [[NEX Protocols]] > Friends Wii U (0x66)
 
 The following method names are merely guesses, based on what the method does.
 
