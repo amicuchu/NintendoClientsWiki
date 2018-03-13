@@ -25,7 +25,7 @@
 | 21 | ? |
 | 22 | [GetFriendPresence](#22-getfriendpresence) |
 | 23 | ? |
-| 24 | ? |
+| 24 | [GetFriendPicture](#24-getfriendpicture) |
 | 25 | [GetFriendPersistentInfo](#25-getfriendpersistentinfo) |
 | 26 | ? |
 
@@ -140,6 +140,17 @@ This method does not return anything
 | --- | --- |
 | [List]&lt;[FriendPresence](#friendpresence)&gt; | Friend presence list |
 
+# (24) GetFriendPicture
+## Request
+| Type | Description |
+| --- | --- |
+| [List]&lt;Uint32&gt; | Unknown |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[FriendPicture](#friendpicture)&gt; | Friend pictures |
+
 # (25) GetFriendPersistentInfo
 ## Request
 | Type | Description |
@@ -166,6 +177,13 @@ This method does not return anything
 | [DateTime] | Unknown |
 | [DateTime] | Unknown |
 | [DateTime] | Unknown |
+
+## FriendPicture
+| Type | Description |
+| --- | --- |
+| Uint32 | Unknown |
+| [Buffer] | Data |
+| [DateTime] | Date time |
 
 ## FriendPresence
 | Type | Description |
