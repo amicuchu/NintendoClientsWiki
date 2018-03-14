@@ -110,7 +110,15 @@ For example, if a packet is split into four fragments, they will have the follow
 ### Connection signature
 The server sends its connection signature in its response to the client's SYN packet. The client sends its connection signature in the CONNECT packet. Other SYN/CONNECT packets have this field set to 0.
 
-If present, the connection signature is the first 4 bytes of a HMAC based on the perceived ip and port of the other end point. However, the key used to calculate this hash seems to be random, thus giving an unverifiable hash.
+If present, the connection signature is a HMAC based on the perceived ip and port of the other end point. Neither server nor client can verify this signature.
+
+### Lite signature
+Unlike the connection signature, this signature is actually verified by the server. It's the HMAC of the following data, with the key being the MD5 hash of the access key.
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 16 | MD5 of access key |
+| 0x10 | 16 | Connection signature received from server |
 
 ### Optional data
 Starting with PRUDP V1, packet-specific data is encoded like this:
@@ -128,7 +136,7 @@ Starting with PRUDP V1, packet-specific data is encoded like this:
 | 2 | 1 | [Fragment id](#fragment-id) |
 | 3 | 2 | Unknown (random integer) |
 | 4 | 1 | Unknown (always 0) |
-| 0x80 | 16 | [Connection signature](#connection-signature) |
+| 0x80 | 16 | [Lite signature](#lite-signature) |
 
 ## V0 Format
 This format is only used by the friends server, and possibly some 3DS games.
