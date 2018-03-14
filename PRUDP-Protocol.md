@@ -177,7 +177,7 @@ def calc_checksum(checksum, data):
 	temp = sum(words) & 0xFFFFFFFF #32-bit
 	
 	#Add the sum of the remaining bytes to the checksum
-	checksum += sum(data[len(data) - (len(data) & 3):])
+	checksum += sum(data[len(data) & ~3:])
 	
 	#And the sum of the bytes of the temporary checksum
 	checksum += sum(struct.pack("I", temp))
