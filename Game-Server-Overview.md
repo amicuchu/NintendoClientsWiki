@@ -4,7 +4,7 @@ Nintendo offers a networking library called NEX. This library does everything th
 NEX was first used on 3DS, later on Wii U, and now it's being used on Switch. While the underlying library is the same, it has received various (big) updates throughout its lifetime.
 
 ### The protocols used by NEX
-At the lowest level, NEX uses a transport protocol called PRUDP. The main purpose of this protocol is to reliably send UDP packets, but it also offers encryption and compression algorithms. Nintendo doesn't use compression however.
+At the lowest level, NEX uses a transport protocol called [PRUDP](PRUDP-Protocol). The main purpose of this protocol is to reliably send UDP packets, but it also offers encryption and compression algorithms. Nintendo doesn't use compression however.
 
 At the highest level, NEX provides a bunch of [services](NEX-Protocols), with each service providing several methods. To achieve this, NEX uses a simple [remote-method-call protocol](RMC-Protocol). Whenever a game wants to call a method on a service, NEX builds a RMC request and sends it through the PRUDP connection.
 
@@ -12,7 +12,7 @@ At the highest level, NEX provides a bunch of [services](NEX-Protocols), with ea
 Each game server actually consists of two servers: an authentication server and a secure server. After retrieving login information elsewhere, NEX connects to the authentication server. This server only provides a single service: the [authentication service](Authentication-Protocol). The connection to the authentication server isn't secure. Anyone with enough knowledge can decrypt the packets, but that's not a problem: the only purpose of the authentication server is to set up a secure connection to the secure server.
 
 ### Game server identification
-Each game server has a unique game server id and a sandbox access key. The game server id is used to determine the location of the game server, either by DNS lookup (Switch) or from an external server (3DS/Wii U). The access key is used to calculate the PRUDP packet checksum. It's known by both the client and the server, but never sent throught the connection.
+Each game server has a unique game server id and a sandbox access key. The game server id is used to determine the location of the game server, either by DNS lookup (Switch) or from an external server (3DS/Wii U). The access key is used to calculate the PRUDP packet checksum. It's known by both the client and the server, but never sent through the connection.
 
 List of game server ids and access keys: [[Game Server List]]
 
