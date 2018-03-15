@@ -11,5 +11,5 @@
 ## Switch
 | Game | Game Server ID | Access Key |
 | --- | --- | --- |
-| Mario Kart 8 | 0x2B309E01 | 09c1c475 |
+| Mario Kart 8 | 2B309E01 | 09c1c475 |
 | Cave Story | 2BA73000 | c2a631ad |
