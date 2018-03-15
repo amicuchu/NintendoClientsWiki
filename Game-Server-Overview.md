@@ -23,4 +23,6 @@ Login information is requested from the NASC server. Packets are encoded using [
 Login information is requested from the [[Account Server]] (/provider/nex_token/@me). Packets are normally encoded using [PRUDP V1](PRUDP-Protocol#v1-format). Only one server still uses [PRUDP V0](PRUDP-Protocol#v0-format): the friends server.
 
 ## Switch
-The location of game servers is found by DNS lookup: g`<game server id>`-lp1.s.n.srv.nintendo.net. Furthermore, NEX now supports UDP, TCP and WebSockets as underlying protocol. Switch games are configured to use WebSockets. Since TCP and WebSockets are already reliabile themselves, a new packet encoding is used: [PRUDP Lite](PRUDP-Protocol#lite-format). Also, since the connection is SSL-encrypted anyway, packets are no longer RC4-encrypted.
+The location of game servers is found by DNS lookup: g`<game server id>`-lp1.s.n.srv.nintendo.net. For example, Super Mario Odyssey's game server is g255ba201-lp1.s.n.srv.nintendo.net.
+
+Furthermore, NEX now supports UDP, TCP and WebSockets as underlying protocol. Switch games are configured to use WebSockets. Since TCP and WebSockets are already reliabile themselves, a new packet encoding is used: [PRUDP Lite](PRUDP-Protocol#lite-format). Also, since the connection is SSL-encrypted anyway, packets are no longer RC4-encrypted.
