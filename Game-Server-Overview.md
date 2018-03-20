@@ -6,7 +6,7 @@ NEX was first used on 3DS, later on Wii U, and now it's being used on Switch. Wh
 ### The protocols used by NEX
 At the lowest level, NEX uses a transport protocol called [PRUDP](PRUDP-Protocol). The main purpose of this protocol is to reliably send UDP packets, but it also offers encryption and compression algorithms. Nintendo doesn't use compression however.
 
-At the highest level, NEX provides a bunch of [services](NEX-Protocols), with each service providing several methods. To achieve this, NEX uses a simple [remote-method-call protocol](RMC-Protocol). Whenever a game wants to call a method on a service, NEX builds a RMC request and sends it through the PRUDP connection.
+At the highest level, NEX provides a bunch of [services](NEX-Protocols), with each service providing several methods. To achieve this, NEX uses a simple [RMC protocol](RMC-Protocol) (remote method call). Whenever a game wants to call a method on a service, NEX builds a RMC request and sends it through the PRUDP connection.
 
 ### Authentication
 Each game server actually consists of two servers: an authentication server and a secure server. After retrieving login information elsewhere, NEX connects to the authentication server. This server only provides a single service: the [authentication service](Authentication-Protocol). The connection to the authentication server isn't secure. Anyone with enough knowledge can decrypt the packets, but that's not a problem: the only purpose of the authentication server is to set up a secure connection to the secure server.
