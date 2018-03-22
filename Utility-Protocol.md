@@ -16,7 +16,7 @@ This method does not take any parameters.
 ## Response
 | Type | Description |
 | --- | --- |
-| [UniqueIdInfo](#uniqueidinfo) | Info |
+| [UniqueIdInfo](#uniqueidinfo-structure) | Info |
 
 ### UniqueIdInfo ([Structure])
 | Type | Description |
