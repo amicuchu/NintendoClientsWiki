@@ -36,7 +36,8 @@
 * tagaya.hac.lp1.eshop.nintendo.net
 * pushmo.hac.lp1.eshop.nintendo.net
 * api-lp1.frs.srv.nintendo.net
-* gXXXXXXXX-lp1.s.n.srv.nintendo.net
+* g&lt;game server id&gt;-lp1.s.n.srv.nintendo.net
+* g&lt;game server id&gt;-dd1.s.n.srv.nintendo.net
 * app-b01.lp1.npns.srv.nintendo.net
 * aqua.hac.lp1.d4c.nintendo.net
 * sun.hac.lp1.d4c.nintendo.net
