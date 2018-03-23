@@ -164,9 +164,23 @@ Packet-specific data:
 | Flags & FLAG_HAS_SIZE | 2 | Payload size |
 
 ### Packet signature
+**Friends server:**
 * In DATA packets with an empty payload the packet signature is always set to 0x12345678.
 * In all other DATA packets the signature is the first 4 bytes of the HMAC of the encrypted payload, with the key being the MD5 hash of the access key.
 * In all other packets the signature is the connection signature that has been received while the connection was made.
+
+**Games:**
+
+In DATA and DISCONNECT packets the packet signature is the first 4 bytes of the HMAC of the following data, with the key being the MD5 hash of the access key:
+
+| Size | Description |
+| --- | --- |
+| 0 or 16 | Secure key (or nothing in an authentication connection) |
+| 2 | [Sequence id](#sequence-id) |
+| 1 | [Fragment id](#fragment-id) |
+| | Encrypted payload |
+
+In all other packets the signature is the connection signature that has been received while the connection was made.
 
 ### Checksum
 The checksum is calculated over the whole packet (both header and encrypted payload), and uses the following algorithm (the example code is written in python):
