@@ -14,3 +14,4 @@
 | Mario Kart 8 | 2B309E01 | 09c1c475 |
 | ARMS | 25C08801<br>2DF33D01 | b6b34c51<br>4eb18d39 |
 | Cave Story | 2BA73000 | c2a631ad |
+| Super Mario Odyssey | 255BA201 | ? |
