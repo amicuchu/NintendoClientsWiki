@@ -15,7 +15,7 @@ In each of the following urls 'lp1' can be replaced by 'dd1'.
 | - ctest.cdn.nintendo.net | Connection test |
 | - ecs-lp1.hac.shop.nintendo.net<br>- beach.hac.lp1.eshop.nintendo.net<br>- bugyo.hac.lp1.eshop.nintendo.ent<br>- tagaya.hac.lp1.eshop.nintendo.net<br>- pushmo.hac.lp1.eshop.nintendo.net | E-Shop |
 | - api-lp1.frs.srv.nintendo.net | Friends |
-| - g&lt;game server id&gt;-lp1.s.n.srv.nintendo.net | Game servers |
+| - g&lt;game server id&gt;-lp1.s.n.srv.nintendo.net | [Game servers](Game-Server-Overview) |
 | - app-b01.lp1.npns.srv.nintendo.net | |
 | - aqua.hac.lp1.d4c.nintendo.net<br>- sun.hac.lp1.d4c.nintendo.net<br>- superfly.hac.lp1.d4c.nintendo.net<br>- atum.hac.lp1.d4c.nintendo.net |
 | - receive-lp1.dg.srv.nintendo.net | |
