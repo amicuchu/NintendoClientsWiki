@@ -22,7 +22,7 @@ In each of the following urls 'lp1' can be replaced by 'dd1'.
 | - dauth-lp1.ndas.srv.nintendo.net | Device authentication |
 | - aauth-lp1.ndas.srv.nintendo.net | Application authentication |
 | - e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com<br>- cdn-image-e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com | Accounts (api) |
-| - accounts.nintendo.com<br>- api.accounts.nintendo.com | Accounts (web interface) |
+| - accounts.nintendo.com<br>- api.accounts.nintendo.com | Accounts (web) |
 | - bcat-topics-lp1.cdn.nintendo.net<br>- bcat-list-lp1.cdn.nintendo.net | News |
 | - Service-status-lp1.cdn.nintendo.net | Game server availability |
 | - api-lp1.pctl.srv.nintendo.net | Parental controls |
