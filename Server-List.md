@@ -25,3 +25,4 @@ In each of the following urls 'lp1' can be replaced by 'dd1'.
 | - bcat-topics-lp1.cdn.nintendo.net<br>- bcat-list-lp1.cdn.nintendo.net | News |
 | - accounts.nintendo.com<br>- api.accounts.nintendo.com | Accounts |
 | - Service-status-lp1.cdn.nintendo.net | Game server availability |
+| - api-lp1.pctl.srv.nintendo.net | Parental controls |
