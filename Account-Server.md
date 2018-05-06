@@ -91,7 +91,7 @@ There are two ways to request an access token: using NNID and password or passwo
 The password hash can be calculated using the following method:
 ```
 data = struct.pack("<I", pid) + b"\x02\x65\x43\x46" + password.encode("ascii")
-hash = hashlib.sha256(data).hexdigest()
+hash = hashlib.sha256(data).digest()
 ```
 
 | Field | Description |
