@@ -10,7 +10,7 @@ Welcome to the NintendoClients wiki!
 ## Other pages
 * [[Network Library Versions]]
 * [[Game Server List]]
+* [[Server List]]
+* [[Wii U Error Codes]]
 * [[DKC:TF Level IDs]]
 * [[Mario Kart 8 Track IDs]]
-* [[Wii U Error Codes]]
-* [[Server List]]
