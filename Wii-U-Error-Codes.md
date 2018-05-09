@@ -1,7 +1,3 @@
-# Table of Contents
-1. [NEX Error Codes (106-XXXX)](#nex-error-codes)
-2. [FS Error Codes (150-XXXX)](#fs-error-codes)
-
 # NEX Error Codes
 | Code | Description |
 | --- | --- |
@@ -210,28 +206,3 @@
 | 106-2001 | Ranking2::Unknown |
 | 106-2002 | Ranking2::InvalidArgument |
 | 106-2003 | Ranking2::InvalidScore |
-
-# FS Error Codes
-## Format: 150-10XY
-| X | Volume State |
-| --- | --- |
-| 0 | FS_VOLSTATE_INITIAL |
-| 1 | FS_VOLSTATE_NO_MEDIA |
-| 2 | FS_VOLSTATE_INVALID_MEDIA |
-| 3 | FS_VOLSTATE_DIRTY_MEDIA |
-| 4 | FS_VOLSTATE_MEDIA_ERROR |
-| 5 | FS_VOLSTATE_DATA_CORRUPTED |
-| 6 | FS_VOLSTATE_WRITE_PROTECTED |
-| 7 | FS_VOLSTATE_WRONG_MEDIA |
-| 8 | FS_VOLSTATE_JOURNAL_FULL |
-| 9 | FS_VOLSTATE_FATAL |
-
-| Y | Device |
-| --- | --- |
-| 0 | Disc ("odd") |
-| 1 | Internal storage ("mlc") |
-| 2 | USB ("usb") |
-| 3 | SD card ("sdcard") |
-
-## Format: 150-3030
-Fatal error
