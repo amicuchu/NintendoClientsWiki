@@ -105,13 +105,13 @@ This is the reverse of the [GetPID](#4-getpid) method. It returns the name of a 
 
 The following mapping seems to be used by all official servers:
 
-### 3DS / Wii U
+#### 3DS / Wii U:
 | PID | Name |
 | --- | --- |
 | 1 | Quazal Authentication |
 | 2 | Quazal Rendez-Vous |
 
-### Switch
+#### Switch:
 | PID | Name |
 | --- | --- |
 | 243564795342340018 | Quazal Authentication |
