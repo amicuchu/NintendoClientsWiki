@@ -92,6 +92,7 @@ All game server have a bunch of special users. The password of the guest account
 | 102 | eval |
 | 103 | SandboxProbe |
 | 104 | LobbyAdministrator |
+| 110 | BackgroundPlayer0 |
 
 #### Switch:
 | PID | Name |
@@ -103,6 +104,7 @@ All game server have a bunch of special users. The password of the guest account
 | 621476855497894457 | eval |
 | 693188807183308752 | SandboxProbe |
 | 1279596992968541952 | LobbyAdministrator |
+| 1405107338776927048 | BackgroundPlayer0 |
 
 ## Request
 | Type | Name | Description |
