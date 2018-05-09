@@ -25,7 +25,7 @@ Alternative name: ValidateAndRequestTicket
 | Type | Name | Description |
 | --- | --- | --- |
 | Uint32 | %retval% | Result code (also see [errors.py](https://github.com/Kinnay/NintendoClients/blob/master/nintendo/nex/errors.py)) |
-| Uint32 | pidPrincipal |  User pid |
+| [PID] | pidPrincipal |  User pid |
 | [Buffer] | pbufResponse | [Kerberos ticket](Kerberos-Authentication#kerberos-ticket) |
 | [RVConnectionData](NEX-Common-Types#rendez-vous-connection-data-structure) | pConnectionData | Connection info for secure server.<br><br>The Nintendo Switch allows the secure server to be at the same address as the authentication server. In that case, the secure server station url points to  0.0.0.1 with port 1. |
 | [String] | strReturnMsg | Server build name |
@@ -68,8 +68,8 @@ Same as response for the [Login](#1-login) method.
 ## Request
 | Type | Name | Description |
 | --- | --- | --- |
-| Uint32 | idSource | User pid |
-| Uint32 | idTarget | PID of secure server station url |
+| [PID] | idSource | User pid |
+| [PID] | idTarget | Secure server pid |
 
 ## Response
 | Type | Name | Description |
@@ -88,7 +88,7 @@ This is the reverse of the [GetName](#5-getname) method. It converts a given str
 ## Response
 | Type | Name | Description |
 | --- | --- | --- |
-| Uint32 | %retval% | PID |
+| [PID] | %retval% | PID |
 
 # (5) GetName
 This is the reverse of the [GetPID](#4-getpid) method. It returns the name of a given station url PID.
@@ -96,24 +96,32 @@ This is the reverse of the [GetPID](#4-getpid) method. It returns the name of a 
 ## Request
 | Type | Name | Description |
 | --- | --- | --- |
-| Uint32 | id | PID |
+| [PID] | id | PID |
 
 ## Response
 | Type | Name | Description |
 | --- | --- | --- |
 | [String] | %retval% | Name |
 
-The following mapping seems to be used on all official servers:
+The following mapping seems to be used by all official servers:
 
+### 3DS / Wii U
 | PID | Name |
 | --- | --- |
 | 1 | Quazal Authentication |
 | 2 | Quazal Rendez-Vous |
+
+### Switch
+| PID | Name |
+| --- | --- |
+| 243564795342340018 | Quazal Authentication |
+| 257049437023956657 | Quazal Rendez-Vous |
 
 [String]: NEX-Common-Types#string
 [Buffer]: NEX-Common-Types#buffer
 [Structure]: NEX-Common-Types#structure
 [StationURL]: NEX-Common-Types#station-url
 [List]: NEX-Common-Types#list
+[PID]: NEX-Common-Types#pid
 [DateTime]: NEX-Common-Types#date-time
 [Data]: NEX-Common-Types#any-data-holder
