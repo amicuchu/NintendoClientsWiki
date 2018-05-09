@@ -80,14 +80,18 @@ Same as response for the [Login](#1-login) method.
 # (4) GetPID
 This is the reverse of the [GetName](#5-getname) method. It looks up the pid that belongs to a given username. The username is not the same as the nintendo network id. On all normal accounts the username is the same as the user pid.
 
-At least three special users exist on all game servers. The password of the guest account is always "MMQea3n!fsik". The other passwords are unknown.
+All game server have a bunch of special users. The password of the guest account is always "MMQea3n!fsik". The other passwords are unknown.
 
 #### 3DS / Wii U:
 | PID | Name |
 | --- | --- |
 | 1 | Quazal Authentication |
 | 2 | Quazal Rendez-Vous |
-| 100 | guest |
+| 100 | guest<br>guest_Ah0KV4mDv9ChYESNCBctQGgKl9kPbnax |
+| 101 | Administrator |
+| 102 | eval |
+| 103 | SandboxProbe |
+| 104 | LobbyAdministrator |
 
 #### Switch:
 | PID | Name |
@@ -95,6 +99,10 @@ At least three special users exist on all game servers. The password of the gues
 | 243564795342340018 | Quazal Authentication |
 | 257049437023956657 | Quazal Rendez-Vous |
 | 564330319085596911 | guest |
+| 584465510887342041 | Administrator |
+| 621476855497894457 | eval |
+| 693188807183308752 | SandboxProbe |
+| 1279596992968541952 | LobbyAdministrator |
 
 ## Request
 | Type | Name | Description |
