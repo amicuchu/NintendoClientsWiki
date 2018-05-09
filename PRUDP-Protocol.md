@@ -38,13 +38,17 @@ The CONNECT acknowledgement packet contains a [Buffer] with the following data:
 All payloads are encrypted using RC4, with separate streams for client-to-server packets and server-to-client packets. The connection to the authentication server is encrypted using a default key that's always the same: `CD&ML`. The connection to the secure server is encrypted using the secure key from the [Kerberos ticket](Kerberos-Authentication#kerberos-ticket).
 
 ### Virtual ports
-These are used to distinguish between connections if a single game/app opens multiple connections at once. In practice, no game runs more than one connection at once, however.
+When multiple PRUDP connections are made to the same address, NEX doesn't create a new socket for each connection. Instead, it uses a single socket to create multiple PRUDP connections. To distinguish between connections, each packet contains a source and destination port.
+
+**V0 and V1**: The four most significant bits contain the stream type. The four least significant bits contain the port number. The client port is the highest unused port number &le; 0xF.
+
+**Lite**: The port number now uses 8 bits instead of 4. The client port is the highest unused port number &le; 0x1F. The stream types are stored in a separate byte.
+
+**Server port (3DS/Wii U)**: The authentication and secure server may not reside at the same address. The server port is always 1.
+
+**Server port (Switch)**: A single websocket server handles both authentication and secure connections. The authentication server has server port 1, the secure server has server port 2.
 
 The stream type is always RVSecure (0xA) in Nintendo games.
-
-**V0 and V1**: The four most significant bits contain the stream type. The four least significant bits contain the port number. The client port is the highest unused port number &le; 0xF. The server port is the lowest unused port number &ge; 1. In practice (since no game actually connects to more than one server at once), the server is always identified by 0xA1 and the client by 0xAF.
-
-**Lite (Switch)**: The port number now uses 8 bits instead of 4. The client port is the highest unused port number &le; 0x1F. The stream types are stored into a separate byte.
 
 | Stream type | Name | Stream type | Name |
 | --- | --- | --- | --- |
