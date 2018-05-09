@@ -78,12 +78,28 @@ Same as response for the [Login](#1-login) method.
 | [Buffer] | bufResponse | [Kerberos ticket](Kerberos-Authentication#kerberos-ticket) |
 
 # (4) GetPID
-This is the reverse of the [GetName](#5-getname) method. It converts a given string to a PID that can be used in a station url.
+This is the reverse of the [GetName](#5-getname) method. It looks up the pid that belongs to a given username. Note that the username is not the nintendo network id. On all normal accounts the username is the same as the user pid.
 
 ## Request
 | Type | Name | Description |
 | --- | --- | --- |
-| [String] | strUserName | Name. "strUserName" is misleading, this is not actually a username |
+| [String] | strUserName | Username |
+
+At least three special users exist on all game servers. The password of the guest account is always "MMQea3n!fsik". The other passwords are unknown.
+
+#### 3DS / Wii U:
+| PID | Name |
+| --- | --- |
+| 1 | Quazal Authentication |
+| 2 | Quazal Rendez-Vous |
+| 100 | guest |
+
+#### Switch:
+| PID | Name |
+| --- | --- |
+| 243564795342340018 | Quazal Authentication |
+| 257049437023956657 | Quazal Rendez-Vous |
+| 564330319085596911 | guest |
 
 ## Response
 | Type | Name | Description |
@@ -91,7 +107,7 @@ This is the reverse of the [GetName](#5-getname) method. It converts a given str
 | [PID] | %retval% | PID |
 
 # (5) GetName
-This is the reverse of the [GetPID](#4-getpid) method. It returns the name of a given station url PID.
+This is the reverse of the [GetPID](#4-getpid) method. It returns the name associated with the given user pid.
 
 ## Request
 | Type | Name | Description |
@@ -101,21 +117,7 @@ This is the reverse of the [GetPID](#4-getpid) method. It returns the name of a 
 ## Response
 | Type | Name | Description |
 | --- | --- | --- |
-| [String] | %retval% | Name |
-
-The following mapping seems to be used by all official servers:
-
-#### 3DS / Wii U:
-| PID | Name |
-| --- | --- |
-| 1 | Quazal Authentication |
-| 2 | Quazal Rendez-Vous |
-
-#### Switch:
-| PID | Name |
-| --- | --- |
-| 243564795342340018 | Quazal Authentication |
-| 257049437023956657 | Quazal Rendez-Vous |
+| [String] | %retval% | Username |
 
 [String]: NEX-Common-Types#string
 [Buffer]: NEX-Common-Types#buffer
