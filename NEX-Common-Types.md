@@ -56,7 +56,7 @@ Note: 0 refers to the most significant bit.
 | --- | --- |
 | [String] | Station URL |
 
-A station url contains the address and port of a server or client, along with a few parameters. The order of the fields is arbitrary. Here's an example of a station url: `prudps:/stream=10;sid=1;CID=1;type=2;address=34.210.222.104;port=60101;PID=2`
+A station url contains the address and port of a server or client, along with a few parameters. The order of the fields is arbitrary. Here's an example station url: `prudps:/stream=10;sid=1;CID=1;type=2;address=34.210.222.104;port=60101;PID=2`
 
 | Field | Description |
 | --- | --- |
