@@ -56,7 +56,7 @@ This method does not return anything.
 | Uint32 | category | Category (game-specific) |
 | RankingOrderParam | orderParam | A bunch of parameters |
 | Uint64 | uniqueId | |
-| Uint32 | principalId | |
+| [PID] | principalId | |
 
 ### Ranking Mode
 | Value | Description |
@@ -96,7 +96,7 @@ This method does not return anything.
 #### Ranking Rank Data ([Structure])
 | Type | Name | Description |
 | --- | --- | --- |
-| Uint32 | principalId | User pid |
+| [PID] | principalId | User pid |
 | Uint64 | uniqueId | |
 | Uint32 | order | Rank |
 | Uint32 | category | Category |
@@ -108,4 +108,5 @@ This method does not return anything.
 [Buffer]: NEX-Common-Types#buffer
 [Structure]: NEX-Common-Types#structure
 [List]: NEX-Common-Types#list
+[PID]: NEX-Common-Types#pid
 [DateTime]: NEX-Common-Types#date-time
