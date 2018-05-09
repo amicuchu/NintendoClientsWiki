@@ -60,10 +60,13 @@ A station url contains the address and port of a server or client, along with a 
 
 | Field | Description |
 | --- | --- |
-| &lt;protocol&gt; | udp, prudp or prudps |
+| &lt;scheme&gt; | udp, prudp or prudps |
+| address | Address |
+| port | Port |
 | stream | Stream type |
 | sid | Stream id |
 | CID | Connection id |
+| PID | Principal id |
 | type | Type |
 | RVCID | Rendez-vous connection id |
 | natm | NAT mapping |
@@ -74,6 +77,21 @@ A station url contains the address and port of a server or client, along with a 
 | PRID | Probe request id |
 | fastproberesponse | Fast probe response |
 | NodeID | Node id
+
+The following fields were added on Nintendo Switch:
+
+| Field | Description |
+| --- | --- |
+| Uri | Uri |
+| R | Use relay server (0 or 1) |
+| Rsa | Relay server address |
+| Rsp | Relay server port |
+| Ra | Relay address |
+| Rp | Relay port |
+| Tpt | Transport protocol type |
+| Pl | Platform type |
+| Ntrpa | NAT traversal requester private address |
+| Ntrpp | NAT traversal requester private port |
 
 # Structure
 NEX v3.5.0 introduced a versioning system to structures. Before v3.5.0 their contents were just normally stored into the stream. However, starting with v3.5.0, structures are stored like this:
