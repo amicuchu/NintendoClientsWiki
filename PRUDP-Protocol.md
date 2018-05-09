@@ -23,7 +23,7 @@ Request data:
 
 | Type | Description |
 | --- | --- |
-| Uint32 | User pid |
+| [PID] | User pid |
 | Uint32 | CID of secure server station url |
 | Uint32 | Response check value |
 
@@ -278,3 +278,4 @@ Packet-specific data (see [optional data](#optional-data)):
 | 0x80 | Type is CONNECT and not Flags & FLAG_ACK |
 
 [Buffer]: NEX-Common-Types#buffer
+[PID]: NEX-Common-Types#pid
