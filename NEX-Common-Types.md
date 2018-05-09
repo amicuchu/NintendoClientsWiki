@@ -3,11 +3,12 @@
 2. [Buffer](#buffer)
 3. [qBuffer](#qbuffer)
 4. [List](#list)
-5. [DateTime](#date-time)
-6. [StationURL](#station-url)
-7. [Structure](#structure)
-8. [Data](#any-data-holder)
-9. [RVConnectionData](#rendez-vous-connection-data-structure)
+5. [PID](#pid)
+6. [DateTime](#date-time)
+7. [StationURL](#station-url)
+8. [Structure](#structure)
+9. [Data](#any-data-holder)
+10. [RVConnectionData](#rendez-vous-connection-data-structure)
 
 # String
 | Type | Description |
@@ -32,6 +33,14 @@
 | --- | --- |
 | Uint32 | Number of entries |
 | | Entries |
+
+# PID
+Every user and server is given a unique id called principal id.
+
+| Platform | Type |
+| --- | --- |
+| 3DS / Wii U | Uint32 |
+| Switch | Uint64 |
 
 # Date Time
 | Type | Description |
