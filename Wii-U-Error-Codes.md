@@ -1,4 +1,4 @@
-# NEX Error Codes
+## NEX Error Codes
 | Code | Description |
 | --- | --- |
 | 106-0102 | Core::Unknown |
