@@ -7,7 +7,7 @@
 | 3 | [RequestUrls](#3-requesturls) |
 | 4 | [RegisterEx](#4-registerex) |
 | 5 | [TestConnectivity](#5-testconnectivity) |
-| 6 | UpdateURLs |
+| 6 | [UpdateURLs](#6-updateurls) |
 | 7 | [ReplaceURL](#7-replaceurl) |
 | 8 | [SendReport](#8-sendreport) |
 
@@ -64,7 +64,7 @@ The client should place the connection id into the RVCID field of its client sta
 ## Request
 | Type | Name | Description |
 | --- | --- | --- |
-| [List]&lt;[String]&gt; | vecMyURLs | Local client urls |
+| [List]&lt;[StationURL]&gt; | vecMyURLs | Local client urls |
 | [Data]&lt;[NintendoLoginData](#nintendo-login-data)&gt; | hCustomData | Login data |
 
 ### Nintendo Login Data
@@ -76,7 +76,16 @@ The client should place the connection id into the RVCID field of its client sta
 Same as response for the [Register](#1-register) method.
 
 # (5) TestConnectivity
-This method takes no parameters and returns no values.
+This method takes no parameters and doesn't return anything.
+
+# (6) UpdateURLs
+## Request
+| Type | Name | Description |
+| --- | --- | --- |
+| [List]&lt;[StationURL]&gt; | vecMyURLs | Station urls |
+
+## Respone
+This method doesn't return anything.
 
 # (7) ReplaceURL
 ## Request
