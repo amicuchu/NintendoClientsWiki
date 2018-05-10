@@ -77,5 +77,5 @@ This method does not take any parameters.
 
 
 [List]: NEX-Common-Types#list
-[StationURL]: NEX-Common-Types#stationurl
-[DateTime]: NEX-Common-Types#datetime
+[StationURL]: NEX-Common-Types#station-url
+[DateTime]: NEX-Common-Types#date-time
