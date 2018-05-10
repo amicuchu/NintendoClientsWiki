@@ -76,12 +76,15 @@ This method does not take any parameters.
 | Uint32 | gameServerID |
 
 # (7) ReportNATTraversalResultDetail
+## Request
 | Type | Name |
 | --- | --- |
 | Uint32 | cid |
 | Bool | result |
 | Int32 | detail |
 | Uint32 | rtt |
+
+## Response
 
 [String]: NEX-Common-Types#string
 [List]: NEX-Common-Types#list
