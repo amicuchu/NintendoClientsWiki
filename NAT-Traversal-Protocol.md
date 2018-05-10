@@ -75,6 +75,13 @@ This method does not take any parameters.
 | Int32 | relayAddressType |
 | Uint32 | gameServerID |
 
+# (7) ReportNATTraversalResultDetail
+| Type | Name |
+| --- | --- |
+| Uint32 | cid |
+| Bool | result |
+| Int32 | detail |
+| Uint32 | rtt |
 
 [List]: NEX-Common-Types#list
 [StationURL]: NEX-Common-Types#station-url
