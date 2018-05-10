@@ -8,7 +8,7 @@
 # (1) Log
 ## Request
 | Type | Description |
-| --- | --- | --- |
+| --- | --- |
 | [String] | Message |
 
 ## Response
