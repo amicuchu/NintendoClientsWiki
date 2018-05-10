@@ -3,13 +3,13 @@
 
 | Method ID | Method Name |
 | --- | --- |
-| 1 | RequestProbeInitiation |
-| 2 | InitiateProbe |
-| 3 | RequestProbeInitiationExt |
-| 4 | ReportNATTraversalResult |
-| 5 | ReportNATProperties |
-| 6 | GetRelaySignatureKey |
-| 7 | ReportNATTraversalResultDetail |
+| 1 | [RequestProbeInitiation](#1-requestprobeinitiation) |
+| 2 | [InitiateProbe](#2-initiateprobe) |
+| 3 | [RequestProbeInitiationExt](#3-requestprobeinitiationext) |
+| 4 | [ReportNATTraversalResult](#4-reportnattraversalresult) |
+| 5 | [ReportNATProperties](#5-reportnatproperties) |
+| 6 | [GetRelaySignatureKey](#6-getrelaysignaturekey) |
+| 7 | [ReportNATTraversalResultDetail](#7-reportnattraversalresultdetail) |
 
 # (1) RequestProbeInitiation
 ## Request
@@ -83,6 +83,7 @@ This method does not take any parameters.
 | Int32 | detail |
 | Uint32 | rtt |
 
+[String]: NEX-Common-Types#string
 [List]: NEX-Common-Types#list
 [StationURL]: NEX-Common-Types#station-url
 [DateTime]: NEX-Common-Types#date-time
