@@ -11,7 +11,7 @@ Each game server got two different servers: an authentication server and a secur
 | 3 | [RequestTicket](#3-requestticket) |
 | 4 | [GetPID](#4-getpid) |
 | 5 | [GetName](#5-getname) |
-| 6 | LoginWithContext |
+| 6 | [LoginWithContext](#6-loginwithcontext) |
 
 # (1) Login
 Alternative name: ValidateAndRequestTicket
@@ -128,6 +128,20 @@ This is the reverse of the [GetPID](#4-getpid) method. It returns the name assoc
 | Type | Name | Description |
 | --- | --- | --- |
 | [String] | %retval% | Username |
+
+# (6) LoginWithContext
+## Request
+| Type | Name | Description |
+| --- | --- | --- |
+| [Data] | loginData | Login data |
+
+## Response
+| Type | Name | Description |
+| --- | --- | --- |
+| Uint32 | %retval% | Result code |
+| [PID] | pidPrincipal | User pid |
+| [Buffer] | pbufResponse | [Kerberos ticket](Kerberos-Authentication#kerberos-ticket) |
+| [RVConnectionData](NEX-Common-Types#rendez-vous-connection-data-structure) | pConnectionData | Connection info for secure server |
 
 [String]: NEX-Common-Types#string
 [Buffer]: NEX-Common-Types#buffer
