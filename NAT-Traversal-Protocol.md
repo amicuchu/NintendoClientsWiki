@@ -85,6 +85,7 @@ This method does not take any parameters.
 | Uint32 | rtt |
 
 ## Response
+This method does not return anything.
 
 [String]: NEX-Common-Types#string
 [List]: NEX-Common-Types#list
