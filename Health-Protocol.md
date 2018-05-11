@@ -6,3 +6,12 @@
 | 2 | PingDatabase |
 | 3 | RunSanityCheck |
 | 4 | FixSanityErrors |
+
+# Method format
+## Request
+These methods does not take any parameters.
+
+## Response
+| Type | Name | Description |
+| --- | --- | --- |
+| Bool | %retval% | Result |
