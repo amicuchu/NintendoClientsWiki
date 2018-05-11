@@ -54,4 +54,4 @@ As stated on the [[Game Server Overview]] page, NEX is actually a Nintendo-versi
 | 0x73 | [Data store](Data-Store-Protocol) |
 | 0x74 | ? |
 | 0x7A | [Ranking 2](Ranking-Protocol-2) |
-| 0x7F | ? |
+| 0x7B | ? |
