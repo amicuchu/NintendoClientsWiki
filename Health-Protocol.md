@@ -8,7 +8,6 @@
 | 4 | FixSanityErrors |
 
 ## Method format
-### Request
 These methods do not take any parameters.
 
 ### Response
