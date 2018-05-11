@@ -7,11 +7,11 @@
 | 3 | RunSanityCheck |
 | 4 | FixSanityErrors |
 
-# Method format
-## Request
-These methods does not take any parameters.
+## Method format
+### Request
+These methods do not take any parameters.
 
-## Response
+### Response
 | Type | Name | Description |
 | --- | --- | --- |
 | Bool | %retval% | Result |
