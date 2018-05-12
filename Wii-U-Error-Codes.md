@@ -236,10 +236,10 @@
 | 106-0303 | |
 | 106-0304 | |
 | 106-0305 | |
-| 106-0306 | |
-| 106-0307 | |
-| 106-0308 | |
-| 106-0309 | |
+| 106-0306 | The Principal's account still exists in the database but the account has been disabled. |
+| 106-0307 | The Principal's account still exists in the database but the account has expired. |
+| 106-0308 | The Principal does not have the Capabilities to perform concurrent log ins, i.e. at any given time only one log-in may be maintained. |
+| 106-0309 | Data encryption failed. |
 | 106-0310 | |
 | 106-0311 | |
 | 106-0312 | |
