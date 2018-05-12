@@ -2,11 +2,11 @@
 
 | Method ID | Method Name |
 | --- | --- |
-| 1 | RegisterGathering |
-| 2 | UnregisterGathering |
-| 3 | UnregisterGatherings |
-| 4 | UpdateGathering |
-| 5 | Invite |
+| 1 | [RegisterGathering](#1-registergathering) |
+| 2 | [UnregisterGathering](#2-unregistergathering) |
+| 3 | [UnregisterGatherings](#3-unregistergatherings) |
+| 4 | [UpdateGathering](#4-updategathering) |
+| 5 | [Invite](#5-invite) |
 | 6 | AcceptInvitation |
 | 7 | DeclineInvitation |
 | 8 | CancelInvitation |
@@ -46,3 +46,65 @@
 | 42 | UpdateSessionHost |
 | 43 | UpdateGatheringOwnership |
 | 44 | MigrateGatheringOwnership |
+
+# (1) RegisterGathering
+## Request
+| Type | Name | Description |
+| --- | --- | --- |
+| [Data]&lt;Gathering&gt; | anyGathering | Gathering |
+
+## Response
+| Type | Name | Description |
+| --- | --- | --- |
+| Uint32 | %retval% | Gathering id |
+
+# (2) UnregisterGathering
+## Request
+| Type | Name | Description |
+| --- | --- | --- |
+| Uint32 | idGathering | Gathering id |
+
+## Response
+| Type | Name | Description |
+| --- | --- | --- |
+| Bool | %retval% | Result |
+
+# (3) UnregisterGatherings
+## Request
+| Type | Name | Description |
+| --- | --- | --- |
+| [List]&lt;Uint32&gt; | lstGatherings | Gathering ids |
+
+## Response
+| Type | Name | Description |
+| --- | --- | --- |
+| Bool | %retval% | Result |
+
+# (4) UpdateGathering
+## Request
+| Type | Name | Description |
+| --- | --- | --- |
+| [Data]&lt;Gathering&gt; | anyGathering | Gathering |
+
+## Response
+| Type | Name | Description |
+| --- | --- | --- |
+| Bool | %retval% | Result |
+
+# (5) Invite
+## Request
+| Type | Name | Description |
+| --- | --- | --- |
+| Uint32 | idGathering | Gathering id |
+| [List]&lt;[PID]&gt; | lstPrincipals | Invited user pids |
+| [String] | strMessage | Message |
+
+## Response
+| Type | Name | Description |
+| --- | --- | --- |
+| Bool | %retval% | Result |
+
+[String]: NEX-Common-Types#string
+[List]: NEX-Common-Types#list
+[PID]: NEX-Common-Types#pid
+[Data]: NEX-Common-Types#any-data-holder
