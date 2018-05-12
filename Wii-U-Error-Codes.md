@@ -1,5 +1,5 @@
 # NEX Error Codes
-| Code | Name | Description |
+| Code&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Name | Description |
 | --- | --- | --- |
 | 106-0102 | Core::Unknown | |
 | 106-0103 | Core::NotImplemented | |
