@@ -285,17 +285,17 @@
 | 106-0408 | |
 | 106-0409 | |
 | 106-0410 | |
-| 106-0501 | |
-| 106-0502 | |
-| 106-0503 | |
-| 106-0504 | |
-| 106-0505 | |
-| 106-0506 | |
-| 106-0507 | |
-| 106-0508 | |
-| 106-0509 | |
-| 106-0510 | |
-| 106-0511 | |
+| 106-0501 | The reason for the error is unknown. |
+| 106-0502 | Network connection was unable to be established. |
+| 106-0503 | The URL contained in the StationURL is invalid. The syntax may be incorrect. |
+| 106-0504 | The key used to authenticate a given station is invalid. The secure transport layer uses secret-key based cryptography to ensure the integrity and confidentiality of data sent across the network. |
+| 106-0505 | The specified transport type is invalid. |
+| 106-0506 | The Station is already connected via another EndPoint. |
+| 106-0507 | The data coudl not be sent across the network. This could be due to an invalid message, packet, or buffer. |
+| 106-0508 | The operation did not complete within the specified timeout for that operation. |
+| 106-0509 | The network connection was reset. |
+| 106-0510 | The destination Station did not authenticate itself properly. |
+| 106-0511 | 3rd-party server or device answered with an error code according to protocol used e.g. HTTP error code |
 | 106-0512 | |
 | 106-0513 | |
 | 106-0514 | |
