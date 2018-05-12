@@ -1,7 +1,7 @@
 [[NEX Protocols]] > Friends (0x14)
 ---
 
-While this protocol is implemented on Nintendo game servers no game seems to have the code to use this protocol.
+This protocol is implemented on Nintendo game servers, but no game seems to have the code to use this protocol.
 
 | Method ID | Method Name |
 | --- | --- |
