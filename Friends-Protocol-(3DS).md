@@ -253,18 +253,18 @@ This method does not return anything
 | [String] | Unknown |
 
 ## NintendoPresence
-| Type | Description |
-| --- | --- |
-| Uint32 | Unknown |
-| [GameKey](#gamekey) | Game key |
-| [String] | Message |
-| Uint32 | Unknown |
-| Uint8 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| [Buffer] | Unknown |
+| Type | Name | Description |
+| --- | --- | --- |
+| Uint32 | m_changedBitFlag |
+| [GameKey](#gamekey) | m_gameKey | Game key |
+| [String] | m_gameModeDescription | Message |
+| Uint32 | m_joinAvailabilityFlag | |
+| Uint8 | m_matchmakeSystemType | |
+| Uint32 | m_joinGameID | |
+| Uint32 | m_joinGameMode | |
+| [PID] | m_ownerPrincipalID | |
+| Uint32 | m_joinGroupID | |
+| [Buffer] | m_applicationArg | |
 
 ## PlayedGame
 | Type | Description |
@@ -276,3 +276,4 @@ This method does not return anything
 [List]: NEX-Common-Types#list
 [Buffer]: NEX-Common-Types#buffer
 [DateTime]: NEX-Common-Types#date-time
+[PID]: NEX-Common-Types#pid
