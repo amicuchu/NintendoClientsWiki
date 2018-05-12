@@ -1,208 +1,208 @@
 # NEX Error Codes
-| Code | Description |
-| --- | --- |
-| 106-0102 | Core::Unknown |
-| 106-0103 | Core::NotImplemented |
-| 106-0104 | Core::InvalidPointer |
-| 106-0105 | Core::OperationAborted |
-| 106-0106 | Core::Exception |
-| 106-0107 | Core::AccessDenied |
-| 106-0108 | Core::InvalidHandle |
-| 106-0109 | Core::InvalidIndex |
-| 106-0110 | Core::OutOfMemory |
-| 106-0111 | Core::InvalidArgument |
-| 106-0112 | Core::Timeout |
-| 106-0113 | Core::InitializationFailure |
-| 106-0114 | Core::CallInitiationFailure |
-| 106-0115 | Core::RegistrationError |
-| 106-0116 | Core::BufferOverflow |
-| 106-0117 | Core::InvalidLockState |
-| 106-0118 | Core::InvalidSequence |
-| 106-0301 | RendezVous::ConnectionFailure |
-| 106-0302 | RendezVous::NotAuthenticated |
-| 106-0303 | RendezVous::InvalidUsername |
-| 106-0304 | RendezVous::InvalidPassword |
-| 106-0305 | RendezVous::UsernameAlreadyExists |
-| 106-0306 | RendezVous::AccountDisabled |
-| 106-0307 | RendezVous::AccountExpired |
-| 106-0308 | RendezVous::ConcurrentLoginDenied |
-| 106-0309 | RendezVous::EncryptionFailure |
-| 106-0310 | RendezVous::InvalidPID |
-| 106-0311 | RendezVous::MaxConnectionsReached |
-| 106-0312 | RendezVous::InvalidGID |
-| 106-0313 | RendezVous::InvalidControlScriptID |
-| 106-0314 | RendezVous::InvalidOperationInLiveEnvironment |
-| 106-0315 | RendezVous::DuplicateEntry |
-| 106-0316 | RendezVous::ControlScriptFailure |
-| 106-0317 | RendezVous::ClassNotFound |
-| 106-0318 | RendezVous::SessionVoid |
-| 106-0320 | RendezVous::DDLMismatch |
-| 106-0321 | RendezVous::InvalidConfiguration |
-| 106-0322 | RendezVous::SessionFull |
-| 106-0323 | RendezVous::InvalidGatheringPassword |
-| 106-0324 | RendezVous::WithoutParticipationPeriod |
-| 106-0325 | RendezVous::PersistentGatheringCreationMax |
-| 106-0326 | RendezVous::PersistentGatheringParticipationMax |
-| 106-0327 | RendezVous::DeniedByParticipants |
-| 106-0328 | RendezVous::ParticipantInBlackList |
-| 106-0329 | RendezVous::GameServerMaintenance |
-| 106-0330 | RendezVous::OperationPostpone |
-| 106-0331 | RendezVous::OutOfRatingRange |
-| 106-0332 | RendezVous::ConnectionDisconnected |
-| 106-0333 | RendezVous::InvalidOperation |
-| 106-0334 | RendezVous::NotParticipatedGathering |
-| 106-0335 | RendezVous::MatchmakeSessionUserPasswordUnmatch |
-| 106-0336 | RendezVous::MatchmakeSessionSystemPasswordUnmatch |
-| 106-0337 | RendezVous::UserIsOffline |
-| 106-0338 | RendezVous::AlreadyParticipatedGathering |
-| 106-0339 | RendezVous::PermissionDenied |
-| 106-0340 | RendezVous::NotFriend |
-| 106-0341 | RendezVous::SessionClosed |
-| 106-0342 | RendezVous::DatabaseTemporarilyUnavailable |
-| 106-0343 | RendezVous::InvalidUniqueId |
-| 106-0344 | RendezVous::MatchmakingWithdrawn |
-| 106-0345 | RendezVous::LimitExceeded |
-| 106-0401 | PythonCore::Exception |
-| 106-0402 | PythonCore::TypeError |
-| 106-0403 | PythonCore::IndexError |
-| 106-0404 | PythonCore::InvalidReference |
-| 106-0405 | PythonCore::CallFailure |
-| 106-0406 | PythonCore::MemoryError |
-| 106-0407 | PythonCore::KeyError |
-| 106-0408 | PythonCore::OperationError |
-| 106-0409 | PythonCore::ConversionError |
-| 106-0410 | PythonCore::ValidationError |
-| 106-0501 | Transport::Unknown |
-| 106-0502 | Transport::ConnectionFailure |
-| 106-0503 | Transport::InvalidUrl |
-| 106-0504 | Transport::InvalidKey |
-| 106-0505 | Transport::InvalidURLType |
-| 106-0506 | Transport::DuplicateEndpoint |
-| 106-0507 | Transport::IOError |
-| 106-0508 | Transport::Timeout |
-| 106-0509 | Transport::ConnectionReset |
-| 106-0510 | Transport::IncorrectRemoteAuthentication |
-| 106-0511 | Transport::ServerRequestError |
-| 106-0512 | Transport::DecompressionFailure |
-| 106-0513 | Transport::ReliableSendBufferFullFatal |
-| 106-0514 | Transport::UPnPCannotInit |
-| 106-0515 | Transport::UPnPCannotAddMapping |
-| 106-0516 | Transport::NatPMPCannotInit |
-| 106-0517 | Transport::NatPMPCannotAddMapping |
-| 106-0519 | Transport::UnsupportedNAT |
-| 106-0520 | Transport::DnsError |
-| 106-0521 | Transport::ProxyError |
-| 106-0522 | Transport::DataRemaining |
-| 106-0523 | Transport::NoBuffer |
-| 106-0524 | Transport::NotFound |
-| 106-0525 | Transport::TemporaryServerError |
-| 106-0526 | Transport::PermanentServerError |
-| 106-0527 | Transport::ServiceUnavailable |
-| 106-0528 | Transport::ReliableSendBufferFull |
-| 106-0529 | Transport::InvalidStation |
-| 106-0530 | Transport::InvalidSubStreamID |
-| 106-0531 | Transport::PacketBufferFull |
-| 106-0532 | Transport::NatTraversalError |
-| 106-0533 | Transport::NatCheckError |
-| 106-0602 | DOCore::StationNotReached |
-| 106-0603 | DOCore::TargetStationDisconnect |
-| 106-0604 | DOCore::LocalStationLeaving |
-| 106-0605 | DOCore::ObjectNotFound |
-| 106-0606 | DOCore::InvalidRole |
-| 106-0607 | DOCore::CallTimeout |
-| 106-0608 | DOCore::RMCDispatchFailed |
-| 106-0609 | DOCore::MigrationInProgress |
-| 106-0610 | DOCore::NoAuthority |
-| 106-0611 | DOCore::NoTargetStationSpecified |
-| 106-0612 | DOCore::JoinFailed |
-| 106-0613 | DOCore::JoinDenied |
-| 106-0614 | DOCore::ConnectivityTestFailed |
-| 106-0615 | DOCore::Unknown |
-| 106-0616 | DOCore::UnfreedReferences |
-| 106-0617 | DOCore::JobTerminationFailed |
-| 106-0618 | DOCore::InvalidState |
-| 106-0619 | DOCore::FaultRecoveryFatal |
-| 106-0620 | DOCore::FaultRecoveryJobProcessFailed |
-| 106-0621 | DOCore::StationInconsitency |
-| 106-0622 | DOCore::AbnormalMasterState |
-| 106-0623 | DOCore::VersionMismatch |
-| 106-0702 | FPD::NotInitialized |
-| 106-0703 | FPD::AlreadyInitialized |
-| 106-0704 | FPD::NotConnected |
-| 106-0705 | FPD::Connected |
-| 106-0706 | FPD::InitializationFailure |
-| 106-0707 | FPD::OutOfMemory |
-| 106-0708 | FPD::RmcFailed |
-| 106-0709 | FPD::InvalidArgument |
-| 106-0710 | FPD::InvalidLocalAccountID |
-| 106-0711 | FPD::InvalidPrincipalID |
-| 106-0712 | FPD::InvalidLocalFriendCode |
-| 106-0713 | FPD::LocalAccountNotExists |
-| 106-0714 | FPD::LocalAccountNotLoaded |
-| 106-0715 | FPD::LocalAccountAlreadyLoaded |
-| 106-0716 | FPD::FriendAlreadyExists |
-| 106-0717 | FPD::FriendNotExists |
-| 106-0718 | FPD::FriendNumMax |
-| 106-0719 | FPD::NotFriend |
-| 106-0720 | FPD::FileIO |
-| 106-0721 | FPD::P2PInternetProhibited |
-| 106-0722 | FPD::Unknown |
-| 106-0801 | Authentication::NASAuthenticateError |
-| 106-0802 | Authentication::TokenParseError |
-| 106-0803 | Authentication::HttpConnectionError |
-| 106-0804 | Authentication::HttpDNSError |
-| 106-0805 | Authentication::HttpGetProxySetting |
-| 106-0806 | Authentication::TokenExpired |
-| 106-0807 | Authentication::ValidationFailed |
-| 106-0808 | Authentication::InvalidParam |
-| 106-0809 | Authentication::PrincipalIdUnmatched |
-| 106-0810 | Authentication::MoveCountUnmatch |
-| 106-0811 | Authentication::UnderMaintenance |
-| 106-0812 | Authentication::UnsupportedVersion |
-| 106-0813 | Authentication::ServerVersionIsOld |
-| 106-0814 | Authentication::Unknown |
-| 106-0815 | Authentication::ClientVersionIsOld |
-| 106-1101 | Ranking::NotInitialized |
-| 106-1102 | Ranking::InvalidArgument |
-| 106-1103 | Ranking::RegistrationError |
-| 106-1105 | Ranking::NotFound |
-| 106-1106 | Ranking::InvalidScore |
-| 106-1107 | Ranking::InvalidDataSize |
-| 106-1109 | Ranking::PermissionDenied |
-| 106-1110 | Ranking::Unknown |
-| 106-1111 | Ranking::NotImplemented |
-| 106-1201 | DataStore::Unknown |
-| 106-1202 | DataStore::InvalidArgument |
-| 106-1203 | DataStore::PermissionDenied |
-| 106-1204 | DataStore::NotFound |
-| 106-1205 | DataStore::AlreadyLocked |
-| 106-1206 | DataStore::UnderReviewing |
-| 106-1207 | DataStore::Expired |
-| 106-1208 | DataStore::InvalidCheckToken |
-| 106-1209 | DataStore::SystemFileError |
-| 106-1210 | DataStore::OverCapacity |
-| 106-1211 | DataStore::OperationNotAllowed |
-| 106-1212 | DataStore::InvalidPassword |
-| 106-1213 | DataStore::ValueNotEqual |
-| 106-1500 | ServiceItem::Unknown |
-| 106-1501 | ServiceItem::InvalidArgument |
-| 106-1502 | ServiceItem::EShopUnknownHttpError |
-| 106-1503 | ServiceItem::EShopResponseParseError |
-| 106-1504 | ServiceItem::NotOwned |
-| 106-1505 | ServiceItem::InvalidLimitationType |
-| 106-1506 | ServiceItem::ConsumptionRightShortage |
-| 106-1801 | MatchmakeReferee::Unknown |
-| 106-1802 | MatchmakeReferee::InvalidArgument |
-| 106-1803 | MatchmakeReferee::AlreadyExists |
-| 106-1804 | MatchmakeReferee::NotParticipatedGathering |
-| 106-1805 | MatchmakeReferee::NotParticipatedRound |
-| 106-1806 | MatchmakeReferee::StatsNotFound |
-| 106-1807 | MatchmakeReferee::RoundNotFound |
-| 106-1808 | MatchmakeReferee::RoundArbitrated |
-| 106-1901 | Subscriber::Unknown |
-| 106-1902 | Subscriber::InvalidArgument |
-| 106-1903 | Subscriber::OverLimit |
-| 106-1904 | Subscriber::PermissionDenied |
-| 106-2001 | Ranking2::Unknown |
-| 106-2002 | Ranking2::InvalidArgument |
-| 106-2003 | Ranking2::InvalidScore |
+| Code | Name | Description |
+| --- | --- | --- |
+| 106-0102 | Core::Unknown | |
+| 106-0103 | Core::NotImplemented | |
+| 106-0104 | Core::InvalidPointer | |
+| 106-0105 | Core::OperationAborted | |
+| 106-0106 | Core::Exception | An attempt was made to access data in an incorrect manner. This may be due to inadequate permission or the data, file, etc. not existing. |
+| 106-0107 | Core::AccessDenied | |
+| 106-0108 | Core::InvalidHandle | |
+| 106-0109 | Core::InvalidIndex | |
+| 106-0110 | Core::OutOfMemory | |
+| 106-0111 | Core::InvalidArgument | |
+| 106-0112 | Core::Timeout | |
+| 106-0113 | Core::InitializationFailure | |
+| 106-0114 | Core::CallInitiationFailure | |
+| 106-0115 | Core::RegistrationError | |
+| 106-0116 | Core::BufferOverflow | |
+| 106-0117 | Core::InvalidLockState | |
+| 106-0118 | Core::InvalidSequence | |
+| 106-0301 | RendezVous::ConnectionFailure | |
+| 106-0302 | RendezVous::NotAuthenticated | |
+| 106-0303 | RendezVous::InvalidUsername | |
+| 106-0304 | RendezVous::InvalidPassword | |
+| 106-0305 | RendezVous::UsernameAlreadyExists | |
+| 106-0306 | RendezVous::AccountDisabled | |
+| 106-0307 | RendezVous::AccountExpired | |
+| 106-0308 | RendezVous::ConcurrentLoginDenied | |
+| 106-0309 | RendezVous::EncryptionFailure | |
+| 106-0310 | RendezVous::InvalidPID | |
+| 106-0311 | RendezVous::MaxConnectionsReached | |
+| 106-0312 | RendezVous::InvalidGID | |
+| 106-0313 | RendezVous::InvalidControlScriptID | |
+| 106-0314 | RendezVous::InvalidOperationInLiveEnvironment | |
+| 106-0315 | RendezVous::DuplicateEntry | |
+| 106-0316 | RendezVous::ControlScriptFailure | |
+| 106-0317 | RendezVous::ClassNotFound | |
+| 106-0318 | RendezVous::SessionVoid | |
+| 106-0320 | RendezVous::DDLMismatch | |
+| 106-0321 | RendezVous::InvalidConfiguration | |
+| 106-0322 | RendezVous::SessionFull | |
+| 106-0323 | RendezVous::InvalidGatheringPassword | |
+| 106-0324 | RendezVous::WithoutParticipationPeriod | |
+| 106-0325 | RendezVous::PersistentGatheringCreationMax | |
+| 106-0326 | RendezVous::PersistentGatheringParticipationMax | |
+| 106-0327 | RendezVous::DeniedByParticipants | |
+| 106-0328 | RendezVous::ParticipantInBlackList | |
+| 106-0329 | RendezVous::GameServerMaintenance | |
+| 106-0330 | RendezVous::OperationPostpone | |
+| 106-0331 | RendezVous::OutOfRatingRange | |
+| 106-0332 | RendezVous::ConnectionDisconnected | |
+| 106-0333 | RendezVous::InvalidOperation | |
+| 106-0334 | RendezVous::NotParticipatedGathering | |
+| 106-0335 | RendezVous::MatchmakeSessionUserPasswordUnmatch | |
+| 106-0336 | RendezVous::MatchmakeSessionSystemPasswordUnmatch | |
+| 106-0337 | RendezVous::UserIsOffline | |
+| 106-0338 | RendezVous::AlreadyParticipatedGathering | |
+| 106-0339 | RendezVous::PermissionDenied | |
+| 106-0340 | RendezVous::NotFriend | |
+| 106-0341 | RendezVous::SessionClosed | |
+| 106-0342 | RendezVous::DatabaseTemporarilyUnavailable | |
+| 106-0343 | RendezVous::InvalidUniqueId | |
+| 106-0344 | RendezVous::MatchmakingWithdrawn | |
+| 106-0345 | RendezVous::LimitExceeded | |
+| 106-0401 | PythonCore::Exception | |
+| 106-0402 | PythonCore::TypeError | |
+| 106-0403 | PythonCore::IndexError | |
+| 106-0404 | PythonCore::InvalidReference | |
+| 106-0405 | PythonCore::CallFailure | |
+| 106-0406 | PythonCore::MemoryError | |
+| 106-0407 | PythonCore::KeyError | |
+| 106-0408 | PythonCore::OperationError | |
+| 106-0409 | PythonCore::ConversionError | |
+| 106-0410 | PythonCore::ValidationError | |
+| 106-0501 | Transport::Unknown | |
+| 106-0502 | Transport::ConnectionFailure | |
+| 106-0503 | Transport::InvalidUrl | |
+| 106-0504 | Transport::InvalidKey | |
+| 106-0505 | Transport::InvalidURLType | |
+| 106-0506 | Transport::DuplicateEndpoint | |
+| 106-0507 | Transport::IOError | |
+| 106-0508 | Transport::Timeout | |
+| 106-0509 | Transport::ConnectionReset | |
+| 106-0510 | Transport::IncorrectRemoteAuthentication | |
+| 106-0511 | Transport::ServerRequestError | |
+| 106-0512 | Transport::DecompressionFailure | |
+| 106-0513 | Transport::ReliableSendBufferFullFatal | |
+| 106-0514 | Transport::UPnPCannotInit | |
+| 106-0515 | Transport::UPnPCannotAddMapping | |
+| 106-0516 | Transport::NatPMPCannotInit | |
+| 106-0517 | Transport::NatPMPCannotAddMapping | |
+| 106-0519 | Transport::UnsupportedNAT | |
+| 106-0520 | Transport::DnsError | |
+| 106-0521 | Transport::ProxyError | |
+| 106-0522 | Transport::DataRemaining | |
+| 106-0523 | Transport::NoBuffer | |
+| 106-0524 | Transport::NotFound | |
+| 106-0525 | Transport::TemporaryServerError | |
+| 106-0526 | Transport::PermanentServerError | |
+| 106-0527 | Transport::ServiceUnavailable | |
+| 106-0528 | Transport::ReliableSendBufferFull | |
+| 106-0529 | Transport::InvalidStation | |
+| 106-0530 | Transport::InvalidSubStreamID | |
+| 106-0531 | Transport::PacketBufferFull | |
+| 106-0532 | Transport::NatTraversalError | |
+| 106-0533 | Transport::NatCheckError | |
+| 106-0602 | DOCore::StationNotReached | |
+| 106-0603 | DOCore::TargetStationDisconnect | |
+| 106-0604 | DOCore::LocalStationLeaving | |
+| 106-0605 | DOCore::ObjectNotFound | |
+| 106-0606 | DOCore::InvalidRole | |
+| 106-0607 | DOCore::CallTimeout | |
+| 106-0608 | DOCore::RMCDispatchFailed | |
+| 106-0609 | DOCore::MigrationInProgress | |
+| 106-0610 | DOCore::NoAuthority | |
+| 106-0611 | DOCore::NoTargetStationSpecified | |
+| 106-0612 | DOCore::JoinFailed | |
+| 106-0613 | DOCore::JoinDenied | |
+| 106-0614 | DOCore::ConnectivityTestFailed | |
+| 106-0615 | DOCore::Unknown | |
+| 106-0616 | DOCore::UnfreedReferences | |
+| 106-0617 | DOCore::JobTerminationFailed | |
+| 106-0618 | DOCore::InvalidState | |
+| 106-0619 | DOCore::FaultRecoveryFatal | |
+| 106-0620 | DOCore::FaultRecoveryJobProcessFailed | |
+| 106-0621 | DOCore::StationInconsitency | |
+| 106-0622 | DOCore::AbnormalMasterState | |
+| 106-0623 | DOCore::VersionMismatch | |
+| 106-0702 | FPD::NotInitialized | |
+| 106-0703 | FPD::AlreadyInitialized | |
+| 106-0704 | FPD::NotConnected | |
+| 106-0705 | FPD::Connected | |
+| 106-0706 | FPD::InitializationFailure | |
+| 106-0707 | FPD::OutOfMemory | |
+| 106-0708 | FPD::RmcFailed | |
+| 106-0709 | FPD::InvalidArgument | |
+| 106-0710 | FPD::InvalidLocalAccountID | |
+| 106-0711 | FPD::InvalidPrincipalID | |
+| 106-0712 | FPD::InvalidLocalFriendCode | |
+| 106-0713 | FPD::LocalAccountNotExists | |
+| 106-0714 | FPD::LocalAccountNotLoaded | |
+| 106-0715 | FPD::LocalAccountAlreadyLoaded | |
+| 106-0716 | FPD::FriendAlreadyExists | |
+| 106-0717 | FPD::FriendNotExists | |
+| 106-0718 | FPD::FriendNumMax | |
+| 106-0719 | FPD::NotFriend | |
+| 106-0720 | FPD::FileIO | |
+| 106-0721 | FPD::P2PInternetProhibited | |
+| 106-0722 | FPD::Unknown | |
+| 106-0801 | Authentication::NASAuthenticateError | |
+| 106-0802 | Authentication::TokenParseError | |
+| 106-0803 | Authentication::HttpConnectionError | |
+| 106-0804 | Authentication::HttpDNSError | |
+| 106-0805 | Authentication::HttpGetProxySetting | |
+| 106-0806 | Authentication::TokenExpired | |
+| 106-0807 | Authentication::ValidationFailed | |
+| 106-0808 | Authentication::InvalidParam | |
+| 106-0809 | Authentication::PrincipalIdUnmatched | |
+| 106-0810 | Authentication::MoveCountUnmatch | |
+| 106-0811 | Authentication::UnderMaintenance | |
+| 106-0812 | Authentication::UnsupportedVersion | |
+| 106-0813 | Authentication::ServerVersionIsOld | |
+| 106-0814 | Authentication::Unknown | |
+| 106-0815 | Authentication::ClientVersionIsOld | |
+| 106-1101 | Ranking::NotInitialized | |
+| 106-1102 | Ranking::InvalidArgument | |
+| 106-1103 | Ranking::RegistrationError | |
+| 106-1105 | Ranking::NotFound | |
+| 106-1106 | Ranking::InvalidScore | |
+| 106-1107 | Ranking::InvalidDataSize | |
+| 106-1109 | Ranking::PermissionDenied | |
+| 106-1110 | Ranking::Unknown | |
+| 106-1111 | Ranking::NotImplemented | |
+| 106-1201 | DataStore::Unknown | |
+| 106-1202 | DataStore::InvalidArgument | |
+| 106-1203 | DataStore::PermissionDenied | |
+| 106-1204 | DataStore::NotFound | |
+| 106-1205 | DataStore::AlreadyLocked | |
+| 106-1206 | DataStore::UnderReviewing | |
+| 106-1207 | DataStore::Expired | |
+| 106-1208 | DataStore::InvalidCheckToken | |
+| 106-1209 | DataStore::SystemFileError | |
+| 106-1210 | DataStore::OverCapacity | |
+| 106-1211 | DataStore::OperationNotAllowed | |
+| 106-1212 | DataStore::InvalidPassword | |
+| 106-1213 | DataStore::ValueNotEqual | |
+| 106-1500 | ServiceItem::Unknown | |
+| 106-1501 | ServiceItem::InvalidArgument | |
+| 106-1502 | ServiceItem::EShopUnknownHttpError | |
+| 106-1503 | ServiceItem::EShopResponseParseError | |
+| 106-1504 | ServiceItem::NotOwned | |
+| 106-1505 | ServiceItem::InvalidLimitationType | |
+| 106-1506 | ServiceItem::ConsumptionRightShortage | |
+| 106-1801 | MatchmakeReferee::Unknown | |
+| 106-1802 | MatchmakeReferee::InvalidArgument | |
+| 106-1803 | MatchmakeReferee::AlreadyExists | |
+| 106-1804 | MatchmakeReferee::NotParticipatedGathering | |
+| 106-1805 | MatchmakeReferee::NotParticipatedRound | |
+| 106-1806 | MatchmakeReferee::StatsNotFound | |
+| 106-1807 | MatchmakeReferee::RoundNotFound | |
+| 106-1808 | MatchmakeReferee::RoundArbitrated | |
+| 106-1901 | Subscriber::Unknown | |
+| 106-1902 | Subscriber::InvalidArgument | |
+| 106-1903 | Subscriber::OverLimit | |
+| 106-1904 | Subscriber::PermissionDenied | |
+| 106-2001 | Ranking2::Unknown | |
+| 106-2002 | Ranking2::InvalidArgument | |
+| 106-2003 | Ranking2::InvalidScore | |
