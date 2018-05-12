@@ -15,7 +15,7 @@ As stated on the [[Game Server Overview]] page, NEX is actually a Nintendo-versi
 | 0x14 | Yes | [Friends](Friends-Protocol) |
 | 0x15 | Yes | [Match making](Match-Making-Protocol) |
 | 0x17 | Yes | [Messaging](Messaging-Protocol) |
-| 0x18 | Yes | Persistent store |
+| 0x18 | Yes | [Persistent store](Persistent-Store-Protocol) |
 | 0x19 | Yes | [Account management](Account-Management-Protocol) |
 | 0x1B | Yes | [Message delivery](Message-Delivery-Protocol) |
 | 0x1C | No | Client settings |
