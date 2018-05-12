@@ -1,4 +1,3 @@
-# NEX Error Codes
 | Code&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Name | Description |
 | --- | --- | --- |
 | 106-0102 | Core::Unknown | The reason for the error is unknown. |
