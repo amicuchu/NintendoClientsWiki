@@ -1,21 +1,21 @@
 # NEX Error Codes
 | Code&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Name | Description |
 | --- | --- | --- |
-| 106-0102 | Core::Unknown | |
-| 106-0103 | Core::NotImplemented | |
-| 106-0104 | Core::InvalidPointer | |
-| 106-0105 | Core::OperationAborted | |
-| 106-0106 | Core::Exception | An attempt was made to access data in an incorrect manner. This may be due to inadequate permission or the data, file, etc. not existing. |
-| 106-0107 | Core::AccessDenied | |
-| 106-0108 | Core::InvalidHandle | |
-| 106-0109 | Core::InvalidIndex | |
-| 106-0110 | Core::OutOfMemory | |
-| 106-0111 | Core::InvalidArgument | |
-| 106-0112 | Core::Timeout | |
-| 106-0113 | Core::InitializationFailure | |
-| 106-0114 | Core::CallInitiationFailure | |
-| 106-0115 | Core::RegistrationError | |
-| 106-0116 | Core::BufferOverflow | |
+| 106-0102 | Core::Unknown | The reason for the error is unknown. |
+| 106-0103 | Core::NotImplemented | The operation is currently not implemented. |
+| 106-0104 | Core::InvalidPointer | The operation specifies or accesses an invalid pointer. |
+| 106-0105 | Core::OperationAborted | The operation was aborted. |
+| 106-0106 | Core::Exception | The operation raised an exception. |
+| 106-0107 | Core::AccessDenied | An attempt was made to access data in an incorrect manner. This may be due to inadequate permission or the data, file, etc. not existing. |
+| 106-0108 | Core::InvalidHandle | The operation specifies or accesses an invalid DOHandle. |
+| 106-0109 | Core::InvalidIndex | The operation specifies or accesses an invalid index. |
+| 106-0110 | Core::OutOfMemory | The system could not allocate or access enough memory or disk space to perform the specified operation. |
+| 106-0111 | Core::InvalidArgument | Invalid argument were passed with the operation. The argument(s) may be out of range or invalid. |
+| 106-0112 | Core::Timeout | The operation did not complete within the specified timeout for that operation. |
+| 106-0113 | Core::InitializationFailure | Initialization of the component failed. |
+| 106-0114 | Core::CallInitiationFailure | The call failed to initialize. |
+| 106-0115 | Core::RegistrationError | An error occurred during registration. |
+| 106-0116 | Core::BufferOverflow | The buffer is too large to be sent. |
 | 106-0117 | Core::InvalidLockState | |
 | 106-0118 | Core::InvalidSequence | |
 | 106-0301 | RendezVous::ConnectionFailure | |
