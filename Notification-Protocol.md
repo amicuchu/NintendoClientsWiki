@@ -10,7 +10,7 @@
 | --- | --- | --- |
 | [NotificationEvent](#notificationevent) | oEvent | Event object |
 
-### Notification Event ([Structure])
+### NotificationEvent ([Structure])
 | Type | Name | Description 
 | --- | --- | --- |
 | [PID] | m_pidSource | Source pid |
