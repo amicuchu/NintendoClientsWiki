@@ -12,7 +12,7 @@ As stated on the [[Game Server Overview]] page, NEX is actually a Nintendo-versi
 | 0x11 | No | Siege |
 | 0x12 | Yes | [Health](Health-Protocol) |
 | 0x13 | Yes | [Monitoring](Monitoring-Protocol) |
-| 0x14 | Yes | Friends |
+| 0x14 | Yes | [Friends](Friends-Protocol) |
 | 0x15 | Yes | [Match making](Match-Making-Protocol) |
 | 0x17 | Yes | [Messaging](Messaging-Protocol) |
 | 0x18 | Yes | Persistent store |
