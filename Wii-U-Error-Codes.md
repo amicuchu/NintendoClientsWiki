@@ -231,17 +231,17 @@
 | 106-0116 | The buffer is too large to be sent. |
 | 106-0117 | |
 | 106-0118 | |
-| 106-0301 | |
-| 106-0302 | |
-| 106-0303 | |
-| 106-0304 | |
-| 106-0305 | |
+| 106-0301 | Connection was unable to be established, either with the Rendez-Vous back end or a Peer. |
+| 106-0302 | The Principal could not be authenticated by the Authentication Service. |
+| 106-0303 | The Principal tried to log in with an invalid user name, i.e. the user name does not exist in the database. |
+| 106-0304 | The Principal either tried to log in with an invalid password for the provided user name or tried to join a Gathering with an invalid password. |
+| 106-0305 | The provided user name already exists in the database. All usernames must be unique. |
 | 106-0306 | The Principal's account still exists in the database but the account has been disabled. |
 | 106-0307 | The Principal's account still exists in the database but the account has expired. |
 | 106-0308 | The Principal does not have the Capabilities to perform concurrent log ins, i.e. at any given time only one log-in may be maintained. |
 | 106-0309 | Data encryption failed. |
-| 106-0310 | |
-| 106-0311 | |
+| 106-0310 | The operation specifies or accesses an invalid PrincipalID. |
+| 106-0311 | Maximum connnection number is reached |
 | 106-0312 | |
 | 106-0313 | |
 | 106-0314 | |
