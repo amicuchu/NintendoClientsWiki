@@ -9,6 +9,7 @@
 8. [Structure](#structure)
 9. [Data](#any-data-holder)
 10. [RVConnectionData](#rendez-vous-connection-data-structure)
+11. [ResultRange](#result-range-structure)
 
 # String
 | Type | Description |
@@ -121,9 +122,7 @@ NEX has a class that can hold any object derived from nn::nex::Data. When these 
 | Uint32 | Length of data |
 | | Object data |
 
-[String]: #string
-
-# Rendez-Vous Connection Data ([Structure](#structure))
+# Rendez-Vous Connection Data ([Structure])
 Nintendo does not use any special protocols.
 
 | Type | Version | Name | Description |
@@ -140,3 +139,12 @@ Examples:
 | Friends | `prudps:/stream=10;type=2;PID=2;port=60091;address=35.162.205.114;sid=1;CID=1` |
 | DKC:TF | `prudps:/port=43221;CID=1;address=34.208.166.202;PID=2;stream=10;type=2;sid=1` |
 | MK8 | `prudps:/sid=1;port=59201;address=52.10.188.163;PID=2;stream=10;type=2;CID=1` |
+
+# Result Range ([Structure])
+| Type | Name | Description |
+| --- | --- | --- |
+| Uint32 | m_uiOffset | Offset |
+| Uint32 | m_uiSize | Length |
+
+[String]: #string
+[Structure]: #structure
