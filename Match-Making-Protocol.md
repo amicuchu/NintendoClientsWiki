@@ -259,78 +259,82 @@ This method does not take any parameters.
 ## Request
 | Type | Name | Description |
 | --- | --- | --- |
-| Bool | %retval% | Result | 
+| [String] | strDescriptionRegex | Description regex |
+| [ResultRange] | resultRange | ResultRange |
 
 ## Response
 | Type | Name | Description |
 | --- | --- | --- |
-| Bool | %retval% | Result | 
+| [List]&lt;[Data]&lt;Gathering&gt;&gt; | lstGathering | Gatherings |
 
 # (20) FindByID
 ## Request
 | Type | Name | Description |
 | --- | --- | --- |
-| Bool | %retval% | Result | 
+| [List]&lt;Uint32&gt; | lstID | Gathering ids |
 
 ## Response
 | Type | Name | Description |
 | --- | --- | --- |
-| Bool | %retval% | Result | 
+| [List]&lt;[Data]&lt;Gathering&gt;&gt; | lstGathering | Gatherings |
 
 # (21) FindBySingleID
 ## Request
 | Type | Name | Description |
 | --- | --- | --- |
-| Bool | %retval% | Result | 
+| Uint32 | id | Gathering id |
 
 ## Response
 | Type | Name | Description |
 | --- | --- | --- |
-| Bool | %retval% | Result | 
+| Bool | bResult | Result | 
+| [Data]&lt;Gathering&gt; | pGathering | Gathering |
 
 # (22) FindByOwner
 ## Request
 | Type | Name | Description |
 | --- | --- | --- |
-| Bool | %retval% | Result | 
+| [PID] | id | Owner pid |
+| [ResultRange] | resultRange | ResultRange |
 
 ## Response
 | Type | Name | Description |
 | --- | --- | --- |
-| Bool | %retval% | Result | 
+| [List]&lt;[Data]&lt;Gathering&gt;&gt; | lstGathering | Gatherings |
 
 # (23) FindByParticipants
 ## Request
 | Type | Name | Description |
 | --- | --- | --- |
-| Bool | %retval% | Result | 
+| [List]&lt;[PID]&gt; | pid | Participant pids |
 
 ## Response
 | Type | Name | Description |
 | --- | --- | --- |
-| Bool | %retval% | Result | 
+| [List]&lt;[Data]&lt;Gathering&gt;&gt; | lstGathering | Gatherings |
 
 # (24) FindInvitations
 ## Request
 | Type | Name | Description |
 | --- | --- | --- |
-| Bool | %retval% | Result | 
+| [ResultRange] | resultRange | Result range |
 
 ## Response
 | Type | Name | Description |
 | --- | --- | --- |
-| Bool | %retval% | Result | 
+| [List]&lt;[Data]&lt;Gathering&gt;&gt; | lstGathering | Gatherings |
 
 # (25) FindBySQLQuery
 ## Request
 | Type | Name | Description |
 | --- | --- | --- |
-| Bool | %retval% | Result | 
+| [String] | strQuery | SQL query |
+| [ResultRange] | resultRange | Result range |
 
 ## Response
 | Type | Name | Description |
 | --- | --- | --- |
-| Bool | %retval% | Result | 
+| [List]&lt;[Data]&lt;Gathering&gt;&gt; | lstGathering | Gatherings |
 
 # (26) LaunchSession
 ## Request
