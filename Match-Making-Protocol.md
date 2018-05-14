@@ -340,7 +340,8 @@ This method does not take any parameters.
 ## Request
 | Type | Name | Description |
 | --- | --- | --- |
-| Bool | %retval% | Result | 
+| Uint32 | idGathering | Gathering id |
+| [String] | strURL | Session url |
 
 ## Response
 | Type | Name | Description |
@@ -351,7 +352,8 @@ This method does not take any parameters.
 ## Request
 | Type | Name | Description |
 | --- | --- | --- |
-| Bool | %retval% | Result | 
+| Uint32 | idGathering | Gathering id |
+| [String] | strURL | Session url |
 
 ## Response
 | Type | Name | Description |
@@ -362,29 +364,32 @@ This method does not take any parameters.
 ## Request
 | Type | Name | Description |
 | --- | --- | --- |
-| Bool | %retval% | Result | 
+| Uint32 | idGathering | Gathering id |
 
 ## Response
 | Type | Name | Description |
 | --- | --- | --- |
 | Bool | %retval% | Result | 
+| [String] | strURL | Session url |
 
 # (29) GetState
 ## Request
 | Type | Name | Description |
 | --- | --- | --- |
-| Bool | %retval% | Result | 
+| Uint32 | idGathering | Gathering id |
 
 ## Response
 | Type | Name | Description |
 | --- | --- | --- |
-| Bool | %retval% | Result | 
+| Bool | %retval% | Result |
+| Uint32 | uiState | State |
 
 # (30) SetState
 ## Request
 | Type | Name | Description |
 | --- | --- | --- |
-| Bool | %retval% | Result | 
+| Uint32 | idGathering | Gathering id |
+| Uint32 | uiNewState | New state |
 
 ## Response
 | Type | Name | Description |
@@ -395,7 +400,8 @@ This method does not take any parameters.
 ## Request
 | Type | Name | Description |
 | --- | --- | --- |
-| Bool | %retval% | Result | 
+| Uint32 | idGathering | Gathering id |
+| [List]&lt;GatheringStats&gt; | lstStats | Stats |
 
 ## Response
 | Type | Name | Description |
@@ -406,18 +412,21 @@ This method does not take any parameters.
 ## Request
 | Type | Name | Description |
 | --- | --- | --- |
-| Bool | %retval% | Result | 
+| Uint32 | idGathering | Gathering id |
+| [List]&lt;Uint32&gt; | lstParticipants | Participant pids |
+| [List]&lt;byte&gt; | lstColumns | Columns |
 
 ## Response
 | Type | Name | Description |
 | --- | --- | --- |
-| Bool | %retval% | Result | 
+| Bool | %retval% | Result |
+| [List]&lt;GatheringStats&gt; | plstStats | Stats |
 
 # (33) DeleteGathering
 ## Request
 | Type | Name | Description |
 | --- | --- | --- |
-| Bool | %retval% | Result | 
+| Uint32 | gid | Gathering id |
 
 ## Response
 | Type | Name | Description |
@@ -428,29 +437,32 @@ This method does not take any parameters.
 ## Request
 | Type | Name | Description |
 | --- | --- | --- |
-| Bool | %retval% | Result | 
+| Uint32 | uiReason | Reason |
+| [ResultRange] | resultRange | Result range |
 
 ## Response
 | Type | Name | Description |
 | --- | --- | --- |
 | Bool | %retval% | Result | 
+| [List]&lt;DeletionEntry&gt; | lstDeletions | Deletions |
 
 # (35) DeleteFromDeletions
 ## Request
 | Type | Name | Description |
 | --- | --- | --- |
-| Bool | %retval% | Result | 
+| [List]&lt;Uint32&gt; | lstDeletions | Deletions |
 
 ## Response
 | Type | Name | Description |
 | --- | --- | --- |
 | Bool | %retval% | Result | 
 
-# (36) MigrateGatheringOwners
-## RequesthipV1
+# (36) MigrateGatheringOwnershipV1
+## Request
 | Type | Name | Description |
 | --- | --- | --- |
-| Bool | %retval% | Result | 
+| Uint32 | gid | Gathering id |
+| [List]&lt;[PID]&gt; | lstPotentialNewOwnersID | Potential new owner pids |
 
 ## Response
 | Type | Name | Description |
@@ -461,89 +473,86 @@ This method does not take any parameters.
 ## Request
 | Type | Name | Description |
 | --- | --- | --- |
-| Bool | %retval% | Result | 
+| [String] | strDescriptionLike | Description like |
+| [ResultRange] | resultRange | Result range |
 
 ## Response
 | Type | Name | Description |
 | --- | --- | --- |
-| Bool | %retval% | Result | 
+| [List]&lt;[Data]&lt;Gathering&gt;&gt; | lstGathering | Gatherings |
 
 # (38) RegisterLocalURL
 ## Request
 | Type | Name | Description |
 | --- | --- | --- |
-| Bool | %retval% | Result | 
+| Uint32 | gid | Gathering id |
+| [StationURL] | url | Url |
 
 ## Response
-| Type | Name | Description |
-| --- | --- | --- |
-| Bool | %retval% | Result | 
+This method does not return anything.
 
 # (39) RegisterLocalURLs
 ## Request
 | Type | Name | Description |
 | --- | --- | --- |
-| Bool | %retval% | Result | 
+| Uint32 | gid | Gathering id |
+| [List]&lt;[StationURL]&gt; | lstUrls | Urls |
 
 ## Response
-| Type | Name | Description |
-| --- | --- | --- |
-| Bool | %retval% | Result | 
+This method does not return anything.
 
 # (40) UpdateSessionHostV1
 ## Request
 | Type | Name | Description |
 | --- | --- | --- |
-| Bool | %retval% | Result | 
+| Uint32 | gid | Gathering id |
 
 ## Response
-| Type | Name | Description |
-| --- | --- | --- |
-| Bool | %retval% | Result | 
+This method does not return anything.
 
 # (41) GetSessionURLs
 ## Request
 | Type | Name | Description |
 | --- | --- | --- |
-| Bool | %retval% | Result | 
+| Uint32 | gid | Gathering id |
 
 ## Response
 | Type | Name | Description |
 | --- | --- | --- |
-| Bool | %retval% | Result | 
+| [List]&lt;[StationURL]&gt; | lstURLs | Session urls |
 
 # (42) UpdateSessionHost
 ## Request
 | Type | Name | Description |
 | --- | --- | --- |
-| Bool | %retval% | Result | 
+| Uint32 | gid | Gathering id |
+| Bool | isMigrateOwner | Migrate owner |
+
+## Response
+This method does not return anything.
+
+# (43) UpdateGatheringOwnership
+## Request
+| Type | Name | Description |
+| --- | --- | --- |
+| Uint32 | gid | Gathering id |
+| Bool | participantsOnly | Participants only |
 
 ## Response
 | Type | Name | Description |
 | --- | --- | --- |
 | Bool | %retval% | Result | 
 
-# (43) UpdateGatheringOwnersh
-## Requestip
+# (44) MigrateGatheringOwnership
+## Request
 | Type | Name | Description |
 | --- | --- | --- |
-| Bool | %retval% | Result | 
+| Uint32 | gid | Gathering id |
+| [List]&lt;[PID]&gt; | lstPotentialNewOwnersID | Potential new owner pids |
+| Bool | participantsOnly | Participants only |
 
 ## Response
-| Type | Name | Description |
-| --- | --- | --- |
-| Bool | %retval% | Result | 
-
-# (44) MigrateGatheringOwners
-## Requesthip
-| Type | Name | Description |
-| --- | --- | --- |
-| Bool | %retval% | Result | 
-
-## Response
-| Type | Name | Description |
-| --- | --- | --- |
-| Bool | %retval% | Result | 
+This method does not return anything.
 
 [String]: NEX-Common-Types#string
 [StationURL]: NEX-Common-Types#station-url
