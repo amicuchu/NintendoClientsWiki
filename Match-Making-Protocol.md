@@ -51,7 +51,7 @@
 ## Request
 | Type | Name | Description |
 | --- | --- | --- |
-| [Data]&lt;Gathering&gt; | anyGathering | Gathering |
+| [Data]&lt;[Gathering]&gt; | anyGathering | Gathering |
 
 ## Response
 | Type | Name | Description |
@@ -84,7 +84,7 @@
 ## Request
 | Type | Name | Description |
 | --- | --- | --- |
-| [Data]&lt;Gathering&gt; | anyGathering | Gathering |
+| [Data]&lt;[Gathering]&gt; | anyGathering | Gathering |
 
 ## Response
 | Type | Name | Description |
@@ -241,7 +241,7 @@ This method does not take any parameters.
 ## Response
 | Type | Name | Description |
 | --- | --- | --- |
-| [List]&lt;[Data]&lt;Gathering&gt;&gt; | lstGathering | Gatherings |
+| [List]&lt;[Data]&lt;[Gathering]&gt;&gt; | lstGathering | Gatherings |
 
 # (18) FindByDescription
 ## Request
@@ -253,7 +253,7 @@ This method does not take any parameters.
 ## Response
 | Type | Name | Description |
 | --- | --- | --- |
-| [List]&lt;[Data]&lt;Gathering&gt;&gt; | lstGathering | Gatherings |
+| [List]&lt;[Data]&lt;[Gathering]&gt;&gt; | lstGathering | Gatherings |
 
 # (19) FindByDescriptionRegex
 ## Request
@@ -265,7 +265,7 @@ This method does not take any parameters.
 ## Response
 | Type | Name | Description |
 | --- | --- | --- |
-| [List]&lt;[Data]&lt;Gathering&gt;&gt; | lstGathering | Gatherings |
+| [List]&lt;[Data]&lt;[Gathering]&gt;&gt; | lstGathering | Gatherings |
 
 # (20) FindByID
 ## Request
@@ -276,7 +276,7 @@ This method does not take any parameters.
 ## Response
 | Type | Name | Description |
 | --- | --- | --- |
-| [List]&lt;[Data]&lt;Gathering&gt;&gt; | lstGathering | Gatherings |
+| [List]&lt;[Data]&lt;[Gathering]&gt;&gt; | lstGathering | Gatherings |
 
 # (21) FindBySingleID
 ## Request
@@ -288,7 +288,7 @@ This method does not take any parameters.
 | Type | Name | Description |
 | --- | --- | --- |
 | Bool | bResult | Result | 
-| [Data]&lt;Gathering&gt; | pGathering | Gathering |
+| [Data]&lt;[Gathering]&gt; | pGathering | Gathering |
 
 # (22) FindByOwner
 ## Request
@@ -300,7 +300,7 @@ This method does not take any parameters.
 ## Response
 | Type | Name | Description |
 | --- | --- | --- |
-| [List]&lt;[Data]&lt;Gathering&gt;&gt; | lstGathering | Gatherings |
+| [List]&lt;[Data]&lt;[Gathering]&gt;&gt; | lstGathering | Gatherings |
 
 # (23) FindByParticipants
 ## Request
@@ -311,7 +311,7 @@ This method does not take any parameters.
 ## Response
 | Type | Name | Description |
 | --- | --- | --- |
-| [List]&lt;[Data]&lt;Gathering&gt;&gt; | lstGathering | Gatherings |
+| [List]&lt;[Data]&lt;[Gathering]&gt;&gt; | lstGathering | Gatherings |
 
 # (24) FindInvitations
 ## Request
@@ -322,7 +322,7 @@ This method does not take any parameters.
 ## Response
 | Type | Name | Description |
 | --- | --- | --- |
-| [List]&lt;[Data]&lt;Gathering&gt;&gt; | lstGathering | Gatherings |
+| [List]&lt;[Data]&lt;[Gathering]&gt;&gt; | lstGathering | Gatherings |
 
 # (25) FindBySQLQuery
 ## Request
@@ -334,7 +334,7 @@ This method does not take any parameters.
 ## Response
 | Type | Name | Description |
 | --- | --- | --- |
-| [List]&lt;[Data]&lt;Gathering&gt;&gt; | lstGathering | Gatherings |
+| [List]&lt;[Data]&lt;[Gathering]&gt;&gt; | lstGathering | Gatherings |
 
 # (26) LaunchSession
 ## Request
@@ -479,7 +479,7 @@ This method does not take any parameters.
 ## Response
 | Type | Name | Description |
 | --- | --- | --- |
-| [List]&lt;[Data]&lt;Gathering&gt;&gt; | lstGathering | Gatherings |
+| [List]&lt;[Data]&lt;[Gathering]&gt;&gt; | lstGathering | Gatherings |
 
 # (38) RegisterLocalURL
 ## Request
@@ -554,9 +554,26 @@ This method does not return anything.
 ## Response
 This method does not return anything.
 
+# Types
+## Gathering ([Structure])
+| Type | Name | Description |
+| --- | --- | --- |
+| Uint32 | m_idMyself | Gathering id |
+| [PID] | m_pidOwner | Owner pid |
+| [PID] | m_pidHost | Host pid |
+| Uint16 | m_uiMinParticipants | Minimum number of participants |
+| Uint16 | m_uiMaxParticipants | Maximum number of participants |
+| Uint32 | m_uiParticipationPolicy | Participation policy |
+| Uint32 | m_uiPolicyArgument | Policy argument |
+| Uint32 | m_uiFlags | Flags |
+| Uint32 | m_uiState | State |
+| [String] | m_strDescription | Description |
+
 [String]: NEX-Common-Types#string
 [StationURL]: NEX-Common-Types#station-url
 [List]: NEX-Common-Types#list
 [PID]: NEX-Common-Types#pid
 [Data]: NEX-Common-Types#any-data-holder
+[Structure]: NEX-Common-Types#structure
 [ResultRange]: NEX-Common-Types#result-range-structure
+[Gathering]: #gathering
