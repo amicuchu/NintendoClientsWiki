@@ -576,4 +576,4 @@ This method does not return anything.
 [Data]: NEX-Common-Types#any-data-holder
 [Structure]: NEX-Common-Types#structure
 [ResultRange]: NEX-Common-Types#result-range-structure
-[Gathering]: #gathering
+[Gathering]: #gathering-structure
