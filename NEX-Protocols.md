@@ -7,6 +7,7 @@ As stated on the [[Game Server Overview]] page, NEX is actually a Nintendo-versi
 | 0x03 | Yes | [NAT traversal](NAT-Traversal-Protocol) |
 | 0x0A | Yes | [Authentication](Authentication-Protocol) |
 | 0x0B | Yes | [Secure connection](Secure-Protocol) |
+| 0x0C | No | Back end management |
 | 0x0E | Yes | [Notification events](Notification-Protocol) |
 | 0x10 | No | [Simple authentication](Simple-Authentication-Protocol) |
 | 0x11 | No | Siege |
