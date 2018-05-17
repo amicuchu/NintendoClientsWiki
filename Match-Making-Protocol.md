@@ -150,7 +150,7 @@
 ## Response
 | Type | Name | Description |
 | --- | --- | --- |
-| [List]&lt;Invitation&gt; | lstInvitations | Invitations |
+| [List]&lt;[Invitation]&gt; | lstInvitations | Invitations |
 
 # (10) GetInvitationsReceived
 ## Request
@@ -159,7 +159,7 @@ This method does not take any parameters.
 ## Response
 | Type | Name | Description |
 | --- | --- | --- |
-| [List]&lt;Invitation&gt; | lstInvitations | Invitations |
+| [List]&lt;[Invitation]&gt; | lstInvitations | Invitations |
 
 # (11) Participate
 ## Request
@@ -218,7 +218,7 @@ This method does not take any parameters.
 ## Response
 | Type | Name | Description |
 | --- | --- | --- |
-| [List]&lt;ParticipantDetails&gt; | lstParticipants | Participant details | 
+| [List]&lt;[ParticipantDetails]&gt; | lstParticipants | Participant details | 
 
 # (16) GetParticipantsURLs
 ## Request
@@ -401,7 +401,7 @@ This method does not take any parameters.
 | Type | Name | Description |
 | --- | --- | --- |
 | Uint32 | idGathering | Gathering id |
-| [List]&lt;GatheringStats&gt; | lstStats | Stats |
+| [List]&lt;[GatheringStats]&gt; | lstStats | Stats |
 
 ## Response
 | Type | Name | Description |
@@ -420,7 +420,7 @@ This method does not take any parameters.
 | Type | Name | Description |
 | --- | --- | --- |
 | Bool | %retval% | Result |
-| [List]&lt;GatheringStats&gt; | plstStats | Stats |
+| [List]&lt;[GatheringStats]&gt; | plstStats | Stats |
 
 # (33) DeleteGathering
 ## Request
@@ -444,7 +444,7 @@ This method does not take any parameters.
 | Type | Name | Description |
 | --- | --- | --- |
 | Bool | %retval% | Result | 
-| [List]&lt;DeletionEntry&gt; | lstDeletions | Deletions |
+| [List]&lt;[DeletionEntry]&gt; | lstDeletions | Deletions |
 
 # (35) DeleteFromDeletions
 ## Request
