@@ -569,6 +569,35 @@ This method does not return anything.
 | Uint32 | m_uiState | State |
 | [String] | m_strDescription | Description |
 
+## Gathering Stats ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint32 | m_pidParticipant |
+| Uint32 | m_uiFlags |
+| [List]&lt;Float&gt; | m_lstValues |
+
+## Invitation ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint32 | m_idGathering |
+| Uint32 | m_idGuest |
+| [String] | m_strMessage |
+
+## Participant Details ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint32 | m_idParticipant |
+| [String] | m_strName |
+| [String] | m_strMessage |
+| Uint16 | m_uiParticipants |
+
+## Deletion Entry ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint32 | m_idGathering |
+| [PID] | m_pid |
+| Uint32 | m_uiReason |
+
 [String]: NEX-Common-Types#string
 [StationURL]: NEX-Common-Types#station-url
 [List]: NEX-Common-Types#list
@@ -577,3 +606,7 @@ This method does not return anything.
 [Structure]: NEX-Common-Types#structure
 [ResultRange]: NEX-Common-Types#result-range-structure
 [Gathering]: #gathering-structure
+[GatheringStats]: #gathering-stats-structure
+[ParticipantDetails]: #participant-details-structure
+[Invitation]: #invitation-structure
+[DeletionEntry]: #deletion-entry-structure
