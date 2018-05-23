@@ -118,4 +118,4 @@ This method does not return anything.
 [Data]: NEX-Common-Types#any-data-holder
 [List]: NEX-Common-Types#list
 [PID]: NEX-Common-Types#pid
-[ResultRange]: NEX-Common-Types#resultrange
+[ResultRange]: NEX-Common-Types#result-range
