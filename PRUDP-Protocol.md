@@ -145,7 +145,7 @@ Starting with PRUDP V1, packet-specific data is encoded like this:
 | 0x80 | 16 | [Lite signature](#lite-signature) |
 
 ## V0 Format
-This format is only used by the friends server, and possibly some 3DS games.
+This format is only used by the friends server, and some 3DS games.
 
 | Offset | Size | Description |
 | --- | --- | --- |
