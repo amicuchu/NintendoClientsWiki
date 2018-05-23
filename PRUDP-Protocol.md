@@ -145,7 +145,7 @@ Starting with PRUDP V1, packet-specific data is encoded like this:
 | 0x80 | 16 | [Lite signature](#lite-signature) |
 
 ## V0 Format
-This format is only used by the friends server, and some 3DS games.
+This format is only used by the friends server and some 3DS games.
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -171,7 +171,7 @@ Packet-specific data:
 **Friends server:**
 * In DATA packets with an empty payload the packet signature is always set to 0x12345678.
 * In all other DATA packets the signature is the first 4 bytes of the HMAC of the encrypted payload, with the key being the MD5 hash of the access key.
-* In all other packets the signature is the connection signature that has been received while the connection was made.
+* In all other packets the signature is the connection signature received during connection establishment.
 
 **Games:**
 
