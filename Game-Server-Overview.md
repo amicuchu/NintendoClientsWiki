@@ -9,7 +9,9 @@ At the lowest level, NEX uses a transport protocol called [PRUDP](PRUDP-Protocol
 At the highest level, NEX provides a bunch of [services](NEX-Protocols), with each service providing several methods. To achieve this, NEX uses a simple [RMC protocol](RMC-Protocol) (remote method call). Whenever a game wants to call a method on a service, NEX builds a RMC request and sends it through the PRUDP connection.
 
 ### Authentication
-Each game server actually consists of two servers: an authentication server and a secure server. After retrieving login information elsewhere, NEX connects to the authentication server. This server only provides a single service: the [authentication service](Authentication-Protocol). The connection to the authentication server isn't secure. Anyone with enough knowledge can decrypt the packets, but that's not a problem: the only purpose of the authentication server is to set up a secure connection to the secure server.
+Each game server actually consists of two servers: an authentication server and a secure server. After retrieving login information elsewhere, NEX connects to the authentication server. This server only provides a single service: the [authentication service](Authentication-Protocol).
+
+The connection to the authentication server isn't secure. Anyone with enough knowledge can decrypt the packets, but that's not a problem: the only purpose of the authentication server is to set up a secure connection to the secure server (see [[Kerberos Authentication]]).
 
 ### Game server identification
 Each game server has a unique game server id and a sandbox access key. The game server id is used to determine the location of the game server, either by DNS lookup (Switch) or from an external server (3DS/Wii U). The access key is used to calculate the PRUDP packet checksum. It's known by both the client and the server, but never sent through the connection.
