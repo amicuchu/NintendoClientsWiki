@@ -2,6 +2,147 @@ PRUDP is a transport layer protocol on top of UDP whose aim is to reliably send 
 
 On the Nintendo Switch, NEX can be configured to use TCP or WebSockets instead of UDP. In that case, the '[Lite](#lite-format)'-encoding is used.
 
+* [V0 Format](#v0-format)
+* [V1 Format](#v1-format)
+* [Lite Format](#lite-format)
+* [Protocol Description](#protocol-description)
+
+## V0 Format
+This format is only used by the friends server and some 3DS games.
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 1 | [Source](#virtual-ports) |
+| 0x1 | 1 | [Destination](#virtual-ports) |
+| 0x2 | 2 | [Type and flags](#type-and-flags) |
+| 0x4 | 1 | [Session id](#session-id) |
+| 0x5 | 4 | [Packet signature](#packet-signature) |
+| 0x9 | 2 | [Sequence id](#sequence-id) |
+| 0xB | | Packet-specific data |
+| | | Payload |
+| | 1 | Checksum |
+
+Packet-specific data:
+
+| Only present if | Size | Description |
+| --- | --- | --- |
+| Type is SYN or CONNECT | 4 | [Connection signature](#connection-signature) |
+| Type is DATA | 1 | [Fragment id](#fragment-id) |
+| Flags & FLAG_HAS_SIZE | 2 | Payload size |
+
+### Packet signature
+**Friends server:**
+* In DATA packets with an empty payload the packet signature is always set to 0x12345678.
+* In all other DATA packets the signature is the first 4 bytes of the HMAC of the encrypted payload, with the key being the MD5 hash of the access key.
+* In all other packets the signature is the connection signature received during connection establishment.
+
+**Games:**
+
+In DATA and DISCONNECT packets the packet signature is the first 4 bytes of the HMAC of the following data, with the key being the MD5 hash of the access key:
+
+| Size | Description |
+| --- | --- |
+| 0 or 16 | Secure key (or nothing in an authentication connection) |
+| 2 | [Sequence id](#sequence-id) |
+| 1 | [Fragment id](#fragment-id) |
+| | Encrypted payload |
+
+In all other packets the signature is the connection signature that has been received while the connection was made.
+
+### Checksum
+The checksum is calculated over the whole packet (both header and encrypted payload), and uses the following algorithm (the example code is written in python):
+```python
+def calc_checksum(checksum, data):
+	#Little endian!
+	words = struct.unpack_from("<%iI" %(len(data) // 4), data)
+	temp = sum(words) & 0xFFFFFFFF #32-bit
+	
+	#Add the sum of the remaining bytes to the checksum
+	checksum += sum(data[len(data) & ~3:])
+	
+	#And the sum of the bytes of the temporary checksum
+	checksum += sum(struct.pack("I", temp))
+	
+	return checksum & 0xFF #8-bit checksum
+	
+checksum = calc_checksum(sum(ACCESS_KEY), packet_data)
+```
+
+## V1 Format
+This format is used by all Wii U games and apps except for friends services, and possibly some 3DS games.
+
+| Size | Description |
+| --- | --- |
+| 2 | Magic number: 0xEA 0xD0 |
+| 12 | Packet header |
+| 16 | [Packet signature](#packet-signature-1) |
+| | Packet-specific data |
+| | Payload |
+
+### Packet header
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 1 | PRUDP version (always 1) |
+| 0x1 | 1 | Length of packet-specific data |
+| 0x2 | 2 | Payload size |
+| 0x4 | 1 | [Source](#virtual-ports) |
+| 0x5 | 1 | [Destination](#virtual-ports) |
+| 0x6 | 2 | [Type and flags](#type-and-flags) |
+| 0x8 | 1 | [Session id](#session-id) |
+| 0x9 | 1 | [Multi-ack](#aggregate-acknowledgement) version |
+| 0xA | 2 | [Sequence id](#sequence-id) |
+
+### Packet signature
+The packet signature is the HMAC of the following data, with the key being the MD5 hash of the access key:
+
+| Size | Description |
+| --- | --- |
+| 8 | Bytes 0x4 - 0xC of the packet header |
+| 0, 16 or 32 | The secure key (not present in a connection to the authentication server) |
+| 4 | Sum of all access key bytes (little endian) |
+| 16 | Connection signature, or 16 zero-bytes if it has not yet been received |
+| | Packet-specific data |
+| | Payload |
+
+### Packet-specific data
+See [optional data](#optional-data).
+
+| Option id | Only present if |
+| --- | --- |
+| 0 | Type is SYN or CONNECT |
+| 1 | Type is SYN or CONNECT |
+| 2 | Type is DATA |
+| 3 | Type is CONNECT |
+| 4 | Type is SYN or CONNECT |
+
+## Lite Format
+This format is used by Nintendo Switch games.
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 1 | Magic number: 0x80 |
+| 0x1 | 1 | Length of packet-specific data |
+| 0x2 | 2 | Payload size |
+| 0x4 | 1 | 0xXY (X = source stream type, Y = destination stream type) |
+| 0x5 | 1 | [Source port](#virtual-ports) |
+| 0x6 | 1 | [Destination port](#virtual-ports) |
+| 0x7 | 1 | [Fragment id](#fragment-id) |
+| 0x8 | 2 | [Type and flags](#type-and-flags) |
+| 0xA | 2 | [Sequence id](#sequence-id) |
+| 0xC | | Packet-specific data |
+| | Payload |
+
+Packet-specific data (see [optional data](#optional-data)):
+
+| Option id | Only present if |
+| --- | --- |
+| 0 | Type is SYN or CONNECT |
+| 1 | Type is SYN and Flags & FLAG_ACK |
+| 0x80 | Type is CONNECT and not Flags & FLAG_ACK |
+
+## Protocol Description
+This section explains the concepts used by PRUDP and provides a more detailed description of the fields.
+
 ### Basic operation
 When a client connects to a server, it sends a SYN packet. As soon as this packet is acknowledged by the server, it sends a CONNECT packet. When this packet has been acknowledged too, a connection has been made and the client and server can start sending DATA packets. If the client wants to close the connection, it sends a DISCONNECT packet. This packet is acknowledged three times by the server, presumably to ensure the client receives the ACK.
 
@@ -143,139 +284,6 @@ Starting with PRUDP V1, packet-specific data is encoded like this:
 | 3 | 2 | Unknown (random integer) |
 | 4 | 1 | Unknown (always 0) |
 | 0x80 | 16 | [Lite signature](#lite-signature) |
-
-## V0 Format
-This format is only used by the friends server and some 3DS games.
-
-| Offset | Size | Description |
-| --- | --- | --- |
-| 0x0 | 1 | [Source](#virtual-ports) |
-| 0x1 | 1 | [Destination](#virtual-ports) |
-| 0x2 | 2 | [Type and flags](#type-and-flags) |
-| 0x4 | 1 | [Session id](#session-id) |
-| 0x5 | 4 | [Packet signature](#packet-signature) |
-| 0x9 | 2 | [Sequence id](#sequence-id) |
-| 0xB | | Packet-specific data |
-| | | Payload |
-| | 1 | Checksum |
-
-Packet-specific data:
-
-| Only present if | Size | Description |
-| --- | --- | --- |
-| Type is SYN or CONNECT | 4 | [Connection signature](#connection-signature) |
-| Type is DATA | 1 | [Fragment id](#fragment-id) |
-| Flags & FLAG_HAS_SIZE | 2 | Payload size |
-
-### Packet signature
-**Friends server:**
-* In DATA packets with an empty payload the packet signature is always set to 0x12345678.
-* In all other DATA packets the signature is the first 4 bytes of the HMAC of the encrypted payload, with the key being the MD5 hash of the access key.
-* In all other packets the signature is the connection signature received during connection establishment.
-
-**Games:**
-
-In DATA and DISCONNECT packets the packet signature is the first 4 bytes of the HMAC of the following data, with the key being the MD5 hash of the access key:
-
-| Size | Description |
-| --- | --- |
-| 0 or 16 | Secure key (or nothing in an authentication connection) |
-| 2 | [Sequence id](#sequence-id) |
-| 1 | [Fragment id](#fragment-id) |
-| | Encrypted payload |
-
-In all other packets the signature is the connection signature that has been received while the connection was made.
-
-### Checksum
-The checksum is calculated over the whole packet (both header and encrypted payload), and uses the following algorithm (the example code is written in python):
-```python
-def calc_checksum(checksum, data):
-	#Little endian!
-	words = struct.unpack_from("<%iI" %(len(data) // 4), data)
-	temp = sum(words) & 0xFFFFFFFF #32-bit
-	
-	#Add the sum of the remaining bytes to the checksum
-	checksum += sum(data[len(data) & ~3:])
-	
-	#And the sum of the bytes of the temporary checksum
-	checksum += sum(struct.pack("I", temp))
-	
-	return checksum & 0xFF #8-bit checksum
-	
-checksum = calc_checksum(sum(ACCESS_KEY), packet_data)
-```
-
-## V1 Format
-This format is used by all Wii U games and apps except for friends services, and possibly some 3DS games.
-
-| Size | Description |
-| --- | --- |
-| 2 | Magic number: 0xEA 0xD0 |
-| 12 | Packet header |
-| 16 | [Packet signature](#packet-signature-1) |
-| | Packet-specific data |
-| | Payload |
-
-### Packet header
-| Offset | Size | Description |
-| --- | --- | --- |
-| 0x0 | 1 | PRUDP version (always 1) |
-| 0x1 | 1 | Length of packet-specific data |
-| 0x2 | 2 | Payload size |
-| 0x4 | 1 | [Source](#virtual-ports) |
-| 0x5 | 1 | [Destination](#virtual-ports) |
-| 0x6 | 2 | [Type and flags](#type-and-flags) |
-| 0x8 | 1 | [Session id](#session-id) |
-| 0x9 | 1 | [Multi-ack](#aggregate-acknowledgement) version |
-| 0xA | 2 | [Sequence id](#sequence-id) |
-
-### Packet signature
-The packet signature is the HMAC of the following data, with the key being the MD5 hash of the access key:
-
-| Size | Description |
-| --- | --- |
-| 8 | Bytes 0x4 - 0xC of the packet header |
-| 0, 16 or 32 | The secure key (not present in a connection to the authentication server) |
-| 4 | Sum of all access key bytes (little endian) |
-| 16 | Connection signature, or 16 zero-bytes if it has not yet been received |
-| | Packet-specific data |
-| | Payload |
-
-### Packet-specific data
-See [optional data](#optional-data).
-
-| Option id | Only present if |
-| --- | --- |
-| 0 | Type is SYN or CONNECT |
-| 1 | Type is SYN or CONNECT |
-| 2 | Type is DATA |
-| 3 | Type is CONNECT |
-| 4 | Type is SYN or CONNECT |
-
-## Lite Format
-This format is used by Nintendo Switch games.
-
-| Offset | Size | Description |
-| --- | --- | --- |
-| 0x0 | 1 | Magic number: 0x80 |
-| 0x1 | 1 | Length of packet-specific data |
-| 0x2 | 2 | Payload size |
-| 0x4 | 1 | 0xXY (X = source stream type, Y = destination stream type) |
-| 0x5 | 1 | [Source port](#virtual-ports) |
-| 0x6 | 1 | [Destination port](#virtual-ports) |
-| 0x7 | 1 | [Fragment id](#fragment-id) |
-| 0x8 | 2 | [Type and flags](#type-and-flags) |
-| 0xA | 2 | [Sequence id](#sequence-id) |
-| 0xC | | Packet-specific data |
-| | Payload |
-
-Packet-specific data (see [optional data](#optional-data)):
-
-| Option id | Only present if |
-| --- | --- |
-| 0 | Type is SYN or CONNECT |
-| 1 | Type is SYN and Flags & FLAG_ACK |
-| 0x80 | Type is CONNECT and not Flags & FLAG_ACK |
 
 [Buffer]: NEX-Common-Types#buffer
 [PID]: NEX-Common-Types#pid
