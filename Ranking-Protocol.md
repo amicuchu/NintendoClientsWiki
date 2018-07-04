@@ -221,7 +221,7 @@ This method does not return anything.
 ## RankingRankData ([Structure])
 | Type | Name | Description |
 | --- | --- | --- |
-| [PID] | principalId | User pid |
+| [PID] | principalId | User id |
 | Uint64 | uniqueId | |
 | Uint32 | order | Rank |
 | Uint32 | category | Category |
@@ -236,6 +236,18 @@ This method does not return anything.
 | [List]&lt;[RankingRankData](#rankingrankdata)&gt; | rankDataList | Rankings |
 | Uint32 | totalCount | Total number of ranking entries on the server |
 | [DateTime] | sinceTime | |
+
+## RankingScoreData ([Structure])
+| Type | Name | Description |
+| --- | --- | --- |
+| [PID] | principalId | User id |
+| Uint64 | uniqueId | |
+| Uint32 | order | Rank |
+| Uint32 | category | Category |
+| Uint32 | score | Score |
+| [List]&lt;byte&gt; | groups | Filters |
+| Uint64 | param | Additional info |
+| [Buffer] | commonData | Additional data |
 
 ## Ranking Mode
 | Value | Description |
