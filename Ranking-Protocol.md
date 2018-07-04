@@ -99,7 +99,7 @@ This method does not return anything.
 ## Request
 | Type | Name | Description |
 | --- | --- | --- |
-| Uint8 | rankingMode | [Ranking mode](#rankingmode) |
+| Uint8 | rankingMode | [Ranking mode](#ranking-mode) |
 | Uint32 | category | Category (game-specific) |
 | [RankingOrderParam](#rankingorderparam-structure) | orderParam | A bunch of parameters |
 | Uint64 | uniqueId | |
@@ -152,7 +152,7 @@ This method does not return anything.
 | Type | Name | Description |
 | --- | --- | --- |
 | [List]&lt;[PID]&gt; | principalIdList | User ids |
-| Uint8 | rankingMode | [Ranking mode](#rankingmode) |
+| Uint8 | rankingMode | [Ranking mode](#ranking-mode) |
 | Uint32 | category | |
 | [RankingOrderParam](#rankingorderparam-structure) | orderParam | |
 | Uint64 | uniqueId | |
@@ -167,7 +167,7 @@ This method does not return anything.
 | Type | Name | Description |
 | --- | --- | --- |
 | [List]&lt;Uint64&gt; | nexUniqueIdList | |
-| Uint8 | rankingMode | [Ranking mode](#rankingmode) |
+| Uint8 | rankingMode | [Ranking mode](#ranking-mode) |
 | Uint32 | category | |
 | [RankingOrderParam](#rankingorderparam-structure) | orderParam | |
 | Uint64 | uniqueId | |
@@ -187,7 +187,7 @@ This method does not return anything.
 ## Response
 | Type | Name | Description |
 | --- | --- | --- |
-| [RankingCachedResult](#rankingcachedresult-structure) | pResult | Result |
+| [RankingCachedResult](#rankingcachedresult-inherits-rankingresult) | pResult | Result |
 
 # (15) GetCachedTopXRankings
 ## Request
@@ -199,7 +199,7 @@ This method does not return anything.
 ## Response
 | Type | Name | Description |
 | --- | --- | --- |
-| [List]&lt;[RankingCachedResult](#rankingcachedresult-structure)&gt; | pResults | |
+| [List]&lt;[RankingCachedResult](#rankingcachedresult-inherits-rankingresult)&gt; | pResults | |
 
 # Types
 ## RankingOrderParam ([Structure])
@@ -237,6 +237,18 @@ This method does not return anything.
 | Uint32 | totalCount | Total number of ranking entries on the server |
 | [DateTime] | sinceTime | |
 
+## RankingCachedResult (Inherits [RankingResult](#rankingresult))
+| Type | Name | Description |
+| --- | --- | --- |
+| [DateTime] | createdTime | |
+| [DateTime] | expiredTime | |
+| Uint8 | maxLength | |
+
+## RankingStats ([Structure])
+| Type | Name | Description |
+| --- | --- | --- |
+| [List]&lt;Double&gt; | statsList | Stats |
+
 ## RankingScoreData ([Structure])
 | Type | Name | Description |
 | --- | --- | --- |
@@ -248,6 +260,13 @@ This method does not return anything.
 | [List]&lt;byte&gt; | groups | Filters |
 | Uint64 | param | Additional info |
 | [Buffer] | commonData | Additional data |
+
+## RankingChangeAttributesParam ([Structure])
+| Type | Name | Description |
+| --- | --- | --- |
+| Uint8 | modificationFlag | |
+| [List]&lt;Uint8&gt; | groups | |
+| Uint64 | param | |
 
 ## Ranking Mode
 | Value | Description |
