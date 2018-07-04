@@ -237,7 +237,7 @@ This method does not return anything.
 | Uint32 | totalCount | Total number of ranking entries on the server |
 | [DateTime] | sinceTime | |
 
-## RankingCachedResult (Inherits [RankingResult](#rankingresult))
+## RankingCachedResult (Inherits [RankingResult](#rankingresult-structure))
 | Type | Name | Description |
 | --- | --- | --- |
 | [DateTime] | createdTime | |
