@@ -22,7 +22,7 @@
 ## Request
 | Type | Name | Description |
 | --- | --- | --- |
-| [RankingScoreData](#rankingscoredata) | scoreData | Score data |
+| [RankingScoreData](#rankingscoredata-structure) | scoreData | Score data |
 | Uint64 | uniqueId | |
 
 ## Response
@@ -82,7 +82,7 @@ This method does not return anything.
 | Type | Name | Description |
 | --- | --- | --- |
 | Uint32 | category | Category |
-| [RankingChangeAttributesParam](#rankingchangeattributesparam) | changeParam | |
+| [RankingChangeAttributesParam](#rankingchangeattributesparam-structure) | changeParam | |
 | Uint64 | uniqueId | |
 
 ## Response
@@ -92,7 +92,7 @@ This method does not return anything.
 ## Request
 | Type | Name | Description |
 | --- | --- | --- |
-| [RankingChangeAttributesParam](#rankingchangeattributesparam) | changeParam | |
+| [RankingChangeAttributesParam](#rankingchangeattributesparam-structure) | changeParam | |
 | Uint64 | uniqueId | |
 
 # (9) GetRanking
@@ -101,21 +101,21 @@ This method does not return anything.
 | --- | --- | --- |
 | Uint8 | rankingMode | [Ranking mode](#rankingmode) |
 | Uint32 | category | Category (game-specific) |
-| [RankingOrderParam](#rankingorderparam) | orderParam | A bunch of parameters |
+| [RankingOrderParam](#rankingorderparam-structure) | orderParam | A bunch of parameters |
 | Uint64 | uniqueId | |
 | [PID] | principalId | |
 
 ## Response
 | Type | Name | Description |
 | --- | --- | --- |
-| [RankingResult](#rankingresult) | pResult | The result |
+| [RankingResult](#rankingresult-structure) | pResult | The result |
 
 # (10) GetApproxOrder
 ## Request
 | Type | Name | Description |
 | --- | --- | --- |
 | Uint32 | category | |
-| [RankingOrderParam](#rankingorderparam) | orderParam | |
+| [RankingOrderParam](#rankingorderparam-structure) | orderParam | |
 | Uint32 | score | |
 | Uint64 | uniqueId | |
 | Uint32 | principalId | |
@@ -130,7 +130,7 @@ This method does not return anything.
 | Type | Name | Description |
 | --- | --- | --- |
 | Uint32 | category | |
-| [RankingOrderParam](#rankingorderparam) | orderParam | |
+| [RankingOrderParam](#rankingorderparam-structure) | orderParam | |
 | Uint32 | flags | Specifies the kind of stats returned |
 
 ### Flags
@@ -145,7 +145,7 @@ This method does not return anything.
 ## Response
 | Type | Name | Description |
 | --- | --- | --- |
-| [RankingStats](#rankingstats) | pStats | |
+| [RankingStats](#rankingstats-structure) | pStats | |
 
 # (12) GetRankingByPIDList
 ## Request
@@ -154,13 +154,13 @@ This method does not return anything.
 | [List]&lt;[PID]&gt; | principalIdList | User ids |
 | Uint8 | rankingMode | [Ranking mode](#rankingmode) |
 | Uint32 | category | |
-| [RankingOrderParam](#rankingorderparam) | orderParam | |
+| [RankingOrderParam](#rankingorderparam-structure) | orderParam | |
 | Uint64 | uniqueId | |
 
 ## Response
 | Type | Name | Description |
 | --- | --- | --- |
-| [RankingResult](#rankingresult) | pResult | Result |
+| [RankingResult](#rankingresult-structure) | pResult | Result |
 
 # (13) GetRankingByUniqueIdList
 ## Request
@@ -169,37 +169,37 @@ This method does not return anything.
 | [List]&lt;Uint64&gt; | nexUniqueIdList | |
 | Uint8 | rankingMode | [Ranking mode](#rankingmode) |
 | Uint32 | category | |
-| [RankingOrderParam](#rankingorderparam) | orderParam | |
+| [RankingOrderParam](#rankingorderparam-structure) | orderParam | |
 | Uint64 | uniqueId | |
 
 ## Response
 | Type | Name | Description |
 | --- | --- | --- |
-| [RankingResult](#rankingresult) | pResult | Result |
+| [RankingResult](#rankingresult-structure) | pResult | Result |
 
 # (14) GetCachedTopXRanking
 ## Request
 | Type | Name | Description |
 | --- | --- | --- |
 | Uint32 | category | |
-| [RankingOrderParam](#rankingorderparam) | orderParam | |
+| [RankingOrderParam](#rankingorderparam-structure) | orderParam | |
 
 ## Response
 | Type | Name | Description |
 | --- | --- | --- |
-| [RankingCachedResult](#rankingcachedresult) | pResult | Result |
+| [RankingCachedResult](#rankingcachedresult-structure) | pResult | Result |
 
 # (15) GetCachedTopXRankings
 ## Request
 | Type | Name | Description |
 | --- | --- | --- |
 | [List]&lt;Uint32&gt; | categories | |
-| [List]&lt;[RankingOrderParam](#rankingorderparam)&gt; | orderParams | |
+| [List]&lt;[RankingOrderParam](#rankingorderparam-structure)&gt; | orderParams | |
 
 ## Response
 | Type | Name | Description |
 | --- | --- | --- |
-| [List]&lt;[RankingCachedResult](#rankingcachedresult)&gt; | pResults | |
+| [List]&lt;[RankingCachedResult](#rankingcachedresult-structure)&gt; | pResults | |
 
 # Types
 ## RankingOrderParam ([Structure])
@@ -233,7 +233,7 @@ This method does not return anything.
 ## RankingResult ([Structure])
 | Type | Name | Description |
 | --- | --- | --- |
-| [List]&lt;[RankingRankData](#rankingrankdata)&gt; | rankDataList | Rankings |
+| [List]&lt;[RankingRankData](#rankingrankdata-structure)&gt; | rankDataList | Rankings |
 | Uint32 | totalCount | Total number of ranking entries on the server |
 | [DateTime] | sinceTime | |
 
