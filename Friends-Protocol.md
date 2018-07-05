@@ -195,5 +195,6 @@ This protocol is implemented on Nintendo game servers, but no game seems to have
 | Uint32 | m_uiDetails |
 | Uint8 | m_byStatus |
 
+[List]: NEX-Common-Types#list
 [String]: NEX-Common-Types#string
 [ResultRange]: NEX-Common-Types#resultrange
