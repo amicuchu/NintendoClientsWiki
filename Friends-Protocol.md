@@ -197,4 +197,4 @@ This protocol is implemented on Nintendo game servers, but no game seems to have
 
 [List]: NEX-Common-Types#list
 [String]: NEX-Common-Types#string
-[ResultRange]: NEX-Common-Types#resultrange-structure
+[ResultRange]: NEX-Common-Types#result-range-structure
