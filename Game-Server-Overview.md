@@ -28,3 +28,5 @@ Login information is requested from the [[Account Server]] (/provider/nex_token/
 The location of game servers is found by DNS lookup: g`<game server id>`-lp1.s.n.srv.nintendo.net. For example, Super Mario Odyssey's game server is g255ba201-lp1.s.n.srv.nintendo.net.
 
 Furthermore, NEX now supports UDP, TCP and WebSockets as underlying protocol. Switch games are configured to use WebSockets. Since TCP and WebSockets are already reliabile themselves, a new packet encoding is used: [PRUDP Lite](PRUDP-Protocol#lite-format). Also, since the connection is SSL-encrypted anyway, packets are no longer RC4-encrypted.
+
+Most Switch servers have disabled the guest account. Logging in with a normal account is quite complicated. A token must be provided to [LoginEx](Authentication-Protocol#2-loginex), which can only be retrieved from the BaaS server, but the BaaS server can only be accessed after going through dauth (device authorization) and aauth (application authorization). SciresM has explained this in more detail [here](https://www.reddit.com/r/SwitchHacks/comments/8rxg26).
