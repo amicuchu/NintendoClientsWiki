@@ -84,7 +84,7 @@ This method takes no parameters and doesn't return anything.
 | --- | --- | --- |
 | [List]&lt;[StationURL]&gt; | vecMyURLs | Station urls |
 
-## Respone
+## Response
 This method doesn't return anything.
 
 # (7) ReplaceURL
