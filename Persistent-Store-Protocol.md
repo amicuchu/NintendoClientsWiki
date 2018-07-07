@@ -100,6 +100,7 @@ This method does not return anything.
 | --- | --- |
 | [List]&lt;[Data]&gt; | lstData |
 
+[Buffer]: NEX-Common-Types#buffer
 [Data]: NEX-Common-Types#any-data-holder
 [List]: NEX-Common-Types#list
 [String]: NEX-Common-Types#string
