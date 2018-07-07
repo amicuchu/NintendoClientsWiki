@@ -210,7 +210,7 @@ This method does not take any parameters.
 | Bool | %retval% | Result | 
 
 # (15) GetDetailedParticipants
-## Requests
+## Request
 | Type | Name | Description |
 | --- | --- | --- |
 | Uint32 | idGathering | Gathering id |
