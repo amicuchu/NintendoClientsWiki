@@ -136,7 +136,7 @@
 | [List]&lt;[PID]&gt; | lstPrincipals | User pids |
 | [String] | strMessage | Message |
 
-## Reponse
+## Response
 | Type | Name | Description |
 | --- | --- | --- |
 | Bool | %retval% | Result |
