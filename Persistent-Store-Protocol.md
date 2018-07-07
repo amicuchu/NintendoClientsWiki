@@ -60,7 +60,7 @@ This protocol is implemented on Nintendo game servers, but no game seems to have
 ## Response
 | Type | Name |
 | --- | --- |
-| [Buffer] bufData |
+| [Buffer] | bufData |
 | Bool | bResult |
 
 # (5) InsertCustomItem
