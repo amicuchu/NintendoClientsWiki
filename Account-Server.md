@@ -1,3 +1,6 @@
+[[Server List]] > Account Server (Wii U)
+---
+
 ## Overview
 The account server responds to HTTP requests with XML body.
 
