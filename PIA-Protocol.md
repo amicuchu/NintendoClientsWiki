@@ -26,7 +26,7 @@ This data may be encrypted.
 | 0x2 | 2 | Payload size |
 | 0x4 | 4 | Destination |
 | 0x8 | 4 | Connection id |
-| 0xC | 2 | Service id |
-| 0xE | 2 | Method id |
+| 0xC | 2 | Protocol id |
+| 0xE | 2 | Message id |
 | 0x10 | 4 | Unknown (always 0?) |
 | 0x14 | | Payload |
