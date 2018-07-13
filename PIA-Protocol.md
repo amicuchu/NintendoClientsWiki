@@ -19,6 +19,7 @@ These packets are sent directly from one console to another, with no server in b
 
 ## Content
 This data may be encrypted.
+
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 2 | Unknown |
