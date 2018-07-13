@@ -1,7 +1,6 @@
 [[PIA Protocols]] > Mesh Protocol (0x200)
 ---
 
-In Mario Kart 8, this protocol is actually called "SessionProtocol".   
 Message id is part of the packet payload. The message id in the packet header is always 0 in this protocol.
 
 | Message ID | Description |
