@@ -5,7 +5,6 @@ These packets are sent directly from one console to another, with no server in b
 | --- | --- | --- |
 | 0x0 | 12 | [Header](#header) |
 | 0xC | | [Content](#content) |
-| | 16 | HMAC checksum |
 
 ## Header
 | Offset | Size | Description |
@@ -30,3 +29,4 @@ This data may be encrypted.
 | 0xE | 2 | Message id |
 | 0x10 | 4 | Unknown (always 0?) |
 | 0x14 | | Payload |
+| | 16 | HMAC checksum |
