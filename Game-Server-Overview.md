@@ -1,7 +1,9 @@
 ## General
-Nintendo offers a networking library called NEX. This library does everything that's needed to connect and talk to game servers. It's not actually written by Nintendo itself. Rather, it's a version of [Quazal Rendez-Vous](http://www.quazal.com/rendez-vous.htm) written specifically for Nintendo. Thus, some things like the [[PRUDP Protocol]] may be seen in other games that use Quazal.
+Nintendo offers two networking libraries to developers: NEX and PIA.
 
-NEX was first used on 3DS, later on Wii U, and now it's being used on Switch. While the underlying library is the same, it has received various (big) updates throughout its lifetime.
+NEX provides functions to connect and talk to game servers. It's not actually written by Nintendo itself. Rather, it's a version of [Quazal Rendez-Vous](http://www.quazal.com/rendez-vous.htm) written specifically for Nintendo. Thus, some things like the [[PRUDP Protocol]] may be seen in other games that use Quazal.
+
+PIA sets up and maintains peer-to-peer connections, and allows games to send both reliable and unreliable packets to other consoles. This library cannot be used without NEX, since NEX must be used to perform match making and NAT traversal.
 
 ### The protocols used by NEX
 At the lowest level, NEX uses a transport protocol called [PRUDP](PRUDP-Protocol). The main purpose of this protocol is to reliably send UDP packets, but it also offers encryption and compression algorithms. Nintendo doesn't use compression however.
