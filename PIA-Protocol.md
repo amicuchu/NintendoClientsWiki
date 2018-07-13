@@ -17,7 +17,7 @@ These packets are sent directly from one console to another, with no server in b
 | 0xA | 2 | RTT related |
 
 ## Content
-This data may be encrypted.
+This data may be encrypted (probably AES).
 
 | Offset | Size | Description |
 | --- | --- | --- |
