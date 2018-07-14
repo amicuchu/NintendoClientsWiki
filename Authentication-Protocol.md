@@ -80,14 +80,14 @@ Same as response for the [Login](#1-login) method.
 # (4) GetPID
 This is the reverse of the [GetName](#5-getname) method. It looks up the pid that belongs to a given username. The username is not the same as the nintendo network id. On all normal accounts the username is the same as the user pid.
 
-All game server have a bunch of special users. The password of the guest account is always "MMQea3n!fsik". The other passwords are unknown.
+All game servers have a bunch of special users. Normally, the password of the guest account is "MMQea3n!fsik", but Nintendo seems to have changed this password on all Wii U servers (except for the friends server), and the guest account is disabled on most Switch servers with error Core::AccessDenied.
 
 #### 3DS / Wii U:
 | PID | Name |
 | --- | --- |
 | 1 | Quazal Authentication |
 | 2 | Quazal Rendez-Vous |
-| 100 | guest<br>guest_Ah0KV4mDv9ChYESNCBctQGgKl9kPbnax |
+| 100 | guest |
 | 101 | Administrator |
 | 102 | eval |
 | 103 | SandboxProbe |
