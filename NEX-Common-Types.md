@@ -112,7 +112,7 @@ NEX v3.5.0 introduced a versioning system to structures. Before v3.5.0 their con
 | Uint32 | Content length |
 | | Content |
 
-A structure may "inherit" another structure. The "child" is stored right after the "parent", and gets its own version header.
+A structure may inherit another structure. The child is stored right after the parent, and gets its own version header.
 
 # Any Data Holder
 NEX has a class that can hold any object derived from nn::nex::Data. When these are transmitted as part of request or response data, some meta data is sent along with them, so the other side can properly identify and decode the object.
