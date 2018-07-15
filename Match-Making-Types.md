@@ -15,7 +15,7 @@ Since the match making methods are split across several protocols, this page doc
 | [String] | m_strDescription | Description |
 
 ## MatchmakeSession ([Structure])
-| This structure inherits from [Gathering](#gathering) |
+| This structure inherits from [Gathering](#gathering-structure) |
 | --- |
 
 | Type | Name |
