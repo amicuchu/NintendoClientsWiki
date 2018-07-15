@@ -13,4 +13,4 @@
 ## Response
 This method does not return anything.
 
-[Data]: NEX-Common-Types#data
+[Data]: NEX-Common-Types#any-data-holder
