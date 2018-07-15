@@ -27,7 +27,7 @@ Since the match making methods are split across several protocols, this page doc
 | [Buffer] | m_ApplicationBuffer | |
 | Uint32 | m_ParticipationCount | |
 | Uint8 | m_ProgressScore | NEX v3.5.0 and later |
-| [Buffer] | m_SessionKey | Wii U and Switch |
+| [Buffer] | m_SessionKey | NEX v3.0.0 and later |
 | Uint32 | m_Option0 | NEX v3.5.0 and later |
 
 ## Gathering Stats ([Structure])
