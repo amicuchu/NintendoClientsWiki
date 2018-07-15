@@ -14,6 +14,22 @@ Since the match making methods are split across several protocols, this page doc
 | Uint32 | m_uiState | State |
 | [String] | m_strDescription | Description |
 
+## MatchmakeSession ([Structure])
+| This structure inherits from [Gathering](#gathering) |
+| --- |
+
+| Type | Name |
+| --- | --- |
+| Uint32 | m_GameMode |
+| [List]&lt;Uint32&gt; | m_Attribs |
+| Bool | m_OpenParticipation |
+| Uint32 | m_MatchmakeSystemType |
+| [Buffer] | m_ApplicationBuffer |
+| Uint32 | m_ParticipationCount |
+| Uint8 | m_ProgressScore |
+| [Buffer] | m_SessionKey |
+| Uint32 | m_Option0 |
+
 ## Gathering Stats ([Structure])
 | Type | Name |
 | --- | --- |
@@ -47,3 +63,4 @@ Since the match making methods are split across several protocols, this page doc
 [List]: NEX-Common-Types#list
 [PID]: NEX-Common-Types#pid
 [Structure]: NEX-Common-Types#structure
+[Buffer]: NEX-Common-Types#buffer
