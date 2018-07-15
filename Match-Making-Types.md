@@ -30,6 +30,12 @@ Since the match making methods are split across several protocols, this page doc
 | [Buffer] | m_SessionKey | NEX v3.0.0 and later |
 | Uint32 | m_Option0 | NEX v3.5.0 and later |
 
+## GatheringURLs ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint32 | m_gid |
+| [List]&lt;[StationURL]&gt; | m_lstStationURLs |
+
 ## Gathering Stats ([Structure])
 | Type | Name |
 | --- | --- |
@@ -60,6 +66,7 @@ Since the match making methods are split across several protocols, this page doc
 | Uint32 | m_uiReason |
 
 [String]: NEX-Common-Types#string
+[StationURL]: NEX-Common-Types#station-url
 [List]: NEX-Common-Types#list
 [PID]: NEX-Common-Types#pid
 [Structure]: NEX-Common-Types#structure
