@@ -65,4 +65,4 @@
 [Data]: NEX-Common-Types#any-data-holder
 [String]: NEX-Common-Types#string
 [Structure]: NEX-Common-Types#structure
-[Gathering]: Match-Making-Types#gathering
+[Gathering]: Match-Making-Types#gathering-structure
