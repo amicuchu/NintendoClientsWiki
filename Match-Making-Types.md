@@ -18,17 +18,17 @@ Since the match making methods are split across several protocols, this page doc
 | This structure inherits from [Gathering](#gathering-structure) |
 | --- |
 
-| Type | Name |
-| --- | --- |
-| Uint32 | m_GameMode |
-| [List]&lt;Uint32&gt; | m_Attribs |
-| Bool | m_OpenParticipation |
-| Uint32 | m_MatchmakeSystemType |
-| [Buffer] | m_ApplicationBuffer |
-| Uint32 | m_ParticipationCount |
-| Uint8 | m_ProgressScore |
-| [Buffer] | m_SessionKey |
-| Uint32 | m_Option0 |
+| Type | Name | Only present on |
+| --- | --- | --- |
+| Uint32 | m_GameMode | |
+| [List]&lt;Uint32&gt; | m_Attribs | |
+| Bool | m_OpenParticipation | |
+| Uint32 | m_MatchmakeSystemType | |
+| [Buffer] | m_ApplicationBuffer | |
+| Uint32 | m_ParticipationCount | |
+| Uint8 | m_ProgressScore | NEX v3.5.0 and later |
+| [Buffer] | m_SessionKey | Wii U and Switch |
+| Uint32 | m_Option0 | NEX v3.5.0 and later |
 
 ## Gathering Stats ([Structure])
 | Type | Name |
