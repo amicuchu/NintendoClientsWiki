@@ -41,11 +41,11 @@ This method does not return anything.
 
 # (4) ReportNATTraversalResult
 ## Request
-| Type | Name |
-| --- | --- |
-| Uint32 | cid |
-| Bool | result |
-| Uint32 | rtt |
+| Type | Name | Only present on |
+| --- | --- | --- |
+| Uint32 | cid | |
+| Bool | result | |
+| Uint32 | rtt | Wii U and Switch |
 
 ## Response
 This method does not return anything.
