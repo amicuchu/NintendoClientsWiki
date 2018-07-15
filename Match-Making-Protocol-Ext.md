@@ -54,7 +54,7 @@
 ## Response
 | Type | Name |
 | --- | --- |
-| [List]&lt;[GatheringURL]&gt; | lstGatheringURLs |
+| [List]&lt;[GatheringURLs]&gt; | lstGatheringURLs |
 
 # (5) GetGatheringRelations
 ## Request
@@ -83,4 +83,4 @@ This method does not return anything.
 [String]: NEX-Common-Types#string
 [Structure]: NEX-Common-Types#structure
 [ParticipantDetails]: Match-Making-Types#participant-details-structure
-[GatheringURL]: Match-Making-Types#gatheringurl-structure
+[GatheringURLs]: Match-Making-Types#gatheringurls-structure
