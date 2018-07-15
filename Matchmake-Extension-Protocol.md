@@ -54,29 +54,15 @@
 ## Request
 | Type | Name | Description |
 | --- | --- | --- |
-| [Data]&lt;[Gathering](#gathering-structure)&gt; | anyGathering | Gathering |
+| [Data]&lt;[Gathering]&gt; | anyGathering | Gathering |
 | [String] | strMessage | Message |
 
 ## Response
 | Type | Name | Description |
 | --- | --- | --- |
-| [Data]&lt;[Gathering](#gathering-structure)&gt; | joinedGathering | Joined gathering |
-
-# Types
-## Gathering ([Structure])
-| Type | Name | Description |
-| --- | --- | --- |
-| Uint32 | m_idMyself | Gathering id |
-| Uint32 | m_pidOwner | Owner pid |
-| Uint32 | m_pidHost | Host pid |
-| Uint16 | m_uiMinParticipants | Minimum number of players |
-| Uint16 | m_uiMaxParticipants | Maximum number of players |
-| Uint32 | m_uiParticipationPolicy | Participation policy |
-| Uint32 | m_uiPolicyArgument | Policy argument |
-| Uint32 | m_uiFlags | Flags |
-| Uint32 | m_uiState | State |
-| [String] | m_strDescription | Description |
+| [Data]&lt;[Gathering]&gt; | joinedGathering | Joined gathering |
 
 [Data]: NEX-Common-Types#any-data-holder
 [String]: NEX-Common-Types#string
 [Structure]: NEX-Common-Types#structure
+[Gathering]: Match-Making-Types#gathering
