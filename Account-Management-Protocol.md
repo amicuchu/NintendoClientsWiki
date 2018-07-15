@@ -40,7 +40,7 @@ Most methods cannot be used by normal users.
 | Type | Name | Description |
 | --- | --- | --- |
 | [String] | strPrincipalName | Username |
-| [String] | strKey | See [key derivation](#Key-Derivation) |
+| [String] | strKey | See [key derivation](#key-derivation) |
 | Uint32 | uiGroups | |
 | [String] | strEmail | |
 
@@ -75,7 +75,7 @@ This method does not return anything.
 ## Request
 | Type | Name | Description |
 | --- | --- | --- |
-| [String] | strNewKey | See [key derivation](#Key-Derivation) |
+| [String] | strNewKey | See [key derivation](#key-derivation) |
 
 ## Response
 | Type | Name |
@@ -264,7 +264,7 @@ This method does not take any parameters.
 | Type | Name | Description |
 | --- | --- | --- |
 | [String] | strPrincipalName | Username |
-| [String] | strKey | See [key derivation](#Key-Derivation) |
+| [String] | strKey | See [key derivation](#key-derivation) |
 | Uint32 | uiGroups | |
 | [String] | strEmail | |
 | [Data] | oPublicData | |
@@ -288,7 +288,7 @@ This method does not take any parameters.
 ## Request
 | Type | Name | Description |
 | --- | --- | --- |
-| [String] | strKey | See [key derivation](#Key-Derivation) |
+| [String] | strKey | See [key derivation](#key-derivation) |
 | [String] | strEmail | |
 | [Data] | oPublicData | |
 | [Data] | oPrivateData | |
@@ -302,7 +302,7 @@ This method does not return anything.
 | --- | --- | --- |
 | [String] | strPrincipalName | Username |
 | [String] | strEmail | |
-| [String] | strKey | See [key derivation](#Key-Derivation) |
+| [String] | strKey | See [key derivation](#key-derivation) |
 
 ## Response
 This method does not return anything.
@@ -325,7 +325,7 @@ This method does not return anything.
 | Type | Name | Description |
 | --- | --- | --- |
 | [String] | strPrincipalName | Username |
-| [String] | strKey | See [key derivation](#Key-Derivation) |
+| [String] | strKey | See [key derivation](#key-derivation) |
 | Uint32 | uiGroups | |
 | [String] | strEmail | |
 | [Data] | oAuthData | |
@@ -340,7 +340,7 @@ This method does not return anything.
 | Type | Name | Description |
 | --- | --- | --- |
 | [String] | strPrincipalName | Username |
-| [String] | strKey | See [key derivation](#Key-Derivation) |
+| [String] | strKey | See [key derivation](#key-derivation) |
 | Uint32 | uiGroups | |
 | [String] | strEmail | |
 | [Data] | oAuthData | |
@@ -356,7 +356,7 @@ This method does not return anything.
 | Type | Name | Description |
 | --- | --- | --- |
 | [String] | strPrincipalName | Username |
-| [String] | strKey | See [key derivation](#Key-Derivation) |
+| [String] | strKey | See [key derivation](#key-derivation) |
 | Uint32 | uiGroups | |
 | [String] | strEmail | |
 | [Data] | oAuthData | |
