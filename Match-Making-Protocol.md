@@ -554,50 +554,6 @@ This method does not return anything.
 ## Response
 This method does not return anything.
 
-# Types
-## Gathering ([Structure])
-| Type | Name | Description |
-| --- | --- | --- |
-| Uint32 | m_idMyself | Gathering id |
-| [PID] | m_pidOwner | Owner pid |
-| [PID] | m_pidHost | Host pid |
-| Uint16 | m_uiMinParticipants | Minimum number of participants |
-| Uint16 | m_uiMaxParticipants | Maximum number of participants |
-| Uint32 | m_uiParticipationPolicy | Participation policy |
-| Uint32 | m_uiPolicyArgument | Policy argument |
-| Uint32 | m_uiFlags | Flags |
-| Uint32 | m_uiState | State |
-| [String] | m_strDescription | Description |
-
-## Gathering Stats ([Structure])
-| Type | Name |
-| --- | --- |
-| Uint32 | m_pidParticipant |
-| Uint32 | m_uiFlags |
-| [List]&lt;Float&gt; | m_lstValues |
-
-## Invitation ([Structure])
-| Type | Name |
-| --- | --- |
-| Uint32 | m_idGathering |
-| Uint32 | m_idGuest |
-| [String] | m_strMessage |
-
-## Participant Details ([Structure])
-| Type | Name |
-| --- | --- |
-| Uint32 | m_idParticipant |
-| [String] | m_strName |
-| [String] | m_strMessage |
-| Uint16 | m_uiParticipants |
-
-## Deletion Entry ([Structure])
-| Type | Name |
-| --- | --- |
-| Uint32 | m_idGathering |
-| [PID] | m_pid |
-| Uint32 | m_uiReason |
-
 [String]: NEX-Common-Types#string
 [StationURL]: NEX-Common-Types#station-url
 [List]: NEX-Common-Types#list
@@ -605,8 +561,8 @@ This method does not return anything.
 [Data]: NEX-Common-Types#any-data-holder
 [Structure]: NEX-Common-Types#structure
 [ResultRange]: NEX-Common-Types#result-range-structure
-[Gathering]: #gathering-structure
-[GatheringStats]: #gathering-stats-structure
-[ParticipantDetails]: #participant-details-structure
-[Invitation]: #invitation-structure
-[DeletionEntry]: #deletion-entry-structure
+[Gathering]: Match-Making-Types#gathering-structure
+[GatheringStats]: Match-Making-Types#gathering-stats-structure
+[ParticipantDetails]: Match-Making-Types#participant-details-structure
+[Invitation]: Match-Making-Types#invitation-structure
+[DeletionEntry]: Match-Making-Types#deletion-entry-structure
