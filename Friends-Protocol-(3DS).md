@@ -187,11 +187,11 @@ This method does not return anything
 | Type | Description |
 | --- | --- |
 | Uint32 | Unknown |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
+| Uint8 | Region |
+| Uint8 | Country |
+| Uint8 | Area |
+| Uint8 | Language |
+| Uint8 | Platform |
 | [GameKey](#gamekey) | Game key |
 | [String] | Unknown |
 | [DateTime] | Unknown |
@@ -243,11 +243,11 @@ This method does not return anything
 ## MyProfile
 | Type | Description |
 | --- | --- |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
+| Uint8 | Region |
+| Uint8 | Country |
+| Uint8 | Area |
+| Uint8 | Language |
+| Uint8 | Platform |
 | Uint64 | Unknown |
 | [String] | Unknown |
 | [String] | Unknown |
