@@ -5,25 +5,25 @@ The following method names are merely guesses, based on what the method does.
 | Method ID | Method Name |
 | --- | --- |
 | 1 | [GetAllInformation](#1-getallinformation) |
-| 2 | ? |
-| 3 | ? |
-| 4 | ? |
-| 5 | ? |
-| 6 | ? |
-| 7 | ? |
-| 8 | ? |
-| 9 | ? |
-| 10 | ? |
-| 11 | ? |
-| 12 | ? |
+| 2 | [Unknown (2)](#2-unknown) |
+| 3 | [Unknown (3)](#3-unknown) |
+| 4 | [Unknown (4)](#4-unknown) |
+| 5 | [SendFriendRequest](#5-sendfriendrequest) |
+| 6 | [Unknown (6)](#6-unknown) |
+| 7 | [Unknown (7)](#7-unknown) |
+| 8 | [Unknown (8)](#8-unknown) |
+| 9 | [Unknown (9)](#9-unknown) |
+| 10 | [Unknown (10)](#10-unknown) |
+| 11 | [Unknown (11)](#11-unknown) |
+| 12 | [Unknown (12)](#12-unknown) |
 | 13 | [UpdatePresence](#13-updatepresence) |
-| 14 | ? |
-| 15 | ? |
-| 16 | ? |
-| 17 | ? |
-| 18 | ? |
-| 19 | ? |
-| 20 | ? |
+| 14 | [Unknown (14)](#14-unknown) |
+| 15 | [Unknown (15)](#15-unknown) |
+| 16 | [Unknown (16)](#16-unknown) |
+| 17 | [Unknown (17)](#17-unknown) |
+| 18 | [Unknown (18)](#18-unknown) |
+| 19 | [Unknown (19)](#19-unknown) |
+| 20 | [Unknown (20)](#20-unknown) |
 
 # (1) GetAllInformation
 ## Request
@@ -46,6 +46,111 @@ The following method names are merely guesses, based on what the method does.
 | [List]&lt;[PersistentNotification]&gt; | Notifications |
 | Bool | Unknown |
 
+# (2) Unknown
+## Request
+| Type | Description |
+| --- | --- |
+| Uint32 | Unknown |
+
+## Response
+Unknown
+
+# (3) Unknown
+## Request
+| Type | Description |
+| --- | --- |
+| [String] | Unknown |
+
+## Response
+Unknown
+
+# (4) Unknown
+## Request
+| Type | Description |
+| --- | --- |
+| Uint32 | Unknown |
+
+## Response
+This method does not return anything.
+
+# (5) SendFriendRequest
+## Request
+| Type | Description |
+| --- | --- |
+| Uint32 | Unknown |
+| Uint8 | Unknown |
+| [String] | Unknown |
+| Uint8 | Unknown |
+| [String] | Unknown |
+| [GameKey] | Game key |
+| [DateTime] | Unknown |
+
+## Response
+Unknown
+
+# (6) Unknown
+## Request
+| Type | Description |
+| --- | --- |
+| Uint64 | Unknown |
+
+## Response
+This method does not return anthing.
+
+# (7) Unknown
+## Request
+| Type | Description |
+| --- | --- |
+| Uint64 | Unknown |
+
+## Response
+Unknown
+
+# (8) Unknown
+## Request
+| Type | Description |
+| --- | --- |
+| Uint64 | Unknown |
+
+## Response
+This method does not return anything.
+
+# (9) Unknown
+## Request
+| Type | Description |
+| --- | --- |
+| Uint64 | Unknown |
+
+## Response
+Unknown
+
+# (10) Unknown
+## Request
+| Type | Description |
+| --- | --- |
+| [List]&lt;Uint64&gt; | Unknown |
+
+## Response
+This method does not return anything.
+
+# (11) Unknown
+## Request
+| Type | Description |
+| --- | --- |
+| [BlacklistedPrincipal] | Unknown |
+
+## Response
+Unknown
+
+# (12) Unknown
+## Request
+| Type | Description |
+| --- | --- |
+| Uint32 | Unknown |
+
+## Response
+This method does not return anything.
+
 # (13) UpdatePresence
 ## Request
 | Type | Description |
@@ -54,6 +159,53 @@ The following method names are merely guesses, based on what the method does.
 
 ## Response
 This method does not return anything.
+
+# (14) UpdateMii
+## Request
+| Type | Description |
+| --- | --- |
+| [MiiV2] | Mii |
+
+## Response
+Unknown
+
+# (15) UpdateComment
+## Request
+| Type | Description |
+| --- | --- |
+| [Comment] | Status message |
+
+## Response
+Unknown
+
+# (16) Unknown
+## Request
+| Type | Description |
+| --- | --- |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+
+## Response
+This method does not return anything.
+
+# (17) Unknown
+## Request
+| Type | Description |
+| --- | --- |
+| [List]&lt;Uint32&gt; | Unknown |
+
+# (18) Unknown
+## Request
+| Type | Description |
+| --- | --- |
+| [List]&lt;[PersistentNotification]&gt; | Unknown |
+
+## Response
+This method does not return anything.
+
+## Response
+Unknown
 
 # Types
 ## BlacklistedPrincipal
