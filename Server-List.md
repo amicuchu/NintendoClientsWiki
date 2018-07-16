@@ -23,11 +23,16 @@ Replace '%' by one of the following:
 | - g&lt;game server id&gt;-%.s.n.srv.nintendo.net | [Game servers](Game-Server-Overview) |
 | - app-b01.%.npns.srv.nintendo.net | |
 | - aqua.hac.%.d4c.nintendo.net<br>- sun.hac.%.d4c.nintendo.net<br>- superfly.hac.%.d4c.nintendo.net<br>- atum.hac.%.d4c.nintendo.net |
-| - receive-%.dg.srv.nintendo.net | |
+| - receive-%.dg.srv.nintendo.net<br>- receive-%.er.srv.nintendo.net | |
 | - dauth-%.ndas.srv.nintendo.net | Device authorization |
 | - aauth-%.ndas.srv.nintendo.net | Application authorization |
 | - e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com<br>- cdn-image-e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com | Accounts (api) |
 | - accounts.nintendo.com<br>- api.accounts.nintendo.com | Accounts (web) |
 | - bcat-topics-%.cdn.nintendo.net<br>- bcat-list-%.cdn.nintendo.net | News |
 | - Service-status-%.cdn.nintendo.net | Game server availability |
-| - api-%.pctl.srv.nintendo.net | Parental controls |
+| - api-%.pctl.srv.nintendo.net | Parental control |
+| - e03a97819c9711e59510d820a52f298a-sb.accounts.nintendo.com | |
+| - web-%.share.srv.nintendo.net | |
+| - api.sect.srv.nintendo.net | |
+| - e97b8a9d672e4ce4845ec6947cd66ef6-sb.baas.nintendo.com<br>- e97b8a9d672e4ce4845ec6947cd66ef6-sb.accounts.nintendo.com<br>- e97b8a9d672e4ce4845ec6947cd66ef6-sb-api.accounts.nintendo.com | |
+| - consumer.%.npns.srv.nintendo.net | |
