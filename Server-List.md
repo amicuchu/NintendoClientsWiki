@@ -8,21 +8,26 @@
 | - idbe-wup.cdn.nintendo.net<br>- idbe-ctr.cdn.nintendo.net | |
 
 ## Switch
-In each of the following urls 'lp1' can be replaced by 'dd1'.
+Replace '%' by one of the following:
+
+| Environment | Description |
+| --- | --- |
+| lp1 | Live production |
+| dd1 | Development |
 
 | Server | Description |
 | --- | --- |
 | - ctest.cdn.nintendo.net | Connection test |
-| - ecs-lp1.hac.shop.nintendo.net<br>- beach.hac.lp1.eshop.nintendo.net<br>- bugyo.hac.lp1.eshop.nintendo.ent<br>- tagaya.hac.lp1.eshop.nintendo.net<br>- pushmo.hac.lp1.eshop.nintendo.net | E-Shop |
-| - api-lp1.frs.srv.nintendo.net | Friends |
-| - g&lt;game server id&gt;-lp1.s.n.srv.nintendo.net | [Game servers](Game-Server-Overview) |
-| - app-b01.lp1.npns.srv.nintendo.net | |
-| - aqua.hac.lp1.d4c.nintendo.net<br>- sun.hac.lp1.d4c.nintendo.net<br>- superfly.hac.lp1.d4c.nintendo.net<br>- atum.hac.lp1.d4c.nintendo.net |
-| - receive-lp1.dg.srv.nintendo.net | |
-| - dauth-lp1.ndas.srv.nintendo.net | Device authorization |
-| - aauth-lp1.ndas.srv.nintendo.net | Application authorization |
+| - ecs-%.hac.shop.nintendo.net<br>- beach.hac.%.eshop.nintendo.net<br>- bugyo.hac.%.eshop.nintendo.ent<br>- tagaya.hac.%.eshop.nintendo.net<br>- pushmo.hac.%.eshop.nintendo.net | E-Shop |
+| - api-%.frs.srv.nintendo.net | Friends |
+| - g&lt;game server id&gt;-%.s.n.srv.nintendo.net | [Game servers](Game-Server-Overview) |
+| - app-b01.%.npns.srv.nintendo.net | |
+| - aqua.hac.%.d4c.nintendo.net<br>- sun.hac.%.d4c.nintendo.net<br>- superfly.hac.%.d4c.nintendo.net<br>- atum.hac.%.d4c.nintendo.net |
+| - receive-%.dg.srv.nintendo.net | |
+| - dauth-%.ndas.srv.nintendo.net | Device authorization |
+| - aauth-%.ndas.srv.nintendo.net | Application authorization |
 | - e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com<br>- cdn-image-e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com | Accounts (api) |
 | - accounts.nintendo.com<br>- api.accounts.nintendo.com | Accounts (web) |
-| - bcat-topics-lp1.cdn.nintendo.net<br>- bcat-list-lp1.cdn.nintendo.net | News |
-| - Service-status-lp1.cdn.nintendo.net | Game server availability |
-| - api-lp1.pctl.srv.nintendo.net | Parental controls |
+| - bcat-topics-%.cdn.nintendo.net<br>- bcat-list-%.cdn.nintendo.net | News |
+| - Service-status-%.cdn.nintendo.net | Game server availability |
+| - api-%.pctl.srv.nintendo.net | Parental controls |
