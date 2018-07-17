@@ -5,7 +5,7 @@ The following method names are merely guesses, based on what the method does.
 | Method ID | Method Name |
 | --- | --- |
 | 1 | [GetAllInformation](#1-getallinformation) |
-| 2 | [GetFriendRequest](#2-getfriendinfo) |
+| 2 | [GetFriendInfo](#2-getfriendinfo) |
 | 3 | [Unknown](#3-unknown) |
 | 4 | [Unknown](#4-unknown) |
 | 5 | [SendFriendRequest](#5-sendfriendrequest) |
