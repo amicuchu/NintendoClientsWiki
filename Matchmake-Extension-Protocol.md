@@ -56,7 +56,7 @@
 | 52 | [BrowseMatchmakeSessionNoHolderNoResultRange](#52-browsematchmakesessionnoholdernoresultrange) |
 | 53 | [BrowseMatchmakeSessionWithHostUrlsNoHolderNoResultRange](#53-browsematchmakesessionwithhosturlsnoholdernoresultrange) |
 
-(1) CloseParticipation
+# (1) CloseParticipation
 ## Request
 | Type | Name |
 | --- | --- |
@@ -65,7 +65,7 @@
 ## Response
 This method does not return anything.
 
-(2) OpenParticipation
+# (2) OpenParticipation
 ## Request
 | Type | Name |
 | --- | --- |
@@ -74,7 +74,7 @@ This method does not return anything.
 ## Response
 This method does not return anything.
 
-(3) AutoMatchmake_Postpone
+# (3) AutoMatchmake_Postpone
 ## Request
 | Type | Name |
 | --- | --- |
@@ -86,7 +86,7 @@ This method does not return anything.
 | --- | --- |
 | [Data]&lt;[Gathering]&gt; | joinedGathering |
 
-(4) BrowseMatchmakeSession
+# (4) BrowseMatchmakeSession
 ## Request
 | Type | Name |
 | --- | --- |
@@ -98,7 +98,7 @@ This method does not return anything.
 | --- | --- |
 | List&lt;[Data]&lt;[Gathering]&gt;&gt; | lstGathering |
 
-(5) BrowseMatchmakeSessionWithHostUrls
+# (5) BrowseMatchmakeSessionWithHostUrls
 ## Request
 | Type | Name |
 | --- | --- |
@@ -111,7 +111,7 @@ This method does not return anything.
 | List&lt;[Data]&lt;[Gathering]&gt;&gt; | lstGathering |
 | List&lt;[GatheringURLs]&gt; | lstGatheringUrls |
 
-(6) CreateMatchmakeSession
+# (6) CreateMatchmakeSession
 ## Request
 | Type | Name |
 | --- | --- |
@@ -125,7 +125,7 @@ This method does not return anything.
 | Uint32 | gid |
 | [Buffer] | sessionKey |
 
-(7) JoinMatchmakeSession
+# (7) JoinMatchmakeSession
 ## Request
 | Type | Name |
 | --- | --- |
@@ -137,7 +137,7 @@ This method does not return anything.
 | --- | --- |
 | [Buffer] | sessionKey |
 
-(8) ModifyCurrentGameAttribute
+# (8) ModifyCurrentGameAttribute
 ## Request
 | Type | Name |
 | --- | --- |
@@ -148,7 +148,7 @@ This method does not return anything.
 ## Response
 This method does not return anything.
 
-(9) UpdateNotificationData
+# (9) UpdateNotificationData
 ## Request
 | Type | Name |
 | --- | --- |
@@ -160,7 +160,7 @@ This method does not return anything.
 ## Response
 This method does not return anything.
 
-(10) GetFriendNotificationData
+# (10) GetFriendNotificationData
 ## Request
 | Type | Name |
 | --- | --- |
@@ -171,7 +171,7 @@ This method does not return anything.
 | --- | --- |
 | List&lt;[NotificationEvent]&gt; | dataList |
 
-(11) UpdateApplicationBuffer
+# (11) UpdateApplicationBuffer
 ## Request
 | Type | Name |
 | --- | --- |
@@ -181,7 +181,7 @@ This method does not return anything.
 ## Response
 This method does not return anything.
 
-(12) UpdateMatchmakeSessionAttribute
+# (12) UpdateMatchmakeSessionAttribute
 ## Request
 | Type | Name |
 | --- | --- |
@@ -191,7 +191,7 @@ This method does not return anything.
 ## Response
 This method does not return anything.
 
-(13) GetlstFriendNotificationData
+# (13) GetlstFriendNotificationData
 ## Request
 | Type | Name |
 | --- | --- |
@@ -202,7 +202,7 @@ This method does not return anything.
 | --- | --- |
 | List&lt;[NotificationEvent]&gt; | dataList |
 
-(14) UpdateMatchmakeSession
+# (14) UpdateMatchmakeSession
 ## Request
 | Type | Name |
 | --- | --- |
@@ -211,7 +211,7 @@ This method does not return anything.
 ## Response
 This method does not return anything.
 
-(15) AutoMatchmakeWithSearchCriteria_Postpone
+# (15) AutoMatchmakeWithSearchCriteria_Postpone
 ## Request
 | Type | Name |
 | --- | --- |
@@ -224,7 +224,7 @@ This method does not return anything.
 | --- | --- |
 | [Data]&lt;[Gathering]&gt; | joinedGathering |
 
-(16) GetPlayingSession
+# (16) GetPlayingSession
 ## Request
 | Type | Name |
 | --- | --- |
@@ -235,7 +235,7 @@ This method does not return anything.
 | --- | --- |
 | List&lt;[PlayingSession]&gt; | lstPlayingSession |
 
-(17) CreateCommunity
+# (17) CreateCommunity
 ## Request
 | Type | Name |
 | --- | --- |
@@ -247,7 +247,7 @@ This method does not return anything.
 | --- | --- |
 | Uint32 | gid |
 
-(18) UpdateCommunity
+# (18) UpdateCommunity
 ## Request
 | Type | Name |
 | --- | --- |
@@ -256,7 +256,7 @@ This method does not return anything.
 ## Response
 This method does not return anything.
 
-(19) JoinCommunity
+# (19) JoinCommunity
 ## Request
 | Type | Name |
 | --- | --- |
@@ -267,7 +267,7 @@ This method does not return anything.
 ## Response
 This method does not return anything.
 
-(20) FindCommunityByGatheringId
+# (20) FindCommunityByGatheringId
 ## Request
 | Type | Name |
 | --- | --- |
@@ -278,7 +278,7 @@ This method does not return anything.
 | --- | --- |
 | List&lt;[PersistentGathering]&gt; | lstCommunity |
 
-(21) FindOfficialCommunity
+# (21) FindOfficialCommunity
 ## Request
 | Type | Name |
 | --- | --- |
@@ -290,7 +290,7 @@ This method does not return anything.
 | --- | --- |
 | List&lt;[PersistentGathering]&gt; | lstCommunity |
 
-(22) FindCommunityByParticipant
+# (22) FindCommunityByParticipant
 ## Request
 | Type | Name |
 | --- | --- |
@@ -302,7 +302,7 @@ This method does not return anything.
 | --- | --- |
 | List&lt;[PersistentGathering]&gt; | lstCommunity |
 
-(23) UpdatePrivacySetting
+# (23) UpdatePrivacySetting
 ## Request
 | Type | Name |
 | --- | --- |
@@ -312,7 +312,7 @@ This method does not return anything.
 ## Response
 This method does not return anything.
 
-(24) GetMyBlockList
+# (24) GetMyBlockList
 ## Request
 This method does not take any parameters.
 
@@ -321,7 +321,7 @@ This method does not take any parameters.
 | --- | --- |
 | List&lt;Uint64&gt; | lstPrincipalId |
 
-(25) AddToBlockList
+# (25) AddToBlockList
 ## Request
 | Type | Name |
 | --- | --- |
@@ -330,7 +330,7 @@ This method does not take any parameters.
 ## Response
 This method does not return anything.
 
-(26) RemoveFromBlockList
+# (26) RemoveFromBlockList
 ## Request
 | Type | Name |
 | --- | --- |
@@ -339,14 +339,14 @@ This method does not return anything.
 ## Response
 This method does not return anything.
 
-(27) ClearMyBlockList
+# (27) ClearMyBlockList
 ## Request
 This method does not take any parameters.
 
 ## Response
 This method does not return anything.
 
-(28) ReportViolation
+# (28) ReportViolation
 ## Request
 | Type | Name |
 | --- | --- |
@@ -357,7 +357,7 @@ This method does not return anything.
 ## Response
 This method does not return anything.
 
-(29) IsViolationUser
+# (29) IsViolationUser
 ## Request
 This method does not take any parameters.
 
@@ -367,7 +367,7 @@ This method does not take any parameters.
 | Bool | flag |
 | Uint32 | score |
 
-(30) JoinMatchmakeSessionEx
+# (30) JoinMatchmakeSessionEx
 ## Request
 | Type | Name |
 | --- | --- |
@@ -381,7 +381,7 @@ This method does not take any parameters.
 | --- | --- |
 | [Buffer] | sessionKey |
 
-(31) GetSimplePlayingSession
+# (31) GetSimplePlayingSession
 ## Request
 | Type | Name |
 | --- | --- |
@@ -393,7 +393,7 @@ This method does not take any parameters.
 | --- | --- |
 | List&lt;[SimplePlayingSession]&gt; | lstSimplePlayingSession |
 
-(32) GetSimpleCommunity
+# (32) GetSimpleCommunity
 ## Request
 | Type | Name |
 | --- | --- |
@@ -404,7 +404,7 @@ This method does not take any parameters.
 | --- | --- |
 | List&lt;[SimpleCommunity]&gt; | lstSimpleCommunityList |
 
-(33) AutoMatchmakeWithGatheringId_Postpone
+# (33) AutoMatchmakeWithGatheringId_Postpone
 ## Request
 | Type | Name |
 | --- | --- |
@@ -417,7 +417,7 @@ This method does not take any parameters.
 | --- | --- |
 | [Data]&lt;[Gathering]&gt; | joinedGathering |
 
-(34) UpdateProgressScore
+# (34) UpdateProgressScore
 ## Request
 | Type | Name |
 | --- | --- |
@@ -427,7 +427,7 @@ This method does not take any parameters.
 ## Response
 This method does not return anything.
 
-(35) DebugNotifyEvent
+# (35) DebugNotifyEvent
 ## Request
 | Type | Name |
 | --- | --- |
@@ -441,7 +441,7 @@ This method does not return anything.
 ## Response
 This method does not return anything.
 
-(36) GenerateMatchmakeSessionSystemPassword
+# (36) GenerateMatchmakeSessionSystemPassword
 ## Request
 | Type | Name |
 | --- | --- |
@@ -452,7 +452,7 @@ This method does not return anything.
 | --- | --- |
 | [String] | password |
 
-(37) ClearMatchmakeSessionSystemPassword
+# (37) ClearMatchmakeSessionSystemPassword
 ## Request
 | Type | Name |
 | --- | --- |
@@ -461,7 +461,7 @@ This method does not return anything.
 ## Response
 This method does not return anything.
 
-(38) CreateMatchmakeSessionWithParam
+# (38) CreateMatchmakeSessionWithParam
 ## Request
 | Type | Name |
 | --- | --- |
@@ -472,7 +472,7 @@ This method does not return anything.
 | --- | --- |
 | [MatchmakeSession] | joinedMatchmakeSession |
 
-(39) JoinMatchmakeSessionWithParam
+# (39) JoinMatchmakeSessionWithParam
 ## Request
 | Type | Name |
 | --- | --- |
@@ -483,7 +483,7 @@ This method does not return anything.
 | --- | --- |
 | [MatchmakeSession] | joinedMatchmakeSession |
 
-(40) AutoMatchmakeWithParam_Postpone
+# (40) AutoMatchmakeWithParam_Postpone
 ## Request
 | Type | Name |
 | --- | --- |
@@ -494,7 +494,7 @@ This method does not return anything.
 | --- | --- |
 | [MatchmakeSession] | joinedMatchmakeSession |
 
-(41) FindMatchmakeSessionByGatheringIdDetail
+# (41) FindMatchmakeSessionByGatheringIdDetail
 ## Request
 | Type | Name |
 | --- | --- |
@@ -505,7 +505,7 @@ This method does not return anything.
 | --- | --- |
 | [MatchmakeSession] | matchmakeSession |
 
-(42) BrowseMatchmakeSessionNoHolder
+# (42) BrowseMatchmakeSessionNoHolder
 ## Request
 | Type | Name |
 | --- | --- |
@@ -517,7 +517,7 @@ This method does not return anything.
 | --- | --- |
 | List&lt;[MatchmakeSession]&gt; | lstMatchmakeSession |
 
-(43) BrowseMatchmakeSessionWithHostUrlsNoHolder
+# (43) BrowseMatchmakeSessionWithHostUrlsNoHolder
 ## Request
 | Type | Name |
 | --- | --- |
@@ -530,7 +530,7 @@ This method does not return anything.
 | List&lt;[MatchmakeSession]&gt; | lstMatchmakeSession |
 | List&lt;[GatheringURLs]&gt; | lstGatheringUrls |
 
-(44) UpdateMatchmakeSessionPart
+# (44) UpdateMatchmakeSessionPart
 ## Request
 | Type | Name |
 | --- | --- |
@@ -539,7 +539,7 @@ This method does not return anything.
 ## Response
 This method does not return anything.
 
-(45) RequestMatchmaking
+# (45) RequestMatchmaking
 ## Request
 | Type | Name |
 | --- | --- |
@@ -550,7 +550,7 @@ This method does not return anything.
 | --- | --- |
 | Uint64 | requestId |
 
-(46) WithdrawMatchmaking
+# (46) WithdrawMatchmaking
 ## Request
 | Type | Name |
 | --- | --- |
@@ -559,14 +559,14 @@ This method does not return anything.
 ## Response
 This method does not return anything.
 
-(47) WithdrawMatchmakingAll
+# (47) WithdrawMatchmakingAll
 ## Request
 This method does not take any parameters.
 
 ## Response
 This method does not return anything.
 
-(48) FindMatchmakeSessionByGatheringId
+# (48) FindMatchmakeSessionByGatheringId
 ## Request
 | Type | Name |
 | --- | --- |
@@ -577,7 +577,7 @@ This method does not return anything.
 | --- | --- |
 | List&lt;[MatchmakeSession]&gt; | lstMatchmakeSession |
 
-(49) FindMatchmakeSessionBySingleGatheringId
+# (49) FindMatchmakeSessionBySingleGatheringId
 ## Request
 | Type | Name |
 | --- | --- |
@@ -588,7 +588,7 @@ This method does not return anything.
 | --- | --- |
 | [MatchmakeSession] | matchmakeSession |
 
-(50) FindMatchmakeSessionByOwner
+# (50) FindMatchmakeSessionByOwner
 ## Request
 | Type | Name |
 | --- | --- |
@@ -600,7 +600,7 @@ This method does not return anything.
 | --- | --- |
 | List&lt;[MatchmakeSession]&gt; | lstMatchmakeSession |
 
-(51) FindMatchmakeSessionByParticipant
+# (51) FindMatchmakeSessionByParticipant
 ## Request
 | Type | Name |
 | --- | --- |
@@ -611,7 +611,7 @@ This method does not return anything.
 | --- | --- |
 | List&lt;[FindMatchmakeSessionByParticipantResult]&gt; | lstSession |
 
-(52) BrowseMatchmakeSessionNoHolderNoResultRange
+# (52) BrowseMatchmakeSessionNoHolderNoResultRange
 ## Request
 | Type | Name |
 | --- | --- |
@@ -622,7 +622,7 @@ This method does not return anything.
 | --- | --- |
 | List&lt;[MatchmakeSession]&gt; | lstMatchmakeSession |
 
-(53) BrowseMatchmakeSessionWithHostUrlsNoHolderNoResultRange
+# (53) BrowseMatchmakeSessionWithHostUrlsNoHolderNoResultRange
 ## Request
 | Type | Name |
 | --- | --- |
