@@ -6,7 +6,7 @@ The following method names are merely guesses, based on what the method does.
 | --- | --- |
 | 1 | [GetAllInformation](#1-getallinformation) |
 | 2 | [GetFriendInfo](#2-getfriendinfo) |
-| 3 | [Unknown](#3-unknown) |
+| 3 | [GetFriendInfoByName](#3-getfriendinfobyname) |
 | 4 | [Unknown](#4-unknown) |
 | 5 | [SendFriendRequest](#5-sendfriendrequest) |
 | 6 | [Unknown](#6-unknown) |
@@ -50,7 +50,7 @@ The following method names are merely guesses, based on what the method does.
 ## Request
 | Type | Description |
 | --- | --- |
-| Uint32 | Unknown |
+| Uint32 | Pid |
 
 ## Response
 | Type | Description |
@@ -58,14 +58,17 @@ The following method names are merely guesses, based on what the method does.
 | [FriendRequest] | Friend request |
 | [FriendInfo] | Friend info |
 
-# (3) Unknown
+# (3) GetFriendInfoByName
 ## Request
 | Type | Description |
 | --- | --- |
-| [String] | Unknown |
+| [String] | Name |
 
 ## Response
-Unknown
+| Type | Description |
+| --- | --- |
+| [FriendRequest] | Friend request |
+| [FriendInfo] | Friend info |
 
 # (4) Unknown
 ## Request
