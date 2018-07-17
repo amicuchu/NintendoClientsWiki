@@ -3,8 +3,8 @@
 | Method ID | Method Name |
 | --- | --- |
 | 1 | [GetAllInformation](#1-getallinformation) |
-| 2 | [GetFriendInfo](#2-getfriendinfo) |
-| 3 | [GetFriendInfoByName](#3-getfriendinfobyname) |
+| 2 | [AddFriend](#2-addfriend) |
+| 3 | [AddFriendByName](#3-addfriendbyname) |
 | 4 | [RemoveFriend](#4-removefriend) |
 | 5 | [AddFriendRequest](#5-addfriendrequest) |
 | 6 | [CancelFriendRequest](#6-cancelfriendrequest) |
@@ -44,7 +44,7 @@
 | [List]&lt;[PersistentNotification]&gt; | Notifications |
 | Bool | Unknown |
 
-# (2) GetFriendInfo
+# (2) AddFriend
 ## Request
 | Type | Description |
 | --- | --- |
@@ -56,7 +56,7 @@
 | [FriendRequest] | Friend request |
 | [FriendInfo] | Friend info |
 
-# (3) GetFriendInfoByName
+# (3) AddFriendByName
 ## Request
 | Type | Description |
 | --- | --- |
