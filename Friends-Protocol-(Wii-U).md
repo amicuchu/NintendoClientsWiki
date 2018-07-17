@@ -8,9 +8,9 @@ The following method names are merely guesses, based on what the method does.
 | 2 | [GetFriendInfo](#2-getfriendinfo) |
 | 3 | [GetFriendInfoByName](#3-getfriendinfobyname) |
 | 4 | [RemoveFriend](#4-removefriend) |
-| 5 | [SendFriendRequest](#5-sendfriendrequest) |
-| 6 | [Unknown](#6-unknown) |
-| 7 | [Unknown](#7-unknown) |
+| 5 | [AddFriendRequest](#5-addfriendrequest) |
+| 6 | [CancelFriendRequest](#6-cancelfriendrequest) |
+| 7 | [AcceptFriendRequest](#7-acceptfriendrequest) |
 | 8 | [Unknown](#8-unknown) |
 | 9 | [Unknown](#9-unknown) |
 | 10 | [Unknown](#10-unknown) |
@@ -79,7 +79,7 @@ The following method names are merely guesses, based on what the method does.
 ## Response
 This method does not return anything.
 
-# (5) SendFriendRequest
+# (5) AddFriendRequest
 ## Request
 | Type | Description |
 | --- | --- |
@@ -97,20 +97,20 @@ This method does not return anything.
 | [FriendRequest] | Friend request |
 | [FriendInfo] | Friend info |
 
-# (6) Unknown
+# (6) CancelFriendRequest
 ## Request
 | Type | Description |
 | --- | --- |
-| Uint64 | Unknown |
+| Uint64 | Id |
 
 ## Response
 This method does not return anthing.
 
-# (7) Unknown
+# (7) AcceptFriendRequest
 ## Request
 | Type | Description |
 | --- | --- |
-| Uint64 | Unknown |
+| Uint64 | Id |
 
 ## Response
 | Type | Description |
