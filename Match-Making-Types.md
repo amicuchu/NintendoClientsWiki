@@ -85,3 +85,4 @@ Since the match making methods are split across several protocols, this page doc
 [Buffer]: NEX-Common-Types#buffer
 [DateTime]: NEX-Common-Types#date-time
 [Map]: NEX-Common-Types#map
+[Variant]: NEX-Common-Types#variant
