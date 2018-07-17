@@ -139,7 +139,7 @@ Since the match making methods are split across several protocols, this page doc
 | Uint16 | participationCount |
 | [List]&lt;[MatchmakeSessionSearchCriteria](#matchmakesessionsearchcriteria-structure)&gt; | lstSearchCriteria |
 | [List]&lt;Uint32&gt; | targetGids |
-| [MatchmakeBlockListParam](#matchmakeblocklistaparam-structure) | blockListParam |
+| [MatchmakeBlockListParam](#matchmakeblocklistparam-structure) | blockListParam |
 
 ## FindMatchmakeSessionByParticipantParam
 | Type | Name |
