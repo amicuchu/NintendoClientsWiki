@@ -17,7 +17,7 @@
 | 13 | [UpdatePresence](#13-updatepresence) |
 | 14 | [UpdateMii](#14-updatemii) |
 | 15 | [UpdateComment](#15-updatecomment) |
-| 16 | [UpdatePrincipalPreference](#16-updateprincipalpreference) |
+| 16 | [UpdatePreference](#16-updatepreference) |
 | 17 | [GetBasicInfo](#17-getbasicinfo) |
 | 18 | [DeleteFriendFlags](#18-deletefriendflags) |
 | 19 | [CheckSettingStatus](#19-checksettingstatus) |
@@ -195,7 +195,7 @@ This method does not return anything.
 | --- | --- |
 | [DateTime] | Unknown |
 
-# (16) UpdatePrincipalPreference
+# (16) UpdatePreference
 ## Request
 | Type | Description |
 | --- | --- |
