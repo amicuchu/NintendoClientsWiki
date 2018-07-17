@@ -17,8 +17,8 @@ The following method names are merely guesses, based on what the method does.
 | 11 | [Unknown](#11-unknown) |
 | 12 | [Unknown](#12-unknown) |
 | 13 | [UpdatePresence](#13-updatepresence) |
-| 14 | [Unknown](#14-unknown) |
-| 15 | [Unknown](#15-unknown) |
+| 14 | [UpdateMii](#14-updatemii) |
+| 15 | [UpdateComment](#15-updatecomment) |
 | 16 | [Unknown](#16-unknown) |
 | 17 | [Unknown](#17-unknown) |
 | 18 | [Unknown](#18-unknown) |
