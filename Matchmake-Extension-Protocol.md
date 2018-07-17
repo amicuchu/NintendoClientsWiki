@@ -643,7 +643,7 @@ This method does not return anything.
 [MatchmakeSessionSearchCriteria]: Match-Making-Types#matchmakesessionsearchcriteria-structure
 [ResultRange]: Match-Making-Types#resultrange-structure
 [GatheringURLs]: Match-Making-Types#gatheringurls-structure
-[NotificationEvent]: Match-Making-Types#notificationevent-structure
+[NotificationEvent]: Notification-Protocol#notificationevent-structure
 [PlayingSession]: Match-Making-Types#playingsession-structure
 [PersistentGathering]: Match-Making-Types#persistentgathering-structure
 [SimplePlayingSession]: Match-Making-Types#simpleplayingsession-structure
