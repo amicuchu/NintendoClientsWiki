@@ -168,3 +168,4 @@ Examples:
 
 [String]: #string
 [Structure]: #structure
+[DateTime]: #date-time
