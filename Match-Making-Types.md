@@ -29,6 +29,18 @@ Since the match making methods are split across several protocols, this page doc
 | Uint8 | m_ProgressScore | NEX v3.5.0 and later |
 | [Buffer] | m_SessionKey | NEX v3.0.0 and later |
 | Uint32 | m_Option0 | NEX v3.5.0 and later |
+| [MatchmakeParam](#matchmakeparam-structure) | m_MatchmakeParam | NEX v4.0.0 and later |
+| [DateTime] | m_StartedTime | NEX v4.0.0 and later |
+| [String] | m_UserPassword | NEX v4.0.0 and later |
+| Uint32 | m_ReferGid | NEX v4.0.0 and later |
+| Bool | m_UserPasswordEnabled | NEX v4.0.0 and later |
+| Bool | m_SystemPasswordEnabled | NEX v4.0.0 and later |
+| [String] | m_Codeword | NEX v4.0.0 and later |
+
+## MatchmakeParam ([Structure])
+| Type | Name |
+| --- | --- |
+| [Map]&lt;[String], [Variant]&gt; | m_Params |
 
 ## GatheringURLs ([Structure])
 | Type | Name |
@@ -71,3 +83,5 @@ Since the match making methods are split across several protocols, this page doc
 [PID]: NEX-Common-Types#pid
 [Structure]: NEX-Common-Types#structure
 [Buffer]: NEX-Common-Types#buffer
+[DateTime]: NEX-Common-Types#date-time
+[Map]: NEX-Common-Types#map
