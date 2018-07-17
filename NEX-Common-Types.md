@@ -3,13 +3,15 @@
 2. [Buffer](#buffer)
 3. [qBuffer](#qbuffer)
 4. [List](#list)
-5. [PID](#pid)
-6. [DateTime](#date-time)
-7. [StationURL](#station-url)
-8. [Structure](#structure)
-9. [Data](#any-data-holder)
-10. [RVConnectionData](#rendez-vous-connection-data-structure)
-11. [ResultRange](#result-range-structure)
+5. [Map](#map)
+6. [PID](#pid)
+7. [DateTime](#date-time)
+8. [StationURL](#station-url)
+9. [Variant](#variant)
+10. [Structure](#structure)
+11. [Data](#any-data-holder)
+12. [RVConnectionData](#rendez-vous-connection-data-structure)
+13. [ResultRange](#result-range-structure)
 
 # String
 | Type | Description |
@@ -34,6 +36,9 @@
 | --- | --- |
 | Uint32 | Number of entries |
 | | Entries |
+
+# Map
+A map is a [list](#list) of (key, value) pairs.
 
 # PID
 Every user and server is given a unique id called principal id.
@@ -102,6 +107,19 @@ The following fields were added on Nintendo Switch:
 | Pl | Platform type |
 | Ntrpa | NAT traversal requester private address |
 | Ntrpp | NAT traversal requester private port |
+
+# Variant
+A variant consists of an uint8 indicating the type followed by its value.
+
+| Type id | Type |
+| --- | --- |
+| 0 | None |
+| 1 | Sint64 |
+| 2 | Double |
+| 3 | Bool |
+| 4 | [String] |
+| 5 | [DateTime] |
+| 6 | Uint64 |
 
 # Structure
 NEX v3.5.0 introduced a versioning system to structures. Before v3.5.0 their contents were just normally stored into the stream. However, starting with v3.5.0, structures are stored like this:
