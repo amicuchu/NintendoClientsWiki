@@ -5,7 +5,7 @@ The following method names are merely guesses, based on what the method does.
 | Method ID | Method Name |
 | --- | --- |
 | 1 | [GetAllInformation](#1-getallinformation) |
-| 2 | [Unknown](#2-unknown) |
+| 2 | [GetFriendRequest](#2-getfriendrequest) |
 | 3 | [Unknown](#3-unknown) |
 | 4 | [Unknown](#4-unknown) |
 | 5 | [SendFriendRequest](#5-sendfriendrequest) |
@@ -46,14 +46,16 @@ The following method names are merely guesses, based on what the method does.
 | [List]&lt;[PersistentNotification]&gt; | Notifications |
 | Bool | Unknown |
 
-# (2) Unknown
+# (2) GetFriendRequest
 ## Request
 | Type | Description |
 | --- | --- |
 | Uint32 | Unknown |
 
 ## Response
-Unknown
+| Type | Description |
+| --- | --- |
+| [FriendRequest] | Friend request |
 
 # (3) Unknown
 ## Request
