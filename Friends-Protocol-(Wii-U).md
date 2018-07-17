@@ -7,7 +7,7 @@ The following method names are merely guesses, based on what the method does.
 | 1 | [GetAllInformation](#1-getallinformation) |
 | 2 | [GetFriendInfo](#2-getfriendinfo) |
 | 3 | [GetFriendInfoByName](#3-getfriendinfobyname) |
-| 4 | [Unknown](#4-unknown) |
+| 4 | [RemoveFriend](#4-removefriend) |
 | 5 | [SendFriendRequest](#5-sendfriendrequest) |
 | 6 | [Unknown](#6-unknown) |
 | 7 | [Unknown](#7-unknown) |
@@ -70,11 +70,11 @@ The following method names are merely guesses, based on what the method does.
 | [FriendRequest] | Friend request |
 | [FriendInfo] | Friend info |
 
-# (4) Unknown
+# (4) RemoveFriend
 ## Request
 | Type | Description |
 | --- | --- |
-| Uint32 | Unknown |
+| Uint32 | Pid |
 
 ## Response
 This method does not return anything.
