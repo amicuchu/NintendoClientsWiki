@@ -19,11 +19,11 @@ The following method names are merely guesses, based on what the method does.
 | 13 | [UpdatePresence](#13-updatepresence) |
 | 14 | [UpdateMii](#14-updatemii) |
 | 15 | [UpdateComment](#15-updatecomment) |
-| 16 | [Unknown](#16-unknown) |
+| 16 | [UpdatePrincipalPreference](#16-updateprincipalpreference) |
 | 17 | [Unknown](#17-unknown) |
 | 18 | [Unknown](#18-unknown) |
 | 19 | [Unknown](#19-unknown) |
-| 20 | [Unknown](#20-unknown) |
+| 20 | [GetPrincipalRequestBlockSettings](#20-getprincipalrequestblocksettings) |
 
 # (1) GetAllInformation
 ## Request
@@ -92,7 +92,10 @@ This method does not return anything.
 | [DateTime] | Unknown |
 
 ## Response
-Unknown
+| Type | Description |
+| --- | --- |
+| [FriendRequest] | Friend request |
+| [FriendInfo] | Friend info |
 
 # (6) Unknown
 ## Request
@@ -110,7 +113,9 @@ This method does not return anthing.
 | Uint64 | Unknown |
 
 ## Response
-Unknown
+| Type | Description |
+| --- | --- |
+| [FriendInfo] | Friend info |
 
 # (8) Unknown
 ## Request
@@ -128,7 +133,9 @@ This method does not return anything.
 | Uint64 | Unknown |
 
 ## Response
-Unknown
+| Type | Description |
+| --- | --- |
+| [BlacklistedPrincipal] | Blacklisted principal |
 
 # (10) Unknown
 ## Request
@@ -143,10 +150,12 @@ This method does not return anything.
 ## Request
 | Type | Description |
 | --- | --- |
-| [BlacklistedPrincipal] | Unknown |
+| [BlacklistedPrincipal] | Blacklisted principal |
 
 ## Response
-Unknown
+| Type | Description |
+| --- | --- |
+| [BlacklistedPrincipal] | Blacklisted principal |
 
 # (12) Unknown
 ## Request
@@ -173,7 +182,9 @@ This method does not return anything.
 | [MiiV2] | Mii |
 
 ## Response
-Unknown
+| Type | Description |
+| --- | --- |
+| [DateTime] | Unknown |
 
 # (15) UpdateComment
 ## Request
@@ -182,15 +193,15 @@ Unknown
 | [Comment] | Status message |
 
 ## Response
-Unknown
+| Type | Description |
+| --- | --- |
+| [DateTime] | Unknown |
 
-# (16) Unknown
+# (16) UpdatePrincipalPreference
 ## Request
 | Type | Description |
 | --- | --- |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
+| [PrincipalPreference] | Principal preference
 
 ## Response
 This method does not return anything.
@@ -201,6 +212,11 @@ This method does not return anything.
 | --- | --- |
 | [List]&lt;Uint32&gt; | Unknown |
 
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[PrincipalBasicInfo]&gt; | Infos |
+
 # (18) Unknown
 ## Request
 | Type | Description |
@@ -210,8 +226,25 @@ This method does not return anything.
 ## Response
 This method does not return anything.
 
+# (19) Unknown
+## Request
+This method does not take any parameters.
+
 ## Response
-Unknown
+| Type | Description |
+| --- | --- |
+| Uint8 | Unknown |
+
+# (20) GetPrincipalRequestBlockSettings
+## Request
+| Type | Description |
+| --- | --- |
+| [List]&lt;Uint32&gt; | Unknown |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[PrincipalRequestBlockSetting]&gt; | Settings |
 
 # Types
 ## BlacklistedPrincipal
@@ -323,6 +356,12 @@ Unknown
 | Bool | Unknown |
 | Bool | Unknown |
 
+## PrincipalRequestBlockSetting
+| Type | Description |
+| --- | --- |
+| Uint32 | Unknown |
+| Bool | Unknown |
+
 [BlacklistedPrincipal]: #blacklistedprincipal
 [Comment]: #comment
 [FriendInfo]: #friendinfo
@@ -335,6 +374,7 @@ Unknown
 [PersistentNotification]: #persistentnotification
 [PrincipalBasicInfo]: #principalbasicinfo
 [PrincipalPreference]: #principalpreference
+[PrincipalRequestBlockSetting]: #principalrequestblocksetting
 
 [DateTime]: NEX-Common-Types#date-time
 [List]: NEX-Common-Types#list
