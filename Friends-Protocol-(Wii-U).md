@@ -1,7 +1,5 @@
 ## [[NEX Protocols]] > Friends Wii U (0x66)
 
-The following method names are merely guesses, based on what the method does.
-
 | Method ID | Method Name |
 | --- | --- |
 | 1 | [GetAllInformation](#1-getallinformation) |
@@ -15,15 +13,15 @@ The following method names are merely guesses, based on what the method does.
 | 9 | [DenyFriendRequest](#9-denyfriendrequest) |
 | 10 | [MarkFriendRequestsAsReceived](#10-markfriendrequestsasreceived) |
 | 11 | [AddBlackList](#11-addblacklist) |
-| 12 | [Unknown](#12-unknown) |
+| 12 | [RemoveBlackList](#12-removeblacklist) |
 | 13 | [UpdatePresence](#13-updatepresence) |
 | 14 | [UpdateMii](#14-updatemii) |
 | 15 | [UpdateComment](#15-updatecomment) |
 | 16 | [UpdatePrincipalPreference](#16-updateprincipalpreference) |
-| 17 | [Unknown](#17-unknown) |
-| 18 | [Unknown](#18-unknown) |
-| 19 | [Unknown](#19-unknown) |
-| 20 | [GetPrincipalRequestBlockSettings](#20-getprincipalrequestblocksettings) |
+| 17 | [GetBasicInfo](#17-getbasicinfo) |
+| 18 | [DeleteFriendFlags](#18-deletefriendflags) |
+| 19 | [CheckSettingStatus](#19-checksettingstatus) |
+| 20 | [GetRequestBlockSettings](#20-getrequestblocksettings) |
 
 # (1) GetAllInformation
 ## Request
@@ -157,11 +155,11 @@ This method does not return anything.
 | --- | --- |
 | [BlacklistedPrincipal] | Blacklisted principal |
 
-# (12) Unknown
+# (12) RemoveBlackList
 ## Request
 | Type | Description |
 | --- | --- |
-| Uint32 | Unknown |
+| Uint32 | Pid |
 
 ## Response
 This method does not return anything.
@@ -206,18 +204,18 @@ This method does not return anything.
 ## Response
 This method does not return anything.
 
-# (17) Unknown
+# (17) GetBasicInfo
 ## Request
 | Type | Description |
 | --- | --- |
-| [List]&lt;Uint32&gt; | Unknown |
+| [List]&lt;Uint32&gt; | Pids |
 
 ## Response
 | Type | Description |
 | --- | --- |
 | [List]&lt;[PrincipalBasicInfo]&gt; | Infos |
 
-# (18) Unknown
+# (18) DeleteFriendFlags
 ## Request
 | Type | Description |
 | --- | --- |
@@ -226,7 +224,7 @@ This method does not return anything.
 ## Response
 This method does not return anything.
 
-# (19) Unknown
+# (19) CheckSettingStatus
 ## Request
 This method does not take any parameters.
 
@@ -235,7 +233,7 @@ This method does not take any parameters.
 | --- | --- |
 | Uint8 | Unknown |
 
-# (20) GetPrincipalRequestBlockSettings
+# (20) GetRequestBlockSettings
 ## Request
 | Type | Description |
 | --- | --- |
