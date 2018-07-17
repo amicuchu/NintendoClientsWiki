@@ -5,7 +5,7 @@ The following method names are merely guesses, based on what the method does.
 | Method ID | Method Name |
 | --- | --- |
 | 1 | [GetAllInformation](#1-getallinformation) |
-| 2 | [GetFriendRequest](#2-getfriendrequest) |
+| 2 | [GetFriendRequest](#2-getfriendinfo) |
 | 3 | [Unknown](#3-unknown) |
 | 4 | [Unknown](#4-unknown) |
 | 5 | [SendFriendRequest](#5-sendfriendrequest) |
@@ -46,7 +46,7 @@ The following method names are merely guesses, based on what the method does.
 | [List]&lt;[PersistentNotification]&gt; | Notifications |
 | Bool | Unknown |
 
-# (2) GetFriendRequest
+# (2) GetFriendInfo
 ## Request
 | Type | Description |
 | --- | --- |
@@ -56,6 +56,7 @@ The following method names are merely guesses, based on what the method does.
 | Type | Description |
 | --- | --- |
 | [FriendRequest] | Friend request |
+| [FriendInfo] | Friend info |
 
 # (3) Unknown
 ## Request
