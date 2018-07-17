@@ -11,10 +11,10 @@ The following method names are merely guesses, based on what the method does.
 | 5 | [AddFriendRequest](#5-addfriendrequest) |
 | 6 | [CancelFriendRequest](#6-cancelfriendrequest) |
 | 7 | [AcceptFriendRequest](#7-acceptfriendrequest) |
-| 8 | [Unknown](#8-unknown) |
-| 9 | [Unknown](#9-unknown) |
-| 10 | [Unknown](#10-unknown) |
-| 11 | [Unknown](#11-unknown) |
+| 8 | [DeleteFriendRequest](#8-deletefriendrequest) |
+| 9 | [DenyFriendRequest](#9-denyfriendrequest) |
+| 10 | [MarkFriendRequestsAsReceived](#10-markfriendrequestsasreceived) |
+| 11 | [AddBlackList](#11-addblacklist) |
 | 12 | [Unknown](#12-unknown) |
 | 13 | [UpdatePresence](#13-updatepresence) |
 | 14 | [UpdateMii](#14-updatemii) |
@@ -117,36 +117,36 @@ This method does not return anthing.
 | --- | --- |
 | [FriendInfo] | Friend info |
 
-# (8) Unknown
+# (8) DeleteFriendRequest
 ## Request
 | Type | Description |
 | --- | --- |
-| Uint64 | Unknown |
+| Uint64 | Id |
 
 ## Response
 This method does not return anything.
 
-# (9) Unknown
+# (9) DenyFriendRequest
 ## Request
 | Type | Description |
 | --- | --- |
-| Uint64 | Unknown |
+| Uint64 | Id |
 
 ## Response
 | Type | Description |
 | --- | --- |
 | [BlacklistedPrincipal] | Blacklisted principal |
 
-# (10) Unknown
+# (10) MarkFriendRequestsAsReceived
 ## Request
 | Type | Description |
 | --- | --- |
-| [List]&lt;Uint64&gt; | Unknown |
+| [List]&lt;Uint64&gt; | Friend requests |
 
 ## Response
 This method does not return anything.
 
-# (11) Unknown
+# (11) AddBlackList
 ## Request
 | Type | Description |
 | --- | --- |
