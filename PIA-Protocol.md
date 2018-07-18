@@ -13,7 +13,7 @@ These packets are sent directly from one console to another, with no server in b
 | 0x4 | 1 | Encrypted (1=No, 2=Yes) |
 | 0x5 | 1 | Session id |
 | 0x6 | 2 | Packet id |
-| 0x8 | 2 | RTT related |
+| 0x8 | 2 | Milliseconds since start of session |
 | 0xA | 2 | RTT related |
 
 ## Content
@@ -21,7 +21,8 @@ This data may be encrypted (probably AES).
 
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 2 | Unknown |
+| 0x0 | 1 | Flags |
+| 0x1 | 1 | Station index |
 | 0x2 | 2 | Payload size |
 | 0x4 | 4 | Destination |
 | 0x8 | 4 | Connection id |
