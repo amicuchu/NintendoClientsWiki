@@ -12,12 +12,15 @@ These packets are sent directly from one console to another, with no server in b
 | 0x0 | 4 | Magic number: 32 AB 98 64 |
 | 0x4 | 1 | Encrypted (1=No, 2=Yes) |
 | 0x5 | 1 | [Connection id](#connection-id) |
-| 0x6 | 2 | Packet id |
+| 0x6 | 2 | [Packet id](#packet-id) |
 | 0x8 | 2 | [Session timer](#rtt-calculation) |
 | 0xA | 2 | [RTT timer](#rtt-calculation) |
 
 ### Connection ID
-In a [NAT probe request](NAT-Traversal-Protocol-(PIA)) this must be set to 1. In a [probe reply](NAT-Traversal-Protocol-(PIA)) this must be set to 0. After NAT traversal has been completed a random number (between 2 and 255) is generated. This will be the connection id in any further packets.
+During connection establishment, the console that wants to connect to another console must set this field to 1, and the console that answers the connection request must set this field to 0. After a connection has been established both console generate a random number between 2 and 255. This will be the connection id in any further packets.
+
+### Packet ID
+This should be 0 during connection establishment. After a connection has been established this should be an incrementing number starting at 1.
 
 ### RTT Calculation
 The session timer is the number of milliseconds since the start of the session. Every client has its own session timer (they are independent of each other). Aside from its own session timer, every client also keeps track of the session timers of all other clients. This is quite difficult to explain. Basically, when A sends a packet to B the RTT timer is what A belives the session timer of B to be. Hopefully, an example will make this clear:
