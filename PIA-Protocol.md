@@ -34,16 +34,33 @@ If encryption is enabled, this data is encrypted with AES.
 
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 1 | Flags |
-| 0x1 | 1 | Station index |
+| 0x0 | 1 | [Flags](#flags) |
+| 0x1 | 1 | [Station index](#station-index) |
 | 0x2 | 2 | Payload size |
-| 0x4 | 4 | Destination |
-| 0x8 | 4 | Connection id |
+| 0x4 | 4 | [Destination mask](#destination-mask) |
+| 0x8 | 4 | [Source station key](#station-key) |
 | 0xC | 2 | [Protocol id](PIA-Protocols) |
 | 0xE | 2 | Message id |
 | 0x10 | 4 | Reserved (always 0) |
 | 0x14 | | Payload |
 | | 16 | [HMAC checksum](#signature) |
+
+### Flags
+| Value | Description |
+| --- | --- |
+| 1 | This packet is sent to one console. The destination field contains only the station mask of the receiving console. |
+| 2 | This packet is sent to multiple consoles. The destination field contains the station masks of all receiving consoles. |
+| 4 | Unknown |
+| 8 | Unknown |
+
+### Station index
+Every connected console gets a unique station index. This field is set to 0xFD until a connection has been established with at least one other console.
+
+### Destination mask
+A station mask is calculated as follows: `1 << station_index`. The destination mask is the station mask of every destination console ORed together.
+
+### Station key
+The station key of a console is its Rendez-Vous connection id. This is the connection id returned by [SecureProtocol.Register](Secure-Protocol#1-register) or [SecureProtocol.RegisterEx](Secure-Protocol#4-registerex).
 
 ### Signature
 A HMAC checksum of the whole packet (including the header) is added to the packet before it's encrypted. The key is the session key obtained from the [match making service](Matchmake-Extension-Protocol).
