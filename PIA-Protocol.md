@@ -11,7 +11,7 @@ These packets are sent directly from one console to another, with no server in b
 | --- | --- | --- |
 | 0x0 | 4 | Magic number: 32 AB 98 64 |
 | 0x4 | 1 | Encrypted (1=No, 2=Yes) |
-| 0x5 | 1 | [Connection id] |
+| 0x5 | 1 | [Connection id](#connection-id) |
 | 0x6 | 2 | Packet id |
 | 0x8 | 2 | [Session timer](#rtt-calculation) |
 | 0xA | 2 | [RTT timer](#rtt-calculation) |
