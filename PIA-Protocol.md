@@ -41,7 +41,7 @@ If encryption is enabled, this data is encrypted with AES.
 | 0x8 | 4 | Connection id |
 | 0xC | 2 | [Protocol id](PIA-Protocols) |
 | 0xE | 2 | Message id |
-| 0x10 | 4 | Unknown (always 0?) |
+| 0x10 | 4 | Reserved (always 0) |
 | 0x14 | | Payload |
 | | 16 | [HMAC checksum](#signature) |
 
