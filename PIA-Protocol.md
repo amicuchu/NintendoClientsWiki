@@ -40,7 +40,7 @@ If encryption is enabled, this data is encrypted with AES.
 | 0x4 | 4 | [Destination mask](#destination-mask) |
 | 0x8 | 4 | [Source station key](#station-key) |
 | 0xC | 2 | [Protocol id](PIA-Protocols) |
-| 0xE | 2 | Message id |
+| 0xE | 2 | Message type (protocol-specific) |
 | 0x10 | 4 | Reserved (always 0) |
 | 0x14 | | Payload |
 | | 16 | [HMAC checksum](#signature) |
@@ -48,8 +48,8 @@ If encryption is enabled, this data is encrypted with AES.
 ### Flags
 | Value | Description |
 | --- | --- |
-| 1 | This packet is sent to one console. The destination field contains only the station mask of the receiving console. |
-| 2 | This packet is sent to multiple consoles. The destination field contains the station masks of all receiving consoles. |
+| 1 | Unknown. This packet is sent to one console. The destination field contains only the station mask of the receiving console. |
+| 2 | Unknown. This packet may be sent to multiple consoles. The destination field contains the station masks of all receiving consoles. |
 | 4 | Unknown |
 | 8 | Unknown |
 
