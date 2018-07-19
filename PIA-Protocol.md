@@ -10,7 +10,7 @@ These packets are sent directly from one console to another, with no server in b
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 4 | Magic number: 32 AB 98 64 |
-| 0x4 | 1 | Encrypted (1=No, 2=Yes) |
+| 0x4 | 1 | Encrypted (1=No 2=Yes) |
 | 0x5 | 1 | [Connection id](#connection-id) |
 | 0x6 | 2 | [Packet id](#packet-id) |
 | 0x8 | 2 | [Session timer](#rtt-calculation) |
@@ -30,7 +30,7 @@ Let's say the session timer of A is at 234 when A sends a packet to B. It takes 
 ![](https://www.dropbox.com/s/4fbobmcugbbokr3/rtt.png?raw=1)
 
 ## Content
-This data may be encrypted (probably AES).
+If encryption is enabled, this data is encrypted with AES.
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -43,4 +43,7 @@ This data may be encrypted (probably AES).
 | 0xE | 2 | Message id |
 | 0x10 | 4 | Unknown (always 0?) |
 | 0x14 | | Payload |
-| | 16 | HMAC checksum |
+| | 16 | [HMAC checksum](#signature) |
+
+### Signature
+A HMAC checksum of the whole packet (including the header) is added to the packet before it's encrypted. The key is the session key obtained from the [match making service](Matchmake-Extension-Protocol).
