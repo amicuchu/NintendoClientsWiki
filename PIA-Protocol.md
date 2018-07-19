@@ -17,7 +17,7 @@ These packets are sent directly from one console to another, with no server in b
 | 0xA | 2 | [RTT timer](#rtt-calculation) |
 
 ### Connection ID
-A random number generated at the start of the session. Must be at least 2, because 0 and 1 are reserved for special purposes.
+In a [NAT probe request](NAT-Traversal-Protocol-(PIA)) this must be set to 1. In a [probe reply](NAT-Traversal-Protocol-(PIA)) this must be set to 0. After NAT traversal has been completed a random number (between 2 and 255) is generated. This will be the connection id in any further packets.
 
 ### RTT Calculation
 The session timer is the number of milliseconds since the start of the session. Every client has its own session timer (they are independent of each other). Aside from its own session timer, every client also keeps track of the session timers of all other clients. This is quite difficult to explain. Basically, when A sends a packet to B the RTT timer is what A belives the session timer of B to be. Hopefully, an example will make this clear:
@@ -36,7 +36,7 @@ This data may be encrypted (probably AES).
 | 0x2 | 2 | Payload size |
 | 0x4 | 4 | Destination |
 | 0x8 | 4 | Connection id |
-| 0xC | 2 | Protocol id |
+| 0xC | 2 | [Protocol id](PIA-Protocols) |
 | 0xE | 2 | Message id |
 | 0x10 | 4 | Unknown (always 0?) |
 | 0x14 | | Payload |
