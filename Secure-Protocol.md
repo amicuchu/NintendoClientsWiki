@@ -22,7 +22,7 @@ The secure server keeps a list of client urls that can be registered (added) and
 ## Response
 | Type | Name | Description |
 | --- | --- | --- |
-| Uint32 | %retval% | Result code |
+| [Result] | %retval% | Result code |
 | Uint32 | pidConnectionID | Connection id |
 | [StationURL] | urlPublic |Public client url, as perceived by the server |
 
@@ -107,6 +107,7 @@ This method does not return anything.
 ## Response
 This method does not return anything.
 
+[Result]: NEX-Common-Types#result
 [qBuffer]: NEX-Common-Types#qbuffer
 [List]: NEX-Common-Types#list
 [String]: NEX-Common-Types#string
