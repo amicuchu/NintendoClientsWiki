@@ -47,7 +47,7 @@ Most methods cannot be used by normal users.
 ## Response
 | Type | Name | Description |
 | --- | --- | --- |
-| Uint32 | %retval | Result code |
+| [Result] | %retval | Result code |
 
 # (2) DeleteAccount
 ## Request
@@ -69,7 +69,7 @@ This method does not return anything.
 ## Response
 | Type | Name | Description |
 | --- | --- | --- |
-| Uint32 | %retval% | Result code |
+| [Result] | %retval% | Result code |
 
 # (4) ChangePassword
 ## Request
@@ -157,7 +157,7 @@ This method does not take any parameters.
 ## Response
 | Type | Name | Description |
 | --- | --- | --- |
-| Uint32 | %retval% | Result code |
+| [Result] | %retval% | Result code |
 
 # (12) UpdateAccountEmail
 ## Request
@@ -168,7 +168,7 @@ This method does not take any parameters.
 ## Response
 | Type | Name | Description |
 | --- | --- | --- |
-| Uint32 | %retval% | Result code |
+| [Result] | %retval% | Result code |
 
 # (13) UpdateCustomData
 ## Request
@@ -180,7 +180,7 @@ This method does not take any parameters.
 ## Response
 | Type | Name | Description |
 | --- | --- | --- |
-| Uint32 | %retval% | Result code |
+| [Result] | %retval% | Result code |
 
 # (14) FindByNameRegex
 ## Request
@@ -414,6 +414,7 @@ Some functions take a key string. This is a hex string derived from the password
 | [DateTime] | m_dtExpiryDate |
 | [String] | m_strExpiredMsg |
 
+[Result]: NEX-Common-Types#result
 [String]: NEX-Common-Types#string
 [PID]: NEX-Common-Types#pid
 [DateTime]: NEX-Common-Types#date-time
