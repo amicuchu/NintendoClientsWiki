@@ -2,7 +2,7 @@
 | Server | Description |
 | --- | --- |
 | - account.nintendo.net<br>- game-dev.account.nintendo.net<br>- system-dev.account.nintendo.net<br>- library-dev.account.nintendo.net<br>- staging.account.nintendo.net | [[Account server]] |
-| - nncs1.app.nintendowifi.net<br>- nncs2.app.nintendowifi.net | NAT check server |
+| - nncs1.app.nintendowifi.net<br>- nncs2.app.nintendowifi.net | [NAT check server](https://github.com/Kinnay/NintendoClients/blob/master/nintendo/pia/natcheck.py) |
 | - ecs.wup.shop.nintendo.net<br>- ccs.wup.shop.nintendo.net<br>- cas.wup.shop.nintendo.net<br>- ias.wup.shop.nintendo.net<br>- nus.wup.shop.nintendo.net<br>- pls.wup.shop.nintendo.net<br>- ecs.c.shop.nintendowifi.net<br>- ccs.c.shop.nintendowifi.net<br>- cas.c.shop.nintendowifi.net<br>- ias.c.shop.nintendowifi.net<br>- nus.c.shop.nintendowifi.net<br>- pls.c.shop.nintendowifi.net<br>- tagaya.wup.shop.nintendo.net<br>- pushmo.wup.shop.nintendo.net<br>- pushmore.wup.shop.nintendo.net | Shop |
 | - npns-dev.c.app.nintendowifi.net<br>- npvk.app.nintendo.net<br>- npvk-dev.app.nintendo.net<br>- npts.app.nintendo.net | |
 | - idbe-wup.cdn.nintendo.net<br>- idbe-ctr.cdn.nintendo.net | |
