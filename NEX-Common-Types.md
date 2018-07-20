@@ -5,13 +5,14 @@
 4. [List](#list)
 5. [Map](#map)
 6. [PID](#pid)
-7. [DateTime](#date-time)
-8. [StationURL](#station-url)
-9. [Variant](#variant)
-10. [Structure](#structure)
-11. [Data](#any-data-holder)
-12. [RVConnectionData](#rendez-vous-connection-data-structure)
-13. [ResultRange](#result-range-structure)
+7. [Result](#result)
+8. [DateTime](#date-time)
+9. [StationURL](#station-url)
+10. [Variant](#variant)
+11. [Structure](#structure)
+12. [Data](#any-data-holder)
+13. [RVConnectionData](#rendez-vous-connection-data-structure)
+14. [ResultRange](#result-range-structure)
 
 # String
 | Type | Description |
@@ -47,6 +48,13 @@ Every user and server is given a unique id called principal id.
 | --- | --- |
 | 3DS / Wii U | Uint32 |
 | Switch | Uint64 |
+
+# Result
+| Type | Description |
+| --- | --- |
+| Uint32 | Result code |
+
+Success is indicated by `0x00010001`. A list of error codes can be found in [nintendo/nex/errors.py](https://github.com/Kinnay/NintendoClients/blob/master/nintendo/nex/errors.py).
 
 # Date Time
 | Type | Description |
