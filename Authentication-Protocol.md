@@ -24,7 +24,7 @@ Alternative name: ValidateAndRequestTicket
 ## Response
 | Type | Name | Description |
 | --- | --- | --- |
-| Uint32 | %retval% | Result code (also see [errors.py](https://github.com/Kinnay/NintendoClients/blob/master/nintendo/nex/errors.py)) |
+| [Result] | %retval% | Result code |
 | [PID] | pidPrincipal |  User pid |
 | [Buffer] | pbufResponse | [Kerberos ticket](Kerberos-Authentication#kerberos-ticket) |
 | [RVConnectionData](NEX-Common-Types#rendez-vous-connection-data-structure) | pConnectionData | Connection info for secure server.<br><br>The Nintendo Switch allows the secure server to be at the same address as the authentication server. In that case, the secure server station url points to  0.0.0.1 with port 1. |
@@ -74,7 +74,7 @@ Same as response for the [Login](#1-login) method.
 ## Response
 | Type | Name | Description |
 | --- | --- | --- |
-| Uint32 | %retval% | Result code |
+| [Result] | %retval% | Result code |
 | [Buffer] | bufResponse | [Kerberos ticket](Kerberos-Authentication#kerberos-ticket) |
 
 # (4) GetPID
@@ -138,11 +138,12 @@ This is the reverse of the [GetPID](#4-getpid) method. It returns the name assoc
 ## Response
 | Type | Name | Description |
 | --- | --- | --- |
-| Uint32 | %retval% | Result code |
+| [Result] | %retval% | Result code |
 | [PID] | pidPrincipal | User pid |
 | [Buffer] | pbufResponse | [Kerberos ticket](Kerberos-Authentication#kerberos-ticket) |
 | [RVConnectionData](NEX-Common-Types#rendez-vous-connection-data-structure) | pConnectionData | Connection info for secure server |
 
+[Result]: NEX-Common-Types#result
 [String]: NEX-Common-Types#string
 [Buffer]: NEX-Common-Types#buffer
 [Structure]: NEX-Common-Types#structure
