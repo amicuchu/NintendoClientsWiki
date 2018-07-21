@@ -219,6 +219,7 @@ Since the match making methods are split across several protocols, this page doc
 [Map]: NEX-Common-Types#map
 [Variant]: NEX-Common-Types#variant
 [ResultRange]: NEX-Common-Types#result-range-structure
+[Data]: NEX-Common-Types#any-data-holder
 
 [MatchmakeSession]: #matchmakesession-structure
 [Gathering]: #gathering-structure
