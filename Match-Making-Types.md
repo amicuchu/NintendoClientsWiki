@@ -221,3 +221,4 @@ Since the match making methods are split across several protocols, this page doc
 [ResultRange]: NEX-Common-Types#result-range-structure
 
 [MatchmakeSession]: #matchmakesession-structure
+[Gathering]: #gathering-structure
