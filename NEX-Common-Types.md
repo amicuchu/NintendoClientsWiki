@@ -138,6 +138,8 @@ NEX v3.5.0 introduced a versioning system to structures. Before v3.5.0 their con
 | Uint32 | Content length |
 | | Content |
 
+Nintendo often seems to be changing a structure without updating its version number though.
+
 A structure may inherit another structure. The child is stored right after the parent, and gets its own version header.
 
 # Any Data Holder
