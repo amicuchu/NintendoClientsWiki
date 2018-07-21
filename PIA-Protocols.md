@@ -1,6 +1,6 @@
 | Type | Protocol |
 | --- | --- |
-| 0x00C0 | Keep alive packet |
+| 0x00C0 | Keep Alive Protocol |
 | 0x0100 | [[Station Protocol]] |
 | 0x0200 | [[Mesh Protocol]] |
 | 0x0210 | Sync Clock Protocol |
