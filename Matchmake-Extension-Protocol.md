@@ -228,7 +228,7 @@ This method does not return anything.
 ## Request
 | Type | Name |
 | --- | --- |
-| [List]&lt;Uint64&gt; | lstPid |
+| [List]&lt;[PID]&gt; | lstPid |
 
 ## Response
 | Type | Name |
@@ -294,7 +294,7 @@ This method does not return anything.
 ## Request
 | Type | Name |
 | --- | --- |
-| Uint64 | pid |
+| [PID] | pid |
 | [ResultRange] | resultRange |
 
 ## Response
@@ -319,13 +319,13 @@ This method does not take any parameters.
 ## Response
 | Type | Name |
 | --- | --- |
-| [List]&lt;Uint64&gt; | lstPrincipalId |
+| [List]&lt;[PID]&gt; | lstPrincipalId |
 
 # (25) AddToBlockList
 ## Request
 | Type | Name |
 | --- | --- |
-| [List]&lt;Uint64&gt; | lstPrincipalId |
+| [List]&lt;[PID]&gt; | lstPrincipalId |
 
 ## Response
 This method does not return anything.
@@ -334,7 +334,7 @@ This method does not return anything.
 ## Request
 | Type | Name |
 | --- | --- |
-| [List]&lt;Uint64&gt; | lstPrincipalId |
+| [List]&lt;[PID]&gt; | lstPrincipalId |
 
 ## Response
 This method does not return anything.
@@ -350,7 +350,7 @@ This method does not return anything.
 ## Request
 | Type | Name |
 | --- | --- |
-| Uint64 | pid |
+| [PID] | pid |
 | [String] | userName |
 | Uint32 | violationCode |
 
@@ -385,7 +385,7 @@ This method does not take any parameters.
 ## Request
 | Type | Name |
 | --- | --- |
-| [List]&lt;Uint64&gt; | lstPrincipalId |
+| [List]&lt;[PID]&gt; | lstPrincipalId |
 | Bool | includeLoginUser |
 
 ## Response
@@ -431,7 +431,7 @@ This method does not return anything.
 ## Request
 | Type | Name |
 | --- | --- |
-| Uint64 | pid |
+| [PID] | pid |
 | Uint32 | mainType |
 | Uint32 | subType |
 | Uint64 | param1 |
@@ -592,7 +592,7 @@ This method does not return anything.
 ## Request
 | Type | Name |
 | --- | --- |
-| Uint64 | id |
+| [PID] | id |
 | [ResultRange] | resultRange |
 
 ## Response
@@ -638,6 +638,7 @@ This method does not return anything.
 [Data]: NEX-Common-Types#any-data-holder
 [List]: NEX-Common-Types#list
 [Buffer]: NEX-Common-Types#buffer
+[PID]: NEX-Common-Types#pid
 
 [Gathering]: Match-Making-Types#gathering-structure
 [MatchmakeSessionSearchCriteria]: Match-Making-Types#matchmakesessionsearchcriteria-structure
