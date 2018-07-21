@@ -1,9 +1,9 @@
 [[PIA Protocols]] > Station Protocol (0x100)
 ---
 
-Message id is part of the packet payload. The message id in the packet header is always 0 in this protocol.
+Message type is part of the packet payload. The message type in the packet header is always 0 in this protocol.
 
-| Message ID | Description |
+| Message Type | Description |
 | --- | --- |
 | 1 | Connection request |
 | 2 | Connection response |
