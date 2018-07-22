@@ -48,7 +48,7 @@
 ## Request
 | Type | Description |
 | --- | --- |
-| Uint32 | Pid |
+| [PID] | Pid |
 
 ## Response
 | Type | Description |
@@ -72,7 +72,7 @@
 ## Request
 | Type | Description |
 | --- | --- |
-| Uint32 | Pid |
+| [PID] | Pid |
 
 ## Response
 This method does not return anything.
@@ -159,7 +159,7 @@ This method does not return anything.
 ## Request
 | Type | Description |
 | --- | --- |
-| Uint32 | Pid |
+| [PID] | Pid |
 
 ## Response
 This method does not return anything.
@@ -208,7 +208,7 @@ This method does not return anything.
 ## Request
 | Type | Description |
 | --- | --- |
-| [List]&lt;Uint32&gt; | Pids |
+| [List]&lt;[PID]&gt; | Pids |
 
 ## Response
 | Type | Description |
@@ -316,7 +316,7 @@ This method does not take any parameters.
 | Uint8 | Unknown |
 | Uint32 | Game server id |
 | Uint32 | Unknown |
-| Uint32 | Pid |
+| [PID] | Pid |
 | Uint32 | Gathering id |
 | [Buffer] | Unknown |
 | Uint8 | Unknown |
@@ -342,7 +342,7 @@ This method does not take any parameters.
 ## PrincipalBasicInfo
 | Type | Description |
 | --- | --- |
-| Uint32 | Pid |
+| [PID] | Pid |
 | [String] | NNID |
 | [MiiV2] | Mii |
 | Uint8 | Unknown |
@@ -378,3 +378,4 @@ This method does not take any parameters.
 [List]: NEX-Common-Types#list
 [String]: NEX-Common-Types#string
 [Buffer]: NEX-Common-Types#buffer
+[PID]: NEX-Common-Types#pid
