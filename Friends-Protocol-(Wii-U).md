@@ -307,7 +307,7 @@ This method does not take any parameters.
 ## NintendoPresenceV2
 | Type | Description |
 | --- | --- |
-| Uint32 | Unknown |
+| Uint32 | Flags |
 | Bool | Is online |
 | [GameKey] | Game key |
 | Uint8 | Unknown |
