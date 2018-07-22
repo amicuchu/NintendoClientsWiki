@@ -307,21 +307,34 @@ This method does not take any parameters.
 ## NintendoPresenceV2
 | Type | Description |
 | --- | --- |
-| Uint32 | Flags |
+| Uint32 | [Changed flags](#changed-flags) |
 | Bool | Is online |
 | [GameKey] | Game key |
-| Uint8 | Unknown |
+| Uint8 | Unknown (1) |
 | [String] | Message |
-| Uint32 | Unknown |
-| Uint8 | Unknown |
+| Uint32 | Unknown (2) |
+| Uint8 | Unknown (3) |
 | Uint32 | Game server id |
-| Uint32 | Unknown |
+| Uint32 | Unknown (4) |
 | [PID] | Pid |
 | Uint32 | Gathering id |
-| [Buffer] | Unknown |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
+| [Buffer] | Application data |
+| Uint8 | Unknown (5) |
+| Uint8 | Unknown (6) |
+| Uint8 | Unknown (7) |
+
+### Changed Flags
+Specifies which fields changed their value recently.
+
+| Value | Field |
+| --- | --- |
+| 0x4 | Unknown (1) |
+| 0x8 | Unknown (2) |
+| 0x10 | Game server id |
+| 0x20 | Unknown (4)
+| 0x40 | Pid |
+| 0x80 | Gathering id |
+| 0x100 | Application data |
 
 ## NNAInfo
 | Type | Description |
