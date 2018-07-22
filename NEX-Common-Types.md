@@ -42,7 +42,7 @@
 A map is a [list](#list) of (key, value) pairs.
 
 # PID
-Every user and server is given a unique id called principal id.
+Every user is given a unique id called principal id.
 
 | Platform | Type |
 | --- | --- |
