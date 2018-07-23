@@ -43,6 +43,7 @@ If encryption is enabled, this data is encrypted with AES.
 | 0xE | 2 | Message type (protocol-specific) |
 | 0x10 | 4 | Reserved (always 0) |
 | 0x14 | | Payload |
+| | | Padding to align checksum to 4 bytes |
 | | 16 | [HMAC checksum](#signature) |
 
 ### Flags
