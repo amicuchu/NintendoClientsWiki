@@ -35,7 +35,7 @@ If encryption is enabled, this data is encrypted with AES.
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 1 | [Flags](#flags) |
-| 0x1 | 1 | [Station index](#station-index) |
+| 0x1 | 1 | [Source station index](#station-index) |
 | 0x2 | 2 | Payload size |
 | 0x4 | 4 | [Destination mask](#destination-mask) |
 | 0x8 | 4 | [Source station key](#station-key) |
