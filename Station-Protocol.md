@@ -43,7 +43,7 @@
 These fields are directly taken from a [StationURL](NEX-Common-Types#station-url).
 
 | Offset | Size | Description |
-| --- | --- |
+| --- | --- | --- |
 | 0x0 | 8 | [StationAddress](#stationaddress) |
 | 0x8 | 4 | PID |
 | 0xC | 4 | CID |
