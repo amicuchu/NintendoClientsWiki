@@ -1,7 +1,7 @@
 [[PIA Protocols]] > NAT Traversal (0x400)
 ---
 
-| Message Type | Description |
+| Protocol Port | Description |
 | --- | --- |
 | 1 | [Probe request](#probe-request) |
 | 2 | [Probe reply](#probe-reply) |
