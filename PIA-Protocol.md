@@ -40,7 +40,7 @@ If encryption is enabled, this data is encrypted with AES.
 | 0x4 | 4 | [Destination mask](#destination-mask) |
 | 0x8 | 4 | [Source station key](#station-key) |
 | 0xC | 2 | [Protocol id](PIA-Protocols) |
-| 0xE | 2 | Message type (protocol-specific) |
+| 0xE | 2 | Protocol port (protocol-specific) |
 | 0x10 | 4 | Reserved (always 0) |
 | 0x14 | | Payload |
 | | | Padding to align checksum to 4 bytes |
