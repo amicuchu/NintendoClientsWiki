@@ -19,7 +19,7 @@
 # Connection request
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 1 | Message type (1) |
+| 0x0 | 1 | Message type |
 | 0x1 | 1 | Connection id |
 | 0x2 | 1 | Version maybe? |
 | 0x3 | 1 | Is inverse connection request |
