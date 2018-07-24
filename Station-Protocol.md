@@ -30,6 +30,12 @@
 # Disconnection request
 # Disconnection response
 # Ack
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 1 | Message type |
+| 0x1 | 3 | Padding |
+| 0x4 | 4 | Ack id |
+
 # Relay connection request
 # Relay connection response
 
