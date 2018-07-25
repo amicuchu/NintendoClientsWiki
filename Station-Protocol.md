@@ -41,7 +41,7 @@ Only present if result is OK:
 | 0x4 | 66 | [IdentificationInfo](#identificationinfo) |
 | 0x46 | 4 | Ack id |
 
-## Connection result
+### Connection result
 | Value | Description |
 | --- | --- |
 | 0 | OK |
