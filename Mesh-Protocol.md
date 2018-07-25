@@ -1,9 +1,12 @@
 [[PIA Protocols]] > Mesh Protocol (0x200)
 ---
 
-Message id is part of the packet payload. The message id in the packet header is always 0 in this protocol.
+| Protocol Port | Description |
+| --- | --- |
+| 0 | Unreliable |
+| 1 | Reliable |
 
-| Message ID | Description |
+| Message Type | Description |
 | --- | --- |
 | 0x01 | Join request |
 | 0x02 | Join response |
