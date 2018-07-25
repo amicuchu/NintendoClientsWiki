@@ -27,6 +27,27 @@
 | 0x3A | 4 | Ack id |
 
 # Connection response
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 1 | Message type |
+| 0x1 | 1 | Result |
+| 0x2 | 1 | Always 3? |
+| 0x3 | 1 | Always 3? |
+
+Only present if result is OK:
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x4 | 66 | [IdentificationInfo](#identificationinfo) |
+| 0x46 | 4 | Ack id |
+
+## Connection result
+| Value | Description |
+| --- | --- |
+| 0 | OK |
+| 1 | Connection denied |
+| 2 | Connection denied |
+
 # Disconnection request
 # Disconnection response
 # Ack
@@ -38,6 +59,14 @@
 
 # Relay connection request
 # Relay connection response
+
+# IdentificationInfo
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 32 | Identification (ascii) |
+| 0x20 | 32 | Name (utf16-be) |
+| 0x40 | 1 | Name length |
+| 0x41 | 1 | Always 0? |
 
 # StationConnectionInfo
 | Offset | Size | Description |
