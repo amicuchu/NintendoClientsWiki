@@ -21,7 +21,7 @@
 | --- | --- | --- |
 | 0x0 | 1 | Message type |
 | 0x1 | 1 | Connection id |
-| 0x2 | 1 | Version maybe? |
+| 0x2 | 1 | Version |
 | 0x3 | 1 | Is inverse connection request |
 | 0x4 | 54 | [StationConnectionInfo] |
 | 0x3A | 4 | Ack id |
