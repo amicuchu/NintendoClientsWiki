@@ -9,7 +9,7 @@
 | [StationAddress](#stationaddress) |
 | [InetAddress](#inetaddress) |
 
-# IdentificationInfo
+## IdentificationInfo
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 32 | Identification (ascii) |
@@ -17,13 +17,13 @@
 | 0x40 | 1 | Name length |
 | 0x41 | 1 | Always 0? |
 
-# StationConnectionInfo
+## StationConnectionInfo
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 27 | Public [StationLocation](#stationlocation) |
 | 0x1B | 27 | Local [StationLocation](#stationlocation) |
 
-# StationLocation
+## StationLocation
 These fields are directly taken from a [StationURL](NEX-Common-Types#station-url).
 
 | Offset | Size | Description |
@@ -40,13 +40,13 @@ These fields are directly taken from a [StationURL](NEX-Common-Types#station-url
 | 0x19 | 1 | type |
 | 0x1A | 1 | probeinit |
 
-# StationAddress
+## StationAddress
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 6 | [InetAddress](#inetaddress) |
 | 0x6 | 2 | Extension id |
 
-# InetAddress
+## InetAddress
 | Offset | Size | Description |
 | --- | -- | --- |
 | 0x0 | 4 | Address |
