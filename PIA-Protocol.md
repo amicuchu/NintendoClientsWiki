@@ -55,7 +55,7 @@ If encryption is enabled, this data is encrypted with AES.
 | 8 | Unknown |
 
 ### Station index
-Every connected console gets a unique station index. This field is set to 0xFD until a connection has been established with at least one other console.
+Every console in a mesh gets its own station index. Consoles that haven't joined a mesh yet have this field set to 0xFD.
 
 ### Destination mask
 A station mask is calculated as follows: `1 << station_index`. The destination mask is the station mask of every destination console ORed together.
