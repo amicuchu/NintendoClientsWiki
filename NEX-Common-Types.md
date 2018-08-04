@@ -65,14 +65,12 @@ This is not a normal time stamp. Instead, it consists of a bunch of bit fields:
 
 | Bits | Description |
 | --- | --- |
-| 0 - 38 | Year |
-| 38 - 42 | Month |
-| 42 - 47 | Day |
-| 47 - 52 | Hour |
-| 52 - 58 | Minute |
-| 58 - 64 | Second |
-
-Note: 0 refers to the most significant bit.
+| 63 - 26 | Year |
+| 25 - 22 | Month |
+| 21 - 17 | Day |
+| 16 - 12 | Hour |
+| 11 - 6 | Minute |
+| 5 - 0 | Second |
 
 # Station URL
 | Type | Description |
