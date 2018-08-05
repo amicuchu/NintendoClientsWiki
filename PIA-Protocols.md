@@ -15,5 +15,5 @@
 | 0x2800 | Voice Protocol |
 | 0x3000 | Reliable Protocol |
 | 0x7000 | Reliable Broadcast Protocol |
-| 0x7200 | Session Protocol |
+| 0x7200 | [[Session Protocol]] |
 | 0x8000 | Monitoring Data Protocol |
