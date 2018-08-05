@@ -1,4 +1,4 @@
-[[PIA Protocols]] > Mesh Protocol (0x200)
+[[PIA Protocols]] > Session Protocol (0x7200)
 ---
 | Message Type | Description |
 | --- | --- |
