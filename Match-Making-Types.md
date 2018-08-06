@@ -1,3 +1,6 @@
+[[NEX Protocols]] > Match Making Types
+---
+
 Since the match making methods are split across several protocols, this page documents all match making related structures in one place.
 
 ## Gathering ([Structure])
