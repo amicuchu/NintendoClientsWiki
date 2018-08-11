@@ -1,5 +1,7 @@
 As stated on the [[Game Server Overview]] page, NEX is actually a Nintendo-version of Quazal. As a consequence, both libraries share the same services, but NEX only provides a handful of them.
 
+See also: [[RMC Protocol]]
+
 ## Common Protocols
 | ID | NEX | Protocol |
 | --- | --- | --- |
