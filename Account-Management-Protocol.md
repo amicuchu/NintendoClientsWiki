@@ -47,7 +47,7 @@ Most methods cannot be used by normal users.
 ## Response
 | Type | Name | Description |
 | --- | --- | --- |
-| [Result] | %retval | Result code |
+| [Result] | %retval% | Result code |
 
 # (2) DeleteAccount
 ## Request
