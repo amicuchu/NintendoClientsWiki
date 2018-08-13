@@ -44,7 +44,7 @@
 ## Response
 | Type | Name |
 | --- | --- |
-| [List]&lt;[UserMessage](#usermessage) | lstMsgHeaders |
+| [List]&lt;[UserMessage](#usermessage)&gt; | lstMsgHeaders |
 
 # (4) RetrieveAllMessagesWithinRange
 ## Request
