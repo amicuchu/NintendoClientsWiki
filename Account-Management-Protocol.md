@@ -188,7 +188,7 @@ This method does not take any parameters.
 | --- | --- |
 | Uint32 | uiGroups |
 | [String] | strRegex |
-| [ResultRange] resultRange |
+| [ResultRange] | resultRange |
 
 ## Response
 | Type | Name |
