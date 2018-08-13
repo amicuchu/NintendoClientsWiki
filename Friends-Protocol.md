@@ -12,7 +12,7 @@ This protocol is implemented on Nintendo game servers, but no game seems to have
 | 5 | [AcceptFriendship](#5-acceptfriendship) |
 | 6 | [DeclineFriendship](#6-declinefriendship) |
 | 7 | [BlackList](#7-blacklist) |
-| 8 | [BlackList](#8-blacklist) |
+| 8 | [BlackListByName](#8-blacklistbyname) |
 | 9 | [ClearRelationship](#9-clearrelationship) |
 | 10 | [UpdateDetails](#10-updatedetails) |
 | 11 | [GetList](#11-getlist) |
