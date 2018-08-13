@@ -149,7 +149,7 @@ Since the match making methods are split across several protocols, this page doc
 | --- | --- |
 | [List]&lt;[PID]&gt; | m_principalIdList |
 | Uint32 | m_resultOptions |
-| [MatchmakeBlockListparam](#matchmakeblocklistparam-structure) | m_blockListParam |
+| [MatchmakeBlockListParam](#matchmakeblocklistparam-structure) | m_blockListParam |
 
 ## FindMatchmakeSessionByParticipantResult
 | Type | Name |
