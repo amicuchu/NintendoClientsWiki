@@ -9,7 +9,7 @@ See also: [[PIA Protocol]]
 | 0x0300 | LDN Protocol |
 | 0x0400 | [NEX NAT Traversal Protocol](NAT-Traversal-Protocol-(PIA)) |
 | 0x0500 | Bandwidth Checker Protocol |
-| 0x0600 | RTT Protocol |
+| 0x0600 | [[RTT Protocol]] |
 | 0x1810 | Sync Protocol |
 | 0x2000 | Unreliable Protocol |
 | 0x2100 | Round Robin Unreliable Protocol |
