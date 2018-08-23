@@ -46,7 +46,7 @@ Every packet consists of one or more records, terminated by a record with type 0
 | 0x14 | Uint32 | Unknown |
 | 0x18 | Uint32 | Unknown |
 | 0x1C | Uint32 | Unknown |
-| 0x20 | Unknown | Unknown |
+| 0x20 | Unk | Unknown |
 
 ## PlayerInfo
 | Offset | Type | Description |
