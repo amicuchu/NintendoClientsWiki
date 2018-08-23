@@ -35,6 +35,16 @@ Every packet consists of one or more records, terminated by a record with type 0
 | 0x15A | Uint16 | Unknown |
 | 0x15C | Unk (4) | Unknown |
 
+## Record Type 0xFE
+| Offset | Type | Description |
+| --- | --- | --- |
+| 0x0 | Uint32 | Unknown |
+| 0x0 | Uint32 | Unknown |
+| 0x0 | Uint32 | Unknown |
+| 0x0 | Uint32 | Unknown |
+| 0x0 | Uint32 | Unknown |
+| 0x0 | Uint32 | Unknown |
+
 ## PlayerInfo
 | Offset | Type | Description |
 | --- | --- | --- |
