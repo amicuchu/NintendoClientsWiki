@@ -20,7 +20,7 @@ Every packet consists of one or more records, terminated by a record with type 0
 | 9 | Unknown |
 | 10 | Unknown |
 | 0xFD | Unknown |
-| 0xFE | Unknown |
+| 0xFE | [Unknown](#record-type-0xfe) |
 
 ## Record Type 2
 | Offset | Type | Description |
@@ -39,11 +39,14 @@ Every packet consists of one or more records, terminated by a record with type 0
 | Offset | Type | Description |
 | --- | --- | --- |
 | 0x0 | Uint32 | Unknown |
-| 0x0 | Uint32 | Unknown |
-| 0x0 | Uint32 | Unknown |
-| 0x0 | Uint32 | Unknown |
-| 0x0 | Uint32 | Unknown |
-| 0x0 | Uint32 | Unknown |
+| 0x4 | Uint32 | Unknown |
+| 0x8 | Uint32 | Unknown |
+| 0xC | Uint32 | Unknown |
+| 0x10 | Uint32 | Unknown |
+| 0x14 | Uint32 | Unknown |
+| 0x18 | Uint32 | Unknown |
+| 0x1C | Uint32 | Unknown |
+| 0x20 | Unknown | Unknown |
 
 ## PlayerInfo
 | Offset | Type | Description |
