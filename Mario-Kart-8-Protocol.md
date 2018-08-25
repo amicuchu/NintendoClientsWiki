@@ -45,7 +45,7 @@ Every packet consists of one or more records, terminated by a record with type 0
 | 0xC | Uint32 | Unknown |
 | 0x10 | Uint32 | Unknown |
 | 0x14 | Uint32 | Unknown |
-| 0x18 | Uint32 | Unknown |
+| 0x18 | Uint32 | [Pid](#NEX-Common-Types#pid) |
 | 0x1C | Uint32 | Unknown |
 | 0x20 | Uint8 | Unknown |
 | 0x21 | Unk (8 * 27) | Unknown |
