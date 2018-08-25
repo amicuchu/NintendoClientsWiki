@@ -34,6 +34,7 @@ Every packet consists of one or more records, terminated by a record with type 0
 | 0x158 | Uint16 | Unknown |
 | 0x15A | Uint16 | Unknown |
 | 0x15C | Unk (4) | Unknown |
+| 0x160 | --- | End of record |
 
 ## Record Type 0xFE
 | Offset | Type | Description |
@@ -47,7 +48,11 @@ Every packet consists of one or more records, terminated by a record with type 0
 | 0x18 | Uint32 | Unknown |
 | 0x1C | Uint32 | Unknown |
 | 0x20 | Uint8 | Unknown |
-| 0x21 | Unk | Unknown |
+| 0x21 | Unk (8 * 27) | Unknown |
+| 0xF9 | Unk (8 * 10) | Unknown |
+| 0x149 | Uint8 | Unknown |
+| 0x14A | Uint8 (14) | Unknown |
+| 0x158 | --- | End of record |
 
 ## PlayerInfo
 | Offset | Type | Description |
