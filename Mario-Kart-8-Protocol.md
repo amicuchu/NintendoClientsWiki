@@ -17,7 +17,7 @@ Every packet consists of one or more records, terminated by a record with type 0
 | 4 | Unknown |
 | 6 | Unknown |
 | 7 | Unknown |
-| 9 | Unknown |
+| 9 | [Unknown](#record-type-9) |
 | 10 | Unknown |
 | 0xFD | [Unknown](#record-type-0xfd) |
 | 0xFE | [Unknown](#record-type-0xfe) |
@@ -43,6 +43,12 @@ Every packet consists of one or more records, terminated by a record with type 0
 | 0x15A | Uint16 | Unknown |
 | 0x15C | Unk (4) | Unknown |
 | 0x160 | --- | End of record |
+
+## Record Type 9
+| Offset | Type | Description |
+| --- | --- | --- |
+| 0x0 | Uint8 | Unknown |
+| 0x1 | --- | End of record |
 
 ## Record Type 0xFD
 | Offset | Type | Description |
