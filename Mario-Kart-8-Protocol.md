@@ -21,6 +21,7 @@ Every packet consists of one or more records, terminated by a record with type 0
 | 10 | Chat related |
 | 0xFD | [Unknown](#record-type-0xfd) |
 | 0xFE | [Unknown](#record-type-0xfe) |
+| 0xFF | End record |
 
 ## Record Type 0
 | Offset | Type | Description |
