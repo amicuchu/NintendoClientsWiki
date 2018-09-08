@@ -2,14 +2,17 @@ See also: [[PIA Protocol]]
 
 | Type | Protocol |
 | --- | --- |
+| 0x0080 | Relay Protocol |
 | 0x00C0 | Keep Alive Protocol |
 | 0x0100 | [[Station Protocol]] |
 | 0x0200 | [[Mesh Protocol]] |
 | 0x0210 | Sync Clock Protocol |
 | 0x0300 | LDN Protocol |
 | 0x0400 | [NEX NAT Traversal Protocol](NAT-Traversal-Protocol-(PIA)) |
+| 0x0410 | Gateway Protocol |
 | 0x0500 | Bandwidth Checker Protocol |
 | 0x0600 | [[RTT Protocol]] |
+| 0x1800 | Sync Protocol (old) |
 | 0x1810 | Sync Protocol |
 | 0x2000 | Unreliable Protocol |
 | 0x2100 | Round Robin Unreliable Protocol |
@@ -19,3 +22,4 @@ See also: [[PIA Protocol]]
 | 0x7000 | Reliable Broadcast Protocol |
 | 0x7200 | [[Session Protocol]] |
 | 0x8000 | Monitoring Data Protocol |
+| 0x8200 | Relay Service Protocol |
