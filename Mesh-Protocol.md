@@ -101,12 +101,12 @@ Because this message is sent through the reliable mesh protocol it does not need
 | 0x1 | 1 | Number of stations |
 | 0x2 | 1 | Host index |
 | 0x3 | 1 | Always 0 |
-| 0x4 | 1 | Update counter (incremented on each mesh update) |
-| 0x5 | 1 | Always 1 |
-| 0x6 | 1 | Always 0 |
-| 0x7 | 1 | Host index |
-| 0x8 | 1 | Always 0 |
-| 0x9 | | [StationInfo] entries |
+| 0x4 | 4 | Update counter (incremented on each mesh update) |
+| 0x8 | 1 | Always 1 |
+| 0x9 | 1 | Always 0 |
+| 0xA | 1 | Host index |
+| 0xB | 1 | Always 0 |
+| 0xC | | [StationInfo] entries |
 
 [StationAddress]: PIA-Types#stationaddress
 [StationInfo]: PIA-Types#stationinfo
