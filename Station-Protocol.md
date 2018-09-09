@@ -13,8 +13,8 @@
 | 3 | [Disconnection request](#disconnection-request) |
 | 4 | [Disconenction response](#disconnection-response) |
 | 5 | [Ack](#ack) |
-| 6 | [Relay connection request](#relay-connection-request) |
-| 7 | [Relay connection response](#relay-connection-response) |
+| 6 | Relay connection request |
+| 7 | Relay connection response |
 
 # Connection request
 | Offset | Size | Description |
@@ -64,9 +64,6 @@ Only present if result is OK:
 | 0x0 | 1 | Message type |
 | 0x1 | 3 | Padding |
 | 0x4 | 4 | Ack id |
-
-# Relay connection request
-# Relay connection response
 
 [StationConnectionInfo]: PIA-Types#stationconnectioninfo
 [IdentificationInfo]: PIA-Types#identificationinfo
