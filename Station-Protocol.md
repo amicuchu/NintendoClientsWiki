@@ -49,7 +49,15 @@ Only present if result is OK:
 | 2 | Connection denied |
 
 # Disconnection request
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 1 | Message type |
+
 # Disconnection response
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 1 | Message type |
+
 # Ack
 | Offset | Size | Description |
 | --- | --- | --- |
