@@ -9,7 +9,7 @@
 | Message Type | Description |
 | --- | --- |
 | 0x01 | [Join request](#join-request) |
-| 0x02 | [Join response](#join-response) |
+| 0x02 | [Join response](#join-response-success) |
 | 0x04 | [Leave request](#leave-request) |
 | 0x08 | [Leave response](#leave-response) |
 | 0x10 | [Destroy mesh](#destroy-request) |
