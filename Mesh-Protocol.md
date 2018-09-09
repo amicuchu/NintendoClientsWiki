@@ -39,6 +39,7 @@
 
 # Join response (success)
 If the join response is too big to be sent in a single packet it is split into fragments.
+
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 1 | Message type |
