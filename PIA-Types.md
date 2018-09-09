@@ -4,6 +4,7 @@
 | Table of Contents |
 | --- |
 | [IdentificationInfo](#identificationinfo) |
+| [StationInfo](#stationinfo) |
 | [StationConnectionInfo](#stationconnectioninfo) |
 | [StationLocation](#stationlocation) |
 | [StationAddress](#stationaddress) |
@@ -16,6 +17,13 @@
 | 0x20 | 32 | Name (utf16-be) |
 | 0x40 | 1 | Name length |
 | 0x41 | 1 | Always 0? |
+
+## StationInfo
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 0x36 | [StationConnectionInfo](#stationconnectioninfo) |
+| 0x36 | 1 | Station index |
+| 0x37 | 1 | Padding |
 
 ## StationConnectionInfo
 | Offset | Size | Description |
