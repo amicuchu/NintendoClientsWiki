@@ -8,13 +8,13 @@
 
 | Message Type | Description |
 | --- | --- |
-| 0x01 | Join request |
-| 0x02 | Join response |
-| 0x04 | Leave request |
-| 0x08 | Leave response |
-| 0x10 | Destroy mesh |
-| 0x11 | Destroy response |
-| 0x20 | Update mesh |
+| 0x01 | [Join request](#join-request) |
+| 0x02 | [Join response](#join-response) |
+| 0x04 | [Leave request](#leave-request) |
+| 0x08 | [Leave response](#leave-response) |
+| 0x10 | [Destroy mesh](#destroy-request) |
+| 0x11 | [Destroy response](#destroy-response) |
+| 0x20 | [Update mesh](#update-mesh) |
 | 0x21 | Kickout notice |
 | 0x22 | Dummy message |
 | 0x24 | Connection failure notice |
@@ -27,3 +27,85 @@
 | 0x4A | Multi migration rank decision |
 | 0x80 | Connection report |
 | 0x81 | Relay route directions |
+
+# Join request
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 1 | Message type |
+| 0x1 | 1 | Station index |
+| 0x2 | 2 | Padding |
+| 0x4 | 8 | [StationAddress] |
+| 0xC | 4 | Ack id |
+
+# Join response (success)
+If the join response is too big to be sent in a single packet it is split into fragments.
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 1 | Message type |
+| 0x1 | 1 | Number of stations |
+| 0x2 | 1 | Host index |
+| 0x3 | 1 | Index of joining station |
+| 0x4 | 1 | Number of fragments |
+| 0x5 | 1 | Fragment index |
+| 0x6 | 1 | Number of station info entries in current fragment |
+| 0x7 | 1 | Base index of info in current fragment |
+| 0x8 | | [StationInfo] entries |
+| | 4 | Ack id |
+
+# Join response (denying)
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 1 | Message type |
+| 0x1 | 1 | Always 0 |
+| 0x2 | 1 | Always 0xFF |
+| 0x3 | 1 | Always 0xFF |
+| 0x4 | 1 | Reason |
+
+# Leave request
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 1 | Message type |
+| 0x1 | 1 | Station index |
+| 0x2 | 2 | Padding |
+| 0x4 | 8 | [StationAddress] |
+
+# Leave response
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 1 | Message type |
+| 0x1 | 1 | Station index |
+| 0x2 | 2 | Padding |
+| 0x4 | 8 | [StationAddress] |
+
+# Destroy request
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 1 | Message type |
+| 0x1 | 1 | Station index |
+| 0x2 | 2 | Padding |
+| 0x4 | 8 | [StationAddress] |
+
+# Destroy response
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 1 | Message type |
+| 0x1 | 1 | Station index |
+
+# Update mesh
+Because this message is sent through the reliable mesh protocol it does not need to be split into fragments like the join response.
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 1 | Message type |
+| 0x1 | 1 | Number of stations |
+| 0x2 | 1 | Host index |
+| 0x3 | 1 | Always 0 |
+| 0x4 | 1 | Update counter (incremented on each mesh update) |
+| 0x5 | 1 | Always 1 |
+| 0x6 | 1 | Always 0 |
+| 0x7 | 1 | Host index |
+| 0x8 | 1 | Always 0 |
+| 0x9 | | [StationInfo] entries |
+
+[StationAddress]: PIA-Types#stationaddress
+[StationInfo]: PIA-Types#stationinfo
