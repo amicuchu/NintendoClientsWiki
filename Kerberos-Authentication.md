@@ -37,7 +37,7 @@ The ticket info is kerberos-encrypted with a key that's only known by the server
 The key used to encrypt the ticket info is calculated as follows: `MD5(server_key + ticket_key)`
 
 ### Ticket Info
-The date time is used to check ticket expiration. A ticket is valid for exactly 120,000 seconds.
+The date time is used to check ticket expiration. A ticket is valid for exactly 2 minutes.
 
 | Type | Description |
 | --- | --- |
