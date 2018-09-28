@@ -41,7 +41,7 @@ The key used to encrypt the ticket info is calculated as follows: `MD5(server_ke
 | --- | --- |
 | [DateTime] | Date time |
 | [PID] | User pid |
-| Bytes | Unknown key (32 bytes) |
+| Bytes | Secure key |
 
 [Buffer]: NEX-Common-Types#buffer
 [PID]: NEX-Common-Types#pid
