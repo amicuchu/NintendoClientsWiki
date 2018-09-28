@@ -21,18 +21,22 @@ The Kerberos ticket is encrypted with the following key:
 The length of the secure key is always 32 bytes, except in communication with the friends server, in which case it's 16 bytes.
 
 ## Ticket Data
+The ticket info is kerberos-encrypted with a key that's only known by the server. The client does not need to parse this data.
+
 ### 3DS / Wii U
-Unknown
+| Type | Description |
+| --- | --- |
+| [Ticket Info](#ticket-info) | Encrypted ticket info |
 
 ### Switch
 | Type | Description |
 | --- | --- |
 | [Buffer] | Ticket key |
-| [Buffer] | Kerberos-encrypted ticket info |
+| [Buffer] | Encrypted ticket info |
 
-#### Ticket info
-The key used to encrypt the ticket info is somehow based on the Kerberos key and the ticket key, but the details are unknown.
+The key used to encrypt the ticket info is calculated as follows: `MD5(server_key + ticket_key)`
 
+### Ticket Info
 | Type | Description |
 | --- | --- |
 | [DateTime] | Date time |
