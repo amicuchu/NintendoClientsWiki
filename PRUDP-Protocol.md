@@ -161,6 +161,7 @@ While the payload should be empty when connecting to the authentication server, 
 | [Buffer] | [Kerberos-encrypted](Kerberos-Authentication) request data |
 
 Request data:
+This should be encrypted with the secure key.
 
 | Type | Description |
 | --- | --- |
