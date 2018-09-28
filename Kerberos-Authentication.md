@@ -15,7 +15,7 @@ The Kerberos ticket is encrypted with the following key:
 | Type | Description |
 | --- | --- |
 | Bytes | Secure key |
-| [PID] | Unknown |
+| [PID] | Server pid ([Quazal Rendez-Vous](Authentication-Protocol#4-getpid)) |
 | [Buffer] | [Ticket data](#ticket-data) |
 
 The length of the secure key is always 32 bytes, except in communication with the friends server, in which case it's 16 bytes.
