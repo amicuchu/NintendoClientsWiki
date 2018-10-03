@@ -112,7 +112,7 @@ This method does not take any parameters
 | Type | Name |
 | --- | --- |
 | Uint32 | %retval% |
-| [AccountData](#accountdata) | oAccountData |
+| [AccountData](#accountdata-structure) | oAccountData |
 
 # (8) GetPrivateData
 ## Request
@@ -280,7 +280,7 @@ This method does not take any parameters.
 ## Response
 | Type | Name |
 | --- | --- |
-| [AccountData](#accountdata) | oAccountData |
+| [AccountData](#accountdata-structure) | oAccountData |
 | [Data] | oPublicData |
 | [Data] | oPrivateData |
 
