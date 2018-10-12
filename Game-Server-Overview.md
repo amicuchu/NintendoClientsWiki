@@ -21,7 +21,7 @@ Each game server has a unique game server id and a sandbox access key. The game 
 List of game server ids and access keys: [[Game Server List]]
 
 ## 3DS
-Login information is requested from the NASC server. Packets are encoded using [PRUDP V0](PRUDP-Protocol#v0-format).
+Login information is requested from the NASC server. Packets are encoded using [PRUDP V0](PRUDP-Protocol#v0-format) or [PRUDP V1](PRUDP-Protocol#v1-format).
 
 ## Wii U
 ![](https://www.dropbox.com/s/zttspz7v9olzazl/diagram_wiiu.png?raw=1)
