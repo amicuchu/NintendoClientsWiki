@@ -1,5 +1,6 @@
 ## 3DS
 | Game | Access Key |
+| --- | --- |
 | Mario Kart 7 | 6181dff1 |
 
 ## Wii U
