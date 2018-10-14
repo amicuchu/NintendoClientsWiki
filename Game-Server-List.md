@@ -1,6 +1,7 @@
 ## 3DS
 | Game | Access Key |
 | --- | --- |
+| Friends | ridfebb9 |
 | Mario Kart 7 | 6181dff1 |
 
 ## Wii U
