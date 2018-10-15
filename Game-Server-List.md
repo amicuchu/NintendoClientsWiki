@@ -10,6 +10,7 @@
 | --- | --- | --- |
 | Friends | 00003200 | ridfebb9 |
 | Mario Kart 8 | 1010EB00 | 25dbf96a |
+| SSB4 | 10110E00 | 2869ba38 |
 | DKC:TF | 10144800 | 7fcf384a |
 | Super Mario Maker | 1018DB00 | 9f2b4678 |
 | Pokkén Tournament | 101C5800 | 6ef3adf1 |
