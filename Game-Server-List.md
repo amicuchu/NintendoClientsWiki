@@ -1,8 +1,9 @@
 ## 3DS
-| Game | Access Key |
-| --- | --- |
-| Friends | ridfebb9 |
-| Mario Kart 7 | 6181dff1 |
+| Game | Game Server ID | Access Key |
+| --- | --- | --- |
+| Friends | 00003200 | ridfebb9 |
+| Metroid Prime: FF | 0016CE00 | f79fb3c5 |
+| Mario Kart 7 | ? | 6181dff1 |
 
 ## Wii U
 | Game | Game Server ID | Access Key |
