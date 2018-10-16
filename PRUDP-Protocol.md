@@ -100,7 +100,7 @@ The packet signature is the HMAC of the following data, with the key being the M
 | 8 | Bytes 0x4 - 0xC of the packet header |
 | 0, 16 or 32 | The secure key (not present in a connection to the authentication server) |
 | 4 | Sum of all access key bytes (little endian) |
-| 16 | Connection signature, or 16 zero-bytes if it has not yet been received |
+| 0 or 16 | Connection signature, or nothing if it hasn't been received yet |
 | | Packet-specific data |
 | | Payload |
 
