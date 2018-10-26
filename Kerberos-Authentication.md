@@ -23,12 +23,16 @@ The length of the secure key is always 32 bytes, except in communication with th
 ## Ticket Data
 The ticket info is kerberos-encrypted with a key that's only known by the server. The client does not need to parse this data.
 
-### 3DS / Wii U
+### Old version
+This is used by Wii U games and most 3DS games.
+
 | Type | Description |
 | --- | --- |
 | [Ticket Info](#ticket-info) | Encrypted ticket info |
 
-### Switch
+### New version
+This is used by Switch games and some recent 3DS games.
+
 | Type | Description |
 | --- | --- |
 | [Buffer] | Ticket key |
