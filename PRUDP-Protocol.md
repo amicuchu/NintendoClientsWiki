@@ -242,6 +242,8 @@ This is a random value generated at the start of each session. The server's sess
 ### Sequence id
 This is an incrementing value used to ensure that packets arrive in correct order. The sequence id of client-to-server packets is separate from the sequence id of server-to-client packets.
 
+In acknowledgement packets, the sequence id is set to the id of the packet that is acknowledged.
+
 ### Fragment id
 Big data packets are split into smaller ones. The last fragment always has fragment id 0. Other fragments have an incrementing fragment id starting at 1.
 
