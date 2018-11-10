@@ -26,47 +26,44 @@ After a connection between the consoles has been established, the [PIA protocol]
 ### LanSessionSearchCriteria
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 2 | Unknown |
-| 0x2 | 2 | Unknown |
-| 0x4 | 2 | Unknown |
-| 0x6 | 2 | Unknown |
-| 0x8 | 1 | Unknown |
-| 0x9 | 1 | Unknown |
-| 0xA | 4 | Unknown |
-| 0xE | 4 | Unknown |
-| 0x12 | 4 | Unknown |
-| 0x16 | 4 | Unknown |
-| 0x1A | 0x50 | Unknown |
-| 0x6A | 0x50 | Unknown |
-| 0xBA | 0x50 | Unknown |
-| 0x10A | 0x50 | Unknown |
-| 0x15A | 0x50 | Unknown |
-| 0x1AA | 0x50 | Unknown |
-| 0x1FA | 1 | Unknown |
-| 0x1FB | 1 | Unknown |
-| 0x1FC | 1 | Unknown |
-| 0x1FD | 1 | Unknown |
-| 0x1FE | 1 | Unknown |
-| 0x1FF | 1 | Unknown |
-| 0x200 | 4 | Unknown |
-| 0x204 | 4 | Unknown |
-| 0x208 | 4 | Unknown |
-| 0x20C | 4 | Unknown |
-| 0x210 | 4 | Unknown |
-| 0x214 | 4 | Unknown |
-| 0x218 | 4 | Unknown |
-| 0x21C | 4 | Unknown |
-| 0x220 | 4 | Unknown |
-| 0x224 | 4 | Unknown |
-| 0x228 | 4 | Unknown |
-| 0x22C | 4 | Unknown |
-| 0x230 | 1 | Unknown |
-| 0x231 | 1 | Unknown |
-| 0x232 | 1 | Unknown |
-| 0x233 | 1 | Unknown |
-| 0x234 | 1 | Unknown |
-| 0x235 | 1 | Unknown |
-| 0x236 | 4 | Unknown |
+| 0x0 | 4 | Minimum number of participants ([range](#range)) |
+| 0x4 | 4 | Maximum number of participants ([range](#range)) |
+| 0x8 | 1 | Opened only |
+| 0x9 | 1 | Vacant only |
+| 0xA | 4 | Result range offset |
+| 0xE | 4 | Result range size |
+| 0x12 | 4 | Game mode |
+| 0x16 | 4 | Session type |
+| 0x1A | 0x50 * 6 | [Attribute lists](#attribute-list) |
+| 0x1FA | 1 * 6 | Number of attributes |
+| 0x200 | 4 * 6 | Attribute range min |
+| 0x218 | 4 * 6 | Attribute range max |
+| 0x230 | 1 * 6 | Is attribute range used |
+| 0x236 | 4 | [Validity flags](#validity-flags) |
+
+#### Validity flags
+These flags indicate which fields have a valid value set.
+
+| Mask | Description |
+| --- | --- |
+| 0x1 | Minimum number of participants |
+| 0x2 | Maximum number of participants |
+| 0x4 | Opened only |
+| 0x8 | Vacant only |
+| 0x10 | Game mode |
+| 0x20 | Session type |
+| 0x40 | First attribute list |
+| ... | ... |
+| 0x800 | Last attribute list |
+
+#### Range
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 2 | Minimum |
+| 0x2 | 2 | Maximum |
+
+#### Attribute list
+Each attribute list may contain up to 20 attributes. Every attribute is stored as a 4-byte integer.
 
 ## (1) Browse reply
 | Offset | Size | Description |
