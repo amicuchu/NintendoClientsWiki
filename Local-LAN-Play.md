@@ -10,7 +10,7 @@ After a connection between the consoles has been established, the [PIA protocol]
 ### Packet types
 | Value | Description |
 | --- | --- |
-| 0 | Browse request |
+| 0 | [Browse request](#0-browse-request) |
 | 1 | Browse reply |
 | 2 | Get host request |
 | 3 | Get host reply |
@@ -18,7 +18,7 @@ After a connection between the consoles has been established, the [PIA protocol]
 | 5 | Get session reply |
 | 6 | Keep alive message |
 
-## Browse Request
+## (0) Browse Request
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 0x23A | [LanSessionSearchCriteria](#lansessionsearchcriteria) |
