@@ -68,7 +68,7 @@ Each attribute list may contain up to 20 attributes. Every attribute is stored a
 ## (1) Browse reply
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | | [LanSessionInfo](#lansessioninfo) |
+| 0x0 | 0x4F2 | [LanSessionInfo](#lansessioninfo) |
 
 ### LanSessionInfo
 | Offset | Size | Description |
