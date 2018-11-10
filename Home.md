@@ -6,6 +6,7 @@ Welcome to the NintendoClients wiki!
 * [NEX Services](NEX-Protocols)
 * [PIA Protocol (P2P)](PIA-Protocol)
 * [PIA Services](PIA-Protocols)
+* [[Local LAN Play]]
 * [[Account Server]]
 
 ## Other pages
