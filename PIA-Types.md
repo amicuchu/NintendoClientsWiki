@@ -19,34 +19,34 @@
 | 0x41 | 1 | Always 0? |
 
 ## StationInfo
-| Offset | Size | Description |
-| --- | --- | --- |
-| 0x0 | 0x36 | [StationConnectionInfo](#stationconnectioninfo) |
-| 0x36 | 1 | Station index |
-| 0x37 | 1 | Padding |
+| Type | Description |
+| --- | --- |
+| [StationConnectionInfo](#stationconnectioninfo) | Connection info |
+| Uint8 | Station index |
+| Uint8 | Padding |
 
 ## StationConnectionInfo
-| Offset | Size | Description |
-| --- | --- | --- |
-| 0x0 | 27 | Public [StationLocation](#stationlocation) |
-| 0x1B | 27 | Local [StationLocation](#stationlocation) |
+| Type | Description |
+| --- | --- |
+| [StationLocation](#stationlocation) | Public station location |
+| [StationLocation](#stationlocation) | Local station location |
 
 ## StationLocation
 These fields are directly taken from a [StationURL](NEX-Common-Types#station-url).
 
-| Offset | Size | Description |
-| --- | --- | --- |
-| 0x0 | 8 | [StationAddress](#stationaddress) |
-| 0x8 | 4 | PID |
-| 0xC | 4 | CID |
-| 0x10 | 4 | RVCID |
-| 0x14 | 1 | Url type (1=prudp 2=prudps 3=udp) |
-| 0x15 | 1 | sid |
-| 0x16 | 1 | stream |
-| 0x17 | 1 | natm |
-| 0x18 | 1 | natf |
-| 0x19 | 1 | type |
-| 0x1A | 1 | probeinit |
+| Type | Description |
+| --- | --- |
+| [StationAddress](#stationaddress) | Station address |
+| [PID](NEX-Common-Types#pid) | PID |
+| Uint32 | CID |
+| Uint32 | RVCID |
+| Uint8 | Url type (1=prudp 2=prudps 3=udp) |
+| Uint8 | sid |
+| Uint8 | stream |
+| Uint8 | natm |
+| Uint8 | natf |
+| Uint8 | type |
+| Uint8 | probeinit |
 
 ## StationAddress
 | Offset | Size | Description |
