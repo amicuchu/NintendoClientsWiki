@@ -68,4 +68,28 @@ Each attribute list may contain up to 20 attributes. Every attribute is stored a
 ## (1) Browse reply
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | | LanSessionInfo |
+| 0x0 | | [LanSessionInfo](#lansessioninfo) |
+
+### LanSessionInfo
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 4 | Game mode |
+| 0x4 | 4 | Session id |
+| 0x8 | 4 * 6 | Attributes |
+| 0x20 | 2 | Current number of participants |
+| 0x22 | 2 | Minimum number of participants |
+| 0x24 | 2 | Maximum number of participants |
+| 0x26 | 4 | Session type |
+| 0x2A | 0x180 | Application data |
+| 0x1AA | 4 | Application data size |
+| 0x1AE | 1 | Is opened |
+| 0x1AF | 0x23 | [StationLocation](PIA-Types#stationlocation) of host |
+| 0x1D2 | 0x32 * 16 | [LanStationInfo](#lanstationinfo) for every player in the room |
+
+#### LanStationInfo
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 1 | Role |
+| 0x1 | 1 | Username encoding type |
+| 0x2 | 20 | Username |
+| 0x2A | 8 | Station id |
