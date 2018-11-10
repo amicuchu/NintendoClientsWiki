@@ -52,6 +52,11 @@ These fields are directly taken from a [StationURL](NEX-Common-Types#station-url
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 6 | [InetAddress](#inetaddress) |
+
+Only present in some games:
+
+| Offset | Size | Description |
+| --- | --- | --- |
 | 0x6 | 2 | Extension id |
 
 ## InetAddress
