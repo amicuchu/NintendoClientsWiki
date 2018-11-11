@@ -1,15 +1,17 @@
 Welcome to the NintendoClients wiki!
-## Protocol documentation
+## Game servers (NEX)
 * [[Game Server Overview]]
 * [[PRUDP Protocol]]
 * [[RMC Protocol]]
 * [NEX Services](NEX-Protocols)
+
+## Peer-to-peer (PIA)
 * [PIA Protocol (P2P)](PIA-Protocol)
 * [PIA Services](PIA-Protocols)
 * [[Local LAN Play]]
-* [[Account Server]]
 
 ## Other pages
+* [[Account Server]]
 * [[Network Library Versions]]
 * [[Game Server List]]
 * [[Server List]]
