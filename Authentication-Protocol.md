@@ -2,7 +2,7 @@
 ---
 Alternative name: TicketGrantingProtocol
 
-Each game server got two different servers: an authentication server and a secure server. This is the only protocol that runs on the authentication server. Other protocols are only available on the secure server.
+This is the only protocol that's available on the authentication server. Other protocols are only available on the secure server.
 
 | Method ID | Method Name |
 | --- | --- |
@@ -19,7 +19,7 @@ Alternative name: ValidateAndRequestTicket
 ## Request
 | Type | Name | Description |
 | --- | --- | --- |
-| [String] | strUserName | Username (user pid) |
+| [String] | strUserName | Username |
 
 ## Response
 | Type | Name | Description |
@@ -44,7 +44,7 @@ Alternative name: ValidateAndRequestTicketWithCustomData
 ## Request
 | Type | Name | Description |
 | --- | --- | --- |
-| [String] | strUserName | Username (user pid) |
+| [String] | strUserName | Username |
 | [Data]&lt;[AuthenticationInfo](#authentication-info)&gt; | oExtraData | Authentication info |
 
 ### Authentication Info
