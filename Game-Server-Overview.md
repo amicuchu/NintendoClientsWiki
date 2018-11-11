@@ -1,40 +1,57 @@
 ## General
-Nintendo offers two networking libraries to developers: NEX and PIA.
+Nintendo offers a networking library called NEX.
 
-NEX provides functions to connect and talk to game servers. It's not actually written by Nintendo itself. Rather, it's a version of [Quazal Rendez-Vous](http://www.quazal.com/rendez-vous.htm) written specifically for Nintendo. Thus, some things like the [[PRUDP Protocol]] may be seen in other games that use Quazal.
+NEX provides functions to connect and talk to game servers. Nintendo hasn't written it from scratch. It's based on [Quazal Rendez-Vous](http://www.quazal.com/rendez-vous.htm), so some things like the [[PRUDP Protocol]] may be seen in other games that use Quazal.
 
-PIA sets up and maintains peer-to-peer connections, and allows games to send both reliable and unreliable packets to other consoles. This library cannot be used without NEX, since NEX must be used to perform match making and NAT traversal.
+### Finding the game servers
+To connect to a game server, you first need to find it. Every platform has its own way to find a game server. A list of game server ids can be found here: [[Game Server List]].
+
+<table>
+  <tr>
+    <td><b>3DS</b></td><td>The game server location is requested from the NASC server</td>
+  </tr>
+  <tr>
+    <td><b>Wii U</b></td><td>The game server location is requested from the [[account server]] (/provider/nex_token/@me)</td>
+  </tr>
+  <tr>
+    <td><b>Switch</b></td><td>The game server is found by DNS lookup: g<code>&lt;game server id&gt;</code>-lp1.s.n.srv.nintendo.net</td>
+  </tr>
+</table>
 
 ### The protocols used by NEX
-At the lowest level, NEX uses a transport protocol called [PRUDP](PRUDP-Protocol). The main purpose of this protocol is to reliably send UDP packets, but it also offers encryption and compression algorithms. Nintendo doesn't use compression however.
+![](https://www.dropbox.com/s/wahcq2ifyncd3bu/protocols.png?raw=1)
 
-At the highest level, NEX provides a bunch of [services](NEX-Protocols), with each service providing several methods. To achieve this, NEX uses a simple [RMC protocol](RMC-Protocol) (remote method call). Whenever a game wants to call a method on a service, NEX builds a RMC request and sends it through the PRUDP connection.
+At the highest level, NEX provides a bunch of [services](NEX-Protocols), with each service providing several methods. To achieve this, NEX uses a simple [RMC protocol](RMC-Protocol) (remote method call). Whenever a game wants to call a method on a service, NEX builds a RMC request and sends it through the underlying connection.
+
+The underlying protocol varies per game and platform. Originally, the purpose of [PRUDP](PRUDP-Protocol) was to reliably send UDP packets. Starting with Nintendo Switch, NEX also supports TCP and WebSocket as underlying protocol however.
+
+<table>
+  <tr>
+    <td><b>3DS</b></td><td>Packets are encoded using <a href="PRUDP-Protocol#v0-format">PRUDP V0</a> or <a href="PRUDP-Protocol#v1-format">PRUDP V1</a></td>
+  </tr>
+  <tr>
+    <td><b>Wii U</b></td><td>Packets are normally encoded using <a href="PRUDP-Protocol#v1-format">PRUDP V1</a>. Only one server still uses <a href="PRUDP-Protocol#v0-format">PRUDP V0</a>: the friends server.</td>
+  </tr>
+  <tr>
+    <td><b>Switch</b></td><td>Switch game are configured to use <a href="PRUDP-Protocol#lite-format">PRUDP Lite</a> on top of WebSockets.</td>
+  </tr>
+</table>
 
 ### Authentication
-Each game server actually consists of two servers: an authentication server and a secure server. After retrieving login information elsewhere, NEX connects to the authentication server. This server only provides a single service: the [authentication service](Authentication-Protocol).
+Every game server actually consists of two servers: an authentication server and a secure server. After retrieving login information elsewhere, NEX connects to the authentication server. This server only provides a single service: the [authentication service](Authentication-Protocol).
 
-The connection to the authentication server isn't secure. Anyone with enough knowledge can decrypt the packets, but that's not a problem: the only purpose of the authentication server is to set up a secure connection to the secure server (see [[Kerberos Authentication]]).
+With UDP as underlying protocol, the connection to the authentication server isn't secure. Anyone with enough knowledge can decrypt the packets, but that's not a problem: the only purpose of the authentication server is to authenticate the user and set up a secure connection to the secure server.
 
-### Game server identification
-Each game server has a unique game server id and a sandbox access key. The game server id is used to determine the location of the game server, either by DNS lookup (Switch) or from an external server (3DS/Wii U). The access key is used to calculate the PRUDP packet checksum. It's known by both the client and the server, but never sent through the connection.
+Game server accounts are separate from other Nintendo accounts. Username and password are generated automatically and can not be changed by normal users. There's also a bunch of [special accounts](Authentication-Protocol#4-getpid) on all game servers.
 
-List of game server ids and access keys: [[Game Server List]]
-
-## 3DS
-![](https://www.dropbox.com/s/gemt6b8gtinep45/diagram_3ds.png?raw=1)
-
-Login information is requested from the NASC server. Packets are encoded using [PRUDP V0](PRUDP-Protocol#v0-format) or [PRUDP V1](PRUDP-Protocol#v1-format).
-
-## Wii U
-![](https://www.dropbox.com/s/zttspz7v9olzazl/diagram_wiiu.png?raw=1)
-
-Login information is requested from the [[Account Server]] (/provider/nex_token/@me). Packets are normally encoded using [PRUDP V1](PRUDP-Protocol#v1-format). Only one server still uses [PRUDP V0](PRUDP-Protocol#v0-format): the friends server.
-
-## Switch
-![](https://www.dropbox.com/s/cbud2qf2vpt14om/diagram_switch.png?raw=1)
-
-The location of game servers is found by DNS lookup: g`<game server id>`-lp1.s.n.srv.nintendo.net. For example, Super Mario Odyssey's game server is g255ba201-lp1.s.n.srv.nintendo.net.
-
-Furthermore, NEX now supports UDP, TCP and WebSockets as underlying protocol. Switch games are configured to use WebSockets. Since TCP and WebSockets are already reliabile themselves, a new packet encoding is used: [PRUDP Lite](PRUDP-Protocol#lite-format). Also, since the connection is SSL-encrypted anyway, packets are no longer RC4-encrypted.
-
-Most Switch servers have disabled the guest account. Logging in with a normal account is quite complicated. A token must be provided to [LoginEx](Authentication-Protocol#2-loginex), which can only be retrieved from the BaaS server, but the BaaS server can only be accessed after going through dauth (device authorization) and aauth (application authorization). SciresM has explained this in more detail [here](https://www.reddit.com/r/SwitchHacks/comments/8rxg26).
+<table>
+  <tr>
+    <td><b>3DS</b></td><td>Login information is requested from the NASC server</td>
+  </tr>
+  <tr>
+    <td><b>Wii U</b></td><td>Login information is requested from the [[account server]] (/provider/nex_token/@me)</td>
+  </tr>
+  <tr>
+    <td><b>Switch</b></td><td>Login information is requested from the BAAS server. To access the BAAS server one must first go through DAuth (device authorization) and AAuth (application authorization). SciresM has explained this in more detail [here](https://www.reddit.com/r/SwitchHacks/comments/8rxg26).</td>
+  </tr>
+</table>
