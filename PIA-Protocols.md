@@ -19,6 +19,7 @@ See also: [[PIA Protocol]]
 | 0x2400 | Clone Protocol |
 | 0x2800 | Voice Protocol |
 | 0x3000 | Reliable Protocol |
+| 0x4400 | LAN Protocol |
 | 0x7000 | Reliable Broadcast Protocol |
 | 0x7200 | [[Session Protocol]] |
 | 0x8000 | Monitoring Data Protocol |
