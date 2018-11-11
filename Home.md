@@ -1,7 +1,5 @@
 Welcome to the NintendoClients wiki!
 
-This wiki aims to provide a complete description of the protocols and everything you need to know about game servers.
-
 ## Game servers (NEX)
 * [Game Server Overview](NEX-Overview-(Game-Servers))
 * [[PRUDP Protocol]]
