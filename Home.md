@@ -1,6 +1,6 @@
 Welcome to the NintendoClients wiki!
 ## Game servers (NEX)
-* [Game Server Overview](NEX-Overview-Game-Servers)
+* [Game Server Overview](NEX-Overview-(Game-Servers))
 * [[PRUDP Protocol]]
 * [[RMC Protocol]]
 * [NEX Services](NEX-Protocols)
