@@ -19,6 +19,7 @@
 ## Switch
 | Game | Game Server ID | Access Key |
 | --- | --- | --- |
+| Splatoon 2 | 24E30D00<br>2C4BFF00<br>2DF33D01 | f25e0f69<br>f73d3ebe<br>4eb18d39 |
 | Lego Worlds | 24FD5300 | 4d3b08ce |
 | Super Mario Odyssey | 255BA201 | afef0ecf |
 | ARMS | 25C08801<br>2DF33D01 | b6b34c51<br>4eb18d39 |
