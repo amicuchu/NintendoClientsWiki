@@ -264,7 +264,7 @@ A list of game servers and their access keys can be found [here](Game-Server-Lis
 ### Connection signature
 The server sends its connection signature in its response to the client's SYN packet. The client sends its connection signature in the CONNECT packet. Other SYN/CONNECT packets have this field set to 0.
 
-If present, the connection signature is a HMAC based on the perceived ip and port of the other end point. Neither server nor client can verify this signature.
+If present, the connection signature is the first part of a HMAC based on the perceived ip and port of the other end point. Neither server nor client can verify this signature.
 
 ### Lite signature
 Unlike the connection signature, this signature is actually verified by the server. It's the HMAC of the following data, with the key being the MD5 hash of the [access key](#sandbox-access-key).
