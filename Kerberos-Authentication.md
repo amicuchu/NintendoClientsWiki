@@ -1,5 +1,5 @@
 # Overview
-When requesting a NEX token from the account server, one of the things the server returns is your NEX password. This password is never sent to the authentication server. Instead, it is used to derive the Kerberos key. The Kerberos key is used to decrypt the Kerberos ticket received from the authentication server, which (among other information) contains the key that will be used in communication with the secure server.
+Your password is never sent to the authentication server. Instead, it is used to derive the kerberos key. The kerberos key is used to decrypt the kerberos ticket received from the authentication server, which (among other information) contains the session key that will be used in the connection with the secure server.
 
 ## Kerberos Encryption
 First, the data is encrypted with RC4. Then a HMAC of the encrypted data is appended to the data. The decryption process is the reverse: first check the HMAC, then decrypt.
@@ -14,11 +14,11 @@ The Kerberos ticket is encrypted with the following key:
 ## Kerberos Ticket
 | Type | Description |
 | --- | --- |
-| Bytes | Secure key |
+| Bytes | Session key |
 | [PID] | Server pid ([Quazal Rendez-Vous](Authentication-Protocol#4-getpid)) |
 | [Buffer] | [Ticket data](#ticket-data) |
 
-The length of the secure key is always 32 bytes, except in communication with the friends server, in which case it's 16 bytes.
+The length of the session key is always 32 bytes, except in communication with the friends server, in which case it's 16 bytes.
 
 ## Ticket Data
 The ticket info is kerberos-encrypted with a key that's only known by the server. The client does not need to parse this data.
@@ -47,7 +47,7 @@ The date time is used to check ticket expiration. A ticket is valid for exactly 
 | --- | --- |
 | [DateTime] | Date time |
 | [PID] | User pid |
-| Bytes | Secure key |
+| Bytes | Session key |
 
 [Buffer]: NEX-Common-Types#buffer
 [PID]: NEX-Common-Types#pid
