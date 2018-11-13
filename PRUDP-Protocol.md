@@ -102,7 +102,7 @@ The packet signature is the HMAC of the following data, with the key being the M
 | 4 | Sum of all [access key](#sandbox-access-key) bytes (little endian) |
 | 0 or 16 | Connection signature, or nothing if it hasn't been received yet |
 | | Packet-specific data |
-| | Payload |
+| | Encrypted payload |
 
 ### Packet-specific data
 See [optional data](#optional-data).
