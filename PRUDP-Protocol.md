@@ -69,7 +69,7 @@ checksum = calc_checksum(sum(ACCESS_KEY), packet_data)
 ```
 
 ## V1 Format
-This format is used by all Wii U games and apps except for friends services, and possibly some 3DS games.
+This format is used by all Wii U games and apps except for friends services, and some 3DS games.
 
 | Size | Description |
 | --- | --- |
