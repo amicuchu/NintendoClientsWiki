@@ -42,7 +42,7 @@ In DATA and DISCONNECT packets the packet signature is the first 4 bytes of the 
 
 | Size | Description |
 | --- | --- |
-| 0 or 16 | Secure key (or nothing in an authentication connection) |
+| 0 or 16 | [Session key](#secure-server-connection) (or nothing in an authentication connection) |
 | 2 | [Sequence id](#sequence-id) |
 | 1 | [Fragment id](#fragment-id) |
 | | Encrypted payload |
@@ -98,7 +98,7 @@ The packet signature is the HMAC of the following data, with the key being the M
 | Size | Description |
 | --- | --- |
 | 8 | Bytes 0x4 - 0xC of the packet header |
-| 0, 16 or 32 | The secure key (not present in a connection to the authentication server) |
+| 0, 16 or 32 | The [session key](#secure-server-connection) (not present in a connection to the authentication server) |
 | 4 | Sum of all [access key](#sandbox-access-key) bytes (little endian) |
 | 0 or 16 | Connection signature, or nothing if it hasn't been received yet |
 | | Packet-specific data |
@@ -151,8 +151,15 @@ The following techniques are used to achieve reliability:
 * A [sequence id](#sequence-id) is sent along with a packet, so the receiver can reorder packets if necessary.
 * To keep the connection alive, both client and server send PING packets to each other after a certain amount of time has passed.
 
+### Encryption
+**V0 and V1**: All payloads are encrypted using RC4, with separate streams for client-to-server packets and server-to-client packets. The connection to the authentication server is encrypted using a default key that's always the same: `CD&ML`. The connection to the secure server is encrypted using the session key from the [Kerberos ticket](Kerberos-Authentication#kerberos-ticket).
+
+**Lite**: Since the underlying connection is TLS-encrypted anyway, no encryption is used by PRUDP.
+
 ### Secure server connection
-While the payload should be empty when connecting to the authentication server, the secure server requires the following data to be in the payload of the CONNECT packet:
+As explained on the [Game Server Overview](NEX-Overview-(Game-Servers)) page, every game server consists of an authentication server and a secure server. If a client wants to connect to the secure server it must first request a [ticket](Kerberos-Authentication) from the authentication server. The ticket contains the session key that's used in the secure server connection, among other information.
+
+The payload of the CONNECT packet should be empty while connecting to the authentication server. While connecting to the secure server, the CONNECT packet should have the following payload:
 
 #### Connection request
 | Type | Description |
@@ -160,7 +167,7 @@ While the payload should be empty when connecting to the authentication server, 
 | [Buffer] | Kerberos ticket data |
 | [Buffer] | [Kerberos-encrypted](Kerberos-Authentication) request data |
 
-Request data (encrypted with secure key):
+Request data (encrypted with session key):
 
 | Type | Description |
 | --- | --- |
@@ -174,9 +181,6 @@ The CONNECT acknowledgement packet contains a [Buffer] with the following data:
 | Type | Description |
 | --- | --- |
 | Uint32 | Response check value + 1 |
-
-### Encryption
-All payloads are encrypted using RC4, with separate streams for client-to-server packets and server-to-client packets. The connection to the authentication server is encrypted using a default key that's always the same: `CD&ML`. The connection to the secure server is encrypted using the secure key from the [Kerberos ticket](Kerberos-Authentication#kerberos-ticket).
 
 ### Virtual ports
 When multiple PRUDP connections are made to the same address, NEX doesn't create a new socket for each connection. Instead, it uses a single socket to create multiple PRUDP connections. To distinguish between connections, each packet contains a source and destination port.
