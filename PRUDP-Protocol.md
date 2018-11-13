@@ -20,7 +20,7 @@ This format is only used by the friends server and some 3DS games.
 | 0x9 | 2 | [Sequence id](#sequence-id) |
 | 0xB | | Packet-specific data |
 | | | Payload |
-| | 1 | Checksum |
+| | 1 | [Checksum](#checksum) |
 
 Packet-specific data:
 
