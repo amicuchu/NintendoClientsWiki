@@ -76,7 +76,7 @@ This format is used by all Wii U games and apps except for friends services, and
 | 2 | Magic number: 0xEA 0xD0 |
 | 12 | Packet header |
 | 16 | [Packet signature](#packet-signature-1) |
-| | Packet-specific data |
+| | [Packet-specific data](#packet-specific-data) |
 | | Payload |
 
 ### Packet header
