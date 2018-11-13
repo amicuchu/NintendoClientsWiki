@@ -33,12 +33,12 @@ Packet-specific data:
 ### Packet signature
 **Friends server:**
 * In DATA packets with an empty payload the packet signature is always set to 0x12345678.
-* In all other DATA packets the signature is the first 4 bytes of the HMAC of the encrypted payload, with the key being the MD5 hash of the access key.
+* In all other DATA packets the signature is the first 4 bytes of the HMAC of the encrypted payload, with the key being the MD5 hash of the [access key](#sandbox-access-key).
 * In all other packets the signature is the connection signature received during connection establishment.
 
 **Games:**
 
-In DATA and DISCONNECT packets the packet signature is the first 4 bytes of the HMAC of the following data, with the key being the MD5 hash of the access key:
+In DATA and DISCONNECT packets the packet signature is the first 4 bytes of the HMAC of the following data, with the key being the MD5 hash of the [access key](#sandbox-access-key):
 
 | Size | Description |
 | --- | --- |
@@ -93,13 +93,13 @@ This format is used by all Wii U games and apps except for friends services, and
 | 0xA | 2 | [Sequence id](#sequence-id) |
 
 ### Packet signature
-The packet signature is the HMAC of the following data, with the key being the MD5 hash of the access key:
+The packet signature is the HMAC of the following data, with the key being the MD5 hash of the [access key](#sandbox-access-key):
 
 | Size | Description |
 | --- | --- |
 | 8 | Bytes 0x4 - 0xC of the packet header |
 | 0, 16 or 32 | The secure key (not present in a connection to the authentication server) |
-| 4 | Sum of all access key bytes (little endian) |
+| 4 | Sum of all [access key](#sandbox-access-key) bytes (little endian) |
 | 0 or 16 | Connection signature, or nothing if it hasn't been received yet |
 | | Packet-specific data |
 | | Payload |
@@ -256,17 +256,22 @@ For example, if a packet is split into four fragments, they will have the follow
 | Third | 3 |
 | Fourth | 0 |
 
+### Sandbox access key
+Every game server has a unique sandbox access key. This is used to calculate the [packet signature](#packet-signature). The only way to find the access key of a server is by disassembling a game that connects to this server.
+
+A list of game servers and their access keys can be found [here](Game-Server-List).
+
 ### Connection signature
 The server sends its connection signature in its response to the client's SYN packet. The client sends its connection signature in the CONNECT packet. Other SYN/CONNECT packets have this field set to 0.
 
 If present, the connection signature is a HMAC based on the perceived ip and port of the other end point. Neither server nor client can verify this signature.
 
 ### Lite signature
-Unlike the connection signature, this signature is actually verified by the server. It's the HMAC of the following data, with the key being the MD5 hash of the access key.
+Unlike the connection signature, this signature is actually verified by the server. It's the HMAC of the following data, with the key being the MD5 hash of the [access key](#sandbox-access-key).
 
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 16 | MD5 of access key |
+| 0x0 | 16 | MD5 of [access key](#sandbox-access-key) |
 | 0x10 | 16 | Connection signature received from server |
 
 ### Optional data
