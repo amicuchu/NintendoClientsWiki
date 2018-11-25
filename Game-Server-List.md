@@ -3,10 +3,10 @@
 | --- | --- | --- |
 | Friends | 00003200 | ridfebb9 |
 | Mario Kart 7 | 0001DB00 | 6181dff1 |
-| Metroid Prime: FF | 0016CE00 | f79fb3c5 |
 | Kid Icarus Uprising | 00030000 | 58a7e494 |
 | Pokemon X/Y | 00055D01 | 876138df |
 | Luigi's Mansion 2 | 00076400 | 3861a9f8 |
+| Metroid Prime: FF | 0016CE00 | f79fb3c5 |
 | TLoZ: Tri Force Heroes | 00176E00 | c1621b84 |
 
 ## Wii U
