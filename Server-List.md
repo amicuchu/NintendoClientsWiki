@@ -37,3 +37,4 @@ Replace '%' by one of the following:
 | - e97b8a9d672e4ce4845ec6947cd66ef6-sb.baas.nintendo.com<br>- e97b8a9d672e4ce4845ec6947cd66ef6-sb.accounts.nintendo.com<br>- e97b8a9d672e4ce4845ec6947cd66ef6-sb-api.accounts.nintendo.com | |
 | - consumer.%.npns.srv.nintendo.net | |
 | - dragons.hac.%.dragons.nintendo.net | |
+| - storage.lp1.scsi.srv.nintendo.net | |
