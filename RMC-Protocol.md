@@ -5,7 +5,7 @@ This is a simple remote method call protocol that lies on top of the [[PRUDP pro
 | --- | --- | --- |
 | 0x0 | 4 | Size, excluding this field |
 | 0x4 | 1 | [Protocol id](NEX-Protocols), ORed with 0x80 |
-| 0x5 | 4 | Call id, an incrementing number used match a response to the right request |
+| 0x5 | 4 | Call id, an incrementing number used to match a response to the right request |
 | 0x9 | 4 | Method id |
 | 0xD | ... | Method parameters |
 
