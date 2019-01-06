@@ -50,7 +50,7 @@ In DATA and DISCONNECT packets the packet signature is the first 4 bytes of the 
 In all other packets the signature is the connection signature that has been received while the connection was made.
 
 ### Checksum
-The checksum is calculated over the whole packet (both header and encrypted payload), and uses the following algorithm (the example code is written in python):
+The checksum is calculated over the whole packet (both header and encrypted payload), and uses the following algorithm (in python):
 ```python
 def calc_checksum(checksum, data):
 	#Little endian!
