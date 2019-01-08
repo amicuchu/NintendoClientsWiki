@@ -48,7 +48,7 @@ Here's an example error response:
   </error>
 </errors>
 ```
-
+[List of error codes](#error-codes).
 ### GET /admin/time
 
 ### GET /admin/mapped_ids
