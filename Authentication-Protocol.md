@@ -62,7 +62,14 @@ Alternative name: ValidateAndRequestTicketWithCustomData
 | 3.8.10AMA (SMM) | 3017 |
 
 ## Response
-Same as response for the [Login](#1-login) method.
+| Type | Name | Description |
+| --- | --- | --- |
+| [Result] | %retval% | Result code |
+| [PID] | pidPrincipal | User pid |
+| [Buffer] | pbufResponse | [Kerberos ticket](Kerberos-Authentication#kerberos-ticket) |
+| [RVConnectionData](NEX-Common-Types#rendez-vous-connection-data-structure) | pConnectionData | Connection info for secure server.<br><br>The Nintendo Switch allows the secure server to be at the same address as the authentication server. In that case, the secure server station url points to  0.0.0.1 with port 1. |
+| [String] | strReturnMsg | Server build name |
+| [String] | pSourceKey | **Only present on Switch.** If this is a non-empty hex string, key derivation is skipped and this string is used as the key to decrypt the ticket instead. |
 
 # (3) RequestTicket
 ## Request
