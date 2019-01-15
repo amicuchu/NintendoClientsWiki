@@ -1,6 +1,18 @@
-# Table of Contents
-1. [NEX Error Codes](#nex-error-codes)
-2. [NEX Error Descriptions](#nex-error-descriptions)
+# Error Categories
+| Error Codes | Description |
+| --- | --- |
+| 101-XXXX | FP (friends) |
+| 102-XXXX | ACT (accounts) |
+| 104-XXXX | BOSS (spotpass) |
+| 105-XXXX | NIM (update installation) |
+| 106-XXXX | [NEX (game servers)](#nex-error-codes)<br>[Error descriptions](#nex-error-descriptions) |
+| 115-XXXX | OLV (miiverse) |
+| 118-XXXX | PIA (peer to peer) |
+| 124-XXXX | EC (e-commerce) |
+| 150-XXXX | FS (file system) |
+| 162-XXXX | MCP (title management) |
+| 166-XXXX | AOC (add-on content) |
+| 168-XXXX | NFP (amiibo) |
 
 # NEX Error Codes
 | Error code | Name |
