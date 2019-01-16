@@ -12,6 +12,7 @@
 | 124-XXXX | EC (e-commerce) |
 | 150-XXXX | FS (file system) |
 | 151-XXXX | KPAD (wiimote) |
+| 155-XXXX | SAVE (save files) |
 | 160-XXXX | Fatal system error |
 | 162-XXXX | MCP (title management) |
 | 165-XXXX | VPAD (gamepad) |
