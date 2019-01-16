@@ -3,6 +3,7 @@
 | --- | --- |
 | 101-XXXX | FP (friends) |
 | 102-XXXX | ACT (accounts) |
+| 103-XXXX | AC (internet connection) |
 | 104-XXXX | BOSS (spotpass) |
 | 105-XXXX | NIM (update installation) |
 | 106-XXXX | [NEX (game servers)](#nex-error-codes)<br>[Error descriptions](#nex-error-descriptions) |
@@ -10,7 +11,10 @@
 | 118-XXXX | PIA (peer to peer) |
 | 124-XXXX | EC (e-commerce) |
 | 150-XXXX | FS (file system) |
+| 151-XXXX | KPAD (wiimote) |
+| 160-XXXX | Fatal system error |
 | 162-XXXX | MCP (title management) |
+| 165-XXXX | VPAD (gamepad) |
 | 166-XXXX | AOC (add-on content) |
 | 168-XXXX | NFP (amiibo) |
 
