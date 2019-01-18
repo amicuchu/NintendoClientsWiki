@@ -27,7 +27,7 @@
 | 23 | ? |
 | 24 | [GetFriendPicture](#24-getfriendpicture) |
 | 25 | [GetFriendPersistentInfo](#25-getfriendpersistentinfo) |
-| 26 | ? |
+| 26 | [SendInvitation](#sendinvitation) |
 
 # (1) UpdateProfile
 ## Request
@@ -123,7 +123,7 @@ This method does not return anything
 
 # (15) GetAllFriends
 ## Request
-This method does not take any request data.
+This method does not take any parameters.
 
 ## Response
 | Type | Description |
@@ -203,6 +203,15 @@ This method does not return anything
 | Type | Description |
 | --- | --- |
 | [List]&lt;[FriendPersistentInfo](#friendpersistentinfo)&gt; | Persistent info |
+
+# (26) SendInvitation
+## Request
+| Type | Description |
+| --- | --- |
+| [List]&lt;Uint32&gt; | Unknown |
+
+## Response
+This method does not return anything
 
 # Types
 ## FriendMii
