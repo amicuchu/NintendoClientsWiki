@@ -7,8 +7,8 @@
 | 3 | [UpdateMiiList](#3-updatemiilist) |
 | 4 | [UpdatePlayedGames](#4-updateplayedgames) |
 | 5 | [UpdatePreference](#5-updatepreference) |
-| 6 | GetFriendMii |
-| 7 | ? |
+| 6 | [GetFriendMii](#6-getfriendmii) |
+| 7 | [GetFriendMiiList](#7-getfriendmiis) |
 | 8 | ? |
 | 9 | ? |
 | 10 | [GetFriendRelationships](#10-getfriendrelationships) |
@@ -75,6 +75,28 @@ This method does not return anything.
 
 ## Response
 This method does not return anything
+
+# (6) GetFriendMii
+## Request
+| Type | Description |
+| --- | --- |
+| [List]&lt;[FriendMiiRequest](#friendmiirequest)&gt; | Friends |
+
+## response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[FriendMii](#friendmii)&gt; | Miis |
+
+# (7) GetFriendMiis
+## Request
+| Type | Description |
+| --- | --- |
+| [List]&lt;[FriendMiiRequest](#friendmiirequest)&gt; | Friends |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[FriendMiiList](#friendmiilist)&gt; | Mii lists |
 
 # (10) GetFriendRelationships
 ## Request
@@ -183,6 +205,26 @@ This method does not return anything
 | [List]&lt;[FriendPersistentInfo](#friendpersistentinfo)&gt; | Persistent info |
 
 # Types
+## FriendMii
+| Type | Description |
+| --- | --- |
+| Uint32 | Unknown |
+| [Mii](#mii) | Mii |
+| [DateTime] | Unknown |
+
+## FriendMiiList
+| Type | Description |
+| --- | --- |
+| Uint32 | Unknown |
+| [MiiList](#miilist) | Mii list |
+| [DateTime] | Unknown |
+
+## FriendMiiRequest
+| Type | Description |
+| --- | --- |
+| Uint32 | Unknown |
+| [DateTime] | Unknown |
+
 ## FriendPersistentInfo
 | Type | Description |
 | --- | --- |
