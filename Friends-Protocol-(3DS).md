@@ -8,7 +8,7 @@
 | 4 | [UpdatePlayedGames](#4-updateplayedgames) |
 | 5 | [UpdatePreference](#5-updatepreference) |
 | 6 | [GetFriendMii](#6-getfriendmii) |
-| 7 | [GetFriendMiiList](#7-getfriendmiis) |
+| 7 | [GetFriendMiiList](#7-getfriendmiilist) |
 | 8 | ? |
 | 9 | ? |
 | 10 | [GetFriendRelationships](#10-getfriendrelationships) |
@@ -87,7 +87,7 @@ This method does not return anything
 | --- | --- |
 | [List]&lt;[FriendMii](#friendmii)&gt; | Miis |
 
-# (7) GetFriendMiis
+# (7) GetFriendMiiList
 ## Request
 | Type | Description |
 | --- | --- |
