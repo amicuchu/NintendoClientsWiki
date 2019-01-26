@@ -370,7 +370,7 @@ This method does not return anything.
 ## Request
 | Type | Name |
 | --- | --- |
-| Uint64 | ownerId |
+| [PID] | ownerId |
 | Uint16 | persistenceSlotId |
 
 ## Response
@@ -382,7 +382,7 @@ This method does not return anything.
 ## Request
 | Type | Name |
 | --- | --- |
-| Uint64 | ownerId |
+| [PID] | ownerId |
 | [List]&lt;Uint16&gt; | persistenceSlotIds |
 
 ## Response
@@ -695,7 +695,7 @@ This method does not return anything.
 ## DataStoreReqGetAdditionalMeta ([Structure])
 | Type | Name |
 | --- | --- |
-| Uint64 | ownerId |
+| [PID] | ownerId |
 | Uint16 | dataType |
 | Uint16 | version |
 | [qBuffer] | metaBinary |
@@ -824,7 +824,7 @@ This method does not return anything.
 | Type | Name |
 | --- | --- |
 | Uint64 | dataId |
-| Uint64 | ownerId |
+| [PID] | ownerId |
 | Uint32 | size |
 | [String] | name |
 | Uint16 | dataType |
@@ -871,7 +871,7 @@ This method does not return anything.
 | Type | Name |
 | --- | --- |
 | Uint8 | searchTarget |
-| [List]&lt;Uint64&gt; | ownerIds |
+| [List]&lt;[PID]&gt; | ownerIds |
 | Uint8 | ownerType |
 | [List]&lt;Uint64&gt; | destinationIds |
 | Uint16 | dataType |
@@ -954,7 +954,7 @@ This method does not return anything.
 | Type | Name |
 | --- | --- |
 | Uint32 | dataId |
-| Uint64 | ownerId |
+| [PID] | ownerId |
 | Uint32 | size |
 | Uint16 | dataType |
 | Uint16 | version |
@@ -963,7 +963,7 @@ This method does not return anything.
 | Type | Name |
 | --- | --- |
 | Uint64 | dataId |
-| Uint64 | ownerId |
+| [PID] | ownerId |
 | Uint32 | size |
 | Uint16 | dataType |
 | Uint32 | version |
@@ -979,14 +979,14 @@ This method does not return anything.
 | Type | Name |
 | --- | --- |
 | Bool | isRated |
-| Uint64 | pid |
+| [PID] | pid |
 | Sint32 | ratingValue |
 | [DateTime] | lockExpirationTime |
 
 ## DataStorePersistenceInfo ([Structure])
 | Type | Name |
 | --- | --- |
-| Uint64 | ownerId |
+| [PID] | ownerId |
 | Uint16 | persistenceSlotId |
 | Uint64 | dataId |
 
@@ -1036,7 +1036,7 @@ This method does not return anything.
 ## DataStorePersistenceTarget ([Structure])
 | Type | Name |
 | --- | --- |
-| Uint64 | ownerId |
+| [PID] | ownerId |
 | Uint16 | persistenceSlotId |
 
 ## DataStoreKeyValue ([Structure])
@@ -1049,7 +1049,7 @@ This method does not return anything.
 | Type | Name |
 | --- | --- |
 | Uint8 | permission |
-| [List]&lt;Uint64&gt; | recipientIds |
+| [List]&lt;[PID]&gt; | recipientIds |
 
 ## DataStoreRatingInitParamWithSlot ([Structure])
 | Type | Name |
@@ -1081,7 +1081,7 @@ This method does not return anything.
 | Type | Name |
 | --- | --- |
 | Uint64 | dataId |
-| Uint64 | ownerId |
+| [PID] | ownerId |
 | Uint32 | size |
 | [String] | name |
 | Uint16 | dataType |
