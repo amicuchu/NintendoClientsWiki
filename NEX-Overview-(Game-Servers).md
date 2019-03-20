@@ -46,7 +46,7 @@ Game server accounts are separate from other Nintendo accounts. Username and pas
 
 <table>
   <tr>
-    <td><b>3DS</b></td><td>Login information is requested from the NASC server</td>
+    <td><b>3DS</b></td><td>Login information is requested from the account server (when a NNID is linked), or from the NASC server the first time you go online without NNID.</td>
   </tr>
   <tr>
     <td><b>Wii U</b></td><td>Login information is requested from the [[account server]] (/provider/nex_token/@me)</td>
