@@ -32,7 +32,7 @@
 | 0x0 | 1 | Message type |
 | 0x1 | 1 | [Result](#connection-result) |
 | 0x2 | 1 | Version |
-| 0x3 | 1 | Always 3? |
+| 0x3 | 1 | Unknown |
 
 Only present if result is OK:
 
