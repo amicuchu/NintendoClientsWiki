@@ -10,17 +10,17 @@ Every packet consists of one or more records, terminated by a record with type 0
 
 | Record type | Description |
 | --- | --- |
-| 0 | [Track selection related](#record-type-0) |
-| 1 | Unknown |
-| 2 | [Course roulette related](#record-type-2) |
-| 3 | Unknown |
-| 4 | Unknown |
-| 6 | Unknown |
-| 7 | Unknown |
-| 9 | [Unknown](#record-type-9) |
-| 10 | Chat history |
-| 0xFD | [Transport Manager](#record-type-0xfd) |
-| 0xFE | [System Transport](#record-type-0xfe) |
+| 0 | [Menu](#record-type-0) |
+| 1 | Player info |
+| 2 | [All player info](#record-type-2) |
+| 3 | Race |
+| 4 | Drive |
+| 6 | Item event |
+| 7 | Battle event |
+| 9 | [Flags](#record-type-9) |
+| 10 | Chat |
+| 0xFD | [Transport manager](#record-type-0xfd) |
+| 0xFE | [System transport](#record-type-0xfe) |
 | 0xFF | End record |
 
 ## Record Type 0
