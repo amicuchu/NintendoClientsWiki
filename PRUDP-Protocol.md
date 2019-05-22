@@ -130,7 +130,7 @@ This format is used by Nintendo Switch games.
 | 0x8 | 2 | [Type and flags](#type-and-flags) |
 | 0xA | 2 | [Sequence id](#sequence-id) |
 | 0xC | | Packet-specific data |
-| | Payload |
+| | | Payload |
 
 Packet-specific data (see [optional data](#optional-data)):
 
