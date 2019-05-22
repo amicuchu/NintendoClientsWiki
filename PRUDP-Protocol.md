@@ -189,7 +189,7 @@ When multiple PRUDP connections are made to the same address, NEX doesn't create
 
 **Lite**: The port number now uses 8 bits instead of 4. The client port is the highest unused port number &le; 0x1F. The stream types are stored in a separate byte.
 
-**Server port (3DS/Wii U)**: The authentication and secure server may not reside at the same address. The server port is always 1.
+**Server port (3DS/Wii U)**: The authentication and secure server do not reside at the same address. The server port is always 1.
 
 **Server port (Switch)**: A single websocket server handles both authentication and secure connections. The authentication server has server port 1, the secure server has server port 2.
 
