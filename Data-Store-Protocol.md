@@ -1,5 +1,7 @@
 ## [[NEX Protocols]] > Data Store (0x73)
 
+This page was generated automatically based on Super Mario Odyssey.
+
 | Method ID | Method Name |
 | --- | --- |
 | 1 | [PrepareGetObjectV1](#1-preparegetobjectv1) |
