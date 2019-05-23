@@ -10,7 +10,7 @@ Welcome to the NintendoClients wiki!
 * [PIA Overview (P2P)](PIA-Overview)
 * [[PIA Protocol]]
 * [PIA Services](PIA-Protocols)
-* [[Local LAN Play]]
+* [[LAN Protocol]]
 
 ## Other pages
 * [[Account Server]]
