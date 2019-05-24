@@ -1,13 +1,8 @@
-After a connection between the consoles has been established, the [PIA protocol](PIA-Protocol) will be used for further communication.
+This page describes the protocol found in Splatoon 2. Other games probably use the same or a similar protocol. Match making is done with 'browse' packets that are sent as UDP broadcast packets through port 30000. After a connection between the consoles has been established, the [PIA protocol](PIA-Protocol) is used for further communication.
 
-## Header
-| Offset | Size | Description |
-| --- | --- | --- |
-| 0x0 | 1 | Packet type |
-| 0x1 | 4 | Payload size |
-| 0x5 | | Packet payload |
+Every packet starts with a single byte that indicates its type.
 
-### Packet types
+## Packet types
 | Value | Description |
 | --- | --- |
 | 0 | [Browse request](#0-browse-request) |
@@ -21,7 +16,14 @@ After a connection between the consoles has been established, the [PIA protocol]
 ## (0) Browse Request
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 0x23A | [LanSessionSearchCriteria](#lansessionsearchcriteria) |
+| 0x0 | 1 | Packet type (0) |
+| 0x1 | 4 | Size of search criteria (0x23A) |
+| 0x5 | 0x23A | [LanSessionSearchCriteria](#lansessionsearchcriteria) |
+| 0x23F | 1 | Always 1 |
+| 0x240 | 1 | Crypto enabled (0 or 1) |
+| 0x241 | 8 | Sequence id (increments on every browse request) |
+| 0x249 | 16 | Crypto key |
+| 0x259 | 0x110 | [Crypto request](#crypto-request) |
 
 ### LanSessionSearchCriteria
 | Offset | Size | Description |
@@ -64,6 +66,9 @@ These flags indicate which fields have a valid value set.
 
 #### Attribute list
 Each attribute list may contain up to 20 attributes. Every attribute is stored as a 4-byte integer.
+
+### Crypto Request
+If crypto is disabled this is filled with random data.
 
 ## (1) Browse reply
 | Offset | Size | Description |
