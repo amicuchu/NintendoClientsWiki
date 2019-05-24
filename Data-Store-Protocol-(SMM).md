@@ -65,6 +65,12 @@ This page describes the methods that are only seen in Super Mario Maker. Most me
 | --- | --- |
 | [DataStoreGetInfoStuffParam](#datastoregetinfostuffparam-structure) | Param |
 
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[DataStoreInfoStuff](#datastoreinfostuff-structure)&gt; | Infos |
+| [List]&lt;[Result]&gt; | Result codes |
+
 # (57) CompletePostObjectEx
 ## Request
 | Type | Description |
