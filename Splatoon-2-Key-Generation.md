@@ -1,5 +1,3 @@
-This page explains how Splatoon 2 calculates its [PIA](PIA-Overview) game key.
-
 Splatoon 2 uses ENL, a first-party networking framework on top of [PIA](PIA-Overview) and [NEX](NEX-Overview-(Game-Servers)). To generate the key ENL uses the random number generator provided by SEAD (Nintendo's first-party standard library).
 
 The random number generator works as follows:
