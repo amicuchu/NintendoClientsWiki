@@ -9,11 +9,11 @@ Every packet starts with a single byte that indicates its type.
 | --- | --- |
 | 0 | [Browse request](#0-browse-request) |
 | 1 | [Browse reply](#1-browse-reply) |
-| 2 | Get host request |
-| 3 | Get host reply |
-| 4 | Get session request |
-| 5 | Get session reply |
-| 6 | Keep alive message |
+| 3 | Get host request |
+| 4 | Get host reply |
+| 5 | Get session request |
+| 6 | Get session reply |
+| 7 | Keep alive message |
 
 ## (0) Browse Request
 | Offset | Size | Description |
