@@ -1,5 +1,7 @@
 This page describes the protocol found in Splatoon 2. Other games use the same or a similar protocol. Match making is done with 'browse' packets that are sent as UDP broadcast packets through port 30000. After a connection between the consoles has been established, the [PIA protocol](PIA-Protocol) is used for further communication.
 
+The crypto challenge in the [browse request](#0-browse-request) and [reply](#1-browse-reply) uses a game-specific key. In Splatoon 2 this key is generated as follows: [[Splatoon 2 Key Generation]].
+
 Every packet starts with a single byte that indicates its type.
 
 ## Packet types
