@@ -142,8 +142,8 @@ This method does not return anything.
 | Type | Description |
 | --- | --- |
 | Uint32 | Unknown |
-| [DataStoreMetaRelated] | Unknown |
-| [List]&lt;[String]&gt; | Compare param |
+| [UnknownStruct7] | Unknown |
+| [List]&lt;[String]&gt; | Unknown |
 
 ## Response
 | Type | Description |
@@ -165,8 +165,8 @@ This method does not return anything.
 ## Request
 | Type | Description |
 | --- | --- |
-| [DataStoreMetaRelated] | Unknown |
-| [List]&lt;[String]&gt; | Compare param |
+| [UnknownStruct7] | Unknown |
+| [List]&lt;[String]&gt; | Unknown |
 
 ## Response
 | Type | Description |
@@ -177,8 +177,8 @@ This method does not return anything.
 ## Request
 | Type | Description |
 | --- | --- |
-| [DataStoreMetaRelated] | Unknown |
-| [List]&lt;[String]&gt; | Compare param |
+| [UnknownStruct7] | Unknown |
+| [List]&lt;[String]&gt; | Unknown |
 
 ## Response
 | Type | Description |
@@ -189,8 +189,8 @@ This method does not return anything.
 ## Request
 | Type | Description |
 | --- | --- |
-| [DataStoreMetaRelated] | Unknown |
-| [List]&lt;[String]&gt; | Compare param |
+| [UnknownStruct7] | Unknown |
+| [List]&lt;[String]&gt; | Unknown |
 
 ## Response
 | Type | Description |
@@ -201,8 +201,8 @@ This method does not return anything.
 ## Request
 | Type | Description |
 | --- | --- |
-| [DataStoreMetaRelated] | Unknown |
-| [List]&lt;[String]&gt; | Compare param |
+| [UnknownStruct7] | Unknown |
+| [List]&lt;[String]&gt; | Unknown |
 
 ## Response
 | Type | Description |
@@ -213,8 +213,8 @@ This method does not return anything.
 ## Request
 | Type | Description |
 | --- | --- |
-| [DataStoreMetaRelated] | Unknown |
-| [List]&lt;[String]&gt; | Compare param |
+| [UnknownStruct7] | Unknown |
+| [List]&lt;[String]&gt; | Unknown |
 
 ## Response
 | Type | Description |
@@ -292,8 +292,8 @@ This method does not return anything.
 ## Request
 | Type | Description |
 | --- | --- |
-| [DataStoreMetaRelated] | Unknown |
-| [List]&lt;[String]&gt; | Compare param |
+| [UnknownStruct7] | Unknown |
+| [List]&lt;[String]&gt; | Unknown |
 
 ## Response
 | Type | Description |
@@ -304,8 +304,8 @@ This method does not return anything.
 ## Request
 | Type | Description |
 | --- | --- |
-| [DataStoreMetaRelated] | Unknown |
-| [List]&lt;[String]&gt; | Compare param |
+| [UnknownStruct7] | Unknown |
+| [List]&lt;[String]&gt; | Unknown |
 
 ## Response
 | Type | Description |
@@ -334,27 +334,6 @@ This method does not return anything.
 | Uint32 | Unknown |
 | Uint32 | Unknown |
 | [DataStoreMetaInfo] | Meta info |
-
-## DataStoreMetaRelated ([Structure])
-| Type | Description |
-| --- | --- |
-| Uint8 | Unknown |
-| [List]&lt;Uint32&gt; | Unknown |
-| Uint8 | Unknown |
-| [List]&lt;Uint32&gt; | Unknown |
-| Uint16 | Unknown |
-| [DateTime] | Unknown |
-| [DateTime] | Unknown |
-| [DateTime] | Unknown |
-| [DateTime] | Unknown |
-| Uint32 | Unknown |
-| [List]&lt;[String]&gt; | Compare param |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
-| [UnknownStruct] | Unknown |
-| Uint8 | Unknown |
-| Uint32 | Unknown |
-| Bool | Unknown |
 
 ## MethodParam49 ([Structure])
 | Type | Description |
@@ -437,7 +416,28 @@ This method does not return anything.
 | Uint32 | Unknown |
 | Uint16 | Unknown |
 
-[DataStoreMetaRelated]: #datastoremetarelated-structure
+## UnknownStruct7 ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint8 | Unknown |
+| [List]&lt;Uint32&gt; | Unknown |
+| Uint8 | Unknown |
+| [List]&lt;Uint32&gt; | Unknown |
+| Uint16 | Unknown |
+| [DateTime] | Unknown |
+| [DateTime] | Unknown |
+| [DateTime] | Unknown |
+| [DateTime] | Unknown |
+| Uint32 | Unknown |
+| [List]&lt;[String]&gt; | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| [UnknownStruct] | Unknown |
+| Uint8 | Unknown |
+| Uint32 | Unknown |
+| Bool | Unknown |
+
+
 [DataStoreInfoStuff]: #datastoreinfostuff-structure
 [UnknownStruct]: #unknownstruct-structure
 [UnknownStruct2]: #unknownstruct2-structure
@@ -445,6 +445,7 @@ This method does not return anything.
 [UnknownStruct4]: #unknownstruct4-structure
 [UnknownStruct5]: #unknownstruct5-structure
 [UnknownStruct6]: #unknownstruct6-structure
+[UnknownStruct7]: #unknownstruct7-structure
 
 [DataStoreGetMetaParam]: Data-Store-Protocol#datastoregetmetaparam-structure
 [DataStorePreparePostParam]: Data-Store-Protocol#datastorepreparepostparam-structure
