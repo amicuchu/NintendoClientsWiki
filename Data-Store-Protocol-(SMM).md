@@ -437,7 +437,7 @@ This method does not return anything.
 | Uint32 | Unknown |
 | Uint16 | Unknown |
 
-[DataStoreMetaRelated]: #datestoremetarelated-structure
+[DataStoreMetaRelated]: #datastoremetarelated-structure
 [DataStoreInfoStuff]: #datastoreinfostuff-structure
 [UnknownStruct]: #unknownstruct-structure
 [UnknownStruct2]: #unknownstruct2-structure
