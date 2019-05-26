@@ -115,7 +115,7 @@ This method does not return anything.
 | --- | --- |
 | [List]&lt;[qBuffer]&gt; | Unknown |
 
-# (57) CompletePostObjectEx
+# (57) Method57
 ## Request
 | Type | Description |
 | --- | --- |
