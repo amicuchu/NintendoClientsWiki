@@ -143,7 +143,7 @@ This method does not return anything.
 | --- | --- |
 | Uint32 | Unknown |
 | [DataStoreMetaRelated] | Unknown |
-| [DataStoreChangeMetaCompareParam] | Compare param |
+| [List]&lt;[String]&gt; | Compare param |
 
 ## Response
 | Type | Description |
@@ -166,7 +166,7 @@ This method does not return anything.
 | Type | Description |
 | --- | --- |
 | [DataStoreMetaRelated] | Unknown |
-| [DataStoreChangeMetaCompareParam] | Compare param |
+| [List]&lt;[String]&gt; | Compare param |
 
 ## Response
 | Type | Description |
@@ -178,7 +178,7 @@ This method does not return anything.
 | Type | Description |
 | --- | --- |
 | [DataStoreMetaRelated] | Unknown |
-| [DataStoreChangeMetaCompareParam] | Compare param |
+| [List]&lt;[String]&gt; | Compare param |
 
 ## Response
 | Type | Description |
@@ -190,7 +190,7 @@ This method does not return anything.
 | Type | Description |
 | --- | --- |
 | [DataStoreMetaRelated] | Unknown |
-| [DataStoreChangeMetaCompareParam] | Compare param |
+| [List]&lt;[String]&gt; | Compare param |
 
 ## Response
 | Type | Description |
@@ -202,7 +202,7 @@ This method does not return anything.
 | Type | Description |
 | --- | --- |
 | [DataStoreMetaRelated] | Unknown |
-| [DataStoreChangeMetaCompareParam] | Compare param |
+| [List]&lt;[String]&gt; | Compare param |
 
 ## Response
 | Type | Description |
@@ -214,7 +214,7 @@ This method does not return anything.
 | Type | Description |
 | --- | --- |
 | [DataStoreMetaRelated] | Unknown |
-| [DataStoreChangeMetaCompareParam] | Compare param |
+| [List]&lt;[String]&gt; | Compare param |
 
 ## Response
 | Type | Description |
@@ -293,7 +293,7 @@ This method does not return anything.
 | Type | Description |
 | --- | --- |
 | [DataStoreMetaRelated] | Unknown |
-| [DataStoreChangeMetaCompareParam] | Compare param |
+| [List]&lt;[String]&gt; | Compare param |
 
 ## Response
 | Type | Description |
@@ -305,7 +305,7 @@ This method does not return anything.
 | Type | Description |
 | --- | --- |
 | [DataStoreMetaRelated] | Unknown |
-| [DataStoreChangeMetaCompareParam] | Compare param |
+| [List]&lt;[String]&gt; | Compare param |
 
 ## Response
 | Type | Description |
@@ -348,7 +348,7 @@ This method does not return anything.
 | [DateTime] | Unknown |
 | [DateTime] | Unknown |
 | Uint32 | Unknown |
-| [DataStoreChangeMetaCompareParam] | Compare param |
+| [List]&lt;[String]&gt; | Compare param |
 | Uint8 | Unknown |
 | Uint8 | Unknown |
 | [UnknownStruct] | Unknown |
@@ -446,7 +446,6 @@ This method does not return anything.
 [UnknownStruct5]: #unknownstruct5-structure
 [UnknownStruct6]: #unknownstruct6-structure
 
-[DataStoreChangeMetaCompareParam]: Data-Store-Protocol#datastorechangemetacompareparam-structure
 [DataStoreGetMetaParam]: Data-Store-Protocol#datastoregetmetaparam-structure
 [DataStorePreparePostParam]: Data-Store-Protocol#datastorepreparepostparam-structure
 [DataStoreCompletePostParam]: Data-Store-Protocol#datastorecompletepostparam-structure
