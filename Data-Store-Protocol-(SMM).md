@@ -439,12 +439,12 @@ This method does not return anything.
 
 [DataStoreMetaRelated]: #datestoremetarelated-structure
 [DataStoreInfoStuff]: #datastoreinfostuff-structure
-[UnknownStruct]: #unknownstruct-struct
-[UnknownStruct2]: #unknownstruct2-struct
-[UnknownStruct3]: #unknownstruct3-struct
-[UnknownStruct4]: #unknownstruct4-struct
-[UnknownStruct5]: #unknownstruct5-struct
-[UnknownStruct6]: #unknownstruct6-struct
+[UnknownStruct]: #unknownstruct-structure
+[UnknownStruct2]: #unknownstruct2-structure
+[UnknownStruct3]: #unknownstruct3-structure
+[UnknownStruct4]: #unknownstruct4-structure
+[UnknownStruct5]: #unknownstruct5-structure
+[UnknownStruct6]: #unknownstruct6-structure
 
 [DataStoreChangeMetaCompareParam]: Data-Store-Protocol#datastorechangemetacompareparam-structure
 [DataStoreGetMetaParam]: Data-Store-Protocol#datastoregetmetaparam-structure
