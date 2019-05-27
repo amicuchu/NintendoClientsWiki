@@ -110,7 +110,7 @@ The [browse request](#0-browse-request) contains a cryptographic challenge that 
 | 0x2 | 8 | Incrementing counter used for nonce |
 | 0xA | 16 | Challenge key |
 | 0x1A | 16 | Authentication tag for AES-GCM |
-| 0x2A | 16 or 256 | Challenge or response, encrypted with AES-GCM |
+| 0x2A | 256 or 16 | Challenge or response, encrypted with AES-GCM |
 
 The content of the challenge/response when crypto is enabled is described below. If crypto is disabled the authentication tag and challenge/response data are filled with random bytes.
 
