@@ -98,8 +98,8 @@ Each attribute list may contain up to 20 attributes. Every attribute is stored a
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 1 | Role |
-| 0x1 | 1 | Username encoding type |
-| 0x2 | 20 | Username |
+| 0x1 | 1 | Username encoding type (1=utf8, 2=utf16) |
+| 0x2 | 40 | Username |
 | 0x2A | 8 | Station id |
 
 ## Crypto Challenge
