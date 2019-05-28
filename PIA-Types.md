@@ -47,6 +47,7 @@ These fields are directly taken from a [StationURL](NEX-Common-Types#station-url
 | Uint8 | natf |
 | Uint8 | type |
 | Uint8 | probeinit |
+| [InetAddress](#inetaddress) | Relay address |
 
 ## StationAddress
 | Offset | Size | Description |
