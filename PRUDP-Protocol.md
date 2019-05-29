@@ -279,7 +279,7 @@ Unlike the connection signature, this signature is actually verified by the serv
 | 0x10 | 16 | Connection signature received from server |
 
 ### Supported Functions
-The least significant byte of this field describes the minor version of the protocol. The other bytes seem to be unused. The following table lists the changes that have been made between minor versions:
+The least significant byte of this field describes the minor version of the protocol. The other bytes seem to be unused. When the server receives a SYN packet from the client it chooses the highest version number supported by both the server and the client and sends that version number back to the client in the SYN/ACK packet. The following table lists the changes that have been made between minor versions:
 
 | Minor Version | Description |
 | --- | --- |
