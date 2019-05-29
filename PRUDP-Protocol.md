@@ -238,7 +238,7 @@ To acknowledge multiple packets at once, send a DATA packet with FLAG_MULTI_ACK.
 | 0x1 | 1 | Unknown (always 0?) |
 | 0x2 | 2 | Packet id |
 
-Since the version can only be specified in the [V1](#v1-format) header, [V0](#v0-format) probably only supports the old version. The [Lite](#lite-format) format always uses the new version. 
+[V0](#v0-format) does not support aggregate acknowledgement. Whether [V1](#v1-format) supports aggregate acknowledgement depends on its [supported functions](#supported-functions). The [Lite](#lite-format) format always uses the new version.
 
 ### Session id
 This is a random value generated at the start of each session. The server's session id is not necessarily the same as the client's session id.
@@ -278,6 +278,17 @@ Unlike the connection signature, this signature is actually verified by the serv
 | 0x0 | 16 | MD5 of [access key](#sandbox-access-key) |
 | 0x10 | 16 | Connection signature received from server |
 
+### Supported Functions
+The least significant byte of this field describes the minor version of the protocol. The other bytes seem to be unused. The following table lists the changes that have been made between minor versions:
+
+| Minor Version | Description |
+| --- | --- |
+| 0 | Base version, no aggregate ack |
+| 1 | Aggregate ack (old version) is now supported |
+| 2 | Aggregate ack (new version) is now supported and the new signature method is used |
+| 3 | The new RVDDL version is used: [structures](NEX-Common-Types#structure) now have a version header |
+| 4 | Unknown difference |
+
 ### Optional data
 Starting with PRUDP V1, packet-specific data is encoded like this:
 
@@ -289,7 +300,7 @@ Starting with PRUDP V1, packet-specific data is encoded like this:
 
 | Option id | Size | Description |
 | --- | --- | --- |
-| 0 | 4 | Supported functions (unknown purpose) |
+| 0 | 4 | [Supported functions](#supported-functions) |
 | 1 | 16 | [Connection signature](#connection-signature) |
 | 2 | 1 | [Fragment id](#fragment-id) |
 | 3 | 2 | Unknown (random integer) |
