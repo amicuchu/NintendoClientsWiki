@@ -20,80 +20,80 @@
 
 # (1) UploadScore
 ## Request
-| Type | Name | Description |
-| --- | --- | --- |
-| [RankingScoreData](#rankingscoredata-structure) | scoreData | Score data |
-| Uint64 | uniqueId | |
+| Type | Name |
+| --- | --- |
+| [RankingScoreData](#rankingscoredata-structure) | scoreData |
+| Uint64 | uniqueId |
 
 ## Response
 This method does not return anything.
 
 # (2) DeleteScore
 ## Request
-| Type | Name | Description |
-| --- | --- | --- |
-| Uint32 | category | Category (game-specific) |
-| Uint64 | uniqueId | |
+| Type | Name |
+| --- | --- |
+| Uint32 | category |
+| Uint64 | uniqueId |
 
 ## Response
 This method does not return anything.
 
 # (3) DeleteAllScores
 ## Request
-| Type | Name | Description |
-| --- | --- | --- |
-| Uint64 | uniqueId | |
+| Type | Name |
+| --- | --- |
+| Uint64 | uniqueId |
 
 ## Response
 This method does not return anything.
 
 # (4) UploadCommonData
 ## Request
-| Type | Name | Description |
-| --- | --- | --- |
-| [Buffer] | commonData | Data |
-| Uint64 | uniqueId | Data id |
+| Type | Name |
+| --- | --- |
+| [Buffer] | commonData |
+| Uint64 | uniqueId |
 
 ## Response
 This method does not return anything.
 
 # (5) DeleteCommonData
 ## Request
-| Type | Name | Description |
-| --- | --- | --- |
-| Uint64 | uniqueId | Data id |
+| Type | Name |
+| --- | --- |
+| Uint64 | uniqueId |
 
 ## Response
 This method does not return anything.
 
 # (6) GetCommonData
 ## Request
-| Type | Name | Description |
-| --- | --- | --- |
-| Uint64 | uniqueId | Data id |
+| Type | Name |
+| --- | --- |
+| Uint64 | uniqueId |
 
 ## Response
-| Type | Name | Description |
-| --- | --- | --- |
-| [Buffer] | commonData | Data |
+| Type | Name |
+| --- | --- |
+| [Buffer] | commonData |
 
 # (7) ChangeAttributes
 ## Request
-| Type | Name | Description |
-| --- | --- | --- |
-| Uint32 | category | Category |
-| [RankingChangeAttributesParam](#rankingchangeattributesparam-structure) | changeParam | |
-| Uint64 | uniqueId | |
+| Type | Name |
+| --- | --- |
+| Uint32 | category |
+| [RankingChangeAttributesParam](#rankingchangeattributesparam-structure) | changeParam |
+| Uint64 | uniqueId |
 
 ## Response
 This method does not return anything.
 
 # (8) ChangeAllAttributes
 ## Request
-| Type | Name | Description |
-| --- | --- | --- |
-| [RankingChangeAttributesParam](#rankingchangeattributesparam-structure) | changeParam | |
-| Uint64 | uniqueId | |
+| Type | Name |
+| --- | --- |
+| [RankingChangeAttributesParam](#rankingchangeattributesparam-structure) | changeParam |
+| Uint64 | uniqueId |
 
 # (9) GetRanking
 ## Request
@@ -106,24 +106,24 @@ This method does not return anything.
 | [PID] | principalId | |
 
 ## Response
-| Type | Name | Description |
-| --- | --- | --- |
-| [RankingResult](#rankingresult-structure) | pResult | The result |
+| Type | Name |
+| --- | --- |
+| [RankingResult](#rankingresult-structure) | pResult |
 
 # (10) GetApproxOrder
 ## Request
-| Type | Name | Description |
-| --- | --- | --- |
-| Uint32 | category | |
-| [RankingOrderParam](#rankingorderparam-structure) | orderParam | |
-| Uint32 | score | |
-| Uint64 | uniqueId | |
-| Uint32 | principalId | |
+| Type | Name |
+| --- | --- |
+| Uint32 | category |
+| [RankingOrderParam](#rankingorderparam-structure) | orderParam |
+| Uint32 | score |
+| Uint64 | uniqueId |
+| Uint32 | principalId |
 
 ## Response
-| Type | Name | Description |
-| --- | --- | --- |
-| Uint32 | pOrder | |
+| Type | Name |
+| --- | --- |
+| Uint32 | pOrder |
 
 # (11) GetStats
 ## Request
@@ -143,9 +143,9 @@ This method does not return anything.
 | 0x10 | Average score |
 
 ## Response
-| Type | Name | Description |
-| --- | --- | --- |
-| [RankingStats](#rankingstats-structure) | pStats | |
+| Type | Name |
+| --- | --- |
+| [RankingStats](#rankingstats-structure) | pStats |
 
 # (12) GetRankingByPIDList
 ## Request
@@ -158,9 +158,9 @@ This method does not return anything.
 | Uint64 | uniqueId | |
 
 ## Response
-| Type | Name | Description |
-| --- | --- | --- |
-| [RankingResult](#rankingresult-structure) | pResult | Result |
+| Type | Name |
+| --- | --- |
+| [RankingResult](#rankingresult-structure) | pResult |
 
 # (13) GetRankingByUniqueIdList
 ## Request
@@ -173,33 +173,33 @@ This method does not return anything.
 | Uint64 | uniqueId | |
 
 ## Response
-| Type | Name | Description |
-| --- | --- | --- |
-| [RankingResult](#rankingresult-structure) | pResult | Result |
+| Type | Name |
+| --- | --- |
+| [RankingResult](#rankingresult-structure) | pResult |
 
 # (14) GetCachedTopXRanking
 ## Request
-| Type | Name | Description |
-| --- | --- | --- |
-| Uint32 | category | |
-| [RankingOrderParam](#rankingorderparam-structure) | orderParam | |
+| Type | Name |
+| --- | --- |
+| Uint32 | category |
+| [RankingOrderParam](#rankingorderparam-structure) | orderParam |
 
 ## Response
-| Type | Name | Description |
-| --- | --- | --- |
-| [RankingCachedResult](#rankingcachedresult-inherits-rankingresult) | pResult | Result |
+| Type | Name |
+| --- | --- |
+| [RankingCachedResult](#rankingcachedresult-inherits-rankingresult) | pResult |
 
 # (15) GetCachedTopXRankings
 ## Request
-| Type | Name | Description |
-| --- | --- | --- |
-| [List]&lt;Uint32&gt; | categories | |
-| [List]&lt;[RankingOrderParam](#rankingorderparam-structure)&gt; | orderParams | |
+| Type | Name |
+| --- | --- |
+| [List]&lt;Uint32&gt; | categories |
+| [List]&lt;[RankingOrderParam](#rankingorderparam-structure)&gt; | orderParams |
 
 ## Response
-| Type | Name | Description |
-| --- | --- | --- |
-| [List]&lt;[RankingCachedResult](#rankingcachedresult-inherits-rankingresult)&gt; | pResults | |
+| Type | Name |
+| --- | --- |
+| [List]&lt;[RankingCachedResult](#rankingcachedresult-inherits-rankingresult)&gt; | pResults |
 
 # Types
 ## RankingOrderParam ([Structure])
@@ -238,35 +238,33 @@ This method does not return anything.
 | [DateTime] | sinceTime | |
 
 ## RankingCachedResult (Inherits [RankingResult](#rankingresult-structure))
-| Type | Name | Description |
-| --- | --- | --- |
-| [DateTime] | createdTime | |
-| [DateTime] | expiredTime | |
-| Uint8 | maxLength | |
+| Type | Name |
+| --- | --- |
+| [DateTime] | createdTime |
+| [DateTime] | expiredTime |
+| Uint8 | maxLength |
 
 ## RankingStats ([Structure])
-| Type | Name | Description |
-| --- | --- | --- |
-| [List]&lt;Double&gt; | statsList | Stats |
+| Type | Name |
+| --- | --- |
+| [List]&lt;Double&gt; | statsList |
 
 ## RankingScoreData ([Structure])
-| Type | Name | Description |
-| --- | --- | --- |
-| [PID] | principalId | User id |
-| Uint64 | uniqueId | |
-| Uint32 | order | Rank |
-| Uint32 | category | Category |
-| Uint32 | score | Score |
-| [List]&lt;byte&gt; | groups | Filters |
-| Uint64 | param | Additional info |
-| [Buffer] | commonData | Additional data |
+| Type | Name |
+| --- | --- |
+| Uint32 | category |
+| Uint32 | score |
+| Uint8 | orderBy |
+| Uint8 | updateMode |
+| [List]&lt;Uint8&gt; | groups |
+| Uint64 | param |
 
 ## RankingChangeAttributesParam ([Structure])
-| Type | Name | Description |
-| --- | --- | --- |
-| Uint8 | modificationFlag | |
-| [List]&lt;Uint8&gt; | groups | |
-| Uint64 | param | |
+| Type | Name |
+| --- | --- |
+| Uint8 | modificationFlag |
+| [List]&lt;Uint8&gt; | groups |
+| Uint64 | param |
 
 ## Ranking Mode
 | Value | Description |
