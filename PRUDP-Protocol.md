@@ -210,7 +210,7 @@ This field is made by concatening a 4-bit type value to 12 bits of packet flags.
 | Mask | Description |
 | --- | --- |
 | 0x001 | FLAG_ACK: This is an acknowledgement packet |
-| 0x002 | FLAG_RELIABLE: This packet is supposed to be reliable |
+| 0x002 | FLAG_RELIABLE: This packet uses reliability features such as packet reordering. |
 | 0x004 | FLAG_NEED_ACK: This packet must be acknowledged |
 | 0x008 | FLAG_HAS_SIZE: This packet includes its payload size |
 | 0x200 | FLAG_MULTI_ACK: This packet acknowledges multiples packets at once. The payload contains information on which packets are acknowledged. |
@@ -244,7 +244,7 @@ To acknowledge multiple packets at once, send a DATA packet with FLAG_MULTI_ACK.
 This is a random value generated at the start of each session. The server's session id is not necessarily the same as the client's session id.
 
 ### Sequence id
-This is an incrementing value used to ensure that packets arrive in correct order. The sequence id of client-to-server packets is separate from the sequence id of server-to-client packets.
+This is an incrementing value used to ensure that packets arrive in correct order. The sequence id of packets with [FLAG_RELIABLE](#type-and-flags) is independent from the sequence id of packets without this flag. The sequence id of client-to-server packets is also independent from the sequence id of server-to-client packets.
 
 In acknowledgement packets, the sequence id is set to the id of the packet that is acknowledged.
 
