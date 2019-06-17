@@ -89,7 +89,7 @@ This format is used by all Wii U games and apps except for friends services, and
 | 0x5 | 1 | [Destination](#virtual-ports) |
 | 0x6 | 2 | [Type and flags](#type-and-flags) |
 | 0x8 | 1 | [Session id](#session-id) |
-| 0x9 | 1 | [Substream id](#sequence-id) |
+| 0x9 | 1 | [Substream id](#substreams) |
 | 0xA | 2 | [Sequence id](#sequence-id) |
 
 ### Packet signature
@@ -154,7 +154,7 @@ The following techniques are used to achieve reliability:
 ### Encryption
 **V0 and V1**: All payloads are encrypted using RC4, with separate streams for client-to-server packets and server-to-client packets. The connection to the authentication server is encrypted using a default key that's always the same: `CD&ML`. The connection to the secure server is encrypted using the session key from the [Kerberos ticket](Kerberos-Authentication#kerberos-ticket).
 
-**Lite**: Since the underlying connection is TLS-encrypted anyway, no encryption is used by PRUDP.
+**Lite**: Since the underlying connection is SSL-encrypted anyway, no encryption is used by PRUDP.
 
 ### Secure server connection
 As explained on the [Game Server Overview](NEX-Overview-(Game-Servers)) page, every game server consists of an authentication server and a secure server. If a client wants to connect to the secure server it must first request a [ticket](Kerberos-Authentication) from the authentication server. The ticket contains the session key that's used in the secure server connection, among other information.
@@ -244,7 +244,7 @@ To acknowledge multiple packets at once, send a DATA packet with FLAG_MULTI_ACK.
 This is a random value generated at the start of each session. The server's session id is not necessarily the same as the client's session id.
 
 ### Sequence id
-This is an incrementing value used to ensure that packets arrive in correct order. The sequence id of packets with [FLAG_RELIABLE](#type-and-flags) is independent from the sequence id of packets without this flag. The sequence id of client-to-server packets is also independent from the sequence id of server-to-client packets.
+This is an incrementing value used to ensure that packets arrive in correct order. The sequence id of reliable packets is independent from the sequence id of unreliable packets. The sequence id of client-to-server packets is independent from the sequence id of server-to-client packets.
 
 In acknowledgement packets, the sequence id is set to the id of the packet that is acknowledged.
 
@@ -259,6 +259,11 @@ For example, if a packet is split into four fragments, they will have the follow
 | Second | 2 |
 | Third | 3 |
 | Fourth | 0 |
+
+### Substreams
+[V1](#v1-format) allows the connection to be divided into multiple substreams. The maximum number of substreams is decided during the connection handshake (with [option 4](#optional-data)). Every substream has its own [RC4 streams](#encryption) (but with the same key) and its own incrementing [sequence ids](#sequence-id).
+
+NEX never uses more than one substream, and always sets the maximum substream id to 0.
 
 ### Sandbox access key
 Every game server has a unique sandbox access key. This is used to calculate the [packet signature](#packet-signature). The only way to find the access key of a server is by disassembling a game that connects to this server.
@@ -304,7 +309,7 @@ Starting with PRUDP V1, packet-specific data is encoded like this:
 | 1 | 16 | [Connection signature](#connection-signature) |
 | 2 | 1 | [Fragment id](#fragment-id) |
 | 3 | 2 | Unknown (random integer) |
-| 4 | 1 | Maximum [substream id](#sequence-id) |
+| 4 | 1 | Maximum [substream id](#substreams) |
 | 0x80 | 16 | [Lite signature](#lite-signature) |
 
 [Buffer]: NEX-Common-Types#buffer
