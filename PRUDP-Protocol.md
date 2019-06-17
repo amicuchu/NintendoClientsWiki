@@ -89,7 +89,7 @@ This format is used by all Wii U games and apps except for friends services, and
 | 0x5 | 1 | [Destination](#virtual-ports) |
 | 0x6 | 2 | [Type and flags](#type-and-flags) |
 | 0x8 | 1 | [Session id](#session-id) |
-| 0x9 | 1 | [Multi-ack](#aggregate-acknowledgement) version |
+| 0x9 | 1 | [Substream id](#sequence-id) |
 | 0xA | 2 | [Sequence id](#sequence-id) |
 
 ### Packet signature
@@ -238,7 +238,7 @@ To acknowledge multiple packets at once, send a DATA packet with FLAG_MULTI_ACK.
 | 0x1 | 1 | Unknown (always 0?) |
 | 0x2 | 2 | Packet id |
 
-[V0](#v0-format) does not support aggregate acknowledgement. Whether [V1](#v1-format) supports aggregate acknowledgement depends on its [supported functions](#supported-functions). The [Lite](#lite-format) format always uses the new version.
+[V0](#v0-format) does not support aggregate acknowledgement. Whether [V1](#v1-format) supports aggregate acknowledgement and which version is used depends on its [supported functions](#supported-functions). The [Lite](#lite-format) format always uses the new version.
 
 ### Session id
 This is a random value generated at the start of each session. The server's session id is not necessarily the same as the client's session id.
@@ -304,7 +304,7 @@ Starting with PRUDP V1, packet-specific data is encoded like this:
 | 1 | 16 | [Connection signature](#connection-signature) |
 | 2 | 1 | [Fragment id](#fragment-id) |
 | 3 | 2 | Unknown (random integer) |
-| 4 | 1 | Unknown (always 0) |
+| 4 | 1 | Maximum [substream id](#sequence-id) |
 | 0x80 | 16 | [Lite signature](#lite-signature) |
 
 [Buffer]: NEX-Common-Types#buffer
