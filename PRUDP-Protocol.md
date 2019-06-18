@@ -244,7 +244,9 @@ To acknowledge multiple packets at once, send a DATA packet with FLAG_MULTI_ACK.
 This is a random value generated at the start of each session. The server's session id is not necessarily the same as the client's session id.
 
 ### Sequence id
-This is an incrementing value used to ensure that packets arrive in correct order. The sequence id of reliable packets is independent from the sequence id of unreliable packets. The sequence id of client-to-server packets is independent from the sequence id of server-to-client packets.
+This is an incrementing value used to ensure that packets arrive in correct order. Every [reliable substream](#substreams) has its own stream of sequence ids. Ping packets and unreliable data packets both have their own stream of sequence ids as well. The sequence id of client-to-server packets is always independent from the sequence id of server-to-client packets.
+
+Normally, the sequence id starts at 1. However, the initial sequence id of unreliable data packets is a random value generated during the connection handshake (see [option 3](#optional-data)).
 
 In acknowledgement packets, the sequence id is set to the id of the packet that is acknowledged.
 
@@ -261,7 +263,7 @@ For example, if a packet is split into four fragments, they will have the follow
 | Fourth | 0 |
 
 ### Substreams
-[V1](#v1-format) allows the connection to be divided into multiple substreams. The maximum number of substreams is decided during the connection handshake (with [option 4](#optional-data)). Every substream has its own [RC4 streams](#encryption) (but with the same key) and its own incrementing [sequence ids](#sequence-id).
+[V1](#v1-format) allows the connection to be divided into multiple reliable substreams. The maximum number of substreams is decided during the connection handshake (with [option 4](#optional-data)). Every substream has its own [RC4 streams](#encryption) (but with the same key) and its own incrementing [sequence ids](#sequence-id). Substreams only cover reliable packets. Unreliable packets do not belong to a substream.
 
 NEX never uses more than one substream, and always sets the maximum substream id to 0.
 
@@ -308,7 +310,7 @@ Starting with PRUDP V1, packet-specific data is encoded like this:
 | 0 | 4 | [Supported functions](#supported-functions) |
 | 1 | 16 | [Connection signature](#connection-signature) |
 | 2 | 1 | [Fragment id](#fragment-id) |
-| 3 | 2 | Unknown (random integer) |
+| 3 | 2 | Initial [sequence id](#sequence-id) for unreliable data packets |
 | 4 | 1 | Maximum [substream id](#substreams) |
 | 0x80 | 16 | [Lite signature](#lite-signature) |
 
