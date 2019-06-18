@@ -1,4 +1,4 @@
-PRUDP is a transport layer protocol on top of UDP whose aim is to reliably send UDP packets. There are two versions of this protocol ([V0](#v0-format) and [V1](#v1-format)), but these are pretty similar. The only difference lies in the way the packets are encoded. All values are encoded in little endian byte order.
+PRUDP is a transport layer protocol on top of UDP whose aim is to reliably and securely send UDP packets. There are two versions of this protocol ([V0](#v0-format) and [V1](#v1-format)), but these are pretty similar. The only difference lies in the way the packets are encoded. All values are encoded in little endian byte order.
 
 On the Nintendo Switch, NEX can be configured to use TCP or WebSockets instead of UDP. In that case, the '[Lite](#lite-format)'-encoding is used.
 
@@ -155,6 +155,11 @@ The following techniques are used to achieve reliability:
 **V0 and V1**: All payloads are encrypted using RC4, with separate streams for client-to-server packets and server-to-client packets. The connection to the authentication server is encrypted using a default key that's always the same: `CD&ML`. The connection to the secure server is encrypted using the session key from the [Kerberos ticket](Kerberos-Authentication#kerberos-ticket).
 
 **Lite**: Since the underlying connection is SSL-encrypted anyway, no encryption is used by PRUDP.
+
+### Compression
+Before they are encrypted, packets may be compressed with zlib. The compression ratio is prepended to the compressed payload as an additional byte. This is used to determine how much space is needed to decompress the payload. The compression ratio is the size of the uncompressed payload divided by the size of the compressed payload, rounded upwards. If the compression ratio is 0 the payload is not compressed.
+
+NEX has disabled compression, so you won't see any compressed packets in Nintendo games.
 
 ### Secure server connection
 As explained on the [Game Server Overview](NEX-Overview-(Game-Servers)) page, every game server consists of an authentication server and a secure server. If a client wants to connect to the secure server it must first request a [ticket](Kerberos-Authentication) from the authentication server. The ticket contains the session key that's used in the secure server connection, among other information.
