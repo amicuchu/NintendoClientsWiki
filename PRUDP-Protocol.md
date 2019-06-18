@@ -229,19 +229,28 @@ This field is made by concatening a 4-bit type value to 12 bits of packet flags.
 | 4 | PING |
 
 ### Aggregate acknowledgement
-To acknowledge multiple packets at once, send a DATA packet with FLAG_MULTI_ACK. All packets up to the specified packet id will be acknowledged. The payload should contain the following data:
+To acknowledge multiple packets at once, send a DATA packet with FLAG_MULTI_ACK. The payload should contain the following data:
 
 #### Old version
+All packets up to the sequence id of the aggregate ack packet are acknoledged. In addition, the payload may specify additional sequence ids to be acknowledged.
+
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 2 | Packet id |
+| 0x0 | 2 | Sequence id 1 |
+| 0x2 | 2 | Sequence id 2 |
+| ... | ... | ... |
 
 #### New version
+The sequence id of the aggregate ack packet is always 0.
+
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 1 | Unknown (always 0?) |
-| 0x1 | 1 | Unknown (always 0?) |
-| 0x2 | 2 | Packet id |
+| 0x0 | 1 | [Substream id](#substreams) |
+| 0x1 | 1 | Number of additional acks |
+| 0x2 | 2 | Sequence id. All packets up to this id are acknowledged. |
+| 0x4 | 2 | Additional id 1 |
+| 0x6 | 2 | Additional id 2 |
+| ... | ... | ... |
 
 [V0](#v0-format) does not support aggregate acknowledgement. Whether [V1](#v1-format) supports aggregate acknowledgement and which version is used depends on its [supported functions](#supported-functions). The [Lite](#lite-format) format always uses the new version.
 
