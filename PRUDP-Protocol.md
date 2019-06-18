@@ -248,8 +248,8 @@ The sequence id of the aggregate ack packet is always 0.
 | 0x0 | 1 | [Substream id](#substreams) |
 | 0x1 | 1 | Number of additional acks |
 | 0x2 | 2 | Sequence id. All packets up to this id are acknowledged. |
-| 0x4 | 2 | Additional id 1 |
-| 0x6 | 2 | Additional id 2 |
+| 0x4 | 2 | Additional sequence id 1 |
+| 0x6 | 2 | Additional sequence id 2 |
 | ... | ... | ... |
 
 [V0](#v0-format) does not support aggregate acknowledgement. Whether [V1](#v1-format) supports aggregate acknowledgement and which version is used depends on its [supported functions](#supported-functions). The [Lite](#lite-format) format always uses the new version.
