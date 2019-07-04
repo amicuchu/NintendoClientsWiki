@@ -1,4 +1,4 @@
-Unfortunately, there are many different versions of the nex library which are not backwards compatible, and even game-specific patches. This page lists which versions are used by games, and wheter the game has debug symbols.
+Unfortunately, there are many different versions of the nex library which are not backwards compatible, and even game-specific patches. This page lists which versions are used by games, and whether the game has debug symbols.
 
 * MM = Match Making
 * DS = Data Store
@@ -7,47 +7,50 @@ Unfortunately, there are many different versions of the nex library which are no
 * UT = Utility
 
 # Wii U
-| Game | NEX Modules | PIA Modules | Debug Symbols |
+| Game | NEX Modules | PIA Version | Debug Symbols |
 | --- | --- | --- | --- |
-| Sonic & All-Stars Racing Transformed | NEX_3_0_1_4<br>NEX_MM_3_0_1<br>NEX_RK_3_0_1 | None | Yes |
-| BIT.TRIP Presents... Runner2: Future Legend of Rhythm Alien | NEX_3_0_1_4<br>NEX_RK_3_0_1 | None | Yes |
-| Trine 2 Director's Cut | NEX_MM_3_0_1<br>NEX_3_0_1_4 | None | Yes |
-| Tekken Tag Tournament 2 Wii U Edition | NEX_DS_3_0_1<br>NEX_RK_3_0_1<br>NEX_MM_3_0_1<br>NEX_3_0_1_4 | None | No |
-| Fist of the North Star: Ken's Rage 2 | NEX_3_0_1_5<br>NEX_DS_3_0_1<br>NEX_RK_3_0_1<br>NEX_UT_3_0_1<br>NEX_MM_3_0_1 | None | Yes |
-| Monster Hunter 3 Ultimate | NEX_3_0_5AHDJ<br>NEX_MM_3_0_5<br>NEX_DS_3_0_5<br>NEX_MS_3_0_5 | None | No |
-| Injustice: Gods Among Us | NEX_3_2_1<br>NEX_MM_3_2_1<br>NEX_DS_3_2_1<br>NEX_RK_3_2_1 | None | No |
-| DuckTales: Remastered | NEX_RK_3_3_0<br>NEX_3_3_0 | None | Yes |
-| Sonic Lost World | NEX_3_3_0<br>NEX_RK_3_3_0 | None | Yes |
-| Donkey Kong Country Tropical Freeze | NEX_DS_3_4_0<br>NEX_RK_3_4_0<br>NEX_3_4_0 | None | Yes |
-| Mario & Sonic at the Sochi 2014 Olympic Winter Games | NEX_DS_3_4_0<br>NEX_RK_3_4_0<br>NEX_MM_3_4_0<br>NEX_MS_3_4_0<br>NEX_3_4_0 | None | Yes |
-| Romance of the Three Kingdoms 12 | NEX_DS_3_4_0<br>NEX_3_4_0<br>NEX_RK_3_4_0<br>NEX_UT_3_4_0<br>NEX_MM_3_4_0 | None | Yes |
-| Disney Infinity | NEX_3_5_2<br>NEX_DS_3_5_2 | None | Yes |
-| Disney Infinity [2.0] | NEX_3_5_2<br>NEX_DS_3_5_2 | None | Yes |
-| Puyo Puyo Tetris | NEX_DS_3_5_2<br>NEX_RK_3_5_2<br>NEX_MM_3_5_2<br>NEX_3_5_2 | None | Yes |
-| Mario Kart 8 | NEX_3_5_4AMK<br>NEX_MM_3_5_4<br>NEX_DS_3_5_4<br>NEX_RK_3_5_4 | PIA_3_10_3<br>PIA_COMMON_3_10_3<br>PIA_INET_3_10_3<br>PIA_SESSION_3_10_3<br>PIA_CHAT_3_10_3 | No |
-| Xenoblade Chronicles X | NEX_3_5_5AX5<br>NEX_MM_3_5_5<br>NEX_RK_3_5_5<br>NEX_DS_3_5_5 | None | Yes |
-| OlliOlli | NEX_3_6_1<br>NEX_RK_3_6_1<br>NEX_DS_3_6_1 | None | Yes |
-| Devil's Third | NEX_3_6_1<br>NEX_MM_3_6_1<br>NEX_RK_3_6_1 | None | Yes |
-| Stealth Inc 2: A Game of Clones | NEX_3_6_1<br>NEX_RK_3_6_1<br>NEX_DS_3_6_1 | None | Yes |
-| Super Smash Bros. for Wii U | NEX_DS_3_6_27<br>NEX_RK_3_6_27<br>NEX_UT_3_6_27<br>NEX_MM_3_6_27<br>NEX_3_6_27AXFJ | PIA_3_9_3 | No |
-| Hyrule Warriors | NEX_DS_3_8_0<br>NEX_3_8_0<br>NEX_RK_3_8_0<br>NEX_UT_3_8_0<br>NEX_MM_3_8_0 | None | Yes |
-| Legend of Kay Anniversary | NEX_3_8_3<br>NEX_RK_3_8_3 | None | Yes |
-| Nova-111 | NEX_3_8_3<br>NEX_RK_3_8_3<br>NEX_DS_3_8_3 | None | Yes |
-| Super Mario Maker | NEX_3_8_10AMA<br>NEX_MM_3_8_10<br>NEX_DS_3_8_10 | None | No |
-| M & S at the Rio 2016 Olympic Games | NEX_3_9_1<br>NEX_DS_3_9_1<br>NEX_RK_3_9_1 | None | Yes |
-| Disney Infinity 3.0: Play Without Limits | NEX_3_9_1<br>NEX_DS_3_9_1<br>NEX_UT_3_9_1<br>NEX_MM_3_9_1 | None | Yes |
-| Minecraft: Wii U Edition | NEX_DS_3_9_1<br>NEX_MM_3_9_1<br>NEX_3_9_1 | PIA_SESSION_4_9_0<br>PIA_COMMON_4_9_0<br>PIA_4_9_0<br>PIA_TRANSPORT_4_9_0<br>PIA_INET_4_9_0<br>PIA_CHAT_4_9_0 | Yes |
-| Might No. 9 | NEX_3_9_1<br>NEX_MM_3_9_1<br>NEX_RK_3_9_1<br>NEX_DS_3_9_1<br>NEX_MS_3_9_1 | None | Yes |
-| Axiom Verge | NEX_3_10_0 | None | Yes |
-| Pokkén Tournament | NEX_DS_3_10_0<br>NEX_RK_3_10_0<br>NEX_3_10_0<br>NEX_MM_3_10_0 | PIA_4_10_0<br>PIA_COMMON_4_10_0<br>PIA_INET_4_10_0<br>_DEV_PIA_DEBUG<br>PIA_TRANSPORT_4_10_0<br>PIA_SESSION_4_10_0 | Yes |
-| Lost Reavers | NEX_3_10_0<br>NEX_MM_3_10_0<br>NEX_MS_3_10_0<br>NEX_RK_3_10_0<br>NEX_DS_3_10_0 | None | Yes |
+| Sonic & All-Stars Racing Transformed | 3.0.1.4 (RK/MM) | - | Yes |
+| BIT.TRIP Presents... Runner2: Future Legend of Rhythm Alien | 3.0.1.4 (RK) | - | Yes |
+| Trine 2 Director's Cut | 3.0.1.4 (MM) | - | Yes |
+| Tekken Tag Tournament 2 Wii U Edition | 3.0.1.4 (RK/DS/MM) | - | No |
+| Fist of the North Star: Ken's Rage 2 | 3.0.1.5 (RK/DS/MM/UT) | - | Yes |
+| Monster Hunter 3 Ultimate | 3.0.5-AHDJ (DS/MM/MS) | - | No |
+| Injustice: Gods Among Us | 3.2.1 (RK/DS/MM) | - | No |
+| DuckTales: Remastered | 3.3.0 (RK) | - | Yes |
+| Sonic Lost World | 3.3.0 (RK) | - | Yes |
+| Donkey Kong Country Tropical Freeze | 3.4.0 (RK/DS) | - | Yes |
+| Mario & Sonic at the Sochi 2014 Olympic Winter Games | 3.4.0 (RK/DS/MM/MS) | - | Yes |
+| Romance of the Three Kingdoms 12 | 3.4.0 (RK/DS/MM/UT) | - | Yes |
+| Disney Infinity | 3.5.2 (DS) | - | Yes |
+| Disney Infinity [2.0] | 3.5.2 (DS) | - | Yes |
+| Puyo Puyo Tetris | 3.5.2 (RK/DS/MM) | - | Yes |
+| Mario Kart 8 | 3.5.4-AMK (RK/DS/MM) | 3.10.3 | No |
+| Xenoblade Chronicles X | 3.5.5-AX5 (RK/DS/MM) | - | Yes |
+| OlliOlli | 3.6.1 (RK/DS) | - | Yes |
+| Devil's Third | 3.6.1 (RK/MM) | - | Yes |
+| Stealth Inc 2: A Game of Clones | 3.6.1 (RK/DS) | - | Yes |
+| Super Smash Bros. for Wii U | 3.6.27-AXFJ (RK/DS/MM/UT) | 3.9.3 | No |
+| Hyrule Warriors | 3.8.0 (RK/DS/MM/UT) | - | Yes |
+| Legend of Kay Anniversary | 3.8.3 (RK) | - | Yes |
+| Nova-111 | 3.8.3 (RK/DS) | - | Yes |
+| Super Mario Maker | 3.8.10-AMA (DS/MM) | - | No |
+| M & S at the Rio 2016 Olympic Games | 3.9.1 (RK/DS) | - | Yes |
+| Disney Infinity 3.0: Play Without Limits | 3.9.1 (DS/MM/UT) | - | Yes |
+| Minecraft: Wii U Edition | 3.9.1 (DS/MM) | 4.9.0 | Yes |
+| Might No. 9 | 3.9.1 (RK/DS/MM/MS) | - | Yes |
+| Axiom Verge | 3.10.0 | - | Yes |
+| Pokkén Tournament | 3.10.0 (RK/DS/MM) | 4.10.0 | Yes |
+| Lost Reavers | 3.10.0 (RK/DS/MM/MS) | - | Yes |
 
 # Switch
-| Game | NEX Modules | PIA Modules | Debug Symbols |
+| Game | NEX Modules | PIA Version | Debug Symbols |
 | --- | --- | --- | --- |
-| Cave Story | NEX-4_0_3<br>NEX_RK-4_0_3 | None | Yes |
-| Lego Worlds | NEX-4_0_3<br>NEX_MM-4_0_3 | PiaCommon-5_2_7<br>Pia-5_2_7<br>PiaFramework-5_2_7<br>PiaInet-5_2_7<br>PiaLan-5_2_7<br>PiaLocal-5_2_7<br>PiaReckoning-5_2_7<br>PiaSession-5_2_7<br>PiaSync-5_2_7<br>PiaTransport-5_2_7<br>PiaTune-5_2_7<br>PiaClone-5_2_7 | Yes |
-| ARMS | NEX-4_0_3<br>NEX_MM-4_0_3<br>NEX_UT-4_0_3 | PiaCommon-5_2_12<br>Pia-5_2_12<br>PiaInet-5_2_12<br>PiaLan-5_2_12<br>PiaSession-5_2_12<br>PiaTransport-5_2_12<br>PiaClone-5_2_12<br>PiaLocal-5_2_12 | No |
-| Mario Kart 8 Deluxe | NEX-4_0_7-apptrbs<br>NEX-DebugLoginDirect<br>NEX_MM-4_0_7<br>NEX_DS-4_0_7<br>NEX_RK-4_0_7 | PiaCommon-5_2_5<br>Pia-5_2_5<br>PiaInet-5_2_5<br>PiaLan-5_2_5<br>PiaSession-5_2_5<br>PiaTransport-5_2_5<br>PiaLocal-5_2_5 | No |
-| Pokkén Tournament | NEX_DS-4_1_1<br>NEX-4_1_1-appfx<br>NEX_RK-4_1_1<br>NEX_UT-4_1_1<br>NEX_MM-4_1_1 | PiaSession-5_3_5<br>PiaTransport-5_3_5<br>PiaCommon-5_3_5<br>Pia-5_3_5<br>PiaLan-5_3_5<br>PiaInet-5_3_5<br>PiaLocal-5_3_5<br>PiaNat-5_3_5 | No |
-| Super Mario Odyssey | NEX_DS-4_1_2<br>NEX-4_1_2-apprs<br>NEX_RK-4_1_2<br>NEX_UT-4_1_2 | None | Yes |
+| Cave Story | 4.0.3 (RK) | - | Yes |
+| Lego Worlds | 4.0.3 (MM) | 5.2.7 | Yes |
+| ARMS | 4.0.3 (MM/UT) | 5.2.12 | No |
+| Mario Kart 8 Deluxe | 4.0.7-apptrbs (RK/DS/MM) | 5.2.5 | No |
+| Pokkén Tournament | 4.1.1-appfx (RK/DS/MM/UT) | 5.3.5 | No |
+| Super Mario Odyssey | 4.1.2-apprs (RK/DS/UT) | - | Yes |
+| Splatoon 2 | 4.3.1-appblz (RK/DS/MM/UT/CO) | 5.9.1 | Yes |
+| Splatoon 2 | 4.3.8-appblz (RK/DS/MM/UT/CO) | 5.9.1 | No |
+| Super Mario Maker 2 | 4.6.15-appslop (DS/MM/UT) | 5.18.0 | No |
