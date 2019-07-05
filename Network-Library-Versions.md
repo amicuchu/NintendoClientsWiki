@@ -61,7 +61,9 @@ Unfortunately, there are many different versions of the nex library which are no
 | Mummy Pinball | 4.3.1 (RK/R2/DS/UT/SS) | - | No |
 | Splatoon 2 | 4.3.1-appblz (RK/DS/MM/UT/CO) | 5.9.1 | Yes |
 | Splatoon 2 | 4.3.8-appblz (RK/DS/MM/UT/CO) | 5.9.1 | No |
+| Capcom Beat 'Em Up Bundle | 4.5.0 (MM) | 5.10.0 | No |
 | Super Weekend Mode | 4.5.0 (RK/R2/DS/UT/SS) | - | No |
+| NES (Nintendo Switch Online) | 4.5.1-OL (MM/CO) | 5.10.0 | No |
 | Dragon Marked for Death | 4.6.2 (MM/VS) | - | No |
 | Terraria | 4.6.2 (RK/R2/DS/MM/UT/SS) | 5.14.0 | No |
 | Super Smash Bros. Ultimate | 4.6.2-appc2 (DS/MM/UT/CO/SC) | 5.11.3 | No |
