@@ -161,10 +161,13 @@ This is the reverse of the [GetPID](#4-getpid) method. It returns the name assoc
 | --- | --- |
 | Uint32 | Platform type (always 3) |
 | [String] | Username |
-| [Data] | Unknown |
+| [Data] | Always [NullData](#nulldata-structure) |
 | Bool | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
+| Uint32 | NEX version (e.g. 40601) |
+| Uint32 | Client version |
+
+### NullData ([Structure])
+This struct does not have any fields.
 
 ## Response
 | Type | Description |
