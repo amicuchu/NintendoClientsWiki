@@ -159,8 +159,8 @@ This is the reverse of the [GetPID](#4-getpid) method. It returns the name assoc
 ### ValidateAndRequestTicketParam ([Structure])
 | Type | Description |
 | --- | --- |
-| Uint32 | Unknown |
-| [String] | Unknown |
+| Uint32 | Platform type (always 3) |
+| [String] | Username |
 | [Data] | Unknown |
 | Bool | Unknown |
 | Uint32 | Unknown |
