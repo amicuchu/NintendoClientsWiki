@@ -4,14 +4,14 @@ Alternative name: TicketGrantingProtocol
 
 This is the only protocol that's available on the authentication server. Other protocols are only available on the secure server.
 
-| Method ID | Method Name |
-| --- | --- |
-| 1 | [Login](#1-login) |
-| 2 | [LoginEx](#2-loginex) |
-| 3 | [RequestTicket](#3-requestticket) |
-| 4 | [GetPID](#4-getpid) |
-| 5 | [GetName](#5-getname) |
-| 6 | [LoginWithContext](#6-loginwithcontext) |
+| Method ID | Name (Wii U) | Name (Switch) |
+| --- | --- | --- |
+| 1 | [Login](#1-login) | [ValidateAndRequestTicket](#1-login) |
+| 2 | [LoginEx](#2-loginex) | [ValidateAndRequestTicketWithCustomData](#2-loginex) |
+| 3 | [RequestTicket](#3-requestticket) | [RequestTicket](#3-requestticket) |
+| 4 | [GetPID](#4-getpid) | [GetPID](#4-getpid) |
+| 5 | [GetName](#5-getname) | [GetName](#5-getname) |
+| 6 | [LoginWithContext](#6-loginwithcontext) | [ValidateAndRequestTicketWithParam](#6-validateandrequestticketwithparam) |
 
 # (1) Login
 Alternative name: ValidateAndRequestTicket
@@ -149,6 +149,37 @@ This is the reverse of the [GetPID](#4-getpid) method. It returns the name assoc
 | [PID] | pidPrincipal | User pid |
 | [Buffer] | pbufResponse | [Kerberos ticket](Kerberos-Authentication#kerberos-ticket) |
 | [RVConnectionData](NEX-Common-Types#rendez-vous-connection-data-structure) | pConnectionData | Connection info for secure server |
+
+# (6) ValidateAndRequestTicketWithParam
+## Request
+| Type | Description |
+| --- | --- |
+| [ValidateAndRequestTicketParam](#validateandrequestticketparam-structure) | Param |
+
+### ValidateAndRequestTicketParam ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint32 | Unknown |
+| [String] | Unknown |
+| [Data] | Unknown |
+| Bool | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [ValidateAndRequestTicketResult](#validateandrequestticketparam-structure) | result |
+
+### ValidateAndRequestTicketResult ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint64 | Unknown |
+| [Buffer] | Unknown |
+| [StationURL] | Unknown |
+| [DateTime] | Unknown |
+| [String] | Unknown |
+| [String] | Unknown |
 
 [Result]: NEX-Common-Types#result
 [String]: NEX-Common-Types#string
