@@ -57,9 +57,10 @@ Unfortunately, there are many different versions of the nex library which are no
 | Pokkén Tournament | 4.1.1-appfx (RK/DS/MM/UT) | 5.3.5 | No |
 | Super Mario Odyssey | 4.1.2-apprs (RK/DS/UT) | - | Yes |
 | Donkey Kong Country Tropical Freeze | 4.2.1 (RK/DS) | - | Yes |
+| Mummy Pinball | 4.3.1 (RK/R2/DS/UT/SS) | - | No |
 | Splatoon 2 | 4.3.1-appblz (RK/DS/MM/UT/CO) | 5.9.1 | Yes |
 | Splatoon 2 | 4.3.8-appblz (RK/DS/MM/UT/CO) | 5.9.1 | No |
 | Terraria | 4.6.2 (RK/R2/DS/MM/UT/SS) | 5.14.0 | No |
 | Super Smash Bros. Ultimate | 4.6.2-appc2 (DS/MM/UT/CO/SC) | 5.11.3 | Yes |
-| Tetris 99 | 4.6.4-app99 (MM/UT) | None | No |
+| Tetris 99 | 4.6.4-app99 (MM/UT) | - | No |
 | Super Mario Maker 2 | 4.6.15-appslop (DS/MM/UT) | 5.18.0 | No |
