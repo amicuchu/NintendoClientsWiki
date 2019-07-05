@@ -32,6 +32,7 @@ See also: [[RMC Protocol]]
 | 0x70 | [Ranking](Ranking-Protocol) |
 | 0x73 | [Data store](Data-Store-Protocol) |
 | 0x74 | ? |
+| 0x79 | Subscriber |
 | 0x7A | [Ranking 2](Ranking-Protocol-2) |
 | 0x7B | ? |
 | 0x7C | Screening |
