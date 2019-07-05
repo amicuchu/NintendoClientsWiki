@@ -161,7 +161,7 @@ This is the reverse of the [GetPID](#4-getpid) method. It returns the name assoc
 | --- | --- |
 | Uint32 | Platform type (always 3) |
 | [String] | Username |
-| [Data] | Always [NullData](#nulldata-structure) |
+| [Data] | [NullData](#nulldata-structure) or a struct with a token |
 | Bool | Unknown |
 | Uint32 | NEX version (e.g. 40601) |
 | Uint32 | Client version |
