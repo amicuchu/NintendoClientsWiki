@@ -51,6 +51,7 @@ Unfortunately, there are many different versions of the nex library which are no
 | --- | --- | --- | --- |
 | Cave Story | 4.0.3 (RK) | - | Yes |
 | Lego Worlds | 4.0.3 (MM) | 5.2.7 | Yes |
+| Puyo Puyo Tetris | 4.0.3 (RK/DS) | 5.2.7 | No |
 | ARMS | 4.0.3 (MM/UT) | 5.2.12 | No |
 | Mario Kart 8 Deluxe | 4.0.7-apptrbs (RK/DS/MM) | 5.2.5 | No |
 | Pokkén Tournament | 4.1.1-appfx (RK/DS/MM/UT) | 5.3.5 | No |
