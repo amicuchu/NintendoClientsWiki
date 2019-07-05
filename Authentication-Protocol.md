@@ -177,11 +177,11 @@ This struct does not have any fields.
 ### ValidateAndRequestTicketResult ([Structure])
 | Type | Description |
 | --- | --- |
-| Uint64 | Unknown |
-| [Buffer] | Unknown |
-| [StationURL] | Unknown |
-| [DateTime] | Unknown |
-| [String] | Unknown |
+| [PID] | User id |
+| [Buffer] | [Kerberos ticket](Kerberos-Authentication#kerberos-ticket) |
+| [StationURL] | Secure server location |
+| [DateTime] | Server time |
+| [String] | Server build name |
 | [String] | Unknown |
 
 [Result]: NEX-Common-Types#result
