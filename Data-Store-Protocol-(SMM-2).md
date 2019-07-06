@@ -4,7 +4,7 @@ This page describes the methods that are only seen in Super Mario Maker 2. Almos
 
 | Method ID | Method Name |
 | --- | --- |
-| 47 | ? |
+| 47 | RegisterUser |
 | 48 | GetUsers |
 | 49 | SyncUserProfile |
 | 50 | ? |
@@ -16,18 +16,18 @@ This page describes the methods that are only seen in Super Mario Maker 2. Almos
 | 56 | SearchUsersFollowee |
 | 57 | ? |
 | 58 | ? |
-| 59 | ? |
+| 59 | UpdateLastLoginTime |
 | 60 | ? |
 | 61 | ? |
 | 62 | ? |
-| 63 | ? |
+| 63 | GetMiiClothes |
 | 64 | ? |
-| 65 | ? |
+| 65 | GetUserNameNgType |
 | 66 | ? |
 | 67 | ? |
 | 68 | ? |
 | 69 | UpdateCourseTag |
-| 70 | ? |
+| 70 | GetCourseInfo |
 | 71 | SearchCoursesPointRanking |
 | 72 | ? |
 | 73 | SearchCoursesLatest |
@@ -56,15 +56,15 @@ This page describes the methods that are only seen in Super Mario Maker 2. Almos
 | 96 | ? |
 | 97 | ? |
 | 98 | ? |
-| 99 | ? |
-| 100 | ? |
-| 101 | ? |
+| 99 | PostPlayResultPersonal |
+| 100 | PostPlayResultEntire |
+| 101 | PostPlayResult |
 | 102 | ? |
 | 103 | ? |
-| 104 | ? |
-| 105 | ? |
-| 106 | ? |
-| 107 | ? |
+| 104 | PostRating |
+| 105 | PostRatingInfoAccumulated |
+| 106 | PostRatingPersonal |
+| 107 | PostRatingEntire |
 | 108 | ? |
 | 109 | ? |
 | 110 | ? |
@@ -79,14 +79,14 @@ This page describes the methods that are only seen in Super Mario Maker 2. Almos
 | 119 | EndBattleMode |
 | 120 | ? |
 | 121 | ? |
-| 122 | ? |
+| 122 | EndMultiClear |
 | 123 | ? |
 | 124 | ? |
 | 125 | ? |
 | 126 | ? |
 | 127 | ? |
-| 128 | ? |
-| 129 | ? |
+| 128 | ReadNgCourseNotification |
+| 129 | GetNgCourseNotification |
 | 130 | ? |
 | 131 | GetUserOrCourse |
 | 132 | ? |
@@ -100,8 +100,8 @@ This page describes the methods that are only seen in Super Mario Maker 2. Almos
 | 140 | ? |
 | 141 | ? |
 | 142 | ? |
-| 143 | ? |
-| 144 | ? |
+| 143 | GetAdditionalMiiClothesInfo |
+| 144 | GetAdditionalMiiClothes |
 | 145 | ? |
 | 146 | ? |
 
