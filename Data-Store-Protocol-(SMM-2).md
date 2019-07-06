@@ -6,7 +6,7 @@ This page describes the methods that are only seen in Super Mario Maker 2. Almos
 | --- | --- |
 | 47 | ? |
 | 48 | GetUsers |
-| 49 | ? |
+| 49 | SyncUserProfile |
 | 50 | ? |
 | 51 | ? |
 | 52 | ? |
