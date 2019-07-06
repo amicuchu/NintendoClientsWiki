@@ -82,7 +82,7 @@ This page describes the methods that are only seen in Super Mario Maker 2. Almos
 | 122 | EndMultiClear |
 | 123 | ? |
 | 124 | ? |
-| 125 | ? |
+| 125 | GetNewNotification |
 | 126 | ? |
 | 127 | ? |
 | 128 | ReadNgCourseNotification |
