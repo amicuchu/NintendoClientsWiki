@@ -1024,7 +1024,6 @@ This method does not return anything.
 [DataStoreReqGetAdditionalMeta]: #datastorereqgetadditionalmeta-structure
 [DataStorePasswordInfo]: #datastorepasswordinfo-structure
 [DataStoreChangeMetaParam]: #datastorechangemetaparam-structure
-[BufferQueueParam]: #bufferqueueparam-structure
 [DataStorePersistenceTarget]: #datastorepersistencetarget-structure
 [DataStoreKeyValue]: #datastorekeyvalue-structure
 [DataStorePermission]: #datastorepermission-structure
