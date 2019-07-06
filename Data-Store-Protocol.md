@@ -1,6 +1,11 @@
 ## [[NEX Protocols]] > Data Store (0x73)
 
-This page was generated automatically based on Super Mario Odyssey.
+The following games add additional methods to the datastore protocol:
+* [Super Mario Maker](Data-Store-Protocol-(SMM))
+* [Super Mario Maker 2](Data-Store-Protocol-(SMM-2))
+* [Super Mario Odyssey](Data-Store-Protocol-(SMO))
+
+This remainder of this page describes the methods that are not specific to any game.
 
 | Method ID | Method Name |
 | --- | --- |
@@ -50,13 +55,6 @@ This page was generated automatically based on Super Mario Odyssey.
 | 44 | [RateObjectsWithPosting](#44-rateobjectswithposting) |
 | 45 | [GetObjectInfos](#45-getobjectinfos) |
 | 46 | [SearchObjectLight](#46-searchobjectlight) |
-| 47 | [AddToBufferQueue](#47-addtobufferqueue) |
-| 48 | [AddToBufferQueues](#48-addtobufferqueues) |
-| 49 | [GetBufferQueue](#49-getbufferqueue) |
-| 50 | [GetBufferQueues](#50-getbufferqueues) |
-| 51 | [ClearBufferQueues](#51-clearbufferqueues) |
-| 52 | [SearchBalloon](#52-searchballoon) |
-| 53 | [FetchMyInfos](#53-fetchmyinfos) |
 
 # (1) PrepareGetObjectV1
 ## Request
@@ -583,84 +581,6 @@ This method does not return anything.
 | --- | --- |
 | [DataStoreSearchResult] | pSearchResult |
 
-# (47) AddToBufferQueue
-## Request
-| Type | Name |
-| --- | --- |
-| [BufferQueueParam] | param |
-| [qBuffer] | buffer |
-
-## Response
-This method does not return anything.
-
-# (48) AddToBufferQueues
-## Request
-| Type | Name |
-| --- | --- |
-| [List]&lt;[BufferQueueParam]&gt; | params |
-| [List]&lt;[qBuffer]&gt; | buffers |
-
-## Response
-| Type | Name |
-| --- | --- |
-| [List]&lt;[Result]&gt; | pResults |
-
-# (49) GetBufferQueue
-## Request
-| Type | Name |
-| --- | --- |
-| [BufferQueueParam] | param |
-
-## Response
-| Type | Name |
-| --- | --- |
-| [List]&lt;[qBuffer]&gt; | pBufferQueue |
-
-# (50) GetBufferQueues
-## Request
-| Type | Name |
-| --- | --- |
-| [List]&lt;[BufferQueueParam]&gt; | params |
-
-## Response
-| Type | Name |
-| --- | --- |
-| [List]&lt;[List]&lt;[qBuffer]&gt;&gt; | pBufferQueueLst |
-| [List]&lt;[Result]&gt; | pResults |
-
-# (51) ClearBufferQueues
-## Request
-| Type | Name |
-| --- | --- |
-| [List]&lt;[BufferQueueParam]&gt; | params |
-
-## Response
-| Type | Name |
-| --- | --- |
-| [List]&lt;[Result]&gt; | pResults |
-
-# (52) SearchBalloon
-## Request
-| Type | Name |
-| --- | --- |
-| [DataStoreSearchBalloonParam] | param |
-
-## Response
-| Type | Name |
-| --- | --- |
-| [List]&lt;[DataStoreSearchBalloonResultSet]&gt; | pResults |
-
-# (53) FetchMyInfos
-## Request
-| Type | Name |
-| --- | --- |
-| [DataStoreFetchMyInfosParam] | patam |
-
-## Response
-| Type | Name |
-| --- | --- |
-| [DataStoreFetchMyInfosResult] | pResult |
-
 # Types
 ## DataStorePrepareGetParamV1 ([Structure])
 | Type | Name |
@@ -999,42 +919,6 @@ This method does not return anything.
 | Uint64 | accessPassword |
 | Uint64 | updatePassword |
 
-## BufferQueueParam ([Structure])
-| Type | Name |
-| --- | --- |
-| Uint64 | dataId |
-| Uint32 | slot |
-
-## DataStoreSearchBalloonParam ([Structure])
-| Type | Name |
-| --- | --- |
-| Uint16 | dataType |
-| Uint8 | userRank |
-| Uint8 | resultSetCount |
-
-## DataStoreSearchBalloonResultSet ([Structure])
-| Type | Name |
-| --- | --- |
-| [List]&lt;[DataStoreSearchBalloonResult]&gt; | balloons |
-
-## DataStoreFetchMyInfosParam ([Structure])
-| Type | Name |
-| --- | --- |
-| [List]&lt;Uint16&gt; | balloonDataTypes |
-| Uint16 | additionalOperation |
-
-## DataStoreFetchMyInfosResult ([Structure])
-| Type | Name |
-| --- | --- |
-| [List]&lt;[DataStoreFetchMyInfosBalloonResult]&gt; | balloons |
-| [DataStoreFetchMyInfosAchievementResult] | achievement |
-
-## ResultRange ([Structure])
-| Type | Name |
-| --- | --- |
-| Uint32 | m_uiOffset |
-| Uint32 | m_uiSize |
-
 ## DataStorePersistenceTarget ([Structure])
 | Type | Name |
 | --- | --- |
@@ -1078,45 +962,6 @@ This method does not return anything.
 | Uint32 | referredCnt |
 | Uint16 | dataType |
 | Uint8 | status |
-
-## DataStoreSearchBalloonResult ([Structure])
-| Type | Name |
-| --- | --- |
-| Uint64 | dataId |
-| [PID] | ownerId |
-| Uint32 | size |
-| [String] | name |
-| Uint16 | dataType |
-| [qBuffer] | metaBinary |
-| [DateTime] | createdTime |
-| [DateTime] | updatedTime |
-| Uint64 | ownerDataId |
-| [String] | ownerName |
-| Bool | isFriendBalloon |
-| [Map]&lt;Sint8, [DataStoreRatingInfo]&gt; | ratings |
-| [Map]&lt;Sint8, [DataStoreRatingInfo]&gt; | ownerRatings |
-
-## DataStoreFetchMyInfosBalloonResult ([Structure])
-| Type | Name |
-| --- | --- |
-| Uint64 | dataId |
-| Uint16 | dataType |
-| [qBuffer] | metaBinary |
-| [DateTime] | createdTime |
-| [DateTime] | updatedTime |
-| Bool | isCleared |
-| [Map]&lt;Sint8, [DataStoreRatingInfo]&gt; | ratings |
-| [Map]&lt;Sint8, [List]&lt;[qBuffer]&gt;&gt; | buffers |
-
-## DataStoreFetchMyInfosAchievementResult ([Structure])
-| Type | Name |
-| --- | --- |
-| Uint64 | dataId |
-| Uint16 | dataType |
-| [qBuffer] | metaBinary |
-| [DateTime] | createdTime |
-| [Map]&lt;Sint8, [DataStoreRatingInfo]&gt; | ratings |
-| [Map]&lt;Sint8, [List]&lt;[qBuffer]&gt;&gt; | buffers |
 
 ## DataStoreRatingInitParam ([Structure])
 | Type | Name |
@@ -1180,18 +1025,11 @@ This method does not return anything.
 [DataStorePasswordInfo]: #datastorepasswordinfo-structure
 [DataStoreChangeMetaParam]: #datastorechangemetaparam-structure
 [BufferQueueParam]: #bufferqueueparam-structure
-[DataStoreSearchBalloonParam]: #datastoresearchballoonparam-structure
-[DataStoreSearchBalloonResultSet]: #datastoresearchballoonresultset-structure
-[DataStoreFetchMyInfosParam]: #datastorefetchmyinfosparam-structure
-[DataStoreFetchMyInfosResult]: #datastorefetchmyinfosresult-structure
 [DataStorePersistenceTarget]: #datastorepersistencetarget-structure
 [DataStoreKeyValue]: #datastorekeyvalue-structure
 [DataStorePermission]: #datastorepermission-structure
 [DataStoreRatingInitParamWithSlot]: #datastoreratinginitparamwithslot-structure
 [DataStorePersistenceInitParam]: #datastorepersistenceinitparam-structure
 [DataStoreChangeMetaCompareParam]: #datastorechangemetacompareparam-structure
-[ResultRange]: #resultrange-structure
-[DataStoreSearchBalloonResult]: #datastoresearchballoonresult-structure
-[DataStoreFetchMyInfosBalloonResult]: #datastorefetchmyinfosballoonresult-structure
-[DataStoreFetchMyInfosAchievementResult]: #datastorefetchmyinfosachievementresult-structure
+[ResultRange]: NEX-Common-Types#result-range-structure
 [DataStoreRatingInitParam]: #datastoreratinginitparam-structure
