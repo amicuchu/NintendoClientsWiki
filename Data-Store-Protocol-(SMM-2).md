@@ -88,7 +88,7 @@ This page describes the methods that are only seen in Super Mario Maker 2. This 
 | 128 | ReadNgCourseNotification |
 | 129 | GetNgCourseNotification |
 | 130 | ? |
-| 131 | GetUserOrCourse |
+| 131 | [GetUserOrCourse](#131-getuserorcourse) |
 | 132 | ? |
 | 133 | ? |
 | 134 | ? |
@@ -137,6 +137,18 @@ This method does not return anything.
 | --- | --- |
 | [SyncUserProfileResult](#syncuserprofileresult-structure) | Result |
 
+# (131) GetUserOrCourse
+## Request
+| Type | Description |
+| --- | --- |
+| [GetUserOrCourseParam](#getuserorcourseparam-structure) | Param |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [UserInfo] | User info |
+| [CourseInfo] | Course info |
+
 # Types
 ## RegisterUserParam ([Structure])
 | Type | Description |
@@ -180,6 +192,13 @@ This method does not return anything.
 | Bool | Unknown |
 | Bool | Unknown |
 
+## GetUserOrCourseParam ([Structure])
+| Type | Name |
+| --- | --- |
+| [String] | codeString |
+| Uint32 | userResultOption |
+| Uint32 | courseResultOption |
+
 ## UserInfo ([Structure])
 | Type | Description |
 | --- | --- |
@@ -210,6 +229,37 @@ This method does not return anything.
 | Uint16 | Unknown |
 | Uint8 | Unknown |
 
+## CourseInfo ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint64 | Unknown |
+| [String] | Unknown |
+| Uint64 | Unknown |
+| [String] | Unknown |
+| [String] | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| [DateTime] | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint32 | Unknown |
+| Uint16 | Unknown |
+| Uint16 | Unknown |
+| [qBuffer] | Unknown |
+| [Map]&lt;Uint8, Uint32&gt; | Unknown |
+| [Map]&lt;Uint8, Uint32&gt; | Unknown |
+| [Map]&lt;Uint8, Uint32&gt; | Unknown |
+| [UnknownStruct2] | Unknown |
+| [Map]&lt;Uint8, Uint32&gt; | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| [Buffer] | Unknown |
+| [String] | Unknown |
+
 ## UnknownStruct1 ([Structure])
 | Type | Description |
 | --- | --- |
@@ -218,10 +268,25 @@ This method does not return anything.
 | Uint16 | Unknown |
 | Uint16 | Unknown |
 
+## UnknownStruct2 ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint64 | Unknown |
+| Uint32 | Unknown |
+
+## UnknownStruct3 ([Structure])
+| Type | Description |
+| --- | --- |
+| [String] | Unknown |
+| Uint8 | Unknown |
+| Uint32 | Unknown |
+
 [UnknownStruct1]: #unknownstruct1-structure
 [UnknownStruct2]: #unknownstruct2-structure
+[UnknownStruct3]: #unknownstruct3-structure
 
 [UserInfo]: #userinfo-structure
+[CourseInfo]: #courseinfo-structure
 
 [DataStoreGetMetaParam]: Data-Store-Protocol#datastoregetmetaparam-structure
 [DataStorePreparePostParam]: Data-Store-Protocol#datastorepreparepostparam-structure
