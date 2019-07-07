@@ -1,11 +1,11 @@
 ## [[NEX Protocols]] > [Data Store (0x73)](Data-Store-Protocol) > SMM 2
 
-This page describes the methods that are only seen in Super Mario Maker 2. Almost nothing is known about these methods yet. Any help would be appreciated.
+This page describes the methods that are only seen in Super Mario Maker 2. This page is incomplete. Any help would be appreciated.
 
 | Method ID | Method Name |
 | --- | --- |
 | 47 | [RegisterUser](#47-registeruser) |
-| 48 | GetUsers |
+| 48 | [GetUsers](#48-getusers) |
 | 49 | SyncUserProfile |
 | 50 | ? |
 | 51 | ? |
@@ -114,6 +114,18 @@ This page describes the methods that are only seen in Super Mario Maker 2. Almos
 ## Response
 This method does not return anything.
 
+# (48) GetUsers
+## Request
+| Type | Description |
+| --- | --- |
+| [GetUsersParam](#getusersparam-structure) | Param |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[UserInfo]&gt; | Users |
+| [List]&lt;[Result]&gt; | Result codes |
+
 # Types
 ## RegisterUserParam ([Structure])
 | Type | Description |
@@ -125,6 +137,42 @@ This method does not return anything.
 | [String] | Unknown |
 | [String] | Unknown |
 
+## GetUsersParam ([Structure])
+| Type | Name |
+| --- | --- |
+| [List]&lt;[PID]&gt; | userPIDs |
+| Uint32 | resultOption |
+
+## UserInfo ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint64 | Unknown |
+| [String] | Unknown |
+| [String] | Unknown |
+| [UnknownStruct1] | Unknown |
+| [qBuffer] | Unknown |
+| [String] | Unknown |
+| Uint8 | Unknown |
+| Uint64 | Unknown |
+| [DateTime] | Unknown |
+| Bool | Unknown |
+| Bool | Unknown |
+| Bool | Unknown |
+| [Map]&lt;Uint8, Uint32&gt; | Unknown |
+| [Map]&lt;Uint8, Uint32&gt; | Unknown |
+| [Map]&lt;Uint8, Uint32&gt; | Unknown |
+| [Map]&lt;Uint8, Uint32&gt; | Unknown |
+| [Map]&lt;Uint8, Uint32&gt; | Unknown |
+| [List]&lt;[BadgeInfo](#badgeinfo-structure)&gt; | Badge info |
+| [Map]&lt;Uint8, Uint32&gt; | Unknown |
+| [Map]&lt;Uint8, Uint32&gt; | Unknown |
+
+## UserInfo ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint16 | Unknown |
+| Uint8 | Unknown |
+
 ## UnknownStruct1 ([Structure])
 | Type | Description |
 | --- | --- |
@@ -133,7 +181,14 @@ This method does not return anything.
 | Uint16 | Unknown |
 | Uint16 | Unknown |
 
+## UnknownStruct2 ([Structure])
+| Type | Description |
+| --- | --- |
+
 [UnknownStruct1]: #unknownstruct1-structure
+[UnknownStruct2]: #unknownstruct2-structure
+
+[UserInfo]: #userinfo-structure
 
 [DataStoreGetMetaParam]: Data-Store-Protocol#datastoregetmetaparam-structure
 [DataStorePreparePostParam]: Data-Store-Protocol#datastorepreparepostparam-structure
