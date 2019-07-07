@@ -220,9 +220,9 @@ This method does not return anything.
 ## UserInfo ([Structure])
 | Type | Description |
 | --- | --- |
-| Uint64 | Data id |
-| [String] | Unknown |
-| [String] | Unknown |
+| [PID] | User id |
+| [String] | User code |
+| [String] | User name |
 | [UnknownStruct1] | Unknown |
 | [qBuffer] | Unknown |
 | [String] | Unknown |
