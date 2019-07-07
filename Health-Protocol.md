@@ -7,7 +7,7 @@
 | 3 | RunSanityCheck |
 | 4 | FixSanityErrors |
 
-## Method format
+## Method Format
 These methods do not take any parameters.
 
 ### Response
