@@ -257,8 +257,8 @@ This method does not return anything.
 | Uint8 | Unknown |
 | Uint8 | Unknown |
 | Uint8 | Unknown |
-| [Buffer] | Unknown |
-| [String] | Unknown |
+| [UnknownStruct3] | Unknown |
+| [UnknownStruct3] | Unknown |
 
 ## UnknownStruct1 ([Structure])
 | Type | Description |
@@ -280,6 +280,8 @@ This method does not return anything.
 | [String] | Unknown |
 | Uint8 | Unknown |
 | Uint32 | Unknown |
+| [Buffer] | Unknown |
+| [String] | Unknown |
 
 [UnknownStruct1]: #unknownstruct1-structure
 [UnknownStruct2]: #unknownstruct2-structure
