@@ -6,7 +6,7 @@ This page describes the methods that are only seen in Super Mario Maker 2. This 
 | --- | --- |
 | 47 | [RegisterUser](#47-registeruser) |
 | 48 | [GetUsers](#48-getusers) |
-| 49 | SyncUserProfile |
+| 49 | [SyncUserProfile](#49-syncuserprofile) |
 | 50 | ? |
 | 51 | ? |
 | 52 | ? |
@@ -126,6 +126,17 @@ This method does not return anything.
 | [List]&lt;[UserInfo]&gt; | Users |
 | [List]&lt;[Result]&gt; | Result codes |
 
+# (49) SyncUserProfile
+## Request
+| Type | Description |
+| --- | --- |
+| [SyncUserProfileParam](#syncuserprofileparam-structure) | Param |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [SyncUserProfileResult](#syncuserprofileresult-structure) | Result |
+
 # Types
 ## RegisterUserParam ([Structure])
 | Type | Description |
@@ -142,6 +153,32 @@ This method does not return anything.
 | --- | --- |
 | [List]&lt;[PID]&gt; | userPIDs |
 | Uint32 | resultOption |
+
+## SyncUserProfileParam ([Structure])
+| Type | Description |
+| --- | --- |
+| [String] | Unknown |
+| [UnknownStruct1] | Unknown |
+| [qBuffer] | Unknown |
+| Uint8 | Unknown |
+| [String] | Unknown |
+| Bool | Unknown |
+| Bool | Unknown |
+| [String] | Unknown |
+| Uint32 | Unknown |
+
+## SyncUserProfileResult ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint64 | Unknown |
+| [String] | Unknown |
+| [UnknownStruct1] | Unknown |
+| [qBuffer] | Unknown |
+| Uint8 | Unknown |
+| [String] | Unknown |
+| Uint8 | Unknown |
+| Bool | Unknown |
+| Bool | Unknown |
 
 ## UserInfo ([Structure])
 | Type | Description |
