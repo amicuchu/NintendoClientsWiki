@@ -4,7 +4,7 @@ This page describes the methods that are only seen in Super Mario Maker 2. Almos
 
 | Method ID | Method Name |
 | --- | --- |
-| 47 | RegisterUser |
+| 47 | [RegisterUser](#47-registeruser) |
 | 48 | GetUsers |
 | 49 | SyncUserProfile |
 | 50 | ? |
@@ -104,6 +104,36 @@ This page describes the methods that are only seen in Super Mario Maker 2. Almos
 | 144 | GetAdditionalMiiClothes |
 | 145 | ? |
 | 146 | ? |
+
+# (47) RegisterUser
+## Request
+| Type | Description |
+| --- | --- |
+| [RegisterUserParam](#registeruserparam-structure) | Param |
+
+## Response
+This method does not return anything.
+
+# Types
+## RegisterUserParam ([Structure])
+| Type | Description |
+| --- | --- |
+| [String] | Unknown |
+| [UnknownStruct1] | Unknown |
+| [qBuffer] | Unknown |
+| Uint8 | Unknown |
+| [String] | Unknown |
+| [String] | Unknown |
+
+## UnknownStruct1 ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint16 | Unknown |
+| Uint16 | Unknown |
+| Uint16 | Unknown |
+| Uint16 | Unknown |
+
+[UnknownStruct1]: #unknownstruct1-structure
 
 [DataStoreGetMetaParam]: Data-Store-Protocol#datastoregetmetaparam-structure
 [DataStorePreparePostParam]: Data-Store-Protocol#datastorepreparepostparam-structure
