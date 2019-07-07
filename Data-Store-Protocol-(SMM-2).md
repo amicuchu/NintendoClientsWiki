@@ -251,7 +251,7 @@ This method does not return anything.
 | --- | --- |
 | Uint64 | Data id |
 | [String] | Level code |
-| [PID] | Onwer pid |
+| [PID] | Owner id |
 | [String] | Level name |
 | [String] | Unknown |
 | Uint8 | Unknown |
