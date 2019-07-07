@@ -223,7 +223,7 @@ This method does not return anything.
 | [Map]&lt;Uint8, Uint32&gt; | Unknown |
 | [Map]&lt;Uint8, Uint32&gt; | Unknown |
 
-## UserInfo ([Structure])
+## BadgeInfo ([Structure])
 | Type | Description |
 | --- | --- |
 | Uint16 | Unknown |
