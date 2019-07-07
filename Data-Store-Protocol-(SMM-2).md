@@ -30,7 +30,7 @@ This page describes the methods that are only seen in Super Mario Maker 2. This 
 | 70 | GetCourseInfo |
 | 71 | SearchCoursesPointRanking |
 | 72 | ? |
-| 73 | SearchCoursesLatest |
+| 73 | [SearchCoursesLatest](#73-searchcourseslatest) |
 | 74 | SearchCoursesPostedBy |
 | 75 | SearchCoursesPositiveRatedBy |
 | 76 | SearchCoursesPlayedBy |
@@ -137,6 +137,18 @@ This method does not return anything.
 | --- | --- |
 | [SyncUserProfileResult](#syncuserprofileresult-structure) | Result |
 
+# (73) SearchCoursesLatest
+## Request
+| Type | Description |
+| --- | --- |
+| [SearchCoursesLatestParam](#searchcourseslatestparam-structure) | Param |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[CourseInfo]&gt; | Courses |
+| Bool | Unknown |
+
 # (131) GetUserOrCourse
 ## Request
 | Type | Description |
@@ -191,6 +203,12 @@ This method does not return anything.
 | Uint8 | Unknown |
 | Bool | Unknown |
 | Bool | Unknown |
+
+## SearchCoursesLatestParam ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint32 | Unknown |
+| [ResultRange] | Result range |
 
 ## GetUserOrCourseParam ([Structure])
 | Type | Name |
