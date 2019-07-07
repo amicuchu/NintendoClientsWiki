@@ -218,10 +218,6 @@ This method does not return anything.
 | Uint16 | Unknown |
 | Uint16 | Unknown |
 
-## UnknownStruct2 ([Structure])
-| Type | Description |
-| --- | --- |
-
 [UnknownStruct1]: #unknownstruct1-structure
 [UnknownStruct2]: #unknownstruct2-structure
 
