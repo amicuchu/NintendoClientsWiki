@@ -227,7 +227,6 @@ This method does not return anything.
 | [qBuffer] | Unknown |
 | [String] | Unknown |
 | Uint8 | Unknown |
-| Uint64 | Unknown |
 | [DateTime] | Unknown |
 | Bool | Unknown |
 | Bool | Unknown |
