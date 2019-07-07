@@ -207,8 +207,8 @@ This method does not return anything.
 ## SearchCoursesLatestParam ([Structure])
 | Type | Name |
 | --- | --- |
-| Uint32 | Unknown |
-| [ResultRange] | Result range |
+| Uint32 | resultOption |
+| [ResultRange] | resultRange |
 
 ## GetUserOrCourseParam ([Structure])
 | Type | Name |
