@@ -220,7 +220,7 @@ This method does not return anything.
 ## UserInfo ([Structure])
 | Type | Description |
 | --- | --- |
-| Uint64 | Unknown |
+| Uint64 | Data id |
 | [String] | Unknown |
 | [String] | Unknown |
 | [UnknownStruct1] | Unknown |
@@ -250,10 +250,10 @@ This method does not return anything.
 ## CourseInfo ([Structure])
 | Type | Description |
 | --- | --- |
+| Uint64 | Data id |
+| [String] | Level code |
 | Uint64 | Unknown |
-| [String] | Unknown |
-| Uint64 | Unknown |
-| [String] | Unknown |
+| [String] | Level name |
 | [String] | Unknown |
 | Uint8 | Unknown |
 | Uint8 | Unknown |
