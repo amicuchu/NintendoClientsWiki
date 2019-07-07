@@ -252,12 +252,12 @@ This method does not return anything.
 | --- | --- |
 | Uint64 | Data id |
 | [String] | Level code |
-| Uint64 | Unknown |
+| [PID] | Onwer pid |
 | [String] | Level name |
 | [String] | Unknown |
 | Uint8 | Unknown |
 | Uint8 | Unknown |
-| [DateTime] | Unknown |
+| [DateTime] | Upload time |
 | Uint8 | Unknown |
 | Uint8 | Unknown |
 | Uint8 | Unknown |
