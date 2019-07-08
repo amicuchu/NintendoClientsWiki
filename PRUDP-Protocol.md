@@ -277,7 +277,7 @@ For example, if a packet is split into four fragments, they will have the follow
 | Fourth | 0 |
 
 ### Substreams
-[V1](#v1-format) allows the connection to be divided into multiple reliable substreams. The maximum number of substreams is decided during the connection handshake (with [option 4](#optional-data)). Every substream has its own [RC4 streams](#encryption) (but with the same key) and its own incrementing [sequence ids](#sequence-id). Substreams only cover reliable packets. Unreliable packets do not belong to a substream.
+[V1](#v1-format) allows the connection to be divided into multiple reliable substreams. The maximum number of substreams is decided during the connection handshake (with [option 4](#optional-data)). Every substream has its own [RC4 streams](#encryption) and its own incrementing [sequence ids](#sequence-id). Substreams only cover reliable packets. Unreliable packets do not belong to a substream.
 
 NEX never uses more than one substream, and always sets the maximum substream id to 0.
 
