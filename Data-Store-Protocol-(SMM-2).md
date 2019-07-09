@@ -80,8 +80,8 @@ This page describes the methods that are only seen in Super Mario Maker 2. This 
 | 120 | ? |
 | 121 | ? |
 | 122 | EndMultiClear |
-| 123 | ? |
-| 124 | ? |
+| 123 | Follow |
+| 124 | Unfollow |
 | 125 | GetNewNotification |
 | 126 | ? |
 | 127 | ? |
