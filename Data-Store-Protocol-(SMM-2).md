@@ -91,7 +91,7 @@ This page describes the methods that are only seen in Super Mario Maker 2. This 
 | 131 | [GetUserOrCourse](#131-getuserorcourse) |
 | 132 | ? |
 | 133 | ? |
-| 134 | ? |
+| 134 | [Method134](#134-method134) |
 | 135 | ? |
 | 136 | ? |
 | 137 | ? |
@@ -337,6 +337,17 @@ This method does not take any parameters.
 | [UserInfo] | User info |
 | [CourseInfo] | Course info |
 
+# (134) Method134
+## Request
+| Type | Description |
+| --- | --- |
+| Uint8 | Unknown |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [MethodResult134](#methodresult134-structure) | Result |
+
 # Types
 ## RegisterUserParam ([Structure])
 | Type | Description |
@@ -469,6 +480,12 @@ This method does not take any parameters.
 | [String] | codeString |
 | Uint32 | userResultOption |
 | Uint32 | courseResultOption |
+
+## MethodResult134 ([Structure])
+| Type | Description |
+| --- | --- |
+| [List]&lt;[UnknownStruct6]&gt; | Unknown |
+| Uint32 | Unknown |
 
 ## UserInfo ([Structure])
 | Type | Description |
@@ -608,11 +625,18 @@ This method does not take any parameters.
 | Uint8 | Unknown |
 | Uint32 | Unknown |
 
+## UnknownStruct6 ([Structure])
+| Type | Description |
+| --- | --- |
+| [String] | Unknown |
+| [String] | Unknown |
+
 [UnknownStruct1]: #unknownstruct1-structure
 [UnknownStruct2]: #unknownstruct2-structure
 [UnknownStruct3]: #unknownstruct3-structure
 [UnknownStruct4]: #unknownstruct4-structure
 [UnknownStruct5]: #unknownstruct5-structure
+[UnknownStruct6]: #unknownstruct6-structure
 
 [UserInfo]: #userinfo-structure
 [CourseInfo]: #courseinfo-structure
