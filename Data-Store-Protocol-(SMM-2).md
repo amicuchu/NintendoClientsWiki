@@ -65,7 +65,7 @@ This page describes the methods that are only seen in Super Mario Maker 2. This 
 | 105 | PostRatingInfoAccumulated |
 | 106 | PostRatingPersonal |
 | 107 | PostRatingEntire |
-| 108 | ? |
+| 108 | [Method108](#108-method108) |
 | 109 | ? |
 | 110 | ? |
 | 111 | ? |
@@ -316,6 +316,15 @@ This method does not take any parameters.
 | --- | --- |
 | [List]&lt;[CommentInfo]&gt; | Comments |
 
+# (108) Method108
+## Request
+This method does not take any parameters.
+
+## Response
+| Type | Description |
+| --- | --- |
+| [MethodResult108](#methodresult108-structure) | Result |
+
 # (131) GetUserOrCourse
 ## Request
 | Type | Description |
@@ -448,6 +457,12 @@ This method does not take any parameters.
 | Uint32 | count |
 | Uint8 | difficulty |
 
+## MethodResult108 ([Structure])
+| Type | Description |
+| --- | --- |
+| [Map]&lt;Uint8, [UnknownStruct4]&gt; | Unknown |
+| [Map]&lt;Uint8, [UnknownStruct5]&gt; | Unknown |
+
 ## GetUserOrCourseParam ([Structure])
 | Type | Name |
 | --- | --- |
@@ -576,9 +591,28 @@ This method does not take any parameters.
 | [Buffer] | Unknown |
 | [String] | Unknown |
 
+## UnknownStruct4 ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint32 | Unknown |
+| [DateTime] | Unknown |
+| [DateTime] | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+
+## UnknownStruct5 ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint8 | Unknown |
+| Uint32 | Unknown |
+
 [UnknownStruct1]: #unknownstruct1-structure
 [UnknownStruct2]: #unknownstruct2-structure
 [UnknownStruct3]: #unknownstruct3-structure
+[UnknownStruct4]: #unknownstruct4-structure
+[UnknownStruct5]: #unknownstruct5-structure
 
 [UserInfo]: #userinfo-structure
 [CourseInfo]: #courseinfo-structure
