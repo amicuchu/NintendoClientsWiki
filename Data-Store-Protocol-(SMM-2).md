@@ -7,17 +7,17 @@ This page describes the methods that are only seen in Super Mario Maker 2. This 
 | 47 | [RegisterUser](#47-registeruser) |
 | 48 | [GetUsers](#48-getusers) |
 | 49 | [SyncUserProfile](#49-syncuserprofile) |
-| 50 | ? |
-| 51 | ? |
-| 52 | ? |
-| 53 | SearchUsersPlayedCourse |
-| 54 | SearchUsersClearedCourse |
-| 55 | SearchUsersPositiveRatedCourse |
-| 56 | SearchUsersFollowee |
-| 57 | ? |
-| 58 | ? |
-| 59 | UpdateLastLoginTime |
-| 60 | ? |
+| 50 | [Method50](#50-method50) |
+| 51 | [Method51](#51-method51) |
+| 52 | [Method52](#52-method51) |
+| 53 | [SearchUsersPlayedCourse](#53-searchusersplayedcourse) |
+| 54 | [SearchUsersClearedCourse](#54-searchusersclearedcourse) |
+| 55 | [SearchUsersPositiveRatedCourse](#55-searchuserspositiveratedcourse) |
+| 56 | [SearchUsersFollowee](#56-searchusersfollowee) |
+| 57 | [Method57](#57-method57) |
+| 58 | [Method58](#58-method58) |
+| 59 | [UpdateLastLoginTime](#59-updatelastlogintime) |
+| 60 | [Method60](#60-method60) |
 | 61 | ? |
 | 62 | ? |
 | 63 | GetMiiClothes |
@@ -137,6 +137,133 @@ This method does not return anything.
 | --- | --- |
 | [SyncUserProfileResult](#syncuserprofileresult-structure) | Result |
 
+# (50) Method50
+## Request
+| Type | Description |
+| --- | --- |
+| [MethodParam50](#methodparam50-structure) | Param |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[UserInfo]&gt; | Users |
+| [List]&lt;Uint32&gt; | Unknown |
+| Bool | Ünknown |
+
+# (51) Method51
+## Request
+| Type | Description |
+| --- | --- |
+| [MethodParam51](#methodparam51-structure) | Param |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[UserInfo]&gt; | Users |
+| [List]&lt;Uint32&gt; | Unknown |
+| Bool | Ünknown |
+
+# (52) Method52
+## Request
+| Type | Description |
+| --- | --- |
+| [MethodParam52](#methodparam52-structure) | Param |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[UserInfo]&gt; | Users |
+| [List]&lt;Uint32&gt; | Unknown |
+| Bool | Unknown |
+
+# (53) SearchUsersPlayedCourse
+## Request
+| Type | Description |
+| --- | --- |
+| [SearchUsersPlayedCourseParam](#searchusersplayedcourseparam-structure) | Param |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[UserInfo]&gt; | Users |
+
+# (54) SearchUsersClearedCourse
+## Request
+| Type | Description |
+| --- | --- |
+| [SearchUsersClearedCourseParam](#searchusersclearedcourseparam-structure) | Param |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[UserInfo]&gt; | Users |
+
+# (55) SearchUsersPositiveRatedCourse
+## Request
+| Type | Description |
+| --- | --- |
+| [SearchUsersPositiveRatedCourse](#searchuserspositiveratedcourseparam-structure) | Param |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[UserInfo]&gt; | Users |
+
+# (56) SearchUsersFollowee
+## Request
+| Type | Description |
+| --- | --- |
+| [SearchUsersFolloweeParam](#searchusersfolloweeparam-structure) | Param |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[UserInfo]&gt; | Users |
+| Bool | Unknown |
+
+# (57) Method57
+## Request
+| Type | Description |
+| --- | --- |
+| [MethodParam57](#methodparam57-structure) | Param |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[UserInfo]&gt; | Users |
+| [List]&lt;Uint32&gt; | Unknown |
+| Bool | Unknown |
+
+# (58) Method58
+## Request
+| Type | Description |
+| --- | --- |
+| [MethodParam58](#methodparam58-structure) | Param |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[UserInfo]&gt; | Users |
+| [List]&lt;Uint32&gt; | Unknown |
+| Bool | Unknown |
+
+# (59) Method59
+## Request
+This method does not take any parameters.
+
+## Response
+This method does not return anything.
+
+# (60) Method60
+## Request
+This method does not take any parameters.
+
+## Response
+| Type | Description |
+| --- | --- |
+| Bool | Unknown |
+| Uint32 | Unknown |
+
 # (73) SearchCoursesLatest
 ## Request
 | Type | Description |
@@ -203,6 +330,70 @@ This method does not return anything.
 | Uint8 | Unknown |
 | Bool | Unknown |
 | Bool | Unknown |
+
+## MethodParam50 ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint32 | Unknown |
+| [Buffer] | Unknown |
+| [ResultRange] | Result range |
+
+## MethodParam51 ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint8 | Unknown |
+| Uint32 | Unknown |
+| [Buffer] | Unknown |
+| [ResultRange] | Unknown |
+
+## MethodParam52 ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint32 | Unknown |
+| [Buffer] | Unknown |
+| [ResultRange] | Unknown |
+
+## SearchUsersPlayedCourseParam ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint64 | dataId |
+| Uint32 | resultOption |
+| Uint32 | count |
+
+## SearchUsersClearedCourseParam ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint64 | dataId |
+| Uint32 | resultOption |
+| Uint32 | count |
+
+## SearchUsersPositiveRatedCourseParam ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint64 | dataId |
+| Uint32 | resultOption |
+| Uint32 | count |
+
+## SearchUsersFolloweeParam ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint32 | resultOption |
+| [ResultRange] | resultRange |
+
+## MethodParam57 ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint8 | Unknown |
+| Uint32 | Unknown |
+| [Buffer] | Unknown |
+| [ResultRange] | Unknown |
+
+## MethodParam58 ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint32 | Unknown |
+| [ResultRange] | Unknown |
+| [Buffer] | Unknown |
 
 ## SearchCoursesLatestParam ([Structure])
 | Type | Name |
