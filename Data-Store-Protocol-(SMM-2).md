@@ -52,7 +52,7 @@ This page describes the methods that are only seen in Super Mario Maker 2. This 
 | 92 | ? |
 | 93 | ? |
 | 94 | SearchCommentsInOrder |
-| 95 | [Method95](#method95) |
+| 95 | [Method95](#95-method95) |
 | 96 | ? |
 | 97 | ? |
 | 98 | ? |
