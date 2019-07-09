@@ -36,7 +36,7 @@ This page describes the methods that are only seen in Super Mario Maker 2. This 
 | 76 | SearchCoursesPlayedBy |
 | 77 | SearchCoursesBattleMode |
 | 78 | ? |
-| 79 | SearchCoursesEndlessMode |
+| 79 | [SearchCoursesEndlessMode](#79-searchcoursesendlessmode) |
 | 80 | ? |
 | 81 | SearchCoursesBestTime |
 | 82 | SearchCoursesFolloweePostedBy |
@@ -294,6 +294,17 @@ This method does not take any parameters.
 | [List]&lt;[CourseInfo]&gt; | Courses |
 | Bool | Unknown |
 
+# (79) SearchCoursesEndlessMode
+## Request
+| Type | Description |
+| --- | --- |
+| [SearchCoursesEndlessModeParam](#searchcoursesendlessmodeparam-structure) | Param |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[CourseInfo]&gt; | Courses |
+
 # (131) GetUserOrCourse
 ## Request
 | Type | Description |
@@ -419,6 +430,13 @@ This method does not take any parameters.
 | Uint32 | resultOption |
 | [ResultRange] | resultRange |
 
+## SearchCoursesEndlessModeParam ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint32 | resultOption |
+| Uint32 | count |
+| Uint8 | difficulty |
+
 ## GetUserOrCourseParam ([Structure])
 | Type | Name |
 | --- | --- |
@@ -445,7 +463,7 @@ This method does not take any parameters.
 | [Map]&lt;Uint8, Uint32&gt; | Unknown |
 | [Map]&lt;Uint8, Uint32&gt; | Unknown |
 | [Map]&lt;Uint8, Uint32&gt; | Unknown |
-| [List]&lt;[BadgeInfo](#badgeinfo-structure)&gt; | Badge info |
+| [List]&lt;[BadgeInfo]&gt; | Badge info |
 | [Map]&lt;Uint8, Uint32&gt; | Unknown |
 | [Map]&lt;Uint8, Uint32&gt; | Unknown |
 
@@ -522,6 +540,8 @@ This method does not take any parameters.
 
 [UserInfo]: #userinfo-structure
 [CourseInfo]: #courseinfo-structure
+[BadgeInfo]: #badgeinfo-structure
+[MiiClothes]: #miiclothes-structure
 
 [DataStoreGetMetaParam]: Data-Store-Protocol#datastoregetmetaparam-structure
 [DataStorePreparePostParam]: Data-Store-Protocol#datastorepreparepostparam-structure
