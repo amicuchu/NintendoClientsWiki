@@ -29,7 +29,7 @@ This page describes the methods that are only seen in Super Mario Maker 2. This 
 | 69 | UpdateCourseTag |
 | 70 | GetCourseInfo |
 | 71 | SearchCoursesPointRanking |
-| 72 | ? |
+| 72 | SearchCoursesAdvanced |
 | 73 | [SearchCoursesLatest](#73-searchcourseslatest) |
 | 74 | SearchCoursesPostedBy |
 | 75 | SearchCoursesPositiveRatedBy |
