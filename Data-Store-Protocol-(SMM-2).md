@@ -20,9 +20,9 @@ This page describes the methods that are only seen in Super Mario Maker 2. This 
 | 60 | [Method60](#60-method60) |
 | 61 | ? |
 | 62 | ? |
-| 63 | GetMiiClothes |
+| 63 | [GetMiiClothes](#63-getmiiclothes) |
 | 64 | ? |
-| 65 | GetUserNameNgType |
+| 65 | [GetUserNameNgType](#65-getusernamengtype) |
 | 66 | ? |
 | 67 | ? |
 | 68 | ? |
@@ -264,6 +264,24 @@ This method does not take any parameters.
 | Bool | Unknown |
 | Uint32 | Unknown |
 
+# (63) GetMiiClothes
+## Request
+This method does not take any parameters.
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[MiiClothes]&gt; | Mii clothes |
+
+# (65) GetUserNameNgType
+## Request
+This method does not take any parameters.
+
+## Response
+| Type | Description |
+| --- | --- |
+| Uint8 | Type |
+
 # (73) SearchCoursesLatest
 ## Request
 | Type | Description |
@@ -467,6 +485,13 @@ This method does not take any parameters.
 | Uint8 | Unknown |
 | [UnknownStruct3] | Unknown |
 | [UnknownStruct3] | Unknown |
+
+## MiiClothes ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint16 | Unknown |
+| Uint16 | Unknown |
+| Bool | Unknown |
 
 ## UnknownStruct1 ([Structure])
 | Type | Description |
