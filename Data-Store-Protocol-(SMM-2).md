@@ -9,7 +9,7 @@ This page describes the methods that are only seen in Super Mario Maker 2. This 
 | 49 | [SyncUserProfile](#49-syncuserprofile) |
 | 50 | [Method50](#50-method50) |
 | 51 | [Method51](#51-method51) |
-| 52 | [Method52](#52-method51) |
+| 52 | [Method52](#52-method52) |
 | 53 | [SearchUsersPlayedCourse](#53-searchusersplayedcourse) |
 | 54 | [SearchUsersClearedCourse](#54-searchusersclearedcourse) |
 | 55 | [SearchUsersPositiveRatedCourse](#55-searchuserspositiveratedcourse) |
