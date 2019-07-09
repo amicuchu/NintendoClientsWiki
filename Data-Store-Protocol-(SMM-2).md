@@ -52,7 +52,7 @@ This page describes the methods that are only seen in Super Mario Maker 2. This 
 | 92 | ? |
 | 93 | ? |
 | 94 | SearchCommentsInOrder |
-| 95 | ? |
+| 95 | [Method95](#method95) |
 | 96 | ? |
 | 97 | ? |
 | 98 | ? |
@@ -305,6 +305,17 @@ This method does not take any parameters.
 | --- | --- |
 | [List]&lt;[CourseInfo]&gt; | Courses |
 
+# (95) Method95
+## Request
+| Type | Description |
+| --- | --- |
+| Uint64 | Unknown |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[CommentInfo]&gt; | Comments |
+
 # (131) GetUserOrCourse
 ## Request
 | Type | Description |
@@ -504,6 +515,37 @@ This method does not take any parameters.
 | [UnknownStruct3] | Unknown |
 | [UnknownStruct3] | Unknown |
 
+## CommentInfo ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint64 | Unknown |
+| [String] | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint64 | Unknown |
+| Uint16 | Unknown |
+| Uint16 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Bool | Unknown |
+| Bool | Unknown |
+| [DateTime] | Unknown |
+| [qBuffer] | Unknown |
+| [String] | Unknown |
+| [CommentPictureReqGetInfoWithoutHeaders] | Comment picture info |
+| Uint16 | Unknown |
+| Uint8 | Unknown |
+
+## CommentPictureReqGetInfoWithoutHeaders ([Structure])
+| Type | Description |
+| --- | --- |
+| [String] | Unknown |
+| Uint8 | Unknown |
+| Uint32 | Unknown |
+| [Buffer] | Unknown |
+| [String] | Unknown |
+
 ## MiiClothes ([Structure])
 | Type | Description |
 | --- | --- |
@@ -541,6 +583,8 @@ This method does not take any parameters.
 [UserInfo]: #userinfo-structure
 [CourseInfo]: #courseinfo-structure
 [BadgeInfo]: #badgeinfo-structure
+[CommentInfo]: #commentinfo-structure
+[CommentPictureReqGetInfoWithoutHeaders]: #commentpicturereqgetinfowithoutheaders-structure
 [MiiClothes]: #miiclothes-structure
 
 [DataStoreGetMetaParam]: Data-Store-Protocol#datastoregetmetaparam-structure
