@@ -368,11 +368,11 @@ This method does not take any parameters.
 ## SyncUserProfileParam ([Structure])
 | Type | Description |
 | --- | --- |
-| [String] | Unknown |
+| [String] | Username |
 | [UnknownStruct1] | Unknown |
 | [qBuffer] | Unknown |
 | Uint8 | Unknown |
-| [String] | Unknown |
+| [String] | Country code |
 | Bool | Unknown |
 | Bool | Unknown |
 | [String] | Unknown |
@@ -381,12 +381,12 @@ This method does not take any parameters.
 ## SyncUserProfileResult ([Structure])
 | Type | Description |
 | --- | --- |
-| Uint64 | Unknown |
-| [String] | Unknown |
+| [PID] | User id |
+| [String] | Username |
 | [UnknownStruct1] | Unknown |
 | [qBuffer] | Unknown |
 | Uint8 | Unknown |
-| [String] | Unknown |
+| [String] | Country code |
 | Uint8 | Unknown |
 | Bool | Unknown |
 | Bool | Unknown |
@@ -495,8 +495,8 @@ This method does not take any parameters.
 | [String] | User name |
 | [UnknownStruct1] | Unknown |
 | [qBuffer] | Unknown |
-| [String] | Unknown |
-| Uint8 | Unknown |
+| [String] | Country code |
+| Uint8 | Region id |
 | [DateTime] | Last active time |
 | Bool | Unknown |
 | Bool | Unknown |
