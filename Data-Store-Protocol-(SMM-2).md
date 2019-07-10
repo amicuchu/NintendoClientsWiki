@@ -268,12 +268,21 @@ This method does not take any parameters.
 ## Request
 | Type | Description |
 | --- | --- |
-| [MethodParam61] | Param |
+| [MethodParam61](#methodparam61-structure) | Param |
 
 ## Response
 | Type | Description |
 | --- | --- |
 | [MethodResult61](#methodresult61-structure) | Result |
+
+# (62) Method62
+## Request
+| Type | Description |
+| --- | --- |
+| [List]&lt;[MethodParam62]&gt; | Param |
+
+## Response
+This method does not return anything.
 
 # (63) GetMiiClothes
 ## Request
@@ -482,6 +491,13 @@ This method does not take any parameters.
 | Bool | Unknown |
 | Uint32 | Unknown |
 | [Map]&lt;Uint8, Uint32&gt; | Unknown |
+
+## MethodParam62 ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint16 | Unknown |
+| Uint16 | Unknown |
+| Bool | Unknown |
 
 ## SearchCoursesLatestParam ([Structure])
 | Type | Name |
