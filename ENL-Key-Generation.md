@@ -1,4 +1,4 @@
-Splatoon 2 uses ENL, a first-party networking framework on top of [PIA](PIA-Overview) and [NEX](NEX-Overview-(Game-Servers)). To generate the key ENL uses the random number generator provided by SEAD (Nintendo's first-party standard library).
+ENL is a first-party networking framework on top of [PIA](PIA-Overview) and [NEX](NEX-Overview-(Game-Servers)). To generate a key ENL uses the random number generator provided by SEAD (Nintendo's private standard library).
 
 The random number generator works as follows:
 ```python
@@ -57,7 +57,8 @@ def create_key(rand, table, size):
     return key
 ```
 
-When Splatoon 2 generates its key it creates a random number generator with the seed `0xCEB9D8D9` and it uses the following integer table:
+## Spatoon 2
+To generate its [LAN key](LAN-Protocol), Splatoon 2 constructs a random number generator with the seed `0xCEB9D8D9` and it uses the following integer table:
 ```python
 table = [
     0x56CB956F, 0x7B50EEC6, 0x234D1A63, 0x1C691A6B,
