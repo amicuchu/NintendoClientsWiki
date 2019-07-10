@@ -57,7 +57,7 @@ def create_key(rand, table, size):
     return key
 ```
 
-## Spatoon 2
+## Splatoon 2
 To generate its [LAN key](LAN-Protocol), Splatoon 2 constructs a random number generator with the seed `0xCEB9D8D9` and it uses the following integer table:
 ```python
 table = [
