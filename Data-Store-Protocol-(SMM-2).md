@@ -279,7 +279,7 @@ This method does not take any parameters.
 ## Request
 | Type | Description |
 | --- | --- |
-| [List]&lt;[MethodParam62]&gt; | Param |
+| [List]&lt;[MethodParam62](#methodparam62-structure)&gt; | Param |
 
 ## Response
 This method does not return anything.
