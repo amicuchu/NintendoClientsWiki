@@ -18,8 +18,8 @@ This page describes the methods that are only seen in Super Mario Maker 2. This 
 | 58 | [Method58](#58-method58) |
 | 59 | [UpdateLastLoginTime](#59-updatelastlogintime) |
 | 60 | [Method60](#60-method60) |
-| 61 | ? |
-| 62 | ? |
+| 61 | [Method61](#61-method61) |
+| 62 | [Method62](#62-method62) |
 | 63 | [GetMiiClothes](#63-getmiiclothes) |
 | 64 | ? |
 | 65 | [GetUserNameNgType](#65-getusernamengtype) |
@@ -264,6 +264,17 @@ This method does not take any parameters.
 | Bool | Unknown |
 | Uint32 | Unknown |
 
+# (61) Method61
+## Request
+| Type | Description |
+| --- | --- |
+| [MethodParam61] | Param |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [MethodResult61](#methodresult61-structure) | Result |
+
 # (63) GetMiiClothes
 ## Request
 This method does not take any parameters.
@@ -455,6 +466,23 @@ This method does not take any parameters.
 | [ResultRange] | Unknown |
 | [Buffer] | Unknown |
 
+## MethodParam61 ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint64 | Unknown |
+| Uint32 | Unknown |
+
+## MethodResult61 ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint64 | Unknown |
+| Bool | Unknown |
+| Uint32 | Unknown |
+| [Map]&lt;Uint8, Uint32&gt; | Unknown |
+| Bool | Unknown |
+| Uint32 | Unknown |
+| [Map]&lt;Uint8, Uint32&gt; | Unknown |
+
 ## SearchCoursesLatestParam ([Structure])
 | Type | Name |
 | --- | --- |
@@ -597,6 +625,8 @@ This method does not take any parameters.
 | Type | Description |
 | --- | --- |
 | Uint64 | Unknown |
+| Uint64 | Unknown |
+| Uint32 | Unknown |
 | Uint32 | Unknown |
 
 ## UnknownStruct3 ([Structure])
