@@ -8,7 +8,7 @@
 | 4 | DeleteCommonData |
 | 5 | [GetRanking](#5-getranking) |
 | 6 | GetRankingByPrincipalId |
-| 7 | GetCategorySetting |
+| 7 | [GetCategorySetting](#7-getcategorysetting) |
 
 # (5) GetRanking
 ## Request
@@ -20,6 +20,17 @@
 | Type | Description |
 | --- | --- |
 | [Ranking2Info](#ranking2info) | Rankings |
+
+# (7) GetCategorySetting
+## Request
+| Type | Description |
+| --- | --- |
+| Uint32 | Category |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [Ranking2CategorySetting](#ranking2categorysetting-structure) | Category setting |
 
 # Types
 ## Ranking2GetParam ([Structure])
@@ -59,6 +70,19 @@
 | [String] | Unknown |
 | [Buffer] | Unknown |
 | [Buffer] | Unknown |
+
+## Ranking2CategorySetting ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint16 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Bool | Unknown |
 
 [Result]: NEX-Common-Types#result
 [String]: NEX-Common-Types#string
