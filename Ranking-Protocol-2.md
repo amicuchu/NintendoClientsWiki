@@ -37,7 +37,7 @@
 | Type | Description |
 | --- | --- |
 | Uint64 | Unknown |
-| Uint32 | Unknown |
+| [PID] | Unknown |
 | Uint32 | Category id |
 | Uint32 | Base rank (0 is world record) |
 | Uint32 | Desired number of entries |
