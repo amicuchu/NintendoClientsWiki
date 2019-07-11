@@ -40,7 +40,7 @@
 | Uint32 | Unknown |
 | Uint32 | Category id |
 | Uint32 | Base rank (0 is world record) |
-| Uint32 | Desired umber of entries |
+| Uint32 | Desired number of entries |
 | Uint32 | Unknown |
 | Uint32 | Unknown |
 | Uint8 | Unknown |
