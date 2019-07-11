@@ -258,7 +258,7 @@ The sequence id of the aggregate ack packet is always 0.
 This is a random value generated at the start of each session. The server's session id is not necessarily the same as the client's session id.
 
 ### Sequence id
-This is an incrementing value used to ensure that packets arrive in correct order. Every [reliable substream](#substreams) has its own stream of sequence ids. Ping packets and unreliable data packets both have their own stream of sequence ids as well. The sequence id of client-to-server packets is always independent from the sequence id of server-to-client packets.
+This is an incrementing value used to ensure that packets arrive in correct order. Every [reliable substream](#substreams) has its own stream of sequence ids. Unreliable ping and data packets both have their own stream of sequence ids as well. The sequence id of client-to-server packets is always independent from the sequence id of server-to-client packets.
 
 Normally, the sequence id starts at 1. However, the initial sequence id of unreliable data packets is a random value generated during the connection handshake (see [option 3](#optional-data)).
 
