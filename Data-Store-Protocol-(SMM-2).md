@@ -302,6 +302,18 @@ This method does not take any parameters.
 | --- | --- |
 | Uint8 | Type |
 
+# (70) GetCourseInfo
+## Request
+| Type | Description |
+| --- | --- |
+| [GetCourseInfoParam](#getcourseinfoparam-structure) | Param |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[CourseInfo]&gt; | Course info |
+| [List]&lt;[Result]&gt; | Result codes |
+
 # (73) SearchCoursesLatest
 ## Request
 | Type | Description |
@@ -498,6 +510,12 @@ This method does not take any parameters.
 | Uint16 | Unknown |
 | Uint16 | Unknown |
 | Bool | Unknown |
+
+## GetCourseInfoParam ([Structure])
+| Type | Description |
+| --- | --- |
+| [List]&lt;Uint64&gt; | Unknown |
+| Uint32 | Unknown |
 
 ## SearchCoursesLatestParam ([Structure])
 | Type | Name |
