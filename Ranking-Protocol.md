@@ -269,7 +269,7 @@ This method does not return anything.
 ## Ranking Mode
 | Value | Description |
 | --- | --- |
-| 0 | Global, only the top 1000 entries be downloaded |
+| 0 | Global, only the top 1000 entries can be downloaded |
 | 1 | Global rankings around own entry |
 | 4 | Own ranking only |
 
