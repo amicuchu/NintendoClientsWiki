@@ -59,7 +59,7 @@
 | --- | --- |
 | Uint64 | Unknown |
 | Uint64 | Unknown |
-| Uint32 | Unknown |
+| [PID] | User id |
 | Uint32 | Unknown |
 | Uint32 | Unknown |
 | [Ranking2CommonData](#ranking2commondata-structure) | Common data |
