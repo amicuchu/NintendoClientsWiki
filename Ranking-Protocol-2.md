@@ -74,7 +74,7 @@
 ## Ranking2CommonData ([Structure])
 | Type | Description |
 | --- | --- |
-| [String] | Unknown |
+| [String] | Username |
 | [qBuffer] | Unknown |
 | [qBuffer] | Unknown |
 
