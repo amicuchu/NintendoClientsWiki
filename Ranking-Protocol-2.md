@@ -58,7 +58,7 @@
 | --- | --- |
 | [List]&lt;[Ranking2RankData](#ranking2rankdata-structure)&gt; | Rank data |
 | Uint32 | Unknown |
-| Uint32 | Unknown |
+| Uint32 | Total number of scores on this leaderboard |
 | Sint32 | Unknown |
 
 ## Ranking2RankData ([Structure])
