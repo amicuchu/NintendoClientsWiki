@@ -75,8 +75,8 @@
 | Type | Description |
 | --- | --- |
 | [String] | Unknown |
-| [Buffer] | Unknown |
-| [Buffer] | Unknown |
+| [qBuffer] | Unknown |
+| [qBuffer] | Unknown |
 
 ## Ranking2CategorySetting ([Structure])
 | Type | Description |
