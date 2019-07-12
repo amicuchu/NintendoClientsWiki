@@ -43,8 +43,15 @@
 | Uint32 | Desired number of entries |
 | Uint32 | Unknown |
 | Uint32 | Unknown |
+| Uint8 | [Ranking mode](#ranking-mode) |
 | Uint8 | Unknown |
-| Uint8 | Unknown |
+
+### Ranking Mode
+| Value | Description |
+| --- | --- |
+| 1 | Global around self |
+| 2 | Global |
+| 3 | Friends |
 
 ## Ranking2Info ([Structure])
 | Type | Description |
