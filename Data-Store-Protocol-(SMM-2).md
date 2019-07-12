@@ -27,7 +27,7 @@ This page describes the methods that are only seen in Super Mario Maker 2. This 
 | 67 | ? |
 | 68 | ? |
 | 69 | UpdateCourseTag |
-| 70 | GetCourseInfo |
+| 70 | [GetCourseInfo](#70-getcourseinfo) |
 | 71 | SearchCoursesPointRanking |
 | 72 | SearchCoursesAdvanced |
 | 73 | [SearchCoursesLatest](#73-searchcourseslatest) |
