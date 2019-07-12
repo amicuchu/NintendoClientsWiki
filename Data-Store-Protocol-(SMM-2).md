@@ -514,8 +514,8 @@ This method does not take any parameters.
 ## GetCourseInfoParam ([Structure])
 | Type | Description |
 | --- | --- |
-| [List]&lt;Uint64&gt; | Unknown |
-| Uint32 | Unknown |
+| [List]&lt;Uint64&gt; | Data ids |
+| Uint32 | Result options |
 
 ## SearchCoursesLatestParam ([Structure])
 | Type | Name |
