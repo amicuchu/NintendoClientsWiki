@@ -169,7 +169,7 @@ Examples:
 | MK8 | `prudps:/sid=1;port=59201;address=52.10.188.163;PID=2;stream=10;type=2;CID=1` |
 
 # ResultRange ([Structure])
-Some methods query a large list of objects. These methods normally take a ResultRange parameter that limits the number of objects that are returned.
+Some methods query a large set of objects. These methods normally take a ResultRange parameter that limits the number of objects that are returned.
 
 | Type | Name | Description |
 | --- | --- | --- |
