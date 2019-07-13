@@ -320,6 +320,13 @@ This method does not take any parameters.
 | --- | --- |
 | [SearchCoursesPointRankingParam](#searchcoursespointrankingparam-structure) | Param |
 
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[CourseInfo]&gt; | Course info |
+| [List]&lt;Uint32&gt; | Unknown |
+| Bool | Unknown |
+
 # (73) SearchCoursesLatest
 ## Request
 | Type | Description |
