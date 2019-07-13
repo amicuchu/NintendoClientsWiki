@@ -28,7 +28,7 @@ This page describes the methods that are only seen in Super Mario Maker 2. This 
 | 68 | ? |
 | 69 | UpdateCourseTag |
 | 70 | [GetCourseInfo](#70-getcourseinfo) |
-| 71 | SearchCoursesPointRanking |
+| 71 | [SearchCoursesPointRanking](#71-searchcoursespointranking) |
 | 72 | SearchCoursesAdvanced |
 | 73 | [SearchCoursesLatest](#73-searchcourseslatest) |
 | 74 | SearchCoursesPostedBy |
@@ -314,6 +314,12 @@ This method does not take any parameters.
 | [List]&lt;[CourseInfo]&gt; | Course info |
 | [List]&lt;[Result]&gt; | Result codes |
 
+# (71) SearchCoursesPointRanking
+## Request
+| Type | Description |
+| --- | --- |
+| [SearchCoursesPointRankingParam](#searchcoursespointrankingparam-structure) | Param |
+
 # (73) SearchCoursesLatest
 ## Request
 | Type | Description |
@@ -516,6 +522,14 @@ This method does not take any parameters.
 | --- | --- |
 | [List]&lt;Uint64&gt; | Data ids |
 | Uint32 | Result options |
+
+## SearchCoursesPointRankingParam ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint32 | resultOption |
+| [ResultRange] | resultRange |
+| Uint8 | preferCourseDifficulty |
+| [List]&lt;Uint8&gt; | rejectRegionIds |
 
 ## SearchCoursesLatestParam ([Structure])
 | Type | Name |
