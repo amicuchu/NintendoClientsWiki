@@ -6,13 +6,13 @@
 5. [Map](#map)
 6. [PID](#pid)
 7. [Result](#result)
-8. [DateTime](#date-time)
-9. [StationURL](#station-url)
+8. [DateTime](#datetime)
+9. [StationURL](#stationurl)
 10. [Variant](#variant)
 11. [Structure](#structure)
-12. [Data](#any-data-holder)
-13. [RVConnectionData](#rendez-vous-connection-data-structure)
-14. [ResultRange](#result-range-structure)
+12. [Data](#anydataholder)
+13. [RVConnectionData](#rvconnectiondata-structure)
+14. [ResultRange](#resultrange-structure)
 
 # String
 | Type | Description |
@@ -56,7 +56,7 @@ Every user is given a unique id called principal id.
 
 Success is indicated by `0x00010001`. A list of error codes can be found in [nintendo/nex/errors.py](https://github.com/Kinnay/NintendoClients/blob/master/nintendo/nex/errors.py).
 
-# Date Time
+# DateTime
 | Type | Description |
 | --- | --- |
 | Uint64 | Value |
@@ -72,7 +72,7 @@ This is not a normal time stamp. Instead, it consists of a bunch of bit fields:
 | 11 - 6 | Minute |
 | 5 - 0 | Second |
 
-# Station URL
+# StationURL
 | Type | Description |
 | --- | --- |
 | [String] | Station URL |
@@ -140,7 +140,7 @@ Nintendo often seems to be changing a structure without updating its version num
 
 A structure may inherit another structure. The child is stored right after the parent, and gets its own version header.
 
-# Any Data Holder
+# AnyDataHolder
 NEX has a class that can hold any object derived from nn::nex::Data. When these are transmitted as part of request or response data, some meta data is sent along with them, so the other side can properly identify and decode the object.
 
 | Type | Description |
@@ -150,7 +150,7 @@ NEX has a class that can hold any object derived from nn::nex::Data. When these 
 | Uint32 | Length of data |
 | | Object data |
 
-# Rendez-Vous Connection Data ([Structure])
+# RVConnectionData ([Structure])
 Nintendo does not use any special protocols.
 
 | Type | Version | Name | Description |
@@ -168,7 +168,9 @@ Examples:
 | DKC:TF | `prudps:/port=43221;CID=1;address=34.208.166.202;PID=2;stream=10;type=2;sid=1` |
 | MK8 | `prudps:/sid=1;port=59201;address=52.10.188.163;PID=2;stream=10;type=2;CID=1` |
 
-# Result Range ([Structure])
+# ResultRange ([Structure])
+Some methods query a large list of objects. These methods normally take a ResultRange parameter that limits the number of objects that are returned.
+
 | Type | Name | Description |
 | --- | --- | --- |
 | Uint32 | m_uiOffset | Offset |
