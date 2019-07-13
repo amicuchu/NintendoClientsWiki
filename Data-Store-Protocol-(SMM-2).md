@@ -325,7 +325,7 @@ This method does not take any parameters.
 | --- | --- |
 | [List]&lt;[CourseInfo]&gt; | Course info |
 | [List]&lt;Uint32&gt; | Ranks |
-| Bool | Unknown |
+| Bool | Result |
 
 # (73) SearchCoursesLatest
 ## Request
