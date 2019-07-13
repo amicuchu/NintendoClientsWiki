@@ -585,16 +585,16 @@ This method does not take any parameters.
 | [String] | Level code |
 | [PID] | Owner id |
 | [String] | Level name |
-| [String] | Unknown |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
+| [String] | Description |
+| Uint8 | [Game style](#game-style) |
+| Uint8 | [Course theme](#course-theme) |
 | [DateTime] | Upload time |
+| Uint8 | Difficulty (0-3) |
+| Uint8 | First [tag](#course-tag) |
+| Uint8 | Second [tag](#course-tag) |
 | Uint8 | Unknown |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
-| Uint32 | Unknown |
-| Uint16 | Unknown |
+| Uint32 | [Clear condition](#clear-condition) |
+| Uint16 | Clear condition magnitude |
 | Uint16 | Unknown |
 | [qBuffer] | Unknown |
 | [Map]&lt;Uint8, Uint32&gt; | Unknown |
@@ -608,6 +608,50 @@ This method does not take any parameters.
 | Uint8 | Unknown |
 | [UnknownStruct3] | Unknown |
 | [UnknownStruct3] | Unknown |
+
+### Game Style
+| Value | Description |
+| --- | --- |
+| 0 | SMB1 |
+| 1 | SMB3 |
+| 2 | SMW |
+| 3 | NSMBU |
+| 4 | SM3DW |
+
+### Course Theme
+| Value | Description |
+| --- | --- |
+| 0 | Overworld |
+| 1 | Underground |
+| 2 | Castle |
+| 3 | Airship |
+| 4 | Underwater |
+| 5 | Ghost house |
+| 6 | Snow |
+| 7 | Desert |
+| 8 | Sky |
+| 9 | Forest |
+
+### Course Tag
+| Value | Description |
+| --- | --- |
+| 0 | None |
+| 1 | Standard |
+| 2 | Puzzle solving |
+| 3 | Speedrun |
+| 4 | Autoscroll |
+| 5 | Auto mario |
+| 6 | Short and sweet |
+| 7 | Multiplayer versus |
+| 8 | Themed |
+| 9 | Music |
+
+### Clear Condition
+| Value | Description |
+| --- | --- |
+| 0 | None |
+| 4042480826 | Kill skipsqueaks |
+| 4116396131 | Collect coins |
 
 ## CommentInfo ([Structure])
 | Type | Description |
