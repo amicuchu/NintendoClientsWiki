@@ -182,7 +182,7 @@ This struct does not have any fields.
 | [StationURL] | Secure server location |
 | [DateTime] | Server time |
 | [String] | Server build name |
-| [String] | Unknown |
+| [String] | Kerberos key. If present, key derivation is skipped and this key is used to decrypt the ticket instead. |
 
 [Result]: NEX-Common-Types#result
 [String]: NEX-Common-Types#string
