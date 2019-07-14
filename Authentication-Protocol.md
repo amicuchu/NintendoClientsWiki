@@ -27,7 +27,7 @@ Alternative name: ValidateAndRequestTicket
 | [Result] | %retval% | Result code |
 | [PID] | pidPrincipal |  User pid |
 | [Buffer] | pbufResponse | [Kerberos ticket](Kerberos-Authentication#kerberos-ticket) |
-| [RVConnectionData](NEX-Common-Types#rendez-vous-connection-data-structure) | pConnectionData | Connection info for secure server.<br><br>The Nintendo Switch allows the secure server to be at the same address as the authentication server. In that case, the secure server station url points to  0.0.0.1 with port 1. |
+| [RVConnectionData](NEX-Common-Types#rvconnectiondata-structure) | pConnectionData | Connection info for secure server.<br><br>The Nintendo Switch allows the secure server to be at the same address as the authentication server. In that case, the secure server station url points to  0.0.0.1 with port 1. |
 | [String] | strReturnMsg | Server build name |
 
 Examples of server build names:
@@ -45,9 +45,9 @@ Alternative name: ValidateAndRequestTicketWithCustomData
 | Type | Name | Description |
 | --- | --- | --- |
 | [String] | strUserName | Username |
-| [Data]&lt;[AuthenticationInfo](#authentication-info)&gt; | oExtraData | Authentication info |
+| [Data]&lt;[AuthenticationInfo](#authenticationinfo-structure)&gt; | oExtraData | Authentication info |
 
-### Authentication Info
+### AuthenticationInfo ([Structure])
 | Type | Name | Description |
 | --- | --- | --- |
 | [String] | m_authToken | Token, as received from the account server |
@@ -161,7 +161,7 @@ This is the reverse of the [GetPID](#4-getpid) method. It returns the name assoc
 | --- | --- |
 | Uint32 | Platform type (always 3) |
 | [String] | Username |
-| [Data] | [NullData](#nulldata-structure) or a struct with a token |
+| [Data] | [NullData](#nulldata-structure) or [AuthenticationInfo](#authenticationinfo-structure) |
 | Bool | Unknown |
 | Uint32 | NEX version (e.g. 40601) |
 | Uint32 | Client version |
