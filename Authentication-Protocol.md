@@ -51,8 +51,8 @@ Alternative name: ValidateAndRequestTicketWithCustomData
 | Type | Name | Description |
 | --- | --- | --- |
 | [String] | m_authToken | Token, as received from the account server |
-| Uint32 | m_ngsVersion | Always 3? |
-| Uint8 | m_authTokenType | Always 1? |
+| Uint32 | m_ngsVersion | Always 3 on Wii U. Always 4 on Switch. |
+| Uint8 | m_authTokenType | Always 1 on Wii U. Always 2 on Switch. |
 | Uint32 | m_serverVersion | See table below |
 
 | NEX Version | Server version |
