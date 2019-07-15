@@ -89,5 +89,5 @@ This method does not return anything.
 
 [String]: NEX-Common-Types#string
 [List]: NEX-Common-Types#list
-[StationURL]: NEX-Common-Types#station-url
-[DateTime]: NEX-Common-Types#date-time
+[StationURL]: NEX-Common-Types#stationurl
+[DateTime]: NEX-Common-Types#datetime
