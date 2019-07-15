@@ -555,12 +555,12 @@ This method does not return anything.
 This method does not return anything.
 
 [String]: NEX-Common-Types#string
-[StationURL]: NEX-Common-Types#station-url
+[StationURL]: NEX-Common-Types#stationurl
 [List]: NEX-Common-Types#list
 [PID]: NEX-Common-Types#pid
-[Data]: NEX-Common-Types#any-data-holder
+[Data]: NEX-Common-Types#anydataholder
 [Structure]: NEX-Common-Types#structure
-[ResultRange]: NEX-Common-Types#result-range-structure
+[ResultRange]: NEX-Common-Types#resultrange-structure
 [Gathering]: Match-Making-Types#gathering-structure
 [GatheringStats]: Match-Making-Types#gathering-stats-structure
 [ParticipantDetails]: Match-Making-Types#participant-details-structure
