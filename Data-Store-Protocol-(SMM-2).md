@@ -394,6 +394,7 @@ This method returns headers that can be used to download relation files from the
 | Value | Directory |
 | --- | --- |
 | 2 | /ds/1/relation_data/course_one_screen_thumbnail/ |
+| 3 | /ds/1/relation_data/course_entire_thumbnail/ |
 | 10 | /ds/1/comment/ |
 
 ## Response
