@@ -635,14 +635,14 @@ This method does not return anything.
 | [List]&lt;[GatheringURLs]&gt; | lstGatheringUrls |
 
 [String]: NEX-Common-Types#string
-[Data]: NEX-Common-Types#any-data-holder
+[Data]: NEX-Common-Types#anydataholder
 [List]: NEX-Common-Types#list
 [Buffer]: NEX-Common-Types#buffer
 [PID]: NEX-Common-Types#pid
 
 [Gathering]: Match-Making-Types#gathering-structure
 [MatchmakeSessionSearchCriteria]: Match-Making-Types#matchmakesessionsearchcriteria-structure
-[ResultRange]: Match-Making-Types#resultrange-structure
+[ResultRange]: NEX-Common-Types#resultrange-structure
 [GatheringURLs]: Match-Making-Types#gatheringurls-structure
 [NotificationEvent]: Notification-Protocol#notificationevent-structure
 [PlayingSession]: Match-Making-Types#playingsession-structure
