@@ -39,7 +39,7 @@ This method does not return anything.
 | Uint8 | m_language |
 | Uint8 | m_platform |
 
-[Data]: NEX-Common-Types#any-data-holder
+[Data]: NEX-Common-Types#anydataholder
 [PID]: NEX-Common-Types#pid
 [Structure]: NEX-Common-Types#structure
 [String]: NEX-Common-Types#string
