@@ -91,7 +91,7 @@ This page describes the methods that are only seen in Super Mario Maker 2. This 
 | 131 | [GetUserOrCourse](#131-getuserorcourse) |
 | 132 | ? |
 | 133 | ? |
-| 134 | [GetRelationDataHeaders](#134-getrelationdataheaders) |
+| 134 | [PrepareGetRelationObject](#134-preparegetrelationobject) |
 | 135 | ? |
 | 136 | ? |
 | 137 | ? |
@@ -382,8 +382,8 @@ This method does not take any parameters.
 | [UserInfo] | User info |
 | [CourseInfo] | Course info |
 
-# (134) GetRelationDataHeaders
-This method returns headers that can be used to download files from the cloudfront datastore server.
+# (134) PrepareGetRelationObject
+This method returns headers that can be used to download relation files from the cloudfront datastore server.
 
 ## Request
 | Type | Description |
