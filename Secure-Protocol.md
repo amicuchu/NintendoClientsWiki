@@ -111,6 +111,6 @@ This method does not return anything.
 [qBuffer]: NEX-Common-Types#qbuffer
 [List]: NEX-Common-Types#list
 [String]: NEX-Common-Types#string
-[StationURL]: NEX-Common-Types#station-url
-[Data]: NEX-Common-Types#any-data-holder
+[StationURL]: NEX-Common-Types#stationurl
+[Data]: NEX-Common-Types#anydataholder
 [Structure]: NEX-Common-Types#structure
