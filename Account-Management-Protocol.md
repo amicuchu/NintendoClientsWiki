@@ -417,8 +417,8 @@ Some functions take a key string. This is a hex string derived from the password
 [Result]: NEX-Common-Types#result
 [String]: NEX-Common-Types#string
 [PID]: NEX-Common-Types#pid
-[DateTime]: NEX-Common-Types#date-time
-[Data]: NEX-Common-Types#any-data-holder
+[DateTime]: NEX-Common-Types#datetime
+[Data]: NEX-Common-Types#anydataholder
 [List]: NEX-Common-Types#list
-[ResultRange]: NEX-Common-Types#result-range-structure
+[ResultRange]: NEX-Common-Types#resultrange-structure
 [Structure]: NEX-Common-Types#structure
