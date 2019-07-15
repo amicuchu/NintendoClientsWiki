@@ -562,7 +562,7 @@ This method does not return anything.
 [Structure]: NEX-Common-Types#structure
 [ResultRange]: NEX-Common-Types#resultrange-structure
 [Gathering]: Match-Making-Types#gathering-structure
-[GatheringStats]: Match-Making-Types#gathering-stats-structure
-[ParticipantDetails]: Match-Making-Types#participant-details-structure
+[GatheringStats]: Match-Making-Types#gatheringstats-structure
+[ParticipantDetails]: Match-Making-Types#participantdetails-structure
 [Invitation]: Match-Making-Types#invitation-structure
-[DeletionEntry]: Match-Making-Types#deletion-entry-structure
+[DeletionEntry]: Match-Making-Types#deletionentry-structure
