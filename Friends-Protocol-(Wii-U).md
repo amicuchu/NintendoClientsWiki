@@ -387,7 +387,7 @@ Specifies which fields changed their value recently.
 [PrincipalPreference]: #principalpreference
 [PrincipalRequestBlockSetting]: #principalrequestblocksetting
 
-[DateTime]: NEX-Common-Types#date-time
+[DateTime]: NEX-Common-Types#datetime
 [List]: NEX-Common-Types#list
 [String]: NEX-Common-Types#string
 [Buffer]: NEX-Common-Types#buffer
