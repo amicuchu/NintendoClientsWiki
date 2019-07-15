@@ -114,8 +114,8 @@ This method does not return anything.
 | [MessageRecipient](#messagerecipient) | m_messageRecipient |
 
 [String]: NEX-Common-Types#string
-[DateTime]: NEX-Common-Types#date-time
-[Data]: NEX-Common-Types#any-data-holder
+[DateTime]: NEX-Common-Types#datetime
+[Data]: NEX-Common-Types#anydataholder
 [List]: NEX-Common-Types#list
 [PID]: NEX-Common-Types#pid
-[ResultRange]: NEX-Common-Types#result-range
+[ResultRange]: NEX-Common-Types#resultrange-structure
