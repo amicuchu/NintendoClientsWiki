@@ -82,5 +82,5 @@ This method does not return anything.
 [PID]: NEX-Common-Types#pid
 [String]: NEX-Common-Types#string
 [Structure]: NEX-Common-Types#structure
-[ParticipantDetails]: Match-Making-Types#participant-details-structure
+[ParticipantDetails]: Match-Making-Types#participantdetails-structure
 [GatheringURLs]: Match-Making-Types#gatheringurls-structure
