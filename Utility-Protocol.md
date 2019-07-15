@@ -99,6 +99,6 @@ This method does not take any parameters.
 [List]: NEX-Common-Types#list
 [Map]: NEX-Common-Types#map
 [Structure]: NEX-Common-Types#structure
-[Data]: NEX-Common-Types#any-data-holder
+[Data]: NEX-Common-Types#anydataholder
 
 [UniqueIdInfo]: uniqueidinfo-structure
