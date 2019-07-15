@@ -787,8 +787,8 @@ This method does not take any parameters.
 [qBuffer]: NEX-Common-Types#qbuffer
 [List]: NEX-Common-Types#list
 [Map]: NEX-Common-Types#map
-[DateTime]: NEX-Common-Types#date-time
+[DateTime]: NEX-Common-Types#datetime
 [Structure]: NEX-Common-Types#structure
-[Data]: NEX-Common-Types#any-data-holder
+[Data]: NEX-Common-Types#anydataholder
 [PID]: NEX-Common-Types#pid
-[ResultRange]: NEX-Common-Types#result-range-structure
+[ResultRange]: NEX-Common-Types#resultrange-structure
