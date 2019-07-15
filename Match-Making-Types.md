@@ -163,7 +163,7 @@ Since the match making methods are split across several protocols, this page doc
 | Uint32 | m_gid |
 | [List]&lt;[StationURL]&gt; | m_lstStationURLs |
 
-## Gathering Stats ([Structure])
+## GatheringStats ([Structure])
 | Type | Name |
 | --- | --- |
 | Uint32 | m_pidParticipant |
@@ -177,7 +177,7 @@ Since the match making methods are split across several protocols, this page doc
 | Uint32 | m_idGuest |
 | [String] | m_strMessage |
 
-## Participant Details ([Structure])
+## ParticipantDetails ([Structure])
 | Type | Name |
 | --- | --- |
 | Uint32 | m_idParticipant |
@@ -185,7 +185,7 @@ Since the match making methods are split across several protocols, this page doc
 | [String] | m_strMessage |
 | Uint16 | m_uiParticipants |
 
-## Deletion Entry ([Structure])
+## DeletionEntry ([Structure])
 | Type | Name |
 | --- | --- |
 | Uint32 | m_idGathering |
@@ -213,16 +213,16 @@ Since the match making methods are split across several protocols, this page doc
 | Uint32 | m_MatchmakeSessionCount |
 
 [String]: NEX-Common-Types#string
-[StationURL]: NEX-Common-Types#station-url
+[StationURL]: NEX-Common-Types#stationurl
 [List]: NEX-Common-Types#list
 [PID]: NEX-Common-Types#pid
 [Structure]: NEX-Common-Types#structure
 [Buffer]: NEX-Common-Types#buffer
-[DateTime]: NEX-Common-Types#date-time
+[DateTime]: NEX-Common-Types#datetime
 [Map]: NEX-Common-Types#map
 [Variant]: NEX-Common-Types#variant
-[ResultRange]: NEX-Common-Types#result-range-structure
-[Data]: NEX-Common-Types#any-data-holder
+[ResultRange]: NEX-Common-Types#resultrange-structure
+[Data]: NEX-Common-Types#anydataholder
 
 [MatchmakeSession]: #matchmakesession-structure
 [Gathering]: #gathering-structure
