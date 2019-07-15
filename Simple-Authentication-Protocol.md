@@ -20,7 +20,7 @@ Interestingly, this protocol has methods referencing the Wii U, even though this
 | Type | Name | Description |
 | --- | --- | --- |
 | [String] | strToken | Token |
-| [RVConnectionData](NEX-Common-Types#rendez-vous-connection-data-structure) | pConnectionData | Connection info for secure server |
+| [RVConnectionData] | pConnectionData | Connection info for secure server |
 | [Data] | oAnyData | Login data |
 
 ## Response
@@ -28,9 +28,10 @@ Interestingly, this protocol has methods referencing the Wii U, even though this
 | --- | --- | --- |
 | [Result] | %retval% | Result code |
 | Uint32 | pidPrincipal | User pid |
-| [RVConnectionData](NEX-Common-Types#rendez-vous-connection-data-structure) | pConnectionData | Connection info for secure server |
+| [RVConnectionData] | pConnectionData | Connection info for secure server |
 | [String] | strReturnMsg | Response message |
 
 [Result]: NEX-Common-Types#result
 [String]: NEX-Common-Types#string
-[Data]: NEX-Common-Types#any-data-holder
+[Data]: NEX-Common-Types#anydataholder
+[RVConnectionData]: NEX-Common-Types#rvconnectiondata-structure
