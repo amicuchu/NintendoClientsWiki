@@ -188,9 +188,9 @@ This struct does not have any fields.
 [String]: NEX-Common-Types#string
 [Buffer]: NEX-Common-Types#buffer
 [Structure]: NEX-Common-Types#structure
-[StationURL]: NEX-Common-Types#station-url
+[StationURL]: NEX-Common-Types#stationurl
 [List]: NEX-Common-Types#list
 [PID]: NEX-Common-Types#pid
-[DateTime]: NEX-Common-Types#date-time
-[Data]: NEX-Common-Types#any-data-holder
+[DateTime]: NEX-Common-Types#datetime
+[Data]: NEX-Common-Types#anydataholder
 [RVConnectionData]: NEX-Common-Types#rvconnectiondata-structure
