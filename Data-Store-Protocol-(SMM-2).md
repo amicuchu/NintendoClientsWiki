@@ -91,7 +91,7 @@ This page describes the methods that are only seen in Super Mario Maker 2. This 
 | 131 | [GetUserOrCourse](#131-getuserorcourse) |
 | 132 | ? |
 | 133 | ? |
-| 134 | [Method134](#134-method134) |
+| 134 | [GetRelationDataHeaders](#134-getrelationdataheaders) |
 | 135 | ? |
 | 136 | ? |
 | 137 | ? |
@@ -382,16 +382,24 @@ This method does not take any parameters.
 | [UserInfo] | User info |
 | [CourseInfo] | Course info |
 
-# (134) Method134
+# (134) GetRelationDataHeaders
+This method returns headers that can be used to download files from the cloudfront datastore server.
+
 ## Request
 | Type | Description |
 | --- | --- |
-| Uint8 | Unknown |
+| Uint8 | [Data type](#relation-data-type) |
+
+#### Relation Data Type
+| Value | Directory |
+| --- | --- |
+| 2 | /ds/1/relation_data/course_one_screen_thumbnail/ |
+| 10 | /ds/1/comment/ |
 
 ## Response
 | Type | Description |
 | --- | --- |
-| [MethodResult134](#methodresult134-structure) | Result |
+| [RelationDataHeaders](#relationdataheaders-structure) | Headers |
 
 # Types
 ## RegisterUserParam ([Structure])
@@ -564,11 +572,17 @@ This method does not take any parameters.
 | Uint32 | userResultOption |
 | Uint32 | courseResultOption |
 
-## MethodResult134 ([Structure])
+## RelationDataHeaders ([Structure])
 | Type | Description |
 | --- | --- |
-| [List]&lt;[UnknownStruct6]&gt; | Unknown |
-| Uint32 | Unknown |
+| [List]&lt;[RelationDataHeader](#relationdataheader-structure)&gt; | Headers |
+| Uint32 | Expiration (seconds) |
+
+## RelationDataHeader ([Structure])
+| Type | Description |
+| --- | --- |
+| [String] | Key |
+| [String] | Value |
 
 ## UserInfo ([Structure])
 | Type | Description |
@@ -754,18 +768,13 @@ This method does not take any parameters.
 | Uint8 | Unknown |
 | Uint32 | Unknown |
 
-## UnknownStruct6 ([Structure])
-| Type | Description |
-| --- | --- |
-| [String] | Unknown |
-| [String] | Unknown |
+
 
 [UnknownStruct1]: #unknownstruct1-structure
 [UnknownStruct2]: #unknownstruct2-structure
 [UnknownStruct3]: #unknownstruct3-structure
 [UnknownStruct4]: #unknownstruct4-structure
 [UnknownStruct5]: #unknownstruct5-structure
-[UnknownStruct6]: #unknownstruct6-structure
 
 [UserInfo]: #userinfo-structure
 [CourseInfo]: #courseinfo-structure
