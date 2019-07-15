@@ -277,4 +277,4 @@ This method does not return anything.
 [Structure]: NEX-Common-Types#structure
 [List]: NEX-Common-Types#list
 [PID]: NEX-Common-Types#pid
-[DateTime]: NEX-Common-Types#date-time
+[DateTime]: NEX-Common-Types#datetime
