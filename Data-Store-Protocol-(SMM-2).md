@@ -614,6 +614,15 @@ This method returns headers that can be used to download relation files from the
 | Uint16 | Unknown |
 | Uint8 | Unknown |
 
+## ThumbnailInfo ([Structure])
+| Type | Description |
+| --- | --- |
+| [String] | Unknown |
+| Uint8 | Unknown |
+| Uint32 | Unknown |
+| [Buffer] | Unknown |
+| [String] | Unknown |
+
 ## CourseInfo ([Structure])
 | Type | Description |
 | --- | --- |
@@ -642,8 +651,8 @@ This method returns headers that can be used to download relation files from the
 | Uint8 | Unknown |
 | Uint8 | Unknown |
 | Uint8 | Unknown |
-| [UnknownStruct3] | Unknown |
-| [UnknownStruct3] | Unknown |
+| [ThumbnailInfo] | One-screen thumbnail |
+| [ThumbnailInfo] | Entire thumbnail |
 
 ### Game Style
 | Value | Description |
@@ -743,15 +752,6 @@ This method returns headers that can be used to download relation files from the
 | Uint32 | Unknown |
 | Uint32 | Unknown |
 
-## UnknownStruct3 ([Structure])
-| Type | Description |
-| --- | --- |
-| [String] | Unknown |
-| Uint8 | Unknown |
-| Uint32 | Unknown |
-| [Buffer] | Unknown |
-| [String] | Unknown |
-
 ## UnknownStruct4 ([Structure])
 | Type | Description |
 | --- | --- |
@@ -773,13 +773,13 @@ This method returns headers that can be used to download relation files from the
 
 [UnknownStruct1]: #unknownstruct1-structure
 [UnknownStruct2]: #unknownstruct2-structure
-[UnknownStruct3]: #unknownstruct3-structure
 [UnknownStruct4]: #unknownstruct4-structure
 [UnknownStruct5]: #unknownstruct5-structure
 
 [UserInfo]: #userinfo-structure
 [CourseInfo]: #courseinfo-structure
 [BadgeInfo]: #badgeinfo-structure
+[ThumbnailInfo]: #thumbnailinfo-structure
 [CommentInfo]: #commentinfo-structure
 [CommentPictureReqGetInfoWithoutHeaders]: #commentpicturereqgetinfowithoutheaders-structure
 [MiiClothes]: #miiclothes-structure
