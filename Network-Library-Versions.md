@@ -64,6 +64,7 @@ Unfortunately, there are many different versions of the nex library with small c
 | Capcom Beat 'Em Up Bundle | 4.5.0 (MM) | 5.10.0 | No |
 | Super Weekend Mode | 4.5.0 (RK/R2/DS/UT/SS) | - | No |
 | NES (Nintendo Switch Online) | 4.5.1-OL (MM/CO) | 5.10.0 | No |
+| Arcade Archives: THE NINJA WARRIORS | 4.6.2 (RK) | - | No |
 | Cadence of Hyrule | 4.6.2 (R2) | - | No |
 | Dragon Marked for Death | 4.6.2 (MM/VS) | - | No |
 | Terraria | 4.6.2 (RK/R2/DS/MM/UT/SS) | 5.14.0 | No |
