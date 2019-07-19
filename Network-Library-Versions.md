@@ -51,7 +51,7 @@ Unfortunately, there are many different versions of the nex library with small c
 | Game | NEX Modules | PIA Version | Debug Symbols |
 | --- | --- | --- | --- |
 | Cave Story | 4.0.3 (RK) | - | Yes |
-| Dragon Quest Builders | 4.0.3 (DS) | - | Yes |
+| Dragon Quest Builders | 4.0.3 (DS) | - | Partial |
 | Lego Worlds | 4.0.3 (MM) | 5.2.7 | Yes |
 | Puyo Puyo Tetris | 4.0.3 (RK/DS) | 5.2.7 | No |
 | ARMS | 4.0.3 (MM/UT) | 5.2.12 | No |
