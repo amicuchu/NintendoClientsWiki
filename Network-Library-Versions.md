@@ -51,6 +51,7 @@ Unfortunately, there are many different versions of the nex library with small c
 | Game | NEX Modules | PIA Version | Debug Symbols |
 | --- | --- | --- | --- |
 | Cave Story | 4.0.3 (RK) | - | Yes |
+| Dragon Quest Builders | 4.0.3 (DS) | - | Yes |
 | Lego Worlds | 4.0.3 (MM) | 5.2.7 | Yes |
 | Puyo Puyo Tetris | 4.0.3 (RK/DS) | 5.2.7 | No |
 | ARMS | 4.0.3 (MM/UT) | 5.2.12 | No |
@@ -67,6 +68,7 @@ Unfortunately, there are many different versions of the nex library with small c
 | Arcade Archives: THE NINJA WARRIORS | 4.6.2 (RK) | - | No |
 | Cadence of Hyrule | 4.6.2 (R2) | - | No |
 | Dragon Marked for Death | 4.6.2 (MM/VS) | - | No |
+| Dragon Quest Builders 2 | 4.6.2 (RK/DS/MM/UT/CO) | 5.11.3 | No |
 | Terraria | 4.6.2 (RK/R2/DS/MM/UT/SS) | 5.14.0 | No |
 | Super Smash Bros. Ultimate | 4.6.2-appc2 (DS/MM/UT/CO/SC) | 5.11.3 | No |
 | Tetris 99 | 4.6.4-app99 (MM/UT) | - | No |
