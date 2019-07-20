@@ -63,6 +63,7 @@ Unfortunately, there are many different versions of the nex library with small c
 | Splatoon 2 | 4.3.1-appblz (RK/DS/MM/UT/CO) | 5.9.1 | Yes |
 | Splatoon 2 | 4.3.8-appblz (RK/DS/MM/UT/CO) | 5.9.1 | No |
 | Capcom Beat 'Em Up Bundle | 4.5.0 (MM) | 5.10.0 | No |
+| Tricky Towers | 4.5.0 (RK/R2/MM/VS) | - | No |
 | Super Weekend Mode | 4.5.0 (RK/R2/DS/UT/SS) | - | No |
 | NES (Nintendo Switch Online) | 4.5.1-OL (MM/CO) | 5.10.0 | No |
 | Arcade Archives: THE NINJA WARRIORS | 4.6.2 (RK) | - | No |
