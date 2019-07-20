@@ -812,6 +812,7 @@ This method returns headers that can be used to download relation files from the
 [ThumbnailInfo]: #thumbnailinfo-structure
 [CommentInfo]: #commentinfo-structure
 [CommentPictureReqGetInfoWithoutHeaders]: #commentpicturereqgetinfowithoutheaders-structure
+[RelationObjectParam]: #relationobjectparam-structure
 [MiiClothes]: #miiclothes-structure
 
 [DataStoreGetMetaParam]: Data-Store-Protocol#datastoregetmetaparam-structure
