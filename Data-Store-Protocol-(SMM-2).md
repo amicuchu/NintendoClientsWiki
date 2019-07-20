@@ -617,11 +617,11 @@ This method returns headers that can be used to download relation files from the
 ## ThumbnailInfo ([Structure])
 | Type | Description |
 | --- | --- |
-| [String] | Unknown |
-| Uint8 | Unknown |
+| [String] | Url |
+| Uint8 | Relation data type |
 | Uint32 | Unknown |
 | [Buffer] | Unknown |
-| [String] | Unknown |
+| [String] | Filename |
 
 ## CourseInfo ([Structure])
 | Type | Description |
