@@ -89,7 +89,7 @@ This page describes the methods that are only seen in Super Mario Maker 2. This 
 | 129 | GetNgCourseNotification |
 | 130 | ? |
 | 131 | [GetUserOrCourse](#131-getuserorcourse) |
-| 132 | ? |
+| 132 | [PreparePostRelationObject](#132-preparepostrelationobject) |
 | 133 | ? |
 | 134 | [PrepareGetRelationObject](#134-preparegetrelationobject) |
 | 135 | ? |
@@ -382,6 +382,17 @@ This method does not take any parameters.
 | [UserInfo] | User info |
 | [CourseInfo] | Course info |
 
+# (132) PreparePostRelationObject
+## Request
+| Type | Description |
+| --- | --- |
+| [PreparePostRelationObjectParam](#relationobjectreqpostinfo-structure) | Info |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [RelationObjectReqPostInfo](#preparepostrelationobjectparam-structure) | Param |
+
 # (134) PrepareGetRelationObject
 This method returns headers that can be used to download relation files from the cloudfront datastore server.
 
@@ -400,7 +411,7 @@ This method returns headers that can be used to download relation files from the
 ## Response
 | Type | Description |
 | --- | --- |
-| [RelationDataHeaders](#relationdataheaders-structure) | Headers |
+| [RelationObjectReqGetInfo](#relationobjectreqgetinfo-structure) | Info |
 
 # Types
 ## RegisterUserParam ([Structure])
@@ -573,13 +584,32 @@ This method returns headers that can be used to download relation files from the
 | Uint32 | userResultOption |
 | Uint32 | courseResultOption |
 
-## RelationDataHeaders ([Structure])
+## PreparePostRelationObjectParam ([Structure])
+| Type | Name |
+| --- | --- |
+| [String] | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| [List]&lt;[String]&gt; | Unknown |
+
+## RelationObjectReqPostInfo ([Structure])
 | Type | Description |
 | --- | --- |
-| [List]&lt;[RelationDataHeader](#relationdataheader-structure)&gt; | Headers |
+| [String] | Unknown |
+| [String] | Unknown |
+| [List]&lt;[RelationObjectParam]&gt; | Headers |
+| [List]&lt;[RelationObjectParam]&gt; | Form fields |
+| [Buffer] | Unknown |
+
+## RelationObjectReqGetInfo ([Structure])
+| Type | Description |
+| --- | --- |
+| [List]&lt;[RelationObjectParam ](#relationobjectparam-structure)&gt; | Headers |
 | Uint32 | Expiration (seconds) |
 
-## RelationDataHeader ([Structure])
+## RelationObjectParam ([Structure])
 | Type | Description |
 | --- | --- |
 | [String] | Key |
