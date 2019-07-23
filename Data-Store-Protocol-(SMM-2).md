@@ -23,8 +23,8 @@ This page describes the methods that are only seen in Super Mario Maker 2. This 
 | 63 | [GetMiiClothes](#63-getmiiclothes) |
 | 64 | ? |
 | 65 | [GetUserNameNgType](#65-getusernamengtype) |
-| 66 | ? |
-| 67 | ? |
+| 66 | PreparePostCourse |
+| 67 | CompletePostCourse |
 | 68 | ? |
 | 69 | UpdateCourseTag |
 | 70 | [GetCourseInfo](#70-getcourseinfo) |
@@ -45,8 +45,8 @@ This page describes the methods that are only seen in Super Mario Maker 2. This 
 | 85 | ? |
 | 86 | ? |
 | 87 | ? |
-| 88 | ? |
-| 89 | ? |
+| 88 | PreparePostCommentPicture |
+| 89 | CompletePostCommentPicture |
 | 90 | ? |
 | 91 | ? |
 | 92 | ? |
@@ -90,7 +90,7 @@ This page describes the methods that are only seen in Super Mario Maker 2. This 
 | 130 | ? |
 | 131 | [GetUserOrCourse](#131-getuserorcourse) |
 | 132 | [PreparePostRelationObject](#132-preparepostrelationobject) |
-| 133 | ? |
+| 133 | CompletePostRelationObject |
 | 134 | [PrepareGetRelationObject](#134-preparegetrelationobject) |
 | 135 | ? |
 | 136 | ? |
@@ -102,8 +102,8 @@ This page describes the methods that are only seen in Super Mario Maker 2. This 
 | 142 | ? |
 | 143 | GetAdditionalMiiClothesInfo |
 | 144 | GetAdditionalMiiClothes |
-| 145 | ? |
-| 146 | ? |
+| 145 | PreparePostAdditionalMiiClothes |
+| 146 | CompletePostAdditionalMiiClothes |
 
 # (47) RegisterUser
 ## Request
