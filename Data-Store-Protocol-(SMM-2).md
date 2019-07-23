@@ -740,7 +740,7 @@ This method returns headers that can be used to download relation files from the
 | Uint16 | Unknown |
 | Uint8 | Unknown |
 | Uint8 | Unknown |
-| Uint8 | Unknown |
+| Uint16 | Unknown |
 | Bool | Unknown |
 | Bool | Unknown |
 | [DateTime] | Unknown |
