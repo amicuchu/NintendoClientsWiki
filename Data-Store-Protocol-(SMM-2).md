@@ -23,7 +23,7 @@ This page describes the methods that are only seen in Super Mario Maker 2. This 
 | 63 | [GetMiiClothes](#63-getmiiclothes) |
 | 64 | ? |
 | 65 | [GetUserNameNgType](#65-getusernamengtype) |
-| 66 | PreparePostCourse |
+| 66 | [PreparePostCourse](#66-preparepostcourse) |
 | 67 | CompletePostCourse |
 | 68 | ? |
 | 69 | UpdateCourseTag |
@@ -302,6 +302,17 @@ This method does not take any parameters.
 | --- | --- |
 | Uint8 | Type |
 
+# (66) PreparePostCourse
+## Request
+| Type | Description |
+| --- | --- |
+| [PreparePostCourseParam](#preparepostcourseparam-structure) | Param |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [DataStoreReqPostInfo] | Info |
+
 # (70) GetCourseInfo
 ## Request
 | Type | Description |
@@ -543,6 +554,29 @@ This method returns headers that can be used to download relation files from the
 | Uint16 | Unknown |
 | Uint16 | Unknown |
 | Bool | Unknown |
+
+## PreparePostCourseParam ([Structure])
+| Type | Description |
+| --- | --- |
+| [String] | Unknown |
+| [String] | Unknown |
+| Uint32 | Unknown |
+| Bool | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| [qBuffer] | Unknown |
+| Uint8 | Unknown |
+| Uint32 | Unknown |
+| Uint16 | Unknown |
+| Uint16 | Unknown |
+| Bool | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| [List]&lt;[String]&gt; | Unknown |
 
 ## GetCourseInfoParam ([Structure])
 | Type | Description |
