@@ -35,3 +35,4 @@
 | ARMS | 25C08801<br>2DF33D01 | b6b34c51<br>4eb18d39 |
 | Mario Kart 8 | 2B309E01 | 09c1c475 |
 | Cave Story | 2BA73000 | c2a631ad |
+| Dragon Quest Builders | 2CD9DB00 | e720a303 |
