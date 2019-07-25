@@ -74,7 +74,7 @@ This page describes the methods that are only seen in Super Mario Maker 2. This 
 | 114 | ? |
 | 115 | ? |
 | 116 | ? |
-| 117 | ? |
+| 117 | [GetBattleModeRating](#117-battlemoderating) |
 | 118 | StartBattleMode |
 | 119 | EndBattleMode |
 | 120 | ? |
@@ -380,6 +380,17 @@ This method does not take any parameters.
 | Type | Description |
 | --- | --- |
 | [MethodResult108](#methodresult108-structure) | Result |
+
+# (117) GetBattleModeRating
+## Request
+This method does not take any parameters.
+
+## Response
+| Type | Description |
+| --- | --- |
+| Bool | Unknown |
+| [BattleModeRating] | Rating 1 |
+| [BattleModeRating] | Rating 2 |
 
 # (131) GetUserOrCourse
 ## Request
@@ -793,6 +804,12 @@ This method returns headers that can be used to download relation files from the
 | [Buffer] | Unknown |
 | [String] | Unknown |
 
+## BattleModeRating ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint32 | Unknown |
+| Uint8 | Unknown |
+
 ## MiiClothes ([Structure])
 | Type | Description |
 | --- | --- |
@@ -848,6 +865,7 @@ This method returns headers that can be used to download relation files from the
 [CommentPictureReqGetInfoWithoutHeaders]: #commentpicturereqgetinfowithoutheaders-structure
 [RelationObjectParam]: #relationobjectparam-structure
 [MiiClothes]: #miiclothes-structure
+[BattleModeRating]: #battlemoderating-structure
 
 [DataStoreGetMetaParam]: Data-Store-Protocol#datastoregetmetaparam-structure
 [DataStorePreparePostParam]: Data-Store-Protocol#datastorepreparepostparam-structure
