@@ -74,7 +74,7 @@ This page describes the methods that are only seen in Super Mario Maker 2. This 
 | 114 | ? |
 | 115 | ? |
 | 116 | ? |
-| 117 | [GetBattleModeRating](#117-battlemoderating) |
+| 117 | [GetBattleModeRating](#117-getbattlemoderating) |
 | 118 | StartBattleMode |
 | 119 | EndBattleMode |
 | 120 | ? |
