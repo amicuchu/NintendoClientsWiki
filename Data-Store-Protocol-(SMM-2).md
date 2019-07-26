@@ -42,7 +42,7 @@ This page describes the methods that are only seen in Super Mario Maker 2. This 
 | 82 | SearchCoursesFolloweePostedBy |
 | 83 | ? |
 | 84 | ? |
-| 85 | ? |
+| 85 | GetEventCourseInfo |
 | 86 | ? |
 | 87 | ? |
 | 88 | PreparePostCommentPicture |
