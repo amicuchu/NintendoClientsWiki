@@ -17,11 +17,11 @@ This page describes the methods that are only seen in Super Mario Maker 2. This 
 | 57 | [Method57](#57-method57) |
 | 58 | [Method58](#58-method58) |
 | 59 | [UpdateLastLoginTime](#59-updatelastlogintime) |
-| 60 | [Method60](#60-method60) |
+| 60 | [CheckUploadEnabled](#60-checkuploadenabled) |
 | 61 | [Method61](#61-method61) |
 | 62 | [Method62](#62-method62) |
 | 63 | [GetMiiClothes](#63-getmiiclothes) |
-| 64 | PostActivityQuest |
+| 64 | SendActivityReport |
 | 65 | [GetUserNameNgType](#65-getusernamengtype) |
 | 66 | [PreparePostCourse](#66-preparepostcourse) |
 | 67 | CompletePostCourse |
@@ -60,31 +60,31 @@ This page describes the methods that are only seen in Super Mario Maker 2. This 
 | 100 | PostPlayResultEntire |
 | 101 | PostPlayResult |
 | 102 | ? |
-| 103 | ? |
+| 103 | DownloadDeathPos |
 | 104 | PostRating |
 | 105 | PostRatingInfoAccumulated |
 | 106 | PostRatingPersonal |
 | 107 | PostRatingEntire |
-| 108 | [Method108](#108-method108) |
-| 109 | ? |
+| 108 | [GetEndlessModeStatus](#108-getendlessmodestatus) |
+| 109 | InitializeEndlessMode |
 | 110 | ? |
 | 111 | ? |
 | 112 | ? |
-| 113 | ? |
+| 113 | SuspendEndlessMode |
 | 114 | ? |
-| 115 | ? |
+| 115 | GetEndlessModePlayInfo |
 | 116 | ? |
 | 117 | [GetBattleModeRating](#117-getbattlemoderating) |
 | 118 | StartBattleMode |
 | 119 | EndBattleMode |
-| 120 | ? |
+| 120 | EndBattleSyncGap |
 | 121 | ? |
 | 122 | EndMultiClear |
 | 123 | Follow |
 | 124 | Unfollow |
 | 125 | GetNewNotification |
-| 126 | ? |
-| 127 | ? |
+| 126 | CheckParentalControl |
+| 127 | GetNoticeInfo |
 | 128 | ReadNgCourseNotification |
 | 129 | GetNgCourseNotification |
 | 130 | ? |
@@ -254,7 +254,7 @@ This method does not take any parameters.
 ## Response
 This method does not return anything.
 
-# (60) Method60
+# (60) CheckUploadEnabled
 ## Request
 This method does not take any parameters.
 
@@ -372,14 +372,14 @@ This method does not take any parameters.
 | --- | --- |
 | [List]&lt;[CommentInfo]&gt; | Comments |
 
-# (108) Method108
+# (108) GetEndlessModeStatus
 ## Request
 This method does not take any parameters.
 
 ## Response
 | Type | Description |
 | --- | --- |
-| [MethodResult108](#methodresult108-structure) | Result |
+| [EndlessModeStatus](#endlessmodestatus-structure) | Result |
 
 # (117) GetBattleModeRating
 ## Request
@@ -616,7 +616,7 @@ This method returns headers that can be used to download relation files from the
 | Uint32 | count |
 | Uint8 | difficulty |
 
-## MethodResult108 ([Structure])
+## EndlessModeStatus ([Structure])
 | Type | Description |
 | --- | --- |
 | [Map]&lt;Uint8, [UnknownStruct4]&gt; | Unknown |
