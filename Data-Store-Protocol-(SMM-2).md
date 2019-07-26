@@ -408,12 +408,12 @@ This method does not take any parameters.
 ## Request
 | Type | Description |
 | --- | --- |
-| [PreparePostRelationObjectParam](#relationobjectreqpostinfo-structure) | Info |
+| [PreparePostRelationObjectParam](#preparepostrelationobjectparam-structure) | Info |
 
 ## Response
 | Type | Description |
 | --- | --- |
-| [RelationObjectReqPostInfo](#preparepostrelationobjectparam-structure) | Param |
+| [RelationObjectReqPostInfo](#relationobjectreqpostinfo-structure) | Param |
 
 # (134) PrepareGetRelationObject
 This method returns headers that can be used to download relation files from the cloudfront datastore server.
