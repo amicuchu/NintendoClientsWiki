@@ -21,7 +21,7 @@ This page describes the methods that are only seen in Super Mario Maker 2. This 
 | 61 | [Method61](#61-method61) |
 | 62 | [Method62](#62-method62) |
 | 63 | [GetMiiClothes](#63-getmiiclothes) |
-| 64 | ? |
+| 64 | PostActivityQuest |
 | 65 | [GetUserNameNgType](#65-getusernamengtype) |
 | 66 | [PreparePostCourse](#66-preparepostcourse) |
 | 67 | CompletePostCourse |
