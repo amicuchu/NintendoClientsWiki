@@ -674,14 +674,31 @@ This method returns headers that can be used to download relation files from the
 | Bool | Unknown |
 | Bool | Unknown |
 | Bool | Unknown |
+| [Map]&lt;Uint8, Uint32&gt; | Play stats ([keys](#play-stats-keys)) |
 | [Map]&lt;Uint8, Uint32&gt; | Unknown |
-| [Map]&lt;Uint8, Uint32&gt; | Unknown |
-| [Map]&lt;Uint8, Uint32&gt; | Unknown |
-| [Map]&lt;Uint8, Uint32&gt; | Unknown |
+| [Map]&lt;Uint8, Uint32&gt; | Endless mode highscores ([keys](#difficulty-level)) |
+| [Map]&lt;Uint8, Uint32&gt; | Multiplayer stats ([keys](#multiplayer-stats-keys)) |
 | [Map]&lt;Uint8, Uint32&gt; | Unknown |
 | [List]&lt;[BadgeInfo]&gt; | Badge info |
 | [Map]&lt;Uint8, Uint32&gt; | Unknown |
 | [Map]&lt;Uint8, Uint32&gt; | Unknown |
+
+### Play Stats Keys
+| Value | Description |
+| --- | --- |
+| 0 | Plays |
+| 1 | Clears |
+| 2 | Attempts |
+| 3 | Deaths |
+
+### Multiplayer Stats Keys
+| Value | Description |
+| --- | --- |
+| 0 | Multiplayer score |
+| 2 | Versus plays |
+| 3 | Versus wins |
+| 10 | Coop plays |
+| 11 | Coop wins |
 
 ## BadgeInfo ([Structure])
 | Type | Description |
@@ -709,7 +726,7 @@ This method returns headers that can be used to download relation files from the
 | Uint8 | [Game style](#game-style) |
 | Uint8 | [Course theme](#course-theme) |
 | [DateTime] | Upload time |
-| Uint8 | Difficulty (0-3) |
+| Uint8 | [Difficulty](#difficulty-level) |
 | Uint8 | First [tag](#course-tag) |
 | Uint8 | Second [tag](#course-tag) |
 | Uint8 | Unknown |
@@ -772,6 +789,14 @@ This method returns headers that can be used to download relation files from the
 | 0 | None |
 | 4042480826 | Kill skipsqueaks |
 | 4116396131 | Collect coins |
+
+## Difficulty Level
+| Value | Description |
+| --- | --- |
+| 0 | Easy |
+| 1 | Normal |
+| 2 | Expert |
+| 3 | Super expert |
 
 ## CommentInfo ([Structure])
 | Type | Description |
