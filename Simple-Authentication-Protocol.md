@@ -6,7 +6,7 @@ Interestingly, this protocol has methods referencing the Wii U, even though this
 | Method ID | Method Name |
 | --- | --- |
 | 1 | Authenticate |
-| 2 | LoginWithToken |
+| 2 | [LoginWithToken](#2-loginwithtoken) |
 | 3 | [LoginWithTokenEx](#3-loginwithtokenex) |
 | 4 | Login |
 | 5 | LoginWithSubAccount |
@@ -14,6 +14,20 @@ Interestingly, this protocol has methods referencing the Wii U, even though this
 | 7 | RegisterEx |
 | 8 | LoginWithTokenCafe |
 | 9 | LoginWithTokenCafeEx |
+
+# (2) LoginWithToken
+## Request
+| Type | Name | Description |
+| --- | --- | --- |
+| [String] | strToken | Token |
+
+## Response
+| Type | Name | Description |
+| --- | --- | --- |
+| [Result] | %retval% | Result code |
+| Uint32 | pidPrincipal | Pid |
+| [RVConnectionData] | pConnectionData | Connection info for secure server |
+| [String] | strReturnMsg | Response message |
 
 # (3) LoginWithTokenEx
 ## Request
