@@ -60,7 +60,7 @@ This page describes the methods that are only seen in Super Mario Maker 2. This 
 | 100 | PostPlayResultEntire |
 | 101 | PostPlayResult |
 | 102 | ? |
-| 103 | DownloadDeathPos |
+| 103 | GetDeathPositions |
 | 104 | PostRating |
 | 105 | PostRatingInfoAccumulated |
 | 106 | PostRatingPersonal |
