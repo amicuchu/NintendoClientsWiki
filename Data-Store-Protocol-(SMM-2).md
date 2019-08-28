@@ -66,7 +66,7 @@ This page describes the methods that are only seen in Super Mario Maker 2. This 
 | 106 | PostRatingPersonal |
 | 107 | PostRatingEntire |
 | 108 | [GetEndlessModeStatus](#108-getendlessmodestatus) |
-| 109 | InitializeEndlessMode |
+| 109 | InitEndlessMode |
 | 110 | ? |
 | 111 | ? |
 | 112 | ? |
