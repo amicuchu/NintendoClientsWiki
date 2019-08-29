@@ -1,63 +1,51 @@
 ## [[NEX Protocols]] > [Data Store (0x73)](Data-Store-Protocol) > SMM
 
-This page describes the methods that are only seen in Super Mario Maker. Most method and structure names listed here are not the official names, they are merely guesses. This page is very incomplete. Any help would be appreciated.
+This page describes the methods that are only seen in Super Mario Maker.
 
 | Method ID | Method Name |
 | --- | --- |
-| 45 | [GetFileServerObjectInfos](#45-getfileserverobjectinfos) |
 | 46 | ? |
 | 47 | ? |
-| 48 | [RateCustomRanking](#48-ratecustomranking) |
-| 49 | [Method49](#49-method49) |
-| 50 | [Method50](#50-method50) |
+| 48 | RateCustomRanking |
+| 49 | ? |
+| 50 | GetCustomRankingByDataId |
 | 51 | ? |
-| 52 | ? |
-| 53 | [Method53](#53-method53) |
-| 54 | [Method54](#54-method54) |
-| 55 | ? |
-| 56 | ? |
-| 57 | [Method57](#57-method57) |
+| 52 | AddToBufferQueue |
+| 53 | AddToBufferQueues |
+| 54 | GetBufferQueue |
+| 55 | GetBufferQueues |
+| 56 | ClearBufferQueues |
+| 57 | CompleteAttachFile |
 | 58 | ? |
-| 59 | [Method59](#59-method59) |
-| 60 | [Method60](#60-method60) |
-| 61 | [Method61](#61-method61) |
-| 62 | ? |
-| 63 | ? |
-| 64 | [Method64](#64-method64) |
-| 65 | [Method65](#65-method65) |
-| 66 | [Method66](#66-method66) |
-| 67 | [Method67](#67-method67) |
-| 68 | [Method68](#68-method68) |
+| 59 | PrepareAttachFile |
+| 60 | ConditionalSearchObject |
+| 61 | GetApplicationConfig |
+| 62 | SetApplicationConfig |
+| 63 | DeleteApplicationConfig |
+| 64 | LatestCourseSearchObject |
+| 65 | FollowingsLatestCourseSearchObject |
+| 66 | RecommendedCourseSearchObject |
+| 67 | ScoreRangeCascadedSearchObject |
+| 68 | SuggestedCourseSearchObject |
 | 69 | ? |
 | 70 | ? |
-| 71 | [Method71](#71-method71) |
-| 72 | [Method72](#72-method72) |
+| 71 | UploadCourseRecord |
+| 72 | GetCourseRecord |
 | 73 | ? |
-| 74 | [Method74](#74-method74) |
-| 75 | ? |
-| 76 | [Method76](#76-method76) |
-| 77 | ? |
-| 78 | [Method78](#78-method78) |
-| 79 | [Method79](#79-method79) |
+| 74 | GetApplicationConfigString |
+| 75 | SetApplicationConfigString |
+| 76 | GetDeletionReason |
+| 77 | SetDeletionReason |
+| 78 | GetMetasWithCourseRecord |
+| 79 | CheckRateCustomRankingCounter |
 | 80 | ? |
-| 81 | [Method81](#81-method81) |
-| 82 | [Method82](#method-82) |
+| 81 | BestScoreRateCourseSearchObject |
+| 82 | CTRPickUpCourseSearchObject |
 | 83 | ? |
 | 84 | ? |
 | 85 | ? |
 | 86 | ? |
-| 87 | [ReportCourse](#87-reportcourse) |
-
-# (45) GetFileServerObjectInfos
-## Request
-| Type | Description |
-| --- | --- |
-| [List]&lt;Uint64&gt; | Object ids |
-
-## Response
-| Type | Description |
-| --- | --- |
-| [List]&lt;[DataStoreFileServerObjectInfo](#datastorefileserverobjectinfo)&gt; | Object infos |
+| 87 | ReportCourse |
 
 # (48) RateCustomRanking
 ## Request
