@@ -1,4 +1,5 @@
 ## [[NEX Protocols]] > Friends Wii U (0x66)
+Official name: NintendoFriendPresenceV2Protocol
 
 | Method ID | Method Name |
 | --- | --- |
