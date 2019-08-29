@@ -16,7 +16,7 @@ This page describes the methods that are only seen in Super Mario Maker.
 | 55 | GetBufferQueues |
 | 56 | ClearBufferQueues |
 | 57 | CompleteAttachFile |
-| 58 | ? |
+| 58 | CompleteAttachFileV1 |
 | 59 | PrepareAttachFile |
 | 60 | ConditionalSearchObject |
 | 61 | GetApplicationConfig |
@@ -31,20 +31,20 @@ This page describes the methods that are only seen in Super Mario Maker.
 | 70 | ? |
 | 71 | UploadCourseRecord |
 | 72 | GetCourseRecord |
-| 73 | ? |
+| 73 | DeleteCourseRecord |
 | 74 | GetApplicationConfigString |
 | 75 | SetApplicationConfigString |
 | 76 | GetDeletionReason |
 | 77 | SetDeletionReason |
 | 78 | GetMetasWithCourseRecord |
 | 79 | CheckRateCustomRankingCounter |
-| 80 | ? |
+| 80 | ResetRateCustomRankingCounter |
 | 81 | BestScoreRateCourseSearchObject |
 | 82 | CTRPickUpCourseSearchObject |
 | 83 | ? |
 | 84 | ? |
 | 85 | ? |
-| 86 | ? |
+| 86 | SearchUnknownPlatformObjects |
 | 87 | ReportCourse |
 
 [DataStoreGetMetaParam]: Data-Store-Protocol#datastoregetmetaparam-structure
