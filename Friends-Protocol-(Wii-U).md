@@ -2,7 +2,7 @@
 
 | Method ID | Method Name |
 | --- | --- |
-| 1 | [GetAllInformation](#1-getallinformation) |
+| 1 | [UpdateAndGetAllInformation](#1-updateandgetallinformation) |
 | 2 | [AddFriend](#2-addfriend) |
 | 3 | [AddFriendByName](#3-addfriendbyname) |
 | 4 | [RemoveFriend](#4-removefriend) |
@@ -23,7 +23,7 @@
 | 19 | [CheckSettingStatus](#19-checksettingstatus) |
 | 20 | [GetRequestBlockSettings](#20-getrequestblocksettings) |
 
-# (1) GetAllInformation
+# (1) UpdateAndGetAllInformation
 ## Request
 | Type | Description |
 | --- | --- |
