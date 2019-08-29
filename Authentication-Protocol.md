@@ -1,6 +1,6 @@
 [[NEX Protocols]] > Authentication (0x0A)
 ---
-Alternative name: TicketGrantingProtocol
+Official name: TicketGrantingProtocol
 
 This is the only protocol that's available on the authentication server. Other protocols are only available on the secure server.
 
