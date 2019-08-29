@@ -32,7 +32,9 @@ This method does not take any parameters.
 ## Request
 | Type | Description |
 | --- | --- |
-| 14 bytes | Unknown |
+| [List]&lt;[PID]&gt; | Pids |
+| [DateTime] | Unknown |
+| [DateTime] | Unknown |
 
 ## Response
 | Type | Description |
