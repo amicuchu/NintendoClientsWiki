@@ -7,7 +7,7 @@ This page describes the methods that are only seen in Super Mario Maker. Most me
 | 45 | [GetFileServerObjectInfos](#45-getfileserverobjectinfos) |
 | 46 | ? |
 | 47 | ? |
-| 48 | [Method48](#48-method48) |
+| 48 | [RateCustomRanking](#48-ratecustomranking) |
 | 49 | [Method49](#49-method49) |
 | 50 | [Method50](#50-method50) |
 | 51 | ? |
@@ -59,7 +59,7 @@ This page describes the methods that are only seen in Super Mario Maker. Most me
 | --- | --- |
 | [List]&lt;[DataStoreFileServerObjectInfo](#datastorefileserverobjectinfo)&gt; | Object infos |
 
-# (48) Method48
+# (48) RateCustomRanking
 ## Request
 | Type | Description |
 | --- | --- |
