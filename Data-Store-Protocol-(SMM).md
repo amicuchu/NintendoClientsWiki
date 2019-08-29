@@ -46,7 +46,7 @@ This page describes the methods that are only seen in Super Mario Maker. Most me
 | 84 | ? |
 | 85 | ? |
 | 86 | ? |
-| 87 | [Method87](#87-method87) |
+| 87 | [ReportCourse](#87-reportcourse) |
 
 # (45) GetFileServerObjectInfos
 ## Request
@@ -312,11 +312,11 @@ This method does not return anything.
 | --- | --- |
 | [List]&lt;[DataStoreInfoStuff]&gt; | Unknown |
 
-# (87) Method87
+# (87) ReportCourse
 ## Request
 | Type | Description |
 | --- | --- |
-| [MethodParam87](#methodparam87-structure) | 
+| [ReportCourseParam](#reportcourseparam-structure) | 
 
 ## Response
 This method does not return anything.
@@ -364,7 +364,7 @@ This method does not return anything.
 | Uint8 | Unknown |
 | Uint32 | Unknown |
 
-## MethodParam87 ([Structure])
+## ReportCourseParam ([Structure])
 | Type | Description |
 | --- | --- |
 | Uint64 | Unknown |
