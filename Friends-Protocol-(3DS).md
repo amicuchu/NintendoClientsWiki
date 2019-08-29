@@ -1,4 +1,5 @@
 ## [[NEX Protocols]] > Friends 3DS (0x65)
+Official name: NintendoFriendPresenceProtocol
 
 | Method ID | Method Name |
 | --- | --- |
