@@ -19,7 +19,7 @@ This page describes the methods that are only seen in Super Mario Maker 2. This 
 | 59 | [UpdateLastLoginTime](#59-updatelastlogintime) |
 | 60 | [CheckUploadEnabled](#60-checkuploadenabled) |
 | 61 | [CanPostRatingAndComment](#61-canpostratingandcomment) |
-| 62 | [Method62](#62-method62) |
+| 62 | [UpdateMiiClothes](#62-updatemiiclothes) |
 | 63 | [GetMiiClothes](#63-getmiiclothes) |
 | 64 | SendActivityReport |
 | 65 | [GetUserNameNgType](#65-getusernamengtype) |
@@ -275,11 +275,11 @@ This method does not take any parameters.
 | --- | --- |
 | [CanPostRatingAndCommentResult](#canpostratingandcommentresult-structure) | Result |
 
-# (62) Method62
+# (62) UpdateMiiClothes
 ## Request
 | Type | Description |
 | --- | --- |
-| [List]&lt;[MethodParam62](#methodparam62-structure)&gt; | Param |
+| [List]&lt;[UpdateMiiClothesParam](#updatemiiclothesparam-structure)&gt; | Param |
 
 ## Response
 This method does not return anything.
@@ -559,7 +559,7 @@ This method returns headers that can be used to download relation files from the
 | Uint32 | Unknown |
 | [Map]&lt;Uint8, Uint32&gt; | Unknown |
 
-## MethodParam62 ([Structure])
+## UpdateMiiClothesParam ([Structure])
 | Type | Description |
 | --- | --- |
 | Uint16 | Unknown |
