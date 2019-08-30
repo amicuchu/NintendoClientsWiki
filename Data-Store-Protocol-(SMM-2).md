@@ -15,19 +15,19 @@ This page describes the methods that are only seen in Super Mario Maker 2. This 
 | 55 | [SearchUsersPositiveRatedCourse](#55-searchuserspositiveratedcourse) |
 | 56 | [SearchUsersFollowee](#56-searchusersfollowee) |
 | 57 | [SearchUsersClearRanking](#57-searchusersclearranking) |
-| 58 | ? |
+| 58 | SearchUsersTermsRanking |
 | 59 | [UpdateLastLoginTime](#59-updatelastlogintime) |
-| 60 | [CheckUploadEnabled](#60-checkuploadenabled) |
+| 60 | [CanPostCourse](#60-canpostcourse) |
 | 61 | [CanPostRatingAndComment](#61-canpostratingandcomment) |
 | 62 | [UpdateMiiClothes](#62-updatemiiclothes) |
 | 63 | [GetMiiClothes](#63-getmiiclothes) |
-| 64 | SendActivityReport |
+| 64 | PostActivityQuest |
 | 65 | [GetUserNameNgType](#65-getusernamengtype) |
-| 66 | [PreparePostCourse](#66-preparepostcourse) |
-| 67 | CompletePostCourse |
-| 68 | ? |
+| 66 | [PreparePostObjectCourse](#66-preparepostobjectcourse) |
+| 67 | CompletePostObjectCourse |
+| 68 | CompletePostObjectsCourse |
 | 69 | UpdateCourseTag |
-| 70 | [GetCourseInfo](#70-getcourseinfo) |
+| 70 | [GetCourses](#70-GetCourses) |
 | 71 | [SearchCoursesPointRanking](#71-searchcoursespointranking) |
 | 72 | SearchCoursesAdvanced |
 | 73 | [SearchCoursesLatest](#73-searchcourseslatest) |
@@ -35,75 +35,75 @@ This page describes the methods that are only seen in Super Mario Maker 2. This 
 | 75 | SearchCoursesPositiveRatedBy |
 | 76 | SearchCoursesPlayedBy |
 | 77 | SearchCoursesBattleMode |
-| 78 | ? |
+| 78 | SearchCoursesBattleModeByDifficulty |
 | 79 | [SearchCoursesEndlessMode](#79-searchcoursesendlessmode) |
-| 80 | ? |
+| 80 | SearchCoursesFirstClear |
 | 81 | SearchCoursesBestTime |
 | 82 | SearchCoursesFolloweePostedBy |
-| 83 | ? |
-| 84 | ? |
-| 85 | GetEventCourseInfo |
-| 86 | ? |
-| 87 | ? |
-| 88 | PreparePostCommentPicture |
-| 89 | CompletePostCommentPicture |
-| 90 | ? |
+| 83 | SearchCoursesTermsRanking |
+| 84 | SearchCoursesPickUp |
+| 85 | ? |
+| 86 | SearchCoursesEvent |
+| 87 | ReadEventCourseList |
+| 88 | PreparePostObjectCommentPicture |
+| 89 | CompletePostObjectCommentPicture |
+| 90 | CompletePostObjectsCommentPicture |
 | 91 | ? |
 | 92 | ? |
-| 93 | ? |
+| 93 | DeleteComment |
 | 94 | SearchCommentsInOrder |
-| 95 | [GetCourseComments](#95-getcoursecomments) |
-| 96 | ? |
-| 97 | ? |
-| 98 | ? |
-| 99 | PostPlayResultPersonal |
-| 100 | PostPlayResultEntire |
-| 101 | PostPlayResult |
-| 102 | ? |
+| 95 | [SearchComments](#95-searchcomments) |
+| 96 | PostPlayResult |
+| 97 | PostPlayResults |
+| 98 | PostPlayResultsAccumulated |
+| 99 | PostPlayResultBattleModePersonal |
+| 100 | PostPlayResultBattleModeEntire |
+| 101 | PostPlayResultMultiClear |
+| 102 | PostPlayResultEventCourse |
 | 103 | GetDeathPositions |
-| 104 | PostRating |
-| 105 | PostRatingInfoAccumulated |
-| 106 | PostRatingPersonal |
-| 107 | PostRatingEntire |
+| 104 | PostRatingInfo |
+| 105 | PostRatingInfos|
+| 106 | PostRatingInfoBattleModePersonal |
+| 107 | PostRatingInfoBattleModeEntire |
 | 108 | [GetEndlessModeStatus](#108-getendlessmodestatus) |
 | 109 | InitEndlessMode |
-| 110 | ? |
-| 111 | ? |
-| 112 | ? |
+| 110 | StartEndlessModeCourse |
+| 111 | DominateEndlessModeCourse |
+| 112 | PassEndlessModeCourse |
 | 113 | SuspendEndlessMode |
-| 114 | ? |
+| 114 | FinishEndlessMode |
 | 115 | GetEndlessModePlayInfo |
-| 116 | ? |
+| 116 | GetEndlessModeRank |
 | 117 | [GetBattleModeRating](#117-getbattlemoderating) |
 | 118 | StartBattleMode |
 | 119 | EndBattleMode |
-| 120 | EndBattleSyncGap |
-| 121 | ? |
+| 120 | ForceEndBattleMode |
+| 121 | StartMultiClear |
 | 122 | EndMultiClear |
-| 123 | Follow |
-| 124 | Unfollow |
+| 123 | FollowUser |
+| 124 | UnfollowUser |
 | 125 | GetNewNotification |
-| 126 | CheckParentalControl |
-| 127 | GetNoticeInfo |
-| 128 | ReadNgCourseNotification |
+| 126 | ReadNewNotification |
+| 127 | GetNotification |
+| 128 | ReadNotification |
 | 129 | GetNgCourseNotification |
-| 130 | ? |
+| 130 | GetOperatingInformation |
 | 131 | [GetUserOrCourse](#131-getuserorcourse) |
 | 132 | [PreparePostRelationObject](#132-preparepostrelationobject) |
 | 133 | CompletePostRelationObject |
-| 134 | [PrepareGetRelationObject](#134-preparegetrelationobject) |
-| 135 | ? |
-| 136 | ? |
-| 137 | ? |
-| 138 | ? |
-| 139 | ? |
-| 140 | ? |
-| 141 | ? |
-| 142 | ? |
-| 143 | GetAdditionalMiiClothesInfo |
-| 144 | GetAdditionalMiiClothes |
-| 145 | PreparePostAdditionalMiiClothes |
-| 146 | CompletePostAdditionalMiiClothes |
+| 134 | [GetReqGetInfoHeadersInfo](#134-getreqgetinfoheadersinfo) |
+| 135 | CanReportFromCourseInfo |
+| 136 | CanReportFromCommentInfo |
+| 137 | CanReportFromUserInfo |
+| 138 | CanReportFromBugDetection |
+| 139 | ReportFromCourseInfo |
+| 140 | ReportFromCommentInfo |
+| 141 | ReportFromUserInfo |
+| 142 | ReportFromBugDetection |
+| 143 | GetAdditionalMiiClothes |
+| 144 | GetAdditionalMiiClothesReqGetInfos |
+| 145 | DebugPreparePostObjectAdditionalMiiClothes |
+| 146 | DebugCompletePostObjectAdditionalMiiClothes |
 
 # (47) RegisterUser
 ## Request
@@ -241,7 +241,7 @@ This method does not take any parameters.
 ## Response
 This method does not return anything.
 
-# (60) CheckUploadEnabled
+# (60) CanPostCourse
 ## Request
 This method does not take any parameters.
 
@@ -289,7 +289,7 @@ This method does not take any parameters.
 | --- | --- |
 | Uint8 | Type |
 
-# (66) PreparePostCourse
+# (66) PreparePostObjectCourse
 ## Request
 | Type | Description |
 | --- | --- |
@@ -300,11 +300,11 @@ This method does not take any parameters.
 | --- | --- |
 | [DataStoreReqPostInfo] | Info |
 
-# (70) GetCourseInfo
+# (70) GetCourses
 ## Request
 | Type | Description |
 | --- | --- |
-| [GetCourseInfoParam](#getcourseinfoparam-structure) | Param |
+| [GetCoursesParam](#getcoursesparam-structure) | Param |
 
 ## Response
 | Type | Description |
@@ -348,7 +348,7 @@ This method does not take any parameters.
 | --- | --- |
 | [List]&lt;[CourseInfo]&gt; | Courses |
 
-# (95) GetCourseComments
+# (95) SearchComments
 ## Request
 | Type | Description |
 | --- | --- |
@@ -402,7 +402,7 @@ This method does not take any parameters.
 | --- | --- |
 | [RelationObjectReqPostInfo](#relationobjectreqpostinfo-structure) | Param |
 
-# (134) PrepareGetRelationObject
+# (134) GetReqGetInfoHeadersInfo
 This method returns headers that can be used to download relation files from the cloudfront datastore server.
 
 ## Request
@@ -420,7 +420,7 @@ This method returns headers that can be used to download relation files from the
 ## Response
 | Type | Description |
 | --- | --- |
-| [RelationObjectReqGetInfo](#relationobjectreqgetinfo-structure) | Info |
+| [ReqGetInfoHeadersInfo](#reqgetinfoheadersinfo-structure) | Info |
 
 # Types
 ## RegisterUserParam ([Structure])
@@ -569,7 +569,7 @@ This method returns headers that can be used to download relation files from the
 | Uint32 | Unknown |
 | [List]&lt;[String]&gt; | Unknown |
 
-## GetCourseInfoParam ([Structure])
+## GetCoursesParam ([Structure])
 | Type | Description |
 | --- | --- |
 | [List]&lt;Uint64&gt; | Data ids |
@@ -628,7 +628,7 @@ This method returns headers that can be used to download relation files from the
 | [List]&lt;[RelationObjectParam]&gt; | Form fields |
 | [Buffer] | Unknown |
 
-## RelationObjectReqGetInfo ([Structure])
+## ReqGetInfoHeadersInfo ([Structure])
 | Type | Description |
 | --- | --- |
 | [List]&lt;[RelationObjectParam ](#relationobjectparam-structure)&gt; | Headers |
