@@ -18,7 +18,7 @@ This page describes the methods that are only seen in Super Mario Maker 2. This 
 | 58 | [Method58](#58-method58) |
 | 59 | [UpdateLastLoginTime](#59-updatelastlogintime) |
 | 60 | [CheckUploadEnabled](#60-checkuploadenabled) |
-| 61 | [Method61](#61-method61) |
+| 61 | [CanPostRatingAndComment](#61-canpostratingandcomment) |
 | 62 | [Method62](#62-method62) |
 | 63 | [GetMiiClothes](#63-getmiiclothes) |
 | 64 | SendActivityReport |
@@ -264,16 +264,16 @@ This method does not take any parameters.
 | Bool | Unknown |
 | Uint32 | Unknown |
 
-# (61) Method61
+# (61) CanPostRatingAndComment
 ## Request
 | Type | Description |
 | --- | --- |
-| [MethodParam61](#methodparam61-structure) | Param |
+| [CanPostRatingAndCommentParam](#canpostratingandcommentparam-structure) | Param |
 
 ## Response
 | Type | Description |
 | --- | --- |
-| [MethodResult61](#methodresult61-structure) | Result |
+| [CanPostRatingAndCommentResult](#canpostratingandcommentresult-structure) | Result |
 
 # (62) Method62
 ## Request
@@ -542,13 +542,13 @@ This method returns headers that can be used to download relation files from the
 | [ResultRange] | Unknown |
 | [Buffer] | Unknown |
 
-## MethodParam61 ([Structure])
+## CanPostRatingAndCommentParam ([Structure])
 | Type | Description |
 | --- | --- |
 | Uint64 | Unknown |
 | Uint32 | Unknown |
 
-## MethodResult61 ([Structure])
+## CanPostRatingAndCommentResult ([Structure])
 | Type | Description |
 | --- | --- |
 | Uint64 | Unknown |
