@@ -7,15 +7,15 @@ This page describes the methods that are only seen in Super Mario Maker 2. This 
 | 47 | [RegisterUser](#47-registeruser) |
 | 48 | [GetUsers](#48-getusers) |
 | 49 | [SyncUserProfile](#49-syncuserprofile) |
-| 50 | [Method50](#50-method50) |
-| 51 | [Method51](#51-method51) |
-| 52 | [Method52](#52-method52) |
+| 50 | [SearchUsersUserPoint](#50-searchusersuserpoint) |
+| 51 | [SearchUsersEndlessMode](#51-searchusersendlessmode) |
+| 52 | [SearchUsersBattleMode](#52-searchusersbattlemode) |
 | 53 | [SearchUsersPlayedCourse](#53-searchusersplayedcourse) |
 | 54 | [SearchUsersClearedCourse](#54-searchusersclearedcourse) |
 | 55 | [SearchUsersPositiveRatedCourse](#55-searchuserspositiveratedcourse) |
 | 56 | [SearchUsersFollowee](#56-searchusersfollowee) |
-| 57 | [Method57](#57-method57) |
-| 58 | [Method58](#58-method58) |
+| 57 | [SearchUsersClearRanking](#57-searchusersclearranking) |
+| 58 | ? |
 | 59 | [UpdateLastLoginTime](#59-updatelastlogintime) |
 | 60 | [CheckUploadEnabled](#60-checkuploadenabled) |
 | 61 | [CanPostRatingAndComment](#61-canpostratingandcomment) |
@@ -137,11 +137,11 @@ This method does not return anything.
 | --- | --- |
 | [SyncUserProfileResult](#syncuserprofileresult-structure) | Result |
 
-# (50) Method50
+# (50) SearchUsersUserPoint
 ## Request
 | Type | Description |
 | --- | --- |
-| [MethodParam50](#methodparam50-structure) | Param |
+| [SearchUsersUserPointParam](#searchusersuserpointparam-structure) | Param |
 
 ## Response
 | Type | Description |
@@ -150,24 +150,24 @@ This method does not return anything.
 | [List]&lt;Uint32&gt; | Unknown |
 | Bool | Ünknown |
 
-# (51) Method51
+# (51) SearchUsersEndlessMode
 ## Request
 | Type | Description |
 | --- | --- |
-| [MethodParam51](#methodparam51-structure) | Param |
+| [SearchUsersEndlessModeParam](#searchusersendlessmodeparam-structure) | Param |
 
 ## Response
 | Type | Description |
 | --- | --- |
 | [List]&lt;[UserInfo]&gt; | Users |
 | [List]&lt;Uint32&gt; | Unknown |
-| Bool | Ünknown |
+| Bool | Unknown |
 
-# (52) Method52
+# (52) SearchUsersBattleMode
 ## Request
 | Type | Description |
 | --- | --- |
-| [MethodParam52](#methodparam52-structure) | Param |
+| [SearchUsersBattleModeParam](#searchusersbattlemodeparam-structure) | Param |
 
 ## Response
 | Type | Description |
@@ -221,11 +221,11 @@ This method does not return anything.
 | [List]&lt;[UserInfo]&gt; | Users |
 | Bool | Unknown |
 
-# (57) Method57
+# (57) SearchUsersClearRanking
 ## Request
 | Type | Description |
 | --- | --- |
-| [MethodParam57](#methodparam57-structure) | Param |
+| [SearchUsersClearRankingParam](#searchusersclearrankingparam-structure) | Param |
 
 ## Response
 | Type | Description |
@@ -234,20 +234,7 @@ This method does not return anything.
 | [List]&lt;Uint32&gt; | Unknown |
 | Bool | Unknown |
 
-# (58) Method58
-## Request
-| Type | Description |
-| --- | --- |
-| [MethodParam58](#methodparam58-structure) | Param |
-
-## Response
-| Type | Description |
-| --- | --- |
-| [List]&lt;[UserInfo]&gt; | Users |
-| [List]&lt;Uint32&gt; | Unknown |
-| Bool | Unknown |
-
-# (59) Method59
+# (59) UpdateLastLoginTime
 ## Request
 This method does not take any parameters.
 
@@ -478,14 +465,14 @@ This method returns headers that can be used to download relation files from the
 | Bool | Unknown |
 | Bool | Unknown |
 
-## MethodParam50 ([Structure])
+## SearchUsersUserPointParam ([Structure])
 | Type | Description |
 | --- | --- |
 | Uint32 | Unknown |
 | [Buffer] | Unknown |
 | [ResultRange] | Result range |
 
-## MethodParam51 ([Structure])
+## SearchUsersEndlessModeParam ([Structure])
 | Type | Description |
 | --- | --- |
 | Uint8 | Unknown |
@@ -493,7 +480,7 @@ This method returns headers that can be used to download relation files from the
 | [Buffer] | Unknown |
 | [ResultRange] | Unknown |
 
-## MethodParam52 ([Structure])
+## SearchUsersBattleModeParam ([Structure])
 | Type | Description |
 | --- | --- |
 | Uint32 | Unknown |
@@ -527,20 +514,13 @@ This method returns headers that can be used to download relation files from the
 | Uint32 | resultOption |
 | [ResultRange] | resultRange |
 
-## MethodParam57 ([Structure])
+## SearchUsersClearRankingParam ([Structure])
 | Type | Description |
 | --- | --- |
 | Uint8 | Unknown |
 | Uint32 | Unknown |
 | [Buffer] | Unknown |
 | [ResultRange] | Unknown |
-
-## MethodParam58 ([Structure])
-| Type | Description |
-| --- | --- |
-| Uint32 | Unknown |
-| [ResultRange] | Unknown |
-| [Buffer] | Unknown |
 
 ## CanPostRatingAndCommentParam ([Structure])
 | Type | Description |
