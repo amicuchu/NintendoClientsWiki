@@ -1,6 +1,6 @@
 ## [[NEX Protocols]] > [Data Store (0x73)](Data-Store-Protocol) > SMM 2
 
-This page describes the methods that are only seen in Super Mario Maker 2. This page is incomplete. Any help would be appreciated.
+This page describes the methods that are only seen in Super Mario Maker 2.
 
 | Method ID | Method Name |
 | --- | --- |
