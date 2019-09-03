@@ -194,7 +194,7 @@ When multiple PRUDP connections are made to the same address, NEX doesn't create
 
 **Lite**: The port number now uses 8 bits instead of 4. The client port is the highest unused port number &le; 0x1F. The stream types are stored in a separate byte.
 
-**Server port (3DS/Wii U)**: The authentication and secure server do not reside at the same address. The server port is always 1.
+**Server port (3DS/Wii U)**: The authentication and secure server each have their own UDP server. The server port is always 1.
 
 **Server port (Switch)**: A single websocket server handles both authentication and secure connections. The authentication server has server port 1, the secure server has server port 2.
 
@@ -258,7 +258,7 @@ The sequence id of the aggregate ack packet is always 0.
 This is a random value generated at the start of each session. The server's session id is not necessarily the same as the client's session id.
 
 ### Sequence id
-This is an incrementing value used to ensure that packets arrive in correct order. Every [reliable substream](#substreams) has its own stream of sequence ids. Unreliable ping and data packets both have their own stream of sequence ids as well. The sequence id of client-to-server packets is always independent from the sequence id of server-to-client packets.
+This is an incrementing value used to ensure that packets arrive in correct order. Every [reliable substream](#substreams) has its own stream of sequence ids. Unreliable ping and data packets both have their own stream of sequence ids as well. The sequence id of client-to-server packets is independent from the sequence id of server-to-client packets.
 
 Normally, the sequence id starts at 1. However, the initial sequence id of unreliable data packets is a random value generated during the connection handshake (see [option 3](#optional-data)).
 
