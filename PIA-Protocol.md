@@ -17,7 +17,7 @@ These packets are sent directly from one console to another, with no server in b
 | 0xA | 2 | [RTT timer](#rtt-calculation) |
 
 ### Connection ID
-During connection establishment, the console that wants to connect to another console must set this field to 1, and the console that answers the connection request must set this field to 0. After a connection has been established both console generate a random number between 2 and 255. This will be the connection id in any further packets.
+During connection establishment, the console that wants to connect to another console must set this field to 1, and the console that answers the connection request must set this field to 0. After a connection has been established both consoles generate a random number between 2 and 255. This will be the connection id in any further packets.
 
 ### Packet ID
 This should be 0 during connection establishment. After a connection has been established this should be an incrementing number starting at 1.
