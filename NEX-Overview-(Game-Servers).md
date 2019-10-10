@@ -1,7 +1,5 @@
 ## General
-Nintendo offers a networking library called NEX.
-
-NEX provides functions to connect and talk to game servers. Nintendo hasn't written it from scratch. It's based on [Quazal Rendez-Vous](http://www.quazal.com/rendez-vous.htm), so some things like the [[PRUDP Protocol]] may be seen in other games that use Quazal.
+NEX is Nintendo's networking library that talks to game servers. Nintendo hasn't written it from scratch. It's based on [Quazal Rendez-Vous](http://web.archive.org/web/20180823162719/http://quazal.com/rendez-vous.htm), so some things like the [[PRUDP Protocol]] may be seen in other games that use Quazal.
 
 ### Finding the game servers
 To connect to a game server, you first need to find it. Every platform has its own way to find a game server. A list of game server ids can be found here: [[Game Server List]].
