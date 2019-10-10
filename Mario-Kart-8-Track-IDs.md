@@ -1,4 +1,4 @@
-Mario Kart 8 uses less random ids to access rankings than donkey kong. Here's a list of tracks and their associated category ids. Subtract 16 from a track id to obtain the track id for Mario Kart 8 Deluxe.
+These ids are used to access leaderboards. Subtract 16 from a track id to obtain the track id for Mario Kart 8 Deluxe.
 
 | Cup | Track | ID (decimal) |
 | --- | --- | --- |
