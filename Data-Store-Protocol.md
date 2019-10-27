@@ -1,6 +1,6 @@
 ## [[NEX Protocols]] > Data Store (0x73)
 
-The following games add additional methods to the datastore protocol:
+The following games have additional methods in the datastore protocol:
 * [Super Mario Maker](Data-Store-Protocol-(SMM))
 * [Super Mario Maker 2](Data-Store-Protocol-(SMM-2))
 * [Super Mario Odyssey](Data-Store-Protocol-(SMO))
