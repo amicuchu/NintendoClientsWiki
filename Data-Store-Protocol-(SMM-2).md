@@ -104,6 +104,18 @@ This page describes the methods that are only seen in Super Mario Maker 2.
 | 144 | GetAdditionalMiiClothesReqGetInfos |
 | 145 | DebugPreparePostObjectAdditionalMiiClothes |
 | 146 | DebugCompletePostObjectAdditionalMiiClothes |
+| 147 | SearchUsersOfficial |
+| 148 | PostPlayResultCoop |
+| 149 | PostPlayResultBattleModeFriendPersonal |
+| 150 | PostPlayResultBattleModeFriendEntire |
+| 151 | LoginCheck |
+| 152 | UpdateLastLoginInfo |
+| 153 | ? |
+| 154 | GetEventCourseStatus |
+| 155 | ReadEventCourseResult |
+| 156 | GetEventCourseHistogram |
+| 157 | GetEventCourseGhost |
+| 158 | DebugUploadEventCourseGhost |
 
 # (47) RegisterUser
 ## Request
