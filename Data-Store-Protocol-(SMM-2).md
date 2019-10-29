@@ -110,7 +110,7 @@ This page describes the methods that are only seen in Super Mario Maker 2.
 | 150 | PostPlayResultBattleModeFriendEntire |
 | 151 | LoginCheck |
 | 152 | UpdateLastLoginInfo |
-| 153 | ? |
+| 153 | GetEventCourseStamp |
 | 154 | GetEventCourseStatus |
 | 155 | ReadEventCourseResult |
 | 156 | GetEventCourseHistogram |
