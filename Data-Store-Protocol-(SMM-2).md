@@ -48,8 +48,8 @@ This page describes the methods that are only seen in Super Mario Maker 2.
 | 88 | PreparePostObjectCommentPicture |
 | 89 | CompletePostObjectCommentPicture |
 | 90 | CompletePostObjectsCommentPicture |
-| 91 | ? |
-| 92 | ? |
+| 91 | PostCommentText |
+| 92 | PostCommentStamp |
 | 93 | DeleteComment |
 | 94 | SearchCommentsInOrder |
 | 95 | [SearchComments](#95-searchcomments) |
