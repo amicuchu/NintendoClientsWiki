@@ -441,7 +441,7 @@ This method returns headers that can be used to download relation files from the
 | [String] | Username |
 | [UnknownStruct1] | Unknown |
 | [qBuffer] | Unknown |
-| Uint8 | Language code |
+| Uint8 | Region id |
 | [String] | Country code |
 | [String] | Pseudo device id |
 
