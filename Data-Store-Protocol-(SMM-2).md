@@ -438,12 +438,12 @@ This method returns headers that can be used to download relation files from the
 ## RegisterUserParam ([Structure])
 | Type | Description |
 | --- | --- |
-| [String] | Unknown |
+| [String] | Username |
 | [UnknownStruct1] | Unknown |
 | [qBuffer] | Unknown |
-| Uint8 | Unknown |
-| [String] | Unknown |
-| [String] | Unknown |
+| Uint8 | Language code |
+| [String] | Country code |
+| [String] | Pseudo device id |
 
 ## GetUsersParam ([Structure])
 | Type | Name |
