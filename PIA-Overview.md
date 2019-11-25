@@ -16,6 +16,6 @@ PIA supports three different network types.
 </table>
 
 ### Session management
-A group of connected consoles is called a mesh. Every mesh has a single "host" that controls the mesh. Depending on the game, the host may also perform some special tasks. For example, in Mario Kart 8, the host decides which track is chosen by the track roulette. Initially, the console that created the mesh is the host. Once the host leaves the mesh, a new host is selected through "host migration".
+A group of connected consoles is called a mesh. Every mesh has a single "host" that controls the mesh. The host decides who is allowed to join the mesh for example. Depending on the game, the host may also perform some special tasks. For example, in Mario Kart 8, the host decides which track is chosen by the track roulette. Initially, the console that created the mesh is the host. Once the host leaves the mesh, a new host is selected through "host migration".
 
 The packet format has been described here: [[PIA Protocol]]
