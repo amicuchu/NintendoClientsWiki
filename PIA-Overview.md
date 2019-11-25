@@ -1,11 +1,11 @@
 PIA is Nintendo's networking library that provides a framework to set up and maintain peer-to-peer connections.
 
-### Match making
+### Matchmaking
 PIA supports three different network types.
 
 <table>
   <tr>
-    <td><b>NEX</b></td><td>Match making is done by game servers (with <a href="NEX-Overview-(Game-Servers)">NEX</a>). This mode often requires NAT traversal.</td>
+    <td><b>NEX</b></td><td>Matchmaking is done by game servers (with <a href="NEX-Overview-(Game-Servers)">NEX</a>). This mode often requires NAT traversal.</td>
   </tr>
   <tr>
     <td><b>LDN</b></td><td>This is the default mode for local multiplayer. PIA uses <a href="https://switchbrew.org/wiki/LDN_services">nn::ldn</a> to find and connect to other consoles. This mode is only available on Nintendo Switch.</td>
@@ -16,6 +16,17 @@ PIA supports three different network types.
 </table>
 
 ### Session management
-A group of connected consoles is called a mesh. Every mesh has a single "host" that controls the mesh. The host decides who is allowed to join the mesh for example. Depending on the game, the host may also perform some special tasks. For example, in Mario Kart 8, the host decides which track is chosen by the track roulette. Initially, the console that created the mesh is the host. Once the host leaves the mesh, a new host is selected through "host migration".
+A group of connected consoles is called a mesh. Every mesh has a single "host" that controls the mesh. Initially, the console that created the mesh is the host. Once the host leaves the mesh, a new host is selected through "host migration". The host performs important tasks such as processing join requests by newcomers. The host may also perform some game-specific tasks. For example, in Mario Kart 8, the host decides which track is chosen by the track roulette.
+
+### Joining a mesh
+The following steps are performed to join a mesh:
+
+* Your console finds a mesh through [matchmaking](#matchmaking).
+* Your console establishes a connection to the host of the mesh.
+* Your console sends a [join request](Mesh-Protocol#join-request) to the host.
+* The host decides if it wants to accept or reject the join request. If the mesh already has the maximum number of participants it may reject the join request for example.
+* The host sends a [join response](Mesh-Protocol#join-response) to your console to inform it about its decision. If the join request was accepted, the join response also contains the addresses of the other consoles in the mesh.
+* If the join request was accepted, your console establishes a connection to the other consoles in the mesh.
+* Finally, your console starts sending/receiving data packets to/from other consoles.
 
 The packet format has been described here: [[PIA Protocol]]
