@@ -1,4 +1,4 @@
-## General
+### General
 NEX is Nintendo's networking library for game servers. Nintendo hasn't written it from scratch. It's based on [Quazal Rendez-Vous](http://web.archive.org/web/20180823162719/http://quazal.com/rendez-vous.htm), so some things like the [[PRUDP Protocol]] may be seen in other games that use Quazal.
 
 ### Finding the game servers
