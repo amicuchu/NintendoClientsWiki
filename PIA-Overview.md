@@ -21,12 +21,13 @@ A group of connected consoles is called a mesh. Every mesh has a single "host" t
 ### Joining a mesh
 The following steps are performed to join a mesh:
 
-* Your console finds a mesh through [matchmaking](#matchmaking).
-* Your console establishes a connection to the host of the mesh.
-* Your console sends a [join request](Mesh-Protocol#join-request) to the host.
-* The host decides if it wants to accept or reject the join request. If the mesh already has the maximum number of participants it may reject the join request for example.
-* The host sends a [join response](Mesh-Protocol#join-response) to your console to inform it about its decision. If the join request was accepted, the join response also contains the addresses of the other consoles in the mesh.
-* If the join request was accepted, your console establishes a connection to the other consoles in the mesh.
-* Finally, your console starts sending/receiving data packets to/from other consoles.
+1. Your console finds a mesh through [matchmaking](#matchmaking).
+2. Your console [establishes a connection](#connection-establishment) to the host of the mesh.
+3. Your console sends a [join request](Mesh-Protocol#join-request) to the host.
+4. The host decides if it wants to accept the join request. If the mesh already has the maximum number of participants it may reject the join request for example.
+5. The host sends a [join response](Mesh-Protocol#join-response) to your console to inform it about its decision. If the join request was accepted, the join response also contains the addresses of the other consoles in the mesh.
+6. If the join request was accepted, your console establishes a connection to the other consoles in the mesh.
+7. Finally, your console starts sending/receiving data packets to/from the other consoles.
 
+### Connection establishment
 The packet format has been described here: [[PIA Protocol]]
