@@ -1,4 +1,4 @@
-This page describes the protocol found in Splatoon 2. Other games use the same or a similar protocol. After a connection between the consoles has been established, the [PIA protocol](PIA-Protocol) is used for further communication.
+This page describes the protocol that's used to find nearby consoles in LAN mode. In this mode, UDP broadcast packets are used to discover other consoles. LAN mode is not the default mode for local multiplayer. It can usually be enabled by pressing L + R + Left Stick in one of the menus.
 
 The crypto challenge in the [browse request](#0-browse-request) and [reply](#1-browse-reply) uses a game-specific key. In Splatoon 2 this key is generated as follows: [Splatoon 2 Key Generation](ENL-Key-Generation#splatoon-2).
 
