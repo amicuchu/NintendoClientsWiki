@@ -1,4 +1,15 @@
-ENL is a first-party networking framework on top of [PIA](PIA-Overview) and [NEX](NEX-Overview-(Game-Servers)). To generate a key ENL uses the random number generator provided by SEAD (Nintendo's private standard library).
+ENL is a first-party networking framework on top of [PIA](PIA-Overview) and [NEX](NEX-Overview-(Game-Servers)). ENL also provides functions to generate the game-specific key for the [LAN crypto challenge](LAN-Protocol).
+
+For convenience, the following table lists the final LAN key of some games:
+
+| Game | Key |
+| --- | --- |
+| Splatoon 2 | `ee182a63e216cdb1f51ad4bed8cf6508` |
+| Super Mario Maker 2 | `667c18475889faab61f93ef1da180971` |
+
+### Algorithm
+
+To generate the key, ENL uses the random number generator provided by SEAD (Nintendo's private standard library), with a game-specific seed. It also uses a table of 32-bit integers provided by the game.
 
 The random number generator works as follows:
 ```python
@@ -31,7 +42,7 @@ class Random:
         return (self.u32() * max) >> 32
 ```
 
-The game passes a `sead::Random` instance and a table of 32-bit integers to ENL. For each byte in the key ENL generates two random numbers: an index into the provided table and a 'byte index' or shift amount. ENL always generates 4 bytes at once and stores them into the key in little endian byte order. In Python, this could look as follows:
+For each byte in the key ENL generates two random numbers: an index into the provided table and a 'byte index' or shift amount. ENL always generates 4 bytes at once and stores them into the key in little endian byte order. In Python, this could look as follows:
 ```python
 # Generates 4 bytes of the key and
 # returns them as an integer
@@ -57,9 +68,9 @@ def create_key(rand, table, size):
     return key
 ```
 
-## Splatoon 2
-To generate its [LAN key](LAN-Protocol), Splatoon 2 constructs a random number generator with the seed `0xCEB9D8D9` and it uses the following integer table:
+### Splatoon 2
 ```python
+rand = Random(0xCEB9D8D9)
 table = [
     0x56CB956F, 0x7B50EEC6, 0x234D1A63, 0x1C691A6B,
     0xD2D9C482, 0xCFE21965, 0x0B32DF99, 0xB32AFE44,
@@ -80,11 +91,25 @@ table = [
 ]
 ```
 
-Given the code snippets above, the following lines would generate the key for Splatoon 2:
+### Super Mario Maker 2
 ```python
-rand = Random(0xCEB9D8D9)
-key = create_key(rand, table, 16)
-print(key.hex())
+rand = Random(0x123)
+table = [
+    0xB301CA48, 0x5E758911, 0xC2B349E2, 0xF9942930,
+    0x447AEFC0, 0xB6B5DB5F, 0xEE116832, 0xB6940169,
+    0x2503FC94, 0x3D74B448, 0x58411B2C, 0x4EC8C604,
+    0x74157415, 0xEC5B582B, 0xBC93A6F7, 0xB463AF87,
+    0x6B09D0C2, 0x5DA54788, 0x7C20F6D5, 0xD5967141,
+    0xF03C24F1, 0x87D2A479, 0xFC3F7C08, 0x9A4506B7,
+    0x8B4FA2A2, 0x99AC2EDE, 0x9E74DEDF, 0x2CB60318,
+    0xDA1AEE9E, 0x2238F1DD, 0x1A825163, 0x86B03FE8,
+    0x8BD35FBE, 0x6E80E100, 0x6681ACFA, 0x61C990BD,
+    0x70F61D95, 0x19177A6A, 0x729AE3CE, 0x5FFBD958,
+    0x9F217D87, 0x3D478023, 0x986690D6, 0x19D6AB9B,
+    0x8D8F2063, 0x8CC8EF69, 0x20843E06, 0x8CA2C3FE,
+    0x78DA6631, 0xB3A27DE4, 0xB2D71198, 0x28F0890F,
+    0x83B089CE, 0x235D8901, 0x290C0723, 0x85184BFC,
+    0x82E15C68, 0x4D3BD8B4, 0x0447FB2F, 0x434717F0,
+    0xCBCD01EC, 0x58A09E59, 0x630588E1, 0x1886EBE6
+]
 ```
-
-Which should print the following key: `ee182a63e216cdb1f51ad4bed8cf6508`
