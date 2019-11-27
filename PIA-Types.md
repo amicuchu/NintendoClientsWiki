@@ -54,7 +54,7 @@ This structure holds fields that are directly taken from a [StationURL](NEX-Comm
 #### PIA version >= 5.18.0
 | Type | Description |
 | --- | --- |
-| [InetAddress](#inetaddress) | Station address |
+| [StationAddress](#stationaddress) | Station address |
 | [PID](NEX-Common-Types#pid) | PID |
 | Uint32 | CID |
 | Uint32 | RVCID |
