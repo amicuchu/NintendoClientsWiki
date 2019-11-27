@@ -61,7 +61,17 @@ Only present in some games:
 | 0x6 | 2 | Extension id |
 
 ## InetAddress
+#### PIA version < 5.18.0
+This structure can only represent IPv4 addresses.
+
 | Offset | Size | Description |
 | --- | -- | --- |
 | 0x0 | 4 | Address |
 | 0x4 | 2 | Port |
+
+#### PIA version >= 5.18.0
+This structure can represent both IPv4 and IPv6 addresses.
+
+| Offset | Size | Description |
+| 0x0 | 16 | Address |
+| 0x10 | 2 | Port |
