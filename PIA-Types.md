@@ -73,5 +73,6 @@ This structure can only represent IPv4 addresses.
 This structure can represent both IPv4 and IPv6 addresses.
 
 | Offset | Size | Description |
+| --- | --- | --- |
 | 0x0 | 16 | Address |
 | 0x10 | 2 | Port |
