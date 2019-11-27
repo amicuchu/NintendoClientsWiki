@@ -107,7 +107,7 @@ The [browse request](#0-browse-request) contains a cryptographic challenge that 
 
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 1 | Version (1 or 2, but there are no differences) |
+| 0x0 | 1 | Version. If 1, the old [InetAddress](PIA-Types#inetaddress) format is used. If 2, the new format is used. |
 | 0x1 | 1 | Crypto enabled (0 or 1) |
 | 0x2 | 8 | Incrementing counter used for nonce |
 | 0xA | 16 | Challenge key |
