@@ -90,8 +90,7 @@ Each attribute list may contain up to 20 attributes. Every attribute is stored a
 | Bytes (0x180) | Application data |
 | Uint32 | Application data size |
 | Bool | Is opened |
-| [StationLocation](PIA-Types#stationlocation) | Host address. *Only present if PIA version < 5.18.0.* |
-| [InetAddress](PIA-Types#inetaddress) | Host address. *Only present if PIA version >= 5.18.0.* |
+| [StationLocation](PIA-Types#stationlocation) | Host address |
 | [LanStationInfo](#lanstationinfo) (x16) | Station info of every player in the room |
 | Bytes (0x20) | Session param |
 
