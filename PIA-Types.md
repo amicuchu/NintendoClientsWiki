@@ -71,7 +71,9 @@ Only present in some games:
 | 0x6 | 2 | Extension id |
 
 ## InetAddress
-#### PIA version < 5.18.0
+A new encoding was introduced in PIA 5.18.0 that's capable of representing IPv6 addresses. However, you can still see the old encoding in 5.18.0. Which encoding is used depends on the context.
+
+#### Old version
 This structure can only represent IPv4 addresses.
 
 | Offset | Size | Description |
@@ -79,7 +81,7 @@ This structure can only represent IPv4 addresses.
 | 0x0 | 4 | Address |
 | 0x4 | 2 | Port |
 
-#### PIA version >= 5.18.0
+#### New version
 This structure can represent both IPv4 and IPv6 addresses.
 
 | Offset | Size | Description |
