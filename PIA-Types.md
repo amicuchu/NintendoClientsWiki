@@ -32,7 +32,9 @@
 | [StationLocation](#stationlocation) | Local station location |
 
 ## StationLocation
-These fields are directly taken from a [StationURL](NEX-Common-Types#station-url).
+This structure holds fields that are directly taken from a [StationURL](NEX-Common-Types#station-url).
+
+#### PIA version < 5.18.0
 
 | Type | Description |
 | --- | --- |
@@ -48,6 +50,14 @@ These fields are directly taken from a [StationURL](NEX-Common-Types#station-url
 | Uint8 | type |
 | Uint8 | probeinit |
 | [InetAddress](#inetaddress) | Relay address |
+
+#### PIA version >= 5.18.0
+| Type | Description |
+| --- | --- |
+| [InetAddress](#inetaddress) | Station address |
+| [PID](NEX-Common-Types#pid) | PID |
+| Uint32 | CID |
+| Uint32 | RVCID |
 
 ## StationAddress
 | Offset | Size | Description |
