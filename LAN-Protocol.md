@@ -68,31 +68,32 @@ These flags indicate which fields have a valid value set.
 Each attribute list may contain up to 20 attributes. Every attribute is stored as a 4-byte integer.
 
 ## (1) Browse reply
-| Offset | Size | Description |
-| --- | --- | --- |
-| 0x0 | 1 | Packet type (1) |
-| 0x1 | 4 | Size of session info (0x512) |
-| 0x5 | 0x512 | [LanSessionInfo](#lansessioninfo) |
-| 0x517 | 0x3A | [Crypto challenge response](#crypto-challenge) |
+| Type | Description |
+| --- | --- |
+| Uint8 | Packet type (1) |
+| Uint32 | Size of session info |
+| [LanSessionInfo](#lansessioninfo) | Session info |
+| Bytes | [Crypto challenge reply](#crypto-challenge) |
 
 ### LanSessionInfo
-| Offset | Size | Description |
-| --- | --- | --- |
-| 0x0 | 4 | Game mode |
-| 0x4 | 4 | Session id |
-| 0x8 | 4 * 6 | Attributes |
-| 0x20 | 2 | Current number of participants |
-| 0x22 | 2 | Minimum number of participants |
-| 0x24 | 2 | Maximum number of participants |
-| 0x26 | 1 | System communication version (always 5) |
-| 0x27 | 1 | Application communication version (0x36 in Splatoon 2) |
-| 0x28 | 2 | Session type |
-| 0x2A | 0x180 | Application data |
-| 0x1AA | 4 | Application data size |
-| 0x1AE | 1 | Is opened |
-| 0x1AF | 0x23 | [StationLocation](PIA-Types#stationlocation) of host |
-| 0x1D2 | 0x32 * 16 | [LanStationInfo](#lanstationinfo) for every player in the room |
-| 0x4F2 | 0x20 | Session param |
+| Type | Description |
+| --- | --- |
+| Uint32 | Game mode |
+| Uint32 | Session id |
+| Uint32 (x6) | Attributes |
+| Uint16 | Current number of participants |
+| Uint16 | Minimum number of participants |
+| Uint16 | Maximum number of participants |
+| Uint8 | System communication version |
+| Uint8 | Application communication version |
+| Uint16 | Session type |
+| Bytes (0x180) | Application data |
+| Uint32 | Application data size |
+| Bool | Is opened |
+| [StationLocation](PIA-Types#stationlocation) | Host address. *Only present if PIA version < 5.18.0.* |
+| [InetAddress](PIA-Types#inetaddress) | Host address. *Only present if PIA version >= 5.18.0.* |
+| [LanStationInfo](#lanstationinfo) (x16) | Station info of every player in the room |
+| Bytes (0x20) | Session param |
 
 #### LanStationInfo
 | Offset | Size | Description |
