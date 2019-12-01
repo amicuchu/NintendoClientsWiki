@@ -33,7 +33,7 @@ The following headers are included in requests by the Wii U:
 | X-Nintendo-Unique-ID | Part of title id, example: 01383 |
 | X-Nintendo-Application-Version | Title version |
 
-Some requests also have an `X-Nintendo-Device-Cert` header, which is obtained from IOS-CRYPTO through IOS-MCP.
+Some requests also have an `X-Nintendo-Device-Cert` header, which is obtained from IOS-CRYPTO through IOS-MCP. This header isn't required by the official server though.
 
 ## Requests
 The base path of each request is /v1/api, a valid url would be for example https://account.nintendo.net/v1/api/admin/mapped_ids.
