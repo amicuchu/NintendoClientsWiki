@@ -40,3 +40,22 @@ Response on success:
 | expiresIn | Expiration in seconds (10800) |
 | accessToken | Authorization token for further request |
 | tokenType | Authorization token type ("Bearer") |
+
+## Errors
+On error, the server sends the following response:
+
+| Field | Description |
+| --- | --- |
+| status | HTTP status code |
+| errorCode | Error name |
+| title | Error description |
+| detail | Error description |
+| instance | Path of the request that failed |
+| type | `https://baas.nintendo.com/errors/1.0.0/<status>/<errorCode>` |
+
+### Known Errors
+| Status | Code | Title | Detail |
+| --- | --- | --- | --- |
+| 404 | resource_is_not_found | Specified resource is not found | Resource is not found |
+| 405 | method_not_allowed | Method Not Allowed | Method Not Allowed |
+| 400 | invalid_params | Invalid Params | invalid params |
