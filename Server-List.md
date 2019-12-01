@@ -16,6 +16,9 @@ Replace '%' by one of the following:
 | --- | --- |
 | lp1 | Live production |
 | dd1 | Development |
+| jd1 | ? |
+| sd1 | ? |
+| sp1 | |
 
 | Server | Description |
 | --- | --- |
