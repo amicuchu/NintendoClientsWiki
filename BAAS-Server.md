@@ -38,7 +38,7 @@ Response on success:
 | Field | Description |
 | --- | --- |
 | expiresIn | Expiration in seconds (10800) |
-| accessToken | Authorization token for further request |
+| accessToken | Authorization token for further requests |
 | tokenType | Authorization token type ("Bearer") |
 
 ## Errors
