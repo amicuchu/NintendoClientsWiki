@@ -18,7 +18,7 @@ Replace '%' by one of the following:
 | dd1 | Development |
 | jd1 | ? |
 | sd1 | ? |
-| sp1 | |
+| sp1 | ? |
 
 | Server | Description |
 | --- | --- |
@@ -31,7 +31,7 @@ Replace '%' by one of the following:
 | - receive-%.dg.srv.nintendo.net<br>- receive-%.er.srv.nintendo.net | |
 | - dauth-%.ndas.srv.nintendo.net | Device authorization |
 | - aauth-%.ndas.srv.nintendo.net | Application authorization |
-| - e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com<br>- cdn-image-e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com | Accounts (api) |
+| - e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com<br>- cdn-image-e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com | [Accounts (api)](BAAS-Server) |
 | - accounts.nintendo.com<br>- api.accounts.nintendo.com | Accounts (web) |
 | - bcat-topics-%.cdn.nintendo.net<br>- bcat-list-%.cdn.nintendo.net | News |
 | - Service-status-%.cdn.nintendo.net | Game server availability |
