@@ -13,10 +13,9 @@ Welcome to the NintendoClients wiki!
 * [[LAN Protocol]]
 
 ## Other pages
-* [[Account Server]]
-* [[Network Library Versions]]
-* [[Game Server List]]
 * [[Server List]]
+* [[Game Server List]]
+* [[Network Library Versions]]
 * [[Wii U Error Codes]]
 * [[DKC:TF Level IDs]]
 * [[Mario Kart 8 Track IDs]]
