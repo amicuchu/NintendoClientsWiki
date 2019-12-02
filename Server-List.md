@@ -25,7 +25,7 @@ Replace '%' by one of the following:
 | - ctest.cdn.nintendo.net | Connection test |
 | - ecs-%.hac.shop.nintendo.net<br>- beach.hac.%.eshop.nintendo.net<br>- bugyo.hac.%.eshop.nintendo.ent<br>- tagaya.hac.%.eshop.nintendo.net<br>- pushmo.hac.%.eshop.nintendo.net | E-Shop |
 | - api-%.frs.srv.nintendo.net | Friends |
-| - g&lt;game server id&gt;-%.s.n.srv.nintendo.net | [Game servers](Game-Server-Overview) |
+| - g&lt;game server id&gt;-%.s.n.srv.nintendo.net | [Game servers](NEX-Overview-(Game-Servers)) |
 | - app-b01.%.npns.srv.nintendo.net | |
 | - aqua.hac.%.d4c.nintendo.net<br>- sun.hac.%.d4c.nintendo.net<br>- superfly.hac.%.d4c.nintendo.net<br>- atum.hac.%.d4c.nintendo.net |
 | - receive-%.dg.srv.nintendo.net<br>- receive-%.er.srv.nintendo.net | |
