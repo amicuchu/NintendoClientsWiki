@@ -32,7 +32,7 @@ This request provides an authorization token that's required for all other reque
 | Param | Description |
 | --- | --- |
 | grantType | "public_client" |
-| assertion | device token obtained from dauth server |
+| assertion | Device token obtained from [dauth server](DAuth-Server) |
 
 Response on success:
 
