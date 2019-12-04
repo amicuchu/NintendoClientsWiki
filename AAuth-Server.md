@@ -11,6 +11,7 @@ This server takes form-encoded requests and responds with json-encoding. Also, t
 | Header | Description |
 | --- | --- |
 | User-Agent | `libcurl (nnAccount; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 9.3.0.0; Add-on 9.3.0.0)` |
+| X-Nintendo-PowerState | `FA` (fully awake) or `HA` (half awake). This header is only sent in the <code><a href="#post-v3application_auth_token">/v3/application_auth_token</a></code> request. |
 
 ## Methods
 | Method | URL |
@@ -24,6 +25,13 @@ This request is only required if the media type is `GAMECARD`.
 | Param | Description |
 | --- | --- |
 | device_auth_token | Device token from [dauth server](DAuth-Server) |
+
+Response on success:
+
+| Field | Description |
+| --- | --- |
+| value | Base64-encoded (16 bytes) |
+| seed | ? |
 
 ### POST /v3/application_auth_token
 The following parameters are always present:
