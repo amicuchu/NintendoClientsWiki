@@ -8,7 +8,8 @@ This server takes form-encoded requests and responds with json-encoding.
 ## Headers
 | Header | Description |
 | --- | --- |
-| X-Nintendo-PowerState | 'FA' (fully awake) or 'HA' (half awake) |
+| User-Agent | `libcurl (nnAccount; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 9.3.0.0; Add-on 9.3.0.0)`
+| X-Nintendo-PowerState | `FA` (fully awake) or `HA` (half awake) |
 
 ## Methods
 | Method | URL |
