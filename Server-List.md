@@ -29,8 +29,8 @@ Replace '%' by one of the following:
 | - app-b01.%.npns.srv.nintendo.net | |
 | - aqua.hac.%.d4c.nintendo.net<br>- sun.hac.%.d4c.nintendo.net<br>- superfly.hac.%.d4c.nintendo.net<br>- atum.hac.%.d4c.nintendo.net |
 | - receive-%.dg.srv.nintendo.net<br>- receive-%.er.srv.nintendo.net | |
-| - dauth-%.ndas.srv.nintendo.net | Device authorization |
-| - aauth-%.ndas.srv.nintendo.net | Application authorization |
+| - dauth-%.ndas.srv.nintendo.net | [Device authorization](DAuth-Server) |
+| - aauth-%.ndas.srv.nintendo.net | [Application authorization](AAuth-Server) |
 | - e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com<br>- cdn-image-e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com | [Accounts (api)](BAAS-Server) |
 | - accounts.nintendo.com<br>- api.accounts.nintendo.com | Accounts (web) |
 | - bcat-topics-%.cdn.nintendo.net<br>- bcat-list-%.cdn.nintendo.net | News |
