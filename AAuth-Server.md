@@ -31,7 +31,7 @@ Response on success:
 | Field | Description |
 | --- | --- |
 | value | Base64-encoded (16 bytes) |
-| seed | ? |
+| seed | Base64-encoded (15 bytes) |
 
 ### POST /v3/application_auth_token
 The following parameters are always present:
