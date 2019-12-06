@@ -52,10 +52,30 @@ The following parameters depend on the media type of the game:
 | cert | Base64-encoded gamecard certificate (stored on game card itself) |
 
 #### DIGITAL
+The certificate is read from ES save data (`escommon` or `espersonalized`). The index of the ticket is looked up in `ticket_list.bin` by rights id. The certificate itself is then read from `ticket.bin`.
+
+The ticket is not sent to the server in plain text. Instead, it is encrypted with AES-CBC with a random key. The key itself is then encrypted with RSA.
+
 | Param | Description |
 | --- | --- |
-| cert | ? |
-| cert_key | ? |
+| cert | Encrypted certificate (base64) |
+| cert_key | Encrypted key (base64) |
+
+Public exponent: `65537`
+
+Public modulus:
+```
+2903599220185509629948246004681271806662185201109683699434876284
+9306378942456577312580648895443616535088601867223713942187399041
+4854872772034425863387471719375473684104853507768450203982749294
+8967945831738920699512732919046223059402955082098739033920491649
+6879108565068863591362496844602988110766097564477545097467537357
+3183749964356608012071405755940871989007021731074728723470759285
+8155278592486462922448753256166071381157786436864032235809243318
+2591089355065715995209202752330511548478896205428626608544326862
+4782505679727111312756904637828438785474471375120478991907979820
+98870089661523253199182993983393803812441
+```
 
 ## Errors
 On error, the server sends the following response:
