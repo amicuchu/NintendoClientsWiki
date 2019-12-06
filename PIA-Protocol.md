@@ -1,20 +1,26 @@
-These packets are sent directly from one console to another, with no server in between.
-
-## Packet format
-| Offset | Size | Description |
-| --- | --- | --- |
-| 0x0 | 12 | [Header](#header) |
-| 0xC | | [Content](#content) |
+These packets are sent directly from one console to another, with no server in between. All packets start with an unencrypted [header](#header) that's followed by a [body](#content) that may be encrypted.
 
 ## Header
+*Old version (before 5.11.0):*
+
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 4 | Magic number: 32 AB 98 64 |
+| 0x0 | 4 | Magic number: `32 AB 98 64` |
 | 0x4 | 1 | Encrypted (1=No 2=Yes) |
 | 0x5 | 1 | [Connection id](#connection-id) |
 | 0x6 | 2 | [Packet id](#packet-id) |
 | 0x8 | 2 | [Session timer](#rtt-calculation) |
 | 0xA | 2 | [RTT timer](#rtt-calculation) |
+
+*New version (starting with 5.11.0):*
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 4 | Magic number: `32 AB 98 64` |
+| 0x4 | 1 | This byte consists of two parts:<br>`0x80`: Encryption enabled<br>`0x7F`: Version number |
+| 0x5 | 1 | [Connection id](#connection-id) |
+| 0x6 | 2 | [Packet id](#packet-id) |
+| 0x8 | 8 | Crypto-related (nonce maybe) |
 
 ### Connection ID
 During connection establishment, the console that wants to connect to another console must set this field to 1, and the console that answers the connection request must set this field to 0. After a connection has been established both consoles generate a random number between 2 and 255. This will be the connection id in any further packets.
