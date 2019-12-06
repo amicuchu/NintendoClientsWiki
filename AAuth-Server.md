@@ -54,7 +54,7 @@ The following parameters depend on the media type of the game:
 #### DIGITAL
 The certificate is read from ES save data (`escommon` or `espersonalized`). First the index of the ticket is looked up in `ticket_list.bin` by rights id. Then the certificate itself is read from `ticket.bin`.
 
-The ticket is not sent to the server in plain text. Instead, it is encrypted with AES-CBC with a random key. The key itself is then encrypted with RSA.
+The ticket is not sent to the server in plain text. Instead, it is encrypted with AES-CBC with a random key. The key itself is then encrypted with RSA-OAEP with SHA256.
 
 | Param | Description |
 | --- | --- |
