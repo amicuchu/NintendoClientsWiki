@@ -49,6 +49,6 @@ Game server accounts are separate from other Nintendo accounts. Username and pas
     <td><b>Wii U</b></td><td>Login information is requested from the [[account server]] (/provider/nex_token/@me)</td>
   </tr>
   <tr>
-    <td><b>Switch</b></td><td>Login information is requested from the BAAS server. To access the BAAS server one must first go through DAuth (device authorization) and AAuth (application authorization). SciresM has explained this in more detail <a href="https://www.reddit.com/r/SwitchHacks/comments/8rxg26">here</a>.</td>
+    <td><b>Switch</b></td><td>Login information is requested from the [BAAS server](BAAS-Server). To access the BAAS server one must first go through [DAuth](DAuth-Server) (device authorization) and [AAuth](AAuth-Server) (application authorization).</td>
   </tr>
 </table>
