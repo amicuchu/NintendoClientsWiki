@@ -45,3 +45,4 @@ Replace '%' by one of the following:
 | - storage.%.scsi.srv.nintendo.net | |
 | - broker.%.npns.srv.nintendo.net | |
 | - capi.%.op2.nintendo.net | |
+| - app.%.five.nintendo.net | |
