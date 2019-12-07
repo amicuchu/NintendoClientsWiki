@@ -33,7 +33,7 @@ Replace '%' by one of the following:
 | - aqua.hac.%.d4c.nintendo.net<br>- sun.hac.%.d4c.nintendo.net<br>- superfly.hac.%.d4c.nintendo.net<br>- atum.hac.%.d4c.nintendo.net |
 | - receive-%.dg.srv.nintendo.net<br>- receive-%.er.srv.nintendo.net | |
 | - accounts.nintendo.com<br>- api.accounts.nintendo.com | Accounts (web) |
-| - bcat-topics-%.cdn.nintendo.net<br>- bcat-list-%.cdn.nintendo.net | News |
+| - bcat-topics-%.cdn.nintendo.net<br>- bcat-list-%.cdn.nintendo.net<br>- bcat-data-%.cdn.nintendo.net | News |
 | - Service-status-%.cdn.nintendo.net | Game server availability |
 | - api-%.pctl.srv.nintendo.net | Parental control |
 | - e03a97819c9711e59510d820a52f298a-sb.accounts.nintendo.com | |
