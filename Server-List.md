@@ -23,15 +23,15 @@ Replace '%' by one of the following:
 | Server | Description |
 | --- | --- |
 | - ctest.cdn.nintendo.net | Connection test |
-| - ecs-%.hac.shop.nintendo.net<br>- beach.hac.%.eshop.nintendo.net<br>- bugyo.hac.%.eshop.nintendo.ent<br>- tagaya.hac.%.eshop.nintendo.net<br>- pushmo.hac.%.eshop.nintendo.net | E-Shop |
-| - api-%.frs.srv.nintendo.net | Friends |
-| - g&lt;game server id&gt;-%.s.n.srv.nintendo.net | [Game servers](NEX-Overview-(Game-Servers)) |
-| - app-b01.%.npns.srv.nintendo.net | |
-| - aqua.hac.%.d4c.nintendo.net<br>- sun.hac.%.d4c.nintendo.net<br>- superfly.hac.%.d4c.nintendo.net<br>- atum.hac.%.d4c.nintendo.net |
-| - receive-%.dg.srv.nintendo.net<br>- receive-%.er.srv.nintendo.net | |
 | - dauth-%.ndas.srv.nintendo.net | [Device authorization](DAuth-Server) |
 | - aauth-%.ndas.srv.nintendo.net | [Application authorization](AAuth-Server) |
 | - e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com<br>- cdn-image-e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com | [Accounts (api)](BAAS-Server) |
+| - g&lt;game server id&gt;-%.s.n.srv.nintendo.net | [Game servers](NEX-Overview-(Game-Servers)) |
+| - ecs-%.hac.shop.nintendo.net<br>- beach.hac.%.eshop.nintendo.net<br>- bugyo.hac.%.eshop.nintendo.ent<br>- tagaya.hac.%.eshop.nintendo.net<br>- pushmo.hac.%.eshop.nintendo.net | E-Shop |
+| - api-%.frs.srv.nintendo.net | Friends |
+| - app-b01.%.npns.srv.nintendo.net | |
+| - aqua.hac.%.d4c.nintendo.net<br>- sun.hac.%.d4c.nintendo.net<br>- superfly.hac.%.d4c.nintendo.net<br>- atum.hac.%.d4c.nintendo.net |
+| - receive-%.dg.srv.nintendo.net<br>- receive-%.er.srv.nintendo.net | |
 | - accounts.nintendo.com<br>- api.accounts.nintendo.com | Accounts (web) |
 | - bcat-topics-%.cdn.nintendo.net<br>- bcat-list-%.cdn.nintendo.net | News |
 | - Service-status-%.cdn.nintendo.net | Game server availability |
@@ -44,3 +44,4 @@ Replace '%' by one of the following:
 | - dragons.hac.%.dragons.nintendo.net | |
 | - storage.%.scsi.srv.nintendo.net | |
 | - broker.%.npns.srv.nintendo.net | |
+| - capi.%.op2.nintendo.net | |
