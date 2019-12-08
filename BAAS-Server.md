@@ -15,7 +15,7 @@ This server takes form-encoded requests and responds with json-encoding.
 | Method | URL |
 | --- | --- |
 | POST | <code><a href="#post-100applicationtoken">/1.0.0/application/token</a></code> |
-| POST | `/1.0.0/login` |
+| POST | <code><a href="#post-100login">/1.0.0/login</a></code> |
 | POST | `/1.0.0/federation` |
 | POST | `/1.0.0/users` |
 | GET | `/1.0.0/users/<id>` |
@@ -41,6 +41,14 @@ Response on success:
 | expiresIn | Expiration in seconds (10800) |
 | accessToken | Authorization token for further requests |
 | tokenType | Authorization token type ("Bearer") |
+
+### POST /1.0.0/login
+| Param | Description |
+| --- | --- |
+| id | User id |
+| password | Password |
+| appAuthNToken | [AAuth token](AAuth-Server) (optional) |
+| skipOp2Verification | Unknown (optional) |
 
 ## Errors
 On error, the server sends the following response:
