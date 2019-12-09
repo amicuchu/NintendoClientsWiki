@@ -23,8 +23,8 @@ The secure server keeps a list of client urls that can be registered (added) and
 | Type | Name | Description |
 | --- | --- | --- |
 | [Result] | %retval% | Result code |
-| Uint32 | pidConnectionID | Connection id |
-| [StationURL] | urlPublic |Public client url, as perceived by the server |
+| Uint32 | pidConnectionID | Rendez-Vous connection id |
+| [StationURL] | urlPublic | Public client url, as perceived by the server |
 
 The client should place the connection id into the RVCID field of its client station urls.
 
