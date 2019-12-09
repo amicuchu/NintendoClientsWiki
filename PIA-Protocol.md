@@ -71,10 +71,10 @@ A station mask is calculated as follows: `1 << station_index`. The destination m
 This is a unique id per station. In NEX mode, it is the [Rendez-Vous connection id](Secure-Protocol#1-register). In LDN and LAN mode, it is generated based on the local address of the station.
 
 ## Encryption
-Packets encrypted (if encryption is enabled) and signed with the session key. In NEX mode, the session key is obtained from the server during [matchmaking](Match-Making-Types#matchmakesession-structure).
+Packets are encrypted and signed with the session key. In NEX mode, the session key is obtained from the server during [matchmaking](Match-Making-Types#matchmakesession-structure).
 
 ### Wii U
-A HMAC checksum of the whole packet (including the [header](#header)) is added to the [payload](#payload) before it's encrypted. If encryption is enabled, the payload (including the checksum) is encrypted with AES-ECB.
+If encryption is enabled, the [payload](#payload) is encrypted with AES-ECB. The packet signature is the HMAC of the whole packet (including the [header](#header)). The packet signature is always present, even if encryption is disabled.
 
 ### Switch
-Encryption is always enabled. The [payload](#payload) is encrypted with AES-GCM. The packet signature is the AES-GCM authentication tag.
+If encryption is enabled, The [payload](#payload) is encrypted with AES-GCM. The packet signature is the AES-GCM authentication tag.
