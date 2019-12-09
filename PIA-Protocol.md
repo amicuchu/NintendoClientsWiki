@@ -1,4 +1,6 @@
-These packets are sent directly from one console to another, with no server in between. All packets start with an unencrypted [header](#header) that's followed by a [body](#content) that may be encrypted.
+These packets are sent directly from one console to another, with no server in between.
+
+All packets consist of an unencrypted [header](#header), which is followed by one or more [payloads](#payload), and a [packet signature](#encryption).
 
 ## Header
 *Old version (before 5.11.0):*
@@ -29,14 +31,14 @@ During connection establishment, the console that wants to connect to another co
 This should be 0 during connection establishment. After a connection has been established this should be an incrementing number starting at 1.
 
 ### RTT Calculation
-The session timer is the number of milliseconds since the start of the session. Every client has its own session timer (they are independent of each other). Aside from its own session timer, every client also keeps track of the session timers of all other clients. This is quite difficult to explain. Basically, when A sends a packet to B the RTT timer is what A belives the session timer of B to be. Hopefully, an example will make this clear:
+The session timer contains the number of milliseconds since the start of the session. Every client has its own session timer (they are independent from each other). Aside from its own session timer, every client also keeps track of the session timers of all other clients. When A sends a packet to B the RTT timer is what A belives the session timer of B to be. Hopefully, an example will make this clear:
 
 Let's say the session timer of A is at 234 when A sends a packet to B. It takes 2 milliseconds until the packet arrives at B. B receives 234 from A even though the session timer of A is now at 236. 10 milliseconds later, B sends a packet to A with 244 (234 + 10) in the RTT timer field. Again, it takes 2 milliseconds until the packet arrives at A. At this point, the session timer of A is at 248, but it receives 244 in the RTT timer field, so it knows that it takes 4 milliseconds for a packet to travel back and forth between A and B.
 
 ![](https://www.dropbox.com/s/4fbobmcugbbokr3/rtt.png?raw=1)
 
-## Content
-If encryption is enabled, this data is encrypted with AES.
+## Payload
+This part of the packet may be [encrypted](#encryption). A packet may contain more than one payload (the number of payloads is determined from the size of packet). All payloads are padded with 0's such that their size is a multiple of 4 bytes.
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -48,9 +50,8 @@ If encryption is enabled, this data is encrypted with AES.
 | 0xC | 2 | [Protocol id](PIA-Protocols) |
 | 0xE | 2 | Protocol port (protocol-specific) |
 | 0x10 | 4 | Reserved (always 0) |
-| 0x14 | | Payload |
-| | | Padding to align checksum to 4 bytes |
-| | 16 | [HMAC checksum](#signature) |
+| 0x14 | | Payload (protocol-specific) |
+| | | Padding |
 
 ### Flags
 | Value | Description |
@@ -67,7 +68,13 @@ Every console in a mesh gets its own station index. Consoles that haven't joined
 A station mask is calculated as follows: `1 << station_index`. The destination mask is the station mask of every destination console ORed together.
 
 ### Station key
-The station key of a console is its Rendez-Vous connection id. This is the connection id returned by [SecureProtocol.Register](Secure-Protocol#1-register) or [SecureProtocol.RegisterEx](Secure-Protocol#4-registerex).
+This is a unique id per station. In NEX mode, it is the [Rendez-Vous connection id](Secure-Protocol#1-register). In LDN and LAN mode, it is generated based on the local address of the station.
 
-### Signature
-A HMAC checksum of the whole packet (including the header) is added to the packet before it's encrypted. The key is the session key obtained from the [match making service](Matchmake-Extension-Protocol).
+## Encryption
+Packets encrypted (if encryption is enabled) and signed with the session key. In NEX mode, the session key is obtained from the server during [matchmaking](Match-Making-Types#matchmakesession-structure).
+
+### Wii U
+A HMAC checksum of the whole packet (including the [header](#header)) is added to the [payload](#payload) before it's encrypted. If encryption is enabled, the payload (including the checksum) is encrypted with AES-ECB.
+
+### Switch
+Encryption is always enabled. The [payload](#payload) is encrypted with AES-GCM. The packet signature is the AES-GCM authentication tag.
