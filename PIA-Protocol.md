@@ -91,7 +91,7 @@ Packets are encrypted and signed with the session key.
 | --- | --- |
 | NEX | Obatined from server during [matchmaking](Match-Making-Types#matchmakesession-structure) |
 | LDN | ? |
-| LAN | First 16 bytes of HMAC-SHA256 of [session param](LAN-Protocol#lansessioninfo) |
+| LAN | First 16 bytes of the HMAC-SHA256 of the [session param](LAN-Protocol#lansessioninfo), with the same game-specific key that's used for the [crypto challenge](LAN-Protocol#crypto-challenge). |
 
 ### Wii U
 If encryption is enabled, the [payload](#payload) is encrypted with AES-ECB. The packet signature is the HMAC of the whole packet (including the [header](#header)). The packet signature is always present, even if encryption is disabled.
