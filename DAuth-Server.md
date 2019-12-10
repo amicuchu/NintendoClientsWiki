@@ -62,3 +62,17 @@ The dauth key source is: `8be45abcf987021523ca4f5e2300dbf0`
 | Client ID | Description |
 | --- | --- |
 | `8f849b5d34778d8e` | Account services |
+
+## Errors
+On error, the server sends the following response:
+
+| Field | Description |
+| --- | --- |
+| errors | List of errors |
+
+Every error is encoded like this:
+
+| Field | Description |
+| --- | --- |
+| code | Error code (string with 4 digits) |
+| message | Error message |
