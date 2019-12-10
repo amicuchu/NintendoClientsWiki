@@ -38,8 +38,8 @@ The following parameters are always present:
 
 | Param | Description |
 | --- | --- |
-| application_id | Title id |
-| application_version | Title version |
+| application_id | Title id (`%016x`) |
+| application_version | Title version (`%08x`) |
 | device_auth_token | Device token from [dauth server](DAuth-Server) |
 | media_type | `GAMECARD`, `DIGITAL`, `SYSTEM` or `NO_CERT` |
 
