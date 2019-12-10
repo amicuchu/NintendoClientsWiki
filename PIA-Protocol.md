@@ -110,4 +110,4 @@ The nonce is generated as follows:
 | --- | --- |
 | NEX | <code>(gathering_id & 0xFFFFFF) &vert; (connection_id << 24)</code> |
 | LDN | ? |
-| LAN | ? |
+| LAN | IP address of source |
