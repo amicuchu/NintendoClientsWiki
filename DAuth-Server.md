@@ -23,7 +23,7 @@ The dauth server takes form-encoded requests and responds with json-encoding. Al
 ### POST /v6/challenge
 | Param | Description |
 | --- | --- |
-| key_generation | Master key revision (10) |
+| key_generation | Master key revision (11) |
 
 Response:
 
@@ -38,7 +38,7 @@ Response:
 | challenge | Base64-encoded challenge |
 | client_id | Application-specific client id |
 | ist | `true` or `false` (depends on [platform region](https://switchbrew.org/wiki/Settings_services#GetT)) |
-| key_generation | Master key revision (10) |
+| key_generation | Master key revision (11) |
 | system_version | [System version digest](https://switchbrew.org/wiki/System_Version_Title) |
 | mac | Base64-encoded AES-CMAC of all previous fields in form-encoding |
 
