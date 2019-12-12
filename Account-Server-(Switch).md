@@ -25,7 +25,7 @@ On error, the server sends the following response:
 | --- | --- |
 | error | Error name |
 | error_description | Error description |
-| error_detail | Optional, only sometimes present |
+| error_detail | Error details (optional) |
 
 ### Known Errors
 | Name | Detail | Description |
