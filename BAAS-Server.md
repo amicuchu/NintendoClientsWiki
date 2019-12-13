@@ -68,3 +68,28 @@ On error, the server sends the following response:
 | 404 | resource_is_not_found | Specified resource is not found | Resource is not found |
 | 405 | method_not_allowed | Method Not Allowed | Method Not Allowed |
 | 400 | invalid_params | Invalid Params | invalid params |
+| 400 | invalid_request | ? | ? |
+| 400 | invalid_device_account | ? | ? |
+| 400 | invalid_ndas_app_authn_token | ? | ? |
+| 400 | invalid_idp | ? | ? |
+| 400 | invalid_idp_account | ? | ? |
+| 400 | linked_user_not_found | ? | ? |
+| 400 | invalid_friend_code_format | ? | ? |
+| 400 | user_link_not_exist | ? | ? |
+| 400 | invalid_raw_content | ? | ? |
+| 401 | invalid_token | ? | ? |
+| 403 | insufficient_scope | ? | ? |
+| 403 | forbidden | ? | ? |
+| 403 | membership_required | ? | ? |
+| 403 | unavailable_device_account | ? | ? |
+| 403 | banned_user | ? | ? |
+| 403 | banned_user_by_application | ? | ? |
+| 404 | deleted_user | ? | ? |
+| 406 | not_acceptable_language | ? | ? |
+| 409 | resource_already_exists | ? | ? |
+| 409 | user_link_already_exists | ? | ? |
+| 412 | precondition_failed | ? | ? |
+| 422 | friend_code_unregenerable_state | ? | ? |
+| 500 | internal_server_error | ? | ? |
+| 502 | could_not_confirm_membership | ? | ? |
+| 503 | under_maintenance | ? | ? |
