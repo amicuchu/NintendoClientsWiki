@@ -99,15 +99,27 @@ If encryption is enabled, the [payload](#payload) is encrypted with AES-ECB. The
 ### Switch
 If encryption is enabled, The [payload](#payload) is encrypted with AES-GCM. The authentication tag is stored in the [header](#header). No other signature is appended to the packet.
 
-The nonce is generated as follows:
+The nonce depends on the network type and is generated as follows:
+
+**NEX:**
 
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 4 | Prefix (depends on network type, see below) |
-| 0x4 | 8 | Nonce value from the [header](#header) |
+| 0x0 | 1 | [Connection id](#header) |
+| 0x1 | 3 | `gathering_id & 0xFFFFFF` |
+| 0x4 | 8 | Nonce from [header](#header) |
 
-| Mode | Nonce prefix |
-| --- | --- |
-| NEX | <code>(gathering_id & 0xFFFFFF) &vert; (connection_id << 24)</code> |
-| LDN | ? |
-| LAN | IP address of source |
+**LDN:**
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 3 | Some kind of crc32? |
+| 0x3 | 1 | [Connection id](#header) |
+| 0x4 | 8 | Nonce from [header](#header) |
+
+**LAN:**
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 4 | IP address of source (little-endian?) |
+| 0x4 | 1 | [Connection id](#header) |
+| 0x5 | 7 | Last 7 bytes of nonce from [header](#header) |
