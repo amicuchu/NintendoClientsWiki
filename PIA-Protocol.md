@@ -110,6 +110,7 @@ The nonce depends on the network type and is generated as follows:
 | 0x4 | 8 | Nonce from [header](#header) |
 
 **LDN:**
+
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 3 | Some kind of crc32? |
