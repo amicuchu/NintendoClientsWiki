@@ -75,3 +75,4 @@ Unfortunately, there are many different versions of the nex library with small c
 | Tetris 99 | 4.6.4-app99 (MM/UT) | - | No |
 | Pokemon Sword/Shield | 4.6.8-appor (DS/MM/UT) | 5.18.0 | No |
 | Super Mario Maker 2 | 4.6.15-appslop (DS/MM/UT) | 5.18.0 | No |
+| Super Mario Maker 2 | 4.6.18-appslop (DS/MM/UT/CO) | 5.18.0 | No |
