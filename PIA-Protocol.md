@@ -58,7 +58,7 @@ This part of the packet may be [encrypted](#encryption). A packet may contain mo
 
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 1 | [Flags](#flags) |
+| 0x0 | 1 | [Packet flags](#packet-flags) |
 | 0x1 | 1 | [Source station index](#station-index) |
 | 0x2 | 2 | Payload size |
 | 0x4 | 4 | [Destination mask](#destination-mask) |
@@ -121,7 +121,7 @@ This part of the packet may be [encrypted](#encryption). A packet may contain mo
 | Bytes | Payload (protocol-specific) |
 | | Padding |
 
-### Flags
+### Packet flags
 | Value | Description |
 | --- | --- |
 | 1 | Unknown. This packet is sent to one console. The destination field contains only the station mask of the receiving console. |
