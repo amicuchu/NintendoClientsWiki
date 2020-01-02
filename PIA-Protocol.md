@@ -14,7 +14,7 @@ All packets consist of an unencrypted [header](#header), which is followed by on
 | 0x8 | 2 | [Session timer](#rtt-calculation) |
 | 0xA | 2 | [RTT timer](#rtt-calculation) |
 
-*Switch (before 5.11.0):*
+*Switch (up to 5.10):*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -27,7 +27,7 @@ All packets consist of an unencrypted [header](#header), which is followed by on
 | 0xC | 8 | [AES-GCM nonce](#encryption) |
 | 0x14 | 16 | [AES-GCM authentication tag](#encryption) |
 
-*Switch (starting with 5.11.0):*
+*Switch (5.11 and later):*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -54,6 +54,8 @@ Let's say the session timer of A is at 234 when A sends a packet to B. It takes 
 ## Payload
 This part of the packet may be [encrypted](#encryption). A packet may contain more than one payload (the number of payloads is determined from the size of packet). All payloads are padded with 0's such that their size is a multiple of 4 bytes.
 
+*Wii U:*
+
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 1 | [Flags](#flags) |
@@ -66,6 +68,58 @@ This part of the packet may be [encrypted](#encryption). A packet may contain mo
 | 0x10 | 4 | Reserved (always 0) |
 | 0x14 | | Payload (protocol-specific) |
 | | | Padding |
+
+*Switch (up to 5.10):*
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 1 | Unknown |
+| 0x1 | 2 | Unknown |
+| 0x3 | 8 | Unknown |
+| 0xB | 8 | Unknown |
+| 0x13 | 2 | Unknown |
+| 0x15 | 3 | Unknown |
+| 0x18 | | Payload (protocol-specific) |
+| | | Padding |
+
+*Switch (5.11):*
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 1 | Unknown |
+| 0x1 | 1 | Unknown |
+| 0x2 | 2 | Unknown |
+| 0x4 | 2 | Unknown |
+| 0x6 | 8 | Unknown |
+| 0xE | 8 | Unknown |
+| 0x16 | | Payload (protocol-specific) |
+| | | Padding |
+
+*Switch (5.14):*
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 1 | Unknown |
+| 0x1 | 1 | Unknown |
+| 0x2 | 2 | Unknown |
+| 0x4 | 4 | Unknown |
+| 0x8 | 8 | Unknown |
+| 0x10 | 8 | Unknown |
+| 0x18 | | Payload (protocol-specific) |
+| | | Padding |
+
+*Switch (5.18):*
+
+| Type | Description |
+| --- | --- |
+| Uint8 | Flags indicating which of the following fields are present. |
+| Uint8 | Unknown. *Only present if `flags & 1`.* |
+| Uint16 | Unknown. *Only present if `flags & 2`.* |
+| Uint32 | Unknown. *Only present if `flags & 4`.* |
+| Uint64 | Unknown. *Only present if `flags & 8`.* |
+| Uint64 | Unknown. *Only present if `flags & 16`.* |
+| Bytes | Payload (protocol-specific) |
+| | Padding |
 
 ### Flags
 | Value | Description |
