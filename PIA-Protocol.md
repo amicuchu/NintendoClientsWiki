@@ -121,6 +121,6 @@ The nonce depends on the network type and is generated as follows:
 
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 4 | IP address of source (little-endian?) |
+| 0x0 | 4 | IP address of source |
 | 0x4 | 1 | [Connection id](#header) |
 | 0x5 | 7 | Last 7 bytes of nonce from [header](#header) |
