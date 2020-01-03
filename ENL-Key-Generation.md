@@ -1,11 +1,6 @@
 ENL is a first-party networking framework on top of [PIA](PIA-Overview) and [NEX](NEX-Overview-(Game-Servers)). ENL also provides functions to generate the game-specific key for the [LAN crypto challenge](LAN-Protocol).
 
-For convenience, the following table lists the final LAN key of some games:
-
-| Game | Key |
-| --- | --- |
-| Splatoon 2 | `ee182a63e216cdb1f51ad4bed8cf6508` |
-| Super Mario Maker 2 | `667c18475889faab61f93ef1da180971` |
+The page describes how the keys are generated. If you are only looking for the keys themselves, check out the page about the [LAN protocol](#game-specific-keys).
 
 ### Algorithm
 
