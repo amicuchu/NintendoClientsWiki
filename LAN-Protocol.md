@@ -1,6 +1,6 @@
 This page describes the protocol that's used to find nearby consoles in LAN mode. In this mode, UDP broadcast packets are used to discover other consoles. LAN mode is not the default mode for local multiplayer. It can usually be enabled by pressing L + R + Left Stick in one of the menus.
 
-The crypto challenge in the [browse request](#0-browse-request) and [reply](#1-browse-reply) uses a game-specific key. Most first-party games use [ENL](ENL-Key-Generation) to derive the key.
+The crypto challenge in the [browse request](#0-browse-request) and [reply](#1-browse-reply) uses a [game-specific key](#game-specific-key).
 
 Every packet starts with a single byte that indicates its type.
 
@@ -133,3 +133,12 @@ The response contains the first 16 bytes of the HMAC-SHA256 of the decrypted cha
 | --- | --- | --- |
 | 0x0 | 16 | Challenge key in browse response |
 | 0x10 | 16 | Challenge key received in browse request |
+
+## Game-Specific Keys
+Most first-party games use [ENL](ENL-Key-Generation) to derive the key.
+
+| Game | Key |
+| --- | --- |
+| Pokemon Sword/Shield | `p1frXqxmeCZWFv0X` |
+| Splatoon 2 | `ee182a63e216cdb1f51ad4bed8cf6508` |
+| Super Mario Maker 2 | `667c18475889faab61f93ef1da180971` |
