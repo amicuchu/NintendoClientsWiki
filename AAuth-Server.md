@@ -77,6 +77,16 @@ Public modulus:
 98870089661523253199182993983393803812441
 ```
 
+#### Response on success:
+
+| Field | Description |
+| --- | --- |
+| expires_in | Expiration in seconds (86400) |
+| application_auth_token | Application authorization token |
+| settings | Unknown (list) |
+| online_play_policy | `MEMBER_SHIP_REQUIRED` or `FREE` |
+| policy_handler | `SYSTEM` or `GAME_SERVER` |
+
 ## Errors
 On error, the server sends the following response:
 
