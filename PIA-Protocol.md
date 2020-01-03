@@ -52,7 +52,9 @@ Let's say the session timer of A is at 234 when A sends a packet to B. It takes 
 ![](https://www.dropbox.com/s/4fbobmcugbbokr3/rtt.png?raw=1)
 
 ## Payload
-This part of the packet may be [encrypted](#encryption). A packet may contain more than one payload (the number of payloads is determined from the size of packet). All payloads are padded with 0's such that their size is a multiple of 4 bytes.
+This part of the packet may be [encrypted](#encryption). A packet may contain more than one payload (the number of payloads is determined from the size of packet).
+
+On the Wii U, all payloads are padded with 0's such that their size is a multiple of 4 bytes. On the Switch, all payloads are padded with 0xFF such that their size is a multiple of 16 bytes.
 
 *Wii U:*
 
@@ -73,12 +75,13 @@ This part of the packet may be [encrypted](#encryption). A packet may contain mo
 
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 1 | Unknown |
-| 0x1 | 2 | Unknown |
-| 0x3 | 8 | Unknown |
-| 0xB | 8 | Unknown |
-| 0x13 | 2 | Unknown |
-| 0x15 | 3 | Unknown |
+| 0x0 | 1 | [Packet flags](#packet-flags) |
+| 0x1 | 2 | Payload size |
+| 0x3 | 8 | [Destination mask](#destination-mask) |
+| 0xB | 8 | [Source station key](#station-key) |
+| 0x13 | 1 | [Protocol id](PIA-Protocols) |
+| 0x14 | 1 | Protocol port (protocol-specific) |
+| 0x15 | 3 | Padding (always 0) |
 | 0x18 | | Payload (protocol-specific) |
 | | | Padding |
 
