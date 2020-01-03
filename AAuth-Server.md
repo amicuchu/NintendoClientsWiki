@@ -84,7 +84,7 @@ Public modulus:
 | expires_in | Expiration in seconds (86400) |
 | application_auth_token | Application authorization token |
 | settings | Unknown (list) |
-| online_play_policy | `MEMBER_SHIP_REQUIRED` or `FREE` |
+| online_play_policy | `MEMBERSHIP_REQUIRED` or `FREE` |
 | policy_handler | `SYSTEM` or `GAME_SERVER` |
 
 ## Errors
