@@ -54,7 +54,7 @@ Let's say the session timer of A is at 234 when A sends a packet to B. It takes 
 ## Payload
 This part of the packet may be [encrypted](#encryption). A packet may contain more than one payload (the number of payloads is determined from the size of packet).
 
-On the Wii U, all payloads are padded with 0's such that their size is a multiple of 4 bytes. On the Switch, all payloads are padded with 0xFF such that their size is a multiple of 16 bytes.
+All payloads are padded with 0's such that their size is a multiple of 4 bytes.
 
 *Wii U and Switch (up to 5.3):*
 
@@ -159,7 +159,7 @@ Packets are encrypted and signed with the session key.
 If encryption is enabled, the [payload](#payload) is encrypted with AES-ECB. The packet signature is the HMAC of the whole packet (including the [header](#header)). The packet signature is always present, even if encryption is disabled.
 
 ### Switch
-If encryption is enabled, The [payload](#payload) is encrypted with AES-GCM. The authentication tag is stored in the [header](#header). No other signature is appended to the packet.
+If encryption is enabled, the [payload](#payload) is encrypted with AES-GCM. The payload is padded with 0xFF such that its size is a multiple of 16 bytes. The authentication tag is stored in the [header](#header). No other signature is appended to the packet.
 
 The nonce depends on the network type and is generated as follows:
 
