@@ -115,7 +115,7 @@ All payloads are padded with 0's such that their size is a multiple of 4 bytes.
 
 *Switch (5.18):*
 
-Fields that are not present are copied from the previous packet.
+Fields that are not present are copied from the previous payload.
 
 | Type | Description |
 | --- | --- |
