@@ -106,8 +106,8 @@ On the Wii U, all payloads are padded with 0's such that their size is a multipl
 | 0x0 | 1 | [Packet flags](#packet-flags) |
 | 0x1 | 1 | Version (always 2) |
 | 0x2 | 2 | Payload size |
-| 0x4 | 2 | [Protocol type](PIA-Protocols) |
-| 0x6 | 2 | Protocol port (protocol-specific) |
+| 0x4 | 1 | [Protocol type](PIA-Protocols) |
+| 0x5 | 3 | Protocol port (protocol-specific) |
 | 0x8 | 8 | [Destination mask](#destination-mask) |
 | 0x10 | 8 | [Source station key](#station-key) |
 | 0x18 | | Payload (protocol-specific) |
@@ -120,8 +120,8 @@ On the Wii U, all payloads are padded with 0's such that their size is a multipl
 | Uint8 | Flags indicating which of the following fields are present. |
 | Uint8 | [Packet flags](#packet-flags). *Only present if `flags & 1`.* |
 | Uint16 | Payload size. *Only present if `flags & 2`.* |
-| Uint16 | [Protocol type](PIA-Protocols). *Only present if `flags & 4`.* |
-| Uint16 | Protocol port (protocol-specific). *Only present if `flags & 4`.* |
+| Uint8 | [Protocol type](PIA-Protocols). *Only present if `flags & 4`.* |
+| Uint24 | Protocol port (protocol-specific). *Only present if `flags & 4`.* |
 | Uint64 | [Destination mask](#destination-mask). *Only present if `flags & 8`.* |
 | Uint64 | [Source station key](#station-key). *Only present if `flags & 16`.* |
 | Bytes | Payload (protocol-specific) |
