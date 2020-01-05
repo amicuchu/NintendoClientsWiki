@@ -115,6 +115,8 @@ On the Wii U, all payloads are padded with 0's such that their size is a multipl
 
 *Switch (5.18):*
 
+Fields that are not present are copied from the previous packet.
+
 | Type | Description |
 | --- | --- |
 | Uint8 | Flags indicating which of the following fields are present. |
