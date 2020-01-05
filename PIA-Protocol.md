@@ -131,7 +131,7 @@ Fields that are not present are copied from the previous message.
 | Bytes | Payload (protocol-specific) |
 | | Padding |
 
-### Packet flags
+### Message flags
 | Mask | Description |
 | --- | --- |
 | 0x1 | Unknown. This packet is sent to one console. The destination field contains only the station mask of the receiving console. |
