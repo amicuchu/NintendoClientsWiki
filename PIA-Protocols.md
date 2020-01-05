@@ -1,6 +1,6 @@
 See also: [[PIA Protocol]]
 
-| Wii U | Switch | Protocol |
+| Old | New | Protocol |
 | --- | --- | --- |
 | 0x0080 |      | Relay Protocol |
 | 0x00C0 |      | Keep Alive Protocol |
