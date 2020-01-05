@@ -1,4 +1,8 @@
-See also: [[PIA Protocol]]
+This page lists all protocols that are part of the [[PIA protocol]].
+
+At some point, Nintendo changed the protocol ids. All Switch games that use PIA version 5.9 or newer use the new protocol ids. All Wii U games and older Switch games use the old protocol ids.
+
+Also, the clone protocol used to be single protocol, but was split into several protocols around PIA version 5.14. Before the split, the id of the clone protocol was 0x74. After the split, the id of the main clone protocol became 0x73, and 0x74 was assigned to the atomic clone protocol.
 
 | Old | New | Protocol |
 | --- | --- | --- |
@@ -16,7 +20,7 @@ See also: [[PIA Protocol]]
 | 0x1810 |      | Sync Protocol |
 | 0x2000 | 0x68 | Unreliable Protocol |
 | 0x2100 |      | Round Robin Unreliable Protocol |
-| 0x2400 | 0x73 | Clone Protocol |
+| 0x2400 | 0x73 / 0x74 | Clone Protocol |
 | | 0x74 | Clone Protocol (atomic) |
 | | 0x76 | Clone Protocol (event) |
 | | 0x77 | Clone Protocol (clock) |
