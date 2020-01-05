@@ -89,9 +89,9 @@ On the Wii U, all payloads are padded with 0's such that their size is a multipl
 
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 1 | Unknown |
+| 0x0 | 1 | [Packet flags](#packet-flags) |
 | 0x1 | 1 | Unknown |
-| 0x2 | 2 | Unknown |
+| 0x2 | 2 | Payload size |
 | 0x4 | 2 | Unknown |
 | 0x6 | 8 | [Destination mask](#destination-mask) |
 | 0xE | 8 | [Source station key](#station-key) |
