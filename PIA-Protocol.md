@@ -1,6 +1,6 @@
 These packets are sent directly from one console to another, with no server in between. Everything is encoded in big-endian byte order.
 
-All packets consist of an unencrypted [header](#header), which is followed by one or more [payloads](#payload), and sometimes a [packet signature](#encryption).
+All packets consist of an unencrypted [header](#header), which is followed by one or more [messages](#messages), and sometimes a [packet signature](#encryption).
 
 ## Header
 *Wii U:*
@@ -51,16 +51,16 @@ Let's say the session timer of A is at 234 when A sends a packet to B. It takes 
 
 ![](https://www.dropbox.com/s/4fbobmcugbbokr3/rtt.png?raw=1)
 
-## Payload
-This part of the packet may be [encrypted](#encryption). A packet may contain more than one payload (the number of payloads is determined from the size of packet).
+## Messages
+This part of the packet may be [encrypted](#encryption). A packet may contain more than one message  (the number of messages is determined from the size of packet).
 
-All payloads are padded with 0's such that their size is a multiple of 4 bytes.
+All messages are padded with 0's such that their size is a multiple of 4 bytes.
 
 *Wii U and Switch (up to 5.3):*
 
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 1 | [Packet flags](#packet-flags) |
+| 0x0 | 1 | [Message flags](#message-flags) |
 | 0x1 | 1 | [Source station index](#station-index) |
 | 0x2 | 2 | Payload size |
 | 0x4 | 4 | [Destination mask](#destination-mask) |
@@ -75,7 +75,7 @@ All payloads are padded with 0's such that their size is a multiple of 4 bytes.
 
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 1 | [Packet flags](#packet-flags) |
+| 0x0 | 1 | [Message flags](#message-flags) |
 | 0x1 | 2 | Payload size |
 | 0x3 | 8 | [Destination mask](#destination-mask) |
 | 0xB | 8 | [Source station key](#station-key) |
@@ -89,7 +89,7 @@ All payloads are padded with 0's such that their size is a multiple of 4 bytes.
 
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 1 | [Packet flags](#packet-flags) |
+| 0x0 | 1 | [Message flags](#message-flags) |
 | 0x1 | 1 | Version (always 1) |
 | 0x2 | 2 | Payload size |
 | 0x4 | 1 | [Protocol type](PIA-Protocols) |
@@ -103,7 +103,7 @@ All payloads are padded with 0's such that their size is a multiple of 4 bytes.
 
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 1 | [Packet flags](#packet-flags) |
+| 0x0 | 1 | [Message flags](#message-flags) |
 | 0x1 | 1 | Version (always 2) |
 | 0x2 | 2 | Payload size |
 | 0x4 | 1 | [Protocol type](PIA-Protocols) |
@@ -116,12 +116,12 @@ All payloads are padded with 0's such that their size is a multiple of 4 bytes.
 
 *Switch (5.18):*
 
-Fields that are not present are copied from the previous payload.
+Fields that are not present are copied from the previous message.
 
 | Type | Description |
 | --- | --- |
 | Uint8 | Flags indicating which of the following fields are present. |
-| Uint8 | [Packet flags](#packet-flags). *Only present if `flags & 1`.* |
+| Uint8 | [Message flags](#message-flags). *Only present if `flags & 1`.* |
 | Uint16 | Payload size. *Only present if `flags & 2`.* |
 | Uint8 | [Protocol type](PIA-Protocols). *Only present if `flags & 4`.* |
 | Uint8 | Protocol port (protocol-specific). *Only present if `flags & 4`.* |
@@ -138,7 +138,7 @@ Fields that are not present are copied from the previous payload.
 | 0x2 | Unknown. This packet may be sent to multiple consoles. The destination field contains the station masks of all receiving consoles. |
 | 0x4 | Unknown |
 | 0x8 | Unknown |
-| 0x10 | Unknown |
+| 0x10 | The message payload is zlib-compressed |
 
 ### Station index
 Every console in a mesh gets its own station index. Consoles that haven't joined a mesh yet have this field set to 0xFD.
@@ -159,10 +159,10 @@ Packets are encrypted and signed with the session key.
 | LAN | First 16 bytes of the HMAC-SHA256 of the slightly modified [session param](LAN-Protocol#lansessioninfo) (the last byte is incremented by 1), with the same game-specific key that's used for the [crypto challenge](LAN-Protocol#crypto-challenge). |
 
 ### Wii U
-If encryption is enabled, the [payload](#payload) is encrypted with AES-ECB. The packet signature is the HMAC of the whole packet (including the [header](#header)). The packet signature is always present, even if encryption is disabled.
+If encryption is enabled, the [messages](#messages) are encrypted with AES-ECB. The packet signature is the HMAC of the whole packet (including the [header](#header)). The packet signature is always present, even if encryption is disabled.
 
 ### Switch
-If encryption is enabled, the [payload](#payload) is encrypted with AES-GCM. The payload is padded with 0xFF before encryption such that its size is a multiple of 16 bytes. The authentication tag is stored in the [header](#header). No other signature is appended to the packet.
+If encryption is enabled, the [messages](#messages) are encrypted with AES-GCM. The messages are padded with 0xFF before encryption such that their combined size is a multiple of 16 bytes. The authentication tag is stored in the [header](#header). No other signature is appended to the packet.
 
 The nonce depends on the network type and is generated as follows:
 
