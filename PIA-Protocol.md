@@ -90,7 +90,7 @@ On the Wii U, all payloads are padded with 0's such that their size is a multipl
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 1 | [Packet flags](#packet-flags) |
-| 0x1 | 1 | Unknown |
+| 0x1 | 1 | Version (always 1) |
 | 0x2 | 2 | Payload size |
 | 0x4 | 1 | [Protocol type](PIA-Protocols) |
 | 0x5 | 1 | Protocol port (protocol-specific) |
@@ -103,10 +103,11 @@ On the Wii U, all payloads are padded with 0's such that their size is a multipl
 
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 1 | Unknown |
-| 0x1 | 1 | Unknown |
-| 0x2 | 2 | Unknown |
-| 0x4 | 4 | Unknown |
+| 0x0 | 1 | [Packet flags](#packet-flags) |
+| 0x1 | 1 | Version (always 2) |
+| 0x2 | 2 | Payload size |
+| 0x4 | 2 | [Protocol type](PIA-Protocols) |
+| 0x6 | 2 | Protocol port (protocol-specific) |
 | 0x8 | 8 | [Destination mask](#destination-mask) |
 | 0x10 | 8 | [Source station key](#station-key) |
 | 0x18 | | Payload (protocol-specific) |
