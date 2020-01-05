@@ -130,12 +130,13 @@ Fields that are not present are copied from the previous payload.
 | | Padding |
 
 ### Packet flags
-| Value | Description |
+| Mask | Description |
 | --- | --- |
-| 1 | Unknown. This packet is sent to one console. The destination field contains only the station mask of the receiving console. |
-| 2 | Unknown. This packet may be sent to multiple consoles. The destination field contains the station masks of all receiving consoles. |
-| 4 | Unknown |
-| 8 | Unknown |
+| 0x1 | Unknown. This packet is sent to one console. The destination field contains only the station mask of the receiving console. |
+| 0x2 | Unknown. This packet may be sent to multiple consoles. The destination field contains the station masks of all receiving consoles. |
+| 0x4 | Unknown |
+| 0x8 | Unknown |
+| 0x10 | Unknown |
 
 ### Station index
 Every console in a mesh gets its own station index. Consoles that haven't joined a mesh yet have this field set to 0xFD.
@@ -159,7 +160,7 @@ Packets are encrypted and signed with the session key.
 If encryption is enabled, the [payload](#payload) is encrypted with AES-ECB. The packet signature is the HMAC of the whole packet (including the [header](#header)). The packet signature is always present, even if encryption is disabled.
 
 ### Switch
-If encryption is enabled, the [payload](#payload) is encrypted with AES-GCM. The payload is padded with 0xFF such that its size is a multiple of 16 bytes. The authentication tag is stored in the [header](#header). No other signature is appended to the packet.
+If encryption is enabled, the [payload](#payload) is encrypted with AES-GCM. The payload is padded with 0xFF before encryption such that its size is a multiple of 16 bytes. The authentication tag is stored in the [header](#header). No other signature is appended to the packet.
 
 The nonce depends on the network type and is generated as follows:
 
