@@ -118,9 +118,10 @@ On the Wii U, all payloads are padded with 0's such that their size is a multipl
 | Type | Description |
 | --- | --- |
 | Uint8 | Flags indicating which of the following fields are present. |
-| Uint8 | Unknown. *Only present if `flags & 1`.* |
-| Uint16 | Unknown. *Only present if `flags & 2`.* |
-| Uint32 | Unknown. *Only present if `flags & 4`.* |
+| Uint8 | [Packet flags](#packet-flags). *Only present if `flags & 1`.* |
+| Uint16 | Payload size. *Only present if `flags & 2`.* |
+| Uint16 | [Protocol type](PIA-Protocols). *Only present if `flags & 4`.* |
+| Uint16 | Protocol port (protocol-specific). *Only present if `flags & 4`.* |
 | Uint64 | [Destination mask](#destination-mask). *Only present if `flags & 8`.* |
 | Uint64 | [Source station key](#station-key). *Only present if `flags & 16`.* |
 | Bytes | Payload (protocol-specific) |
