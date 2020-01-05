@@ -16,8 +16,10 @@ See also: [[PIA Protocol]]
 | 0x1810 |      | Sync Protocol |
 | 0x2000 | 0x68 | Unreliable Protocol |
 | 0x2100 |      | Round Robin Unreliable Protocol |
-| 0x2400 | 0x74 | Clone Protocol |
-| | 0x76 | Event Protocol |
+| 0x2400 | 0x73 | Clone Protocol |
+| | 0x74 | Clone Protocol (atomic) |
+| | 0x76 | Clone Protocol (event) |
+| | 0x77 | Clone Protocol (clock) |
 | 0x2800 | 0x78 | Voice Protocol |
 | 0x3000 | 0x7C | Reliable Protocol |
 | 0x4400 | 0x44 | LAN Protocol |
