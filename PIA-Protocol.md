@@ -56,7 +56,7 @@ This part of the packet may be [encrypted](#encryption). A packet may contain mo
 
 On the Wii U, all payloads are padded with 0's such that their size is a multiple of 4 bytes. On the Switch, all payloads are padded with 0xFF such that their size is a multiple of 16 bytes.
 
-*Wii U:*
+*Wii U and Switch (up to 5.3):*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -71,7 +71,7 @@ On the Wii U, all payloads are padded with 0's such that their size is a multipl
 | 0x14 | | Payload (protocol-specific) |
 | | | Padding |
 
-*Switch (up to 5.10):*
+*Switch (5.9 and 5.10):*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -93,8 +93,8 @@ On the Wii U, all payloads are padded with 0's such that their size is a multipl
 | 0x1 | 1 | Unknown |
 | 0x2 | 2 | Unknown |
 | 0x4 | 2 | Unknown |
-| 0x6 | 8 | Unknown |
-| 0xE | 8 | Unknown |
+| 0x6 | 8 | [Destination mask](#destination-mask) |
+| 0xE | 8 | [Source station key](#station-key) |
 | 0x16 | | Payload (protocol-specific) |
 | | | Padding |
 
@@ -106,8 +106,8 @@ On the Wii U, all payloads are padded with 0's such that their size is a multipl
 | 0x1 | 1 | Unknown |
 | 0x2 | 2 | Unknown |
 | 0x4 | 4 | Unknown |
-| 0x8 | 8 | Unknown |
-| 0x10 | 8 | Unknown |
+| 0x8 | 8 | [Destination mask](#destination-mask) |
+| 0x10 | 8 | [Source station key](#station-key) |
 | 0x18 | | Payload (protocol-specific) |
 | | | Padding |
 
@@ -119,8 +119,8 @@ On the Wii U, all payloads are padded with 0's such that their size is a multipl
 | Uint8 | Unknown. *Only present if `flags & 1`.* |
 | Uint16 | Unknown. *Only present if `flags & 2`.* |
 | Uint32 | Unknown. *Only present if `flags & 4`.* |
-| Uint64 | Unknown. *Only present if `flags & 8`.* |
-| Uint64 | Unknown. *Only present if `flags & 16`.* |
+| Uint64 | [Destination mask](#destination-mask). *Only present if `flags & 8`.* |
+| Uint64 | [Source station key](#station-key). *Only present if `flags & 16`.* |
 | Bytes | Payload (protocol-specific) |
 | | Padding |
 
