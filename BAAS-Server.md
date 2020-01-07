@@ -59,8 +59,8 @@ Response on success:
 ### POST /1.0.0/login
 | Param | Description |
 | --- | --- |
-| id | User id |
-| password | Password |
+| id | Device account id |
+| password | Device account password |
 | appAuthNToken | [AAuth token](AAuth-Server) (optional) |
 | skipOp2Verification | Unknown (optional) |
 
