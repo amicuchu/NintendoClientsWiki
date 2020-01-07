@@ -68,7 +68,7 @@ On error, the server sends the following response:
 | 404 | resource_is_not_found | Specified resource is not found | Resource is not found |
 | 405 | method_not_allowed | Method Not Allowed | Method Not Allowed |
 | 400 | invalid_params | Invalid Params | invalid params |
-| 400 | invalid_request | ? | ? |
+| 400 | invalid_request | Authorization header value is invalid | Auth scheme or auth params is invalid |
 | 400 | invalid_device_account | ? | ? |
 | 400 | invalid_ndas_app_authn_token | ? | ? |
 | 400 | invalid_idp | ? | ? |
