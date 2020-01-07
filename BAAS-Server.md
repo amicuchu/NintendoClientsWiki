@@ -64,6 +64,16 @@ Response on success:
 | appAuthNToken | [AAuth token](AAuth-Server) (optional) |
 | skipOp2Verification | Unknown (optional) |
 
+Response on success:
+
+| Param | Description |
+| --- | --- |
+| expiresIn | Expiration in seconds (10800) |
+| user | [User information](#user-information) |
+| idToken | User token (e.g. for game servers) |
+| accessToken | Authorization token for further requests |
+| tokenType | Authorization token type ("Bearer") |
+
 ### POST /1.0.0/users
 This request registers a new user on the server. This request does not take any parameters. On success, the response contains the new [user information](#user-information) and HTTP status code 201.
 
