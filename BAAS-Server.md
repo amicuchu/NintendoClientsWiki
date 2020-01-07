@@ -9,7 +9,7 @@ This server takes form-encoded requests and responds with json-encoding.
 | Header | Description |
 | --- | --- |
 | User-Agent | `libcurl (nnAccount; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 9.3.0.0; Add-on 9.3.0.0)`
-| X-Nintendo-PowerState | `FA` (fully awake) or `HA` (half awake) |
+| X-Nintendo-PowerState | `FA` (fully awake) or `HA` (half awake). This header is only present in the <code><a href="post-100applicationtoken">/1.0.0/application/token</a></code> and <code><a href="#post-100login">/1.0.0/login</a></code> requests. |
 
 ## Methods
 | Method | URL |
@@ -17,14 +17,28 @@ This server takes form-encoded requests and responds with json-encoding.
 | POST | <code><a href="#post-100applicationtoken">/1.0.0/application/token</a></code> |
 | POST | <code><a href="#post-100login">/1.0.0/login</a></code> |
 | POST | `/1.0.0/federation` |
-| POST | `/1.0.0/users` |
+| POST | <code><a href="#post-100users">/1.0.0/users</a></code> |
+| GET | `/1.0.0/users` |
 | GET | `/1.0.0/users/<id>` |
 | PATCH | `/1.0.0/users/<id>` |
+| PATCH | `/1.0.0/users/<id>/device_accounts/<id>` |
 | DELETE | `/1.0.0/users/<id>/device_accounts/<id>` |
 | POST | `/1.0.0/users/<id>/link` |
 | POST | `/1.0.0/users/<id>/unlink` |
+| GET | `/1.0.0/users/<id>/blocks` |
+| POST | `/1.0.0/users/<id>/blocks` |
+| DELETE | `/1.0.0/users/<id>/blocks/<id>` |
+| POST | `/1.0.0/users/<id>/generate_code` |
 | POST | `/1.0.0/image_upload` |
 | PUT | `/1.0.0/push_channels/<id>/<id>` |
+| GET | `/2.0.0/users/<id>friends` |
+| PATCH | `/2.0.0/users/<id>/friends/<id>` |
+| DELETE | `/2.0.0/users/<id>/friends/<id>` |
+| GET | `/2.0.0/users/<id>/friend_requests/inbox` |
+| GET | `/2.0.0/users/<id>/friend_requests/outbox` |
+| POST | `/2.0.0/friend_requests` |
+| PATCH | `/2.0.0/friend_requests/<id>` |
+| GET | `/2.0.0/users/<id>/relationships/<id>` |
 
 ### POST /1.0.0/application/token
 This request provides an authorization token that's required for all other requests.
@@ -49,6 +63,116 @@ Response on success:
 | password | Password |
 | appAuthNToken | [AAuth token](AAuth-Server) (optional) |
 | skipOp2Verification | Unknown (optional) |
+
+### POST /1.0.0/users
+This request registers a new user on the server. This request does not take any parameters. On success, the response contains the new [user information](#user-information) and HTTP status code 201.
+
+### User information
+| Field | Description |
+| --- | --- |
+| id | User id (16 hex digits) |
+| etag | ETag |
+| nickname | Nickname |
+| country | Country |
+| birthday | YYYY-MM-DD |
+| thumbnailUrl | Thumbnail URL |
+| deviceAccounts | List of [device accounts](#device-account) |
+| links | [Linked accounts](#linked-accounts) |
+| permissions | [Privacy settings](#privacy-settings) |
+| extras | [Extras](#user-extras) |
+| presence | [Online status](#online-status) |
+| deleted | Bool |
+| blocksUpdatedAt | Timestamp |
+| friendsUpdatedAt | Timestamp |
+| createdAt | Timestamp |
+| updatedAt | Timestamp |
+
+#### Device account
+| Field | Description |
+| --- | --- |
+| id | Device account id (16 hex digits) |
+| password | Device account password (30 random bytes, base64-encoded) |
+
+#### Linked accounts
+| Field | Description |
+| --- | --- |
+| nintendoNetwork | [Nintendo network link](#linked-account) |
+| twitter | [Twitter account link](#linked-account) |
+| facebook | [Facebook account link](#linked-account) |
+| google | [Google account link](#linked-account) |
+| friendCode | [Friend code](#friend-code-link) |
+
+#### Linked account
+| Field | Description |
+| --- | --- |
+| id | Account id |
+| createdAt | Timestamp |
+| updatedAt | Timestamp |
+
+#### Friend code link
+| Field | Description |
+| --- | --- |
+| id | Friend code |
+| createdAt | Timestamp |
+| updatedAt | Timestamp |
+| regenerableAt | Timestamp |
+| regenerable | Bool |
+
+#### Privacy settings
+| Field | Description |
+| --- | --- |
+| personalAnalytics | Bool |
+| personalNotification | Bool |
+| friendRequestReception | Bool |
+| friends | `EVERYONE` |
+| presence | `FRIENDS`, `FAVORITE_FRIENDS` or `SELF` |
+| presenceUpdatedAt | Timestamp |
+| personalAnalyticsUpdatedAt | Timestamp |
+| personalNotificationUpdatedAt | Timestamp |
+
+#### Online status
+| Field | Description |
+| --- | --- |
+| state | `OFFLINE`, `INACTIVE`, `ONLINE` or `PLAYING` |
+| extras | [Extras](#presence-extras) |
+| updatedAt | Timestamp |
+| logoutAt | Timestamp |
+
+#### Extras
+| Field | Description |
+| --- | --- |
+| self | Extras visible by no one |
+| favoriteFriends | Extras visible by best friends |
+| friends | Extras visible by all friends |
+| foaf | Extras visible by friends of a friend |
+| everyone | Extras visible by everyone |
+
+#### User extras
+The following fields are stored in each of the [extras](#extras).
+
+| Field | Description |
+| --- | --- |
+| playLog | JSON-encoded string containing a list of [play log entries](#play-log-entry) |
+| nxAccount | String that identifies the account (only present in 'self'-extras) |
+
+#### Presence extras
+The following fields are stored in each of the [extras](#extras).
+
+| Field | Description |
+| --- | --- |
+| appInfo:appId | Title id |
+| appInfo:presenceGroupId | Title id |
+| appField | JSON-encoded string |
+
+#### Play log entry
+| Field | Description |
+| --- | --- |
+| appInfo:appId | Title id |
+| appInfo:presenceGroupId | Title id |
+| totalPlayCount | Total play count |
+| totalPlayTime | Total play time in hours |
+| firstPlayedAt | Timestamp |
+| lastPlayedAt | Timestamp |
 
 ## Errors
 On error, the server sends the following response:
