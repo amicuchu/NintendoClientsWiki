@@ -5,7 +5,7 @@ This server is at: https://dauth-lp1.ndas.srv.nintendo.net
 
 Most Switch servers can only be accessed after acquiring a device authorization token from the dauth server. The dauth server only accepts requests with a valid client certificate. Every Switch has its own certificate, which stored in [PRODINFO](https://switchbrew.org/wiki/Calibration).
 
-The dauth server takes form-encoded requests and responds with json-encoding. Also, this server uses the alternative base64 table (with '-' and '_' instead of '+' and '/')
+The dauth server takes form-encoded requests and responds with json-encoding. Also, this server uses the alternative base64 table (with '-' and '_' instead of '+' and '/'), and the client does not add any padding characters.
 
 This page was last updated for firmware version 9.1.0.
 
