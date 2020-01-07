@@ -108,7 +108,7 @@ All messages are padded with 0's such that their size is a multiple of 4 bytes.
 | 0x2 | 2 | Payload size |
 | 0x4 | 1 | [Protocol type](PIA-Protocols) |
 | 0x5 | 1 | Protocol port (protocol-specific) |
-| 0x6 | 2 | Padding (always 0) |
+| 0x6 | 2 | Protocol-specific data |
 | 0x8 | 8 | [Destination mask](#destination-mask) |
 | 0x10 | 8 | [Source station key](#station-key) |
 | 0x18 | | Payload (protocol-specific) |
@@ -125,7 +125,7 @@ Fields that are not present are copied from the previous message.
 | Uint16 | Payload size. *Only present if `flags & 2`.* |
 | Uint8 | [Protocol type](PIA-Protocols). *Only present if `flags & 4`.* |
 | Uint8 | Protocol port (protocol-specific). *Only present if `flags & 4`.* |
-| Uint16 | Padding (always 0). *Only present if `flags & 4`.* |
+| Uint16 | Protocol-specific data. *Only present if `flags & 4`.* |
 | Uint64 | [Destination mask](#destination-mask). *Only present if `flags & 8`.* |
 | Uint64 | [Source station key](#station-key). *Only present if `flags & 16`.* |
 | Bytes | Payload (protocol-specific) |
