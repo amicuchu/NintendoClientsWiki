@@ -207,7 +207,7 @@ On error, the server sends the following response:
 | 400 | invalid_ndas_app_authn_token | ? | ? |
 | 400 | invalid_idp | ? | ? |
 | 400 | invalid_idp_account | ? | ? |
-| 400 | linked_user_not_found | ? | ? |
+| 400 | linked_user_not_found | Linked User Not Found | linked user not found |
 | 400 | invalid_friend_code_format | ? | ? |
 | 400 | user_link_not_exist | ? | ? |
 | 400 | invalid_raw_content | ? | ? |
