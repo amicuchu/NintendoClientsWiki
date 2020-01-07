@@ -16,7 +16,7 @@ PIA supports three different network types.
 </table>
 
 ### Protocol
-All peer-to-peer packets are sent through UDP. The packet format is described [here](PIA-Protocol). Once a connection between consoles has been established they talk to each other through a bunch of [protocols / services](PIA-Protocols). Most of these are only used internally by PIA to set up and manage the connection. However, at some point, the game can start sending data packets to the other console. This usually happens through the [unreliable protocol](Unreliable-Protocol).
+All peer-to-peer packets are sent through UDP. The packet format is described [here](PIA-Protocol). Once a connection between consoles has been established they talk to each other through a bunch of [protocols / services](PIA-Protocols). Most of these are only used internally by PIA to set up and manage the connection. However, at some point, the game can start sending data packets to the other console. This usually happens through the [reliable](Reliable-Protocol) or [unreliable protocol](Unreliable-Protocol).
 
 ### Session management
 A group of connected consoles is called a mesh. Every mesh has a single "host" that controls the mesh. Initially, the console that created the mesh is the host. Once the host leaves the mesh, a new host is selected through "host migration". The host performs important tasks such as processing join requests by newcomers. The host may also perform some game-specific tasks. For example, in Mario Kart 8, the host decides which track is chosen by the track roulette.
