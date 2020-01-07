@@ -27,7 +27,7 @@ Also, the clone protocol used to be single protocol, but was split into several 
 |        | 0x76 | Clone Protocol (event) |
 |        | 0x77 | Clone Protocol (clock) |
 | 0x2800 | 0x78 | Voice Protocol |
-| 0x3000 | 0x7C | Reliable Protocol |
+| 0x3000 | 0x7C | [[Reliable Protocol]] |
 | 0x4400 | 0x44 | LAN Protocol |
 |        | 0x80 | Broadcast Reliable Protocol |
 |        | 0x81 | Stream Broadcast Reliable Protocol |
