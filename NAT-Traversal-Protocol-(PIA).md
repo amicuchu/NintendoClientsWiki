@@ -1,4 +1,4 @@
-[[PIA Protocols]] > NAT Traversal (0x400)
+[[PIA Protocols]] > NAT Traversal
 ---
 
 | Protocol Port | Description |
