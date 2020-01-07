@@ -54,7 +54,7 @@ Let's say the session timer of A is at 234 when A sends a packet to B. It takes 
 ## Messages
 This part of the packet may be [encrypted](#encryption). A packet may contain more than one message  (the number of messages is determined from the size of packet).
 
-All messages are padded with 0's such that their size is a multiple of 4 bytes.
+All messages are padded such that their size is a multiple of 4 bytes.
 
 *Wii U and Switch (up to 5.3):*
 
