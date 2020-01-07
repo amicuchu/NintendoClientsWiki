@@ -1,4 +1,4 @@
-[[PIA Protocols]] > Mesh Protocol (0x200)
+[[PIA Protocols]] > Mesh Protocol
 ---
 
 | Protocol Port | Description |
