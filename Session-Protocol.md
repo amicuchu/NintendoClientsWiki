@@ -1,4 +1,4 @@
-[[PIA Protocols]] > Session Protocol (0x7200)
+[[PIA Protocols]] > Session Protocol
 ---
 | Message Type | Description |
 | --- | --- |
