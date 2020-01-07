@@ -1,4 +1,4 @@
-[[PIA Protocols]] > Station Protocol (0x100)
+[[PIA Protocols]] > Station Protocol
 ---
 
 | Protocol Port | Description |
