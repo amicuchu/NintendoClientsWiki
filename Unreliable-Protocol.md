@@ -1,4 +1,4 @@
-[[PIA Protocols]] > Unreliable Protocol (0x2000)
+[[PIA Protocols]] > Unreliable Protocol
 ---
 
 This protocol may be used by games to send data packets to other consoles.
