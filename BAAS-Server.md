@@ -214,7 +214,7 @@ On error, the server sends the following response:
 | 401 | invalid_token | Token is invalid | The access token was invalid |
 | 403 | insufficient_scope | ? | ? |
 | 403 | forbidden | ? | ? |
-| 403 | membership_required | ? | ? |
+| 403 | membership_required | Membership Required | |
 | 403 | unavailable_device_account | ? | ? |
 | 403 | banned_user | ? | ? |
 | 403 | banned_user_by_application | ? | ? |
