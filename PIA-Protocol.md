@@ -134,8 +134,8 @@ Fields that are not present are copied from the previous message.
 ### Message flags
 | Mask | Description |
 | --- | --- |
-| 0x1 | Unknown. This packet is sent to one console. The destination field contains only the station mask of the receiving console. |
-| 0x2 | Unknown. This packet may be sent to multiple consoles. The destination field contains the station masks of all receiving consoles. |
+| 0x1 | Unknown (always 1) |
+| 0x2 | This is a relay packet |
 | 0x4 | Unknown |
 | 0x8 | Unknown |
 | 0x10 | The message payload is zlib-compressed |
