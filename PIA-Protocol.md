@@ -63,8 +63,8 @@ All messages are padded such that their size is a multiple of 4 bytes.
 | 0x0 | 1 | [Message flags](#message-flags) |
 | 0x1 | 1 | [Source station index](#station-index) |
 | 0x2 | 2 | Payload size |
-| 0x4 | 4 | [Destination mask](#destination-mask) |
-| 0x8 | 4 | [Source station key](#station-key) |
+| 0x4 | 4 | [Destination](#destination) |
+| 0x8 | 4 | [Source station id](#station-id) |
 | 0xC | 2 | [Protocol type](PIA-Protocols) |
 | 0xE | 2 | Protocol port (protocol-specific) |
 | 0x10 | 4 | Reserved (always 0) |
@@ -77,8 +77,8 @@ All messages are padded such that their size is a multiple of 4 bytes.
 | --- | --- | --- |
 | 0x0 | 1 | [Message flags](#message-flags) |
 | 0x1 | 2 | Payload size |
-| 0x3 | 8 | [Destination mask](#destination-mask) |
-| 0xB | 8 | [Source station key](#station-key) |
+| 0x3 | 8 | [Destination](#destination) |
+| 0xB | 8 | [Source station id](#station-id) |
 | 0x13 | 1 | [Protocol type](PIA-Protocols) |
 | 0x14 | 1 | Protocol port (protocol-specific) |
 | 0x15 | 3 | Padding (always 0) |
@@ -94,8 +94,8 @@ All messages are padded such that their size is a multiple of 4 bytes.
 | 0x2 | 2 | Payload size |
 | 0x4 | 1 | [Protocol type](PIA-Protocols) |
 | 0x5 | 1 | Protocol port (protocol-specific) |
-| 0x6 | 8 | [Destination mask](#destination-mask) |
-| 0xE | 8 | [Source station key](#station-key) |
+| 0x6 | 8 | [Destination](#destination) |
+| 0xE | 8 | [Source station id](#station-id) |
 | 0x16 | | Payload (protocol-specific) |
 | | | Padding |
 
@@ -109,8 +109,8 @@ All messages are padded such that their size is a multiple of 4 bytes.
 | 0x4 | 1 | [Protocol type](PIA-Protocols) |
 | 0x5 | 1 | Protocol port (protocol-specific) |
 | 0x6 | 2 | Protocol-specific data |
-| 0x8 | 8 | [Destination mask](#destination-mask) |
-| 0x10 | 8 | [Source station key](#station-key) |
+| 0x8 | 8 | [Destination](#destination) |
+| 0x10 | 8 | [Source station id](#station-id) |
 | 0x18 | | Payload (protocol-specific) |
 | | | Padding |
 
@@ -126,28 +126,28 @@ Fields that are not present are copied from the previous message.
 | Uint8 | [Protocol type](PIA-Protocols). *Only present if `flags & 4`.* |
 | Uint8 | Protocol port (protocol-specific). *Only present if `flags & 4`.* |
 | Uint16 | Protocol-specific data. *Only present if `flags & 4`.* |
-| Uint64 | [Destination mask](#destination-mask). *Only present if `flags & 8`.* |
-| Uint64 | [Source station key](#station-key). *Only present if `flags & 16`.* |
+| Uint64 | [Destination](#destination). *Only present if `flags & 8`.* |
+| Uint64 | [Source station id](#station-id). *Only present if `flags & 16`.* |
 | Bytes | Payload (protocol-specific) |
 | | Padding |
 
 ### Message flags
 | Mask | Description |
 | --- | --- |
-| 0x1 | Unknown (always 1) |
-| 0x2 | This is a relay packet |
-| 0x4 | Unknown |
+| 0x1 | Determines what's stored in the [destination](#destination) field |
+| 0x2 | This packet is supposed to be relayed to another console |
+| 0x4 | This packet was relayed through another console |
 | 0x8 | Unknown |
 | 0x10 | The message payload is zlib-compressed |
 
 ### Station index
-Every console in a mesh gets its own station index. Consoles that haven't joined a mesh yet have this field set to 0xFD.
+Every console in a mesh gets its own station index. Consoles that haven't joined a mesh yet have this field set to 0xFD. This is not the same as the [station id](#station-id).
 
-### Destination mask
-A station mask is calculated as follows: `1 << station_index`. The destination mask is the station mask of every destination console ORed together.
-
-### Station key
+### Station id
 This is a unique id per station. In NEX mode, it is the [Rendez-Vous connection id](Secure-Protocol#1-register). In LDN and LAN mode, it is generated based on the local address of the station.
+
+### Destination
+The content of this field depends on the [message flags](#message-flags). If the flag is cleared, this field contains the [station id](#station-id) of the destination console. If the flag is set, this field contains a bitmap where each bit represents one destination console (the bit number of a console is its station index: `1 << station_index`).
 
 ## Encryption
 Packets are encrypted and signed with the session key.
