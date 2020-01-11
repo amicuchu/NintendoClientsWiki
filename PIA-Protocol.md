@@ -99,7 +99,7 @@ All messages are padded such that their size is a multiple of 4 bytes.
 | 0x16 | | Payload (protocol-specific) |
 | | | Padding |
 
-*Switch (5.14):*
+*Switch (5.14 - 5.17):*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -114,7 +114,7 @@ All messages are padded such that their size is a multiple of 4 bytes.
 | 0x18 | | Payload (protocol-specific) |
 | | | Padding |
 
-*Switch (5.18):*
+*Switch (5.18 and later):*
 
 Fields that are not present are copied from the previous message.
 
