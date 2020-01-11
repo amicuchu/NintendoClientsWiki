@@ -17,14 +17,45 @@
 | 7 | Relay connection response |
 
 # Connection request
-| Offset | Size | Description |
-| --- | --- | --- |
-| 0x0 | 1 | Message type |
-| 0x1 | 1 | Connection id |
-| 0x2 | 1 | Version |
-| 0x3 | 1 | Is inverse connection request |
-| 0x4 | 54 | [StationConnectionInfo] |
-| 0x3A | 4 | Ack id |
+| Type | Description |
+| --- | --- |
+| Uint8 | Message type  (1) |
+| Uint8 | Connection id |
+| Uint8 | Version |
+| Uint8 | Is inverse connection request |
+| Bytes | Version-dependent data |
+| Uint32 | Ack id |
+
+*Version 3 (3.10):*
+
+| Type | Description |
+| --- | --- |
+| [StationConnectionInfo] | Station connection info |
+
+*Version 7 (5.0 - 5.2):*
+
+| Type | Description |
+| --- | --- |
+| Uint64 | NEX principal id (pid) |
+| [StationConnectionInfo] | Station connection info |
+
+*Version 8 (5.9):*
+
+| Type | Description |
+| --- | --- |
+| Uint64 | NEX principal id (pid) |
+| Uint32 | NEX connection id (cid) |
+| Uint8 | Inverse connection id |
+| [StationConnectionInfo] | Station connection info |
+
+*Version 9 (5.18):*
+
+| Type | Description |
+| --- | --- |
+| Uint64 | NEX principal id (pid) |
+| Uint32 | NEX connection id (cid) |
+| Uint8 | Inverse connection id |
+| [StationConnectionInfo] | Station connection info |
 
 # Connection response
 | Offset | Size | Description |
