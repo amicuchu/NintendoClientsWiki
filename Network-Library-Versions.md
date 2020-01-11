@@ -69,6 +69,7 @@ Unfortunately, there are many different versions of the nex library with small c
 | Arcade Archives: THE NINJA WARRIORS | 4.6.2 (RK) | - | No |
 | Cadence of Hyrule | 4.6.2 (R2) | - | No |
 | Dragon Marked for Death | 4.6.2 (MM/VS) | - | No |
+| Luigi's Mansion 3 | 4.6.2 (MM/CO/SS) | 5.17.0 | No |
 | Dragon Quest Builders 2 | 4.6.2 (RK/DS/MM/UT/CO) | 5.11.3 | No |
 | Terraria | 4.6.2 (RK/R2/DS/MM/UT/SS) | 5.14.0 | No |
 | Super Smash Bros. Ultimate | 4.6.2-appc2 (DS/MM/UT/CO/SC) | 5.11.3 | No |
