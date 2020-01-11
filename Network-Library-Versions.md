@@ -63,6 +63,7 @@ Unfortunately, there are many different versions of the nex library with small c
 | Mummy Pinball | 4.3.1 (RK/R2/DS/UT/SS) | - | No |
 | Splatoon 2 | 4.3.1-appblz (RK/DS/MM/UT/CO) | 5.9.1 | Yes |
 | Splatoon 2 | 4.3.8-appblz (RK/DS/MM/UT/CO) | 5.9.1 | No |
+| Super Mario Party | 4.4.2-OL (R2/DS/MM/UT/CO) | 5.9.2 | Partial |
 | Capcom Beat 'Em Up Bundle | 4.5.0 (MM) | 5.10.0 | No |
 | Pokémon Let's Go Pikachu/Eevee | 4.5.0 (MM/UT) | 5.11.4 | No |
 | Tricky Towers | 4.5.0 (RK/R2/MM/VS) | - | No |
