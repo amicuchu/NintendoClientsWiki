@@ -20,10 +20,12 @@ Unfortunately, there are many different versions of the nex library with small c
 | Zen Pinball 2 | 3.0.1.4 (RK/UT) | - | No |
 | Tekken Tag Tournament 2 Wii U Edition | 3.0.1.4 (RK/DS/MM) | - | No |
 | Fist of the North Star: Ken's Rage 2 | 3.0.1.5 (RK/DS/MM/UT) | - | Yes |
+| Ninja Gaiden 3: Razor's Edge | 3.0.1.5 (RK/DS/MM/UT) | - | No |
 | Monster Hunter 3 Ultimate | 3.0.5-AHDJ (DS/MM/MS) | - | No |
 | Injustice: Gods Among Us | 3.2.1 (RK/DS/MM) | - | No |
 | DuckTales: Remastered | 3.3.0 (RK) | - | Yes |
 | Sonic Lost World | 3.3.0 (RK) | - | Yes |
+| Pikmin 3 | 3.3.0 (RK) | - | No |
 | Donkey Kong Country Tropical Freeze | 3.4.0 (RK/DS) | - | Yes |
 | Mario & Sonic at the Sochi 2014 Olympic Winter Games | 3.4.0 (RK/DS/MM/MS) | - | Yes |
 | Romance of the Three Kingdoms 12 | 3.4.0 (RK/DS/MM/UT) | - | Yes |
@@ -45,6 +47,7 @@ Unfortunately, there are many different versions of the nex library with small c
 | Disney Infinity 3.0: Play Without Limits | 3.9.1 (DS/MM/UT) | - | Yes |
 | Minecraft: Wii U Edition | 3.9.1 (DS/MM) | 4.9.0 | Yes |
 | Might No. 9 | 3.9.1 (RK/DS/MM/MS) | - | Yes |
+| Cube Life: Island Survival | 3.9.1 (RK/DS/MM/UT) | 4.9.0 | No |
 | Axiom Verge | 3.10.0 | - | Yes |
 | Pokkén Tournament | 3.10.0 (RK/DS/MM) | 4.10.0 | Yes |
 | Lost Reavers | 3.10.0 (RK/DS/MM/MS) | - | Yes |
