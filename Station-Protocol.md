@@ -26,6 +26,11 @@
 | Bytes | Version-dependent data |
 | Uint32 | Ack id |
 
+*Version 2 (3.6):*
+| Type | Description |
+| --- | --- |
+| [StationConnectionInfo] | Station connection info |
+
 *Version 3 (3.10):*
 
 | Type | Description |
