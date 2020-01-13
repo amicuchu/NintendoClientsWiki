@@ -14,9 +14,10 @@ Unfortunately, there are many different versions of the nex library with small c
 # Wii U
 | Game | NEX Modules | PIA Version | Debug Symbols |
 | --- | --- | --- | --- |
-| Sonic & All-Stars Racing Transformed | 3.0.1.4 (RK/MM) | - | Yes |
 | BIT.TRIP Presents... Runner2: Future Legend of Rhythm Alien | 3.0.1.4 (RK) | - | Yes |
 | Trine 2 Director's Cut | 3.0.1.4 (MM) | - | Yes |
+| Sonic & All-Stars Racing Transformed | 3.0.1.4 (RK/MM) | - | Yes |
+| Zen Pinball 2 | 3.0.1.4 (RK/UT) | - | No |
 | Tekken Tag Tournament 2 Wii U Edition | 3.0.1.4 (RK/DS/MM) | - | No |
 | Fist of the North Star: Ken's Rage 2 | 3.0.1.5 (RK/DS/MM/UT) | - | Yes |
 | Monster Hunter 3 Ultimate | 3.0.5-AHDJ (DS/MM/MS) | - | No |
@@ -39,6 +40,7 @@ Unfortunately, there are many different versions of the nex library with small c
 | Legend of Kay Anniversary | 3.8.3 (RK) | - | Yes |
 | Nova-111 | 3.8.3 (RK/DS) | - | Yes |
 | Super Mario Maker | 3.8.10-AMA (DS/MM) | - | No |
+| Mario Tennis: Ultra Smash | 3.9.1 (MM) | 4.8.0 | No |
 | M & S at the Rio 2016 Olympic Games | 3.9.1 (RK/DS) | - | Yes |
 | Disney Infinity 3.0: Play Without Limits | 3.9.1 (DS/MM/UT) | - | Yes |
 | Minecraft: Wii U Edition | 3.9.1 (DS/MM) | 4.9.0 | Yes |
