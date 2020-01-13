@@ -16,15 +16,7 @@
 | 6 | Relay connection request |
 | 7 | Relay connection response |
 
-# Connection request
-| Type | Description |
-| --- | --- |
-| Uint8 | Message type  (1) |
-| Uint8 | Connection id |
-| Uint8 | Version |
-| Uint8 | Is inverse connection request |
-| Bytes | Version-dependent data |
-| Uint32 | Ack id |
+The [connection request](#connection-request) and [response](#connection-response) contain a version field. The following table shows which version is used by which version of the PIA library.
 
 | Version | PIA Version |
 | --- | --- |
@@ -34,6 +26,16 @@
 | 7 | 5.2 - 5.3 |
 | 8 | 5.9 |
 | 9 | 5.10 - 5.18 |
+
+# Connection request
+| Type | Description |
+| --- | --- |
+| Uint8 | Message type  (1) |
+| Uint8 | Connection id |
+| Uint8 | Version |
+| Uint8 | Is inverse connection request |
+| Bytes | Version-dependent data |
+| Uint32 | Ack id |
 
 *Version 2 - 5:*
 
