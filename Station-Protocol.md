@@ -16,7 +16,7 @@
 | 6 | Relay connection request |
 | 7 | Relay connection response |
 
-The [connection request](#connection-request) and [response](#connection-response) contain a version field. The following table shows which version is used by which version of the PIA library.
+Version numbers for [connection request](#connection-request) and [response](#connection-response):
 
 | Version | PIA Version |
 | --- | --- |
