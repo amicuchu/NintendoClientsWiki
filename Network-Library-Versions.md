@@ -1,4 +1,4 @@
-Unfortunately, there are many different versions of [NEX](NEX-Overview-(Game-Servers)) and [PIA](PIA-Overview) with small changes to the protocols. This page lists which versions are used by games, and whether the game has debug symbols.
+Unfortunately, there are many different versions of [NEX](NEX-Overview-(Game-Servers)) and [PIA](PIA-Overview) with small changes to the protocols, and some games even implement their own services and methods. This page lists which library versions are used by games, and which games have debug symbols.
 
 * MM = Match Making
 * DS = Data Store
