@@ -26,34 +26,29 @@
 | Bytes | Version-dependent data |
 | Uint32 | Ack id |
 
-*Version 2 (3.6):*
+| Version | PIA Version |
+| --- | --- |
+| 2 | 3.6 |
+| 3 | 3.9 - 3.10 |
+| 5 | 4.8 - 4.10 |
+| 7 | 5.2 - 5.3 |
+| 8 | 5.9 |
+| 9 | 5.10 - 5.18 |
+
+*Version 2 - 5:*
+
 | Type | Description |
 | --- | --- |
 | [StationConnectionInfo] | Station connection info |
 
-*Version 3 (3.10):*
-
-| Type | Description |
-| --- | --- |
-| [StationConnectionInfo] | Station connection info |
-
-*Version 7 (5.0 - 5.2):*
-
-| Type | Description |
-| --- | --- |
-| Uint64 | NEX principal id (pid) |
-| [StationConnectionInfo] | Station connection info |
-
-*Version 8 (5.9):*
+*Version 7:*
 
 | Type | Description |
 | --- | --- |
 | Uint64 | NEX principal id (pid) |
-| Uint32 | NEX connection id (cid) |
-| Uint8 | Inverse connection id |
 | [StationConnectionInfo] | Station connection info |
 
-*Version 9 (5.18):*
+*Version 8 and 9:*
 
 | Type | Description |
 | --- | --- |
