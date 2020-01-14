@@ -140,7 +140,7 @@ Each attribute list may contain up to 20 attributes. Every attribute is stored a
 | 0x0 | 1 | Role |
 | 0x1 | 1 | Username encoding type (1=utf8, 2=utf16) |
 | 0x2 | 40 | Username |
-| 0x2A | 8 | User pid |
+| 0x2A | 8 | Station id |
 
 ### System Communication Version
 | Version | PIA Version |
