@@ -90,7 +90,7 @@ Each attribute list may contain up to 20 attributes. Every attribute is stored a
 | Uint16 | Minimum number of participants |
 | Uint16 | Maximum number of participants |
 
-*In PIA version 5.2:*
+*Up to PIA version 5.2:*
 
 | Type | Description |
 | --- | --- |
@@ -111,7 +111,26 @@ Each attribute list may contain up to 20 attributes. Every attribute is stored a
 | Bytes (0x180) | Application data |
 | Uint32 | Application data size |
 | Bool | Is opened |
+
+*Up to PIA version 5.9:*
+
+| Type | Description |
+| --- | --- |
 | [StationLocation](PIA-Types#stationlocation) | Host address |
+
+*In PIA version 5.10 and later:*
+
+| Type | Description |
+| --- | --- |
+| [StationAddress](PIA-Types#stationaddress) | Host address |
+| [PID](NEX-Common-Types#pid) | Host pid |
+| Uint32 | Host cid |
+| Uint32 | Host rvcid |
+
+*In any PIA version:*
+
+| Type | Description |
+| --- | --- |
 | [LanStationInfo](#lanstationinfo) (x16) | Station info of every player in the room |
 | Bytes (0x20) | Session param. *Only present in PIA version 5.9 and later.* |
 
