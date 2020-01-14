@@ -3,7 +3,7 @@ These packets are sent directly from one console to another, with no server in b
 All packets consist of an unencrypted [header](#header), which is followed by one or more [messages](#messages), and sometimes a [packet signature](#encryption).
 
 ## Header
-*Wii U:*
+*Wii U and Switch (up to 5.3):*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -14,7 +14,7 @@ All packets consist of an unencrypted [header](#header), which is followed by on
 | 0x8 | 2 | [Session timer](#rtt-calculation) |
 | 0xA | 2 | [RTT timer](#rtt-calculation) |
 
-*Switch (up to 5.10):*
+*Switch (5.9 and 5.10):*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -158,15 +158,17 @@ Packets are encrypted and signed with the session key.
 | LDN | ? |
 | LAN | First 16 bytes of the HMAC-SHA256 of the slightly modified [session param](LAN-Protocol#lansessioninfo) (the last byte is incremented by 1), with the same game-specific key that's used for the [crypto challenge](LAN-Protocol#crypto-challenge). |
 
-### Wii U
+**Wii U and Switch (up to 5.3):**
+
 If encryption is enabled, the [messages](#messages) are encrypted with AES-ECB. The packet signature is the HMAC of the whole packet (including the [header](#header)). The packet signature is always present, even if encryption is disabled.
 
-### Switch
+**Switch (5.9 and later):**
+
 If encryption is enabled, the [messages](#messages) are encrypted with AES-GCM. The messages are padded with 0xFF before encryption such that their combined size is a multiple of 16 bytes. The authentication tag is stored in the [header](#header). No other signature is appended to the packet.
 
 The nonce depends on the network type and is generated as follows:
 
-**NEX:**
+*NEX:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -174,7 +176,7 @@ The nonce depends on the network type and is generated as follows:
 | 0x1 | 3 | `gathering_id & 0xFFFFFF` |
 | 0x4 | 8 | Nonce from [header](#header) |
 
-**LDN:**
+*LDN:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -182,7 +184,7 @@ The nonce depends on the network type and is generated as follows:
 | 0x3 | 1 | [Connection id](#header) |
 | 0x4 | 8 | Nonce from [header](#header) |
 
-**LAN:**
+*LAN:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
