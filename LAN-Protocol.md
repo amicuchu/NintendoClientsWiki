@@ -26,7 +26,6 @@ This packet is sent through UDP broadcast port 30000.
 
 A crypto challenge was introduced somewhere between PIA 5.4 and 5.9:
 
-
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x23F | 0x12A | [Crypto challenge](#crypto-challenge) |
@@ -50,7 +49,7 @@ A crypto challenge was introduced somewhere between PIA 5.4 and 5.9:
 | 0x236 | 4 | [Validity flags](#validity-flags) |
 
 #### Validity flags
-These flags indicate which fields have a valid value set.
+These flags indicate which fields are compared against the active session to determine if there is a match.
 
 | Mask | Description |
 | --- | --- |
