@@ -126,7 +126,10 @@ Each attribute list may contain up to 20 attributes. Every attribute is stored a
 ### System Communication Version
 | Version | PIA Version |
 | --- | --- |
-
+| 0 | 5.3 |
+| 5 | 5.9 |
+| 6 | 5.10 |
+| 7 | 5.11 - 5.18 |
 
 ## Crypto Challenge
 The [browse request](#0-browse-request) contains a cryptographic challenge that must be correctly answered in the [browse reply](#1-browse-reply). Both the challenge and the response have the following format:
