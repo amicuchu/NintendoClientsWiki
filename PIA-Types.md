@@ -34,8 +34,6 @@
 ## StationLocation
 This structure holds fields that are directly taken from a [StationURL](NEX-Common-Types#station-url).
 
-#### PIA version < 5.18.0
-
 | Type | Description |
 | --- | --- |
 | [StationAddress](#stationaddress) | Station address |
@@ -50,14 +48,6 @@ This structure holds fields that are directly taken from a [StationURL](NEX-Comm
 | Uint8 | type |
 | Uint8 | probeinit |
 | [InetAddress](#inetaddress) | Relay address. *Only present on Nintendo Switch.* |
-
-#### PIA version >= 5.18.0
-| Type | Description |
-| --- | --- |
-| [StationAddress](#stationaddress) | Station address |
-| [PID](NEX-Common-Types#pid) | PID |
-| Uint32 | CID |
-| Uint32 | RVCID |
 
 ## StationAddress
 | Type | Description |
