@@ -23,6 +23,12 @@ This packet is sent through UDP broadcast port 30000.
 | 0x0 | 1 | Packet type (0) |
 | 0x1 | 4 | Size of search criteria (0x23A) |
 | 0x5 | 0x23A | [LanSessionSearchCriteria](#lansessionsearchcriteria) |
+
+A crypto challenge was introduced somewhere between PIA 5.4 and 5.9:
+
+
+| Offset | Size | Description |
+| --- | --- | --- |
 | 0x23F | 0x12A | [Crypto challenge](#crypto-challenge) |
 
 ### LanSessionSearchCriteria
