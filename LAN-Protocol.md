@@ -89,15 +89,31 @@ Each attribute list may contain up to 20 attributes. Every attribute is stored a
 | Uint16 | Current number of participants |
 | Uint16 | Minimum number of participants |
 | Uint16 | Maximum number of participants |
-| Uint8 | System communication version |
+
+*In PIA version 5.2:*
+
+| Type | Description |
+| --- | --- |
+| Uint32 | Session type |
+
+*In PIA version 5.3 and later:*
+
+| Type | Description |
+| --- | --- |
+| Uint8 | [System communication version](#system-communication-version) |
 | Uint8 | Application communication version |
 | Uint16 | Session type |
+
+*In any PIA version:*
+
+| Type | Description |
+| --- | --- |
 | Bytes (0x180) | Application data |
 | Uint32 | Application data size |
 | Bool | Is opened |
 | [StationLocation](PIA-Types#stationlocation) | Host address |
 | [LanStationInfo](#lanstationinfo) (x16) | Station info of every player in the room |
-| Bytes (0x20) | Session param |
+| Bytes (0x20) | Session param. *Only present in PIA version 5.9 and later.* |
 
 #### LanStationInfo
 | Offset | Size | Description |
@@ -106,6 +122,11 @@ Each attribute list may contain up to 20 attributes. Every attribute is stored a
 | 0x1 | 1 | Username encoding type (1=utf8, 2=utf16) |
 | 0x2 | 40 | Username |
 | 0x2A | 8 | Station id |
+
+### System Communication Version
+| Version | PIA Version |
+| --- | --- |
+
 
 ## Crypto Challenge
 The [browse request](#0-browse-request) contains a cryptographic challenge that must be correctly answered in the [browse reply](#1-browse-reply). Both the challenge and the response have the following format:
