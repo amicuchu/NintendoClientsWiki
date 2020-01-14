@@ -49,7 +49,7 @@ This structure holds fields that are directly taken from a [StationURL](NEX-Comm
 | Uint8 | natf |
 | Uint8 | type |
 | Uint8 | probeinit |
-| [InetAddress](#inetaddress) | Relay address |
+| [InetAddress](#inetaddress) | Relay address. *Only present on Nintendo Switch.* |
 
 #### PIA version >= 5.18.0
 | Type | Description |
@@ -66,7 +66,7 @@ This structure holds fields that are directly taken from a [StationURL](NEX-Comm
 | Uint16 | Extension id. *Only present on Wii U.* |
 
 ## InetAddress
-A new encoding was introduced somewhere between PIA 5.15 and 5.17 that's capable of representing IPv6 addresses.
+A new encoding was introduced in PIA 5.11 that's capable of representing IPv6 addresses.
 
 #### Old version
 This structure can only represent IPv4 addresses.
