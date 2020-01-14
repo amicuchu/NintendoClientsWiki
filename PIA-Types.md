@@ -60,15 +60,10 @@ This structure holds fields that are directly taken from a [StationURL](NEX-Comm
 | Uint32 | RVCID |
 
 ## StationAddress
-| Offset | Size | Description |
-| --- | --- | --- |
-| 0x0 | 6 | [InetAddress](#inetaddress) |
-
-Only present in some games:
-
-| Offset | Size | Description |
-| --- | --- | --- |
-| 0x6 | 2 | Extension id |
+| Type | Description |
+| --- | --- |
+| [InetAddress](#inetaddress) | Address |
+| Uint16 | Extension id. *Only present on Wii U.* |
 
 ## InetAddress
 A new encoding was introduced somewhere between PIA 5.15 and 5.17 that's capable of representing IPv6 addresses.
