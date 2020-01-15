@@ -66,8 +66,8 @@ These flags indicate which fields are compared against the active session to det
 #### Range
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 2 | Minimum |
-| 0x2 | 2 | Maximum |
+| 0x0 | 2 | Maximum |
+| 0x2 | 2 | Minimum |
 
 #### Attribute list
 Each attribute list may contain up to 20 attributes. Every attribute is stored as a 4-byte integer.
