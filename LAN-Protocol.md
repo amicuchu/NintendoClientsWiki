@@ -13,10 +13,10 @@ Every packet starts with a single byte that indicates its type.
 | 4 | Get host reply |
 | 5 | Get session request |
 | 6 | Get session reply |
-| 7 | Keep alive message |
+| 7 | [Keep alive message](#7-keep-alive-message) |
 
 ## (0) Browse Request
-This packet is sent through UDP broadcast port 30000.
+This packet is sent through UDP broadcast port 30000. It is sent in plain text, and is not encapsulated in a [PIA packet](PIA-Protocol).
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -73,6 +73,8 @@ These flags indicate which fields are compared against the active session to det
 Each attribute list may contain up to 20 attributes. Every attribute is stored as a 4-byte integer.
 
 ## (1) Browse reply
+This packet is sent to the source of the [browse request](#browse-request) in plain text, and is not encapsulated in a [PIA packet](PIA-Protocol).
+
 | Type | Description |
 | --- | --- |
 | Uint8 | Packet type (1) |
@@ -149,6 +151,14 @@ Each attribute list may contain up to 20 attributes. Every attribute is stored a
 | 5 | 5.9 |
 | 6 | 5.10 |
 | 7 | 5.11 - 5.18 |
+
+## (7) Keep Alive Message
+This packet is sent through UDP broadcast ports 49152 and is encapsulated in a [PIA message](PIA-Protocol). The message payload contains the following data and is not encrypted:
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 1 | Message type (7) |
+| 0x1 | 11 | Padding (always 0) |
 
 ## Crypto Challenge
 The [browse request](#0-browse-request) contains a cryptographic challenge that must be correctly answered in the [browse reply](#1-browse-reply). Both the challenge and the response have the following format:
