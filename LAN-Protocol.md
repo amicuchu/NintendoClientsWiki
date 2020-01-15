@@ -171,7 +171,7 @@ This packet is sent through UDP broadcast ports 49152 - 49155 and is encapsulate
 | 0xC | 4 | Session id |
 
 ## (7) Keep Alive Message
-This packet is sent through UDP broadcast port 49152 and is encapsulated in a [PIA message](PIA-Protocol). The message payload contains the following data and is not encrypted:
+This packet is sent through UDP broadcast port 49152 and is encapsulated in a [PIA message](PIA-Protocol). The message payload contains the following data:
 
 | Offset | Size | Description |
 | --- | --- | --- |
