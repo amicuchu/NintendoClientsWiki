@@ -9,9 +9,9 @@ Every packet starts with a single byte that indicates its type.
 | --- | --- |
 | 0 | [Browse request](#0-browse-request) |
 | 1 | [Browse reply](#1-browse-reply) |
-| 3 | Get host request |
+| 3 | [Get host request](#3-get-host-request) |
 | 4 | Get host reply |
-| 5 | Get session request |
+| 5 | [Get session request](#5-get-session-request) |
 | 6 | Get session reply |
 | 7 | [Keep alive message](#7-keep-alive-message) |
 
@@ -152,8 +152,26 @@ This packet is sent to the source of the [browse request](#browse-request) in pl
 | 6 | 5.10 |
 | 7 | 5.11 - 5.18 |
 
+## (3) Get Host Request
+This packet is sent through UDP broadcast ports 49152 - 49155 and is encapsulated in a [PIA message](PIA-Protocol). The message payload contains the following data and is encrypted with the session key:
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 1 | Message type (3) |
+| 0x1 | 11 | Padding (always 0) |
+| 0xC | 4 | Session id |
+
+## (5) Get Session Request
+This packet is sent through UDP broadcast ports 49152 - 49155 and is encapsulated in a [PIA message](PIA-Protocol). The message payload contains the following data and is encrypted with the session key:
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 1 | Message type (5) |
+| 0x1 | 11 | Padding (always 0) |
+| 0xC | 4 | Session id |
+
 ## (7) Keep Alive Message
-This packet is sent through UDP broadcast ports 49152 and is encapsulated in a [PIA message](PIA-Protocol). The message payload contains the following data and is not encrypted:
+This packet is sent through UDP broadcast port 49152 and is encapsulated in a [PIA message](PIA-Protocol). The message payload contains the following data and is not encrypted:
 
 | Offset | Size | Description |
 | --- | --- | --- |
