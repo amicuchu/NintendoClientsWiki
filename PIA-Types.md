@@ -66,6 +66,23 @@ This structure holds fields that are directly taken from a [StationURL](NEX-Comm
 | Uint8 | probeinit |
 | Uint8 | Is local |
 
+*Switch (5.11 and later):*
+
+| Type | Description |
+| --- | --- |
+| Uint8 | Size of public address |
+| Uint8 | Size of local address |
+| [InetAddress](#inetaddress) | Public address (encoding depends on size) |
+| [InetAddress](#inetaddress) | Local address (encoding depends on size) |
+| [InetAddress](#inetaddress) | Relay address (old encoding) |
+| [PID](NEX-Common-Types#pid) | PID |
+| Uint32 | CID |
+| Uint32 | RVCID |
+| Uint8 | `0x3`: natf<br>`0xC`: natm |
+| Uint8 | type |
+| Uint8 | probeinit |
+| Uint8 | Is local |
+
 ## StationAddress
 | Type | Description |
 | --- | --- |
@@ -73,7 +90,7 @@ This structure holds fields that are directly taken from a [StationURL](NEX-Comm
 | Uint16 | Extension id. *Only present on Wii U.* |
 
 ## InetAddress
-A new encoding was introduced in PIA 5.11 that's capable of representing IPv6 addresses.
+A new encoding was introduced in PIA 5.11 that's capable of representing IPv6 addresses. Even in games using PIA 5.11 or later, sometimes the old encoding is still used. Which encoding is used depends on the context.
 
 #### Old version
 This structure can only represent IPv4 addresses.
