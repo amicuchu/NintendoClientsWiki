@@ -34,6 +34,8 @@
 ## StationLocation
 This structure holds fields that are directly taken from a [StationURL](NEX-Common-Types#station-url).
 
+*Wii U and Switch (up to 5.9):*
+
 | Type | Description |
 | --- | --- |
 | [StationAddress](#stationaddress) | Station address |
@@ -48,6 +50,20 @@ This structure holds fields that are directly taken from a [StationURL](NEX-Comm
 | Uint8 | type |
 | Uint8 | probeinit |
 | [InetAddress](#inetaddress) | Relay address. *Only present on Nintendo Switch.* |
+
+*Switch (5.10):*
+| Type | Description |
+| --- | --- |
+| [InetAddress](#inetaddress) | Public address |
+| [InetAddress](#inetaddress) | Local address |
+| [InetAddress](#inetaddress) | Relay address |
+| [PID](NEX-Common-Types#pid) | PID |
+| Uint32 | CID |
+| Uint32 | RVCID |
+| Uint8 | `0x3`: natf<br>`0xC`: natm |
+| Uint8 | type |
+| Uint8 | probeinit |
+| Uint8 | Is local |
 
 ## StationAddress
 | Type | Description |
