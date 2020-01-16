@@ -134,7 +134,9 @@ This packet is sent to the source of the [browse request](#browse-request) in pl
 | Type | Description |
 | --- | --- |
 | [LanStationInfo](#lanstationinfo) (x16) | Station info of every player in the room |
-| Bytes (0x20) | Session param. *Only present in PIA version 5.9 and later.* |
+
+*In PIA 5.9 and later:*
+| Bytes (0x20) | Session param. This is used to derive the session key. |
 
 #### LanStationInfo
 | Offset | Size | Description |
@@ -169,7 +171,7 @@ This message is encapsulated in a [PIA message](PIA-Protocol) and is encrypted w
 | 0x0 | 1 | Message type (4) |
 | 0x1 | 11 | Padding (always 0) |
 | 0xC | 4 | Session id |
-| 0x10 | | [StationConnectionInfo](PIA-Types#stationconnectioninfo) for host |
+| 0x10 | | [StationConnectionInfo](PIA-Types#stationconnectioninfo) (up to PIA 5.9) or [StationLocation](PIA-Types#stationlocation) (PIA 5.10 and later) for host |
 
 ## (5) Get Session Request
 This packet is sent through UDP broadcast ports 49152 - 49155 and is encapsulated in a [PIA message](PIA-Protocol). The message payload contains the following data and is encrypted with the session key:
