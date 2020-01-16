@@ -12,7 +12,7 @@ Every packet starts with a single byte that indicates its type.
 | 3 | [Get host request](#3-get-host-request) |
 | 4 | Get host reply |
 | 5 | [Get session request](#5-get-session-request) |
-| 6 | Get session reply |
+| 6 | [Get session reply](#6-get-session-reply) |
 | 7 | [Keep alive message](#7-keep-alive-message) |
 
 ## (0) Browse Request
@@ -169,6 +169,20 @@ This packet is sent through UDP broadcast ports 49152 - 49155 and is encapsulate
 | 0x0 | 1 | Message type (5) |
 | 0x1 | 11 | Padding (always 0) |
 | 0xC | 4 | Session id |
+
+## (6) Get Session Reply
+This message is encapsulated in a [PIA message](PIA-Protocol). The goal of this message is to transmit a [LanSessionInfo](#lansessioninfo) structure. Depending on the size of the [LanSessionInfo](#lansessioninfo), this message may be split into multiple fragments. Each fragment contains up to 800 bytes of data.
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 1 | Message type (6) |
+| 0x1 | 11 | Padding (always 0) |
+| 0xC | 4 | This is a random value that must be the same in all fragments that belong to the same session reply. This is used to distinguish different session replies. |
+| 0x10 | 2 | Session reply id. This is an incrementing number that should be the same in all fragments that belong to the same session reply. |
+| 0x12 | 1 | Fragment index |
+| 0x13 | 1 | Number of fragments |
+| 0x14 | 4 | Fragment size |
+| 0x18 | | Fragment data |
 
 ## (7) Keep Alive Message
 This packet is sent through UDP broadcast port 49152 and is encapsulated in a [PIA message](PIA-Protocol). The message payload contains the following data:
