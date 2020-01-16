@@ -52,6 +52,7 @@ This structure holds fields that are directly taken from a [StationURL](NEX-Comm
 | [InetAddress](#inetaddress) | Relay address. *Only present on Nintendo Switch.* |
 
 *Switch (5.10):*
+
 | Type | Description |
 | --- | --- |
 | [InetAddress](#inetaddress) | Public address |
