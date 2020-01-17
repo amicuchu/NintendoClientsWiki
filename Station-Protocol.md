@@ -88,7 +88,7 @@ Only present if result is OK:
 | --- | --- |
 | 0 | OK |
 | 1 | Connection denied |
-| 2 | Connection denied |
+| 2 | Incompatible version |
 
 # Disconnection request
 | Offset | Size | Description |
