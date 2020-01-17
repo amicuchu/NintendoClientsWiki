@@ -137,6 +137,8 @@ This packet is sent to the source of the [browse request](#browse-request) in pl
 
 *In PIA 5.9 and later:*
 
+| Type | Description |
+| --- | --- |
 | Bytes (0x20) | Session param. This is used to derive the session key. |
 
 #### LanStationInfo
