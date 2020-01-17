@@ -37,9 +37,9 @@ After acquiring the [StationLocation](PIA-Types#stationlocation) of another cons
 
 1. If necessary, [NAT traversal](#nat-traversal) is performed.
 2. Your console sends a [connection request](Station-Protocol#connection-request) to the other console.
-3. The other console [acknowledges](Station-Protocol#ack) the request and decides if it wants to accept the request.
-4. The other console sends a [connection response](Station-Protocol#connection-response) to your console to inform it about its decision.
-5. If the connection request was accepted, your console acknowledges the response and the connection has been established.
+3. If the other console does not want to accept the request, it sends a denying [connection response](Station-Protocol#connection-response) to your console. Otherwise, it [acknowledges](Station-Protocol#ack) the request and sends an inverse connection request to your console.
+4. If your console does not want to accept the inverse connection request for some reason, it sends a denying connection response to the other console. Otherwise, it acknowledges the request and sends a connection response to the other console.
+5. The other console sends a connection response to your console.
 
 ### NAT traversal
 If NEX is used for matchmaking it is often necessary to perform NAT traversal. This is not necessary in LDN and LAN mode, because the consoles are already on the same network in these modes.
