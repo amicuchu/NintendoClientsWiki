@@ -69,19 +69,16 @@ Version numbers for [connection request](#connection-request) and [response](#co
 | [StationLocation] | Station location |
 
 # Connection response
-| Offset | Size | Description |
-| --- | --- | --- |
-| 0x0 | 1 | Message type |
-| 0x1 | 1 | [Result](#connection-result) |
-| 0x2 | 1 | Version |
-| 0x3 | 1 | Unknown |
 
-Only present if result is OK:
-
-| Offset | Size | Description |
-| --- | --- | --- |
-| 0x4 | 66 | [IdentificationInfo] |
-| 0x46 | 4 | Ack id |
+| Type | Description |
+| --- | --- |
+| Uint8 | Message type (2) |
+| Uint8 | [Result](#connection-result) |
+| Uint8 | Version |
+| Uint8 | `0`: The connection request is denied<br>`3`: The connection request is accepted (Wii U)<br>`4`: The connection request is accepted (Switch) |
+| | Version-dependent data |
+| [IdentificationInfo] | Identification info. *Only present if the connection request was accepted.* |
+| Uint32 | Ack id. *Only present if the connection request was accepted.* |
 
 ### Connection result
 | Value | Description |
