@@ -50,7 +50,7 @@ Version numbers for [connection request](#connection-request) and [response](#co
 | Uint64 | NEX principal id (pid) |
 | [StationConnectionInfo] | Station connection info |
 
-*Version 8 and 9:*
+*Version 8:*
 
 | Type | Description |
 | --- | --- |
@@ -58,6 +58,15 @@ Version numbers for [connection request](#connection-request) and [response](#co
 | Uint32 | NEX connection id (cid) |
 | Uint8 | Inverse connection id |
 | [StationConnectionInfo] | Station connection info |
+
+*Version 9:*
+
+| Type | Description |
+| --- | --- |
+| Uint64 | NEX principal id (pid) |
+| Uint32 | NEX connection id (cid) |
+| Uint8 | Inverse connection id |
+| [StationLocation] | Station location |
 
 # Connection response
 | Offset | Size | Description |
