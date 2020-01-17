@@ -108,4 +108,5 @@ Only present if result is OK:
 | 0x4 | 4 | Ack id |
 
 [StationConnectionInfo]: PIA-Types#stationconnectioninfo
+[StationLocation]: PIA-Types#stationlocation
 [IdentificationInfo]: PIA-Types#identificationinfo
