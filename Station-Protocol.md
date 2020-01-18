@@ -9,9 +9,9 @@
 | Message Type | Description |
 | --- | --- |
 | 1 | [Connection request](#connection-request) |
-| 2 | [Connection response](#connection-response) |
+| 2 | [Connection response (denying)](#connection-response-denying)<br>[Connection response (accepted)](#connection-response-accepted) |
 | 3 | [Disconnection request](#disconnection-request) |
-| 4 | [Disconenction response](#disconnection-response) |
+| 4 | [Disconnection response](#disconnection-response) |
 | 5 | [Ack](#ack) |
 | 6 | Relay connection request |
 | 7 | Relay connection response |
@@ -68,19 +68,47 @@ Version numbers for [connection request](#connection-request) and [response](#co
 | Uint8 | Inverse connection id |
 | [StationLocation] | Station location |
 
-# Connection response
+# Connection response (denying)
+
+| Type | Description |
+| --- | --- |
+| Uint8 | Message type (2) |
+| Uint8 | [Reason](#connection-result) |
+| Uint8 | Version |
+| Uint8 | Always 0 |
+
+*Only present in version 8 and 9:*
+
+| Type | Description |
+| --- | --- |
+| Uint8 | Always 0 |
+| Uint64 | NEX principal id (pid) |
+| Uint32 | NEX connection id (cid) |
+
+### Connection result
+| Value | Description |
+| --- | --- |
+| 1 | Connection denied |
+| 2 | Incompatible version |
+
+# Connection response (accepted)
 
 | Type | Description |
 | --- | --- |
 | Uint8 | Message type (2) |
 | Uint8 | [Result](#connection-result) |
 | Uint8 | Version |
-| Uint8 | `0`: The connection request is denied<br>`3`: The connection request is accepted (Wii U)<br>`4`: The connection request is accepted (Switch) |
+| Uint8 | Always 3 on Wii U, and 4 on Switch. |
 | | Version-dependent data |
-| [IdentificationInfo] | Identification info. *Only present if the connection request was accepted.* |
 | Uint32 | Ack id. *Only present if the connection request was accepted.* |
 
-*Up to version 7:* No additional data
+*Version 2 - 5:*
+| Type | Description |
+| --- | --- |
+| Char[32] | Identification token (ascii) |
+| Char[32] | Name (utf16-be) |
+| Uint8 | Name length |
+| Uint8 | Unknown |
 
 *Version 8 and 9:*
 
@@ -89,13 +117,6 @@ Version numbers for [connection request](#connection-request) and [response](#co
 | Uint8 | Unknown |
 | Uint64 | NEX principal id (pid) |
 | Uint32 | NEX connection id (cid) |
-
-### Connection result
-| Value | Description |
-| --- | --- |
-| 0 | OK |
-| 1 | Connection denied |
-| 2 | Incompatible version |
 
 # Disconnection request
 | Offset | Size | Description |
