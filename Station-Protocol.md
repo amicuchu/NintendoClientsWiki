@@ -103,6 +103,7 @@ Version numbers for [connection request](#connection-request) and [response](#co
 | Uint32 | Ack id. *Only present if the connection request was accepted.* |
 
 *Version 2 - 5:*
+
 | Type | Description |
 | --- | --- |
 | Char[32] | Identification token (ascii) |
