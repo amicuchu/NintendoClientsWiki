@@ -100,16 +100,20 @@ Version numbers for [connection request](#connection-request) and [response](#co
 | Uint8 | Version |
 | Uint8 | Always 3 on Wii U, and 4 on Switch. |
 | | Version-dependent data |
-| Uint32 | Ack id. *Only present if the connection request was accepted.* |
+| Uint32 | Ack id |
 
 *Version 2 - 5:*
 
 | Type | Description |
 | --- | --- |
-| Uint8[32] | Identification token (ascii) |
-| Uint16[32] | Name (utf16-be) |
+| Uint8 (x32) | Identification token (ascii) |
+| Uint16 (x16) | Name (utf16-be) |
 | Uint8 | Name length |
 | Uint8 | Unknown |
+
+*Version 7:*
+| Type | Description |
+| --- | --- |
 
 *Version 8 and 9:*
 
