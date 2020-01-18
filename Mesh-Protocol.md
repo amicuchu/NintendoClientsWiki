@@ -52,7 +52,7 @@ If the join response is too big to be sent in a single packet it is split into f
 
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 1 | Message type |
+| 0x0 | 1 | Message type (2) |
 | 0x1 | 1 | Number of stations |
 | 0x2 | 1 | Host index |
 | 0x3 | 1 | Index of joining station |
@@ -66,7 +66,7 @@ If the join response is too big to be sent in a single packet it is split into f
 # Join response (denying)
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 1 | Message type |
+| 0x0 | 1 | Message type (2) |
 | 0x1 | 1 | Always 0 |
 | 0x2 | 1 | Always 0xFF |
 | 0x3 | 1 | Always 0xFF |
