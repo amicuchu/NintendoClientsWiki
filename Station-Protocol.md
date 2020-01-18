@@ -80,6 +80,16 @@ Version numbers for [connection request](#connection-request) and [response](#co
 | [IdentificationInfo] | Identification info. *Only present if the connection request was accepted.* |
 | Uint32 | Ack id. *Only present if the connection request was accepted.* |
 
+*Up to version 7:* No additional data
+
+*Version 8 and 9:*
+
+| Type | Description |
+| --- | --- |
+| Uint8 | Unknown |
+| Uint64 | NEX principal id (pid) |
+| Uint32 | NEX connection id (cid) |
+
 ### Connection result
 | Value | Description |
 | --- | --- |
