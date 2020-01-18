@@ -29,13 +29,23 @@
 | 0x81 | Relay route directions |
 
 # Join request
-| Offset | Size | Description |
-| --- | --- | --- |
-| 0x0 | 1 | Message type |
-| 0x1 | 1 | Station index |
-| 0x2 | 2 | Padding |
-| 0x4 | 8 | [StationAddress] |
-| 0xC | 4 | Ack id |
+*Wii U and Switch (up to 5.10):*
+
+| Type | Description |
+| --- | --- |
+| Uint8 | Message type (1) |
+| Uint8 | Station index |
+| Uint16 | Padding (always 0) |
+| [StationAddress] | Station address |
+| Uint32 | Ack id |
+
+*Switch (5.11 and later):*
+
+| Type | Description |
+| --- | --- |
+| Uint8 | Message type (1) |
+| Uint8 | Station index |
+| Uint32 | Ack id |
 
 # Join response (success)
 If the join response is too big to be sent in a single packet it is split into fragments.
