@@ -115,13 +115,26 @@ Version numbers for [connection request](#connection-request) and [response](#co
 
 | Type | Description |
 | --- | --- |
-| Uint8 | Identification info mode |
+| Uint8 | Unknown (0, 1 or 2) |
 | Uint64 | NEX principal id (pid). *Only present in version 8 and 9.* |
 | Uint32 | NEX connection id (cid). *Only present in version 8 and 9.* |
 | Uint8 (x32) | Identification token (ascii) |
-| Uint32 | Unknown |
+| Uint32 | Session id |
 | Uint8 | Number of players |
-| Uint8 | Number of participants |
+| Uint8 | Number of participants. This is either 1 or equal to the number of players, depending on whether each player should count as a participant in the session. |
+| Uint8 | Number of player infos |
+| | [Player infos](#player-info) |
+
+### Player info
+| Type | Description |
+| --- | --- |
+| Bytes (80) | Player name |
+| Uint8 | Player name encoding (1=utf8, 2=utf16) |
+| Bytes (40) | Account name |
+| Uint8 | Account name encoding (1=utf8, 2=utf16) |
+| Uint8 | Language |
+| Bytes (64) | Play history registration key |
+| Uint64 | Unknown |
 
 # Disconnection request
 | Offset | Size | Description |
