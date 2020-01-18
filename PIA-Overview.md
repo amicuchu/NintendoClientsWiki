@@ -37,8 +37,8 @@ After acquiring the [StationLocation](PIA-Types#stationlocation) of another cons
 
 1. If necessary, [NAT traversal](#nat-traversal) is performed.
 2. Your console sends a [connection request](Station-Protocol#connection-request) to the other console.
-3. If the other console does not want to accept the request, it sends a denying [connection response](Station-Protocol#connection-response) to your console. Otherwise, it [acknowledges](Station-Protocol#ack) the request and sends an inverse connection request to your console.
-4. If your console does not want to accept the inverse connection request for some reason, it sends a denying connection response to the other console. Otherwise, it acknowledges the request and sends a connection response to the other console.
+3. If the other console does not want to accept the request, it sends a [denying connection response](Station-Protocol#connection-response-denying) to your console. Otherwise, it [acknowledges](Station-Protocol#ack) the request and sends an inverse connection request to your console.
+4. If your console does not want to accept the inverse connection request for some reason, it sends a denying connection response to the other console. Otherwise, it acknowledges the request and sends a [connection response](Station-Protocol#connection-response-accepted) to the other console.
 5. The other console sends a connection response to your console.
 
 ### NAT traversal
