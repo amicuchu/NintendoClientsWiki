@@ -109,19 +109,19 @@ Version numbers for [connection request](#connection-request) and [response](#co
 | Uint8 (x32) | Identification token (ascii) |
 | Uint16 (x16) | Name (utf16-be) |
 | Uint8 | Name length |
-| Uint8 | Unknown |
+| Uint8 | Language |
 
-*Version 7:*
-| Type | Description |
-| --- | --- |
-
-*Version 8 and 9:*
+*Version 7 - 9:*
 
 | Type | Description |
 | --- | --- |
-| Uint8 | Unknown |
-| Uint64 | NEX principal id (pid) |
-| Uint32 | NEX connection id (cid) |
+| Uint8 | Identification info mode |
+| Uint64 | NEX principal id (pid). *Only present in version 8 and 9.* |
+| Uint32 | NEX connection id (cid). *Only present in version 8 and 9.* |
+| Uint8 (x32) | Identification token (ascii) |
+| Uint32 | Unknown |
+| Uint8 | Number of players |
+| Uint8 | Number of participants |
 
 # Disconnection request
 | Offset | Size | Description |
