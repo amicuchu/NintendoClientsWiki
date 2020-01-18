@@ -106,8 +106,8 @@ Version numbers for [connection request](#connection-request) and [response](#co
 
 | Type | Description |
 | --- | --- |
-| Char[32] | Identification token (ascii) |
-| Char[32] | Name (utf16-be) |
+| Uint8[32] | Identification token (ascii) |
+| Uint16[32] | Name (utf16-be) |
 | Uint8 | Name length |
 | Uint8 | Unknown |
 
