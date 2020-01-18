@@ -122,8 +122,8 @@ Version numbers for [connection request](#connection-request) and [response](#co
 | Uint32 | Session id |
 | Uint8 | Number of players |
 | Uint8 | Number of participants. This is either 1 or equal to the number of players, depending on whether each player should count as a participant in the session. |
-| Uint8 | Number of player infos |
-| | [Player infos](#player-info) |
+| Uint8 | Number of non-zero player infos |
+| [Player info](#player-info) (x4) | Player info |
 
 ### Player info
 | Type | Description |
