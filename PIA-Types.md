@@ -3,20 +3,11 @@
 
 | Table of Contents |
 | --- |
-| [IdentificationInfo](#identificationinfo) |
 | [StationInfo](#stationinfo) |
 | [StationConnectionInfo](#stationconnectioninfo) |
 | [StationLocation](#stationlocation) |
 | [StationAddress](#stationaddress) |
 | [InetAddress](#inetaddress) |
-
-## IdentificationInfo
-| Offset | Size | Description |
-| --- | --- | --- |
-| 0x0 | 32 | Identification (ascii) |
-| 0x20 | 32 | Name (utf16-be) |
-| 0x40 | 1 | Name length |
-| 0x41 | 1 | Always 0? |
 
 ## StationInfo
 | Type | Description |
