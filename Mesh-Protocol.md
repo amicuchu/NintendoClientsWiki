@@ -60,7 +60,7 @@ If the join response is too big to be sent in a single packet it is split into f
 | 0x5 | 1 | Fragment index |
 | 0x6 | 1 | Number of station info entries in current fragment |
 | 0x7 | 1 | Base index of info in current fragment |
-| 0x8 | | [StationInfo] entries |
+| 0x8 | | [StationInfo] entries. Each entry is padded such that its size is a multiple of 4 bytes. |
 | | 4 | Ack id |
 
 # Join response (denying)
