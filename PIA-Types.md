@@ -10,9 +10,18 @@
 | [InetAddress](#inetaddress) |
 
 ## StationInfo
+*Wii U and Switch (up to 5.9):*
+
 | Type | Description |
 | --- | --- |
 | [StationConnectionInfo](#stationconnectioninfo) | Connection info |
+| Uint8 | Station index |
+
+*Wii U and Switch (5.10 and later):*
+
+| Type | Description |
+| --- | --- |
+| [StationLocation](#stationlocation) | Connection info |
 | Uint8 | Station index |
 
 ## StationConnectionInfo
