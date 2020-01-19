@@ -16,15 +16,15 @@
 | --- | --- |
 | [StationConnectionInfo](#stationconnectioninfo) | Connection info |
 | Uint8 | Station index |
-| | Padding such that the size becomes a multiple of 4 bytes |
+| Uint8 | Padding |
 
 *Wii U and Switch (5.10 and later):*
 
-| Type | Description |
-| --- | --- |
-| [StationLocation](#stationlocation) | Connection info |
-| Uint8 | Station index |
-| | Padding such that this structure takes up exactly 64 bytes |
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 0x3E | [StationLocation](#stationlocation). If it takes up less than 0x3E bytes the remaining bytes are filled with 0's. |
+| 0x3E | 1 | Station index |
+| 0x3F | 1 | Padding |
 
 ## StationConnectionInfo
 | Type | Description |
