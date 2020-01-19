@@ -16,7 +16,7 @@
 | --- | --- |
 | [StationConnectionInfo](#stationconnectioninfo) | Connection info |
 | Uint8 | Station index |
-| Uint8 | Padding |
+| | Padding such that the size becomes a multiple of 4 bytes. |
 
 *Wii U and Switch (5.10 and later):*
 
