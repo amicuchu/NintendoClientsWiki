@@ -3,18 +3,10 @@
 
 | Table of Contents |
 | --- |
-| [StationInfo](#stationinfo) |
 | [StationConnectionInfo](#stationconnectioninfo) |
 | [StationLocation](#stationlocation) |
 | [StationAddress](#stationaddress) |
 | [InetAddress](#inetaddress) |
-
-## StationInfo
-| Type | Description |
-| --- | --- |
-| [StationConnectionInfo](#stationconnectioninfo) | Connection info |
-| Uint8 | Station index |
-| Uint8 | Padding |
 
 ## StationConnectionInfo
 | Type | Description |
