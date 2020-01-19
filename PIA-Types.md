@@ -14,7 +14,6 @@
 | --- | --- |
 | [StationConnectionInfo](#stationconnectioninfo) | Connection info |
 | Uint8 | Station index |
-| Uint8 | Padding |
 
 ## StationConnectionInfo
 | Type | Description |
