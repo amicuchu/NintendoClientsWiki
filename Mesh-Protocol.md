@@ -50,18 +50,39 @@
 # Join response (success)
 If the join response is too big to be sent in a single packet it is split into fragments.
 
-| Offset | Size | Description |
-| --- | --- | --- |
-| 0x0 | 1 | Message type (2) |
-| 0x1 | 1 | Number of stations |
-| 0x2 | 1 | Host index |
-| 0x3 | 1 | Index of joining station |
-| 0x4 | 1 | Number of fragments |
-| 0x5 | 1 | Fragment index |
-| 0x6 | 1 | Number of station info entries in current fragment |
-| 0x7 | 1 | Base index of info in current fragment |
-| 0x8 | | [StationInfo] entries. Each entry is padded such that its size is a multiple of 4 bytes. |
-| | 4 | Ack id |
+| Type | Description |
+| --- | --- |
+| Uint8 | Message type (2) |
+| Uint8 | Number of stations in mesh |
+| Uint8 | Index of host station |
+| Uint8 | Index of joining station |
+| Uint8 | Number of fragments |
+| Uint8 | Fragment index |
+| Uint8 | Number of station info entries in current fragment (N) |
+| Uint8 | Base index of station info in current fragment |
+| | Version-dependent data |
+| [StationInfo] (xN) | Station info list. Each entry is padded such that its size is a multiple of 4 bytes. |
+| Uint32 | Ack id |
+
+*Wii U (up to 3.10):* No additional data
+
+*Wii U (4.8 and later):*
+
+| Type | Description |
+| --- | --- |
+| Uint8 | Maximum number of stations in first mesh |
+| Uint8 | Maximum number of stations in second mesh |
+| Uint16 | Padding |
+
+*Switch:*
+
+| Type | Description |
+| --- | --- |
+| Uint8 | Maximum number of stations in first mesh |
+| Uint8 | Maximum number of stations in second mesh |
+| Uint8 | Maximum number of stations (total) |
+| Uint8 | Padding |
+| Uint32 | Update counter (incremented on each mesh update) |
 
 # Join response (denying)
 | Offset | Size | Description |
