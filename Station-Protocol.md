@@ -1,11 +1,6 @@
 [[PIA Protocols]] > Station Protocol
 ---
 
-| Protocol Port | Description |
-| --- | --- |
-| 0 | Unreliable |
-| 1 | Reliable |
-
 | Message Type | Description |
 | --- | --- |
 | 1 | [Connection request](#connection-request) |
