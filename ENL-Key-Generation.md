@@ -1,6 +1,4 @@
-ENL is a first-party networking framework on top of [PIA](PIA-Overview) and [NEX](NEX-Overview-(Game-Servers)). ENL also provides functions to generate the game-specific key for the [LAN crypto challenge](LAN-Protocol).
-
-The page describes how the keys are generated. If you are only looking for the keys themselves, check out the page about the [LAN protocol](LAN-Protocol#game-specific-keys).
+The page describes how [ENL](ENL-Protocol) generates the game-specific key for the [LAN protocol](LAN-Protocol). If you are only looking for the keys themselves, check out the page about the [LAN protocol](LAN-Protocol#game-specific-keys).
 
 ### Algorithm
 
