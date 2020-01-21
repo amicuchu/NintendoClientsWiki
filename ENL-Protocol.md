@@ -1,10 +1,8 @@
-ENL is Nintendo's private peer-to-peer framework that uses [PIA](PIA-Overview) and [NEX](NEX-Overview-(Game-Servers)) internally. It is used by many first-party games, such as Mario Kart 8, Splatoon 2 and Super Mario Maker 2.
-
-Check out the pages about [PIA](PIA-Overview) for details on how a peer-to-peer session is set up. Once the session is ready, ENL sends all packets through the [unreliable protocol](Unreliable-Protocol).
+ENL is Nintendo's private peer-to-peer framework that's used by many first-party games, such as Mario Kart 8, Splatoon 2 and Super Mario Maker 2. Check out the pages about [PIA](PIA-Overview) for details on how a peer-to-peer session is set up. Once the session is ready, ENL sends all packets through the [unreliable protocol](Unreliable-Protocol).
 
 To transmit game-data, games can register content transporters to ENL. ENL also implements a few content transporters on its own.
 
-A message consists of one or more records, terminated by a record with type 0xFF.
+A message consists of one or more records, terminated by a record with type 255.
 
 ## Record Header
 | Type | Description |
@@ -15,8 +13,25 @@ A message consists of one or more records, terminated by a record with type 0xFF
 
 | Record Type | Description |
 | --- | --- |
-| 0xFD | System request info |
-| 0xFE | System information |
-| 0xFF | End record |
+| 0 - 31 | Game-specific |
+| 253 | [System request info](#system-request-info) |
+| 254 | System information |
+| 255 | End record |
 
-Other record types may be implemented by game-specific content transporters.
+## System request info
+Clients can use this to request a specific record from another client. Every non-zero bit in the record mask indicates a record type that the client wants to receive. The least significant bit represents record type 0, and the most significant bit represents record type 31.
+
+On the Switch, a new field was added that lets a client request a system-record. Here, bit 0 represents record type 253, and bit 1 represents record type 254.
+
+*Wii U:*
+
+| Type | Description |
+| --- | --- |
+| Uint32 | Record mask (games) |
+
+*Switch:*
+
+| Type | Description |
+| --- | --- |
+| Uint32 | Record mask (games) |
+| Uint32 | Record mask (system) |
