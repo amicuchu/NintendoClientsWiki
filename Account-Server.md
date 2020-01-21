@@ -3,6 +3,8 @@
 
 The account server takes form-encoded requests and responds with an XML body.
 
+The XML-encoding is not consistent between URLs. Usually, the response contains no XML declaration and no whitespace. However, sometimes the response starts with `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>`, and sometimes the response is prettified using 4 spaces as indentation.
+
 A client certificate is needed to connect to these servers.
 
 Main server: https://account.nintendo.net
@@ -150,6 +152,8 @@ Here's an example error response:
 </errors>
 ```
 
+Sometimes, the cause tag is closed immediately (`<cause/>`). Sometimes, it is omitted entirely.
+
 ### Known Errors
 | Code | Cause | Message |
 | --- | --- | --- |
@@ -157,12 +161,18 @@ Here's an example error response:
 | 0002 | | serialNumber format is invalid |
 | 0002 | | platformId format is invalid |
 | 0002 | | version format is invalid |
+| 0002 | user_id | user_id format is invalid |
+| 0002 | password | password format is invalid |
 | 0002 | X-Nintendo-Region | X-Nintendo-Region format is invalid |
 | 0004 | grant_type | Invalid Grant Type |
 | 0004 | client_id | API application invalid or incorrect application credentials |
 | 0005 | access_token | Invalid access token |
 | 0007 | Forbidden request |
 | 0008 | | Not Found |
+| 0106 | | Invalid account ID or password |
+| 0110 | | Unlinked device |
+| 0113 | | Unauthorized device |
+| 1022 | client_id | The requested client was not found. |
 | 1600 | Bad Request | Unable to process request |
 
 | Code | Description |
