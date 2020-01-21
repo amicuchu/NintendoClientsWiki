@@ -1,12 +1,4 @@
-All packets are sent through the [unreliable protocol](PIA-Protocols).
-
-Every packet consists of one or more records, terminated by a record with type 0xFF.
-
-## Record Header
-| Offset | Type | Description |
-| --- | --- | --- |
-| 0x0 | Uint8 | Type |
-| 0x1 | Uint16 | Size |
+Mario Kart 8 uses the [ENL framework](ENL-Protocol).
 
 | Record type | Description |
 | --- | --- |
@@ -19,9 +11,6 @@ Every packet consists of one or more records, terminated by a record with type 0
 | 7 | Battle event |
 | 9 | [Flags](#record-type-9) |
 | 10 | Chat |
-| 0xFD | [Transport manager](#record-type-0xfd) |
-| 0xFE | [System transport](#record-type-0xfe) |
-| 0xFF | End record |
 
 ## Record Type 0
 | Offset | Type | Description |
@@ -50,30 +39,6 @@ Every packet consists of one or more records, terminated by a record with type 0
 | --- | --- | --- |
 | 0x0 | Uint8 | Unknown |
 | 0x1 | --- | End of record |
-
-## Record Type 0xFD
-| Offset | Type | Description |
-| --- | --- | --- |
-| 0x0 | Uint32 | Unknown |
-| 0x4 | --- | End of record |
-
-## Record Type 0xFE
-| Offset | Type | Description |
-| --- | --- | --- |
-| 0x0 | Uint32 | Unknown |
-| 0x4 | Uint32 | Unknown |
-| 0x8 | Uint32 | Unknown |
-| 0xC | Uint32 | Unknown |
-| 0x10 | Uint32 | Unknown |
-| 0x14 | Uint32 | Unknown |
-| 0x18 | Uint32 | User id (pid) |
-| 0x1C | Uint32 | Unknown |
-| 0x20 | Uint8 | Unknown |
-| 0x21 | Unk (8 * 27) | Unknown |
-| 0xF9 | Unk (8 * 10) | Unknown |
-| 0x149 | Uint8 | Unknown |
-| 0x14A | Uint8 (x14) | Unknown |
-| 0x158 | --- | End of record |
 
 ## PlayerId
 | Offset | Type | Description |
