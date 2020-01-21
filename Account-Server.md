@@ -46,7 +46,23 @@ The server replies with the following headers, in addition to `Content-Type` (if
 | --- | --- |
 | GET | <code><a href="#get-v1apiadmintime">/v1/api/admin/time</a></code> |
 | GET | <code><a href="#get-v1apiadminmapped_ids">/v1/api/admin/mapped_ids</a></code> |
-| GET | <code><a href="#get-v1contentagreementsnintendo-network-eulacountrylatest">/v1/api/content/agreements/Nintendo-Network-EULA/@latest</a></code>
+| GET | `/v1/api/content/agreements/Nintendo-Network-EULA/<country>/@latest` |
+| GET | `/v1/api/content/time_zones/<country>/<language>` |
+| POST | `/v1/api/devices/@current/migrations` |
+| DELETE | `/v1/api/devices/@current/migrations` |
+| POST | `/v1/api/devices/@current/migrations/commit` |
+| GET | `/v1/api/devices/@current/status` |
+| GET | `/v1/api/miis` |
+| POST | <code><a href="post-v1apioauth20access_tokengenerate">/v1/api/oauth20/access_token/generate</a></code> |
+| POST | `/v1/api/people` |
+| GET | `/v1/api/people/@me` |
+| GET | `/v1/api/people/@me/devices` |
+| DELETE | `/v1/api/people/@me/devices/@current` |
+| GET | `/v1/api/people/@me/emails` |
+| GET | `/v1/api/people/@me/profile` |
+| GET | <code><a href="get-v1apiprovidernex_tokenme">/v1/api/provider/nex_token/@me</a></code> |
+| GET | `/v1/api/provider/service_token/@me` |
+| POST | `/v1/support/validate/email` |
 
 ### GET /v1/api/admin/time
 This request does not take an parameters. The response body is empty, and no `Content-Type` header is returned by the server. The server time can be retrieved from the `X-Nintendo-Date` header.
@@ -70,24 +86,7 @@ Example response:
 </mapped_ids>
 ```
 
-### GET /v1/api/content/agreements/Nintendo-Network-EULA/&lt;country&gt;/@latest
-| Param | Description |
-| --- | --- |
-| length | Maximum response length |
-
-### GET content/time_zones/&lt;country&gt;/&lt;language&gt;
-
-### POST /devices/@current/migrations
-
-### DELETE /devices/@current/migrations
-
-### POST /devices/@current/migrations/commit
-
-### GET /devices/@current/status
-
-### GET /miis
-
-### POST /oauth20/access_token/generate
+### POST /v1/api/oauth20/access_token/generate
 This method generates an access token. The access token can be included in the "Authorization" header, and is needed for all requests that require access to your account data.
 
 There are two ways to request an access token: using NNID and password or password hash, or using a refresh token from an earlier access token request.
@@ -121,19 +120,7 @@ Example response:
 </OAuth20>
 ```
 
-### POST /people
-
-### GET /people/@me
-
-### GET /people/@me/devices
-
-### DELETE /people/@me/devices/@current
-
-### GET /people/@me/emails
-
-### GET /people/@me/profile
-
-### GET /provider/nex_token/@me
+### GET /v1/api/provider/nex_token/@me
 Provides login information and location of game server.
 
 | Param | Description |
@@ -150,10 +137,6 @@ Example response:
   <token>...</token>
 </nex_token>
 ```
-
-### GET /provider/service_token/@me
-
-### POST /support/validate/email
 
 ## Errors
 Here's an example error response:
