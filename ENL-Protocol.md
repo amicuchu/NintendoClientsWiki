@@ -15,7 +15,7 @@ A message consists of one or more records, terminated by a record with type 255.
 | --- | --- |
 | 0 - 31 | Game-specific |
 | 253 | [System request info](#system-request-info) |
-| 254 | System information |
+| 254 | [System information](#system-information) |
 | 255 | End record |
 
 ## System request info
@@ -35,3 +35,24 @@ On the Switch, a new field was added that lets a client request a system-record.
 | --- | --- |
 | Uint32 | Record mask (games) |
 | Uint32 | Record mask (system) |
+
+## System information
+*Wii U:*
+
+| Type | Description |
+| --- | --- |
+| Uint32 | Connected AID bitmap |
+| Uint32 | Disconnected AID bitmap |
+| Uint32 | Unknown |
+| Uint32 | Received AID bitmap |
+| ... | Unknown |
+
+*Switch:*
+
+| Type | Description |
+| --- | --- |
+| Uint64 | Connected AID bitmap |
+| Uint64 | Disconnected AID bitmap |
+| Uint64 | Unknown |
+| Uint64 | Received AID bitmap |
+| ... | Unknown |
