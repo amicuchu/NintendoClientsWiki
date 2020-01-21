@@ -1,9 +1,9 @@
 [[Server List]] > Account Server (Wii U)
 ---
 
-The account server responds to HTTP requests with XML body.
+The account server takes form-encoded requests and responds with an XML body.
 
-The Wii U's client certificate is needed to connect to these servers.
+A client certificate is needed to connect to these servers.
 
 Main server: https://account.nintendo.net
 
@@ -18,7 +18,7 @@ The following headers are included in requests by the Wii U:
 
 | Field | Description |
 | --- | --- |
-| X-Nintendo-Platform-ID | Always 1? |
+| X-Nintendo-Platform-ID | Always 1 |
 | X-Nintendo-Device-Type | 1=Debug, 2=Retail |
 | X-Nintendo-Device-ID | Unsigned integer (MCP_GetDeviceId) |
 | X-Nintendo-Serial-Number | String |
@@ -32,26 +32,25 @@ The following headers are included in requests by the Wii U:
 | X-Nintendo-Title-ID | Example: 0005000010138300 |
 | X-Nintendo-Unique-ID | Part of title id, example: 01383 |
 | X-Nintendo-Application-Version | Title version |
+| X-Nintendo-Device-Cert | This header is only sent in some requests. It is never required by the official server. |
 
-Some requests also have an `X-Nintendo-Device-Cert` header, which is obtained from IOS-CRYPTO through IOS-MCP. This header isn't required by the official server though.
+The server replies with the following headers, in addition to `Content-Type` (if applicable), `Content-Length` and `Date`:
 
-## Requests
-The base path of each request is /v1/api, a valid url would be for example https://account.nintendo.net/v1/api/admin/mapped_ids.
+| Header | Description |
+| --- | --- |
+| X-Nintendo-Date | Server timestamp (in milliseconds) |
+| Server | `Nintendo 3DS (http)` |
 
-Here's an example error response:
-```
-<errors>
-  <error>
-    <cause>client_id</cause>
-    <code>0004</code>
-    <message>API application invalid or incorrect application credentials</message>
-  </error>
-</errors>
-```
-[List of error codes](#error-codes).
-### GET /admin/time
+## Methods
+| Method | URL |
+| --- | --- |
+| GET | <code><a href="#get-v1apiadmintime">/v1/api/admin/time</a></code> |
+| GET | <code><a href="#get-v1apiadminmapped_ids">/v1/api/admin/mapped_ids</a></code> |
 
-### GET /admin/mapped_ids
+### GET /v1/api/admin/time
+This request does not take an parameters. The response body is empty, and no `Content-Type` header is returned by the server. The server time can be retrieved from the `X-Nintendo-Date` header.
+
+### GET /v1/api/admin/mapped_ids
 Converts between PID and NNID.
 
 | Param | Description |
@@ -155,7 +154,27 @@ Example response:
 
 ### POST /support/validate/email
 
-## Error Codes
+## Errors
+Here's an example error response:
+```
+<errors>
+  <error>
+    <cause>client_id</cause>
+    <code>0004</code>
+    <message>API application invalid or incorrect application credentials</message>
+  </error>
+</errors>
+```
+
+### Known Errors
+| Code | Cause | Message |
+| --- | --- | --- |
+| 0004 | grant_type | Invalid Grant Type |
+| 0004 | client_id | API application invalid or incorrect application credentials |
+| 0005 | access_token | Invalid access token |
+| 0007 | Forbidden request |
+| 0008 | | Not Found |
+
 | Code | Description |
 | --- | --- |
 | 1 | BAD_FORMAT_PARAMETER |
@@ -245,7 +264,6 @@ Example response:
 | 1115 | PENDING_MIGRATION |
 | 1125 | MAIL_ADDRESS_DOMAIN_NAME_NOT_ACCEPTABLE |
 | 1126 | MAIL_ADDRESS_DOMAIN_NAME_NOT_RESOLVED |
-| 1134 | ??? |
 | 1200 | NOT_PROVIDED_COUNTRY |
 | 2001 | INTERNAL_SERVER_ERROR |
 | 2002 | UNDER_MAINTENANCE |
