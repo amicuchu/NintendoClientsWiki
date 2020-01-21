@@ -46,6 +46,7 @@ The server replies with the following headers, in addition to `Content-Type` (if
 | --- | --- |
 | GET | <code><a href="#get-v1apiadmintime">/v1/api/admin/time</a></code> |
 | GET | <code><a href="#get-v1apiadminmapped_ids">/v1/api/admin/mapped_ids</a></code> |
+| GET | <code><a href="#get-v1contentagreementsnintendo-network-eulacountrylatest">/v1/api/content/agreements/Nintendo-Network-EULA/@latest</a></code>
 
 ### GET /v1/api/admin/time
 This request does not take an parameters. The response body is empty, and no `Content-Type` header is returned by the server. The server time can be retrieved from the `X-Nintendo-Date` header.
@@ -69,7 +70,7 @@ Example response:
 </mapped_ids>
 ```
 
-### GET /content/agreements/Nintendo-Network-EULA/&lt;country&gt;/@latest
+### GET /v1/api/content/agreements/Nintendo-Network-EULA/&lt;country&gt;/@latest
 | Param | Description |
 | --- | --- |
 | length | Maximum response length |
@@ -169,11 +170,17 @@ Here's an example error response:
 ### Known Errors
 | Code | Cause | Message |
 | --- | --- | --- |
+| 0002 | | deviceId format is invalid |
+| 0002 | | serialNumber format is invalid |
+| 0002 | | platformId format is invalid |
+| 0002 | | version format is invalid |
+| 0002 | X-Nintendo-Region | X-Nintendo-Region format is invalid |
 | 0004 | grant_type | Invalid Grant Type |
 | 0004 | client_id | API application invalid or incorrect application credentials |
 | 0005 | access_token | Invalid access token |
 | 0007 | Forbidden request |
 | 0008 | | Not Found |
+| 1600 | Bad Request | Unable to process request |
 
 | Code | Description |
 | --- | --- |
