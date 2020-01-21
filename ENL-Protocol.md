@@ -47,6 +47,7 @@ On the Switch, a new field was added that lets a client request a system-record.
 | Uint32 | Received AID bitmap |
 | Uint64 | Session time |
 | Uint32 | Principal id |
+| Uint32 | Unknown |
 | ... | Unknown |
 
 *Switch:*
