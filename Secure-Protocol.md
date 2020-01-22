@@ -39,9 +39,9 @@ The client should place the connection id into the RVCID field of its client sta
 | Type | Name | Description |
 | --- | --- | --- |
 | Bool | %retval% | Result |
-| [List]&lt;[ConnectionData](#connection-data)&gt; | pvecConnectionsData| Connection data |
+| [List]&lt;[ConnectionData](#connectiondata-structure)&gt; | pvecConnectionsData | Connection data |
 
-### Connection Data ([Structure])
+### ConnectionData ([Structure])
 | Type | Name | Description |
 | --- | --- | --- |
 | [StationURL] | m_StationUrl | Station url |
@@ -65,9 +65,9 @@ The client should place the connection id into the RVCID field of its client sta
 | Type | Name | Description |
 | --- | --- | --- |
 | [List]&lt;[StationURL]&gt; | vecMyURLs | Local client urls |
-| [Data]&lt;[NintendoLoginData](#nintendo-login-data)&gt; | hCustomData | Login data |
+| [Data]&lt;[NintendoLoginData](#nintendologindata)&gt; | hCustomData | Login data |
 
-### Nintendo Login Data
+### NintendoLoginData
 | Type | Description |
 | --- | --- |
 | [String] | Token (received from the account server) |
