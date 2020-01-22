@@ -667,7 +667,7 @@ This method returns headers that can be used to download relation files from the
 | Bool | Unknown |
 | Bool | Unknown |
 | [Map]&lt;Uint8, Uint32&gt; | [Play stats](#user-play-stats) |
-| [Map]&lt;Uint8, Uint32&gt; | Unknown |
+| [Map]&lt;Uint8, Uint32&gt; | [Maker stats](#maker-stats) |
 | [Map]&lt;Uint8, Uint32&gt; | [Endless mode highscores](#difficulty-level) |
 | [Map]&lt;Uint8, Uint32&gt; | [Multiplayer stats](#multiplayer-stats) |
 | [Map]&lt;Uint8, Uint32&gt; | Unknown |
@@ -696,6 +696,12 @@ Revision 2:
 | 1 | Clears |
 | 2 | Attempts |
 | 3 | Deaths |
+
+### Maker Stats
+| Key | Description |
+| --- | --- |
+| 0 | Hearts received |
+| 1 | Maker points |
 
 ### Multiplayer Stats
 | Key | Description |
