@@ -37,13 +37,13 @@ On the Switch, a new field was added that lets a client request a system-record.
 | Uint32 | Record mask (system) |
 
 ## System information
-In the tables below, the value of N is configured by the game.
+In the tables below, the values of P and Q are configured by the game.
 
-| Game | N |
-| --- | --- |
-| Mario Kart 8 | 14 |
-| Splatoon 2 | 10 |
-| Super Mario Maker 2 | 4 |
+| Game | P | Q |
+| --- | --- | --- |
+| Mario Kart 8 | 14 | 10 |
+| Splatoon 2 | 10 | 1 |
+| Super Mario Maker 2 | 4 | 1 |
 
 *Wii U:*
 
@@ -56,8 +56,10 @@ In the tables below, the value of N is configured by the game.
 | Uint64 | Session time |
 | Uint32 | Principal id |
 | Uint32 | Unknown |
-| [UniqueId](#uniqueid) (N*2-1) | Unique ids |
-| ... | Unknown |
+| [UniqueId](#uniqueid) (P*2-1) | Unknown |
+| [UniqueId](#uniqueid) (Q) | Unknown |
+| Uint8 | Unknown |
+| Uint8 (P) | Unknown |
 
 *Switch:*
 
@@ -69,7 +71,10 @@ In the tables below, the value of N is configured by the game.
 | Uint64 | Received AID bitmap |
 | Uint64 | Session time |
 | Uint64 | Principal id |
-| [UniqueId](#uniqueid) (N*2-1) | Unique ids |
+| [UniqueId](#uniqueid) (P*2-1) | Unknown |
+| [UniqueId](#uniqueid) (Q) | Unknown |
+| Uint8 | Unknown |
+| Uint8 (P) | Unknown |
 
 ### UniqueId
 *Wii U:*
