@@ -2,7 +2,7 @@ ENL is Nintendo's private peer-to-peer framework that's used by many first-party
 
 To transmit game-data, games can register content transporters to ENL. ENL also implements a few content transporters on its own.
 
-A message consists of one or more records, terminated by a record with type 255.
+A message consists of one or more records, terminated by a record with type 255. No byte swapping is done on the fields. The endianness depends on the system.
 
 ## Record Header
 | Type | Description |
@@ -56,6 +56,7 @@ In the tables below, the values of P and Q are configured by the game.
 | Uint64 | Session time |
 | Uint32 | Principal id |
 | Uint32 | Unknown |
+| Uint8 | Unknown |
 | [UniqueId](#uniqueid) (P*2-1) | Unknown |
 | [UniqueId](#uniqueid) (Q) | Unknown |
 | Uint8 | Unknown |
@@ -71,6 +72,7 @@ In the tables below, the values of P and Q are configured by the game.
 | Uint64 | Received AID bitmap |
 | Uint64 | Session time |
 | Uint64 | Principal id |
+| Uint8 | Unknown |
 | [UniqueId](#uniqueid) (P*2-1) | Unknown |
 | [UniqueId](#uniqueid) (Q) | Unknown |
 | Uint8 | Unknown |
