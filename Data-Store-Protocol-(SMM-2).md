@@ -675,6 +675,20 @@ This method returns headers that can be used to download relation files from the
 | [Map]&lt;Uint8, Uint32&gt; | Unknown |
 | [Map]&lt;Uint8, Uint32&gt; | Unknown |
 
+Revision 1:
+
+| Type | Description |
+| --- | --- |
+| Bool | Unknown |
+| [DateTime] | Unknown |
+| Bool | Unknown |
+
+Revision 2:
+
+| Type | Description |
+| --- | --- |
+| [UnknownStruct3] | Unknown |
+
 ### Play Stats Keys
 | Value | Description |
 | --- | --- |
@@ -867,10 +881,16 @@ This method returns headers that can be used to download relation files from the
 | Uint8 | Unknown |
 | Uint32 | Unknown |
 
+## UnknownStruct3 ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint8 | Unknown |
+| [DateTime] | Unknown |
 
 
 [UnknownStruct1]: #unknownstruct1-structure
 [UnknownStruct2]: #unknownstruct2-structure
+[UnknownStruct3]: #unknownstruct3-structure
 [UnknownStruct4]: #unknownstruct4-structure
 [UnknownStruct5]: #unknownstruct5-structure
 
