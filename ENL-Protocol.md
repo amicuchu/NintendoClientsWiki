@@ -37,6 +37,14 @@ On the Switch, a new field was added that lets a client request a system-record.
 | Uint32 | Record mask (system) |
 
 ## System information
+In the tables below, the value of N is configured by the game.
+
+| Game | N |
+| --- | --- |
+| Mario Kart 8 | 14 |
+| Splatoon 2 | 10 |
+| Super Mario Maker 2 | 4 |
+
 *Wii U:*
 
 | Type | Description |
@@ -48,6 +56,7 @@ On the Switch, a new field was added that lets a client request a system-record.
 | Uint64 | Session time |
 | Uint32 | Principal id |
 | Uint32 | Unknown |
+| [UniqueId](#uniqueid) (N*2-1) | Unique ids |
 | ... | Unknown |
 
 *Switch:*
@@ -60,4 +69,21 @@ On the Switch, a new field was added that lets a client request a system-record.
 | Uint64 | Received AID bitmap |
 | Uint64 | Session time |
 | Uint64 | Principal id |
-| ... | Unknown |
+| [UniqueId](#uniqueid) (N*2-1) | Unique ids |
+
+### UniqueId
+*Wii U:*
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 4 | Station id |
+| 0x4 | 2 | Unknown |
+| 0x6 | 2 | Padding (always 0) |
+
+*Switch:*
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 8 | Station id |
+| 0x8 | 2 | Unknown |
+| 0xA | 6 | Padding (always 0) |
