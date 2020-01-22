@@ -76,3 +76,8 @@ Every error is encoded like this:
 | --- | --- |
 | code | Error code (string with 4 digits) |
 | message | Error message |
+
+### Known Errors
+| Code | Message |
+| --- | --- |
+| 0014 | Invalid parameter in request. |
