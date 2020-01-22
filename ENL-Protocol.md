@@ -42,8 +42,8 @@ In the tables below, the values of P and Q are configured by the game.
 | Game | P | Q |
 | --- | --- | --- |
 | Mario Kart 8 | 14 | 10 |
-| Splatoon 2 | 10 | 1 |
-| Super Mario Maker 2 | 4 | 1 |
+| Splatoon 2 | 10 | 0 |
+| Super Mario Maker 2 | 4 | 0 |
 
 *Wii U:*
 
