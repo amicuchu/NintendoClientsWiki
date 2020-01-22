@@ -206,7 +206,7 @@ On error, the server sends the following response:
 | 400 | invalid_params | Invalid Params | invalid params |
 | 400 | invalid_request | Authorization header value is invalid | Auth scheme or auth params is invalid |
 | 400 | invalid_device_account | ? | ? |
-| 400 | invalid_ndas_app_authn_token | ? | ? |
+| 400 | invalid_ndas_app_authn_token | Invalid NDAS App AuthN Token | |
 | 400 | invalid_idp | ? | ? |
 | 400 | invalid_idp_account | Invalid IdP Account | IdP account is invalid |
 | 400 | linked_user_not_found | Linked User Not Found | linked user not found |
