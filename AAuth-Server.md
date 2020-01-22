@@ -104,4 +104,5 @@ Every error is encoded like this:
 ### Known Errors
 | Code | Message |
 | --- | --- |
+| 0111 | Application update is required. |
 | 0118 | Invalid parameter in request. |
