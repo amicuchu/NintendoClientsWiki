@@ -666,10 +666,10 @@ This method returns headers that can be used to download relation files from the
 | Bool | Unknown |
 | Bool | Unknown |
 | Bool | Unknown |
-| [Map]&lt;Uint8, Uint32&gt; | Play stats ([keys](#play-stats-keys)) |
+| [Map]&lt;Uint8, Uint32&gt; | [Play stats](#user-play-stats) |
 | [Map]&lt;Uint8, Uint32&gt; | Unknown |
-| [Map]&lt;Uint8, Uint32&gt; | Endless mode highscores ([keys](#difficulty-level)) |
-| [Map]&lt;Uint8, Uint32&gt; | Multiplayer stats ([keys](#multiplayer-stats-keys)) |
+| [Map]&lt;Uint8, Uint32&gt; | [Endless mode highscores](#difficulty-level) |
+| [Map]&lt;Uint8, Uint32&gt; | [Multiplayer stats](#multiplayer-stats) |
 | [Map]&lt;Uint8, Uint32&gt; | Unknown |
 | [List]&lt;[BadgeInfo]&gt; | Badge info |
 | [Map]&lt;Uint8, Uint32&gt; | Unknown |
@@ -689,16 +689,16 @@ Revision 2:
 | --- | --- |
 | [UnknownStruct3] | Unknown |
 
-### Play Stats Keys
-| Value | Description |
+### User Play Stats
+| Key | Description |
 | --- | --- |
 | 0 | Plays |
 | 1 | Clears |
 | 2 | Attempts |
 | 3 | Deaths |
 
-### Multiplayer Stats Keys
-| Value | Description |
+### Multiplayer Stats
+| Key | Description |
 | --- | --- |
 | 0 | Multiplayer score |
 | 2 | Versus plays |
@@ -740,11 +740,11 @@ Revision 2:
 | Uint16 | Clear condition magnitude |
 | Uint16 | Unknown |
 | [qBuffer] | Unknown |
+| [Map]&lt;Uint8, Uint32&gt; | [Play stats](#course-play-stats) |
+| [Map]&lt;Uint8, Uint32&gt; | [Course ratings](#course-ratings) |
 | [Map]&lt;Uint8, Uint32&gt; | Unknown |
-| [Map]&lt;Uint8, Uint32&gt; | Unknown |
-| [Map]&lt;Uint8, Uint32&gt; | Unknown |
-| [UnknownStruct2] | Unknown |
-| [Map]&lt;Uint8, Uint32&gt; | Unknown |
+| [CourseTimeStats](#coursetimestats) | Time stats |
+| [Map]&lt;Uint8, Uint32&gt; | [Comment stats](#comment-stats) |
 | Uint8 | Unknown |
 | Uint8 | Unknown |
 | Uint8 | Unknown |
@@ -796,6 +796,27 @@ Revision 2:
 | 4042480826 | Kill skipsqueaks |
 | 4116396131 | Collect coins |
 
+### Course Play Stats
+| Key | Description |
+| --- | --- |
+| 0 | Plays |
+| 1 | Attempts |
+| 2 | Unknown |
+| 3 | Clears |
+| 4 | Plays (versus mode) |
+
+### Course Ratings
+| Key | Description |
+| --- | --- |
+| 0 | Hearts |
+| 1 | Unknown |
+| 2 | Unknown |
+
+### Comment Stats
+| Key | Description |
+| --- | --- |
+| 0 | Number of comments  |
+
 ## Difficulty Level
 | Value | Description |
 | --- | --- |
@@ -803,6 +824,14 @@ Revision 2:
 | 1 | Normal |
 | 2 | Expert |
 | 3 | Super expert |
+
+## CourseTimeStats ([Structure])
+| Type | Description |
+| --- | --- |
+| [PID] | User id of first completion |
+| [PID] | User id of world record holder |
+| Uint32 | World record (milliseconds) |
+| Uint32 | Time of uploader (milliseconds) |
 
 ## CommentInfo ([Structure])
 | Type | Description |
@@ -855,14 +884,6 @@ Revision 2:
 | Uint16 | Unknown |
 | Uint16 | Unknown |
 | Uint16 | Unknown |
-
-## UnknownStruct2 ([Structure])
-| Type | Description |
-| --- | --- |
-| Uint64 | Unknown |
-| Uint64 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
 
 ## UnknownStruct4 ([Structure])
 | Type | Description |
