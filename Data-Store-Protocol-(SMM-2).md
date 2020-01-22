@@ -743,7 +743,7 @@ Revision 2:
 | [Map]&lt;Uint8, Uint32&gt; | [Play stats](#course-play-stats) |
 | [Map]&lt;Uint8, Uint32&gt; | [Course ratings](#course-ratings) |
 | [Map]&lt;Uint8, Uint32&gt; | Unknown |
-| [CourseTimeStats](#coursetimestats) | Time stats |
+| [CourseTimeStats](#coursetimestats-structure) | Time stats |
 | [Map]&lt;Uint8, Uint32&gt; | [Comment stats](#comment-stats) |
 | Uint8 | Unknown |
 | Uint8 | Unknown |
