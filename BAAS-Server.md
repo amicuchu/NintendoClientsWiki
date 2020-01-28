@@ -182,7 +182,7 @@ The following fields are stored in each of the [extras](#extras).
 | appInfo:appId | Title id |
 | appInfo:presenceGroupId | Title id |
 | totalPlayCount | Total play count |
-| totalPlayTime | Total play time in hours |
+| totalPlayTime | Total play time in minutes |
 | firstPlayedAt | Timestamp |
 | lastPlayedAt | Timestamp |
 
