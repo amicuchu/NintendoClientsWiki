@@ -34,7 +34,7 @@ The following headers are included in requests by the Wii U:
 | X-Nintendo-Title-ID | Example: 0005000010138300 |
 | X-Nintendo-Unique-ID | Part of title id, example: 01383 |
 | X-Nintendo-Application-Version | Title version |
-| X-Nintendo-Device-Cert | This header is only sent in some requests. It is never required by the official server. |
+| X-Nintendo-Device-Cert | This header is only sent in some requests. |
 
 The server replies with the following headers, in addition to `Content-Type` (if applicable), `Content-Length` and `Date`:
 
