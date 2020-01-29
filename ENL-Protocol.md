@@ -60,7 +60,7 @@ In the tables below, the values of P and Q are configured by the game.
 | [UniqueId](#uniqueid) (P*2-1) | Unknown |
 | [UniqueId](#uniqueid) (Q) | Unknown |
 | Uint8 | Unknown |
-| Uint8 (P) | Unknown |
+| Uint8 (P) | Player id table |
 
 *Switch:*
 
