@@ -87,7 +87,7 @@ Alternative name: ValidateAndRequestTicketWithCustomData
 # (4) GetPID
 This is the reverse of the [GetName](#5-getname) method. It looks up the pid that belongs to a given username. The username is not the same as the nintendo network id. On all normal accounts the username is the same as the user pid.
 
-All game servers have a bunch of special users. Normally, the password of the guest account is `MMQea3n!fsik`, but Nintendo seems to have changed this password on all Wii U and 3DS servers. It used to be possible to log in as guest on Switch servers as well, but the guest account has been deleted now.
+All game servers have a bunch of special users. Normally, the password of the guest account is `MMQea3n!fsik`, but Nintendo seems to have changed this password on all Wii U and 3DS servers except for the friend server. It used to be possible to log in as guest on Switch servers as well, but the guest account has been deleted.
 
 #### 3DS / Wii U:
 | PID | Name |
