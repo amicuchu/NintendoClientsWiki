@@ -419,7 +419,7 @@ Some functions take a key string. This is a hex string derived from the password
 | --- | --- |
 | [NNAInfo](Friends-Protocol-(Wii-U)#nnainfo) | NNA info |
 | [String] | NEX token |
-| [DateTime] | Unknown |
+| [DateTime] | Birthday |
 | Uint64 | Unknown |
 
 [Result]: NEX-Common-Types#result
