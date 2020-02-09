@@ -193,7 +193,7 @@ This method does not take any parameters.
 ## Response
 | Type | Name |
 | --- | --- |
-| [List]&lt;[BasicAccountInfo](#basicaccountinfo)&gt; | plstAccounts |
+| [List]&lt;[BasicAccountInfo](#basicaccountinfo-structure)&gt; | plstAccounts |
 
 # (15) UpdateAccountExpiryDate
 ## Request
@@ -318,7 +318,7 @@ This method does not return anything.
 ## Response
 | Type | Name |
 | --- | --- |
-| [List]&lt;[BasicAccountInfo](#basicaccountinfo)&gt; | plstAccounts |
+| [List]&lt;[BasicAccountInfo](#basicaccountinfo-structure)&gt; | plstAccounts |
 
 # (26) CustomCreateAccount
 ## Request
@@ -343,7 +343,7 @@ This method does not return anything.
 | [String] | strKey | See [key derivation](#key-derivation) |
 | Uint32 | uiGroups | |
 | [String] | strEmail | |
-| [Data] | oAuthData | |
+| [Data]&lt;[NintendoCreateAccountData](#nintendocreateaccountdata-structure)&gt; | oAuthData | |
 
 ## Response
 | Type | Name |
@@ -413,6 +413,14 @@ Some functions take a key string. This is a hex string derived from the password
 | [String] | m_strNotEffectiveMsg |
 | [DateTime] | m_dtExpiryDate |
 | [String] | m_strExpiredMsg |
+
+## NintendoCreateAccountData ([Structure])
+| Type | Description |
+| --- | --- |
+| [NNAInfo](Friends-Protocol-(Wii-U)#nnainfo) | NNA info |
+| [String] | NEX token |
+| [DateTime] | Unknown |
+| Uint64 | Unknown |
 
 [Result]: NEX-Common-Types#result
 [String]: NEX-Common-Types#string
