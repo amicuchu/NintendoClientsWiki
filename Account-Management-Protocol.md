@@ -37,17 +37,17 @@ Most methods cannot be used by normal users.
 
 # (1) CreateAccount
 ## Request
-| Type | Name | Description |
-| --- | --- | --- |
-| [String] | strPrincipalName | Username |
-| [String] | strKey | See [key derivation](#key-derivation) |
-| Uint32 | uiGroups | |
-| [String] | strEmail | |
+| Type | Name |
+| --- | --- |
+| [String] | strPrincipalName |
+| [String] | [strKey](#key-derivation) |
+| Uint32 | uiGroups |
+| [String] | strEmail |
 
 ## Response
-| Type | Name | Description |
-| --- | --- | --- |
-| [Result] | %retval% | Result code |
+| Type | Name |
+| --- | --- |
+| [Result] | %retval% |
 
 # (2) DeleteAccount
 ## Request
@@ -67,15 +67,15 @@ This method does not return anything.
 | [String] | strMessage |
 
 ## Response
-| Type | Name | Description |
-| --- | --- | --- |
-| [Result] | %retval% | Result code |
+| Type | Name |
+| --- | --- |
+| [Result] | %retval% |
 
 # (4) ChangePassword
 ## Request
-| Type | Name | Description |
-| --- | --- | --- |
-| [String] | strNewKey | See [key derivation](#key-derivation) |
+| Type | Name |
+| --- | --- |
+| [String] | [strNewKey](#key-derivation) |
 
 ## Response
 | Type | Name |
@@ -155,9 +155,9 @@ This method does not take any parameters.
 | [String] | strName |
 
 ## Response
-| Type | Name | Description |
-| --- | --- | --- |
-| [Result] | %retval% | Result code |
+| Type | Name |
+| --- | --- |
+| [Result] | %retval% |
 
 # (12) UpdateAccountEmail
 ## Request
@@ -166,9 +166,9 @@ This method does not take any parameters.
 | [String] | strName |
 
 ## Response
-| Type | Name | Description |
-| --- | --- | --- |
-| [Result] | %retval% | Result code |
+| Type | Name |
+| --- | --- |
+| [Result] | %retval% |
 
 # (13) UpdateCustomData
 ## Request
@@ -178,9 +178,9 @@ This method does not take any parameters.
 | [Data] | oPrivateData |
 
 ## Response
-| Type | Name | Description |
-| --- | --- | --- |
-| [Result] | %retval% | Result code |
+| Type | Name |
+| --- | --- |
+| [Result] | %retval% |
 
 # (14) FindByNameRegex
 ## Request
@@ -261,14 +261,14 @@ This method does not take any parameters.
 
 # (21) CreateAccountWithCustomData
 ## Request
-| Type | Name | Description |
-| --- | --- | --- |
-| [String] | strPrincipalName | Username |
-| [String] | strKey | See [key derivation](#key-derivation) |
-| Uint32 | uiGroups | |
-| [String] | strEmail | |
-| [Data] | oPublicData | |
-| [Data] | oPrivateData | |
+| Type | Name |
+| --- | --- |
+| [String] | strPrincipalName |
+| [String] | [strKey](#key-derivation) |
+| Uint32 | uiGroups |
+| [String] | strEmail |
+| [Data] | oPublicData |
+| [Data] | oPrivateData |
 
 ## Response
 This method does not return anything.
@@ -286,23 +286,23 @@ This method does not take any parameters.
 
 # (23) UpdateAccount
 ## Request
-| Type | Name | Description |
-| --- | --- | --- |
-| [String] | strKey | See [key derivation](#key-derivation) |
-| [String] | strEmail | |
-| [Data] | oPublicData | |
-| [Data] | oPrivateData | |
+| Type | Name |
+| --- | --- |
+| [String] | [strKey](#key-derivation) |
+| [String] | strEmail |
+| [Data] | oPublicData |
+| [Data] | oPrivateData |
 
 ## Response
 This method does not return anything.
 
 # (24) ChangePasswordByGuest
 ## Request
-| Type | Name | Description |
-| --- | --- | --- |
-| [String] | strPrincipalName | Username |
-| [String] | strEmail | |
-| [String] | strKey | See [key derivation](#key-derivation) |
+| Type | Name |
+| --- | --- |
+| [String] | strPrincipalName |
+| [String] | strEmail |
+| [String] | [strKey](#key-derivation) |
 
 ## Response
 This method does not return anything.
@@ -322,13 +322,13 @@ This method does not return anything.
 
 # (26) CustomCreateAccount
 ## Request
-| Type | Name | Description |
-| --- | --- | --- |
-| [String] | strPrincipalName | Username |
-| [String] | strKey | See [key derivation](#key-derivation) |
-| Uint32 | uiGroups | |
-| [String] | strEmail | |
-| [Data] | oAuthData | |
+| Type | Name |
+| --- | --- |
+| [String] | strPrincipalName |
+| [String] | [strKey](#key-derivation) |
+| Uint32 | uiGroups |
+| [String] | strEmail |
+| [Data] | oAuthData |
 
 ## Response
 | Type | Name |
@@ -337,13 +337,13 @@ This method does not return anything.
 
 # (27) NintendoCreateAccount
 ## Request
-| Type | Name | Description |
-| --- | --- | --- |
-| [String] | strPrincipalName | Username |
-| [String] | strKey | See [key derivation](#key-derivation) |
-| Uint32 | uiGroups | |
-| [String] | strEmail | |
-| [Data]&lt;[NintendoCreateAccountData](#nintendocreateaccountdata-structure)&gt; | oAuthData | |
+| Type | Name |
+| --- | --- |
+| [String] | strPrincipalName |
+| [String] | [strKey](#key-derivation) |
+| Uint32 | uiGroups |
+| [String] | strEmail |
+| [Data]&lt;[NintendoCreateAccountData](#nintendocreateaccountdata-structure)&gt; | oAuthData |
 
 ## Response
 | Type | Name |
@@ -353,13 +353,13 @@ This method does not return anything.
 
 # (28) LookupOrCreateAccount
 ## Request
-| Type | Name | Description |
-| --- | --- | --- |
-| [String] | strPrincipalName | Username |
-| [String] | strKey | See [key derivation](#key-derivation) |
-| Uint32 | uiGroups | |
-| [String] | strEmail | |
-| [Data] | oAuthData | |
+| Type | Name |
+| --- | --- |
+| [String] | strPrincipalName |
+| [String] | [strKey](#key-derivation) |
+| Uint32 | uiGroups |
+| [String] | strEmail |
+| [Data] | oAuthData |
 
 ## Response
 | Type | Name |
