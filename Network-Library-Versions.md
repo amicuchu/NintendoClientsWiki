@@ -36,6 +36,7 @@ Unfortunately, there are many different versions of [NEX](NEX-Overview-(Game-Ser
 | Donkey Kong Country Tropical Freeze | 3.4.0 (RK/DS) | - | Yes |
 | Mario & Sonic at the Sochi 2014 Olympic Winter Games | 3.4.0 (RK/DS/MM/MS) | - | Yes |
 | Romance of the Three Kingdoms 12 | 3.4.0 (RK/DS/MM/UT) | - | Yes |
+| Wii U Chat | 3.4.2-HAFJ (MM) | - | No |
 | Wii Sports Club | 3.4.7-AWSJ (RK/DS/MM/UT) | 3.6.0 | No |
 | Animal Crossing Plaza | 3.5.1 (DS) | - | No |
 | Disney Infinity | 3.5.2 (DS) | - | Yes |
