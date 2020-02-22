@@ -113,11 +113,11 @@ This method does not return anything.
 
 # (6) CreateMatchmakeSession
 ## Request
-| Type | Name |
-| --- | --- |
-| [Data]&lt;[Gathering]&gt; | anyGathering |
-| [String] | strMessage |
-| Uint16 | participationCount |
+| Type | Name | Only present in |
+| --- | --- | --- |
+| [Data]&lt;[Gathering]&gt; | anyGathering | |
+| [String] | strMessage | |
+| Uint16 | participationCount | NEX v3.5.0 and later |
 
 ## Response
 | Type | Name |
