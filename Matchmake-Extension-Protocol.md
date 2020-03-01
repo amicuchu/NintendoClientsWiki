@@ -150,6 +150,17 @@ This method does not return anything.
 
 # (9) UpdateNotificationData
 ## Request
+**Wii U:**
+
+| Type | Name |
+| --- | --- |
+| Uint32 | uiType |
+| Uint32 | uiParam1 |
+| Uint32 | uiParam2 |
+| [String] | strParam |
+
+**Switch:**
+
 | Type | Name |
 | --- | --- |
 | Uint32 | uiType |
