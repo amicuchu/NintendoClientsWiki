@@ -41,7 +41,18 @@ This method does not return anything.
 | Uint8 | m_language |
 | Uint8 | m_platform |
 
+# Friend Events
+| Type | Method | Data Type | Description |
+| --- | --- | --- | --- |
+| 10 | 1 | [NintendoNotificationEventGeneral] | A friend went offline |
+| 24 | 2 | [NintendoPresenceV2] | A friend started a game/app |
+| 26 | 1 | [NintendoNotificationEventGeneral] | A friend removed you from their from friend list or canceled their friend request |
+| 27 | 2 | [FriendRequest] | You received a friend request |
+
 [Data]: NEX-Common-Types#anydataholder
 [PID]: NEX-Common-Types#pid
 [Structure]: NEX-Common-Types#structure
 [String]: NEX-Common-Types#string
+[FriendRequest]: Friends-Protocol-(Wii-U)#friendrequest
+[NintendoPresenceV2]: Friends-Protocol-(Wii-U)#nintendopresencev2
+[NintendoNotificationEventGeneral]: #nintendonotificationeventgeneral-structure
