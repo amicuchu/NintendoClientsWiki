@@ -10,12 +10,12 @@ Official name: NintendoFriendPresenceProtocol
 | 5 | [UpdatePreference](#5-updatepreference) |
 | 6 | [GetFriendMii](#6-getfriendmii) |
 | 7 | [GetFriendMiiList](#7-getfriendmiilist) |
-| 8 | ? |
-| 9 | ? |
+| 8 | IsActiveGame |
+| 9 | GetPrincipalIDByLocalFriendCode |
 | 10 | [GetFriendRelationships](#10-getfriendrelationships) |
 | 11 | [AddFriendByPrincipalID](#11-addfriendbyprincipalid) |
-| 12 | ? |
-| 13 | ? |
+| 12 | AddFriendBylstPrincipalID |
+| 13 | RemoveFriendByLocalFriendCode |
 | 14 | RemoveFriendByPrincipalID |
 | 15 | [GetAllFriends](#15-getallfriends) |
 | 16 | UpdateBlackList |
