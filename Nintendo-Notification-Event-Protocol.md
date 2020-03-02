@@ -60,7 +60,7 @@ This method does not return anything.
 | 33 | 1 | [NintendoNotificationEventGeneral] | A friend changed their status message |
 | 34 | | | |
 | 35 | | | Related to friend relationships |
-| 36 | | | Related to persistent notifications |
+| 36 | | PersistentNotificationList | You received one or more notifications |
 
 [Data]: NEX-Common-Types#anydataholder
 [PID]: NEX-Common-Types#pid
