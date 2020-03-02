@@ -46,11 +46,21 @@ This method does not return anything.
 | --- | --- | --- | --- |
 | 10 | 1 | [NintendoNotificationEventGeneral] | A friend went offline |
 | 21 | 2 | [NNAInfo] | A friend changed their mii |
+| 22 | ? | [MiiV2] | ? |
+| 23 | ? | ? | ? |
 | 24 | 2 | [NintendoPresenceV2] | A friend started a game/app |
+| 25 | ? | ? | ? |
 | 26 | 1 | [NintendoNotificationEventGeneral] | A friend removed you from their from friend list or canceled their friend request |
 | 27 | 2 | [FriendRequest] | You received a friend request |
+| 28 | ? | ? | ? |
+| 29 | ? | ? | ? |
 | 30 | 1 | [FriendInfo] | You became friends |
+| 31 | ? | ? | ? |
+| 32 | ? | ? | ? |
 | 33 | 1 | [NintendoNotificationEventGeneral] | A friend changed their status message |
+| 34 | ? | ? | ? |
+| 35 | ? | ? | ? |
+| 36 | ? | ? | ? |
 
 [Data]: NEX-Common-Types#anydataholder
 [PID]: NEX-Common-Types#pid
@@ -60,4 +70,5 @@ This method does not return anything.
 [NintendoPresenceV2]: Friends-Protocol-(Wii-U)#nintendopresencev2
 [FriendInfo]: Friends-Protocol-(Wii-U)#friendinfo
 [NNAInfo]: Friends-Protocol-(Wii-U)#nnainfo
+[MiiV2]: Friends-Protocol-(Wii-U)#miiv2
 [NintendoNotificationEventGeneral]: #nintendonotificationeventgeneral-structure
