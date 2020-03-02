@@ -1,6 +1,6 @@
 ## [[NEX Protocols]] > Nintendo Notifications (0x64)
 
-Only the friend server and client implement method 2. There is no known difference between method 1 and 2, except that the server sends some events through method 1 and others through method 2. The client treats them exactly the same.
+Method 2 is only implemented by the friend server and client. There is no known difference between them, except that the server sends some events through method 1 and others through method 2. The client treats them exactly the same.
 
 | Method ID | Method Name |
 | --- | --- |
