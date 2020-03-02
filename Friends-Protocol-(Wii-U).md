@@ -280,7 +280,7 @@ This method does not take any parameters.
 ## FriendRequestMessage
 | Type | Description |
 | --- | --- |
-| Uint64 | Unknown |
+| Uint64 | Friend request id |
 | Uint8 | Unknown |
 | Uint8 | Unknown |
 | [String] | Message |
