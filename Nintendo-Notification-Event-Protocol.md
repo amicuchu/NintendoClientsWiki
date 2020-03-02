@@ -46,17 +46,17 @@ This method does not return anything.
 | --- | --- | --- | --- |
 | 10 | 1 | [NintendoNotificationEventGeneral] | A friend went offline |
 | 21 | 2 | [NNAInfo] | A friend changed or edited their mii |
-| 22 | | | |
+| 22 | | | Mii related |
 | 23 | | [PrincipalPreference] | A friend updated their preferences |
 | 24 | 2 | [NintendoPresenceV2] | A friend started a game/app |
-| 25 | | | |
+| 25 | | | Friend request related |
 | 26 | 1 | [NintendoNotificationEventGeneral] | A friend removed you from their from friend list or canceled their friend request |
 | 27 | 2 | [FriendRequest] | You received a friend request |
-| 28 | | | |
-| 29 | | | |
+| 28 | | | Friend request related |
+| 29 | | | Blacklist related |
 | 30 | 1 | [FriendInfo] | You became friends |
-| 31 | | | |
-| 32 | | | |
+| 31 | | | Blacklist related |
+| 32 | | | Blacklist related |
 | 33 | 1 | [NintendoNotificationEventGeneral] | A friend changed their status message |
 | 34 | | | |
 | 35 | | | |
