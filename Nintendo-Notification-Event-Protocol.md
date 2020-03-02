@@ -59,7 +59,7 @@ This method does not return anything.
 | 32 | | | Blacklist related |
 | 33 | 1 | [NintendoNotificationEventGeneral] | A friend changed their status message |
 | 34 | | | |
-| 35 | | | |
+| 35 | | | Related to friend relationships |
 | 36 | | | Related to persistent notifications |
 
 [Data]: NEX-Common-Types#anydataholder
