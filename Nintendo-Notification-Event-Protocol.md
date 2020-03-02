@@ -71,4 +71,5 @@ This method does not return anything.
 [FriendInfo]: Friends-Protocol-(Wii-U)#friendinfo
 [NNAInfo]: Friends-Protocol-(Wii-U)#nnainfo
 [MiiV2]: Friends-Protocol-(Wii-U)#miiv2
+[PrincipalPreference]: Friends-Protocol-(Wii-U)#principalpreference
 [NintendoNotificationEventGeneral]: #nintendonotificationeventgeneral-structure
