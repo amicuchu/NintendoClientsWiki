@@ -353,6 +353,11 @@ Specifies which fields changed their value recently.
 | Uint32 | Unknown |
 | [String] | Unknown |
 
+## PersistentNotificationList
+| Type | Description |
+| --- | --- |
+| [List]&lt;[PersistentNotification]&gt; | Notifications |
+
 ## PrincipalBasicInfo
 | Type | Description |
 | --- | --- |
