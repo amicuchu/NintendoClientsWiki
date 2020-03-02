@@ -216,7 +216,7 @@ This method does not return anything.
 | --- | --- |
 | [List]&lt;[PrincipalBasicInfo]&gt; | Infos |
 
-# (18) DeleteFriendFlags
+# (18) DeletePersistentNotification
 ## Request
 | Type | Description |
 | --- | --- |
