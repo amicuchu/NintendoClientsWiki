@@ -45,22 +45,22 @@ This method does not return anything.
 | Type | Method | Data Type | Description |
 | --- | --- | --- | --- |
 | 10 | 1 | [NintendoNotificationEventGeneral] | A friend went offline |
-| 21 | 2 | [NNAInfo] | A friend changed their mii |
-| 22 | ? | [MiiV2] | ? |
-| 23 | ? | ? | ? |
+| 21 | 2 | [NNAInfo] | A friend changed or edited their mii |
+| 22 | | | |
+| 23 | | [PrincipalPreference] | A friend updated their preferences |
 | 24 | 2 | [NintendoPresenceV2] | A friend started a game/app |
-| 25 | ? | ? | ? |
+| 25 | | | |
 | 26 | 1 | [NintendoNotificationEventGeneral] | A friend removed you from their from friend list or canceled their friend request |
 | 27 | 2 | [FriendRequest] | You received a friend request |
-| 28 | ? | ? | ? |
-| 29 | ? | ? | ? |
+| 28 | | | |
+| 29 | | | |
 | 30 | 1 | [FriendInfo] | You became friends |
-| 31 | ? | ? | ? |
-| 32 | ? | ? | ? |
+| 31 | | | |
+| 32 | | | |
 | 33 | 1 | [NintendoNotificationEventGeneral] | A friend changed their status message |
-| 34 | ? | ? | ? |
-| 35 | ? | ? | ? |
-| 36 | ? | ? | ? |
+| 34 | | | |
+| 35 | | | |
+| 36 | | | |
 
 [Data]: NEX-Common-Types#anydataholder
 [PID]: NEX-Common-Types#pid
