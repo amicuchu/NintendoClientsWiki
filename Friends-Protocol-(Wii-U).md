@@ -20,7 +20,7 @@ Official name: NintendoFriendPresenceV2Protocol
 | 15 | [UpdateComment](#15-updatecomment) |
 | 16 | [UpdatePreference](#16-updatepreference) |
 | 17 | [GetBasicInfo](#17-getbasicinfo) |
-| 18 | [DeleteFriendFlags](#18-deletefriendflags) |
+| 18 | [DeletePersistentNotification](#18-deletepersistentnotification) |
 | 19 | [CheckSettingStatus](#19-checksettingstatus) |
 | 20 | [GetRequestBlockSettings](#20-getrequestblocksettings) |
 
