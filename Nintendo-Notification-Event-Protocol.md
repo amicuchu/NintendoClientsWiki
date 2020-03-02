@@ -1,5 +1,7 @@
 ## [[NEX Protocols]] > Nintendo Notifications (0x64)
 
+Only the friend server and client implement method 2. There is no known difference between method 1 and 2, except that the server sends some events through method 1 and others through method 2. The client treats them exactly the same.
+
 | Method ID | Method Name |
 | --- | --- |
 | 1 | [ProcessNintendoNotificationEvent](#processnintendonotificationevent) |
@@ -16,11 +18,11 @@ This method does not return anything.
 
 # Types
 ## NintendoNotificationEvent ([Structure])
-| Type | Name |
-| --- | --- |
-| Uint32 | m_uiType |
-| [PID] | m_pidSender |
-| [Data] | m_dataholder |
+| Type | Name | Description |
+| --- | --- | --- |
+| Uint32 | m_uiType | [Event type](#friend-events) |
+| [PID] | m_pidSender | Pid of the user that triggered the notification event |
+| [Data] | m_dataholder | Information about the event (depends on the event type) |
 
 ## NintendoNotificationEventGeneral ([Structure])
 | Type | Name |
