@@ -730,35 +730,35 @@ Revision 2:
 | [String] | Filename |
 
 ## CourseInfo ([Structure])
-| Type | Description |
-| --- | --- |
-| Uint64 | Data id |
-| [String] | Level code |
-| [PID] | Owner id |
-| [String] | Level name |
-| [String] | Description |
-| Uint8 | [Game style](#game-style) |
-| Uint8 | [Course theme](#course-theme) |
-| [DateTime] | Upload time |
-| Uint8 | [Difficulty](#difficulty-level) |
-| Uint8 | First [tag](#course-tag) |
-| Uint8 | Second [tag](#course-tag) |
-| Uint8 | Unknown |
-| Uint32 | [Clear condition](#clear-condition) |
-| Uint16 | Clear condition magnitude |
-| Uint16 | Unknown |
-| [qBuffer] | Unknown |
-| [Map]&lt;Uint8, Uint32&gt; | [Play stats](#course-play-stats) |
-| [Map]&lt;Uint8, Uint32&gt; | [Course ratings](#course-ratings) |
-| [Map]&lt;Uint8, Uint32&gt; | Unknown |
-| [CourseTimeStats](#coursetimestats-structure) | Time stats |
-| [Map]&lt;Uint8, Uint32&gt; | [Comment stats](#comment-stats) |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
-| [ThumbnailInfo] | One-screen thumbnail |
-| [ThumbnailInfo] | Entire thumbnail |
+| Type | Option | Description |
+| --- | --- | --- |
+| Uint64 | | Data id |
+| [String] | | Level code |
+| [PID] | | Owner id |
+| [String] | | Level name |
+| [String] | | Description |
+| Uint8 | | [Game style](#game-style) |
+| Uint8 | | [Course theme](#course-theme) |
+| [DateTime] | | Upload time |
+| Uint8 | | [Difficulty](#difficulty-level) |
+| Uint8 | | First [tag](#course-tag) |
+| Uint8 | | Second [tag](#course-tag) |
+| Uint8 | | Unknown |
+| Uint32 | | [Clear condition](#clear-condition) |
+| Uint16 | | Clear condition magnitude |
+| Uint16 | | Unknown |
+| [qBuffer] | | Unknown |
+| [Map]&lt;Uint8, Uint32&gt; | `0x1` | [Play stats](#course-play-stats) |
+| [Map]&lt;Uint8, Uint32&gt; | `0x2` | [Course ratings](#course-ratings) |
+| [Map]&lt;Uint8, Uint32&gt; | `0x40` | Unknown |
+| [CourseTimeStats](#coursetimestats-structure) | `0x4` | Time stats |
+| [Map]&lt;Uint8, Uint32&gt; | `0x8` | [Comment stats](#comment-stats) |
+| Uint8 | `0x10` | Unknown |
+| Uint8 | `0x20` | Unknown |
+| Uint8 | `0x10` | Unknown |
+| Uint8 | `0x20` | Unknown |
+| [ThumbnailInfo] | `0x80` | One-screen thumbnail |
+| [ThumbnailInfo] | `0x100` | Entire thumbnail |
 
 ### Game Style
 | Value | Description |
