@@ -673,7 +673,7 @@ This method returns headers that can be used to download relation files from the
 | [Map]&lt;Uint8, Uint32&gt; | `0x8` | [Endless mode highscores](#difficulty-level) |
 | [Map]&lt;Uint8, Uint32&gt; | `0x10` | [Multiplayer stats](#multiplayer-stats) |
 | [Map]&lt;Uint8, Uint32&gt; | `0x400` | Unknown |
-| [List]&lt;[BadgeInfo]&gt; | | Badge info |
+| [List]&lt;[BadgeInfo]&gt; | `0x20` | Badge info |
 | [Map]&lt;Uint8, Uint32&gt; | `0x40` | Unknown |
 | [Map]&lt;Uint8, Uint32&gt; | `0x80` | Unknown |
 
@@ -687,9 +687,9 @@ Revision 1:
 
 Revision 2:
 
-| Type | Description |
-| --- | --- |
-| [UnknownStruct3] | Unknown |
+| Type | Option | Description |
+| --- | --- | --- |
+| [UnknownStruct3] | `0x2000` | Unknown |
 
 ### User Play Stats
 | Key | Description |
