@@ -725,7 +725,7 @@ Revision 2:
 | --- | --- |
 | [String] | Url |
 | Uint8 | Relation data type |
-| Uint32 | Unknown |
+| Uint32 | Filesize |
 | [Buffer] | Unknown |
 | [String] | Filename |
 
