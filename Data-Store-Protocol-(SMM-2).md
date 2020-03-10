@@ -2,6 +2,8 @@
 
 This page describes the methods that are only seen in Super Mario Maker 2.
 
+Some methods take a `resultOption` parameter. This parameter controls which fields are looked up in the database. Fields that are not specified in the `resultOption` parameter are usually returned as zero or empty.
+
 | Method ID | Method Name |
 | --- | --- |
 | 47 | [RegisterUser](#47-registeruser) |
@@ -159,8 +161,8 @@ This method does not return anything.
 | Type | Description |
 | --- | --- |
 | [List]&lt;[UserInfo]&gt; | Users |
-| [List]&lt;Uint32&gt; | Unknown |
-| Bool | Ünknown |
+| [List]&lt;Uint32&gt; | Ranks |
+| Bool | Result |
 
 # (51) SearchUsersEndlessMode
 ## Request
@@ -480,7 +482,7 @@ This method returns headers that can be used to download relation files from the
 ## SearchUsersUserPointParam ([Structure])
 | Type | Description |
 | --- | --- |
-| Uint32 | Unknown |
+| Uint32 | Result option |
 | [Buffer] | Unknown |
 | [ResultRange] | Result range |
 
@@ -653,35 +655,35 @@ This method returns headers that can be used to download relation files from the
 | [String] | Value |
 
 ## UserInfo ([Structure])
-| Type | Description |
-| --- | --- |
-| [PID] | User id |
-| [String] | User code |
-| [String] | User name |
-| [UnknownStruct1] | Unknown |
-| [qBuffer] | Unknown |
-| [String] | Country code |
-| Uint8 | Region id |
-| [DateTime] | Last active time |
-| Bool | Unknown |
-| Bool | Unknown |
-| Bool | Unknown |
-| [Map]&lt;Uint8, Uint32&gt; | [Play stats](#user-play-stats) |
-| [Map]&lt;Uint8, Uint32&gt; | [Maker stats](#maker-stats) |
-| [Map]&lt;Uint8, Uint32&gt; | [Endless mode highscores](#difficulty-level) |
-| [Map]&lt;Uint8, Uint32&gt; | [Multiplayer stats](#multiplayer-stats) |
-| [Map]&lt;Uint8, Uint32&gt; | Unknown |
-| [List]&lt;[BadgeInfo]&gt; | Badge info |
-| [Map]&lt;Uint8, Uint32&gt; | Unknown |
-| [Map]&lt;Uint8, Uint32&gt; | Unknown |
+| Type | Option | Description |
+| --- | --- | --- |
+| [PID] | | User id |
+| [String] | | Maker code |
+| [String] | | User name |
+| [UnknownStruct1] | `0x200` | Unknown |
+| [qBuffer] | `0x4` | Unknown |
+| [String] | | Country code |
+| Uint8 | | Region id |
+| [DateTime] | | Last active time |
+| Bool | | Unknown |
+| Bool | | Unknown |
+| Bool | | Unknown |
+| [Map]&lt;Uint8, Uint32&gt; | `0x1` | [Play stats](#user-play-stats) |
+| [Map]&lt;Uint8, Uint32&gt; | `0x2` | [Maker stats](#maker-stats) |
+| [Map]&lt;Uint8, Uint32&gt; | `0x8` | [Endless mode highscores](#difficulty-level) |
+| [Map]&lt;Uint8, Uint32&gt; | `0x10` | [Multiplayer stats](#multiplayer-stats) |
+| [Map]&lt;Uint8, Uint32&gt; | `0x400` | Unknown |
+| [List]&lt;[BadgeInfo]&gt; | | Badge info |
+| [Map]&lt;Uint8, Uint32&gt; | `0x40` | Unknown |
+| [Map]&lt;Uint8, Uint32&gt; | `0x80` | Unknown |
 
 Revision 1:
 
-| Type | Description |
-| --- | --- |
-| Bool | Unknown |
-| [DateTime] | Unknown |
-| Bool | Unknown |
+| Type | Option | Description |
+| --- | --- | --- |
+| Bool | | Unknown |
+| [DateTime] | `0x1000` | Unknown |
+| Bool | | Unknown |
 
 Revision 2:
 
