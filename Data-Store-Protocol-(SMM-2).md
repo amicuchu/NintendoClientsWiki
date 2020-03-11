@@ -638,21 +638,15 @@ This method returns headers that can be used to download relation files from the
 | --- | --- |
 | [String] | Unknown |
 | [String] | Unknown |
-| [List]&lt;[RelationObjectParam]&gt; | Headers |
-| [List]&lt;[RelationObjectParam]&gt; | Form fields |
+| [List]&lt;[DataStoreKeyValue]&gt; | Headers |
+| [List]&lt;[DataStoreKeyValue]&gt; | Form fields |
 | [Buffer] | Unknown |
 
 ## ReqGetInfoHeadersInfo ([Structure])
 | Type | Description |
 | --- | --- |
-| [List]&lt;[RelationObjectParam ](#relationobjectparam-structure)&gt; | Headers |
+| [List]&lt;[DataStoreKeyValue]&gt; | Headers |
 | Uint32 | Expiration (seconds) |
-
-## RelationObjectParam ([Structure])
-| Type | Description |
-| --- | --- |
-| [String] | Key |
-| [String] | Value |
 
 ## UserInfo ([Structure])
 | Type | Option | Description |
@@ -929,7 +923,6 @@ Revision 2:
 [ThumbnailInfo]: #thumbnailinfo-structure
 [CommentInfo]: #commentinfo-structure
 [CommentPictureReqGetInfoWithoutHeaders]: #commentpicturereqgetinfowithoutheaders-structure
-[RelationObjectParam]: #relationobjectparam-structure
 [MiiClothes]: #miiclothes-structure
 [BattleModeRating]: #battlemoderating-structure
 
@@ -939,6 +932,7 @@ Revision 2:
 [DataStoreReqGetInfo]: Data-Store-Protocol#datastorereqgetinfo-structure
 [DataStoreReqPostInfo]: Data-Store-Protocol#datastorereqpostinfo-structure
 [DataStoreMetaInfo]: Data-Store-Protocol#datastoremetainfo-structure
+[DataStoreKeyValue]: Data-Store-Protocol#datastorekeyvalue-structure
 
 [Result]: NEX-Common-Types#result
 [String]: NEX-Common-Types#string
