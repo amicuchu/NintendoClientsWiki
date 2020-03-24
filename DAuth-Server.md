@@ -7,7 +7,7 @@ Most Switch servers can only be accessed after acquiring a device authorization 
 
 The dauth server takes form-encoded requests and responds with json-encoding. Also, this server uses the alternative base64 table (with '-' and '_' instead of '+' and '/'), and the client does not add any padding characters.
 
-This page was last updated for firmware version 9.1.0.
+This page was last updated for firmware version 9.2.0.
 
 ## Headers
 | Header | Description |
