@@ -17,7 +17,7 @@
 | Friends | 00003200 | ridfebb9 |
 | Mario Kart 8 | 1010EB00 | 25dbf96a |
 | Puddle | 1010FB00 | afcffb5c |
-| Super Smash Bros 4 | 10110E00 | 2869ba38 |
+| Super Smash Bros. 4 | 10110E00 | 2869ba38 |
 | DKC: Tropical Freeze | 10144800 | 7fcf384a |
 | Super Mario Maker | 1018DB00 | 9f2b4678 |
 | Minecraft | 101D9D00 | f1b61c8e |
