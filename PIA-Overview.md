@@ -51,5 +51,5 @@ The following steps are performed for NAT traversal:
 3. The other console sends a [probe request](NAT-Traversal-Protocol-(PIA)#probe-request) directly to your console. At the same time, it calls [RequestProbeInitiation](NAT-Traversal-Protocol#1-requestprobeinitiation) or [RequestProbeInitiationExt](NAT-Traversal-Protocol#3-requestprobeinitiationext) on the game server.
 4. When your console receives the probe requests, it sends a [probe reply](NAT-Traversal-Protocol-(PIA)#probe-reply) directly to the other console. When the server receives the probe initation request, it sends an [InitiateProbe](NAT-Traversal-Protocol#2-initiateprobe) request to your console.
 5. When your console receives the InitiateProbe request from the server it sends a probe request directly to the other console.
-6. The other console answers your probe request with a probe response.
+6. The other console answers your probe request with a probe reply.
 7. NAT traversal has been completed and the consoles can now [establish a connection](#establishing-a-connection) using the [station protocol](Station-Protocol).
