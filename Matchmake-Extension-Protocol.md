@@ -1,5 +1,9 @@
 ## [[NEX Protocols]] > Matchmake Extension (0x6D)
 
+Mario Kart 8 extends this protocol with additional methods. These methods are described [here](Matchmake-Extension-Protocol-(MK8)).
+
+This remainder of this page describes the methods that are not specific to any game.
+
 | Method ID | Method Name |
 | --- | --- |
 | 1 | [CloseParticipation](#1-closeparticipation) |
