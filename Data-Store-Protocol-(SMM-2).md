@@ -740,6 +740,11 @@ This method does not return anything.
 | Uint8 | Unknown |
 | [UnknownStruct7](#unknownstruct7-structure) | Unknown |
 | [UnknownStruct7](#unknownstruct7-structure) | Unknown |
+
+Revision 1:
+
+| Type | Description |
+| --- | --- |
 | [DateTime] | Unknown |
 | Uint8 | Unknown |
 | Uint32 | Unknown |
