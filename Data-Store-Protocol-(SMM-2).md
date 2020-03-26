@@ -476,7 +476,7 @@ This method does not take any parameters.
 ## Response
 | Type | Description |
 | --- | --- |
-| Uint32 | Unknown |
+| Uint32 | Stamps |
 
 # (154) GetEventCourseStatus
 ## Request
