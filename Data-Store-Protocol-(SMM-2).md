@@ -112,12 +112,12 @@ Some methods take a `resultOption` parameter. This parameter controls which fiel
 | 150 | PostPlayResultBattleModeFriendEntire |
 | 151 | LoginCheck |
 | 152 | UpdateLastLoginInfo |
-| 153 | GetEventCourseStamp |
-| 154 | GetEventCourseStatus |
-| 155 | ReadEventCourseResult |
-| 156 | GetEventCourseHistogram |
+| 153 | [GetEventCourseStamp](#153-geteventcoursestamp) |
+| 154 | [GetEventCourseStatus](#154-geteventcoursestatus) |
+| 155 | [ReadEventCourseResult](#155-readeventcourseghostresult) |
+| 156 | [GetEventCourseHistogram](#156-geteventcoursehistogram) |
 | 157 | [GetEventCourseGhost](#157-geteventcourseghost) |
-| 158 | DebugUploadEventCourseGhost |
+| 158 | [DebugUploadEventCourseGhost](#158-debuguploadeventcourseghost) |
 
 # (47) RegisterUser
 ## Request
@@ -436,6 +436,44 @@ This method returns headers that can be used to download relation files from the
 | --- | --- |
 | [ReqGetInfoHeadersInfo](#reqgetinfoheadersinfo-structure) | Info |
 
+# (153) GetEventCourseStamp
+## Request
+This method does not take any parameters.
+
+## Response
+| Type | Description |
+| --- | --- |
+| Uint32 | Unknown |
+
+# (154) GetEventCourseStatus
+## Request
+This method does not take any parameters.
+
+## Response
+| Type | Description |
+| --- | --- |
+| [EventCourseStatusInfo](#eventcoursestatusinfo-structure) | Status info |
+
+# (155) ReadEventCourseResult
+## Request
+| Type | Description |
+| --- | --- |
+| Uint64 | Unknown |
+
+## Response
+This method does not return anything.
+
+# (156) GetEventCourseHistogram
+## Request
+| Type | Description |
+| --- | --- |
+| [GetEventCourseHistogramParam](#geteventcoursehistogramparam-structure) | Param |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [EventCourseHistogram](#eventcoursehistogram) | Histogram info |
+
 # (157) GetEventCourseGhost
 ## Request
 | Type | Description |
@@ -447,105 +485,27 @@ This method returns headers that can be used to download relation files from the
 | --- | --- |
 | [List]&lt;[EventCourseGhostInfo](#eventcourseghostinfo-structure)&gt; | Ghosts |
 
+# (158) DebugUploadEventCourseGhost
+## Request
+| Type | Description |
+| --- | --- |
+| [DebugUploadEventCourseGhostParam](#debuguploadeventcourseghostparam-structure) | Param |
+
+## Response
+This method does not return anything.
+
 # Types
-## RegisterUserParam ([Structure])
+## BadgeInfo ([Structure])
 | Type | Description |
 | --- | --- |
-| [String] | Username |
-| [UnknownStruct1] | Unknown |
-| [qBuffer] | Unknown |
-| Uint8 | Region id |
-| [String] | Country code |
-| [String] | Pseudo device id |
-
-## GetUsersParam ([Structure])
-| Type | Name |
-| --- | --- |
-| [List]&lt;[PID]&gt; | userPIDs |
-| Uint32 | resultOption |
-
-## SyncUserProfileParam ([Structure])
-| Type | Description |
-| --- | --- |
-| [String] | Username |
-| [UnknownStruct1] | Unknown |
-| [qBuffer] | Unknown |
+| Uint16 | Unknown |
 | Uint8 | Unknown |
-| [String] | Country code |
-| Bool | Unknown |
-| Bool | Unknown |
-| [String] | Unknown |
-| Uint32 | Unknown |
 
-## SyncUserProfileResult ([Structure])
-| Type | Description |
-| --- | --- |
-| [PID] | User id |
-| [String] | Username |
-| [UnknownStruct1] | Unknown |
-| [qBuffer] | Unknown |
-| Uint8 | Unknown |
-| [String] | Country code |
-| Uint8 | Unknown |
-| Bool | Unknown |
-| Bool | Unknown |
-
-## SearchUsersUserPointParam ([Structure])
-| Type | Description |
-| --- | --- |
-| Uint32 | Result option |
-| [Buffer] | Unknown |
-| [ResultRange] | Result range |
-
-## SearchUsersEndlessModeParam ([Structure])
-| Type | Description |
-| --- | --- |
-| Uint8 | Unknown |
-| Uint32 | Unknown |
-| [Buffer] | Unknown |
-| [ResultRange] | Unknown |
-
-## SearchUsersBattleModeParam ([Structure])
+## BattleModeRating ([Structure])
 | Type | Description |
 | --- | --- |
 | Uint32 | Unknown |
-| [Buffer] | Unknown |
-| [ResultRange] | Unknown |
-
-## SearchUsersPlayedCourseParam ([Structure])
-| Type | Name |
-| --- | --- |
-| Uint64 | dataId |
-| Uint32 | resultOption |
-| Uint32 | count |
-
-## SearchUsersClearedCourseParam ([Structure])
-| Type | Name |
-| --- | --- |
-| Uint64 | dataId |
-| Uint32 | resultOption |
-| Uint32 | count |
-
-## SearchUsersPositiveRatedCourseParam ([Structure])
-| Type | Name |
-| --- | --- |
-| Uint64 | dataId |
-| Uint32 | resultOption |
-| Uint32 | count |
-
-## SearchUsersFolloweeParam ([Structure])
-| Type | Name |
-| --- | --- |
-| Uint32 | resultOption |
-| [ResultRange] | resultRange |
-
-## SearchUsersClearRankingParam ([Structure])
-| Type | Description |
-| --- | --- |
 | Uint8 | Unknown |
-| Uint32 | Unknown |
-| [Buffer] | Unknown |
-| [ResultRange] | Unknown |
 
 ## CanPostRatingAndCommentParam ([Structure])
 | Type | Description |
@@ -564,189 +524,36 @@ This method returns headers that can be used to download relation files from the
 | Uint32 | Unknown |
 | [Map]&lt;Uint8, Uint32&gt; | Unknown |
 
-## UpdateMiiClothesParam ([Structure])
+## CommentInfo ([Structure])
 | Type | Description |
 | --- | --- |
-| Uint16 | Unknown |
-| Uint16 | Unknown |
-| Bool | Unknown |
-
-## PreparePostCourseParam ([Structure])
-| Type | Description |
-| --- | --- |
+| Uint64 | Unknown |
 | [String] | Unknown |
-| [String] | Unknown |
-| Uint32 | Unknown |
-| Bool | Unknown |
 | Uint8 | Unknown |
 | Uint8 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
+| Uint64 | Unknown |
+| Uint16 | Unknown |
+| Uint16 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint16 | Unknown |
+| Bool | Unknown |
+| Bool | Unknown |
+| [DateTime] | Unknown |
 | [qBuffer] | Unknown |
+| [String] | Unknown |
+| [CommentPictureReqGetInfoWithoutHeaders] | Comment picture info |
+| Uint16 | Unknown |
+| Uint8 | Unknown |
+
+## CommentPictureReqGetInfoWithoutHeaders ([Structure])
+| Type | Description |
+| --- | --- |
+| [String] | Unknown |
 | Uint8 | Unknown |
 | Uint32 | Unknown |
-| Uint16 | Unknown |
-| Uint16 | Unknown |
-| Bool | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| [List]&lt;[String]&gt; | Unknown |
-
-## GetCoursesParam ([Structure])
-| Type | Description |
-| --- | --- |
-| [List]&lt;Uint64&gt; | Data ids |
-| Uint32 | Result options |
-
-## SearchCoursesPointRankingParam ([Structure])
-| Type | Name |
-| --- | --- |
-| Uint32 | resultOption |
-| [ResultRange] | resultRange |
-| Uint8 | preferCourseDifficulty |
-| [List]&lt;Uint8&gt; | rejectRegionIds |
-
-## SearchCoursesLatestParam ([Structure])
-| Type | Name |
-| --- | --- |
-| Uint32 | resultOption |
-| [ResultRange] | resultRange |
-
-## SearchCoursesEndlessModeParam ([Structure])
-| Type | Name |
-| --- | --- |
-| Uint32 | resultOption |
-| Uint32 | count |
-| Uint8 | difficulty |
-
-## EndlessModeStatus ([Structure])
-| Type | Description |
-| --- | --- |
-| [Map]&lt;Uint8, [UnknownStruct4]&gt; | Unknown |
-| [Map]&lt;Uint8, [UnknownStruct5]&gt; | Unknown |
-
-## GetUserOrCourseParam ([Structure])
-| Type | Name |
-| --- | --- |
-| [String] | codeString |
-| Uint32 | userResultOption |
-| Uint32 | courseResultOption |
-
-## PreparePostRelationObjectParam ([Structure])
-| Type | Name |
-| --- | --- |
-| [String] | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| [List]&lt;[String]&gt; | Unknown |
-
-## RelationObjectReqPostInfo ([Structure])
-| Type | Description |
-| --- | --- |
-| [String] | Unknown |
-| [String] | Unknown |
-| [List]&lt;[DataStoreKeyValue]&gt; | Headers |
-| [List]&lt;[DataStoreKeyValue]&gt; | Form fields |
 | [Buffer] | Unknown |
-
-## ReqGetInfoHeadersInfo ([Structure])
-| Type | Description |
-| --- | --- |
-| [List]&lt;[DataStoreKeyValue]&gt; | Headers |
-| Uint32 | Expiration (seconds) |
-
-## GetEventCourseGhostParam ([Structure])
-| Type | Description |
-| --- | --- |
-| Uint64 | Unknown |
-| Uint32 | Unknown |
-| Uint8 | Unknown |
-
-## EventCourseGhostInfo ([Structure])
-| Type | Description |
-| --- | --- |
-| [RelationObjectInfo] | Replay file |
-| Uint32 | Unknown |
-| Uint64 | Unknown |
-
-## UserInfo ([Structure])
-| Type | Option | Description |
-| --- | --- | --- |
-| [PID] | | User id |
-| [String] | | Maker code |
-| [String] | | User name |
-| [UnknownStruct1] | `0x200` | Unknown |
-| [qBuffer] | `0x4` | Unknown |
-| [String] | | Country code |
-| Uint8 | | Region id |
-| [DateTime] | | Last active time |
-| Bool | | Unknown |
-| Bool | | Unknown |
-| Bool | | Unknown |
-| [Map]&lt;Uint8, Uint32&gt; | `0x1` | [Play stats](#user-play-stats) |
-| [Map]&lt;Uint8, Uint32&gt; | `0x2` | [Maker stats](#maker-stats) |
-| [Map]&lt;Uint8, Uint32&gt; | `0x8` | [Endless mode highscores](#difficulty-level) |
-| [Map]&lt;Uint8, Uint32&gt; | `0x10` | [Multiplayer stats](#multiplayer-stats) |
-| [Map]&lt;Uint8, Uint32&gt; | `0x400` | Unknown |
-| [List]&lt;[BadgeInfo]&gt; | `0x20` | Badge info |
-| [Map]&lt;Uint8, Uint32&gt; | `0x40` | Unknown |
-| [Map]&lt;Uint8, Uint32&gt; | `0x80` | Unknown |
-
-Revision 1:
-
-| Type | Option | Description |
-| --- | --- | --- |
-| Bool | | Unknown |
-| [DateTime] | `0x1000` | Unknown |
-| Bool | | Unknown |
-
-Revision 2:
-
-| Type | Option | Description |
-| --- | --- | --- |
-| [UnknownStruct3] | `0x2000` | Unknown |
-
-### User Play Stats
-| Key | Description |
-| --- | --- |
-| 0 | Plays |
-| 1 | Clears |
-| 2 | Attempts |
-| 3 | Deaths |
-
-### Maker Stats
-| Key | Description |
-| --- | --- |
-| 0 | Hearts received |
-| 1 | Maker points |
-
-### Multiplayer Stats
-| Key | Description |
-| --- | --- |
-| 0 | Multiplayer score |
-| 2 | Versus plays |
-| 3 | Versus wins |
-| 10 | Coop plays |
-| 11 | Coop wins |
-
-## BadgeInfo ([Structure])
-| Type | Description |
-| --- | --- |
-| Uint16 | Unknown |
-| Uint8 | Unknown |
-
-## RelationObjectInfo ([Structure])
-| Type | Description |
-| --- | --- |
-| [String] | Url |
-| Uint8 | Relation data type |
-| Uint32 | Filesize |
-| [Buffer] | Unknown |
-| [String] | Filename |
+| [String] | Unknown |
 
 ## CourseInfo ([Structure])
 | Type | Option | Description |
@@ -776,8 +583,8 @@ Revision 2:
 | Uint8 | `0x20` | Unknown |
 | Uint8 | `0x10` | Unknown |
 | Uint8 | `0x20` | Unknown |
-| [RelationObjectInfo] | `0x80` | One-screen thumbnail |
-| [RelationObjectInfo] | `0x100` | Entire thumbnail |
+| [RelationObjectReqGetInfo] | `0x80` | One-screen thumbnail |
+| [RelationObjectReqGetInfo] | `0x100` | Entire thumbnail |
 
 ### Game Style
 | Value | Description |
@@ -844,14 +651,6 @@ Revision 2:
 | --- | --- |
 | 0 | Number of comments  |
 
-## Difficulty Level
-| Value | Description |
-| --- | --- |
-| 0 | Easy |
-| 1 | Normal |
-| 2 | Expert |
-| 3 | Super expert |
-
 ## CourseTimeStats ([Structure])
 | Type | Description |
 | --- | --- |
@@ -860,48 +659,251 @@ Revision 2:
 | Uint32 | World record (milliseconds) |
 | Uint32 | Time of uploader (milliseconds) |
 
-## CommentInfo ([Structure])
+## DebugUploadEventCourseGhostParam ([Structure])
 | Type | Description |
 | --- | --- |
 | Uint64 | Unknown |
+| Uint32 | Unknown |
 | [String] | Unknown |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
+
+## EndlessModeStatus ([Structure])
+| Type | Description |
+| --- | --- |
+| [Map]&lt;Uint8, [UnknownStruct4]&gt; | Unknown |
+| [Map]&lt;Uint8, [UnknownStruct5]&gt; | Unknown |
+
+## EventCourseGhostInfo ([Structure])
+| Type | Description |
+| --- | --- |
+| [RelationObjectReqGetInfo] | Replay file |
+| Uint32 | Unknown |
 | Uint64 | Unknown |
-| Uint16 | Unknown |
-| Uint16 | Unknown |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
-| Uint16 | Unknown |
-| Bool | Unknown |
+
+## EventCourseHistogram ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint64 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| [List]&lt;Uint32&gt; | Unknown |
+| [Map]&lt;Uint8, Uint32&gt; | Unknown |
+| Uint32 | Unknown |
+
+## EventCourseStatusInfo ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint64 | Unknown |
 | Bool | Unknown |
 | [DateTime] | Unknown |
-| [qBuffer] | Unknown |
-| [String] | Unknown |
-| [CommentPictureReqGetInfoWithoutHeaders] | Comment picture info |
-| Uint16 | Unknown |
-| Uint8 | Unknown |
 
-## CommentPictureReqGetInfoWithoutHeaders ([Structure])
+## GetCoursesParam ([Structure])
 | Type | Description |
 | --- | --- |
-| [String] | Unknown |
-| Uint8 | Unknown |
-| Uint32 | Unknown |
-| [Buffer] | Unknown |
-| [String] | Unknown |
+| [List]&lt;Uint64&gt; | Data ids |
+| Uint32 | Result options |
 
-## BattleModeRating ([Structure])
+## GetEventCourseGhostParam ([Structure])
 | Type | Description |
 | --- | --- |
+| Uint64 | Unknown |
 | Uint32 | Unknown |
 | Uint8 | Unknown |
+
+## GetEventCourseHistogramParam ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint64 | Unknown |
+
+## GetUserOrCourseParam ([Structure])
+| Type | Name |
+| --- | --- |
+| [String] | codeString |
+| Uint32 | userResultOption |
+| Uint32 | courseResultOption |
+
+## GetUsersParam ([Structure])
+| Type | Name |
+| --- | --- |
+| [List]&lt;[PID]&gt; | userPIDs |
+| Uint32 | resultOption |
 
 ## MiiClothes ([Structure])
 | Type | Description |
 | --- | --- |
 | Uint16 | Unknown |
 | Uint16 | Unknown |
+| Bool | Unknown |
+
+## PreparePostCourseParam ([Structure])
+| Type | Description |
+| --- | --- |
+| [String] | Unknown |
+| [String] | Unknown |
+| Uint32 | Unknown |
+| Bool | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| [qBuffer] | Unknown |
+| Uint8 | Unknown |
+| Uint32 | Unknown |
+| Uint16 | Unknown |
+| Uint16 | Unknown |
+| Bool | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| [List]&lt;[String]&gt; | Unknown |
+
+## PreparePostRelationObjectParam ([Structure])
+| Type | Name |
+| --- | --- |
+| [String] | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| [List]&lt;[String]&gt; | Unknown |
+
+## RegisterUserParam ([Structure])
+| Type | Description |
+| --- | --- |
+| [String] | Username |
+| [UnknownStruct1] | Unknown |
+| [qBuffer] | Unknown |
+| Uint8 | Region id |
+| [String] | Country code |
+| [String] | Pseudo device id |
+
+## RelationObjectReqGetInfo ([Structure])
+| Type | Description |
+| --- | --- |
+| [String] | Url |
+| Uint8 | Relation data type |
+| Uint32 | Filesize |
+| [Buffer] | Unknown |
+| [String] | Filename |
+
+## RelationObjectReqPostInfo ([Structure])
+| Type | Description |
+| --- | --- |
+| [String] | Unknown |
+| [String] | Unknown |
+| [List]&lt;[DataStoreKeyValue]&gt; | Headers |
+| [List]&lt;[DataStoreKeyValue]&gt; | Form fields |
+| [Buffer] | Unknown |
+
+## ReqGetInfoHeadersInfo ([Structure])
+| Type | Description |
+| --- | --- |
+| [List]&lt;[DataStoreKeyValue]&gt; | Headers |
+| Uint32 | Expiration (seconds) |
+
+## SearchCoursesEndlessModeParam ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint32 | resultOption |
+| Uint32 | count |
+| Uint8 | difficulty |
+
+## SearchCoursesLatestParam ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint32 | resultOption |
+| [ResultRange] | resultRange |
+
+## SearchCoursesPointRankingParam ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint32 | resultOption |
+| [ResultRange] | resultRange |
+| Uint8 | preferCourseDifficulty |
+| [List]&lt;Uint8&gt; | rejectRegionIds |
+
+## SearchUsersBattleModeParam ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint32 | Unknown |
+| [Buffer] | Unknown |
+| [ResultRange] | Unknown |
+
+## SearchUsersClearedCourseParam ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint64 | dataId |
+| Uint32 | resultOption |
+| Uint32 | count |
+
+## SearchUsersClearRankingParam ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint8 | Unknown |
+| Uint32 | Unknown |
+| [Buffer] | Unknown |
+| [ResultRange] | Unknown |
+
+## SearchUsersEndlessModeParam ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint8 | Unknown |
+| Uint32 | Unknown |
+| [Buffer] | Unknown |
+| [ResultRange] | Unknown |
+
+## SearchUsersFolloweeParam ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint32 | resultOption |
+| [ResultRange] | resultRange |
+
+## SearchUsersPlayedCourseParam ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint64 | dataId |
+| Uint32 | resultOption |
+| Uint32 | count |
+
+## SearchUsersPositiveRatedCourseParam ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint64 | dataId |
+| Uint32 | resultOption |
+| Uint32 | count |
+
+## SearchUsersUserPointParam ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint32 | Result option |
+| [Buffer] | Unknown |
+| [ResultRange] | Result range |
+
+## SyncUserProfileParam ([Structure])
+| Type | Description |
+| --- | --- |
+| [String] | Username |
+| [UnknownStruct1] | Unknown |
+| [qBuffer] | Unknown |
+| Uint8 | Unknown |
+| [String] | Country code |
+| Bool | Unknown |
+| Bool | Unknown |
+| [String] | Unknown |
+| Uint32 | Unknown |
+
+## SyncUserProfileResult ([Structure])
+| Type | Description |
+| --- | --- |
+| [PID] | User id |
+| [String] | Username |
+| [UnknownStruct1] | Unknown |
+| [qBuffer] | Unknown |
+| Uint8 | Unknown |
+| [String] | Country code |
+| Uint8 | Unknown |
+| Bool | Unknown |
 | Bool | Unknown |
 
 ## UnknownStruct1 ([Structure])
@@ -911,6 +913,12 @@ Revision 2:
 | Uint16 | Unknown |
 | Uint16 | Unknown |
 | Uint16 | Unknown |
+
+## UnknownStruct3 ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint8 | Unknown |
+| [DateTime] | Unknown |
 
 ## UnknownStruct4 ([Structure])
 | Type | Description |
@@ -929,11 +937,80 @@ Revision 2:
 | Uint8 | Unknown |
 | Uint32 | Unknown |
 
-## UnknownStruct3 ([Structure])
+## UpdateMiiClothesParam ([Structure])
 | Type | Description |
 | --- | --- |
-| Uint8 | Unknown |
-| [DateTime] | Unknown |
+| Uint16 | Unknown |
+| Uint16 | Unknown |
+| Bool | Unknown |
+
+## UserInfo ([Structure])
+| Type | Option | Description |
+| --- | --- | --- |
+| [PID] | | User id |
+| [String] | | Maker code |
+| [String] | | User name |
+| [UnknownStruct1] | `0x200` | Unknown |
+| [qBuffer] | `0x4` | Unknown |
+| [String] | | Country code |
+| Uint8 | | Region id |
+| [DateTime] | | Last active time |
+| Bool | | Unknown |
+| Bool | | Unknown |
+| Bool | | Unknown |
+| [Map]&lt;Uint8, Uint32&gt; | `0x1` | [Play stats](#user-play-stats) |
+| [Map]&lt;Uint8, Uint32&gt; | `0x2` | [Maker stats](#maker-stats) |
+| [Map]&lt;Uint8, Uint32&gt; | `0x8` | [Endless mode highscores](#difficulty-level) |
+| [Map]&lt;Uint8, Uint32&gt; | `0x10` | [Multiplayer stats](#multiplayer-stats) |
+| [Map]&lt;Uint8, Uint32&gt; | `0x400` | Unknown |
+| [List]&lt;[BadgeInfo]&gt; | `0x20` | Badge info |
+| [Map]&lt;Uint8, Uint32&gt; | `0x40` | Unknown |
+| [Map]&lt;Uint8, Uint32&gt; | `0x80` | Unknown |
+
+Revision 1:
+
+| Type | Option | Description |
+| --- | --- | --- |
+| Bool | | Unknown |
+| [DateTime] | `0x1000` | Unknown |
+| Bool | | Unknown |
+
+Revision 2:
+
+| Type | Option | Description |
+| --- | --- | --- |
+| [UnknownStruct3] | `0x2000` | Unknown |
+
+### User Play Stats
+| Key | Description |
+| --- | --- |
+| 0 | Plays |
+| 1 | Clears |
+| 2 | Attempts |
+| 3 | Deaths |
+
+### Maker Stats
+| Key | Description |
+| --- | --- |
+| 0 | Hearts received |
+| 1 | Maker points |
+
+### Multiplayer Stats
+| Key | Description |
+| --- | --- |
+| 0 | Multiplayer score |
+| 2 | Versus plays |
+| 3 | Versus wins |
+| 10 | Coop plays |
+| 11 | Coop wins |
+
+## Difficulty Level
+| Value | Description |
+| --- | --- |
+| 0 | Easy |
+| 1 | Normal |
+| 2 | Expert |
+| 3 | Super expert |
 
 
 [UnknownStruct1]: #unknownstruct1-structure
@@ -945,7 +1022,7 @@ Revision 2:
 [UserInfo]: #userinfo-structure
 [CourseInfo]: #courseinfo-structure
 [BadgeInfo]: #badgeinfo-structure
-[RelationObjectInfo]: #relationobjectinfo-structure
+[RelationObjectReqGetInfo]: #relationobjectreqgetinfo-structure
 [CommentInfo]: #commentinfo-structure
 [CommentPictureReqGetInfoWithoutHeaders]: #commentpicturereqgetinfowithoutheaders-structure
 [MiiClothes]: #miiclothes-structure
