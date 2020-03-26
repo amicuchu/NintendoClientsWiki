@@ -116,7 +116,7 @@ Some methods take a `resultOption` parameter. This parameter controls which fiel
 | 154 | GetEventCourseStatus |
 | 155 | ReadEventCourseResult |
 | 156 | GetEventCourseHistogram |
-| 157 | GetEventCourseGhost |
+| 157 | [GetEventCourseGhost](#157-geteventcourseghost) |
 | 158 | DebugUploadEventCourseGhost |
 
 # (47) RegisterUser
@@ -436,6 +436,12 @@ This method returns headers that can be used to download relation files from the
 | --- | --- |
 | [ReqGetInfoHeadersInfo](#reqgetinfoheadersinfo-structure) | Info |
 
+# (157) GetEventCourseGhost
+## Request
+| Type | Description |
+| --- | --- |
+| [GetEventCourseGhostParam](#geteventcourseghostparam-structure) | Param |
+
 # Types
 ## RegisterUserParam ([Structure])
 | Type | Description |
@@ -648,6 +654,20 @@ This method returns headers that can be used to download relation files from the
 | [List]&lt;[DataStoreKeyValue]&gt; | Headers |
 | Uint32 | Expiration (seconds) |
 
+## GetEventCourseGhostParam ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint64 | Unknown |
+| Uint32 | Unknown |
+| Uint8 | Unknown |
+
+## EventCourseGhostInfo ([Structure])
+| Type | Description |
+| --- | --- |
+| [RelationObjectInfo] | Replay file |
+| Uint32 | Unknown |
+| Uint64 | Unknown |
+
 ## UserInfo ([Structure])
 | Type | Option | Description |
 | --- | --- | --- |
@@ -714,7 +734,7 @@ Revision 2:
 | Uint16 | Unknown |
 | Uint8 | Unknown |
 
-## ThumbnailInfo ([Structure])
+## RelationObjectInfo ([Structure])
 | Type | Description |
 | --- | --- |
 | [String] | Url |
@@ -751,8 +771,8 @@ Revision 2:
 | Uint8 | `0x20` | Unknown |
 | Uint8 | `0x10` | Unknown |
 | Uint8 | `0x20` | Unknown |
-| [ThumbnailInfo] | `0x80` | One-screen thumbnail |
-| [ThumbnailInfo] | `0x100` | Entire thumbnail |
+| [RelationObjectInfo] | `0x80` | One-screen thumbnail |
+| [RelationObjectInfo] | `0x100` | Entire thumbnail |
 
 ### Game Style
 | Value | Description |
@@ -920,7 +940,7 @@ Revision 2:
 [UserInfo]: #userinfo-structure
 [CourseInfo]: #courseinfo-structure
 [BadgeInfo]: #badgeinfo-structure
-[ThumbnailInfo]: #thumbnailinfo-structure
+[RelationObjectInfo]: #relationobjectinfo-structure
 [CommentInfo]: #commentinfo-structure
 [CommentPictureReqGetInfoWithoutHeaders]: #commentpicturereqgetinfowithoutheaders-structure
 [MiiClothes]: #miiclothes-structure
