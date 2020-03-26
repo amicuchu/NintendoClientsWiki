@@ -442,6 +442,11 @@ This method returns headers that can be used to download relation files from the
 | --- | --- |
 | [GetEventCourseGhostParam](#geteventcourseghostparam-structure) | Param |
 
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[EventCourseGhostInfo](#eventcourseghostinfo-structure)&gt; | Ghosts |
+
 # Types
 ## RegisterUserParam ([Structure])
 | Type | Description |
