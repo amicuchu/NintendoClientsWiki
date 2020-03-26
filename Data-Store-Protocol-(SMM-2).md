@@ -716,12 +716,12 @@ This method does not return anything.
 ## EventCourseHistogram ([Structure])
 | Type | Description |
 | --- | --- |
-| Uint64 | Unknown |
+| Uint64 | Data id |
 | Uint32 | Unknown |
 | Uint32 | Unknown |
 | Uint32 | Unknown |
-| [List]&lt;Uint32&gt; | Unknown |
-| [Map]&lt;Uint8, Uint32&gt; | Unknown |
+| [List]&lt;Uint32&gt; | Histogram values |
+| [Map]&lt;Uint8, Uint32&gt; | Medal time<br>`50`: Bronze<br>`30`: Silver<br>`10`: Gold |
 | Uint32 | Unknown |
 
 ## EventCourseInfo ([Structure])
@@ -784,14 +784,14 @@ This structure is empty.
 ## GetEventCourseGhostParam ([Structure])
 | Type | Description |
 | --- | --- |
-| Uint64 | Unknown |
+| Uint64 | Data id |
 | Uint32 | Unknown |
 | Uint8 | Unknown |
 
 ## GetEventCourseHistogramParam ([Structure])
 | Type | Description |
 | --- | --- |
-| Uint64 | Unknown |
+| Uint64 | Data id |
 
 ## GetUserOrCourseParam ([Structure])
 | Type | Name |
