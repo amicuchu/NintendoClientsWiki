@@ -582,11 +582,11 @@ This method does not return anything.
 ## CommentPictureReqGetInfoWithoutHeaders ([Structure])
 | Type | Description |
 | --- | --- |
-| [String] | Unknown |
-| Uint8 | Unknown |
-| Uint32 | Unknown |
-| [Buffer] | Unknown |
-| [String] | Unknown |
+| [String] | Url |
+| Uint8 | Relation data type |
+| Uint32 | Filesize |
+| [Buffer] | Root ca cert |
+| [String] | Filename |
 
 ## CourseInfo ([Structure])
 | Type | Option | Description |
@@ -853,7 +853,7 @@ This structure is empty.
 | [String] | Url |
 | Uint8 | Relation data type |
 | Uint32 | Filesize |
-| [Buffer] | Unknown |
+| [Buffer] | Root ca cert |
 | [String] | Filename |
 
 ## RelationObjectReqPostInfo ([Structure])
@@ -1010,6 +1010,21 @@ This structure is empty.
 | --- | --- |
 | Uint8 | Unknown |
 | Uint32 | Unknown |
+
+## UnknownStruct6 ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint64 | Unknown |
+| Uint32 | Unknown |
+
+## UnknownStruct7 ([Structure])
+| Type | Description |
+| --- | --- |
+| [String] | Url |
+| [List]&lt;[DataStoreKeyValue]&gt; | Headers |
+| Uint32 | Filesize |
+| [Buffer] | Root ca cert |
+| [String] | Filename |
 
 ## UpdateMiiClothesParam ([Structure])
 | Type | Description |
