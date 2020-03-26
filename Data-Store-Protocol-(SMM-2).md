@@ -463,6 +463,7 @@ This method returns headers that can be used to download relation files from the
 | 2 | /ds/1/relation_data/course_one_screen_thumbnail/ |
 | 3 | /ds/1/relation_data/course_entire_thumbnail/ |
 | 10 | /ds/1/comment/ |
+| 40 | /ds/1/relation_data/event_course_ghost/ |
 
 ## Response
 | Type | Description |
@@ -724,36 +725,36 @@ This method does not return anything.
 | Uint32 | Unknown |
 
 ## EventCourseInfo ([Structure])
-| Type | Description |
-| --- | --- |
-| Uint64 | Unknown |
-| [String] | Unknown |
-| [String] | Unknown |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
-| Bool | Unknown |
-| Bool | Unknown |
-| [DateTime] | Unknown |
-| [DataStoreReqGetInfo] | GET request info |
-| [Map]&lt;Uint8, Uint32&gt; | Unknown |
-| [UnknownStruct6](#unknownstruct6-structure) | Unknown |
-| Uint8 | Unknown |
-| [UnknownStruct7](#unknownstruct7-structure) | Unknown |
-| [UnknownStruct7](#unknownstruct7-structure) | Unknown |
+| Type | Option | Description |
+| --- | --- | --- |
+| Uint64 | | Data id |
+| [String] | | Name |
+| [String] | | Description |
+| Uint8 | | [Game style](#game-style) |
+| Uint8 | | [Course theme](#course-theme) |
+| Bool | `0x40` | Unknown |
+| Bool | | Unknown |
+| [DateTime] | | Upload time |
+| [DataStoreReqGetInfo] | `0x2` | GET request info |
+| [Map]&lt;Uint8, Uint32&gt; | `0x1` | Unknown |
+| [UnknownStruct6](#unknownstruct6-structure) | | Unknown |
+| Uint8 | | Unknown |
+| [EventCourseThumbnail](#eventcoursethumbnail-structure) | `0x10` | One-screen thumbnail |
+| [EventCourseThumbnail](#eventcoursethumbnail-structure) | `0x20` | Entire thumbnail |
 
 Revision 1:
 
-| Type | Description |
-| --- | --- |
-| [DateTime] | Unknown |
-| Uint8 | Unknown |
-| Uint32 | Unknown |
-| Uint16 | Unknown |
-| Uint16 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| [RelationObjectReqGetInfo] | Unknown |
+| Type | Option | Description |
+| --- | --- | --- |
+| [DateTime] | | Deadline |
+| Uint8 | | Unknown |
+| Uint32 | | Unknown |
+| Uint16 | | Unknown |
+| Uint16 | | Unknown |
+| Uint32 | `0x8` | Personal best time |
+| Uint32 | | Unknown |
+| Uint32 | `0x100` | Time required for medal |
+| [RelationObjectReqGetInfo] | `0x200` | Personal best time ghost |
 
 ## EventCourseStatusInfo ([Structure])
 | Type | Description |
@@ -761,6 +762,15 @@ Revision 1:
 | Uint64 | Unknown |
 | Bool | Unknown |
 | [DateTime] | Unknown |
+
+## EventCourseThumbnail ([Structure])
+| Type | Description |
+| --- | --- |
+| [String] | Url |
+| [List]&lt;[DataStoreKeyValue]&gt; | Headers |
+| Uint32 | Filesize |
+| [Buffer] | Root ca cert |
+| [String] | Filename |
 
 ## GetCoursesParam ([Structure])
 | Type | Description |
@@ -885,7 +895,7 @@ This structure is empty.
 ## SearchCoursesEventParam ([Structure])
 | Type | Description |
 | --- | --- |
-| Uint32 | Unknown |
+| Uint32 | Result option |
 
 ## SearchCoursesLatestParam ([Structure])
 | Type | Name |
@@ -1020,15 +1030,6 @@ This structure is empty.
 | --- | --- |
 | Uint64 | Unknown |
 | Uint32 | Unknown |
-
-## UnknownStruct7 ([Structure])
-| Type | Description |
-| --- | --- |
-| [String] | Url |
-| [List]&lt;[DataStoreKeyValue]&gt; | Headers |
-| Uint32 | Filesize |
-| [Buffer] | Root ca cert |
-| [String] | Filename |
 
 ## UpdateMiiClothesParam ([Structure])
 | Type | Description |
