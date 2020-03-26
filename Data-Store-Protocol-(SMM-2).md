@@ -710,8 +710,8 @@ This method does not return anything.
 | Type | Description |
 | --- | --- |
 | [RelationObjectReqGetInfo] | Replay file |
-| Uint32 | Unknown |
-| Uint64 | Unknown |
+| Uint32 | Time in milliseconds |
+| [PID] | User id |
 
 ## EventCourseHistogram ([Structure])
 | Type | Description |
@@ -785,8 +785,8 @@ This structure is empty.
 | Type | Description |
 | --- | --- |
 | Uint64 | Data id |
-| Uint32 | Unknown |
-| Uint8 | Unknown |
+| Uint32 | Approximate time |
+| Uint8 | Number of ghosts |
 
 ## GetEventCourseHistogramParam ([Structure])
 | Type | Description |
