@@ -44,9 +44,9 @@ Some methods take a `resultOption` parameter. This parameter controls which fiel
 | 82 | SearchCoursesFolloweePostedBy |
 | 83 | SearchCoursesTermsRanking |
 | 84 | SearchCoursesPickUp |
-| 85 | GetCoursesEvent |
-| 86 | SearchCoursesEvent |
-| 87 | ReadEventCourseList |
+| 85 | [GetCoursesEvent](#85-getcoursesevent) |
+| 86 | [SearchCoursesEvent](#86-searchcoursesevent) |
+| 87 | [ReadEventCourseList](#87-readeventcourselist) |
 | 88 | PreparePostObjectCommentPicture |
 | 89 | CompletePostObjectCommentPicture |
 | 90 | CompletePostObjectsCommentPicture |
@@ -361,6 +361,39 @@ This method does not take any parameters.
 | Type | Description |
 | --- | --- |
 | [List]&lt;[CourseInfo]&gt; | Courses |
+
+# (85) GetCoursesEvent
+## Request
+| Type | Description |
+| --- | --- |
+| [GetCoursesParam](#getcoursesparam-structure) | Course param |
+| [GetCoursesEventParam](#getcourseseventparam-structure) | Event param |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[EventCourseInfo](#eventcourseinfo-structure)&gt; | Event courses |
+| [List]&lt;[Result]&gt; | Results |
+
+# (86) SearchCoursesEvent
+## Request
+| Type | Description |
+| --- | --- |
+| [SearchCoursesEventParam](#searchcourseseventparam-structure) | Event param |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[EventCourseInfo](#eventcourseinfo-structure)&gt; | Event courses |
+
+# (87) ReadEventCourseList
+## Request
+| Type | Description |
+| --- | --- |
+| [ReadEventCourseListParam](#readeventcourselistparam-structure) | Param |
+
+## Response
+This method does not return anything.
 
 # (95) SearchComments
 ## Request
@@ -690,6 +723,34 @@ This method does not return anything.
 | [Map]&lt;Uint8, Uint32&gt; | Unknown |
 | Uint32 | Unknown |
 
+## EventCourseInfo ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint64 | Unknown |
+| [String] | Unknown |
+| [String] | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Bool | Unknown |
+| Bool | Unknown |
+| [DateTime] | Unknown |
+| [DataStoreReqGetInfo] | GET request info |
+| [Map]&lt;Uint8, Uint32&gt; | Unknown |
+| [UnknownStruct6](#unknownstruct6-structure) | Unknown |
+| Uint8 | Unknown |
+| [UnknownStruct7](#unknownstruct7-structure) | Unknown |
+| [UnknownStruct7](#unknownstruct7-structure) | Unknown |
+| [DateTime] | Unknown |
+| Uint8 | Unknown |
+| Uint32 | Unknown |
+| Uint16 | Unknown |
+| Uint16 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| [RelationObjectReqGetInfo] | Unknown |
+| [RelationObjectReqGetInfo] | Unknown |
+
 ## EventCourseStatusInfo ([Structure])
 | Type | Description |
 | --- | --- |
@@ -702,6 +763,9 @@ This method does not return anything.
 | --- | --- |
 | [List]&lt;Uint64&gt; | Data ids |
 | Uint32 | Result options |
+
+## GetCoursesEventParam ([Structure])
+This structure is empty.
 
 ## GetEventCourseGhostParam ([Structure])
 | Type | Description |
@@ -768,6 +832,11 @@ This method does not return anything.
 | Uint32 | Unknown |
 | [List]&lt;[String]&gt; | Unknown |
 
+## ReadEventCourseListParam ([Structure])
+| Type | Description |
+| --- | --- |
+| [DateTime] | Unknown |
+
 ## RegisterUserParam ([Structure])
 | Type | Description |
 | --- | --- |
@@ -808,6 +877,11 @@ This method does not return anything.
 | Uint32 | resultOption |
 | Uint32 | count |
 | Uint8 | difficulty |
+
+## SearchCoursesEventParam ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint32 | Unknown |
 
 ## SearchCoursesLatestParam ([Structure])
 | Type | Name |
