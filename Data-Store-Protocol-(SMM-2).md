@@ -754,7 +754,6 @@ Revision 1:
 | Uint32 | Unknown |
 | Uint32 | Unknown |
 | [RelationObjectReqGetInfo] | Unknown |
-| [RelationObjectReqGetInfo] | Unknown |
 
 ## EventCourseStatusInfo ([Structure])
 | Type | Description |
