@@ -238,16 +238,16 @@ This method does not return anything
 ## FriendPersistentInfo
 | Type | Description |
 | --- | --- |
-| Uint32 | Unknown |
+| [PID] | User id |
 | Uint8 | Region |
 | Uint8 | Country |
 | Uint8 | Area |
 | Uint8 | Language |
 | Uint8 | Platform |
 | [GameKey](#gamekey) | Game key |
-| [String] | Unknown |
-| [DateTime] | Unknown |
-| [DateTime] | Unknown |
+| [String] | Message |
+| [DateTime] | Message updated at |
+| [DateTime] | Friended at |
 | [DateTime] | Unknown |
 
 ## FriendPicture
@@ -305,18 +305,18 @@ This method does not return anything
 | [String] | Unknown |
 
 ## NintendoPresence
-| Type | Name | Description |
-| --- | --- | --- |
+| Type | Name |
+| --- | --- |
 | Uint32 | m_changedBitFlag |
-| [GameKey](#gamekey) | m_gameKey | Game key |
-| [String] | m_gameModeDescription | Message |
-| Uint32 | m_joinAvailabilityFlag | |
-| Uint8 | m_matchmakeSystemType | |
-| Uint32 | m_joinGameID | |
-| Uint32 | m_joinGameMode | |
-| [PID] | m_ownerPrincipalID | |
-| Uint32 | m_joinGroupID | |
-| [Buffer] | m_applicationArg | |
+| [GameKey](#gamekey) | m_gameKey |
+| [String] | m_gameModeDescription |
+| Uint32 | m_joinAvailabilityFlag |
+| Uint8 | m_matchmakeSystemType |
+| Uint32 | m_joinGameID |
+| Uint32 | m_joinGameMode |
+| [PID] | m_ownerPrincipalID |
+| Uint32 | m_joinGroupID |
+| [Buffer] | m_applicationArg |
 
 ## PlayedGame
 | Type | Description |
