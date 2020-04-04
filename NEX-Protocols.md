@@ -1,4 +1,6 @@
-As stated on the [Game Server Overview](NEX-Overview-(Game-Servers)) page, NEX is actually a Nintendo-version of Quazal Rendez-Vous. As a consequence, both libraries share the same services, but NEX only provides a handful of them.
+As stated on the [Game Server Overview](NEX-Overview-(Game-Servers)) page, NEX is based on Quazal Rendez-Vous. Because of this, many protocols come from the original Quazal Rendez-Vous library, but Nintendo also implemented some new protocols.
+
+The servers also seem to use some [internal protocols](NEX-Internal-Protocols).
 
 See also: [[RMC Protocol]]
 
