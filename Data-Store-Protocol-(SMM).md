@@ -37,8 +37,8 @@ This page describes the methods that are only seen in Super Mario Maker.
 | 76 | GetDeletionReason |
 | 77 | SetDeletionReason |
 | 78 | GetMetasWithCourseRecord |
-| 79 | CheckRateCustomRankingCounter |
-| 80 | ResetRateCustomRankingCounter |
+| 79 | [CheckRateCustomRankingCounter](#79-checkratecustomrankingcounter) |
+| 80 | [ResetRateCustomRankingCounter](#80-resetratecustomrankingcounter) |
 | 81 | BestScoreRateCourseSearchObject |
 | 82 | CTRPickUpCourseSearchObject |
 | 83 | ? |
@@ -124,6 +124,26 @@ This method does not return anything.
 | Type | Description |
 | --- | --- |
 | [List]&lt;[String]&gt; | Config |
+
+# (79) CheckRateCustomRankingCounter
+## Request
+| Type | Description |
+| --- | --- |
+| Uint32 | Unknown |
+
+## Response
+| Type | Description |
+| --- | --- |
+| Bool | Result |
+
+# (80) ResetRateCustomRankingCounter
+## Request
+| Type | Description |
+| --- | --- |
+| Uint32 | Unknown |
+
+## Response
+This method does not return anything.
 
 # Types
 ## BufferQueueParam ([Structure])
