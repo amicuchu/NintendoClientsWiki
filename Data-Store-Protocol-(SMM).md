@@ -34,7 +34,7 @@ This page describes the methods that are only seen in Super Mario Maker.
 | 73 | DeleteCourseRecord |
 | 74 | [GetApplicationConfigString](#74-getapplicationconfigstring) |
 | 75 | SetApplicationConfigString |
-| 76 | GetDeletionReason |
+| 76 | [GetDeletionReason](#76-getdeletionreason) |
 | 77 | SetDeletionReason |
 | 78 | GetMetasWithCourseRecord |
 | 79 | [CheckRateCustomRankingCounter](#79-checkratecustomrankingcounter) |
@@ -124,6 +124,17 @@ This method does not return anything.
 | Type | Description |
 | --- | --- |
 | [List]&lt;[String]&gt; | Config |
+
+# (76) GetDeletionReason
+## Request
+| Type | Description |
+| --- | --- |
+| [List]&lt;Uint64&gt; | Data ids |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;Uint32&gt; | Deletion reasons |
 
 # (79) CheckRateCustomRankingCounter
 ## Request
