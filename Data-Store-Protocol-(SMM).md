@@ -10,11 +10,11 @@ This page describes the methods that are only seen in Super Mario Maker.
 | 49 | ? |
 | 50 | GetCustomRankingByDataId |
 | 51 | ? |
-| 52 | AddToBufferQueue |
-| 53 | AddToBufferQueues |
-| 54 | GetBufferQueue |
-| 55 | GetBufferQueues |
-| 56 | ClearBufferQueues |
+| 52 | [AddToBufferQueue](#52-addtobufferqueue) |
+| 53 | [AddToBufferQueues](#53-addtobufferqueues) |
+| 54 | [GetBufferQueue](#54-getbufferqueue) |
+| 55 | [GetBufferQueues](#55-getbufferqueues) |
+| 56 | [ClearBufferQueues](#56-clearbufferqueues) |
 | 57 | CompleteAttachFile |
 | 58 | CompleteAttachFileV1 |
 | 59 | PrepareAttachFile |
@@ -46,6 +46,71 @@ This page describes the methods that are only seen in Super Mario Maker.
 | 85 | ? |
 | 86 | SearchUnknownPlatformObjects |
 | 87 | ReportCourse |
+
+# (52) AddToBufferQueue
+## Request
+| Type | Name |
+| --- | --- |
+| [BufferQueueParam] | param |
+| [qBuffer] | buffer |
+
+## Response
+This method does not return anything.
+
+# (53) AddToBufferQueues
+## Request
+| Type | Name |
+| --- | --- |
+| [List]&lt;[BufferQueueParam]&gt; | params |
+| [List]&lt;[qBuffer]&gt; | buffers |
+
+## Response
+| Type | Name |
+| --- | --- |
+| [List]&lt;[Result]&gt; | pResults |
+
+# (54) GetBufferQueue
+## Request
+| Type | Name |
+| --- | --- |
+| [BufferQueueParam] | param |
+
+## Response
+| Type | Name |
+| --- | --- |
+| [List]&lt;[qBuffer]&gt; | pBufferQueue |
+
+# (55) GetBufferQueues
+## Request
+| Type | Name |
+| --- | --- |
+| [List]&lt;[BufferQueueParam]&gt; | params |
+
+## Response
+| Type | Name |
+| --- | --- |
+| [List]&lt;[List]&lt;[qBuffer]&gt;&gt; | pBufferQueueLst |
+| [List]&lt;[Result]&gt; | pResults |
+
+# (56) ClearBufferQueues
+## Request
+| Type | Name |
+| --- | --- |
+| [List]&lt;[BufferQueueParam]&gt; | params |
+
+## Response
+| Type | Name |
+| --- | --- |
+| [List]&lt;[Result]&gt; | pResults |
+
+# Types
+## BufferQueueParam ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint64 | dataId |
+| Uint32 | slot |
+
+[BufferQueueParam]: #bufferqueueparam-structure
 
 [DataStoreGetMetaParam]: Data-Store-Protocol#datastoregetmetaparam-structure
 [DataStorePreparePostParam]: Data-Store-Protocol#datastorepreparepostparam-structure
