@@ -19,7 +19,7 @@ This page describes the methods that are only seen in Super Mario Maker.
 | 58 | CompleteAttachFileV1 |
 | 59 | PrepareAttachFile |
 | 60 | ConditionalSearchObject |
-| 61 | GetApplicationConfig |
+| 61 | [GetApplicationConfig](#61-getapplicationconfig) |
 | 62 | SetApplicationConfig |
 | 63 | DeleteApplicationConfig |
 | 64 | LatestCourseSearchObject |
@@ -32,7 +32,7 @@ This page describes the methods that are only seen in Super Mario Maker.
 | 71 | UploadCourseRecord |
 | 72 | GetCourseRecord |
 | 73 | DeleteCourseRecord |
-| 74 | GetApplicationConfigString |
+| 74 | [GetApplicationConfigString](#74-getapplicationconfigstring) |
 | 75 | SetApplicationConfigString |
 | 76 | GetDeletionReason |
 | 77 | SetDeletionReason |
@@ -102,6 +102,28 @@ This method does not return anything.
 | Type | Name |
 | --- | --- |
 | [List]&lt;[Result]&gt; | pResults |
+
+# (61) GetApplicationConfig
+## Request
+| Type | Description |
+| --- | --- |
+| Uint32 | Id |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;Uint32&gt; | Config |
+
+# (74) GetApplicationConfigString
+## Request
+| Type | Description |
+| --- | --- |
+| Uint32 | Id |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[String]&gt; | Config |
 
 # Types
 ## BufferQueueParam ([Structure])
