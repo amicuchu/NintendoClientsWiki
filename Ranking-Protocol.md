@@ -1,4 +1,5 @@
 ## [[NEX Protocols]] > Ranking (0x70)
+Splatoon 2 extends this protocol with additional methods. These methods are described [here](Ranking-Protocol-(Splatoon-2)).
 
 | Method ID | Method Name |
 | --- | --- |
