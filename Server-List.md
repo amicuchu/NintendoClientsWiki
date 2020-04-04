@@ -30,7 +30,7 @@ Replace '%' by one of the following:
 | - g&lt;game server id&gt;-%.s.n.srv.nintendo.net | [Game servers](NEX-Overview-(Game-Servers)) |
 | - ecs-%.hac.shop.nintendo.net<br>- ias-%.hac.shop.nintendo.net<br>- beach.hac.%.eshop.nintendo.net<br>- bugyo.hac.%.eshop.nintendo.ent<br>- tagaya.hac.%.eshop.nintendo.net<br>- pushmo.hac.%.eshop.nintendo.net | E-Shop |
 | - api-%.frs.srv.nintendo.net | Friends |
-| - app-a03.%.npns.srv.nintendo.net<br>- app-b01.%.npns.srv.nintendo.net | |
+| - consumer.%.npns.srv.nintendo.net<br>- broker.%.npns.srv.nintendo.net<br>- app-a03.%.npns.srv.nintendo.net<br>- app-b01.%.npns.srv.nintendo.net | Push notifications |
 | - aqua.hac.%.d4c.nintendo.net<br>- sun.hac.%.d4c.nintendo.net<br>- superfly.hac.%.d4c.nintendo.net<br>- atum.hac.%.d4c.nintendo.net |
 | - receive-%.dg.srv.nintendo.net<br>- receive-%.er.srv.nintendo.net | |
 | - bcat-topics-%.cdn.nintendo.net<br>- bcat-list-%.cdn.nintendo.net<br>- bcat-data-%.cdn.nintendo.net | News |
@@ -40,9 +40,7 @@ Replace '%' by one of the following:
 | - web-%.share.srv.nintendo.net | |
 | - api.sect.srv.nintendo.net | |
 | - e97b8a9d672e4ce4845ec6947cd66ef6-sb.baas.nintendo.com<br>- e97b8a9d672e4ce4845ec6947cd66ef6-sb.accounts.nintendo.com<br>- e97b8a9d672e4ce4845ec6947cd66ef6-sb-api.accounts.nintendo.com | |
-| - consumer.%.npns.srv.nintendo.net | |
 | - dragons.hac.%.dragons.nintendo.net<br>- dragonst.hac.%.dragons.nintendo.net | |
 | - storage.%.scsi.srv.nintendo.net | |
-| - broker.%.npns.srv.nintendo.net | |
 | - capi.%.op2.nintendo.net | |
 | - app.%.five.nintendo.net | |
