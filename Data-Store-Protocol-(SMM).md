@@ -7,7 +7,7 @@ This page describes the methods that are only seen in Super Mario Maker.
 | 46 | ? |
 | 47 | ? |
 | 48 | RateCustomRanking |
-| 49 | ? |
+| 49 | GetCustomRanking |
 | 50 | GetCustomRankingByDataId |
 | 51 | ? |
 | 52 | [AddToBufferQueue](#52-addtobufferqueue) |
