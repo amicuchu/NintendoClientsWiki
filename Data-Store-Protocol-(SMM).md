@@ -43,7 +43,7 @@ This page describes the methods that are only seen in Super Mario Maker.
 | 82 | CTRPickUpCourseSearchObject |
 | 83 | ? |
 | 84 | ? |
-| 85 | ? |
+| 85 | ChangePlayablePlatform |
 | 86 | SearchUnknownPlatformObjects |
 | 87 | ReportCourse |
 
