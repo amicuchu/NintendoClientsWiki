@@ -8,7 +8,7 @@ This page describes the methods that are only seen in Super Mario Maker.
 | 47 | ? |
 | 48 | RateCustomRanking |
 | 49 | GetCustomRanking |
-| 50 | GetCustomRankingByDataId |
+| 50 | [GetCustomRankingByDataId](#50-getcustomrankingbydataid) |
 | 51 | ? |
 | 52 | [AddToBufferQueue](#52-addtobufferqueue) |
 | 53 | [AddToBufferQueues](#53-addtobufferqueues) |
@@ -46,6 +46,18 @@ This page describes the methods that are only seen in Super Mario Maker.
 | 85 | ? |
 | 86 | SearchUnknownPlatformObjects |
 | 87 | ReportCourse |
+
+# (50) GetCustomRankingByDataId
+## Request
+| Type | Description |
+| --- | --- |
+| [GetCustomRankingByDataIdParam](#getcustomrankingbydataidparam-structure) | Param |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[DataStoreObjectInfo]&gt; | Search result |
+| [List]&lt;[Result]&gt; | Results |
 
 # (52) AddToBufferQueue
 ## Request
@@ -176,6 +188,13 @@ This method does not return anything.
 | Uint32 | Unknown |
 | Uint32 | Unknown |
 | [DataStoreMetaInfo] | Meta info |
+
+## GetCustomRankingByDataIdParam ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint32 | Unknown |
+| [List]&lt;Uint64&gt; | Data ids |
+| Uint8 | Unknown |
 
 [BufferQueueParam]: #bufferqueueparam-structure
 [DataStoreObjectInfo]: #datastoreobjectinfo-structure
