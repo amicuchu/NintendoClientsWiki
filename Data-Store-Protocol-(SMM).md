@@ -28,7 +28,7 @@ This page describes the methods that are only seen in Super Mario Maker. The pro
 | 67 | ScoreRangeCascadedSearchObject |
 | 68 | SuggestedCourseSearchObject |
 | 69 | ? |
-| 70 | ? |
+| 70 | CompletePostObjectWithOwnerId |
 | 71 | UploadCourseRecord |
 | 72 | GetCourseRecord |
 | 73 | DeleteCourseRecord |
