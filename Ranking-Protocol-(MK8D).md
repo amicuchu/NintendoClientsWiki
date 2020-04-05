@@ -21,7 +21,7 @@ This page describes the methods that are only seen in Mario Kart 8 Deluxe.
 ## Request
 | Type | Description |
 | --- | --- |
-| [List]&lt;[CompetitionRankingInfo](#competitionrankinginfo-structure)&gt; | 
+| [List]&lt;[CompetitionRankingInfo](#competitionrankinginfo-structure)&gt; | Competition info |
 
 # (22) GetCommonDataByPIDList
 ## Request
