@@ -80,4 +80,5 @@ Every error is encoded like this:
 ### Known Errors
 | Code | Message |
 | --- | --- |
+| 0008 | Device has been banned. |
 | 0014 | Invalid parameter in request. |
