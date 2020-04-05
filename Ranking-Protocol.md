@@ -1,5 +1,10 @@
 ## [[NEX Protocols]] > Ranking (0x70)
-Splatoon 2 extends this protocol with additional methods. These methods are described [here](Ranking-Protocol-(Splatoon-2)).
+
+The following games have additional methods in the ranking protocol:
+* [Mario Kart 8 Deluxe](Ranking-Protocol-(MK8D))
+* [Splatoon 2](Ranking-Protocol-(Splatoon-2))
+
+This remainder of this page describes the methods that are not specific to any game.
 
 | Method ID | Method Name |
 | --- | --- |
