@@ -41,7 +41,7 @@ This page describes the methods that are only seen in Super Mario Maker. The pro
 | 80 | [ResetRateCustomRankingCounter](#80-resetratecustomrankingcounter) |
 | 81 | BestScoreRateCourseSearchObject |
 | 82 | CTRPickUpCourseSearchObject |
-| 83 | ? |
+| 83 | SetCachedRanking |
 | 84 | DeleteCachedRanking |
 | 85 | ChangePlayablePlatform |
 | 86 | SearchUnknownPlatformObjects |
