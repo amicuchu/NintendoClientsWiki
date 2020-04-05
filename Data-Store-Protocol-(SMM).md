@@ -170,7 +170,15 @@ This method does not return anything.
 | Uint64 | dataId |
 | Uint32 | slot |
 
+## DataStoreObjectInfo ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| [DataStoreMetaInfo] | Meta info |
+
 [BufferQueueParam]: #bufferqueueparam-structure
+[DataStoreObjectInfo]: #datastoreobjectinfo-structure
 
 [DataStoreGetMetaParam]: Data-Store-Protocol#datastoregetmetaparam-structure
 [DataStorePreparePostParam]: Data-Store-Protocol#datastorepreparepostparam-structure
