@@ -86,6 +86,7 @@ Unfortunately, there are many different versions of [NEX](NEX-Overview-(Game-Ser
 | Mario Tennis Aces | 4.3.1 (MM/RK/DS) | 5.9.0 | No |
 | Mummy Pinball | 4.3.1 (RK/R2/DS/UT/SS) | - | No |
 | Splatoon 2 | 4.3.1-appblz (RK/DS/MM/UT/CO) | 5.9.1 | Yes |
+| Mario Kart 8 Deluxe | 4.3.2-apptrbs (RK/DS/MM/CO) | 5.6.4 | No |
 | Splatoon 2 | 4.3.8-appblz (RK/DS/MM/UT/CO) | 5.9.1 | No |
 | Super Mario Party | 4.4.2-OL (R2/DS/MM/UT/CO) | 5.9.2 | No |
 | Capcom Beat 'Em Up Bundle | 4.5.0 (MM) | 5.10.0 | No |
