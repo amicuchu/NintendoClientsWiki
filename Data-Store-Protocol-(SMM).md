@@ -1,6 +1,6 @@
 ## [[NEX Protocols]] > [Data Store (0x73)](Data-Store-Protocol) > SMM
 
-This page describes the methods that are only seen in Super Mario Maker.
+This page describes the methods that are only seen in Super Mario Maker. The protocol has been renamed from `DataStoreProtocol` to `DataStoreCustomProtocol`.
 
 | Method ID | Method Name |
 | --- | --- |
@@ -42,7 +42,7 @@ This page describes the methods that are only seen in Super Mario Maker.
 | 81 | BestScoreRateCourseSearchObject |
 | 82 | CTRPickUpCourseSearchObject |
 | 83 | ? |
-| 84 | ? |
+| 84 | DeleteCachedRanking |
 | 85 | ChangePlayablePlatform |
 | 86 | SearchUnknownPlatformObjects |
 | 87 | ReportCourse |
