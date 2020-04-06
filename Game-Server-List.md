@@ -6,6 +6,7 @@
 | Kid Icarus Uprising | 00030000 | 58a7e494 |
 | Pokemon X/Y | 00055D01 | 876138df |
 | Luigi's Mansion 2 | 00076400 | 3861a9f8 |
+| Animal Crossing: New Leaf | 00086200 | d6f08b40 |
 | Pokemon Bank | 000C9B00 | 9a2961d8 |
 | Badge Arcade | 00134600 | 82d5962d |
 | Metroid Prime: FF | 0016CE00 | f79fb3c5 |
