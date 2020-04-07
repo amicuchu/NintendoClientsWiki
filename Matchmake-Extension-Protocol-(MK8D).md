@@ -30,16 +30,9 @@ This page describes the methods that are only seen in Mario Kart 8 Deluxe.
 ## Response
 | Type | Description |
 | --- | --- |
-| [List]&lt;[CustomPlayingSession](#customplayingsession-structure)&gt; | Playing sessions |
+| [List]&lt;[SimplePlayingSession]&gt; | Playing sessions |
 
-# Types
-## CustomPlayingSession ([Structure])
-| Type | Description |
-| --- | --- |
-| Uint64 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
+[SimplePlayingSession]: Match-Making-Types#simpleplayingsession-structure
 
 [Result]: NEX-Common-Types#result
 [String]: NEX-Common-Types#string
