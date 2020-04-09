@@ -17,6 +17,16 @@ This page describes the methods that are only seen in Splatoon 2.
 | 57 | [UploadTimeAttack](#57-uploadtimeattack) |
 | 58 | [CoconutRegisterMetaByParam](#58-coconutregistermetabyparam) |
 | 59 | [UploadFesMatchResultV2](#59-uploadfesmatchresultv2) |
+| 60 | UploadXMatchResult |
+| 61 | UploadRegularMatchResultV2 |
+| 62 | UploadGachiMatchResultV2 |
+| 63 | UploadLeagueMatchResultV2 |
+| 64 | UploadFesMatchResultV3 |
+| 65 | UploadXMatchResultV2 |
+| 66 | PreparePostPlayLog |
+| 67 | PrepareGetPlayLog |
+| 68 | UploadFesMatchResultV4 |
+| 69 | UploadCoopResult |
 
 # (47) CoconutRegisterMeta
 ## Request
