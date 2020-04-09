@@ -4,6 +4,7 @@ The following games have additional methods in the datastore protocol:
 * [Super Mario Maker](Data-Store-Protocol-(SMM))
 * [Super Mario Maker 2](Data-Store-Protocol-(SMM-2))
 * [Super Mario Odyssey](Data-Store-Protocol-(SMO))
+* [Splatoon 2](Data-Store-Protocol-(Splatoon-2))
 
 This remainder of this page describes the methods that are not specific to any game.
 
