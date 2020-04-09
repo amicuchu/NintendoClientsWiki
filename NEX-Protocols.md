@@ -37,7 +37,7 @@ See also: [[RMC Protocol]]
 | 0x78 | [Matchmake referee](Matchmake-Referee-Protocol) |
 | 0x79 | Subscriber |
 | 0x7A | [Ranking 2](Ranking-Protocol-2) |
-| 0x7B | ? |
+| 0x7B | [AA user](AA-User-Protocol) |
 | 0x7C | Screening |
 
 ## Not provided by Nintendo
