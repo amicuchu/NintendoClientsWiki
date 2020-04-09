@@ -10,6 +10,11 @@ This page describes the methods that are only seen in Splatoon 2.
 | 19 | [UploadFestivalVote](#19-uploadfestivalvote) |
 | 20 | [UploadFestivalScore](#20-uploadfestivalscore) |
 | 21 | [DeleteFestival](#21-deletefestival) |
+| 22 | UploadXPower |
+| 23 | GetXPowerRanking |
+| 24 | UploadEventMatchResult |
+| 25 | GetEventMatchResult |
+| 26 | AcquireEventMatchRight |
 
 # (16) UploadLeaguePoint
 ## Request
