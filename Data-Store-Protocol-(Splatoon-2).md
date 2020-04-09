@@ -265,3 +265,5 @@ This method does not return anything.
 [CalicoFesStatsV2]: #calicofesstatsv2-structure
 [StageTimeAttackInfo]: #stagetimeattackinfo-structure
 [StageTimeAttackWeapon]: #stagetimeattackweapon-structure
+
+[DataStoreReqGetInfo]: Data-Store-Protocol#datastorereqgetinfo-structure
