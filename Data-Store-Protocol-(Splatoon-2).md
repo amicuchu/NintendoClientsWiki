@@ -335,5 +335,6 @@ This method does not return anything.
 [DataStoreReqGetInfo]: Data-Store-Protocol#datastorereqgetinfo-structure
 [CalicoPlayerSimple]: #calicoplayersimple-structure
 [CalicoPlayerResult]: #calicoplayerresult-structure
+[CalicoStatsBase]: #calicostatsbase-structure
 [StageTimeAttackWeapon]: #stagetimeattackweapon-structure
 [StageTimeAttackInfo]: #stagetimeattackinfo-structure
