@@ -320,6 +320,7 @@ This method does not return anything.
 [DateTime]: NEX-Common-Types#date-time
 [Structure]: NEX-Common-Types#structure
 [Data]: NEX-Common-Types#any-data-holder
+[PID]: NEX-Common-Types#pid
 
 [CoconutMeta]: #coconutmeta-structure
 [CoconutGetParam]: #coconutgetparam-structure
