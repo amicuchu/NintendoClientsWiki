@@ -332,7 +332,7 @@ This method does not return anything.
 [OrderedInfo]: #orderedinfo-structure
 [TimeAttackInfo]: #timeattackinfo-structure
 [CalicoFesStatsV2]: #calicofesstatsv2-structure
-[DataStoreReqGetInfo]: #Data-Store-Protocol#datastorereqgetinfo-structure
+[DataStoreReqGetInfo]: Data-Store-Protocol#datastorereqgetinfo-structure
 [CalicoPlayerSimple]: #calicoplayersimple-structure
 [CalicoPlayerResult]: #calicoplayerresult-structure
 [StageTimeAttackWeapon]: #stagetimeattackweapon-structure
