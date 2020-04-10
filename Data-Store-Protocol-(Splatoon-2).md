@@ -1,7 +1,6 @@
 ## [[NEX Protocols]] > [Data Store (0x73)](Data-Store-Protocol) > Splatoon 2
 
 This page describes the methods that are only seen in Splatoon 2.
-
 | Method ID | Method Name |
 | --- | --- |
 | 47 | [CoconutRegisterMeta](#47-coconutregistermeta) |
@@ -152,6 +151,123 @@ This method does not return anything.
 This method does not return anything.
 
 # Types
+## CalicoFesStats ([Structure])
+| This structure inherits from [CalicoRegularStats] |
+| --- |
+
+| Type | Name |
+| --- | --- |
+| Uint32 | fesId |
+| Uint8 | themeId |
+| Sint32 | fesGrade |
+| Sint32 | fesPoint |
+| Uint32 | fesPower |
+| Uint32 | maxFesPower |
+| Sint32 | myEstimateFesPower |
+| Sint32 | otherEstimateFesPower |
+
+## CalicoFesStatsV2 ([Structure])
+| This structure inherits from [CalicoFesStats] |
+| --- |
+
+| Type | Name |
+| --- | --- |
+| Uint8 | otherThemeId |
+
+## CalicoGachiStats ([Structure])
+| This structure inherits from [CalicoStatsBase] |
+| --- |
+
+| Type | Name |
+| --- | --- |
+| Sint32 | elapsedTime |
+| Sint8 | myTeamCount |
+| Sint8 | otherTeamCount |
+| Sint32 | udemae |
+| Sint32 | estimateGachiPower |
+
+## CalicoLeagueStats ([Structure])
+| This structure inherits from [CalicoGachiStats] |
+| --- |
+
+| Type | Name |
+| --- | --- |
+| [String] | leagueId |
+| Uint64 | tagId |
+| Sint32 | leaguePoint |
+| Sint32 | maxLeaguePoint |
+| Sint32 | myEstimateLeaguePoint |
+| Sint32 | otherEstimateLeaguePoint |
+
+## CalicoPlayerResult ([Structure])
+| Type | Name |
+| --- | --- |
+| [CalicoPlayerSimple] | playerSimple |
+| Sint32 | killCount |
+| Sint32 | assistCount |
+| Sint32 | deathCount |
+| Sint32 | specialCount |
+| Sint32 | gamePaintPoint |
+| Sint32 | sortScore |
+
+## CalicoPlayerSimple ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint64 | principalId |
+| [String] | name |
+| Uint8 | playerType |
+| Sint32 | udemae |
+| Sint32 | playerRank |
+| Sint32 | starRank |
+| Sint32 | fesGrade |
+| Sint32 | weaponId |
+| Sint32 | headId |
+| [List]&lt;Sint32&gt; | headSkillIds |
+| Sint32 | clothesId |
+| [List]&lt;Sint32&gt; | clothesSkillIds |
+| Sint32 | shoesId |
+| [List]&lt;Sint32&gt; | shoesSkillIds |
+
+## CalicoRegularStats ([Structure])
+| This structure inherits from [CalicoStatsBase] |
+| --- |
+
+| Type | Name |
+| --- | --- |
+| Sint32 | myTeamPercentage |
+| Sint32 | otherTeamPercentage |
+| Sint32 | winMeter |
+
+## CalicoStatsBase ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint32 | gameMode |
+| Sint32 | rule |
+| Uint8 | result |
+| Sint32 | stage |
+| [CalicoPlayerResult] | playerResult |
+| [List]&lt;[CalicoPlayerResult]&gt; | myTeamMembers |
+| [List]&lt;[CalicoPlayerResult]&gt; | otherTeamMembers |
+| Sint32 | weaponPaintPoint |
+| [DateTime] | startTime |
+| Uint64 | battleNum |
+| Sint32 | playerRank |
+| Sint32 | starRank |
+
+## CoconutGetInfo ([Structure])
+| Type | Name |
+| --- | --- |
+| [DataStoreReqGetInfo] | info |
+| [CoconutMeta] | meta |
+
+## CoconutGetParam ([Structure])
+| Type | Name |
+| --- | --- |
+| [List]&lt;Uint64&gt; | uniqueIds |
+| Uint8 | getType |
+| Uint8 | region |
+| Uint32 | festivalId |
+
 ## CoconutMeta ([Structure])
 | Type | Name |
 | --- | --- |
@@ -164,64 +280,12 @@ This method does not return anything.
 | [String] | language |
 | [qBuffer] | binaryData |
 
-## CoconutGetParam ([Structure])
-| Type | Name |
-| --- | --- |
-| [List]&lt;Uint64&gt; | uniqueIds |
-| Uint8 | getType |
-| Uint8 | region |
-| Uint32 | festivalId |
-
-## CoconutGetInfo ([Structure])
-| Type | Name |
-| --- | --- |
-| [DataStoreReqGetInfo] | info |
-| [CoconutMeta] | meta |
-
 ## CoconutViolation ([Structure])
 | Type | Name |
 | --- | --- |
 | Uint64 | dataId |
 | [String] | categoryCode |
 | [String] | reason |
-
-## CalicoRegularStats ([Structure])
-| Type | Name |
-| --- | --- |
-| Sint32 | myTeamPercentage |
-| Sint32 | otherTeamPercentage |
-| Sint32 | winMeter |
-
-## CalicoGachiStats ([Structure])
-| Type | Name |
-| --- | --- |
-| Sint32 | elapsedTime |
-| Sint8 | myTeamCount |
-| Sint8 | otherTeamCount |
-| Sint32 | udemae |
-| Sint32 | estimateGachiPower |
-
-## CalicoLeagueStats ([Structure])
-| Type | Name |
-| --- | --- |
-| [String] | leagueId |
-| Uint64 | tagId |
-| Sint32 | leaguePoint |
-| Sint32 | maxLeaguePoint |
-| Sint32 | myEstimateLeaguePoint |
-| Sint32 | otherEstimateLeaguePoint |
-
-## CalicoFesStats ([Structure])
-| Type | Name |
-| --- | --- |
-| Uint32 | fesId |
-| Uint8 | themeId |
-| Sint32 | fesGrade |
-| Sint32 | fesPoint |
-| Uint32 | fesPower |
-| Uint32 | maxFesPower |
-| Sint32 | myEstimateFesPower |
-| Sint32 | otherEstimateFesPower |
 
 ## OrderedInfo ([Structure])
 | Type | Name |
@@ -230,16 +294,6 @@ This method does not return anything.
 | Sint32 | gearId |
 | Sint32 | skillId |
 | Sint32 | price |
-
-## TimeAttackInfo ([Structure])
-| Type | Name |
-| --- | --- |
-| [Map]&lt;Sint32, [StageTimeAttackInfo]&gt; | stageInfos |
-
-## CalicoFesStatsV2 ([Structure])
-| Type | Name |
-| --- | --- |
-| Uint8 | otherThemeId |
 
 ## StageTimeAttackInfo ([Structure])
 | Type | Name |
@@ -251,6 +305,11 @@ This method does not return anything.
 | --- | --- |
 | Sint32 | weaponLevel |
 | Sint32 | clearTime |
+
+## TimeAttackInfo ([Structure])
+| Type | Name |
+| --- | --- |
+| [Map]&lt;Sint32, [StageTimeAttackInfo]&gt; | stageInfos |
 
 [Result]: NEX-Common-Types#result
 [String]: NEX-Common-Types#string
@@ -273,7 +332,8 @@ This method does not return anything.
 [OrderedInfo]: #orderedinfo-structure
 [TimeAttackInfo]: #timeattackinfo-structure
 [CalicoFesStatsV2]: #calicofesstatsv2-structure
-[StageTimeAttackInfo]: #stagetimeattackinfo-structure
+[DataStoreReqGetInfo]: #Data-Store-Protocol#datastorereqgetinfo-structure
+[CalicoPlayerSimple]: #calicoplayersimple-structure
+[CalicoPlayerResult]: #calicoplayerresult-structure
 [StageTimeAttackWeapon]: #stagetimeattackweapon-structure
-
-[DataStoreReqGetInfo]: Data-Store-Protocol#datastorereqgetinfo-structure
+[StageTimeAttackInfo]: #stagetimeattackinfo-structure
