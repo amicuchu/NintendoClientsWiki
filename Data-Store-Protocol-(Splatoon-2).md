@@ -213,7 +213,7 @@ This method does not return anything.
 ## CalicoPlayerSimple ([Structure])
 | Type | Name |
 | --- | --- |
-| Uint64 | principalId |
+| [PID] | principalId |
 | [String] | name |
 | Uint8 | playerType |
 | Sint32 | udemae |
