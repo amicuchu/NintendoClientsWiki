@@ -101,4 +101,4 @@ This method does not take any parameters.
 [Structure]: NEX-Common-Types#structure
 [Data]: NEX-Common-Types#anydataholder
 
-[UniqueIdInfo]: uniqueidinfo-structure
+[UniqueIdInfo]: #uniqueidinfo-structure
