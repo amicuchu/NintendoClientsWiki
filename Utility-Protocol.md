@@ -1,4 +1,5 @@
 ## [[NEX Protocols]] > Utility (0x6E)
+Splatoon 2 extends this protocol with additional methods. See [[Utility Protocol (Splatoon 2)]].
 
 | Method ID | Method Name |
 | --- | --- |
