@@ -1,4 +1,4 @@
-PRUDP is a transport layer protocol on top of UDP whose aim is to reliably and securely send UDP packets. There are two versions of this protocol ([V0](#v0-format) and [V1](#v1-format)), but these are pretty similar. The primary difference lies in the way the packets are encoded. All values are encoded in little endian byte order.
+PRUDP is a transport layer protocol on top of UDP whose aim is to reliably and securely send UDP packets. There are two versions of this protocol ([V0](#v0-format) and [V1](#v1-format)), but these are pretty similar. The primary difference lies in the encoding of the packets. All values are encoded in little endian byte order.
 
 On the Nintendo Switch, NEX uses a WebSocket connection instead of UDP and the '[Lite](#lite-format)'-encoding is used.
 
@@ -6,6 +6,8 @@ On the Nintendo Switch, NEX uses a WebSocket connection instead of UDP and the '
 * [V1 Format](#v1-format)
 * [Lite Format](#lite-format)
 * [Protocol Description](#protocol-description)
+
+To keep this page somewhat readable, features of PRUDP that aren't used by NEX are hidden and can be expanded by clicking on them.
 
 ## V0 Format
 This format is only used by the friends server and some 3DS games.
@@ -50,23 +52,29 @@ In DATA and DISCONNECT packets the packet signature is the first 4 bytes of the 
 In all other packets the signature is the connection signature that has been received while the connection was made.
 
 ### Checksum
-The checksum is calculated over the whole packet (both header and encrypted payload), and uses the following algorithm (in python):
+The checksum is calculated over the whole packet (both header and encrypted payload), and uses the following algorithm:
+```python
+def calc_checksum(data):
+    words = struct.unpack_from("<%iI" %(len(data) // 4), data)
+    temp = sum(words) & 0xFFFFFFFF #32-bit
+    
+    checksum = sum(ACCESS_KEY)
+    checksum += sum(data[len(data) & ~3:])
+    checksum += sum(struct.pack("I", temp))
+    return checksum & 0xFF #8-bit checksum
+```
+
+<details><summary>The original Quazal Rendez-Vous library uses a different checksum algorithm.</summary><br>
+
 ```python
 def calc_checksum(checksum, data):
-	#Little endian!
-	words = struct.unpack_from("<%iI" %(len(data) // 4), data)
-	temp = sum(words) & 0xFFFFFFFF #32-bit
-	
-	#Add the sum of the remaining bytes to the checksum
-	checksum += sum(data[len(data) & ~3:])
-	
-	#And the sum of the bytes of the temporary checksum
-	checksum += sum(struct.pack("I", temp))
-	
-	return checksum & 0xFF #8-bit checksum
-	
-checksum = calc_checksum(sum(ACCESS_KEY), packet_data)
+    data += b"\0" * (4 - len(data) % 4)
+    words = struct.unpack("<%iI" %(len(data) // 4), data)
+    return ((sum(ACCESS_KEY) & 0xFF) + sum(words)) & 0xFFFFFFFF
 ```
+
+This checksum takes up 4 bytes instead of 1.
+</details>
 
 ## V1 Format
 This format is used by all Wii U games and apps except for friends services, and some 3DS games.
@@ -151,15 +159,15 @@ The following techniques are used to achieve reliability:
 * A [sequence id](#sequence-id) is sent along with a packet, so the receiver can reorder packets if necessary.
 * To keep the connection alive, both client and server send PING packets to each other after a certain amount of time has passed.
 
+### Sandbox access key
+Every game server has a unique sandbox access key. This is used to calculate the [packet signature](#packet-signature). The only way to find the access key of a server is by disassembling a game that connects to this server.
+
+A list of game servers and their access keys can be found [here](Game-Server-List).
+
 ### Encryption
-**V0 and V1**: All payloads are encrypted using RC4, with separate streams for client-to-server packets and server-to-client packets. The connection to the authentication server is encrypted using a default key that's always the same: `CD&ML`. The connection to the secure server is encrypted using the session key from the [Kerberos ticket](Kerberos-Authentication#kerberos-ticket).
+**V0 and V1**: All payloads are encrypted using RC4, with separate streams for client-to-server packets and server-to-client packets. The connection to the authentication server is encrypted using a default key that's always the same: `CD&ML`. The connection to the secure server is encrypted using the session key from the [Kerberos ticket](Kerberos-Authentication).
 
 **Lite**: Since the underlying connection is SSL-encrypted anyway, no encryption is used by PRUDP.
-
-### Compression
-Before they are encrypted, packets may be compressed with zlib. The compression ratio is prepended to the compressed payload as an additional byte. This is used to determine how much space is needed to decompress the payload. The compression ratio is the size of the uncompressed payload divided by the size of the compressed payload, rounded upwards. If the compression ratio is 0 the payload is not compressed.
-
-NEX has disabled compression, so you won't see any compressed packets in Nintendo games.
 
 ### Secure server connection
 As explained on the [Game Server Overview](NEX-Overview-(Game-Servers)) page, every game server consists of an authentication server and a secure server. If a client wants to connect to the secure server it must first request a [ticket](Kerberos-Authentication) from the authentication server. The ticket contains the session key that's used in the secure server connection, among other information.
@@ -210,15 +218,12 @@ The stream type is always RVSecure (0xA) in Nintendo games.
 | 6 | SessionDiscovery | | |
 
 ### Type and flags
-This field is made by concatening a 4-bit type value to 12 bits of packet flags. For example, a PING packet with FLAG_RELIABLE and FLAG_NEED_ACK would have this value set to 0x0064 (but remember everything is little endian so it would be stored as 0x64 0x00).
+This field takes up two bytes in the packet header and is encoded like this: `(flags << 4) | type`.
 
-| Mask | Description |
-| --- | --- |
-| 0x001 | FLAG_ACK: This is an acknowledgement packet |
-| 0x002 | FLAG_RELIABLE: This packet uses reliability features such as packet reordering. |
-| 0x004 | FLAG_NEED_ACK: This packet must be acknowledged |
-| 0x008 | FLAG_HAS_SIZE: This packet includes its payload size |
-| 0x200 | FLAG_MULTI_ACK: This packet acknowledges multiples packets at once. The payload contains information on which packets are acknowledged. |
+<details><summary>The original Quazal Rendez-Vous library encodes this field differently.</summary>
+
+* This field only takes up one byte in the header: `(flags << 3) | type`. Note that only 5 bits are left for the flags, but PRUDP V0 does not support aggregate acknowledgement anyway.
+</details>
 
 | Value | Type |
 | --- | --- |
@@ -227,6 +232,14 @@ This field is made by concatening a 4-bit type value to 12 bits of packet flags.
 | 2 | DATA |
 | 3 | DISCONNECT |
 | 4 | PING |
+
+| Mask | Description |
+| --- | --- |
+| 0x001 | FLAG_ACK: This is an acknowledgement packet |
+| 0x002 | FLAG_RELIABLE: This packet uses reliability features such as packet reordering. |
+| 0x004 | FLAG_NEED_ACK: This packet must be acknowledged |
+| 0x008 | FLAG_HAS_SIZE: This packet includes its payload size |
+| 0x200 | FLAG_MULTI_ACK: This packet acknowledges multiples packets at once. The payload contains information on which packets are acknowledged. |
 
 ### Aggregate acknowledgement
 To acknowledge multiple packets at once, send an unreliable DATA packet with FLAG_MULTI_ACK.
@@ -255,14 +268,19 @@ The sequence id of the aggregate ack packet is always 0.
 | ... | ... | ... |
 
 ### Session id
-This is a random value generated at the start of each session. The server's session id is not necessarily the same as the client's session id.
+This is a random value generated at the start of each session. The server's session id does not have to be the same as the client's session id.
 
 ### Sequence id
-This is an incrementing value used to ensure that packets arrive in correct order. Every [reliable substream](#substreams) has its own stream of sequence ids. Unreliable ping and data packets both have their own stream of sequence ids as well. The sequence id of client-to-server packets is independent from the sequence id of server-to-client packets.
-
-Normally, the sequence id starts at 1. However, the initial sequence id of unreliable data packets is a random value generated during the connection handshake (see [option 3](#optional-data)).
+This is an incrementing value used to ensure that packets arrive in correct order. The sequence id of client-to-server packets is independent from the sequence id of server-to-client packets.
 
 In acknowledgement packets, the sequence id is set to the id of the packet that is acknowledged.
+
+<details><summary>Details on [substreams](#substreams) and [unreliable packets](#unreliable-packets)</summary><br>
+
+Every [reliable substream](#substreams) has its own stream of sequence ids. Unreliable ping and data packets both have their own stream of sequence ids as well.
+
+Normally, the sequence id starts at 1. However, the initial sequence id of unreliable data packets is a random value generated during the connection handshake (see [option 3](#optional-data)).
+</details>
 
 ### Fragment id
 Big data packets are split into smaller ones. The last fragment always has fragment id 0. Other fragments have an incrementing fragment id starting at 1.
@@ -275,16 +293,6 @@ For example, if a packet is split into four fragments, they will have the follow
 | Second | 2 |
 | Third | 3 |
 | Fourth | 0 |
-
-### Substreams
-[V1](#v1-format) allows the connection to be divided into multiple reliable substreams. The maximum number of substreams is decided during the connection handshake (with [option 4](#optional-data)). Every substream has its own [RC4 streams](#encryption) and its own incrementing [sequence ids](#sequence-id). Substreams only cover reliable packets. Unreliable packets do not belong to a substream.
-
-NEX never uses more than one substream, and always sets the maximum substream id to 0.
-
-### Sandbox access key
-Every game server has a unique sandbox access key. This is used to calculate the [packet signature](#packet-signature). The only way to find the access key of a server is by disassembling a game that connects to this server.
-
-A list of game servers and their access keys can be found [here](Game-Server-List).
 
 ### Connection signature
 The server sends its connection signature in its response to the client's SYN packet. The client sends its connection signature in the CONNECT packet. Other SYN/CONNECT packets have this field set to 0.
@@ -327,6 +335,17 @@ Starting with PRUDP V1, packet-specific data is encoded like this:
 | 3 | 2 | Initial [sequence id](#sequence-id) for unreliable data packets |
 | 4 | 1 | Maximum [substream id](#substreams) |
 | 0x80 | 16 | [Lite signature](#lite-signature) |
+
+### Compression
+<details><summary>NEX has disabled compression, so you won't see any compressed packets in Nintendo games.</summary><br>
+
+If compression is enabled, packets are compressed with zlib before they are encrypted. The compression ratio is prepended to the compressed payload as an additional byte. This is used to determine how much space is needed to decompress the payload. The compression ratio is the size of the uncompressed payload divided by the size of the compressed payload, rounded upwards. If the compression ratio is 0 the payload is not compressed.
+</details>
+
+### Substreams
+<details><summary>NEX never uses more than one substream, so the substream id is always 0</summary><br>
+
+[V1](#v1-format) allows the connection to be divided into multiple reliable substreams. The maximum number of substreams is decided during the connection handshake (with [option 4](#optional-data)). Every substream has its own [RC4 streams](#encryption) and its own incrementing [sequence ids](#sequence-id). Substreams only cover reliable packets. Unreliable packets do not belong to a substream.
 
 [Buffer]: NEX-Common-Types#buffer
 [PID]: NEX-Common-Types#pid
