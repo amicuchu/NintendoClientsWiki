@@ -225,6 +225,8 @@ This field takes up two bytes in the packet header and is encoded like this: `(f
 * This field only takes up one byte in the header: `(flags << 3) | type`. Note that only 5 bits are left for the flags, but PRUDP V0 does not support aggregate acknowledgement anyway.
 </details>
 
+Even though PRUDP also supports unreliable data packets, these are never used by NEX. Only the SYN packet and acknowledgement packets are sent without FLAG_RELIABLE.
+
 | Value | Type |
 | --- | --- |
 | 0 | SYN |
