@@ -119,7 +119,7 @@ This method does not return anything.
 ## Request
 | Type | Description |
 | --- | --- |
-| Uint32 | Id |
+| Uint32 | [Type](#applicationconfigtype) |
 
 ## Response
 | Type | Description |
@@ -225,6 +225,14 @@ This method does not return anything.
 | Uint32 | Unknown |
 | [List]&lt;Uint64&gt; | Data ids |
 | Uint8 | Unknown |
+
+# Enums
+## ApplicationConfigType
+| Value | Description |
+| --- | --- |
+| 0 | Settings |
+| 1 | PID |
+| 2 | First clear time |
 
 [BufferQueueParam]: #bufferqueueparam-structure
 [DataStoreObjectInfo]: #datastoreobjectinfo-structure
