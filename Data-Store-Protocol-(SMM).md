@@ -20,8 +20,8 @@ This page describes the methods that are only seen in Super Mario Maker. The pro
 | 59 | PrepareAttachFile |
 | 60 | ConditionalSearchObject |
 | 61 | [GetApplicationConfig](#61-getapplicationconfig) |
-| 62 | SetApplicationConfig |
-| 63 | DeleteApplicationConfig |
+| 62 | [SetApplicationConfig](#62-setapplicationconfig) |
+| 63 | [DeleteApplicationConfig](#63-deleteapplicationconfig) |
 | 64 | LatestCourseSearchObject |
 | 65 | FollowingsLatestCourseSearchObject |
 | 66 | RecommendedCourseSearchObject |
@@ -45,7 +45,7 @@ This page describes the methods that are only seen in Super Mario Maker. The pro
 | 84 | DeleteCachedRanking |
 | 85 | ChangePlayablePlatform |
 | 86 | SearchUnknownPlatformObjects |
-| 87 | ReportCourse |
+| 87 | [ReportCourse](#87-reportcourse) |
 
 # (50) GetCustomRankingByDataId
 ## Request
@@ -126,6 +126,27 @@ This method does not return anything.
 | --- | --- |
 | [List]&lt;Uint32&gt; | Config |
 
+# (62) SetApplicationConfig
+## Request
+| Type | Description |
+| --- | --- |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+
+## Response
+This method does not return anything.
+
+# (63) DeleteApplicationConfig
+## Request
+| Type | Description |
+| --- | --- |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+
+## Response
+This method does not return anything.
+
 # (74) GetApplicationConfigString
 ## Request
 | Type | Description |
@@ -171,6 +192,15 @@ This method does not return anything.
 | Type | Description |
 | --- | --- |
 | Uint32 | Unknown |
+
+## Response
+This method does not return anything.
+
+# (87) ReportCourse
+## Request
+| Type | Description |
+| --- | --- |
+| [ReportCourseParam](#reportcourseparam-structure) | Param |
 
 ## Response
 This method does not return anything.
