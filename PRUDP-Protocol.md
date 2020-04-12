@@ -157,17 +157,50 @@ When a client connects to a server, it sends a SYN packet. As soon as this packe
 The following techniques are used to achieve reliability:
 * A packet that has FLAG_NEED_ACK set must be acknowledged by the receiver. If the sender doesn't receive an acknowledgement after a certain amount of time it will resend the packet.
 * A [sequence id](#sequence-id) is sent along with a packet, so the receiver can reorder packets if necessary.
-* To keep the connection alive, both client and server send PING packets to each other after a certain amount of time has passed.
-
-### Sandbox access key
-Every game server has a unique sandbox access key. This is used to calculate the [packet signature](#packet-signature). The only way to find the access key of a server is by disassembling a game that connects to this server.
-
-A list of game servers and their access keys can be found [here](Game-Server-List).
+* To keep the connection alive, both client and server may send PING packets to each other after a certain amount of time has passed.
 
 ### Encryption
 **V0 and V1**: All payloads are encrypted using RC4, with separate streams for client-to-server packets and server-to-client packets. The connection to the authentication server is encrypted using a default key that's always the same: `CD&ML`. The connection to the secure server is encrypted using the session key from the [Kerberos ticket](Kerberos-Authentication).
 
 **Lite**: Since the underlying connection is SSL-encrypted anyway, no encryption is used by PRUDP.
+
+<details><summary>Details on substreams and unreliable packets</summary><br>
+
+It would be a bad idea to encrypt all reliable substreams with the same key, because that would make it easy to break the encryption. PRUDP encrypts the first reliable substream with the session key. A new key is generated for all other reliable substreams by modifying the key of the previous substream with the following algorithm:
+
+```python
+def modify_key(key):
+    add = len(key) // 2 + 1
+    for i in range(len(key) // 2): # Only the first half of the key is modified
+        key[i] = (key[i] + add - i) & 0xFF
+```
+
+Unreliable packets also have another issue: it's not possible to use a single RC4 stream to encrypt them, because the decryption would fail if the packets arrive in the wrong order. To solve this, a unique RC4 stream is used for each unreliable data packet. The key is generated as follows:
+
+```python
+def make_unreliable_key(packet, session_key):
+    # Generate a new key from the session key
+    part1 = combine_keys(session_key, bytes.fromhex("18d8233437e4e3fe"))
+    part2 = combine_keys(session_key, bytes.fromhex("233e600123cdab80"))
+    base_key = part1 + part2
+
+    # Modify the key such that no two packets use the same key
+    key = list(base_key)
+    key[0] = (key[0] + packet.sequence_id) & 0xFF
+    key[1] = (key[1] + (packet.sequence_id >> 8)) & 0xFF
+    key[31] = (key[31] + packet.session_id) & 0xFF
+    return bytes(key)
+
+def combine_keys(key1, key2):
+    return hashlib.md5(key1 + key2).digest()
+```
+
+</details>
+
+### Sandbox access key
+Every game server has a unique sandbox access key. This is used to calculate the [packet signature](#packet-signature). The only way to find the access key of a server is by disassembling a game that connects to this server.
+
+A list of game servers and their access keys can be found [here](Game-Server-List).
 
 ### Secure server connection
 As explained on the [Game Server Overview](NEX-Overview-(Game-Servers)) page, every game server consists of an authentication server and a secure server. If a client wants to connect to the secure server it must first request a [ticket](Kerberos-Authentication) from the authentication server. The ticket contains the session key that's used in the secure server connection, among other information.
@@ -244,12 +277,12 @@ Even though PRUDP also supports unreliable data packets, these are never used by
 | 0x200 | FLAG_MULTI_ACK: This packet acknowledges multiples packets at once. The payload contains information on which packets are acknowledged. |
 
 ### Aggregate acknowledgement
-To acknowledge multiple packets at once, send an unreliable DATA packet with FLAG_MULTI_ACK.
+To acknowledge multiple packets at once, send an unencrypted unreliable DATA packet with FLAG_MULTI_ACK.
 
 [V0](#v0-format) does not support aggregate acknowledgement. Whether [V1](#v1-format) supports aggregate acknowledgement and which version is used depends on its [supported functions](#supported-functions). The [Lite](#lite-format) format always uses the new version.
 
 #### Old version
-All packets up to the sequence id of the aggregate ack packet are acknoledged. In addition, the payload may specify additional sequence ids to be acknowledged.
+All packets up to the sequence id of the aggregate ack packet are acknowledged. In addition, the payload may specify additional sequence ids to be acknowledged.
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -277,7 +310,7 @@ This is an incrementing value used to ensure that packets arrive in correct orde
 
 In acknowledgement packets, the sequence id is set to the id of the packet that is acknowledged.
 
-<details><summary>Details on [substreams](#substreams) and [unreliable packets](#unreliable-packets)</summary><br>
+<details><summary>Details on substreams and unreliable packets</summary><br>
 
 Every [reliable substream](#substreams) has its own stream of sequence ids. Unreliable ping and data packets both have their own stream of sequence ids as well.
 
@@ -297,9 +330,9 @@ For example, if a packet is split into four fragments, they will have the follow
 | Fourth | 0 |
 
 ### Connection signature
-The server sends its connection signature in its response to the client's SYN packet. The client sends its connection signature in the CONNECT packet. Other SYN/CONNECT packets have this field set to 0.
-
 If present, the connection signature is the first part of a HMAC based on the perceived ip and port of the other end point. Neither server nor client can verify this signature.
+
+The server sends its connection signature in its response to the client's SYN packet. The client sends its connection signature in the CONNECT packet. Other SYN/CONNECT packets have this field set to 0.
 
 ### Lite signature
 Unlike the connection signature, this signature is actually verified by the server. It's the HMAC of the following data, with the key being the MD5 hash of the [access key](#sandbox-access-key).
