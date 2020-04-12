@@ -4,8 +4,8 @@ This page describes the methods that are only seen in Super Mario Maker. The pro
 
 | Method ID | Method Name |
 | --- | --- |
-| 46 | ? |
-| 47 | ? |
+| 46 | GetMetaByOwnerId |
+| 47 | CustomSearchObject |
 | 48 | RateCustomRanking |
 | 49 | GetCustomRanking |
 | 50 | [GetCustomRankingByDataId](#50-getcustomrankingbydataid) |
@@ -27,7 +27,7 @@ This page describes the methods that are only seen in Super Mario Maker. The pro
 | 66 | RecommendedCourseSearchObject |
 | 67 | ScoreRangeCascadedSearchObject |
 | 68 | SuggestedCourseSearchObject |
-| 69 | ? |
+| 69 | PreparePostObjectWithOwnerIdAndDataId |
 | 70 | CompletePostObjectWithOwnerId |
 | 71 | UploadCourseRecord |
 | 72 | GetCourseRecord |
