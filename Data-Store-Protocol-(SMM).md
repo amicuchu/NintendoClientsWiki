@@ -243,6 +243,159 @@ This method does not return anything.
 | 130 | Mii name ng word list |
 | 131 - 255 | Unused |
 
+<details><summary>Click to show the first word list</summary>
+
+```
+けされ
+消され
+削除され
+リセットされ
+BANされ
+ＢＡＮされ
+キミのコース
+君のコース
+きみのコース
+い い ね
+遊びます
+地震
+震災
+被災
+津波
+バンされ
+い~ね
+震度
+じしん
+banされ
+くわしくは
+詳しくは
+ちんちん
+ち0こ
+bicth
+い.い．ね
+ナイ～ス
+い&い
+い-いね
+いぃね
+nigger
+ngger
+star if u
+Star if u
+Star if you
+star if you
+PENlS
+マンコ
+butthole
+LILI
+vagina
+vagyna
+うんち
+うんこ
+ウンコ
+Ｉｉｎｅ
+EENE
+まんこ
+ウンチ
+niglet
+nigglet
+please like
+きんたま
+Butthole
+llね
+iいね
+give a star
+ちんぽ
+亀頭
+penis
+ｳﾝｺ
+plz more stars
+star plz
+い()ね
+PLEASE star
+Bitte Sterne
+```
+</details>
+
+<details><summary>Click to show the second word list</summary>
+
+```
+ゼロから
+０から
+0から
+い　　い　　ね
+いい
+東日本
+
+大震
+```
+</details>
+
+<details><summary>Click to show the mii name word list</summary>
+
+```
+いいね
+下さい
+ください
+押して
+おして
+返す
+かえす
+星
+
+してくれ
+するよ
+☆くれたら
+☆あげます
+★くれたら
+★あげます
+しね
+ころす
+ころされた
+アナル
+ファック
+キンタマ
+○ね
+キチガイ
+うんこ
+KITIGAI
+金玉
+おっぱい
+☆おす
+☆押す
+★おす
+★押す
+いいする
+いいよ
+イイネ
+ケツ
+うんち
+かくせいざい
+覚せい剤
+シャブ
+きんたま
+ちんちん
+おしっこ
+ちんぽこ
+ころして
+グッド
+グット
+レ●プ
+バーカ
+きちがい
+ちんげ
+マンコ
+まんこ
+チンポ
+クズ
+ウンコ
+ナイスおねがいします
+penis
+イイね
+☆よろ
+ナイス!して
+ま/んこ
+まん/こ
+```
+
 [BufferQueueParam]: #bufferqueueparam-structure
 [DataStoreObjectInfo]: #datastoreobjectinfo-structure
 
