@@ -119,7 +119,7 @@ This method does not return anything.
 ## Request
 | Type | Description |
 | --- | --- |
-| Uint32 | [Type](#applicationconfigtype) |
+| Uint32 | [Category](#applicationconfigtype) |
 
 ## Response
 | Type | Description |
@@ -130,9 +130,9 @@ This method does not return anything.
 ## Request
 | Type | Description |
 | --- | --- |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
+| Uint32 | [Category](#applicationconfigtype) |
+| Uint32 | Index |
+| Uint32 | Value |
 
 ## Response
 This method does not return anything.
@@ -151,7 +151,7 @@ This method does not return anything.
 ## Request
 | Type | Description |
 | --- | --- |
-| Uint32 | Id |
+| Uint32 | [Category](#applicationconfigtypestring) |
 
 ## Response
 | Type | Description |
@@ -233,6 +233,15 @@ This method does not return anything.
 | 0 | Settings |
 | 1 | PID |
 | 2 | First clear time |
+| 3 - 127 | Unused |
+
+## ApplicationConfigTypeString
+| Value | Description |
+| --- | --- |
+| 128 | Course ng word list first |
+| 129 | Course ng word list second |
+| 130 | Mii name ng word list |
+| 131 - 255 | Unused |
 
 [BufferQueueParam]: #bufferqueueparam-structure
 [DataStoreObjectInfo]: #datastoreobjectinfo-structure
