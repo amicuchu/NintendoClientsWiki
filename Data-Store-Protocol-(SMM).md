@@ -141,8 +141,8 @@ This method does not return anything.
 ## Request
 | Type | Description |
 | --- | --- |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
+| Uint32 | [Category](#applicationconfigtype) |
+| Uint32 | Index |
 
 ## Response
 This method does not return anything.
