@@ -170,8 +170,9 @@ It would be a bad idea to encrypt all reliable substreams with the same key, bec
 
 ```python
 def modify_key(key):
+    # Only the first half of the key is modified
     add = len(key) // 2 + 1
-    for i in range(len(key) // 2): # Only the first half of the key is modified
+    for i in range(len(key) // 2):
         key[i] = (key[i] + add - i) & 0xFF
 ```
 
