@@ -29,6 +29,8 @@ This method does not take any parameters.
 | Bool | True if the api recorder is enabled |
 
 # (4) GetApiCalls
+This method returns `RendezVous::InvalidConfiguration` if the api recorder is disabled.
+
 ## Request
 | Type | Description |
 | --- | --- |
