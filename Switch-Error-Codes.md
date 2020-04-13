@@ -2,6 +2,7 @@
 | Error Codes | Description |
 | --- | --- |
 | 2306-XXXX | [NEX (game servers)](#nex-error-codes)<br>[Error descriptions](#nex-error-descriptions) |
+| 2618-XXXX | PIA (peer to peer) |
 | 2815-XXXX | [Coral (voice chat)](#coral-error-codes) |
 
 # NEX Error Codes
