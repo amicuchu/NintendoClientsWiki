@@ -2,7 +2,7 @@
 | Error Codes | Description |
 | --- | --- |
 | 2306-XXXX | [NEX (game servers)](#nex-error-codes)<br>[Error descriptions](#nex-error-descriptions) |
-| 2618-XXXX | PIA (peer to peer) |
+| 2618-XXXX | [PIA (peer to peer)](#pia-error-codes) |
 | 2815-XXXX | [Coral (voice chat)](#coral-error-codes) |
 
 # NEX Error Codes
@@ -296,6 +296,102 @@
 | 2306-0509 | The network connection was reset. |
 | 2306-0510 | The destination Station did not authenticate itself properly. |
 | 2306-0511 | 3rd-party server or device answered with an error code according to protocol used e.g. HTTP error code |
+
+# PIA Error Codes
+| Error Code | Name |
+| --- | --- |
+| 2618-0000 | ResultSdkViewerResultError |
+| 2618-0001 | ResultAllocationFailed |
+| 2618-0002 | ResultAlreadyInitialized |
+| 2618-0003 | ResultBufferShortage |
+| 2618-0004 | ResultBrokenData |
+| 2618-0005 | ResultCancelled |
+| 2618-0006 | ResultNetworkConnectionIsLost |
+| 2618-0007 | ResultInvalidArgument |
+| 2618-0008 | ResultInvalidState |
+| 2618-0009 | ResultNoData |
+| 2618-0010 | ResultNotFound |
+| 2618-0011 | ResultNotImplemented |
+| 2618-0012 | ResultNotInitialized |
+| 2618-0013 | ResultBufferIsFull |
+| 2618-0014 | ResultTimeOut |
+| 2618-0015 | ResultAlreadyExists |
+| 2618-0016 | ResultContainerIsFull |
+| 2618-0017 | ResultTemporaryUnavailable |
+| 2618-0019 | ResultNotSet |
+| 2618-0101 | ResultMemoryLeak |
+| 2618-0201 | ResultNatCheckFailed |
+| 2618-0202 | ResultInUse |
+| 2618-0203 | ResultDnsFailed |
+| 2618-0302 | ResultInvalidNode |
+| 2618-0304 | ResultNegligibleFault |
+| 2618-0305 | ResultInvalidConnection |
+| 2618-0308 | ResultErrorOccurred |
+| 2618-0309 | ResultNetworkIsNotFound |
+| 2618-0310 | ResultNetworkIsFull |
+| 2618-0311 | ResultLocalLowerVersion |
+| 2618-0312 | ResultLocalHigherVersion |
+| 2618-0313 | ResultWifiOff |
+| 2618-0314 | ResultSleep |
+| 2618-0315 | ResultWirelessControllerCountLimitation |
+| 2618-0401 | ResultConnectionFailed |
+| 2618-0402 | ResultCreateStationFailed |
+| 2618-0403 | ResultIncompatibleFormat |
+| 2618-0404 | ResultNotInCommunication |
+| 2618-0405 | ResultTableIsFull |
+| 2618-0501 | ResultJoinRequestDenied |
+| 2618-0502 | ResultStationConnectionFailed |
+| 2618-0506 | ResultMeshIsFull |
+| 2618-0507 | ResultInvalidSystemMessage |
+| 2618-0510 | ResultStationConnectionNatTraversalFailedUnknown |
+| 2618-0513 | ResultNatTraversalFailedBothEim |
+| 2618-0514 | ResultNatTraversalFailedBothEdm |
+| 2618-0515 | ResultNatTraversalFailedLocalEimRemoteEdm |
+| 2618-0516 | ResultNatTraversalFailedLocalEdmRemoteEim |
+| 2618-0517 | ResultRelayFailedNoCandidate |
+| 2618-0518 | ResultRelayFailedRttLimit |
+| 2618-0519 | ResultRelayFailedRelayNumLimit |
+| 2618-0520 | ResultRelayFailedUnknown |
+| 2618-0521 | ResultNatTraversalRequestTimeout |
+| 2618-0541 | ResultSessionIsNotFound |
+| 2618-0542 | ResultMatchmakeSessionIsFull |
+| 2618-0543 | ResultDeniedByParticipants |
+| 2618-0544 | ResultParticipantInBlockList |
+| 2618-0545 | ResultSessionUserPasswordUnmatch |
+| 2618-0546 | ResultSessionSystemPasswordUnmatch |
+| 2618-0547 | ResultMeshConnectionIsLost |
+| 2618-0548 | ResultSessionIsClosed |
+| 2618-0549 | ResultCompanionStationIsOffline |
+| 2618-0550 | ResultHostIsNotFriend |
+| 2618-0551 | ResultSessionConnectionIsLost |
+| 2618-0552 | ResultCompanionStationIsLeft |
+| 2618-0554 | ResultSessionMigrationFailed |
+| 2618-0555 | ResultSessionWrongState |
+| 2618-0561 | ResultGameServerMaintenance |
+| 2618-0562 | ResultGameServerProcessAborted |
+| 2618-0571 | ResultCreateCommunityFailedUpperLimit |
+| 2618-0572 | ResultJoinCommunityFailedUpperLimit |
+| 2618-0573 | ResultCommunityIsFull |
+| 2618-0574 | ResultCommunityIsNotFound |
+| 2618-0575 | ResultCommunityIsClosed |
+| 2618-0576 | ResultCommunityUserPasswordUnmatch |
+| 2618-0577 | ResultAlreadyJoinedCommunity |
+| 2618-0578 | ResultUserAccountNotExisted |
+| 2618-0579 | ResultNetworkConnectionIsLostByDuplicateLogin |
+| 2618-0583 | ResultNatTraversalFailedBothEimSamePublicAddress |
+| 2618-0584 | ResultNatTraversalFailedBothEdmSamePublicAddress |
+| 2618-0585 | ResultNatTraversalFailedLocalEimRemoteEdmSamePublicAddress |
+| 2618-0586 | ResultNatTraversalFailedLocalEdmRemoteEimSamePublicAddress |
+| 2618-0590 | ResultLicenseForNetworkServiceNotAvailable |
+| 2618-0591 | ResultLicenseForNetworkServiceError |
+| 2618-0592 | ResultLicenseForNetworkServiceSubscriptionError |
+| 2618-0593 | ResultLicenseForNetworkServiceSubscriptionError2 |
+| 2618-0602 | ResultDataIsNotArrivedYet |
+| 2618-0606 | ResultDataIsNotSet |
+| 2618-0701 | ResultLanLowerVersion |
+| 2618-0702 | ResultLanHigherVersion |
+| 2618-1001 | ResultSdkError |
+| 2618-1003 | ResultCancelledByUser |
 
 # Coral Error Codes
 | Error code | Name |
