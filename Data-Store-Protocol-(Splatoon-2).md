@@ -22,8 +22,8 @@ This page describes the methods that are only seen in Splatoon 2.
 | 63 | UploadLeagueMatchResultV2 |
 | 64 | UploadFesMatchResultV3 |
 | 65 | UploadXMatchResultV2 |
-| 66 | PreparePostPlayLog |
-| 67 | PrepareGetPlayLog |
+| 66 | [PreparePostPlayLog](#66-preparepostplaylog) |
+| 67 | [PrepareGetPlayLog](#67-preparegetplaylog) |
 | 68 | UploadFesMatchResultV4 |
 | 69 | UploadCoopResult |
 
@@ -149,6 +149,28 @@ This method does not return anything.
 
 ## Response
 This method does not return anything.
+
+# (66) PreparePostPlayLog
+## Request
+| Type | Description |
+| --- | --- |
+| [PlayLogPreparePostParam](#playlogpreparepostparam-structure) | Param |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [DataStoreReqPostInfo] | POST request info |
+
+# (67) PrepareGetPlayLog
+## Request
+| Type | Description |
+| --- | --- |
+| [PlayLogPrepareGetParam](#playlogpreparegetparam-structure) | Param |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [DataStoreReqGetInfo] | GET request info |
 
 # Types
 ## CalicoFesStats ([Structure])
@@ -295,6 +317,30 @@ This method does not return anything.
 | Sint32 | skillId |
 | Sint32 | price |
 
+## PlayLogEntry ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint64 | Unknown |
+| [String] | Unknown |
+| Uint64 | Unknown |
+| [List]&lt;[Map]&lt;[String], [Variant]&gt;&gt; | Unknown |
+
+## PlayLogPrepareGetParam ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint64 | Unknown |
+| [DateTime] | Unknown |
+| Uint32 | Unknown |
+
+## PlayLogPreparePostParam ([Structure])
+| Type | Description |
+| --- | --- |
+| [List]&lt;[PlayLogEntry](#playlogentry)&gt; | Entries |
+| [DateTime] | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| [List]&lt;[Map]&lt;[String], [Variant]&gt;&gt; | Unknown |
+
 ## StageTimeAttackInfo ([Structure])
 | Type | Name |
 | --- | --- |
@@ -339,3 +385,6 @@ This method does not return anything.
 [CalicoStatsBase]: #calicostatsbase-structure
 [StageTimeAttackWeapon]: #stagetimeattackweapon-structure
 [StageTimeAttackInfo]: #stagetimeattackinfo-structure
+
+[DataStoreReqGetInfo]: Data-Store-Protocol#datastorereqgetinfo-structure
+[DataStoreReqPostInfo]: Data-Store-Protocol#datastorereqpostinfo-structure
