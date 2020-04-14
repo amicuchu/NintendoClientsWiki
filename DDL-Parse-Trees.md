@@ -24,8 +24,8 @@ You may be surprised to see the real names of parameter and structure members on
 
 | ID | Type |
 | --- | --- |
-| 1 | NameSpaceItem |
-| 2 | Declaration |
+| 1 | [NameSpaceItem](#namespaceitem) |
+| 2 | [Declaration](#declaration) |
 | 3 | DOClassDeclaration |
 | 4 | DatasetDeclaration |
 | 5 | TypeDeclaration |
@@ -41,7 +41,42 @@ You may be surprised to see the real names of parameter and structure members on
 | 16 | TemplateDeclaration |
 | 17 | SimpleTypeDeclaration |
 | 18 | TemplateInstance |
-| 19 | DDLUnitDeclaration |
+| 19 | [DDLUnitDeclaration](#ddlunitdeclaration) |
 | 20 | DupSpaceDeclaration |
 
+## String
+| Type | Description |
+| --- | --- |
+| Uint32 | Length (N) |
+| Bytes (N) | String (without null terminator) |
+
+## ParseTreeItem
+| Type | Description |
+| --- | --- |
+| [String] | Name |
+
+## NameSpaceItem
+The second parse tree item is always the same as the first parse tree item. I don't know why it's stored twice.
+
+| Type | Description |
+| --- | --- |
+| [ParseTreeItem](#parsetreeitem) | Parse tree item |
+| [ParseTreeItem](#parsetreeitem) | Parse tree item |
+
+## Declaration
+| Type | Description |
+| --- | --- |
+| [NameSpaceItem](#namespaceitem) | Name space item |
+| [String] | DDL unit name |
+| [Namespace] | Properties |
+
+## DDLUnitDeclaration
+| Type | Description |
+| --- | --- |
+| [Declaration] | Declaration |
+| [String] | Unit name |
+| [String] | Unit dir |
+
 [NameSpace]: #namespace
+[Declaration]: #declaration
+[String]: #string
