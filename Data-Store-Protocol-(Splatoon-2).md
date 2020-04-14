@@ -367,6 +367,7 @@ This method does not return anything.
 [Structure]: NEX-Common-Types#structure
 [Data]: NEX-Common-Types#any-data-holder
 [PID]: NEX-Common-Types#pid
+[Variant]: NEX-Common-Types#variant
 
 [CoconutMeta]: #coconutmeta-structure
 [CoconutGetParam]: #coconutgetparam-structure
