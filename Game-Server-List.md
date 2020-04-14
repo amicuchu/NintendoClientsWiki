@@ -31,7 +31,7 @@
 | Super Mario Maker 2 | 210A9200<br>22306D00<br>2DF33D00<br>83110300<br>83110400<br>8930141A | a2917fa9<br>fdf6617f<br>4eb18d39<br>k6kmn5np<br>io089vkk<br>1fhr56as |
 | Super Smash Bros. Ultimate | 23380901 | 9587602b |
 | Tetris 99 | 23BDA200 | cdd6114d |
-| Splatoon 2 | 24E30D00<br>2C4BFF00<br>2DF33D01 | f25e0f69<br>f73d3ebe<br>4eb18d39 |
+| Splatoon 2 | 24E30D00 (testfire)<br>2C4BFF00 (world premiere)<br>2DF33D01 (main server) | f25e0f69<br>f73d3ebe<br>4eb18d39 |
 | Lego Worlds | 24FD5300 | 4d3b08ce |
 | Cadence of Hyrule | 25246E00 | 6bdc2209 |
 | Super Mario Odyssey | 255BA201 | afef0ecf |
