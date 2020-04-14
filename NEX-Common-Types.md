@@ -54,7 +54,7 @@ Every user is given a unique id called principal id.
 | --- | --- |
 | Uint32 | Result code |
 
-Success is indicated by `0x00010001`. A list of error codes can be found in [nintendo/nex/errors.py](https://github.com/Kinnay/NintendoClients/blob/master/nintendo/nex/errors.py).
+If the most significant bit is set an error occurred. Otherwise, the result indicates success. A list of error codes can be found in [nintendo/nex/errors.py](https://github.com/Kinnay/NintendoClients/blob/master/nintendo/nex/errors.py).
 
 # DateTime
 | Type | Description |
