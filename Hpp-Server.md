@@ -15,4 +15,4 @@ The following headers are sent in requests:
 | signature2 | Password signature |
 
 ## Signatures
-The signatures are a HMAC-MD5 over the request buffer. The key of signature1 is the access key of the game server, padded with zeroes until it is 16 bytes long. The key of signature2 is derived from the account password, using the [Kerberos key derivation](Kerberos-Authentication#key-derivation) algorithm.
+The signatures are a HMAC-MD5 over the request buffer. The key of signature1 is the access key of the game server, padded with zeroes until it is 8 bytes long. The key of signature2 is derived from the account password, using the [Kerberos key derivation](Kerberos-Authentication#key-derivation) algorithm.
