@@ -2,7 +2,7 @@ As an alternative to [PRUDP](PRUDP-Protocol), Nintendo provides an HTTP server t
 
 The hpp is never used by games. It was probably only intended for Nintendo developers.
 
-The server is at `hpp-<game server id>-<environment>.n.app.nintendo.net/hpp/`. A list of game server ids can be found [here](Game-Server-List). The environment is one of L, C, S, D, I, T, J or U, followed by a single decimal digit.
+The server is at `https://hpp-<game server id>-<environment>.n.app.nintendo.net/hpp/`. A list of game server ids can be found [here](Game-Server-List). The environment is one of L, C, S, D, I, T, J or U, followed by a single decimal digit.
 
 The following headers are sent in requests:
 
