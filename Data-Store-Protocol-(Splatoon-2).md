@@ -323,7 +323,7 @@ This method does not return anything.
 | Uint64 | Unknown |
 | [String] | Unknown |
 | Uint64 | Unknown |
-| [List]&lt;[Map]&lt;[String], [Variant]&gt;&gt; | Unknown |
+| [Map]&lt;[String], [Variant]&gt; | Unknown |
 
 ## PlayLogPrepareGetParam ([Structure])
 | Type | Description |
@@ -339,7 +339,7 @@ This method does not return anything.
 | [DateTime] | Unknown |
 | Uint32 | Unknown |
 | Uint32 | Unknown |
-| [List]&lt;[Map]&lt;[String], [Variant]&gt;&gt; | Unknown |
+| [Map]&lt;[String], [Variant]&gt; | Unknown |
 
 ## StageTimeAttackInfo ([Structure])
 | Type | Name |
