@@ -320,10 +320,16 @@ This method does not return anything.
 ## PlayLogEntry ([Structure])
 | Type | Description |
 | --- | --- |
+| [PID] | User id |
+| [String] | Player name |
 | Uint64 | Unknown |
-| [String] | Unknown |
-| Uint64 | Unknown |
-| [Map]&lt;[String], [Variant]&gt; | Unknown |
+| [Map]&lt;[String], [Variant]&gt; | Properties |
+
+### Property keys
+| Key | Description |
+| --- | --- |
+| `save` | |
+| `udemae` | |
 
 ## PlayLogPrepareGetParam ([Structure])
 | Type | Description |
@@ -336,10 +342,20 @@ This method does not return anything.
 | Type | Description |
 | --- | --- |
 | [List]&lt;[PlayLogEntry](#playlogentry)&gt; | Entries |
-| [DateTime] | Unknown |
+| [DateTime] | Play time |
+| Uint32 | Stage id |
 | Uint32 | Unknown |
-| Uint32 | Unknown |
-| [Map]&lt;[String], [Variant]&gt; | Unknown |
+| [Map]&lt;[String], [Variant]&gt; | Properties |
+
+### Property keys
+| Key | Description |
+| --- | --- |
+| `app_version` | |
+| `game_mode` | |
+| `game_rule` | |
+| `replay_version` | |
+| `stage_id` | |
+| `stage_name` | |
 
 ## StageTimeAttackInfo ([Structure])
 | Type | Name |
