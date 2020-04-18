@@ -102,8 +102,18 @@ Every error is encoded like this:
 | message | Error message |
 
 ### Known Errors
-| Code | Message |
-| --- | --- |
-| 0105 | ROM ID has been banned. |
-| 0111 | Application update is required. |
-| 0118 | Invalid parameter in request. |
+| Code | Dialog | Message |
+| --- | --- | --- |
+| 0103 | 2124-4603 | ? |
+| 0105 | 2124-4605 | ROM ID has been banned. |
+| 0106 | 2124-4606 | ? |
+| 0107 | 2124-4607 | ? |
+| 0108 | 2124-4608 | ? |
+| 0109 | 2124-4609 | ? |
+| 0110 | 2124-4610 | ? |
+| 0111 | 2124-3001 | Application update is required. |
+| 0112 | 2124-4612 | ? |
+| 0113 | 2124-4613 | ? |
+| 0118 | 2124-4618 | Invalid parameter in request. |
+| 0120 | 2124-4620 | ? |
+| 0121 | 2124-4621 | ? |
