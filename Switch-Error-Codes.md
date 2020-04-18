@@ -3,10 +3,16 @@
 | --- | --- |
 | 2124-XXXX | AAuth (application authorization) |
 | 2155-XXXX | Curl (http requests) |
-| 2181-XXXX | DAuth (device authorization) |
+| 2181-XXXX | [DAuth (device authorization)](#dauth-error-codes) |
 | 2306-XXXX | [NEX (game servers)](#nex-error-codes)<br>[Error descriptions](#nex-error-descriptions) |
 | 2618-XXXX | [PIA (peer to peer)](#pia-error-codes) |
 | 2815-XXXX | [Coral (voice chat)](#coral-error-codes) |
+
+# DAuth Error Codes
+| Error code | Description |
+| --- | --- |
+| 2181-4008 | Device has been banned. |
+| 2181-4020 | Invalid parameter in request. |
 
 # NEX Error Codes
 | Error code | Name |
