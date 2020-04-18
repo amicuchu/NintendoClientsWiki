@@ -1,6 +1,7 @@
 # Error Categories
 | Error Codes | Description |
 | --- | --- |
+| 2124-XXXX | AAuth (application authorization) |
 | 2155-XXXX | Curl (http requests) |
 | 2181-XXXX | DAuth (device authorization) |
 | 2306-XXXX | [NEX (game servers)](#nex-error-codes)<br>[Error descriptions](#nex-error-descriptions) |
