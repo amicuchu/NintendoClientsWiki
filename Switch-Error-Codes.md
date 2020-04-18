@@ -11,8 +11,9 @@
 # DAuth Error Codes
 | Error code | Description |
 | --- | --- |
-| 2181-4008 | Device has been banned. |
-| 2181-4020 | Invalid parameter in request. |
+| 2181-3100 | Server returned invalid reply |
+| 2181-4008 | Server returned error 0008 ("Device has been banned.") |
+| 2181-4020 | Server returned error 0014 ("Invalid parameter in request.") |
 
 # NEX Error Codes
 | Error code | Name |
