@@ -217,7 +217,7 @@ On error, the server sends the following response:
 | 403 | insufficient_scope | ? | ? |
 | 403 | forbidden | ? | ? |
 | 403 | membership_required | Membership Required | |
-| 403 | unavailable_device_account | ? | ? |
+| 403 | unavailable_device_account | Unavailable Device Account | Device Account is unavailable |
 | 403 | banned_user | ? | ? |
 | 403 | banned_user_by_application | ? | ? |
 | 404 | deleted_user | ? | ? |
