@@ -7,13 +7,17 @@ Most Switch servers can only be accessed after acquiring a device authorization 
 
 The dauth server takes form-encoded requests and responds with json-encoding. Also, this server uses the alternative base64 table (with '-' and '_' instead of '+' and '/'), and the client does not add any padding characters.
 
-This page was last updated for firmware version 9.2.0.
-
 ## Headers
 | Header | Description |
 | --- | --- |
-| User-Agent | `libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 9.3.0.0)` |
+| User-Agent | [User agent](#user-agents) |
 | X-Nintendo-PowerState | `FA` (fully awake) or `HA` (half awake) |
+
+#### User Agents
+| System Version | User agent |
+| --- | --- |
+| 9.0.0 - 9.2.0 |  `libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 9.3.0.0)` |
+| 10.0.0 | `libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 10.4.0.0)` |
 
 ## Methods
 | Method | URL |
@@ -25,7 +29,7 @@ This page was last updated for firmware version 9.2.0.
 ### POST /v6/challenge
 | Param | Description |
 | --- | --- |
-| key_generation | Master key revision (11) |
+| key_generation | [Master key revision](#master-key-revisions) |
 
 Response:
 
@@ -38,9 +42,9 @@ Response:
 | Param | Description |
 | --- | --- |
 | challenge | Base64-encoded challenge |
-| client_id | Application-specific client id |
+| client_id | Application-specific [client id](#known-client-ids) |
 | ist | `true` or `false` (depends on [platform region](https://switchbrew.org/wiki/Settings_services#GetT)) |
-| key_generation | Master key revision (11) |
+| key_generation | [Master key revision](#master-key-revisions) |
 | system_version | [System version digest](https://switchbrew.org/wiki/System_Version_Title) |
 | mac | Base64-encoded AES-CMAC of all previous fields in form-encoding |
 
@@ -57,6 +61,12 @@ The key for the AES-CMAC is calculated as follows:
 3. The key from the `data` field of the challenge is decrypted with the key from step 2.
 
 The dauth key source is: `8be45abcf987021523ca4f5e2300dbf0`
+
+### Master Key Revisions
+| System version | Key generation |
+| --- | --- |
+| 9.0.0 - 9.0.1 | 10 |
+| 9.1.0 - 10.0.0 | 11 |
 
 ### Known Client IDs
 | Client ID | Description |
