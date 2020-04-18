@@ -90,5 +90,6 @@ Every error is encoded like this:
 ### Known Errors
 | Code | Dialog | Message |
 | --- | --- | --- |
+| 0000 | 2181-0100 | ? |
 | 0008 | 2181-4008 | Device has been banned. |
 | 0014 | 2181-4020 | Invalid parameter in request. |
