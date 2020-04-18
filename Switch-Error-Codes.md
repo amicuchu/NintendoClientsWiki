@@ -1,6 +1,8 @@
 # Error Categories
 | Error Codes | Description |
 | --- | --- |
+| 2155-XXXX | Curl (http requests) |
+| 2181-XXXX | DAuth (device authorization) |
 | 2306-XXXX | [NEX (game servers)](#nex-error-codes)<br>[Error descriptions](#nex-error-descriptions) |
 | 2618-XXXX | [PIA (peer to peer)](#pia-error-codes) |
 | 2815-XXXX | [Coral (voice chat)](#coral-error-codes) |
