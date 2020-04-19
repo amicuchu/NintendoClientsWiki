@@ -1,20 +1,47 @@
 # Error Categories
 | Error Codes | Description |
 | --- | --- |
-| 2124-XXXX | [AAuth (application authorization)](#aauth-error-codes) |
+| 2124-XXXX | [Account services](#account-error-codes) |
 | 2155-XXXX | [Curl (http requests)](#curl-error-codes) |
 | 2181-XXXX | [DAuth (device authorization)](#dauth-error-codes) |
 | 2306-XXXX | [NEX (game servers)](#nex-error-codes)<br>[Error descriptions](#nex-error-descriptions) |
 | 2618-XXXX | [PIA (peer to peer)](#pia-error-codes) |
 | 2815-XXXX | [Coral (voice chat)](#coral-error-codes) |
 
-# AAuth Error Codes
+# Account Error Codes
 | Error code | Description |
 | --- | --- |
-| 2124-3001 | Server returned error 0111 ("Application update is required.") |
-| 2124-4605 | Server returned error 0105 ("ROM ID has been banned.") |
-| 2124-4618 | Server returned error 0118 ("Invalid parameter in request.") |
-| 2124-4799 | Server returned unexpected error code |
+| 2124-3001 | AAuth server returned error 0111 ("Application update is required.") |
+| 2124-3120 | AAuth server returned invalid response but http status indicates success |
+| 2124-4605 | AAuth server returned error 0105 ("ROM ID has been banned.") |
+| 2124-4618 | AAuth server returned error 0118 ("Invalid parameter in request.") |
+| 2124-4799 | AAuth server returned invalid error code |
+| 2124-7000 | Server returned invalid http status |
+| 2124-7001 | Server returned invalid http status (4xx) |
+| 2124-7002 | Server returned invalid http status (5xx) |
+| 2124-7400 | Server returned http status 400 (Bad Request) |
+| 2124-7401 | Server returned http status 401 (Unauthorized) |
+| 2124-7403 | Server returned http status 403 (Forbidden) |
+| 2124-7404 | Server returned http status 404 (Not Found) |
+| 2124-7405 | Server returned http status 405 (Method Not Allowed) |
+| 2124-7406 | Server returned http status 406 (Not Acceptable) |
+| 2124-7407 | Server returned http status 407 (Proxy Authentication Required) |
+| 2124-7408 | Server returned http status 408 (Request Timeout) |
+| 2124-7409 | Server returned http status 409 (Conflict) |
+| 2124-7410 | Server returned http status 410 (Gone) |
+| 2124-7411 | Server returned http status 411 (Length Required) |
+| 2124-7412 | Server returned http status 412 (Precondition Failed) |
+| 2124-7413 | Server returned http status 413 (Payload Too Large) |
+| 2124-7414 | Server returned http status 414 (URI Too Long) |
+| 2124-7415 | Server returned http status 415 (Unsupported Media Type) |
+| 2124-7416 | Server returned http status 416 (Requested Range Not Satisfiable) |
+| 2124-7417 | Server returned http status 417 (Expectation Failed) |
+| 2124-7500 | Server returned http status 500 (Internal Server Error) |
+| 2124-7501 | Server returned http status 501 (Not Implemented) |
+| 2124-7502 | Server returned http status 502 (Bad Gateway) |
+| 2124-7503 | Server returned http status 503 (Service Unavailable) |
+| 2124-7504 | Server returned http status 504 (Gateway Timeout) |
+| 2124-7505 | Server returned http status 505 (HTTP Version Not Supported) |
 
 # Curl Error Codes
 | Error code | Description |
@@ -81,7 +108,7 @@
 # DAuth Error Codes
 | Error code | Description |
 | --- | --- |
-| 2181-0100 | Server returned unexpected error code |
+| 2181-0100 | Server returned invalid error code |
 | 2181-3100 | Server returned invalid response |
 | 2181-4008 | Server returned error 0008 ("Device has been banned.") |
 | 2181-4014 | Server returned error 0014 ("Invalid parameter in request.") |
