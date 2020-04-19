@@ -2,19 +2,28 @@
 | Error Codes | Description |
 | --- | --- |
 | 2124-XXXX | [AAuth (application authorization)](#aauth-error-codes) |
-| 2155-XXXX | Curl (http requests) |
+| 2155-XXXX | [Curl (http requests)](#curl-error-codes) |
 | 2181-XXXX | [DAuth (device authorization)](#dauth-error-codes) |
 | 2306-XXXX | [NEX (game servers)](#nex-error-codes)<br>[Error descriptions](#nex-error-descriptions) |
 | 2618-XXXX | [PIA (peer to peer)](#pia-error-codes) |
 | 2815-XXXX | [Coral (voice chat)](#coral-error-codes) |
 
 # AAuth Error Codes
-| Error Codes | Description |
+| Error code | Description |
 | --- | --- |
 | 2124-3001 | Server returned error 0111 ("Application update is required.") |
 | 2124-4605 | Server returned error 0105 ("ROM ID has been banned.") |
 | 2124-4618 | Server returned error 0118 ("Invalid parameter in request.") |
 | 2124-4799 | Server returned unexpected error code |
+
+# Curl Error Codes
+| Error code | Description |
+| --- | --- |
+| 2155-8001 | 
+| 2155-8001 | 
+| 2155-8001 | 
+| 2155-8001 | 
+| 2155-8148 | Curl returned an invalid error code |
 
 # DAuth Error Codes
 | Error code | Description |
