@@ -16,6 +16,34 @@
 | 2124-4605 | AAuth server returned error 0105 ("ROM ID has been banned.") |
 | 2124-4618 | AAuth server returned error 0118 ("Invalid parameter in request.") |
 | 2124-4799 | AAuth server returned invalid error code |
+| 2124-5000 | BaaS server returned error: `invalid_params` |
+| 2124-5001 | BaaS server returned error: `invalid_request` |
+| 2124-5002 | BaaS server returned error: `invalid_device_account` |
+| 2124-5003 | BaaS server returned error: `invalid_ndas_app_authn_token` |
+| 2124-5004 | BaaS server returned error: `invalid_idp` |
+| 2124-5005 | BaaS server returned error: `invalid_idp_account` |
+| 2124-5006 | BaaS server returned error: `linked_user_not_found` |
+| 2124-5007 | BaaS server returned error: `invalid_friend_code_format` |
+| 2124-5008 | BaaS server returned error: `user_link_not_exist` |
+| 2124-5009 | BaaS server returned error: `invalid_raw_content` |
+| 2124-5100 | BaaS server returned error: `invalid_token` |
+| 2124-5101 | BaaS server returned error: `insufficient_scope` |
+| 2124-5102 | BaaS server returned error: `forbidden` |
+| 2124-5103 | BaaS server returned error: `unavailable_device_account` |
+| 2124-5104 | BaaS server returned error: `resource_is_not_found` |
+| 2124-5105 | BaaS server returned error: `method_not_allowed` |
+| 2124-5106 | BaaS server returned error: `not_acceptable_language` |
+| 2124-5107 | BaaS server returned error: `resource_already_exists` |
+| 2124-5108 | BaaS server returned error: `user_link_already_exists` |
+| 2124-5109 | BaaS server returned error: `precondition_failed` |
+| 2124-5110 | BaaS server returned error: `friend_code_unregenerable_state` |
+| 2124-5111 | BaaS server returned error: `banned_user` |
+| 2124-5112 | BaaS server returned error: `deleted_user` |
+| 2124-5113 | BaaS server returned error: `membership_required` |
+| 2124-5114 | BaaS server returned error: `banned_user_by_application` |
+| 2124-5200 | BaaS server returned error: `internal_server_error` |
+| 2124-5210 | BaaS server returned error: `could_not_confirm_membership` |
+| 2124-5249 | BaaS server returned error: `under_maintenance` |
 | 2124-7000 | Server returned invalid http status |
 | 2124-7001 | Server returned invalid http status (4xx) |
 | 2124-7002 | Server returned invalid http status (5xx) |
