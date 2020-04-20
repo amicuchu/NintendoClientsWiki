@@ -37,6 +37,7 @@ On error, the server sends the following response:
 | under_maintenance | ? |
 
 `/connect/1.0.0/api/token`:
+
 | Name | Detail | Description |
 | --- | --- | --- |
 | invalid_request | | The request does not satisfy the schema |
@@ -55,6 +56,8 @@ On error, the server sends the following response:
 | unsupported_grant_type | | ? |
 | server_error | | ? |
 | under_maintenance | | ? |
+
+Others:
 
 | Name | Detail | Description |
 | --- | --- | --- |
