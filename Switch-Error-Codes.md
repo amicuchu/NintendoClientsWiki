@@ -209,6 +209,14 @@
 | 2155-8095 | Curl returned error 97 (nintendo-specific) |
 | 2155-8096 | Curl returned error 98 (nintendo-specific) |
 | 2155-8148 | Curl returned an invalid error code |
+| 2155-8151 | CURLM_BAD_HANDLE |
+| 2155-8152 | CURLM_BAD_EASY_HANDLE |
+| 2155-8153 | CURLM_OUT_OF_MEMORY |
+| 2155-8154 | CURLM_INTERNAL_ERROR |
+| 2155-8155 | CURLM_BAD_SOCKET |
+| 2155-8156 | CURLM_UNKNOWN_OPTION |
+| 2155-8157 | CURLM_ADDED_ALREADY |
+| 2155-8191 | Curl multi returned an invalid error code |
 
 # DAuth Error Codes
 | Error code | Description |
