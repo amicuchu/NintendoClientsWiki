@@ -109,7 +109,7 @@
 | 2124-6130 | `unauthorized_client` | |
 | 2124-6131 | `unsupported_grant_type` | |
 | 2124-6132 | `server_error` | |
-| 2124-6199 | `under_maintenance | |
+| 2124-6199 | `under_maintenance` | |
 
 ### Account Server Errors (User Info Request)
 | Error codes | Name |
