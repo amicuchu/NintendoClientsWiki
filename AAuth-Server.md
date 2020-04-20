@@ -48,7 +48,7 @@ The following parameters depend on the media type of the game:
 #### GAMECARD
 | Param | Description |
 | --- | --- |
-| gvt | Base64-encoded challenge reply, based on the seed and value from <code><a href="#post-v3challenge">/v3/challenge</a></code> |
+| gvt | Base64-encoded challenge reply, based on the seed and value from <code><a href="#post-v3challenge">/v3/challenge</a></code> (88 bytes) |
 | cert | Base64-encoded gamecard certificate (stored on game card itself) |
 
 #### DIGITAL
