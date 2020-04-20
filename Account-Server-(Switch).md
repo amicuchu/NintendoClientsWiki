@@ -9,7 +9,7 @@ This server takes form-encoded requests and responds with json-encoding.
 | Method | URL |
 | --- | --- |
 | POST | `/connect/1.0.0/api/token` |
-| POST | `/connect/1.0.0/api/authorize` |
+| POST | `/connect/1.0.0/authorize` |
 | GET | `/api/1.0.0/users/<id>/qrcode_param` |
 
 **api.accounts.nintendo.com:**
