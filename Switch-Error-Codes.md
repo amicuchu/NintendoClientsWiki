@@ -13,6 +13,7 @@
 | --- | --- |
 | 4600-4799 | [AAuth (application authentication)](#aauth-errors) |
 | 5000-5249 | [BaaS (backend as a service)](#baas-errors) |
+| 6000-6249 | [Account server errors](#account-server-errors) |
 | 7000-7499 | [HTTP status errors](#http-errors) |
 | Other | [Other account errors](#general-account-errors) |
 
@@ -63,12 +64,59 @@
 | 2124-5249 | `under_maintenance` |
 
 ## Account Server Errors
-| Error code | Description |
+| Error codes | Request path |
 | --- | --- |
-| 2124-6100 | Account server returned error in token request: `invalid_request` |
-| 2124-6200 | Account server returned error in user info request: `invalid_token` |
-| 2124-6201 | Account server returned error in user info request: `insufficient_scope` |
-| 2124-6249 | Account server returned error in user info request: `under_maintenance` |
+| 6000-6099 | [`/connect/1.0.0/authorize`](#account-server-errors-(authorization-request)) |
+| 6100-6199 | [`/connect/1.0.0/api/token`](#account-server-errors-(token-request)) |
+| 6200-6249 | - [`/api/1.0.0/users/<id>/qrcode_param`](#account-server-errors-user-info-request)<br>- [`/2.0.0/users/me`](#account-server-errors-user-info-request) |
+
+### Account Server Errors (Authorization Request)
+| Error codes | Name | Detail |
+| --- | --- | --- |
+| 2124-6000 | `unauthorized_client` | |
+| 2124-6001 | `access_denied` | |
+| 2124-6003 | `access_denied` | `id_token_hint_invalid` |
+| 2124-6004 | `access_denied` | `user_deleted` |
+| 2124-6010 | `invalid_scope` | |
+| 2124-6011 | `invalid_scope` | `scope_token_unknown` |
+| 2124-6012 | `invalid_scope` | `scope_token_prohibited` |
+| 2124-6020 | `server_error` | |
+| 2124-6021 | `login_required` | |
+| 2124-6022 | `login_required` | `user_not_logged_in` |
+| 2124-6023 | `login_required` | `user_different_from_id_token_hint` |
+| 2124-6030 | `consent_required` | |
+| 2124-6031 | `interaction_required` | |
+| 2124-6032 | `interaction_required` | `user_banned` |
+| 2124-6033 | `interaction_required` | `user_suspended` |
+| 2124-6034 | `interaction_required` | `user_terms_agreement_required` |
+| 2124-6099 | `under_maintenance` | |
+
+### Account Server Errors (Token Request)
+| Error codes | Name | Detail |
+| --- | --- | --- |
+| 2124-6100 | `invalid_request` | |
+| 2124-6101 | `invalid_client` | |
+| 2124-6102 | `invalid_grant` | |
+| 2124-6103 | `invalid_grant` | `user_deleted` |
+| 2124-6104 | `invalid_grant` | `user_banned` |
+| 2124-6105 | `invalid_grant` | `user_suspended` |
+| 2124-6106 | `invalid_grant` | `user_withdrawn` |
+| 2124-6107 | `invalid_grant` | `user_terms_agreement_required` |
+| 2124-6120 | `invalid_scope` | |
+| 2124-6121 | `invalid_scope` | `scope_token_unknown` |
+| 2124-6122 | `invalid_scope` | `scope_token_prohibited` |
+| 2124-6123 | `invalid_scope` | `scope_token_not_authorized` |
+| 2124-6130 | `unauthorized_client` | |
+| 2124-6131 | `unsupported_grant_type` | |
+| 2124-6132 | `server_error` | |
+| 2124-6199 | `under_maintenance | |
+
+### Account Server Errors (User Info Request)
+| Error codes | Name |
+| --- | --- |
+| 2124-6200 | `invalid_token` |
+| 2124-6201 | `insufficient_scope` |
+| 2124-6249 | `under_maintenance` |
 
 ## HTTP Errors
 | Error code | HTTP status |
