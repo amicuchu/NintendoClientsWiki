@@ -28,11 +28,17 @@ On error, the server sends the following response:
 | error_detail | Error details (optional) |
 
 ### Known Errors
+`/2.0.0/users/me` and `/api/1.0.0/users/<id>/qrcode_param`:
+
+| Name | Description |
+| --- | --- |
+| invalid_token | ? |
+| insufficient_scope | ? |
+| under_maintenance | ? |
+
+`/connect/1.0.0/api/token`:
 | Name | Detail | Description |
 | --- | --- | --- |
-| invalid_token | ? | ? |
-| insufficient_scope | ? | ? |
-| under_maintenance | ? | ? |
 | invalid_request | | The request does not satisfy the schema |
 | invalid_client | | Client authentication failed |
 | invalid_grant | | ? |
@@ -45,3 +51,27 @@ On error, the server sends the following response:
 | invalid_scope | scope_token_unknown | The requested scope is invalid |
 | invalid_scope | scope_token_prohibited | ? |
 | invalid_scope | scope_token_not_authorized | ? |
+| unauthorized_client | | ? |
+| unsupported_grant_type | | ? |
+| server_error | | ? |
+| under_maintenance | | ? |
+
+| Name | Detail | Description |
+| --- | --- | --- |
+| unauthorized_client | | ? |
+| access_denied | | ? |
+| access_denied | id_token_hint_invalid | ? |
+| access_denied | user_deleted | ? |
+| invalid_scope | | ? |
+| invalid_scope | scope_token_unknown | ? |
+| invalid_scope | scope_token_prohibited | ? |
+| server_error | | ? |
+| login_required | | ? |
+| login_required | user_not_logged_in | ? |
+| login_required | user_different_from_id_token_hint | ? |
+| consent_required | | ? |
+| interaction_required | | ? |
+| interaction_required | user_banned | ? |
+| interaction_required | user_suspended | ? |
+| interaction_required | user_terms_agreement_required | ? |
+| under_maintenance | | ? |
