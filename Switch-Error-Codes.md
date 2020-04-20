@@ -3,74 +3,102 @@
 | --- | --- |
 | 2124-XXXX | [Account services](#account-error-codes) |
 | 2155-XXXX | [Curl (http requests)](#curl-error-codes) |
-| 2181-XXXX | [DAuth (device authorization)](#dauth-error-codes) |
+| 2181-XXXX | [DAuth (device authentication)](#dauth-error-codes) |
 | 2306-XXXX | [NEX (game servers)](#nex-error-codes)<br>[Error descriptions](#nex-error-descriptions) |
 | 2618-XXXX | [PIA (peer to peer)](#pia-error-codes) |
 | 2815-XXXX | [Coral (voice chat)](#coral-error-codes) |
 
 # Account Error Codes
+| Error Codes | Description |
+| --- | --- |
+| 4600-4799 | [AAuth (application authentication)](#aauth-errors) |
+| 5000-5249 | [BaaS (backend as a service)](#baas-errors) |
+| 7000-7499 | [HTTP status errors](#http-errors) |
+| Other | [Other account errors](#general-account-errors) |
+
+## General Account Errors
 | Error code | Description |
 | --- | --- |
 | 2124-0010 | BaaS or account server returned invalid error code |
 | 2124-3001 | AAuth server returned error 0111 ("Application update is required.") |
 | 2124-3120 | AAuth server returned invalid response but http status indicates success |
-| 2124-4605 | AAuth server returned error 0105 ("ROM ID has been banned.") |
-| 2124-4618 | AAuth server returned error 0118 ("Invalid parameter in request.") |
+
+## AAuth Errors
+| Error code | Description |
+| --- | --- |
+| 2124-4605 | ROM ID has been banned (0105) |
+| 2124-4618 | Invalid parameter in request (0118) |
 | 2124-4799 | AAuth server returned invalid error code |
-| 2124-5000 | BaaS server returned error: `invalid_params` |
-| 2124-5001 | BaaS server returned error: `invalid_request` |
-| 2124-5002 | BaaS server returned error: `invalid_device_account` |
-| 2124-5003 | BaaS server returned error: `invalid_ndas_app_authn_token` |
-| 2124-5004 | BaaS server returned error: `invalid_idp` |
-| 2124-5005 | BaaS server returned error: `invalid_idp_account` |
-| 2124-5006 | BaaS server returned error: `linked_user_not_found` |
-| 2124-5007 | BaaS server returned error: `invalid_friend_code_format` |
-| 2124-5008 | BaaS server returned error: `user_link_not_exist` |
-| 2124-5009 | BaaS server returned error: `invalid_raw_content` |
-| 2124-5100 | BaaS server returned error: `invalid_token` |
-| 2124-5101 | BaaS server returned error: `insufficient_scope` |
-| 2124-5102 | BaaS server returned error: `forbidden` |
-| 2124-5103 | BaaS server returned error: `unavailable_device_account` |
-| 2124-5104 | BaaS server returned error: `resource_is_not_found` |
-| 2124-5105 | BaaS server returned error: `method_not_allowed` |
-| 2124-5106 | BaaS server returned error: `not_acceptable_language` |
-| 2124-5107 | BaaS server returned error: `resource_already_exists` |
-| 2124-5108 | BaaS server returned error: `user_link_already_exists` |
-| 2124-5109 | BaaS server returned error: `precondition_failed` |
-| 2124-5110 | BaaS server returned error: `friend_code_unregenerable_state` |
-| 2124-5111 | BaaS server returned error: `banned_user` |
-| 2124-5112 | BaaS server returned error: `deleted_user` |
-| 2124-5113 | BaaS server returned error: `membership_required` |
-| 2124-5114 | BaaS server returned error: `banned_user_by_application` |
-| 2124-5200 | BaaS server returned error: `internal_server_error` |
-| 2124-5210 | BaaS server returned error: `could_not_confirm_membership` |
-| 2124-5249 | BaaS server returned error: `under_maintenance` |
-| 2124-7000 | Server returned invalid http status |
-| 2124-7001 | Server returned invalid http status (4xx) |
-| 2124-7002 | Server returned invalid http status (5xx) |
-| 2124-7400 | Server returned http status 400 (Bad Request) |
-| 2124-7401 | Server returned http status 401 (Unauthorized) |
-| 2124-7403 | Server returned http status 403 (Forbidden) |
-| 2124-7404 | Server returned http status 404 (Not Found) |
-| 2124-7405 | Server returned http status 405 (Method Not Allowed) |
-| 2124-7406 | Server returned http status 406 (Not Acceptable) |
-| 2124-7407 | Server returned http status 407 (Proxy Authentication Required) |
-| 2124-7408 | Server returned http status 408 (Request Timeout) |
-| 2124-7409 | Server returned http status 409 (Conflict) |
-| 2124-7410 | Server returned http status 410 (Gone) |
-| 2124-7411 | Server returned http status 411 (Length Required) |
-| 2124-7412 | Server returned http status 412 (Precondition Failed) |
-| 2124-7413 | Server returned http status 413 (Payload Too Large) |
-| 2124-7414 | Server returned http status 414 (URI Too Long) |
-| 2124-7415 | Server returned http status 415 (Unsupported Media Type) |
-| 2124-7416 | Server returned http status 416 (Requested Range Not Satisfiable) |
-| 2124-7417 | Server returned http status 417 (Expectation Failed) |
-| 2124-7500 | Server returned http status 500 (Internal Server Error) |
-| 2124-7501 | Server returned http status 501 (Not Implemented) |
-| 2124-7502 | Server returned http status 502 (Bad Gateway) |
-| 2124-7503 | Server returned http status 503 (Service Unavailable) |
-| 2124-7504 | Server returned http status 504 (Gateway Timeout) |
-| 2124-7505 | Server returned http status 505 (HTTP Version Not Supported) |
+
+## BaaS Errors
+| Error code | Description |
+| --- | --- |
+| 2124-5000 | `invalid_params` |
+| 2124-5001 | `invalid_request` |
+| 2124-5002 | `invalid_device_account` |
+| 2124-5003 | `invalid_ndas_app_authn_token` |
+| 2124-5004 | `invalid_idp` |
+| 2124-5005 | `invalid_idp_account` |
+| 2124-5006 | `linked_user_not_found` |
+| 2124-5007 | `invalid_friend_code_format` |
+| 2124-5008 | `user_link_not_exist` |
+| 2124-5009 | `invalid_raw_content` |
+| 2124-5100 | `invalid_token` |
+| 2124-5101 | `insufficient_scope` |
+| 2124-5102 | `forbidden` |
+| 2124-5103 | `unavailable_device_account` |
+| 2124-5104 | `resource_is_not_found` |
+| 2124-5105 | `method_not_allowed` |
+| 2124-5106 | `not_acceptable_language` |
+| 2124-5107 | `resource_already_exists` |
+| 2124-5108 | `user_link_already_exists` |
+| 2124-5109 | `precondition_failed` |
+| 2124-5110 | `friend_code_unregenerable_state` |
+| 2124-5111 | `banned_user` |
+| 2124-5112 | `deleted_user` |
+| 2124-5113 | `membership_required` |
+| 2124-5114 | `banned_user_by_application` |
+| 2124-5200 | `internal_server_error` |
+| 2124-5210 | `could_not_confirm_membership` |
+| 2124-5249 | `under_maintenance` |
+
+## Account Server Errors
+| Error code | Description |
+| --- | --- |
+| 2124-6100 | Account server returned error in token request: `invalid_request` |
+| 2124-6200 | Account server returned error in user info request: `invalid_token` |
+| 2124-6201 | Account server returned error in user info request: `insufficient_scope` |
+| 2124-6249 | Account server returned error in user info request: `under_maintenance` |
+
+## HTTP Errors
+| Error code | HTTP status |
+| --- | --- |
+| 2124-7000 | Invalid |
+| 2124-7001 | Invalid (4xx) |
+| 2124-7002 | Invalid (5xx) |
+| 2124-7400 | 400 (Bad Request) |
+| 2124-7401 | 401 (Unauthorized) |
+| 2124-7403 | 403 (Forbidden) |
+| 2124-7404 | 404 (Not Found) |
+| 2124-7405 | 405 (Method Not Allowed) |
+| 2124-7406 | 406 (Not Acceptable) |
+| 2124-7407 | 407 (Proxy Authentication Required) |
+| 2124-7408 | 408 (Request Timeout) |
+| 2124-7409 | 409 (Conflict) |
+| 2124-7410 | 410 (Gone) |
+| 2124-7411 | 411 (Length Required) |
+| 2124-7412 | 412 (Precondition Failed) |
+| 2124-7413 | 413 (Payload Too Large) |
+| 2124-7414 | 414 (URI Too Long) |
+| 2124-7415 | 415 (Unsupported Media Type) |
+| 2124-7416 | 416 (Requested Range Not Satisfiable) |
+| 2124-7417 | 417 (Expectation Failed) |
+| 2124-7500 | 500 (Internal Server Error) |
+| 2124-7501 | 501 (Not Implemented) |
+| 2124-7502 | 502 (Bad Gateway) |
+| 2124-7503 | 503 (Service Unavailable) |
+| 2124-7504 | 504 (Gateway Timeout) |
+| 2124-7505 | 505 (HTTP Version Not Supported) |
 
 # Curl Error Codes
 | Error code | Description |
