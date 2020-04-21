@@ -144,14 +144,14 @@ Since the match making methods are split across several protocols, this page doc
 | [List]&lt;Uint32&gt; | targetGids |
 | [MatchmakeBlockListParam](#matchmakeblocklistparam-structure) | blockListParam |
 
-## FindMatchmakeSessionByParticipantParam
+## FindMatchmakeSessionByParticipantParam ([Structure])
 | Type | Name |
 | --- | --- |
 | [List]&lt;[PID]&gt; | m_principalIdList |
 | Uint32 | m_resultOptions |
 | [MatchmakeBlockListParam](#matchmakeblocklistparam-structure) | m_blockListParam |
 
-## FindMatchmakeSessionByParticipantResult
+## FindMatchmakeSessionByParticipantResult ([Structure])
 | Type | Name |
 | --- | --- |
 | [PID] | m_principalId |
