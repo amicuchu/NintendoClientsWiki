@@ -118,6 +118,17 @@ Some methods take a `resultOption` parameter. This parameter controls which fiel
 | 156 | [GetEventCourseHistogram](#156-geteventcoursehistogram) |
 | 157 | [GetEventCourseGhost](#157-geteventcourseghost) |
 | 158 | [DebugUploadEventCourseGhost](#158-debuguploadeventcourseghost) |
+| 159 | RegisterWorldMap |
+| 160 | GetWorldMap |
+| 161 | SearchWorldMapPlayedBy |
+| 162 | SearchWorldMapPickUp |
+| 163 | GetWorldMapProgress |
+| 164 | DeleteWorldMap |
+| 165 | InitializeWorldMapProgress |
+| 166 | UpdateWorldMapProgress |
+| 167 | GetUsersFriend |
+| 168 | SearchUsersFolloweeV2 |
+| 169 | GetEventCourseFriendGhost |
 
 # (47) RegisterUser
 ## Request
