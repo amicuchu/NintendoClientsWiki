@@ -1075,6 +1075,14 @@ Revision 2:
 | --- | --- | --- |
 | [UnknownStruct3] | `0x2000` | Unknown |
 
+Revision 3:
+
+| Type | Option | Description |
+| --- | --- | --- |
+| [String] | | Unknown |
+| [Map]&lt;Uint8, Uint32&gt; | `0x8000` | Unknown |
+| Bool | | Unknown |
+
 ### User Play Stats
 | Key | Description |
 | --- | --- |
