@@ -28,7 +28,7 @@
 ## Switch
 | Game | Game Server ID | Access Key | Server Type |
 | --- | --- | --- | --- |
-| Luigi's Mansion 3 | 20DE2100 | ? |
+| Luigi's Mansion 3 | 20DE2100 | aab95246 |
 | Super Mario Maker 2 | 210A9200<br>22306D00<br>83110300<br>83110400<br>8930141A | a2917fa9<br>fdf6617f<br>k6kmn5np<br>io089vkk<br>1fhr56as | <br>Main&nbsp;server<br><br><br><br>
 | Super Smash Bros. Ultimate | 23380901 | 9587602b |
 | Mario Tennis Aces | 23932A00 | 29f267b9 |
