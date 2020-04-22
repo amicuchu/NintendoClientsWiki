@@ -23,6 +23,7 @@
 | 2124-0010 | BaaS or account server returned invalid error code |
 | 2124-3001 | AAuth server returned error 0111 ("Application update is required.") |
 | 2124-3120 | AAuth server returned invalid response but http status indicates success |
+| 2124-3121 | BaaS server returned invalid response but http status indicates success |
 
 ## AAuth Errors
 | Error code | Description |
