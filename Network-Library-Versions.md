@@ -107,3 +107,4 @@ Unfortunately, there are many different versions of [NEX](NEX-Overview-(Game-Ser
 | Super Mario Maker 2 | 4.6.15-appslop (DS/MM/UT) | 5.18.0 | No |
 | Super Mario Maker 2 | 4.6.18-appslop (DS/MM/UT/CO) | 5.18.0 | No |
 | Super Mario Maker 2 | 4.6.22-appslop (DS/MM/UT/CO) | 5.18.0 | No |
+| Super Mario Maker 2 (v4) | 4.6.25-appslop (DS/MM/UT/CO) | 5.18.98 | No |
