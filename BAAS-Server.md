@@ -8,7 +8,7 @@ This server takes form-encoded requests and responds with json-encoding.
 ## Headers
 | Header | Description |
 | --- | --- |
-| User-Agent | `libcurl (nnAccount; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 9.3.0.0; Add-on 9.3.0.0)`
+| User-Agent | [User agent](#user-agents) |
 | X-Nintendo-PowerState | `FA` (fully awake) or `HA` (half awake). This header is only present in the <code><a href="post-100applicationtoken">/1.0.0/application/token</a></code> and <code><a href="#post-100login">/1.0.0/login</a></code> requests. |
 
 ## Methods
