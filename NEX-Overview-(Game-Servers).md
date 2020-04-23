@@ -18,7 +18,7 @@ To connect to a game server, you first need to find it. Every platform has its o
 ### The protocols used by NEX
 ![](https://www.dropbox.com/s/wahcq2ifyncd3bu/protocols.png?raw=1)
 
-At the highest level, NEX provides a bunch of [services](NEX-Protocols), with each service providing several methods. To achieve this, NEX uses a simple [RMC protocol](RMC-Protocol) (remote method call). Whenever a game wants to call a method on a service, NEX builds a RMC request and sends it through the underlying connection.
+At the highest level, NEX provides a bunch of [services](NEX-Protocols), with each service providing several methods. To achieve this, NEX uses a simple [RMC protocol](RMC-Protocol) (remote method call). Whenever a game wants to call a method on a service, NEX builds an RMC request and sends it through the underlying connection.
 
 The underlying protocol varies per game and platform. Originally, the purpose of [PRUDP](PRUDP-Protocol) was to reliably send UDP packets. Starting with Nintendo Switch, NEX also supports TCP and WebSocket as underlying protocol however.
 
@@ -49,6 +49,6 @@ Game server accounts are separate from other Nintendo accounts. Username and pas
     <td><b>Wii U</b></td><td>Login information is requested from the [[account server]] (/provider/nex_token/@me)</td>
   </tr>
   <tr>
-    <td><b>Switch</b></td><td>Normal user accounts don't have a password anymore. Instead, they must provide a token to log in. This token can be retrieved by logging in on the <a href="BAAS-Server">BAAS server</a> after acquiring a <a href="DAuth-Server">device token</a> and an <a href="AAuth-Server">application token</a>.</td>
+    <td><b>Switch</b></td><td>Normal user accounts don't have a password anymore. Instead, they must provide an id token to log in. This token can be retrieved by logging in on the <a href="BAAS-Server">BAAS server</a> after acquiring a <a href="DAuth-Server">device token</a> and an <a href="AAuth-Server">application token</a>.</td>
   </tr>
 </table>
