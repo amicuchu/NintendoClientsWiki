@@ -10,8 +10,14 @@ This server takes form-encoded requests and responds with json-encoding. Also, t
 ## Headers
 | Header | Description |
 | --- | --- |
-| User-Agent | `libcurl (nnAccount; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 9.3.0.0; Add-on 9.3.0.0)` |
+| User-Agent | [User agent](#user-agents) |
 | X-Nintendo-PowerState | `FA` (fully awake) or `HA` (half awake). This header is only sent in the <code><a href="#post-v3application_auth_token">/v3/application_auth_token</a></code> request. |
+
+#### User Agents
+| System Version | User agent |
+| --- | --- |
+| 9.0.0 - 9.2.0 | `libcurl (nnAccount; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 9.3.0.0; Add-on 9.3.0.0)` |
+| 10.0.0 - 10.0.1 | `libcurl (nnAccount; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 10.4.0.0; Add-on 10.4.0.0)` |
 
 ## Methods
 | Method | URL |
