@@ -43,7 +43,7 @@ The icon data is encrypted with AES-CBC. The IV is always `a46987ae47d82bb4fa8ab
 | 0x34 | 16 | Unknown |
 | 0x44 | 4 | Unknown |
 | 0x48 | 8 | Unknown |
-| 0x50 | 0x200 x 16 | [Title strings](#title-strings) |
+| 0x50 | 0x200 x 16 | [Title strings](#title-strings) in different [languages](#languages) |
 | 0x2050 | | TGA file |
 
 ### Title Strings
@@ -52,5 +52,23 @@ The icon data is encrypted with AES-CBC. The IV is always `a46987ae47d82bb4fa8ab
 | 0x0 | 128 | Short name (utf-16) |
 | 0x80 | 256 | Long name (utf-16) |
 | 0x180 | 128 | Publisher name (utf-16) |
+
+### Languages
+The header has room for 16 languages but only 12 are actually used. The remaining languages have empty strings.
+
+| Index | Language |
+| --- | --- |
+| 0 | Japanese |
+| 1 | English |
+| 2 | French |
+| 3 | German |
+| 4 | Italian |
+| 5 | Spanish |
+| 6 | Chinese (simple) |
+| 7 | Korean |
+| 8 | Dutch |
+| 9 | Portuguese |
+| 10 | Russian |
+| 11 | Chinese (traditional) |
 
 <!-- | 0x20 | 0x36B0 or 0x12060 | Icon data | -->
