@@ -44,7 +44,8 @@ The icon data is encrypted with AES-CBC. The IV is always `a46987ae47d82bb4fa8ab
 | 0x44 | 4 | Unknown |
 | 0x48 | 8 | Unknown |
 | 0x50 | 0x200 x 16 | [Title strings](#title-strings) in different [languages](#languages) |
-| 0x2050 | | TGA file |
+| 0x2050 | 0x1002C | TGA file |
+| 0x1207C | 4 | Unknown |
 
 ### Title Strings
 | Offset | Size | Description |
