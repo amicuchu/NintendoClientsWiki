@@ -35,5 +35,22 @@ The icon data is encrypted with AES-CBC. The IV is always `a46987ae47d82bb4fa8ab
 ## Icon Data Format
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 0x20 | SHA256 checksum of the remaining data |
-| 0x20 | 0x36B0 or 0x12060 | Icon data |
+| 0x0 | 32 | SHA256 checksum of the remaining data |
+| 0x20 | 8 | Title id |
+| 0x28 | 4 | Unknown |
+| 0x2C | 4 | Unknown |
+| 0x30 | 4 | Unknown |
+| 0x34 | 16 | Unknown |
+| 0x44 | 4 | Unknown |
+| 0x48 | 8 | Unknown |
+| 0x50 | 0x200 x 16 | [Title strings](#title-strings) |
+| 0x2050 | | TGA file |
+
+### Title Strings
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 128 | Short name (utf-16) |
+| 0x80 | 256 | Long name (utf-16) |
+| 0x180 | 128 | Publisher name (utf-16) |
+
+<!-- | 0x20 | 0x36B0 or 0x12060 | Icon data | -->
