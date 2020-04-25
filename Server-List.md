@@ -3,7 +3,7 @@
 | --- | --- |
 | - account.nintendo.net<br>- game-dev.account.nintendo.net<br>- system-dev.account.nintendo.net<br>- library-dev.account.nintendo.net<br>- staging.account.nintendo.net | [[Account server]] |
 | - mii-secure.account.nintendo.net<br>- mii-secure.cdn.nintendo.net | Mii images |
-| - nncs1.app.nintendowifi.net<br>- nncs2.app.nintendowifi.net | [NAT check server](https://github.com/Kinnay/NintendoClients/blob/master/nintendo/pia/natcheck.py) |
+| - nncs1.app.nintendowifi.net<br>- nncs2.app.nintendowifi.net | NAT check server |
 | - discovery.olv.nintendo.net | Miiverse |
 | - tagaya.wup.shop.nintendo.net | [Title version list](Tagaya-Server) |
 | - ecs.wup.shop.nintendo.net<br>- ccs.wup.shop.nintendo.net<br>- cas.wup.shop.nintendo.net<br>- ias.wup.shop.nintendo.net<br>- nus.wup.shop.nintendo.net<br>- pls.wup.shop.nintendo.net<br>- ecs.c.shop.nintendowifi.net<br>- ccs.c.shop.nintendowifi.net<br>- cas.c.shop.nintendowifi.net<br>- ias.c.shop.nintendowifi.net<br>- nus.c.shop.nintendowifi.net<br>- pls.c.shop.nintendowifi.net<br>- pushmo.wup.shop.nintendo.net<br>- pushmore.wup.shop.nintendo.net<br>- ninja.wup.shop.nintendo.net<br>- geisha-wup.cdn.nintendo.net<br>- samurai-wup.cdn.nintendo.net<br>- kanzashi-wup.cdn.nintendo.net | Shop |
