@@ -33,6 +33,8 @@ The icon data is encrypted with AES-CBC. The IV is always `a46987ae47d82bb4fa8ab
 | 3 | `80923799b41f36a6a75fb8b48c95f66f` |
 
 ## Icon Data Format
+Wii U files are encoded in big-endian byte order, 3DS files in little-endian byte order.
+
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 32 | SHA256 checksum of the remaining data |
@@ -44,8 +46,17 @@ The icon data is encrypted with AES-CBC. The IV is always `a46987ae47d82bb4fa8ab
 | 0x44 | 4 | Unknown |
 | 0x48 | 8 | Unknown |
 | 0x50 | 0x200 x 16 | [Title strings](#title-strings) in different [languages](#languages) |
+
+**Wii U:**
+| Offset | Size | Description |
+| --- | --- | --- |
 | 0x2050 | 0x1002C | TGA file |
 | 0x1207C | 4 | Unknown |
+
+**3DS:**
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x2050 | 0x1680 | Unknown |
 
 ### Title Strings
 | Offset | Size | Description |
