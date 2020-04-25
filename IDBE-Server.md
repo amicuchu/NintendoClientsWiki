@@ -37,7 +37,7 @@ The icon data is encrypted with AES-CBC. The IV is always `a46987ae47d82bb4fa8ab
 | --- | --- | --- |
 | 0x0 | 32 | SHA256 checksum of the remaining data |
 | 0x20 | 8 | Title id |
-| 0x28 | 4 | Unknown |
+| 0x28 | 4 | Title version |
 | 0x2C | 4 | Unknown |
 | 0x30 | 4 | Unknown |
 | 0x34 | 16 | Unknown |
