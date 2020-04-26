@@ -742,7 +742,7 @@
 | --- | --- |
 | 107-3190 | WISHLIST_FULL |
 
-# EShop Errors (Website) |
+# EShop Errors (Website)
 | Error code | Name |
 | --- | --- |
 | 111-9000 | CLOSE_APPLICATION |
