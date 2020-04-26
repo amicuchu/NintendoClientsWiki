@@ -7,6 +7,7 @@
 | 104-XXXX | BOSS (spotpass) |
 | 105-XXXX | NIM (update installation) |
 | 106-XXXX | [NEX (game servers)](#nex-error-codes)<br>[Error descriptions](#nex-error-descriptions) |
+| 111-XXXX | eShop |
 | 115-XXXX | OLV (miiverse) |
 | 118-XXXX | PIA (peer to peer) |
 | 124-XXXX | EC (e-commerce) |
