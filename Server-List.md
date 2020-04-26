@@ -10,7 +10,6 @@
 | - npns-dev.c.app.nintendowifi.net<br>- npvk.app.nintendo.net<br>- npvk-dev.app.nintendo.net<br>- npts.app.nintendo.net<br>- nppl.app.nintendo.net | BOSS |
 | - idbe-wup.cdn.nintendo.net<br>- idbe-ctr.cdn.nintendo.net | [Icon data](IDBE-Server) |
 | - m1.nintendo.net | [VC Manuals](VC-Manual-Server) |
-| - hpp-&lt;game server id&gt;-&lt;environment&gt;.n.app.nintendo.net | [Hpp server](Hpp-Server) |
 | - nintendojp.d1.sc.omtrdc.net<br>- wiiu-ssl-static.ubi.com | |
 
 ## Switch
@@ -48,3 +47,10 @@ Replace '%' by one of the following:
 | - storage.%.scsi.srv.nintendo.net | |
 | - capi.%.op2.nintendo.net | |
 | - app.%.five.nintendo.net | |
+
+## Other
+| Server | Description |
+| --- | --- |
+| - hpp-&lt;game server id&gt;-&lt;environment&gt;.n.app.nintendo.net | [Hpp server](Hpp-Server) |
+| - nexred.nintendo.co.jp | Redmine issue tracker for NEX |
+| - devbts30.boy.nintendo.co.jp<br>- devhipchat.boy.nintendo.co.jp | Internal dev servers |
