@@ -53,4 +53,4 @@ Replace '%' by one of the following:
 | --- | --- |
 | - hpp-&lt;game server id&gt;-&lt;environment&gt;.n.app.nintendo.net | [Hpp server](Hpp-Server) |
 | - nexred.nintendo.co.jp | Redmine issue tracker for NEX |
-| - devbts30.boy.nintendo.co.jp<br>- devhipchat.boy.nintendo.co.jp | Internal dev servers |
+| - devbts30.nintendo.co.jp<br>- devhipchat.boy.nintendo.co.jp | Internal dev servers |
