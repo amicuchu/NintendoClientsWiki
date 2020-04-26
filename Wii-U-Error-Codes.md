@@ -7,7 +7,8 @@
 | 104-XXXX | BOSS (spotpass) |
 | 105-XXXX | NIM (update installation) |
 | 106-XXXX | [NEX (game servers)](#nex-error-codes)<br>[Error descriptions](#nex-error-descriptions) |
-| 111-XXXX | eShop |
+| 107-XXXX | [eShop (api)](#eshop-errors-api) |
+| 111-XXXX | [eShop (website)](#eshop-errors-website) |
 | 115-XXXX | OLV (miiverse) |
 | 118-XXXX | PIA (peer to peer) |
 | 124-XXXX | EC (e-commerce) |
@@ -19,6 +20,7 @@
 | 165-XXXX | VPAD (gamepad) |
 | 166-XXXX | AOC (add-on content) |
 | 168-XXXX | NFP (amiibo) |
+| 199-XXXX | [Web browser](#browser-errors) |
 
 # FP Error Codes
 | Error code | Name |
@@ -734,3 +736,22 @@
 | 106-0509 | The network connection was reset. |
 | 106-0510 | The destination Station did not authenticate itself properly. |
 | 106-0511 | 3rd-party server or device answered with an error code according to protocol used e.g. HTTP error code |
+
+# EShop Errors (API)
+| Error code | Name |
+| --- | --- |
+| 107-3190 | WISHLIST_FULL |
+
+# EShop Errors (Website) |
+| Error code | Name |
+| --- | --- |
+| 111-9000 | CLOSE_APPLICATION |
+| 111-9001 | RETRIABLE |
+| 111-9002 | UNDER_MAINTENANCE |
+| 111-9003 | SERVICE_FINISHED |
+| 111-9100 | INVALID_TEMPLATE |
+
+# Browser Errors
+| Error code | Name |
+| --- | --- |
+| 199-0503 | FOR_BROWSER_LOCKED |
