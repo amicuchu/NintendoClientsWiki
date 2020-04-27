@@ -1,4 +1,4 @@
-As stated on the [Game Server Overview](NEX-Overview-(Game-Servers)) page, NEX is based on Quazal Rendez-Vous. Because of this, many protocols come from the original Quazal Rendez-Vous library, but Nintendo also implemented some new protocols.
+As stated on the [Game Server Overview](NEX-Overview-(Game-Servers)) page, NEX is based on Quazal Rendez-Vous. Many protocols come from the original Quazal Rendez-Vous library, but Nintendo also implemented some new protocols.
 
 The servers also seem to use some [internal protocols](NEX-Internal-Protocols).
 
