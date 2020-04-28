@@ -18,7 +18,7 @@ Welcome to the NintendoClients wiki!
 * [[Network Library Versions]]
 * [[Wii U Error Codes]]
 * [[Switch Error Codes]]
-* [Switch JWTs](Switch-Tokens)
+* [[Switch Tokens]]
 * [[DKC:TF Level IDs]]
 * [[Mario Kart 8 Track IDs]]
 * [[Mario Kart 8 Protocol]]
