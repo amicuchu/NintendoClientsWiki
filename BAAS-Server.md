@@ -45,7 +45,7 @@ This server takes form-encoded requests and responds with json-encoding.
 | POST | `/2.0.0/friend_requests` |
 | PATCH | `/2.0.0/friend_requests/<id>` |
 | GET | `/2.0.0/users/<id>/relationships/<id>` |
-| GET | <code><a href="get-#100certificates">/1.0.0/certificates</a></code> |
+| GET | <code><a href="#get-100certificates">/1.0.0/certificates</a></code> |
 
 ### POST /1.0.0/application/token
 This request provides an authorization token that's required for all other requests.
