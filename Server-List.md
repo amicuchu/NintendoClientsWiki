@@ -28,8 +28,8 @@ Replace '%' by one of the following:
 | Server | Description |
 | --- | --- |
 | - ctest.cdn.nintendo.net | Connection test |
-| - dauth-%.ndas.srv.nintendo.net | [Device authorization](DAuth-Server) |
-| - aauth-%.ndas.srv.nintendo.net | [Application authorization](AAuth-Server) |
+| - dauth-%.ndas.srv.nintendo.net<br>-dcert-%.ndas.srv.nintendo.net | [Device authorization](DAuth-Server) |
+| - aauth-%.ndas.srv.nintendo.net<br>-acert-%.ndas.srv.nintendo.net | [Application authorization](AAuth-Server) |
 | - e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com<br>- cdn-image-e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com | [Accounts (api)](BAAS-Server) |
 | - accounts.nintendo.com<br>- api.accounts.nintendo.com | [Accounts (web)](Account-Server-(Switch)) |
 | - g&lt;game server id&gt;-%.s.n.srv.nintendo.net | [Game servers](NEX-Overview-(Game-Servers)) |
