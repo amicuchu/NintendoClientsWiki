@@ -45,6 +45,7 @@ This server takes form-encoded requests and responds with json-encoding.
 | POST | `/2.0.0/friend_requests` |
 | PATCH | `/2.0.0/friend_requests/<id>` |
 | GET | `/2.0.0/users/<id>/relationships/<id>` |
+| GET | <code><a href="get-#100certificates">/1.0.0/certificates</a></code> |
 
 ### POST /1.0.0/application/token
 This request provides an authorization token that's required for all other requests.
@@ -78,7 +79,7 @@ Response on success:
 | --- | --- |
 | expiresIn | Expiration in seconds (10800) |
 | user | [User information](#user-information) |
-| idToken | User token (e.g. for game servers) |
+| idToken | ID token (for game servers) |
 | accessToken | Authorization token for further requests |
 | tokenType | Authorization token type ("Bearer") |
 
@@ -191,6 +192,9 @@ The following fields are stored in each of the [extras](#extras).
 | totalPlayTime | Total play time in minutes |
 | firstPlayedAt | Timestamp |
 | lastPlayedAt | Timestamp |
+
+### GET /1.0.0/certificates
+This method returns the JWK set for the id token that's issued by <code><a href="#post-100login">/1.0.0/login</a></code>.
 
 ## Errors
 On error, the server sends the following response:
