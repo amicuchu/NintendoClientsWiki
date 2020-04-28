@@ -46,6 +46,7 @@ This server takes form-encoded requests and responds with json-encoding.
 | PATCH | `/2.0.0/friend_requests/<id>` |
 | GET | `/2.0.0/users/<id>/relationships/<id>` |
 | GET | <code><a href="#get-100certificates">/1.0.0/certificates</a></code> |
+| GET | <code><a href="#get-100internal_certificates">/1.0.0/internal_certificates</a></code> |
 
 ### POST /1.0.0/application/token
 This request provides an authorization token that's required for all other requests.
@@ -195,6 +196,9 @@ The following fields are stored in each of the [extras](#extras).
 
 ### GET /1.0.0/certificates
 This method returns the JWK set for the id token that's issued by <code><a href="#post-100login">/1.0.0/login</a></code>.
+
+### GET /1.0.0/internal_certificates
+This method returns the JWK set for the session token that's issued by <code><a href="#post-100applicationtoken">/1.0.0/application/token</a></code>.
 
 ## Errors
 On error, the server sends the following response:
