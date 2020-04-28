@@ -16,7 +16,7 @@ The first part contains information about the JWT itself, such as the signature 
 | `jku` | **JWK Set URL:** The URL of a server that provides a [JWK set](#jwk-set). This server provides the public keys that are used to verify the signature in the JWT. |
 | `kid` | **Key ID:** The key id in the JWK set provided by the `jku` server. This is a uuid v4 on Nintendo's servers. |
 | `alg` | **Algorithm:** Always `RS256`. |
-| `typ` | **Type:** Always `JWT`. |
+| `typ` | **Type:** Always `JWT`. Not present in tokens returned by baas server. |
 
 Example:
 
