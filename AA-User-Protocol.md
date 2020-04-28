@@ -48,7 +48,7 @@ This method does not take any parameters.
 | Type | Description |
 | --- | --- |
 | Uint64 | Title id |
-| Uint16 | Unknown |
+| Uint16 | Title version |
 
 [Result]: NEX-Common-Types#result
 [String]: NEX-Common-Types#string
