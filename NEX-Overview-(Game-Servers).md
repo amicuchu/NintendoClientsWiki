@@ -43,18 +43,4 @@ Every game server actually consists of two servers: an authentication server and
 
 With UDP as underlying protocol, the connection to the authentication server isn't secure. Anyone with enough knowledge can decrypt the packets, but that's not a problem: the only purpose of the authentication server is to authenticate the user and set up a secure connection to the secure server.
 
-Game server accounts are separate from other Nintendo accounts. Username and password are generated automatically and can not be changed by normal users. There's also a bunch of [special accounts](Authentication-Protocol#4-getpid) on all game servers.
-
-<table>
-  <tr>
-    <td><b>3DS</b></td><td>Login information is requested from the account server (when a NNID is linked), or from the NASC server the first time you go online without NNID.</td>
-  </tr>
-  <tr>
-    <td><b>Wii U</b></td><td>Login information is requested from the [[account server]] (/provider/nex_token/@me)</td>
-  </tr>
-  <tr>
-    <td><b>Switch</b></td><td>Normal user accounts don't have a password anymore. Instead, they must provide an id token to log in. This token can be retrieved by logging in on the <a href="BAAS-Server">BAAS server</a> after acquiring a <a href="DAuth-Server">device token</a> and an <a href="AAuth-Server">application token</a>.</td>
-  </tr>
-</table>
-
 For more details on authentication and the steps that are required to connect to the secure server, read the page about [kerberos authentication](Kerberos-Authentication).
