@@ -1,4 +1,6 @@
-NEX is Nintendo's networking library that provides a client for game servers. Nintendo hasn't written it from scratch. It's based on [Quazal Rendez-Vous](http://web.archive.org/web/20180823162719/http://quazal.com/rendez-vous.htm), so some things like the [[PRUDP Protocol]] may be seen in other games that use Quazal.
+NEX is Nintendo's networking library that provides a client for game servers. Almost all 3DS, Wii U and Switch games with online features use NEX.
+
+Nintendo hasn't written it from scratch. It's based on [Quazal Rendez-Vous](http://web.archive.org/web/20180823162719/http://quazal.com/rendez-vous.htm), so some things like the [[PRUDP Protocol]] may be seen in other games that use Quazal.
 
 ### Finding the game servers
 To connect to a game server, you first need to find it. Every platform has its own way to find a game server. A list of game server ids can be found here: [[Game Server List]].
@@ -30,7 +32,7 @@ The underlying protocol varies per game and platform. Originally, the purpose of
     <td><b>Wii U</b></td><td>Packets are normally encoded using <a href="PRUDP-Protocol#v1-format">PRUDP V1</a>. Only one server still uses <a href="PRUDP-Protocol#v0-format">PRUDP V0</a>: the friends server.</td>
   </tr>
   <tr>
-    <td><b>Switch</b></td><td>Switch games are configured to use <a href="PRUDP-Protocol#lite-format">PRUDP Lite</a> on top of WebSockets.</td>
+    <td><b>Switch</b></td><td>Switch use <a href="PRUDP-Protocol#lite-format">PRUDP Lite</a> on top of WebSockets.</td>
   </tr>
 </table>
 
