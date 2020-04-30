@@ -5,7 +5,7 @@ The account server takes form-encoded requests and responds with an XML body.
 
 The XML-encoding is not consistent between URLs. Usually, the response contains no XML declaration and no whitespace. However, sometimes the response starts with `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>`, and sometimes the response is prettified using 4 spaces as indentation.
 
-A client certificate is needed to connect to these servers.
+The common client certificate is needed to connect to these servers.
 
 Main server: https://account.nintendo.net
 
