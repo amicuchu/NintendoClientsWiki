@@ -17,6 +17,8 @@ To connect to a game server, you first need to find it. Every platform has its o
   </tr>
 </table>
 
+This is the location of the authentication server.
+
 ### The protocols used by NEX
 ![](https://www.dropbox.com/s/wahcq2ifyncd3bu/protocols.png?raw=1)
 
@@ -54,3 +56,5 @@ Game server accounts are separate from other Nintendo accounts. Username and pas
     <td><b>Switch</b></td><td>Normal user accounts don't have a password anymore. Instead, they must provide an id token to log in. This token can be retrieved by logging in on the <a href="BAAS-Server">BAAS server</a> after acquiring a <a href="DAuth-Server">device token</a> and an <a href="AAuth-Server">application token</a>.</td>
   </tr>
 </table>
+
+For more details on authentication and the steps that are required to connect to the secure server, read the page about [kerberos authentication](Kerberos-Authentication).
