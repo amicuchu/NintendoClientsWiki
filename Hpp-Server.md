@@ -1,6 +1,6 @@
 As an alternative to [PRUDP](PRUDP-Protocol), Nintendo provides an HTTP server that can be used to call [NEX methods](NEX-Protocols).
 
-The server is at `https://hpp-<game server id>-<environment>.n.app.nintendo.net/hpp/`. A list of game server ids can be found [here](Game-Server-List). The environment is one of L, C, S, D, I, T, J or U, followed by a single decimal digit.
+The server is at `https://hpp-<game server id>-<environment>.n.app.nintendo.net/hpp/`. The environment is one of L, C, S, D, I, T, J or U, followed by a single decimal digit.
 
 The following headers are sent in requests:
 
