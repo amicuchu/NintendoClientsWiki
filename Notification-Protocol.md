@@ -8,7 +8,7 @@
 ## Request
 | Type | Name | Description |
 | --- | --- | --- |
-| [NotificationEvent](#notificationevent) | oEvent | Event object |
+| [NotificationEvent](#notificationevent-structure) | oEvent | Event object |
 
 ### NotificationEvent ([Structure])
 **Wii U:**
