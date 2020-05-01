@@ -7,7 +7,7 @@ The following headers are sent in requests:
 | Header | Description |
 | --- | --- |
 | pid | User id |
-| version | NEX version (e.g. `NEX_3_4_0`) |
+| version | NEX version string |
 | token | Always "normaltoken" |
 | signature1 | Access key signature |
 | signature2 | Password signature |
@@ -16,7 +16,7 @@ The signatures are a HMAC-MD5 over the request buffer. The key of signature1 is 
 
 Most game servers can not be accessed through the hpp server, but the following servers are known to work:
 
-| Game Server ID | Game |
-| --- | --- |
-| 0008c500 | Tomodachi Collection: Shin Seikatsu |
-| 10110e00 | Super Smash Bros. 4 (Wii U)|
+| Game Server ID | NEX Version | Game |
+| --- | --- | --- |
+| 0008c500 | `NEX_2_4_1_S25` | Tomodachi Collection: Shin Seikatsu |
+| 10110e00 | ? | Super Smash Bros. 4 (Wii U)|
