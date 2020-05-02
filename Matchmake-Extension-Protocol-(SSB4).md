@@ -5,6 +5,7 @@ This page describes the methods that are only seen in Super Smash Bros. 4.
 Methods 36 - 48 and 51 belong to the TournamentProtocol. The others belong to the CrossProtocol.
 
 | Method ID | Method Name |
+| --- | --- |
 | 36 | GetTournament |
 | 37 | GetTournamentReplayId |
 | 38 | GetTournamentResult |
