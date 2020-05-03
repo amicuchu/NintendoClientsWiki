@@ -91,7 +91,7 @@ Every error is encoded like this:
 | Code | Dialog | Message |
 | --- | --- | --- 
 | 0004 | 2181-4004 | ? |
-| 0007 | 2181-4007 | ? |
+| 0007 | 2181-4007 | System update is required. |
 | 0008 | 2181-4008 | Device has been banned. |
 | 0009 | 2181-4009 | ? |
 | 0010 | 2181-4010 | ? |
