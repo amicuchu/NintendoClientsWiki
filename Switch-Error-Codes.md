@@ -224,6 +224,7 @@
 | --- | --- |
 | 2181-0100 | Server returned invalid error code |
 | 2181-3100 | Server returned invalid response |
+| 2181-4007 | Server returned error 0007 ("System update is required.") |
 | 2181-4008 | Server returned error 0008 ("Device has been banned.") |
 | 2181-4014 | Server returned error 0014 ("Invalid parameter in request.") |
 
