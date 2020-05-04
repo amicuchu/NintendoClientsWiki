@@ -17,7 +17,7 @@ This server takes form-encoded requests and responds with json-encoding. Also, t
 | System Version | User agent |
 | --- | --- |
 | 9.0.0 - 9.2.0 | `libcurl (nnAccount; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 9.3.0.0; Add-on 9.3.0.0)` |
-| 10.0.0 - 10.0.1 | `libcurl (nnAccount; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 10.4.0.0; Add-on 10.4.0.0)` |
+| 10.0.0 - 10.0.2 | `libcurl (nnAccount; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 10.4.0.0; Add-on 10.4.0.0)` |
 
 ## Methods
 | Method | URL |
