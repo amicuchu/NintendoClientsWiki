@@ -34,7 +34,7 @@ The underlying protocol varies per game and platform. Originally, the purpose of
     <td><b>Wii U</b></td><td>Packets are normally encoded using <a href="PRUDP-Protocol#v1-format">PRUDP V1</a>. Only one server still uses <a href="PRUDP-Protocol#v0-format">PRUDP V0</a>: the friends server.</td>
   </tr>
   <tr>
-    <td><b>Switch</b></td><td>Switch use <a href="PRUDP-Protocol#lite-format">PRUDP Lite</a> on top of WebSockets.</td>
+    <td><b>Switch</b></td><td>Switch games use <a href="PRUDP-Protocol#lite-format">PRUDP Lite</a> on top of WebSockets.</td>
   </tr>
 </table>
 
