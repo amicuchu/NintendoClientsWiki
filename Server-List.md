@@ -31,10 +31,12 @@ Replace '%' by one of the following:
 | - ctest.cdn.nintendo.net | Connection test |
 | - dauth-%.ndas.srv.nintendo.net | [Device authentication](DAuth-Server) |
 | - aauth-%.ndas.srv.nintendo.net | [Application authentication](AAuth-Server) |
+| - dcert-%.ndas.srv.nintendo.net<br>- acert-%.ndas.srv.nintendo.net | [JWK servers](Switch-Tokens) |
 | - e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com<br>- cdn-image-e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com | [Accounts (api)](BAAS-Server) |
 | - accounts.nintendo.com<br>- api.accounts.nintendo.com | [Accounts (web)](Account-Server-(Switch)) |
 | - g&lt;game server id&gt;-%.s.n.srv.nintendo.net | [Game servers](NEX-Overview-(Game-Servers)) |
-| - dcert-%.ndas.srv.nintendo.net<br>- acert-%.ndas.srv.nintendo.net | [JWK servers](Switch-Tokens) |
+| - g&lt;game server id&gt;-%.p.srv.nintendo.net | P2P monitoring |
+| - nncs1-%.n.n.srv.nintendo.net<br>- nncs2-%.n.n.srv.nintendo.net | NAT check servers |
 | - api-%.znc.srv.nintendo.net | Coral (voice chat) |
 | - ecs-%.hac.shop.nintendo.net<br>- ias-%.hac.shop.nintendo.net<br>- beach.hac.%.eshop.nintendo.net<br>- bugyo.hac.%.eshop.nintendo.ent<br>- tagaya.hac.%.eshop.nintendo.net<br>- pushmo.hac.%.eshop.nintendo.net | E-Shop |
 | - api-%.frs.srv.nintendo.net | Friends |
