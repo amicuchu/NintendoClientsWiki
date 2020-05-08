@@ -4,6 +4,7 @@
 | - account.nintendo.net<br>- game-dev.account.nintendo.net<br>- system-dev.account.nintendo.net<br>- library-dev.account.nintendo.net<br>- staging.account.nintendo.net | [[Account server]] |
 | - mii-secure.account.nintendo.net<br>- mii-secure.cdn.nintendo.net<br>mii-images.cdn.nintendo.net<br>system-dev-mii-images.cdn.nintendo.net | Mii images |
 | - nncs1.app.nintendowifi.net<br>- nncs2.app.nintendowifi.net | NAT check server |
+| - hpp-&lt;game server id&gt;-&lt;environment&gt;.n.app.nintendo.net | [Hpp server](Hpp-Server) |
 | - discovery.olv.nintendo.net | Miiverse |
 | - tagaya.wup.shop.nintendo.net | [Title version list](Tagaya-Server) |
 | - ninja.wup.shop.nintendo.net | [eShop api](Ninja-Server)
@@ -55,6 +56,5 @@ Replace '%' by one of the following:
 ## Other
 | Server | Description |
 | --- | --- |
-| - hpp-&lt;game server id&gt;-&lt;environment&gt;.n.app.nintendo.net | [Hpp server](Hpp-Server) |
 | - nexred.nintendo.co.jp | Redmine issue tracker for [NEX](NEX-Overview-(Game-Servers)) |
 | - devbts30.nintendo.co.jp<br>- devhipchat.boy.nintendo.co.jp | Internal dev servers |
