@@ -1,7 +1,7 @@
 [[NEX Protocols]] > Simple Authentication (0x10)
 ---
 
-Interestingly, this protocol has methods referencing the Wii U, even though this protocol is never used by Nintendo games.
+Interestingly, this protocol has `Cafe` in some of its method names, even though this protocol is never used by Nintendo.
 
 | Method ID | Method Name |
 | --- | --- |
