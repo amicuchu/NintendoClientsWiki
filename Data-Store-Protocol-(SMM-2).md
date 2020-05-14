@@ -989,7 +989,7 @@ This structure is empty.
 | [String] | Country code |
 | Bool | Unknown |
 | Bool | Unknown |
-| [String] | Unknown |
+| [String] | Pseudo device id |
 | Uint32 | Unknown |
 
 ## SyncUserProfileResult ([Structure])
