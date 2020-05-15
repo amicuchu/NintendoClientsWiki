@@ -27,7 +27,7 @@ Some methods take a `resultOption` parameter. This parameter controls which fiel
 | 65 | [GetUserNameNgType](#65-getusernamengtype) |
 | 66 | [PreparePostObjectCourse](#66-preparepostobjectcourse) |
 | 67 | CompletePostObjectCourse |
-| 68 | CompletePostObjectsCourse |
+| 68 | [CompletePostObjectsCourse](#68-completepostobjectscourse) |
 | 69 | UpdateCourseTag |
 | 70 | [GetCourses](#70-GetCourses) |
 | 71 | [SearchCoursesPointRanking](#71-searchcoursespointranking) |
@@ -325,6 +325,15 @@ This method does not take any parameters.
 | --- | --- |
 | [DataStoreReqPostInfo] | Info |
 
+# (68) CompletePostObjectsCourse
+## Request
+| Type | Description |
+| --- | --- |
+| [CompletePostObjectsCourseParam](#completepostobjectscourseparam-structure) | Param |
+
+## Response
+This method does not return anything.
+
 # (70) GetCourses
 ## Request
 | Type | Description |
@@ -599,6 +608,17 @@ This method does not return anything.
 | Uint32 | Filesize |
 | [Buffer] | Root ca cert |
 | [String] | Filename |
+
+## CompletePostObjectsCourseParam ([Structure])
+| Type | Description |
+| --- | --- |
+| [String] | Unknown |
+| [String] | Unknown |
+| [String] | Unknown |
+| [String] | Unknown |
+| [String] | Unknown |
+| Uint64 | Unknown |
+| [PreparePostCourseParam](#preparepostcourseparam-structure) | Course param |
 
 ## CourseInfo ([Structure])
 | Type | Option | Description |
