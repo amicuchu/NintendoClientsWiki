@@ -904,11 +904,11 @@ This structure is empty.
 ## RelationObjectReqPostInfo ([Structure])
 | Type | Description |
 | --- | --- |
-| [String] | Unknown |
-| [String] | Unknown |
+| [String] | Data id |
+| [String] | Url |
 | [List]&lt;[DataStoreKeyValue]&gt; | Headers |
 | [List]&lt;[DataStoreKeyValue]&gt; | Form fields |
-| [Buffer] | Unknown |
+| [Buffer] | Root ca cert |
 
 ## ReqGetInfoHeadersInfo ([Structure])
 | Type | Description |
