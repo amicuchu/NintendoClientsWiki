@@ -28,7 +28,7 @@ Some methods take a `resultOption` parameter. This parameter controls which fiel
 | 66 | [PreparePostObjectCourse](#66-preparepostobjectcourse) |
 | 67 | CompletePostObjectCourse |
 | 68 | [CompletePostObjectsCourse](#68-completepostobjectscourse) |
-| 69 | UpdateCourseTag |
+| 69 | [UpdateCourseTag](#69-updatecoursetag) |
 | 70 | [GetCourses](#70-GetCourses) |
 | 71 | [SearchCoursesPointRanking](#71-searchcoursespointranking) |
 | 72 | SearchCoursesAdvanced |
@@ -334,6 +334,15 @@ This method does not take any parameters.
 ## Response
 This method does not return anything.
 
+# (69) UpdateCourseTag
+## Request
+| Type | Description |
+| --- | --- |
+| [UpdateCourseTagParam](#updatecoursetagparam-structure) | Param |
+
+## Response
+This method does not return anything.
+
 # (70) GetCourses
 ## Request
 | Type | Description |
@@ -632,8 +641,8 @@ This method does not return anything.
 | Uint8 | | [Course theme](#course-theme) |
 | [DateTime] | | Upload time |
 | Uint8 | | [Difficulty](#difficulty-level) |
-| Uint8 | | First [tag](#course-tag) |
-| Uint8 | | Second [tag](#course-tag) |
+| Uint8 | | [First tag](#course-tag) |
+| Uint8 | | [Second tag](#course-tag) |
 | Uint8 | | Unknown |
 | Uint32 | | [Clear condition](#clear-condition) |
 | Uint16 | | Clear condition magnitude |
@@ -673,20 +682,6 @@ This method does not return anything.
 | 7 | Desert |
 | 8 | Sky |
 | 9 | Forest |
-
-### Course Tag
-| Value | Description |
-| --- | --- |
-| 0 | None |
-| 1 | Standard |
-| 2 | Puzzle solving |
-| 3 | Speedrun |
-| 4 | Autoscroll |
-| 5 | Auto mario |
-| 6 | Short and sweet |
-| 7 | Multiplayer versus |
-| 8 | Themed |
-| 9 | Music |
 
 ### Clear Condition
 | Value | Description |
@@ -1062,6 +1057,13 @@ This structure is empty.
 | Uint64 | Unknown |
 | Uint32 | Unknown |
 
+## UpdateCourseTagParam ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint64 | Data id |
+| Uint8 | [First tag](#course-tag) |
+| Uint8 | [Second tag](#course-tag) |
+
 ## UpdateMiiClothesParam ([Structure])
 | Type | Description |
 | --- | --- |
@@ -1136,6 +1138,27 @@ Revision 3:
 | 3 | Versus wins |
 | 10 | Coop plays |
 | 11 | Coop wins |
+
+# Enums
+### Course Tag
+| Value | Description |
+| --- | --- |
+| 0 | None |
+| 1 | Standard |
+| 2 | Puzzle solving |
+| 3 | Speedrun |
+| 4 | Autoscroll |
+| 5 | Auto mario |
+| 6 | Short and sweet |
+| 7 | Multiplayer versus |
+| 8 | Themed |
+| 9 | Music |
+| 10 | Art |
+| 11 | Technical |
+| 12 | Shooter |
+| 13 | Boss battle |
+| 14 | Single player |
+| 15 | Link |
 
 ## Difficulty Level
 | Value | Description |
