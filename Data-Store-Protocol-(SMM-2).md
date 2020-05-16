@@ -43,7 +43,7 @@ Some methods take a `resultOption` parameter. This parameter controls which fiel
 | 81 | SearchCoursesBestTime |
 | 82 | SearchCoursesFolloweePostedBy |
 | 83 | SearchCoursesTermsRanking |
-| 84 | SearchCoursesPickUp |
+| 84 | [SearchCoursesPickUp](#84-searchcoursespickup) |
 | 85 | [GetCoursesEvent](#85-getcoursesevent) |
 | 86 | [SearchCoursesEvent](#86-searchcoursesevent) |
 | 87 | [ReadEventCourseList](#87-readeventcourselist) |
@@ -385,6 +385,17 @@ This method does not return anything.
 | Type | Description |
 | --- | --- |
 | [SearchCoursesEndlessModeParam](#searchcoursesendlessmodeparam-structure) | Param |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[CourseInfo]&gt; | Courses |
+
+# (84) SearchCoursesPickUp
+## Request
+| Type | Description |
+| --- | --- |
+| [SearchCoursesPickUpParam](#searchcoursespickupparam-structure) | Param |
 
 ## Response
 | Type | Description |
@@ -928,6 +939,13 @@ This structure is empty.
 | --- | --- |
 | Uint32 | resultOption |
 | [ResultRange] | resultRange |
+
+## SearchCoursesPickUpParam ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint8 | Unknown |
 
 ## SearchCoursesPointRankingParam ([Structure])
 | Type | Name |
