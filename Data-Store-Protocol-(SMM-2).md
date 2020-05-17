@@ -33,7 +33,7 @@ Some methods take a `resultOption` parameter. This parameter controls which fiel
 | 71 | [SearchCoursesPointRanking](#71-searchcoursespointranking) |
 | 72 | SearchCoursesAdvanced |
 | 73 | [SearchCoursesLatest](#73-searchcourseslatest) |
-| 74 | SearchCoursesPostedBy |
+| 74 | [SearchCoursesPostedBy](#74-searchcoursespostedby) |
 | 75 | SearchCoursesPositiveRatedBy |
 | 76 | SearchCoursesPlayedBy |
 | 77 | SearchCoursesBattleMode |
@@ -378,7 +378,19 @@ This method does not return anything.
 | Type | Description |
 | --- | --- |
 | [List]&lt;[CourseInfo]&gt; | Courses |
-| Bool | Unknown |
+| Bool | Result |
+
+# (74) SearchCoursesPostedBy
+## Request
+| Type | Description |
+| --- | --- |
+| [SearchCoursesPostedByParam](#searchcoursespostedbyparam-structure) | Param |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[CourseInfo]&gt; | Courses |
+| Bool | Result |
 
 # (79) SearchCoursesEndlessMode
 ## Request
@@ -954,6 +966,13 @@ This structure is empty.
 | [ResultRange] | resultRange |
 | Uint8 | preferCourseDifficulty |
 | [List]&lt;Uint8&gt; | rejectRegionIds |
+
+## SearchCoursesPostedByParam ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint32 | Unknown |
+| [ResultRange] | Result range |
+| [List]&lt;Uint64&gt; | Unknown |
 
 ## SearchUsersBattleModeParam ([Structure])
 | Type | Description |
