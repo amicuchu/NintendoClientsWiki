@@ -945,7 +945,7 @@ This structure is empty.
 | --- | --- |
 | Uint32 | Unknown |
 | Uint32 | Unknown |
-| Uint8 | Unknown |
+| Uint8 | [Difficulty](#difficulty) |
 
 ## SearchCoursesPointRankingParam ([Structure])
 | Type | Name |
@@ -1185,6 +1185,7 @@ Revision 3:
 | 1 | Normal |
 | 2 | Expert |
 | 3 | Super expert |
+| 4 | Any |
 
 
 [UnknownStruct1]: #unknownstruct1-structure
