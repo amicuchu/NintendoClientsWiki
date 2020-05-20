@@ -66,7 +66,7 @@ The dauth key source is: `8be45abcf987021523ca4f5e2300dbf0`
 | System version | Key generation |
 | --- | --- |
 | 9.0.0 - 9.0.1 | 10 |
-| 9.1.0 - 10.0.0 | 11 |
+| 9.1.0 - 10.0.2 | 11 |
 
 ### Known Client IDs
 | Client ID | Description |
