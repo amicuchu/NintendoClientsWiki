@@ -5,7 +5,7 @@
 | 102-XXXX | [ACT (accounts)](#act-error-codes) |
 | 103-XXXX | AC (internet connection) |
 | 104-XXXX | BOSS (spotpass) |
-| 105-XXXX | NIM (update installation) |
+| 105-XXXX | NIM (title installation) |
 | 106-XXXX | [NEX (game servers)](#nex-error-codes)<br>[Error descriptions](#nex-error-descriptions) |
 | 107-XXXX | [eShop (api)](#eshop-errors-api) |
 | 111-XXXX | [eShop (website)](#eshop-errors-website) |
