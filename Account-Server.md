@@ -27,20 +27,39 @@ The following methods can be used without authorization:
 | GET | `/v1/api/miis` |
 | POST | <code><a href="#post-v1apioauth20access_tokengenerate">/v1/api/oauth20/access_token/generate</a></code> |
 | POST | `/v1/api/people` |
+| GET | `/v1/api/people/<nnid>` |
+| POST | `/v1/api/support/coppa/authorization` |
+| PUT | `/v1/api/support/email_confirmation/<%lu>/<%06u>` |
+| GET | `/v1/api/support/forgotten_password/<%lu>` |
+| POST | `/v1/api/support/parental_approval` |
+| GET | `/v1/api/support/parental_approval/send_email/coppa_code` |
+| GET | `/v1/api/support/resend_confirmation` |
+| GET | `/v1/api/support/send_confirmation/pin` |
+| GET | `/v1/api/support/send_forgotten/pin` |
 | POST | `/v1/support/validate/email` |
 
 The following methods access your account data and require an authorization token. This token can be retrieved with <code><a href="#post-v1apioauth20access_tokengenerate">/v1/api/oauth20/access_token/generate</a></code>.
 
 | Method | URL |
 | --- | --- |
+| DELETE | `/v1/api/devices/@current` |
+| PUT | `/v1/api/devices/@current/inactivate` |
 | POST | `/v1/api/devices/@current/migrations` |
 | DELETE | `/v1/api/devices/@current/migrations` |
 | POST | `/v1/api/devices/@current/migrations/commit` |
 | GET | `/v1/api/devices/@current/status` |
 | GET | `/v1/api/people/@me` |
+| PUT | `/v1/api/people/@me` |
+| DELETE | `/v1/api/people/@me` |
+| POST | `/v1/api/people/@me/agreements` |
+| POST | `/v1/api/people/@me/deletion` |
 | GET | `/v1/api/people/@me/devices` |
 | DELETE | `/v1/api/people/@me/devices/@current` |
+| POST | `/v1/api/people/@me/devices/@current/attributes` |
+| PUT | `/v1/api/people/@me/devices/@current/inactive` |
 | GET | `/v1/api/people/@me/emails` |
+| GET | `/v1/api/people/@me/devices/owner` |
+| PUT | `/v1/api/people/@me/miis/@primary` |
 | GET | `/v1/api/people/@me/profile` |
 | GET | <code><a href="#get-v1apiprovidernex_tokenme">/v1/api/provider/nex_token/@me</a></code> |
 | GET | `/v1/api/provider/service_token/@me` |
@@ -64,7 +83,7 @@ The following headers are included in requests by the Wii U:
 | X-Nintendo-Title-ID | Example: 0005000010138300 |
 | X-Nintendo-Unique-ID | Part of title id, example: 01383 |
 | X-Nintendo-Application-Version | Title version |
-| X-Nintendo-Device-Cert | This header is only sent in some requests. |
+| X-Nintendo-Device-Cert | [Device certificate](#device-certificate) |
 
 The server replies with the following headers, in addition to `Content-Type` (if applicable), `Content-Length` and `Date`:
 
@@ -147,6 +166,13 @@ Example response:
 </nex_token>
 ```
 
+### Device Certificate
+This header is only sent in the requests for:
+* `/v1/api/people`
+* `/v1/api/oauth20/access_token/generate`
+* `/v1/api/people/@me/devices/owner`
+
+
 ## Errors
 Here's an example error response:
 ```
@@ -176,6 +202,7 @@ Sometimes, the cause tag is closed immediately (`<cause/>`). Sometimes, it is om
 | 0005 | access_token | Invalid access token |
 | 0007 | Forbidden request |
 | 0008 | | Not Found |
+| 0100 | | Account ID already exists |
 | 0103 | email | Email format is invalid |
 | 0106 | | Invalid account ID or password |
 | 0107 | | Account country and device country do not match |
