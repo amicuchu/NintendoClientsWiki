@@ -318,7 +318,8 @@ The device certificate consists of 384 base64-encoded bytes:
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 0x4 | Device type (debug: `0x00010002`, retail: `0x00010005`) |
-| 0x4 | 0x7C | Unknown |
+| 0x4 | 0x3C | NG signature |
+| 0x40 | 0x40 | Unknown |
 | 0x80 | 0x40 | `Root-CA<%08X>-MS<%08X>` |
 | 0xC0 | 0x4 | Unknown |
 | 0xC4 | 0x40 | `NG<%08X>` |
