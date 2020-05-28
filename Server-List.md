@@ -2,7 +2,7 @@
 | Server | Description |
 | --- | --- |
 | - account.nintendo.net<br>- game-dev.account.nintendo.net<br>- system-dev.account.nintendo.net<br>- library-dev.account.nintendo.net<br>- staging.account.nintendo.net | [[Account server]] |
-| - mii-secure.account.nintendo.net<br>- mii-secure.cdn.nintendo.net<br>- mii-images.cdn.nintendo.net<br>- game-dev-mii-images.cdn.nintendo.net<br>- system-dev-mii-images.cdn.nintendo.net<br>- library-dev-mii-images.cdn.nintendo.net<br>staging-mii-images.cdn.nintendo.net | Mii images |
+| - mii-secure.account.nintendo.net<br>- mii-secure.cdn.nintendo.net<br>- mii-images.cdn.nintendo.net<br>- game-dev-mii-images.cdn.nintendo.net<br>- system-dev-mii-images.cdn.nintendo.net<br>- library-dev-mii-images.cdn.nintendo.net<br>- staging-mii-images.cdn.nintendo.net | Mii images |
 | - nncs1.app.nintendowifi.net<br>- nncs2.app.nintendowifi.net | NAT check server |
 | - hpp-&lt;game server id&gt;-&lt;environment&gt;.n.app.nintendo.net | [Hpp server](Hpp-Server) |
 | - discovery.olv.nintendo.net | Miiverse |
