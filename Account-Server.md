@@ -29,7 +29,7 @@ The following methods can be used without authorization:
 | POST | `/v1/api/people` |
 | POST | `/v1/support/validate/email` |
 
-The following methods access your account data and require an authorization token. This token can be retrieved with `v1/api/oauth20/access_token/generate`.
+The following methods access your account data and require an authorization token. This token can be retrieved with <code><a href="#post-v1apioauth20access_tokengenerate">/v1/api/oauth20/access_token/generate</a></code>.
 
 | Method | URL |
 | --- | --- |
