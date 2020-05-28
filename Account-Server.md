@@ -77,7 +77,7 @@ The server replies with the following headers, in addition to `Content-Type` (if
 This request does not take an parameters. The response body is empty, and no `Content-Type` header is returned by the server. The server time can be retrieved from the `X-Nintendo-Date` header.
 
 ### GET /v1/api/admin/mapped_ids
-Converts between PID and NNID.
+Converts between PID and NNID. PIDs starts at 1799999999 and decrement on every new account.
 
 | Param | Description |
 | --- | --- |
