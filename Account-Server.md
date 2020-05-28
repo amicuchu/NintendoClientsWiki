@@ -169,6 +169,7 @@ Sometimes, the cause tag is closed immediately (`<cause/>`). Sometimes, it is om
 | 0005 | access_token | Invalid access token |
 | 0007 | Forbidden request |
 | 0008 | | Not Found |
+| 0103 | email | Email format is invalid |
 | 0106 | | Invalid account ID or password |
 | 0107 | | Account country and device country do not match |
 | 0110 | | Unlinked device |
@@ -178,6 +179,7 @@ Sometimes, the cause tag is closed immediately (`<cause/>`). Sometimes, it is om
 | 0124 | | Application version is older than usable version registered |
 | 1017 | | The requested game environment wasn't found for the given game server. |
 | 1022 | client_id | The requested client was not found. |
+| 1126 | | The domain "..." is not accessible. |
 | 1600 | Bad Request | Unable to process request |
 | 1600 | Unsupported Media Type | Unable to process request |
 
