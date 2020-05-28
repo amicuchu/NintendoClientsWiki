@@ -1,7 +1,7 @@
 [[Server List]] > Account Server (Wii U)
 ---
 
-The account server takes form-encoded requests and responds with an XML body.
+The account server always responds with an XML body. GET requests are form-encoded. POST and PUT requests have an XML body.
 
 The XML-encoding is not consistent between URLs. Usually, the response contains no XML declaration and no whitespace. However, sometimes the response starts with `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>`, and sometimes the response is prettified using 4 spaces as indentation.
 
