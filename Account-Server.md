@@ -57,8 +57,8 @@ The following methods access your account data and require an authorization toke
 | DELETE | `/v1/api/people/@me/devices/@current` |
 | POST | `/v1/api/people/@me/devices/@current/attributes` |
 | PUT | `/v1/api/people/@me/devices/@current/inactive` |
-| GET | `/v1/api/people/@me/emails` |
 | GET | `/v1/api/people/@me/devices/owner` |
+| GET | `/v1/api/people/@me/emails` |
 | PUT | `/v1/api/people/@me/miis/@primary` |
 | GET | `/v1/api/people/@me/profile` |
 | GET | <code><a href="#get-v1apiprovidernex_tokenme">/v1/api/provider/nex_token/@me</a></code> |
@@ -165,13 +165,6 @@ Example response:
   <token>...</token>
 </nex_token>
 ```
-
-### Device Certificate
-This header is only sent in the requests for:
-* `/v1/api/people`
-* `/v1/api/oauth20/access_token/generate`
-* `/v1/api/people/@me/devices/owner`
-
 
 ## Errors
 Here's an example error response:
@@ -311,3 +304,23 @@ Sometimes, the cause tag is closed immediately (`<cause/>`). Sometimes, it is om
 | 2001 | INTERNAL_SERVER_ERROR |
 | 2002 | UNDER_MAINTENANCE |
 | 2999 | NINTENDO_NETWORK_CLOSED |
+
+## Device Certificate
+This header is only sent in the requests for:
+* `/v1/api/oauth20/access_token/generate`
+* `/v1/api/people`
+* `/v1/api/people/@me/agreements`
+* `/v1/api/people/@me/devices`
+* `/v1/api/people/@me/devices/owner`
+
+The device certificate consists of 384 base64-encoded bytes:
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 0x4 | Device type (debug: `0x00010002`, retail: `0x00010005`) |
+| 0x4 | 0x7C | Unknown |
+| 0x80 | 0x40 | `Root-CA<%08X>-MS<%08X>` |
+| 0xC0 | 0x4 | Unknown |
+| 0xC4 | 0x40 | `NG<%08X>` |
+| 0x104 | 0x4 | NG key id |
+| 0x108 | 0x78 | Unknown |
