@@ -1,10 +1,21 @@
+## [[SOAP Services]] > NetUpdateSOAP (NUS)
+
 This server is at https://nus.wup.shop.nintendo.net/nus/services/NetUpdateSOAP.
 
-The common client certificate is required to access this server.
+The user agent is: `EVL NUP 040800 Sep 18 2012 20:20:02`.
 
-## Methods
+## Method List
 | Name |
 | --- |
 | GetSystemUpdate |
 | GetSystemTitleHash |
 | GetSystemCommonETicket |
+
+## Additional Parameters
+In addition to `Version` and `MessageId`, the following parameters are always present:
+
+| Parameter | Description |
+| --- | --- |
+| `nus:DeviceId` | <code>MCP_GetDeviceId() &vert; (5 << 32)</code> |
+| `nus:RegionId` | Region id (e.g. `EUR`) |
+| `nus:CountryCode` | Country code (e.g. `NL`) |
