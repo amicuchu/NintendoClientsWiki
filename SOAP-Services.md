@@ -7,7 +7,7 @@ Nintendo provides several eShop related services as a SOAP service:
 
 The common client certificate is required to access these servers.
 
-In addition to standard HTTP headers, a SOAPAction is included in requests and contains the following string: `urn:{service_code}.wsapi.broadon.com/{method_name}`.
+In addition to standard HTTP headers, a `SOAPAction` is included in requests and contains the following string: `urn:{service_code}.wsapi.broadon.com/{method_name}`.
 
 To call a method, a POST request is sent with the following xml body:
 
