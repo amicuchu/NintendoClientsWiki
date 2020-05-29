@@ -2,8 +2,8 @@
 
 | Platform | Server |
 | --- | --- |
-| 3DS | https://ias.c.shop.nintendowifi.net/ias/services/IdentityAuthenticationSOAP. |
-| Wii U | https://ias.wup.shop.nintendo.net/ias/services/IdentityAuthenticationSOAP. |
+| 3DS | https://ias.c.shop.nintendowifi.net/ias/services/IdentityAuthenticationSOAP |
+| Wii U | https://ias.wup.shop.nintendo.net/ias/services/IdentityAuthenticationSOAP |
 
 ## Method List
 | Name |
