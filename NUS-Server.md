@@ -7,9 +7,9 @@ The user agent is: `EVL NUP 040800 Sep 18 2012 20:20:02`.
 ## Method List
 | Name |
 | --- |
-| GetSystemUpdate |
-| GetSystemTitleHash |
 | GetSystemCommonETicket |
+| GetSystemTitleHash |
+| GetSystemUpdate |
 
 ## Additional Parameters
 In addition to `Version` and `MessageId`, the following parameters are always present:
