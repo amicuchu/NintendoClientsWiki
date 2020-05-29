@@ -31,5 +31,5 @@ To call a method, a POST request is sent with the following xml body:
 Quick explanation of the fields:
 
 * `service_code`: `ecs`, `ias`, `cas` or `nus`
-* `version`: depends on service (`1.0` on nus service, `2.0` on ecs service)
+* `version`: depends on service (`1.0` on nus service, `2.0` on other services)
 * `device_id`: `MCP_GetDeviceId() | (platform_id << 32)`. The platform id is 5 on Wii U.
