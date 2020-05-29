@@ -32,4 +32,4 @@ Quick explanation of the fields:
 
 * `service_code`: `ecs`, `ias`, `cas` or `nus`
 * `version`: depends on service (`1.0` on nus service, `2.0` on other services)
-* `device_id`: `MCP_GetDeviceId() | (platform_id << 32)`. The platform id is 5 on Wii U.
+* `device_id`: this is the device id combined with the platform id: `device_id | (platform_id << 32)`. The platform id is 4 on 3DS and 5 on Wii U. On Wii U the device id is stored in the OTP and is retrieved with `MCP_GetDeviceId`.
