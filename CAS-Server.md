@@ -1,6 +1,9 @@
 ## [[SOAP Services]] > CatalogingSOAP (CAS)
 
-This server is at https://cas.wup.shop.nintendo.net/cas/services/CatalogingSOAP.
+| Platform | Server |
+| --- | --- |
+| 3DS | https://cas.c.shop.nintendowifi.net/cas/services/CatalogingSOAP |
+| Wii U | https://cas.wup.shop.nintendo.net/cas/services/CatalogingSOAP |
 
 ## Method List
 | Name |
