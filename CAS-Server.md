@@ -6,3 +6,12 @@ This server is at https://cas.wup.shop.nintendo.net/cas/services/CatalogingSOAP.
 | Name |
 | --- |
 | GetContentSizes |
+| GetMessages |
+| ListCashReplenishAmounts |
+| ListECardItems |
+| ListTitlesEx |
+| ListContentSetsEx |
+| ListItems |
+| ListContentSetGroups |
+| ListECardItemPricings |
+| ListPointsPricings |
