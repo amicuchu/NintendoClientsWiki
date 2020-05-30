@@ -60,3 +60,11 @@ Response on success:
 | --- | --- |
 | token | Auth token |
 | expire_at | Expiration |
+
+## Errors
+On error, the server sends the following response:
+
+| Field | Description |
+| --- | --- |
+| category | `app` or `lib` |
+| code | Error code |
