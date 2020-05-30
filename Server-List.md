@@ -44,7 +44,7 @@ Replace '%' by one of the following:
 | - g&lt;game server id&gt;-%.p.srv.nintendo.net | P2P monitoring |
 | - nncs1-%.n.n.srv.nintendo.net<br>- nncs2-%.n.n.srv.nintendo.net | NAT check servers |
 | - api-%.znc.srv.nintendo.net | Coral (voice chat) |
-| - api.hac.%.acbaa.srv.nintendo.net | [Animal Crossing API](AC:NH Server) |
+| - api.hac.%.acbaa.srv.nintendo.net | [Animal Crossing API](AC:NH-Server) |
 | - ecs-%.hac.shop.nintendo.net<br>- ias-%.hac.shop.nintendo.net<br>- beach.hac.%.eshop.nintendo.net<br>- bugyo.hac.%.eshop.nintendo.ent<br>- tagaya.hac.%.eshop.nintendo.net<br>- pushmo.hac.%.eshop.nintendo.net | E-Shop |
 | - api-%.frs.srv.nintendo.net | Friends |
 | - consumer.%.npns.srv.nintendo.net<br>- broker.%.npns.srv.nintendo.net<br>- provider-%.npns.srv.nintendo.net<br>- app-a03.%.npns.srv.nintendo.net<br>- app-b01.%.npns.srv.nintendo.net | Push notifications |
