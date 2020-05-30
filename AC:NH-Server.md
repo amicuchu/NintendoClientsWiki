@@ -1,1 +1,46 @@
-This server is at https://api.hac.lp1.acbaa.srv.nintendo.net.
+This server provides services for Animal Crossing: New Horizons.
+
+This server is at https://api.hac.lp1.acbaa.srv.nintendo.net. All request and response bodies are encoded with `application/x-msgpack`.
+
+## Headers
+| Header | Description |
+| --- | --- |
+| Host | `api.hac.lp1.acbaa.srv.nintendo.net` |
+| User-Agent | `libcurl/7.64.1 (HAC; nnEns; SDK 9.3.4.0)` |
+| Accept | `*/*` |
+| Authorization | `Bearer ...` (id token or auth token). This header is not sent in requests for `/resources`. |
+| Content-Type | `application/x-msgpack`. This header is not sent in requests for `/resources`. |
+| Content-Length | Content length. Only present in POST and PUT requests. |
+
+## Methods
+| Method | URL |
+| --- | --- |
+| POST | `/api/v1/auth_token` |
+| POST | `/api/v1/design_players` |
+| POST | `/api/v1/designs` |
+| GET | `/api/v1/designs/<id>` |
+| PUT | `/api/v1/designs/<id>` |
+| DELETE | `/api/v1/designs/<id>` |
+| POST | `/api/v1/designs/<id>/feedback` |
+| GET | `/api/v1/friend_requests` |
+| POST | `/api/v1/friend_requests` |
+| PUT | `/api/v1/friend_requests/<id>` |
+| GET | `/api/v1/friends` |
+| DELETE | `/api/v1/friends/<id>` |
+| POST | `/api/v1/lands` |
+| PUT | `/api/v1/lands/<id>/profile` |
+| POST | `/api/v1/lands/updated_addresses` |
+| GET | `/api/v1/legacy_designs` |
+| DELETE | `/api/v1/legacy_designs` |
+| GET | `/api/v1/legacy_designs/<id>` |
+| GET | `/api/v1/message_cards` |
+| POST | `/api/v1/message_cards` |
+| GET | `/api/v1/message_cards/<id>` |
+| POST | `/api/v1/message_cards/delete` |
+| POST | `/api/v1/notification_tokens` |
+| POST | `/api/v1/reports` |
+| POST | `/api/v1/users` |
+| PUT | `/api/v1/users/<id>/land` |
+| PUT | `/api/v1/users/<id>/profile` |
+| GET | `/api/v1/users/<id>/profile_status` |
+| PUT | `/api/v1/users/<id>/web_service_status` |
