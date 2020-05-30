@@ -44,3 +44,4 @@ This server is at https://api.hac.lp1.acbaa.srv.nintendo.net. All request and re
 | PUT | `/api/v1/users/<id>/profile` |
 | GET | `/api/v1/users/<id>/profile_status` |
 | PUT | `/api/v1/users/<id>/web_service_status` |
+| GET | `/api/v2/designs` |
