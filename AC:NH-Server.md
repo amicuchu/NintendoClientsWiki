@@ -1,0 +1,1 @@
+This server is at https://api.hac.lp1.acbaa.srv.nintendo.net.
