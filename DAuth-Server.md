@@ -10,8 +10,12 @@ The dauth server takes form-encoded requests and responds with json-encoding. Al
 ## Headers
 | Header | Description |
 | --- | --- |
+| Host | `dauth-lp1.ndas.srv.nintendo.net` |
 | User-Agent | [User agent](#user-agents) |
+| Accept | `*/*` |
 | X-Nintendo-PowerState | `FA` (fully awake) or `HA` (half awake) |
+| Content-Length | Content length |
+| Content-Type | `application/x-www-form-urlencoded` |
 
 #### User Agents
 | System Version | User agent |
