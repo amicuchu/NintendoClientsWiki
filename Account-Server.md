@@ -24,10 +24,17 @@ The following methods can be used without authorization:
 | GET | <code><a href="#get-v1apiadminmapped_ids">/v1/api/admin/mapped_ids</a></code> |
 | GET | `/v1/api/content/agreements/Nintendo-Network-EULA/<country>/@latest` |
 | GET | `/v1/api/content/time_zones/<country>/<language>` |
+| DELETE | `/v1/api/devices/@current` |
+| PUT | `/v1/api/devices/@current/inactivate` |
+| POST | `/v1/api/devices/@current/migrations` |
+| DELETE | `/v1/api/devices/@current/migrations` |
+| POST | `/v1/api/devices/@current/migrations/commit` |
+| GET | `/v1/api/devices/@current/status` |
 | GET | `/v1/api/miis` |
 | POST | <code><a href="#post-v1apioauth20access_tokengenerate">/v1/api/oauth20/access_token/generate</a></code> |
 | POST | `/v1/api/people` |
 | GET | `/v1/api/people/<nnid>` |
+| POST | `/v1/api/people/@me/agreements` |
 | POST | `/v1/api/support/coppa/authorization` |
 | PUT | `/v1/api/support/email_confirmation/<%lu>/<%06u>` |
 | GET | `/v1/api/support/forgotten_password/<%lu>` |
@@ -42,16 +49,8 @@ The following methods access your account data and require an authorization toke
 
 | Method | URL |
 | --- | --- |
-| DELETE | `/v1/api/devices/@current` |
-| PUT | `/v1/api/devices/@current/inactivate` |
-| POST | `/v1/api/devices/@current/migrations` |
-| DELETE | `/v1/api/devices/@current/migrations` |
-| POST | `/v1/api/devices/@current/migrations/commit` |
-| GET | `/v1/api/devices/@current/status` |
-| GET | `/v1/api/people/@me` |
 | PUT | `/v1/api/people/@me` |
 | DELETE | `/v1/api/people/@me` |
-| POST | `/v1/api/people/@me/agreements` |
 | POST | `/v1/api/people/@me/deletion` |
 | GET | `/v1/api/people/@me/devices` |
 | DELETE | `/v1/api/people/@me/devices/@current` |
