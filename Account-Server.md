@@ -34,7 +34,6 @@ The following methods can be used without authorization:
 | POST | <code><a href="#post-v1apioauth20access_tokengenerate">/v1/api/oauth20/access_token/generate</a></code> |
 | POST | `/v1/api/people` |
 | GET | `/v1/api/people/<nnid>` |
-| POST | `/v1/api/people/@me/agreements` |
 | POST | `/v1/api/support/coppa/authorization` |
 | PUT | `/v1/api/support/email_confirmation/<%lu>/<%06u>` |
 | GET | `/v1/api/support/forgotten_password/<%lu>` |
@@ -45,7 +44,7 @@ The following methods can be used without authorization:
 | GET | `/v1/api/support/send_forgotten/pin` |
 | POST | `/v1/support/validate/email` |
 
-The following methods access your account data and require an authorization token. This token can be retrieved with <code><a href="#post-v1apioauth20access_tokengenerate">/v1/api/oauth20/access_token/generate</a></code>.
+The following methods access your account data and require a `Bearer` authorization token. This token can be retrieved with <code><a href="#post-v1apioauth20access_tokengenerate">/v1/api/oauth20/access_token/generate</a></code>.
 
 | Method | URL |
 | --- | --- |
@@ -56,12 +55,19 @@ The following methods access your account data and require an authorization toke
 | DELETE | `/v1/api/people/@me/devices/@current` |
 | POST | `/v1/api/people/@me/devices/@current/attributes` |
 | PUT | `/v1/api/people/@me/devices/@current/inactive` |
-| GET | `/v1/api/people/@me/devices/owner` |
 | GET | `/v1/api/people/@me/emails` |
 | PUT | `/v1/api/people/@me/miis/@primary` |
 | GET | `/v1/api/people/@me/profile` |
 | GET | <code><a href="#get-v1apiprovidernex_tokenme">/v1/api/provider/nex_token/@me</a></code> |
 | GET | `/v1/api/provider/service_token/@me` |
+
+The following methods require a `HashedBasic` authorization token.
+
+| Method | URL |
+| --- | --- |
+| POST | `/v1/api/people/@me/agreements` |
+| POST | `/v1/api/people/@me/devices` |
+| GET | `/v1/api/people/@me/devices/owner` |
 
 ## Headers
 The following headers are included in requests by the Wii U:
