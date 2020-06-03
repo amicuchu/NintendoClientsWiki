@@ -227,6 +227,7 @@
 | 2181-4007 | Server returned error 0007 ("System update is required.") |
 | 2181-4008 | Server returned error 0008 ("Device has been banned.") |
 | 2181-4014 | Server returned error 0014 ("Invalid parameter in request.") |
+| 2181-4016 | Server returned error 0016 ("Invalid parameter in request.") |
 
 # NEX Error Codes
 | Error code | Name |
