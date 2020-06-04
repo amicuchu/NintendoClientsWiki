@@ -327,6 +327,6 @@ The device certificate consists of 384 base64-encoded bytes:
 | 0x40 | 0x40 | Unknown |
 | 0x80 | 0x40 | `Root-CA<%08X>-MS<%08X>` |
 | 0xC0 | 0x4 | Unknown |
-| 0xC4 | 0x40 | `NG<%08X>` |
+| 0xC4 | 0x40 | Device id (`NG<%08X>`) |
 | 0x104 | 0x4 | NG key id |
 | 0x108 | 0x78 | Unknown |
