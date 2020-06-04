@@ -78,7 +78,7 @@ The following headers are included in requests by the Wii U:
 | X-Nintendo-Device-Type | 1=Debug, 2=Retail |
 | X-Nintendo-Device-ID | Unsigned integer (MCP_GetDeviceId) |
 | X-Nintendo-Serial-Number | String |
-| X-Nintendo-System-Version | Version of 'version.bin' title (`%04X`) |
+| X-Nintendo-System-Version | Version of `version.bin` title (`%04X`) |
 | X-Nintendo-Region | 1=JPN, 2=USA, 4=EUR, 8=AUS, 16=CHN, 32=KOR, 64=TWN |
 | X-Nintendo-Country | JP for Japan, DE for Germany, etc. |
 | X-Nintendo-Client-ID | a2efa818a34fa16b8afbc8a74eba3eda |
