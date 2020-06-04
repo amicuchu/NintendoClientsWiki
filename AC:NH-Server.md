@@ -68,3 +68,11 @@ On error, the server sends the following response:
 | --- | --- |
 | category | `app` or `lib` |
 | code | Error code |
+
+### Known Errors
+| Status | Category | Code | Description |
+| --- | --- | --- | --- |
+| 400 | `lib` | 3000 | Bad request |
+| 404 | `lib` | 3004 | Page not found or wrong http method |
+| 404 | `lib` | 3005 | User not found |
+| 401 | `lib` | 4001 | Invalid authorization header |
