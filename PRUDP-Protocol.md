@@ -219,7 +219,7 @@ Request data (encrypted with session key):
 | Type | Description |
 | --- | --- |
 | [PID] | User pid |
-| Uint32 | CID of secure server station url |
+| Uint32 | Connection id |
 | Uint32 | Response check value |
 
 #### Connection response
