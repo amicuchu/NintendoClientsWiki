@@ -1,4 +1,4 @@
-Many Switch servers use JWTs (json web tokens) for authentication. JWTs are a simple and standardized way to pass information between servers without storing it in a database. A JWT consists of three parts separated by dots, and each part is encoded with the url-safe base64 table ('-' and '_' instead of '+' and '/').
+Many Switch servers use JWTs (json web tokens) for authentication. JWTs are a simple and standardized way to pass information between servers without storing it in a database. A JWT consists of three parts separated by dots, and each part is encoded with base64url.
 
 JWTs are described formally in [RFC 7515](https://tools.ietf.org/html/rfc7515), [RFC 7518](https://tools.ietf.org/html/rfc7518) and [RFC 7519](https://tools.ietf.org/html/rfc7519).
 
