@@ -228,7 +228,7 @@ On error, the server sends the following response:
 | 400 | user_link_not_exist | ? | ? |
 | 400 | invalid_raw_content | ? | ? |
 | 401 | invalid_token | Token is invalid | The access token was invalid |
-| 403 | insufficient_scope | ? | ? |
+| 403 | insufficient_scope | Token is insufficient | The access token does not have sufficient scope |
 | 403 | forbidden | ? | ? |
 | 403 | membership_required | Membership Required | |
 | 403 | unavailable_device_account | Unavailable Device Account | Device Account is unavailable |
