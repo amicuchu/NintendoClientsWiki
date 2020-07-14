@@ -21,7 +21,7 @@ The dauth server takes form-encoded requests and responds with json-encoding. Al
 | System Version | User agent |
 | --- | --- |
 | 9.0.0 - 9.2.0 | `libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 9.3.0.0)` |
-| 10.0.0 - 10.0.3 | `libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 10.4.0.0)` |
+| 10.0.0 - 10.1.0 | `libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 10.4.0.0)` |
 
 ## Methods
 | Method | URL |
@@ -70,7 +70,7 @@ The dauth key source is: `8be45abcf987021523ca4f5e2300dbf0`
 | System version | Key generation |
 | --- | --- |
 | 9.0.0 - 9.0.1 | 10 |
-| 9.1.0 - 10.0.3 | 11 |
+| 9.1.0 - 10.1.0 | 11 |
 
 ### Known Client IDs
 | Client ID | Description |
