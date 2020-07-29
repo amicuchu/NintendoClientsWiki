@@ -31,6 +31,7 @@ Replace '%' by one of the following:
 | jd1 | ? |
 | sd1 | ? |
 | sp1 | ? |
+| td1 | ? |
 
 | Server | Description |
 | --- | --- |
