@@ -37,7 +37,7 @@ This server takes form-encoded requests and responds with json-encoding.
 | POST | `/1.0.0/users/<id>/generate_code` |
 | POST | `/1.0.0/image_upload` |
 | PUT | `/1.0.0/push_channels/<id>/<id>` |
-| GET | `/2.0.0/users/<id>friends` |
+| GET | `/2.0.0/users/<id>/friends` |
 | PATCH | `/2.0.0/users/<id>/friends/<id>` |
 | DELETE | `/2.0.0/users/<id>/friends/<id>` |
 | GET | `/2.0.0/users/<id>/friend_requests/inbox` |
