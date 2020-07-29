@@ -40,7 +40,7 @@
 | Cadence of Hyrule | 25246E00 | 6bdc2209 |
 | Super Mario Odyssey | 255BA201 | afef0ecf |
 | ARMS | 25C08801 | b6b34c51 |
-| NEX Sample Demo | 27851C01 | ? |
+| NEX Sample Demo | 27851C01 | 3893e1b7 |
 | Mario Kart 8 Deluxe | 2B309E01 | 09c1c475 |
 | Cave Story | 2BA73000 | c2a631ad |
 | Dragon Quest Builders | 2CD9DB00 | e720a303 |
