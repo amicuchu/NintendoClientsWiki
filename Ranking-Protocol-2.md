@@ -1,3 +1,5 @@
+## [[NEX Protocols]] > Ranking 2 (0x7A)
+
 | Method ID | Method Name |
 | --- | --- |
 | 1 | [PutScore](#1-putscore) |
