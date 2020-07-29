@@ -11,3 +11,5 @@ There seem to be some protocols that are used internally by the server and can o
 - SecureConnectionInternalProtocol::UpdateConnectionProperties
 - SecureConnectionInternalProtocol::ReplaceConnectionProperties
 - SecureConnectionInternalProtocol::SendReport
+- NATTraversalReportInternalProtocol::ReportNATProperties
+- NATTraversalReportInternalProtocol::ReportNATTraversalResult
