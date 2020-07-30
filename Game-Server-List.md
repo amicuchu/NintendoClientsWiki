@@ -34,6 +34,7 @@
 | Super Smash Bros. Ultimate | 23380901 | 9587602b |
 | Mario Tennis Aces | 23932A00 | 29f267b9 |
 | Tetris 99 | 23BDA200 | cdd6114d |
+| NES Online | 240B0700 | 01677bca |
 | Splatoon 2 | 24E30D00<br>2C4BFF00<br>2DF33D01 | f25e0f69<br>f73d3ebe<br>4eb18d39 | Testfire<br>World&nbsp;premiere<br>Main&nbsp;server |
 | Lego Worlds | 24FD5300 | 4d3b08ce |
 | Pokémon Let's Go Pikachu/Eevee | 250F8F00 | 38ee5943 |
