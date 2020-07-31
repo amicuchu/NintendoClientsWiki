@@ -166,7 +166,7 @@ Since the match making methods are split across several protocols, this page doc
 ## GatheringStats ([Structure])
 | Type | Name |
 | --- | --- |
-| Uint32 | m_pidParticipant |
+| [PID] | m_pidParticipant |
 | Uint32 | m_uiFlags |
 | [List]&lt;Float&gt; | m_lstValues |
 
@@ -180,7 +180,7 @@ Since the match making methods are split across several protocols, this page doc
 ## ParticipantDetails ([Structure])
 | Type | Name |
 | --- | --- |
-| Uint32 | m_idParticipant |
+| [PID] | m_idParticipant |
 | [String] | m_strName |
 | [String] | m_strMessage |
 | Uint16 | m_uiParticipants |
