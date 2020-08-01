@@ -353,6 +353,7 @@ The least significant byte of this field describes the minor version of the prot
 | 2 | Aggregate ack (new version) is now supported and the new signature method is used |
 | 3 | The new RVDDL version is used: [structures](NEX-Common-Types#structure) now have a version header |
 | 4 | Unknown difference |
+| 5 | Unknown difference |
 
 ### Optional data
 Starting with PRUDP V1, packet-specific data is encoded like this:
