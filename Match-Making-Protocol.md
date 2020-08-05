@@ -413,7 +413,7 @@ This method does not take any parameters.
 | Type | Name | Description |
 | --- | --- | --- |
 | Uint32 | idGathering | Gathering id |
-| [List]&lt;Uint32&gt; | lstParticipants | Participant pids |
+| [List]&lt;[PID]&gt; | lstParticipants | Participant pids |
 | [List]&lt;byte&gt; | lstColumns | Columns |
 
 ## Response
