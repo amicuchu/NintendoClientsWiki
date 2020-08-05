@@ -245,6 +245,7 @@ This method does not return anything.
 [DateTime]: NEX-Common-Types#date-time
 [Structure]: NEX-Common-Types#structure
 [Data]: NEX-Common-Types#any-data-holder
+[PID]: NEX-Common-Types#pid
 
 [Ranking2ScoreData]: #ranking2scoredata-structure
 [Ranking2CommonData]: #ranking2commondata-structure
