@@ -28,7 +28,7 @@ This method does not return anything.
 | Type | Name |
 | --- | --- |
 | Uint32 | optionFlags |
-| Uint64 | principalId |
+| [PID] | principalId |
 | Uint64 | nexUniqueId |
 
 ## Response
