@@ -30,7 +30,7 @@
 | Uint64 | m_uiParam2 |
 | [String] | m_strParam |
 | Uint64 | m_uiParam3 |
-| [Map]&lt;[Variant]&gt; | m_mapParam |
+| [Map]&lt;[String], [Variant]&gt; | m_mapParam |
 
 ## Response
 This method does not return anything.
