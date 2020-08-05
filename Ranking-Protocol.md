@@ -129,7 +129,7 @@ This method does not return anything.
 | [RankingOrderParam](#rankingorderparam-structure) | orderParam |
 | Uint32 | score |
 | Uint64 | uniqueId |
-| Uint32 | principalId |
+| [PID] | principalId |
 
 ## Response
 | Type | Name |
