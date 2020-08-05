@@ -71,7 +71,7 @@ This method does not return anything.
 | Type | Name |
 | --- | --- |
 | [Ranking2GetByListParam] | getParam |
-| [List]&lt;Uint64&gt; | principalIdList |
+| [List]&lt;[PID]&gt; | principalIdList |
 
 ## Response
 | Type | Name |
@@ -141,7 +141,7 @@ This method does not return anything.
 | Type | Name |
 | --- | --- |
 | Uint64 | nexUniqueId |
-| Uint64 | principalId |
+| [PID] | principalId |
 | Uint32 | category |
 | Uint32 | offset |
 | Uint32 | length |
@@ -231,7 +231,7 @@ This method does not return anything.
 | --- | --- |
 | Uint64 | misc |
 | Uint64 | nexUniqueId |
-| Uint64 | principalId |
+| [PID] | principalId |
 | Uint32 | rank |
 | Uint32 | score |
 | [Ranking2CommonData] | commonData |
