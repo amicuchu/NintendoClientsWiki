@@ -220,7 +220,7 @@ This method does not return anything.
 ## Request
 | Type | Description |
 | --- | --- |
-| [List]&lt;[PersistentNotification]&gt; | Unknown |
+| [List]&lt;[PersistentNotification]&gt; | Notifications |
 
 ## Response
 This method does not return anything.
