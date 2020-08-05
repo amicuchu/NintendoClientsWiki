@@ -2,7 +2,7 @@
 
 | Method ID | Method Name |
 | --- | --- |
-| 1 | ProcessNotificationEvent |
+| 1 | [ProcessNotificationEvent](#1-processnotificationevent) |
 
 # (1) ProcessNotificationEvent
 ## Request
