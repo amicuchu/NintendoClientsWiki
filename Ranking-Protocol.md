@@ -103,6 +103,9 @@ This method does not return anything.
 | [RankingChangeAttributesParam](#rankingchangeattributesparam-structure) | changeParam |
 | Uint64 | uniqueId |
 
+## Response
+This method does not return anything.
+
 # (9) GetRanking
 ## Request
 | Type | Name | Description |
