@@ -27,7 +27,7 @@ All packets consist of an unencrypted [header](#header), which is followed by on
 | 0xC | 8 | [AES-GCM nonce](#encryption) |
 | 0x14 | 16 | [AES-GCM authentication tag](#encryption) |
 
-*Switch (5.11 and later):*
+*Switch (5.11 - 5.19):*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -37,6 +37,27 @@ All packets consist of an unencrypted [header](#header), which is followed by on
 | 0x6 | 2 | [Packet id](#packet-id) |
 | 0x8 | 8 | [AES-GCM nonce](#encryption) |
 | 0x10 | 16 | [AES-GCM authentication tag](#encryption) |
+
+*Switch (5.24):*
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 4 | Unknown |
+| 0x4 | 1 | Unknown |
+| 0x5 | 1 | Unknown |
+| 0x6 | 2 | Unknown |
+| 0x10 | 16 | Unknown |
+
+*Switch (5.29):*
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 4 | Unknown |
+| 0x4 | 1 | Unknown |
+| 0x5 | 4 | Unknown |
+| 0x9 | 4 | Unknown |
+| 0xD | 2 | Unknown |
+| 0xF | 17 | Unknown |
 
 ### Connection ID
 During connection establishment, the console that wants to connect to another console must set this field to 1, and the console that answers the connection request must set this field to 0. After a connection has been established both consoles generate a random number between 2 and 255. This will be the connection id in any further packets.
