@@ -152,7 +152,7 @@ Packets are encrypted and signed with the session key.
 
 | Mode | Session key |
 | --- | --- |
-| NEX | Obatined from server during [matchmaking](Match-Making-Types#matchmakesession-structure) |
+| NEX | Obtained from server during [matchmaking](Match-Making-Types#matchmakesession-structure) |
 | LDN | ? |
 | LAN | First 16 bytes of the HMAC-SHA256 of the slightly modified [session param](LAN-Protocol#lansessioninfo) (the last byte is incremented by 1), with the same game-specific key that's used for the [crypto challenge](LAN-Protocol#crypto-challenge). |
 
