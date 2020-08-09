@@ -14,7 +14,7 @@ All packets consist of an unencrypted [header](#header), which is followed by on
 | 0x8 | 2 | [Session timer](#rtt-calculation) |
 | 0xA | 2 | [RTT timer](#rtt-calculation) |
 
-*Switch (5.9 and 5.10):*
+*Switch (5.7 - 5.10):*
 
 | Offset | Size | Description |
 | --- | --- | --- |
