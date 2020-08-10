@@ -82,7 +82,7 @@ All parameters are prefixed with the service code.
 | `RegionId` | `nus` | Region (e.g. `EUR`) |
 | `Country` | `cas`, `ecs`, `ias` | Country (e.g. `NL`) |
 | `CountryCode` | `nus` | Country (e.g. `NL`) |
-| `VirtualDeviceType` | `cas`, `ecs`, `ias`, `nus` | Virtual device type. This overrides the device type in the device id. |
+| `VirtualDeviceType` | `ecs`, `ias`, `nus` | Virtual device type. This overrides the device type in the device id. |
 | `Language` | `cas`, `ecs`, `ias`, `nus` | Language |
 | `SerialNo` | `ecs`, `nus` | Serial number |
 | `Age` | `cas` | Age |
