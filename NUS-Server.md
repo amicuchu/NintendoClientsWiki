@@ -18,5 +18,27 @@
 | [GetSystemUpdate](#getsystemupdate) |
 
 ## GetSystemTitleHash
+| Tag | Description |
+| --- | --- |
+| `TitleHash` | 32 uppercase hex digits |
 
 ## GetSystemUpdate
+The following tags are always returned:
+
+| Tag | Description |
+| --- | --- |
+| `ContentPrefixURL` | (1) http://nus.cdn.shop.wii.com/ccs/download<br>(3) http://nus.cdn.t.shop.nintendowifi.net/ccs/download<br>(4) http://nus.cdn.c.shop.nintendowifi.net/ccs/download<br>http://nus.cdn.wup.shop.nintendo.net/ccs/download<br>http://nus.cdn.shop.wii.com/ccs/download |
+| `UncachedContentPrefixURL` | https://ccs.shop.wii.com/ccs/download<br>https://ccs.t.shop.nintendowifi.net/ccs/download<br>https://ccs.c.shop.nintendowifi.net/ccs/download<br>https://ccs.wup.shop.nintendo.net/ccs/download<br>https://ccs.shop.wii.com/ccs/download |
+| `UploadAuditData` | Always 1 |
+| `TitleHash` | Same as `GetSystemTitleHash` |
+
+In addition, the server returns a list of `TitleVersion` tags, the content of which depends on the given device type:
+
+| Tag | Device | Description |
+| --- | --- | --- |
+| `TitleId` | All | Title id (`%016X`) |
+| `Version` | All | Title version (decimal integer) |
+| `FsSize` | 1, 3, 4 | Filesystem size |
+| `TicketSize` | 4, 5, 7 | Ticket size |
+| `TMDSize` | 4, 5, 7 | TMD size |
+| `RawSize` | 5, 7 | Raw size |
