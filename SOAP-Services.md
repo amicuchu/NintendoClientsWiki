@@ -34,6 +34,8 @@ Quick explanation of the fields:
 * `version`: depends on service (`1.0` on nus service, `2.0` on other services)
 * `device_id`: this is the device id combined with [device_type](#device-type): `device_id | (device_type << 32)`. On Wii U the device id is stored in the OTP and can be retrieved with `MCP_GetDeviceId`.
 
+[Additional parameters](#additional-parameters) depend on the service type and method.
+
 ## Device Type
 | Type | Device |
 | --- | --- |
@@ -41,3 +43,25 @@ Quick explanation of the fields:
 | 4 | 3DS |
 | 5 | Wii U |
 | 7 | vWii |
+
+## Additional Parameters
+All parameters are prefixed with the service code.
+
+| Name | Services | Description |
+| --- | --- | --- |
+| `DeviceId` | `cas`, `ecs`, `ias`, `nus` | Device id, combined with device type |
+| `DeviceToken` | `cas`, `ecs`, `ias` | Device token |
+| `AccountId` | `cas`, `ecs`, `ias` | Account id |
+| `ApplicationId` | `cas`, `ecs` | Application id |
+| `TIN` | `cas`, `ecs` | TIN |
+| `Region` | `cas`, `ecs`, `ias` | Region (e.g. `EUR`) |
+| `RegionId` | `nus` | Region (e.g. `EUR`) |
+| `Country` | `cas`, `ecs`, `ias` | Country (e.g. `NL`) |
+| `CountryCode` | `nus` | Country (e.g. `NL`) |
+| `VirtualDeviceType` | `cas`, `ecs`, `ias`, `nus` | Virtual device type. This overrides the device type in the device id. |
+| `Language` | `cas`, `ecs`, `ias`, `nus` | Language |
+| `SerialNo` | `ecs`, `nus` | Serial number |
+| `Age` | `cas` | Age |
+| `SessionHandle` | `ecs` | Session handle |
+| `ServiceTicket` | `ecs` | Service ticket |
+| `ServiceId` | `ecs` | Service id |
