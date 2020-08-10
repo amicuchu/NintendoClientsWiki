@@ -29,6 +29,7 @@
 ## Errors
 | Code | Message |
 | --- | --- |
+| 2 | Database connection error.: SQL Exception |
 | 1702 | Invalid title ID |
 | 1703 | Application Id is required: Missing applicationId |
 | 1704 | Invalid application ID: Invalid applicationId `...` |
@@ -39,4 +40,4 @@
 | 1719 | No messages found |
 | 1722 | Device id is required. |
 | 1735 | Invalid ecard type: ECardIdentifier is not specified |
-| 1791 | CAS cache error: key must be of type String or Integer |
+| 1791 | CAS cache error<br>CAS cache error: key must be of type String or Integer |
