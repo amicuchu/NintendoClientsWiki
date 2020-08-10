@@ -25,3 +25,8 @@
 | ListPointsPricings |
 | ListTitles |
 | ListTitlesEx |
+
+## Errors
+| Code | Message |
+| --- | --- |
+| 1791 | CAS cache error: key must be of type String or Integer |
