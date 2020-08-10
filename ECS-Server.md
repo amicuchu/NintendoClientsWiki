@@ -19,12 +19,16 @@
 | AccountGetETickets |
 | AccountListETicketIds |
 | AccountListPurchaseHistory |
+| AccountPurchaseTitle |
+| AccountReplenishment |
 | CheckECard |
 | CurrencyAccountsCheckBalance |
 | DeleteSavedCard |
 | DownloadExpressETicket |
 | GetAccountStatus |
+| GetCountryAttributes |
 | GetPurchaseInfo |
 | GetStandbyMode |
 | GetTaxLocation |
 | GetTaxes |
+| GetWalletInfo |
