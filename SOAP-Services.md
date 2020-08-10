@@ -62,6 +62,7 @@ If an error occurs, `ErrorCode` is set to a non-zero integer and another `ErrorM
 ## Device Type
 | Type | Device |
 | --- | --- |
+| 1 | Wii |
 | 3 | DSi |
 | 4 | 3DS |
 | 5 | Wii U |
