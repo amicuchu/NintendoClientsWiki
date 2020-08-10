@@ -36,4 +36,5 @@
 | 1710 | AppId/TIN validation failed: Either applicationId (`...`) or TIN (`...`) are wrong. |
 | 1711 | TIN is required: Missing TIN |
 | 1712 | Invalid TIN: Error parsing TIN `...` |
+| 1735 | Invalid ecard type: ECardIdentifier is not specified |
 | 1791 | CAS cache error: key must be of type String or Integer |
