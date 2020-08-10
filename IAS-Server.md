@@ -16,7 +16,9 @@
 | AccountTransfer |
 | AgreeEULA |
 | CheckECard |
+| DeleteExternalAccount |
 | GetChallenge |
+| GetAccountAttributesByProfile |
 | GetIVSData |
 | GetRegistrationInfo |
 | Register |
