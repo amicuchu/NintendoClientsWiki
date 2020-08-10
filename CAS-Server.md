@@ -14,6 +14,7 @@
 | Name |
 | --- |
 | GetContentSizes |
+| GetCountryMigrateAttributes |
 | GetMessages |
 | ListCashReplenishAmounts |
 | ListContentSetGroups |
