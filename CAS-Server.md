@@ -30,7 +30,7 @@
 | Code | Message |
 | --- | --- |
 | 2 | Database connection error.: SQL Exception |
-| 1702 | Invalid title ID |
+| 1702 | Invalid title ID<br>Invalid title ID: Error parsing title `...` |
 | 1703 | Application Id is required: Missing applicationId |
 | 1704 | Invalid application ID: Invalid applicationId `...` |
 | 1706 | Invalid country code |
