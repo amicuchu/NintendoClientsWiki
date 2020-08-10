@@ -27,8 +27,8 @@ The following tags are always returned:
 
 | Tag | Description |
 | --- | --- |
-| `ContentPrefixURL` | (1) http://nus.cdn.shop.wii.com/ccs/download<br>(3) http://nus.cdn.t.shop.nintendowifi.net/ccs/download<br>(4) http://nus.cdn.c.shop.nintendowifi.net/ccs/download<br>http://nus.cdn.wup.shop.nintendo.net/ccs/download<br>http://nus.cdn.shop.wii.com/ccs/download |
-| `UncachedContentPrefixURL` | https://ccs.shop.wii.com/ccs/download<br>https://ccs.t.shop.nintendowifi.net/ccs/download<br>https://ccs.c.shop.nintendowifi.net/ccs/download<br>https://ccs.wup.shop.nintendo.net/ccs/download<br>https://ccs.shop.wii.com/ccs/download |
+| `ContentPrefixURL` | (1) http://nus.cdn.shop.wii.com/ccs/download<br>(3) http://nus.cdn.t.shop.nintendowifi.net/ccs/download<br>(4) http://nus.cdn.c.shop.nintendowifi.net/ccs/download<br>(5) http://nus.cdn.wup.shop.nintendo.net/ccs/download<br>(7) http://nus.cdn.shop.wii.com/ccs/download |
+| `UncachedContentPrefixURL` | (1) https://ccs.shop.wii.com/ccs/download<br>(3) https://ccs.t.shop.nintendowifi.net/ccs/download<br>(4) https://ccs.c.shop.nintendowifi.net/ccs/download<br>(5) https://ccs.wup.shop.nintendo.net/ccs/download<br>(7) https://ccs.shop.wii.com/ccs/download |
 | `UploadAuditData` | Always 1 |
 | `TitleHash` | Same as `GetSystemTitleHash` |
 
