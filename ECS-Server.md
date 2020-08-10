@@ -14,6 +14,7 @@
 | Name |
 | --- |
 | AccountCheckBalance |
+| AccountDeleteTitleETickets |
 | AccountGetETicketDetails |
 | AccountGetETickets |
 | AccountListETicketIds |
