@@ -39,6 +39,7 @@
 | 1711 | TIN is required: Missing TIN |
 | 1712 | Invalid TIN: Error parsing TIN `...` |
 | 1719 | No messages found |
+| 1720 | Declared array contains null value or is null: Values array in Attribute Filters is null. |
 | 1722 | Device id is required. |
 | 1735 | Invalid ecard type: ECardIdentifier is not specified |
 | 1736 | Invalid Parameter: Invalid Parameter - ListResultLimit cannot be negative<br>Invalid Parameter: Invalid Parameter - ListResultOffset cannot be negative |
