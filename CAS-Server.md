@@ -43,3 +43,4 @@
 | 1735 | Invalid ecard type: ECardIdentifier is not specified |
 | 1736 | Invalid Parameter: Invalid Parameter - ListResultLimit cannot be negative<br>Invalid Parameter: Invalid Parameter - ListResultOffset cannot be negative |
 | 1791 | CAS cache error<br>CAS cache error: key must be of type String or Integer |
+| 1799 | CAS internal error: Unexpected error: null |
