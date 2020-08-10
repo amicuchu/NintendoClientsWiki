@@ -20,7 +20,6 @@
 | 165-XXXX | VPAD (gamepad) |
 | 166-XXXX | AOC (add-on content) |
 | 168-XXXX | NFP (amiibo) |
-| 199-XXXX | [Web browser](#browser-errors) |
 
 # FP Error Codes
 | Error code | Name |
@@ -750,8 +749,3 @@
 | 111-9002 | UNDER_MAINTENANCE |
 | 111-9003 | SERVICE_FINISHED |
 | 111-9100 | INVALID_TEMPLATE |
-
-# Browser Errors
-| Error code | Name |
-| --- | --- |
-| 199-0503 | FOR_BROWSER_LOCKED |
