@@ -18,6 +18,8 @@
 | [GetSystemUpdate](#getsystemupdate) |
 
 ## GetSystemTitleHash
+Response tags:
+
 | Tag | Description |
 | --- | --- |
 | `TitleHash` | 32 uppercase hex digits |
