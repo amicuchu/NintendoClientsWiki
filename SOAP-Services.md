@@ -32,7 +32,7 @@ Quick explanation of the fields:
 
 * `service_code`: `ecs`, `ias`, `cas` or `nus`
 * `version`: depends on service (`1.0` on nus service, `2.0` on other services)
-* `device_id`: this is the device id combined with [device_type](#device-type): `device_id | (device_type << 32)`. On Wii U the device id is stored in the OTP and can be retrieved with `MCP_GetDeviceId`.
+* `device_id`: this is the device id combined with [device type](#device-type): `device_id | (device_type << 32)`. On Wii U the device id is stored in the OTP and can be retrieved with `MCP_GetDeviceId`.
 
 [Additional parameters](#additional-parameters) depend on the service type and method.
 
