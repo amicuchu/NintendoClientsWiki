@@ -29,6 +29,7 @@
 ## Errors
 | Code | Message |
 | --- | --- |
+| 1704 | Invalid application ID: Invalid applicationId `...` |
 | 1710 | AppId/TIN validation failed: Either applicationId (`...`) or TIN (`...`) are wrong. |
 | 1712 | Invalid TIN: Error parsing TIN `...` |
 | 1791 | CAS cache error: key must be of type String or Integer |
