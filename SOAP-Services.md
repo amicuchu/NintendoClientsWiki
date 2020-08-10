@@ -9,6 +9,7 @@ The common client certificate is required to access these servers.
 
 In addition to standard HTTP headers, a `SOAPAction` is included in requests and contains the following string: `urn:{service_code}.wsapi.broadon.com/{method_name}`.
 
+## Request
 To call a method, a POST request is sent with the following xml body:
 
 ```xml
@@ -35,6 +36,28 @@ Quick explanation of the fields:
 * `device_id`: this is the device id combined with [device type](#device-type): `device_id | (device_type << 32)`. On Wii U the device id is stored in the OTP and can be retrieved with `MCP_GetDeviceId`.
 
 [Additional parameters](#additional-parameters) depend on the service type and method.
+
+## Response
+If the method call was successful the server returns the following response. The server does not send any insignificant whitespace (I added it for readability).
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <soapenv:Body>
+        <{method_name}Response xmlns="urn:{service_code}.wsapi.broadon.com">
+            <DeviceId>{device id from request}</DeviceId>
+            <MessageId>{message id from request}</MessageId>
+            <TimeStamp>{timestamp in milliseconds}</TimeStamp>
+            <ErrorCode>0</ErrorCode>
+            {...}
+        </{method_name}Response>
+    </soapenv:Body>
+</soapenv:Envelope>
+```
+
+If an error occurs, `ErrorCode` is set to a non-zero integer and another `ErrorMessage` tag describes the error message.
 
 ## Device Type
 | Type | Device |
