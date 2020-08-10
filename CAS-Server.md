@@ -29,5 +29,5 @@
 ## Errors
 | Code | Message |
 | --- | --- |
-| 1710 | AppId/TIN validation failed: Either applicationId (`%`) or TIN (`%`) are wrong. |
+| 1710 | AppId/TIN validation failed: Either applicationId (`...`) or TIN (`...`) are wrong. |
 | 1791 | CAS cache error: key must be of type String or Integer |
