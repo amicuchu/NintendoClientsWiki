@@ -14,14 +14,9 @@
 | Name |
 | --- |
 | GetSystemCommonETicket |
-| GetSystemTitleHash |
-| GetSystemUpdate |
+| [GetSystemTitleHash](#getsystemtitlehash) |
+| [GetSystemUpdate](#getsystemupdate) |
 
-## Additional Parameters
-In addition to `Version` and `MessageId`, the following parameters are always present:
+## GetSystemTitleHash
 
-| Parameter | Description |
-| --- | --- |
-| `nus:DeviceId` | See description of device id on the page about [SOAP services](SOAP-Services) |
-| `nus:RegionId` | Region id (e.g. `EUR`) |
-| `nus:CountryCode` | Country code (e.g. `NL`) |
+## GetSystemUpdate
