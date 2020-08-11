@@ -10,9 +10,10 @@
 9. [StationURL](#stationurl)
 10. [Variant](#variant)
 11. [Structure](#structure)
-12. [Data](#anydataholder)
-13. [RVConnectionData](#rvconnectiondata-structure)
-14. [ResultRange](#resultrange-structure)
+12. [Data](#data)
+13. [AnyDataHolder](#anydataholder)
+14. [RVConnectionData](#rvconnectiondata-structure)
+15. [ResultRange](#resultrange-structure)
 
 # String
 | Type | Description |
@@ -139,6 +140,9 @@ NEX v3.5.0 introduced a versioning system to structures. Before v3.5.0 their con
 Nintendo often seems to be changing a structure without updating its version number though.
 
 A structure may inherit another structure. The child is stored right after the parent, and gets its own version header.
+
+# Data
+This is an empty [structure](#structure), but it gets its own version header when it is inherited.
 
 # AnyDataHolder
 NEX has a class that can hold any object derived from nn::nex::Data. When these are transmitted as part of request or response data, some meta data is sent along with them, so the other side can properly identify and decode the object.
