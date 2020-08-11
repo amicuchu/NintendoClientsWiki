@@ -27,7 +27,7 @@
 ## Request
 | Type | Name |
 | --- | --- |
-| [MessageRecipient](#messagerecipient) | recipient |
+| [MessageRecipient](#messagerecipient-structure) | recipient |
 
 ## Response
 | Type | Name |
@@ -38,19 +38,19 @@
 ## Request
 | Type | Name |
 | --- | --- |
-| [MessageRecipient](#messagerecipient) | recipient |
+| [MessageRecipient](#messagerecipient-structure) | recipient |
 | [ResultRange] | range |
 
 ## Response
 | Type | Name |
 | --- | --- |
-| [List]&lt;[UserMessage](#usermessage)&gt; | lstMsgHeaders |
+| [List]&lt;[UserMessage](#usermessage-structure)&gt; | lstMsgHeaders |
 
 # (4) RetrieveAllMessagesWithinRange
 ## Request
 | Type | Name |
 | --- | --- |
-| [MessageRecipient](#messagerecipient) | recipient |
+| [MessageRecipient](#messagerecipient-structure) | recipient |
 | [ResultRange] | range |
 
 ## Response
@@ -62,7 +62,7 @@
 ## Request
 | Type | Name |
 | --- | --- |
-| [MessageRecipient](#messagerecipient) | recipient |
+| [MessageRecipient](#messagerecipient-structure) | recipient |
 | [List]&lt;Uint32&gt; | lstMsgIDs |
 | Bool | bLeaveOnServer |
 
@@ -75,7 +75,7 @@
 ## Request
 | Type | Name |
 | --- | --- |
-| [MessageRecipient](#messagerecipient) | recipient |
+| [MessageRecipient](#messagerecipient-structure) | recipient |
 | [List]&lt;Uint32&gt; | lstMessagesToDelete |
 
 ## Response
@@ -85,7 +85,7 @@ This method does not return anything.
 ## Request
 | Type | Name |
 | --- | --- |
-| [MessageRecipient](#messagerecipient) | recipient |
+| [MessageRecipient](#messagerecipient-structure) | recipient |
 
 ## Response
 | Type | Name |
@@ -93,14 +93,17 @@ This method does not return anything.
 | Uint32 | uiNbDeletedMessages |
 
 # Types
-## MessageRecipient
+## MessageRecipient ([Structure])
 | Type | Name |
 | --- | --- |
 | Uint32 | m_uiRecipientType |
 | [PID] | m_principalId |
 | Uint32 | m_gatheringId |
 
-## UserMessage
+## UserMessage ([Structure])
+| This structure inherits from [Data] |
+| --- |
+
 | Type | Name |
 | --- | --- |
 | Uint32 | m_uiID |
@@ -111,11 +114,30 @@ This method does not return anything.
 | Uint32 | m_uiFlags |
 | [String] | m_strSubject |
 | [String] | m_strSender |
-| [MessageRecipient](#messagerecipient) | m_messageRecipient |
+| [MessageRecipient](#messagerecipient-structure) | m_messageRecipient |
+
+## TextMessage ([Structure])
+| This structure inherits from [UserMessage](#usermessage-structure) |
+| --- |
+
+| Type | Name |
+| --- | --- |
+| [String] | m_strTextBody |
+
+## BinaryMessage ([Structure])
+| This structure inherits from [UserMessage](#usermessage-structure) |
+| --- |
+
+| Type | Name |
+| --- | --- |
+| [qBuffer] | m_binaryBody |
 
 [String]: NEX-Common-Types#string
+[qBuffer]: NEX-Common-Types#qbuffer
 [DateTime]: NEX-Common-Types#datetime
 [Data]: NEX-Common-Types#anydataholder
 [List]: NEX-Common-Types#list
 [PID]: NEX-Common-Types#pid
 [ResultRange]: NEX-Common-Types#resultrange-structure
+[Structure]: NEX-Common-Types#structure
+[Data]: NEX-Common-Types#data
