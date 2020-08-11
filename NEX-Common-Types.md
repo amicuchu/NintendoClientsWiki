@@ -142,7 +142,7 @@ Nintendo often seems to be changing a structure without updating its version num
 A structure may inherit another structure. The child is stored right after the parent, and gets its own version header.
 
 # Data
-This is an empty [structure](#structure), but it gets its own version header when it is inherited.
+This is an empty [structure](#structure).
 
 # AnyDataHolder
 NEX has a class that can hold any object derived from nn::nex::Data. When these are transmitted as part of request or response data, some meta data is sent along with them, so the other side can properly identify and decode the object.
