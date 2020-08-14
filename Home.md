@@ -15,10 +15,10 @@ Welcome to the NintendoClients wiki!
 ## Other pages
 * [[Server List]]
 * [[Game Server List]]
-* [Title Database](https://kinnay.github.io)
 * [[Wii U Error Codes]]
 * [[Switch Error Codes]]
 * [[Switch Tokens]]
+* [Title Database](https://kinnay.github.io)
 * [[DKC:TF Level IDs]]
 * [[Mario Kart 8 Track IDs]]
 * [[Mario Kart 8 Protocol]]
