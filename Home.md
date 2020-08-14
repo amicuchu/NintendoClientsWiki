@@ -15,7 +15,7 @@ Welcome to the NintendoClients wiki!
 ## Other pages
 * [[Server List]]
 * [[Game Server List]]
-* [[Network Library Versions]]
+* [Title Database](https://kinnay.github.io)
 * [[Wii U Error Codes]]
 * [[Switch Error Codes]]
 * [[Switch Tokens]]
