@@ -208,6 +208,7 @@ Sometimes, the cause tag is closed immediately (`<cause/>`). Sometimes, it is om
 | 0113 | | Unauthorized device |
 | 0113 | device_id | Unauthorized device |
 | 0118 | | Unique ID and Game Server ID are not linked |
+| 0123 | | Service has expired |
 | 0124 | | Application version is older than usable version registered |
 | 1017 | | The requested game environment wasn't found for the given game server. |
 | 1022 | client_id | The requested client was not found. |
