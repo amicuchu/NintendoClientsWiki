@@ -4,6 +4,7 @@ The following games have additional methods in the ranking protocol:
 * [Mario Kart 8](Ranking-Protocol-(MK8))
 * [Mario Kart 8 Deluxe](Ranking-Protocol-(MK8D))
 * [Super Smash Bros. 4](Ranking-Protocol-(SSB4))
+* [Splatoon](Ranking-Protocol-(Splatoon))
 * [Splatoon 2](Ranking-Protocol-(Splatoon-2))
 
 This remainder of this page describes the methods that are not specific to any game.
