@@ -23,3 +23,9 @@ This message has several purposes:
 
 ## Message 2
 If the Switch does not receive a response after three attempts, it moves on to [message type 3](#message-3). Otherwise, the NAT has endpoint independent filtering and the Switch moves on to [message type 4](#message-4).
+
+## Message 3
+This is used to detect NAT port mapping.
+
+## Message 4
+This is used to detect NAT port mapping.
