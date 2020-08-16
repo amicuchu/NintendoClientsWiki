@@ -17,7 +17,7 @@ Methods 36 - 48 and 51 belong to the TournamentProtocol. The others belong to th
 | 44 | ReportTournamentBotRoundResult |
 | 45 | ReplaceTournamentLeafNode |
 | 46 | StartTournament |
-| 47 | ? |
+| 47 | AutoTournamentMatchmake |
 | 48 | SimpleFindByID |
 | 49 | GetTournamentCompetitions |
 | 50 | GetTournamentCompetition |
