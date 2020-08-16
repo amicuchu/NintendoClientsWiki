@@ -22,3 +22,4 @@ This message has several purposes:
 3. The Switch compares the external ip and port in the response against its local ip and port. If they are the same, the Switch is connected directly to the internet and is not behind a NAT device. In other cases, the Switch moves on to [message type 2](#message-2).
 
 ## Message 2
+If the Switch does not receive a response after three attempts, it moves on to [message type 3](#message-3). Otherwise, the NAT has endpoint independent filtering and the Switch moves on to [message type 4](#message-4).
