@@ -13,7 +13,7 @@
 | TLoZ: Tri Force Heroes | 00176E00 | c1621b84 |
 
 ## Wii U
-https://kinnay.github.io/view.html?page=nexwiiu
+See https://kinnay.github.io/view.html?page=nexwiiu
 
 ## Switch
 | Game | Game Server ID | Access Key | Info |
