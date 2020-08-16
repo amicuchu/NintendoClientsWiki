@@ -11,7 +11,7 @@ The protocol consists of simple UDP messages through port 10025 (primary port) o
 | 0x0 | 4 | Message type |
 | 0x4 | 4 | External port number. This is filled in by the server. |
 | 0x8 | 4 | External IP address. This is filled in by the server. |
-| 0xC | 4 | Unknown |
+| 0xC | 4 | The client fills in its external IP address (after it has received a response to [message type 1](#message-1)). The server fills in its own local IP address. |
 
 The Switch always starts the NAT check by sending [message type 1](#message-1) to the server. What happens next depends on the response of the server.
 
