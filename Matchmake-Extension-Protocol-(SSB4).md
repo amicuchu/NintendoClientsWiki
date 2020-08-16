@@ -11,7 +11,7 @@ Methods 36 - 48 and 51 belong to the TournamentProtocol. The others belong to th
 | 38 | GetTournamentResult |
 | 39 | SetTournamentReplayId |
 | 40 | GetTournamentProfiles |
-| 41 | ? |
+| 41 | JoinOrCreateMatchmakeSession |
 | 42 | RegisterTournamentPlayerInfo |
 | 43 | RegisterTournamentBot |
 | 44 | ReportTournamentBotRoundResult |
