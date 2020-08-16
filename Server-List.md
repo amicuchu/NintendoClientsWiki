@@ -43,7 +43,7 @@ Replace '%' by one of the following:
 | - accounts.nintendo.com<br>- api.accounts.nintendo.com | [Accounts (web)](Account-Server-(Switch)) |
 | - g&lt;game server id&gt;-%.s.n.srv.nintendo.net | [Game servers](NEX-Overview-(Game-Servers)) |
 | - g&lt;game server id&gt;-%.p.srv.nintendo.net | P2P monitoring |
-| - nncs1-%.n.n.srv.nintendo.net<br>- nncs2-%.n.n.srv.nintendo.net | NAT check servers |
+| - nncs1-%.n.n.srv.nintendo.net<br>- nncs2-%.n.n.srv.nintendo.net | [NAT check servers](NAT-Check-Server-(Switch)) |
 | - api-%.znc.srv.nintendo.net | Coral (voice chat) |
 | - api.hac.%.acbaa.srv.nintendo.net | <a href="https://github.com/Kinnay/NintendoClients/wiki/AC:NH-Server">Animal Crossing API</a> |
 | - ecs-%.hac.shop.nintendo.net<br>- ias-%.hac.shop.nintendo.net<br>- beach.hac.%.eshop.nintendo.net<br>- bugyo.hac.%.eshop.nintendo.ent<br>- tagaya.hac.%.eshop.nintendo.net<br>- pushmo.hac.%.eshop.nintendo.net | E-Shop |
