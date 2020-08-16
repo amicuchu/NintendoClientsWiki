@@ -13,17 +13,7 @@
 | TLoZ: Tri Force Heroes | 00176E00 | c1621b84 |
 
 ## Wii U
-| Game | Game Server ID | Access Key |
-| --- | --- | --- |
-| Friends | 00003200 | ridfebb9 |
-| Mario Kart 8 | 1010EB00 | 25dbf96a |
-| Puddle | 1010FB00 | afcffb5c |
-| Super Smash Bros. 4 | 10110E00 | 2869ba38 |
-| DKC: Tropical Freeze | 10144800 | 7fcf384a |
-| Super Mario Maker | 1018DB00 | 9f2b4678 |
-| Minecraft | 101D9D00 | f1b61c8e |
-| Pokkén Tournament | 101C5800 | 6ef3adf1 |
-| Axiom Verge | 101F7900 | 24e0a63b |
+https://kinnay.github.io/view.html?page=nexwiiu
 
 ## Switch
 | Game | Game Server ID | Access Key | Info |
