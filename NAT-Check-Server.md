@@ -13,7 +13,7 @@ The protocol consists of simple UDP messages through port 10025 (primary port) o
 | 0x0 | 4 | [Message type](#message-types) |
 | 0x4 | 4 | External port number. This is filled in by the server. |
 | 0x8 | 4 | External IP address. This is filled in by the server. |
-| 0xC | 4 | The client fills in its external IP address (after it has received a response to [message type 1](#message-types)). The server fills in its own local IP address. |
+| 0xC | 4 | NEX fills in its external IP address (after it has received a response to [message type 1](#message-types)). The server fills in its own local IP address. |
 
 ## Message Types
 | Type | Description |
