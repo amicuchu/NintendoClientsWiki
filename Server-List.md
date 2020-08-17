@@ -1,14 +1,9 @@
-## 3DS
-| Server | Description |
-| --- | --- |
-| - cas.c.shop.nintendowifi.net<br>- ecs.c.shop.nintendowifi.net<br>- ias.c.shop.nintendowifi.net<br>- nus.c.shop.nintendowifi.net<br> | [eShop services](SOAP-Services) |
-
 ## Wii U
 | Server | Description |
 | --- | --- |
 | - account.nintendo.net<br>- game-dev.account.nintendo.net<br>- system-dev.account.nintendo.net<br>- library-dev.account.nintendo.net<br>- staging.account.nintendo.net | [[Account server]] |
 | - mii-secure.account.nintendo.net<br>- mii-secure.cdn.nintendo.net<br>- mii-images.cdn.nintendo.net<br>- game-dev-mii-images.cdn.nintendo.net<br>- system-dev-mii-images.cdn.nintendo.net<br>- library-dev-mii-images.cdn.nintendo.net<br>- staging-mii-images.cdn.nintendo.net | Mii images |
-| - nncs1.app.nintendowifi.net<br>- nncs2.app.nintendowifi.net | NAT check server |
+| - nncs1.app.nintendowifi.net<br>- nncs2.app.nintendowifi.net | [NAT check server](NAT-Check-Server) |
 | - hpp-&lt;game server id&gt;-&lt;environment&gt;.n.app.nintendo.net | [Hpp server](Hpp-Server) |
 | - discovery.olv.nintendo.net | Miiverse |
 | - tagaya.wup.shop.nintendo.net | [Title version list](Tagaya-Server) |
@@ -43,7 +38,7 @@ Replace '%' by one of the following:
 | - accounts.nintendo.com<br>- api.accounts.nintendo.com | [Accounts (web)](Account-Server-(Switch)) |
 | - g&lt;game server id&gt;-%.s.n.srv.nintendo.net | [Game servers](NEX-Overview-(Game-Servers)) |
 | - g&lt;game server id&gt;-%.p.srv.nintendo.net | P2P monitoring |
-| - nncs1-%.n.n.srv.nintendo.net<br>- nncs2-%.n.n.srv.nintendo.net | [NAT check servers](NAT-Check-Server-(Switch)) |
+| - nncs1-%.n.n.srv.nintendo.net<br>- nncs2-%.n.n.srv.nintendo.net | [NAT check server](NAT-Check-Server) |
 | - api-%.znc.srv.nintendo.net | Coral (voice chat) |
 | - api.hac.%.acbaa.srv.nintendo.net | <a href="https://github.com/Kinnay/NintendoClients/wiki/AC:NH-Server">Animal Crossing API</a> |
 | - ecs-%.hac.shop.nintendo.net<br>- ias-%.hac.shop.nintendo.net<br>- beach.hac.%.eshop.nintendo.net<br>- bugyo.hac.%.eshop.nintendo.ent<br>- tagaya.hac.%.eshop.nintendo.net<br>- pushmo.hac.%.eshop.nintendo.net | E-Shop |
