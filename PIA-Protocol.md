@@ -42,7 +42,7 @@ All packets consist of an unencrypted [header](#header), which is followed by on
 
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 4 | Unknown |
+| 0x0 | 4 | Magic number: `32 AB 98 64` |
 | 0x4 | 1 | Unknown |
 | 0x5 | 1 | Unknown |
 | 0x6 | 2 | Unknown |
@@ -52,7 +52,7 @@ All packets consist of an unencrypted [header](#header), which is followed by on
 
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 4 | Unknown |
+| 0x0 | 4 | Magic number: `32 AB 98 64` |
 | 0x4 | 1 | Unknown |
 | 0x5 | 4 | Unknown |
 | 0x9 | 4 | Unknown |
