@@ -8,24 +8,16 @@ The protocol consists of simple UDP messages through port 10025 (primary port) o
 
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 4 | Message type |
+| 0x0 | 4 | [Message type](#message-types) |
 | 0x4 | 4 | External port number. This is filled in by the server. |
 | 0x8 | 4 | External IP address. This is filled in by the server. |
-| 0xC | 4 | The client fills in its external IP address (after it has received a response to [message type 1](#message-1)). The server fills in its own local IP address. |
+| 0xC | 4 | The client fills in its external IP address (after it has received a response to [message type 1](#message-types)). The server fills in its own local IP address. |
 
-The Switch always starts the NAT check by sending [message type 1](#message-1) to the server. What happens next depends on the response of the server.
-
-## Message 1
-This message has several purposes:
-1. The Switch uses it to find a working NAT check server. Usually, the primary server and port work fine. However, if the Switch does not receive a response after a given amount of time it tries the secondary port. If that doesn't work either it moves on to the secondary server.
-2. The Switch measures the time until it receives a response. This is used as a timeout for subsequent messages.
-3. The Switch compares the external ip and port in the response against its local ip and port. If they are the same, the Switch is connected directly to the internet and is not behind a NAT device. In other cases, the Switch moves on to [message type 2](#message-2).
-
-## Message 2
-If the Switch does not receive a response after three attempts, it moves on to [message type 3](#message-3). Otherwise, the NAT has endpoint independent filtering and the Switch moves on to [message type 4](#message-4).
-
-## Message 3
-This is used to detect NAT port mapping.
-
-## Message 4
-This is used to detect NAT port mapping.
+## Message Types
+| Type | Description |
+| --- | --- |
+| 1 | Nothing special. The server replies from its regular IP address and port. The Switch uses this to check if the NAT check server is reachable at all, to measure the time that it takes to receive a response, and to figure out its own external IP address and port. |
+| 2 | The server replies from a different IP address and port. The Switch uses this to determine the NAT filtering mode. |
+| 3 | The server replies from the same IP address but from a different port. The Switch uses this to determine the NAT filtering mode.
+| 4 | Nothing special. The Switch uses this to determine the NAT mapping mode. |
+| 5 | Nothing special. The Switch uses this to determine the NAT mapping mode. |
