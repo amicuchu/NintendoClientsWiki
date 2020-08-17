@@ -16,8 +16,8 @@ The protocol consists of simple UDP messages through port 10025 (primary port) o
 ## Message Types
 | Type | Description |
 | --- | --- |
-| 1 | Nothing special. The server replies from its regular IP address and port. The Switch uses this to check if the NAT check server is reachable at all, to measure the time that it takes to receive a response, and to figure out its own external IP address and port. |
+| 1 | The server replies from its regular IP address and port. The Switch uses this to check if the NAT check server is reachable at all, to measure the time that it takes to receive a response, and to figure out its own external IP address and port. |
 | 2 | The server replies from a different IP address and port. The Switch uses this to determine the NAT filtering mode. |
 | 3 | The server replies from the same IP address but from a different port. The Switch uses this to determine the NAT filtering mode.
-| 4 | Nothing special. The Switch uses this to determine the NAT mapping mode. |
-| 5 | Nothing special. The Switch uses this to determine the NAT mapping mode. |
+| 4 | The server replies from its regular IP address and port. The Switch uses this to determine the NAT mapping mode. |
+| 5 | The server replies from its regular IP address and port. The Switch uses this to determine the NAT mapping mode. |
