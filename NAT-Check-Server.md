@@ -20,6 +20,12 @@ The protocol consists of simple UDP messages through port 10025 (primary port) o
 | --- | --- |
 | 1 | The server replies from its regular IP address and port. NEX uses this to check if the NAT check server is reachable at all, to measure the time that it takes to receive a response, and to figure out its own external IP address and port. |
 | 2 | The server replies from a different IP address and port. NEX uses this to determine the NAT filtering mode. |
-| 3 | The server replies from the same IP address but from a different port. NEX uses this to determine the NAT filtering mode.
+| 3 | The server replies from its regular IP address but from a different port. NEX uses this to determine the NAT filtering mode. |
 | 4 | The server replies from its regular IP address and port. NEX uses this to determine the NAT mapping mode. |
 | 5 | The server replies from its regular IP address and port. NEX uses this to determine the NAT mapping mode. |
+
+| Type | Description |
+| --- | --- |
+| 101 | The server replies from its regular IP address and port. |
+| 102 | The server replies from its regular IP address but from a different port. |
+| 103 | The server replies from its regular IP address and port. |
