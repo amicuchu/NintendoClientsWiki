@@ -3,7 +3,7 @@ These packets are sent directly from one console to another, with no server in b
 All packets consist of an unencrypted [header](#header), which is followed by one or more [messages](#messages), and sometimes a [packet signature](#encryption).
 
 ## Header
-*Wii U and Switch (up to 5.3):*
+*Up to 5.3:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -14,7 +14,7 @@ All packets consist of an unencrypted [header](#header), which is followed by on
 | 0x8 | 2 | [Session timer](#rtt-calculation) |
 | 0xA | 2 | [RTT timer](#rtt-calculation) |
 
-*Switch (5.7 - 5.10):*
+*5.7 - 5.10:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -27,7 +27,7 @@ All packets consist of an unencrypted [header](#header), which is followed by on
 | 0xC | 8 | [AES-GCM nonce](#encryption) |
 | 0x14 | 16 | [AES-GCM authentication tag](#encryption) |
 
-*Switch (5.11 - 5.19):*
+*5.11 - 5.19:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -38,7 +38,7 @@ All packets consist of an unencrypted [header](#header), which is followed by on
 | 0x8 | 8 | [AES-GCM nonce](#encryption) |
 | 0x10 | 16 | [AES-GCM authentication tag](#encryption) |
 
-*Switch (5.24):*
+*5.24:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -48,7 +48,7 @@ All packets consist of an unencrypted [header](#header), which is followed by on
 | 0x6 | 2 | Unknown |
 | 0x10 | 16 | Unknown |
 
-*Switch (5.29):*
+*5.29:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -77,7 +77,7 @@ This part of the packet may be [encrypted](#encryption). A packet may contain mo
 
 All messages are padded such that their size is a multiple of 4 bytes.
 
-*Wii U and Switch (up to 5.3):*
+*Up to 5.3:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -92,7 +92,7 @@ All messages are padded such that their size is a multiple of 4 bytes.
 | 0x14 | | Payload (protocol-specific) |
 | | | Padding |
 
-*Switch (5.9 and 5.10):*
+*5.9 and 5.10:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -106,7 +106,7 @@ All messages are padded such that their size is a multiple of 4 bytes.
 | 0x18 | | Payload (protocol-specific) |
 | | | Padding |
 
-*Switch (5.11):*
+*5.11:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -120,7 +120,7 @@ All messages are padded such that their size is a multiple of 4 bytes.
 | 0x16 | | Payload (protocol-specific) |
 | | | Padding |
 
-*Switch (5.14 - 5.17):*
+*5.14 - 5.17:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -134,7 +134,7 @@ All messages are padded such that their size is a multiple of 4 bytes.
 | 0x18 | | Payload (protocol-specific) |
 | | | Padding |
 
-*Switch (5.18 and later):*
+*5.18:*
 
 Fields that are not present are copied from the previous message.
 
