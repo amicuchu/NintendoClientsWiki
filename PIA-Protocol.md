@@ -163,7 +163,7 @@ Fields that are not present are copied from the previous message.
 Every console in a mesh gets its own station index. Consoles that haven't joined a mesh yet have this field set to 0xFD. This is not the same as the [station id](#station-id).
 
 ### Station id
-This is a unique id per station. In NEX mode, it is the [Rendez-Vous connection id](Secure-Protocol#1-register). In LDN and LAN mode, it is generated based on the local address of the station.
+This is a unique id per station. In NEX mode, it is the principal id (pid). In LDN and LAN mode, it is generated based on the local address of the station.
 
 ### Destination
 The content of this field depends on the [message flags](#message-flags). If the flag is cleared, this field contains the [station id](#station-id) of the destination console. If the flag is set, this field contains a bitmap where each bit represents one destination console (the bit number of a console is its station index: `1 << station_index`).
