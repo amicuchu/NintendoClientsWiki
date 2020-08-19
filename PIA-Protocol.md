@@ -56,7 +56,7 @@ All packets consist of an unencrypted [header](#header), which is followed by on
 | 0x4 | 1 | This byte consists of two parts:<br>`0x80`: Encryption enabled<br>`0x7F`: Version number (9) |
 | 0x5 | 4 | Unknown |
 | 0x9 | 4 | Unknown |
-| 0xD | 2 | Unknown |
+| 0xD | 2 | Packet id |
 | 0xF | 17 | Unknown |
 
 ### Connection ID
