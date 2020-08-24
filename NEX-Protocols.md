@@ -7,62 +7,62 @@ See also: [[RMC Protocol]]
 ## Common Protocols
 | ID | Protocol |
 | --- | --- |
-| 0x01 | [Remote log device](Remote-Log-Device-Protocol) |
-| 0x03 | [NAT traversal](NAT-Traversal-Protocol) |
-| 0x0A | [Authentication](Authentication-Protocol) |
-| 0x0B | [Secure connection](Secure-Protocol) |
-| 0x0E | [Notification events](Notification-Protocol) |
-| 0x12 | [Health](Health-Protocol) |
-| 0x13 | [Monitoring](Monitoring-Protocol) |
-| 0x14 | [Friends](Friends-Protocol) |
-| 0x15 | [Match making](Match-Making-Protocol) |
-| 0x17 | [Messaging](Messaging-Protocol) |
-| 0x18 | [Persistent store](Persistent-Store-Protocol) |
-| 0x19 | [Account management](Account-Management-Protocol) |
-| 0x1B | [Message delivery](Message-Delivery-Protocol) |
-| 0x32 | [Match making (extension)](Match-Making-Protocol-Ext) |
+| 1 | [Remote log device](Remote-Log-Device-Protocol) |
+| 3 | [NAT traversal](NAT-Traversal-Protocol) |
+| 10 | [Authentication](Authentication-Protocol) |
+| 11 | [Secure connection](Secure-Protocol) |
+| 14 | [Notification events](Notification-Protocol) |
+| 18 | [Health](Health-Protocol) |
+| 19 | [Monitoring](Monitoring-Protocol) |
+| 20 | [Friends](Friends-Protocol) |
+| 21 | [Match making](Match-Making-Protocol) |
+| 23 | [Messaging](Messaging-Protocol) |
+| 24 | [Persistent store](Persistent-Store-Protocol) |
+| 25 | [Account management](Account-Management-Protocol) |
+| 27 | [Message delivery](Message-Delivery-Protocol) |
+| 50 | [Match making (extension)](Match-Making-Protocol-Ext) |
 
 ## Nintendo Only
 
 | ID | Protocol |
 | --- | --- |
-| 0x64 | [Nintendo notification events](Nintendo-Notification-Event-Protocol) |
-| 0x65 | [Friends (3DS)](Friends-Protocol-(3DS)) |
-| 0x66 | [Friends (Wii U)](Friends-Protocol-(Wii-U)) |
-| 0x6D | [Matchmake extension](Matchmake-Extension-Protocol) |
-| 0x6E | [Utility](Utility-Protocol) |
-| 0x70 | [Ranking](Ranking-Protocol) |
-| 0x73 | [Data store](Data-Store-Protocol) |
-| 0x74 | [Debug](Debug-Protocol) |
-| 0x78 | [Matchmake referee](Matchmake-Referee-Protocol) |
-| 0x79 | [Subscriber](Subscriber-Protocol) |
-| 0x7A | [Ranking 2](Ranking-Protocol-2) |
-| 0x7B | [AA user](AA-User-Protocol) |
-| 0x7C | Screening |
+| 100 | [Nintendo notification events](Nintendo-Notification-Event-Protocol) |
+| 101 | [Friends (3DS)](Friends-Protocol-(3DS)) |
+| 102 | [Friends (Wii U)](Friends-Protocol-(Wii-U)) |
+| 109 | [Matchmake extension](Matchmake-Extension-Protocol) |
+| 110 | [Utility](Utility-Protocol) |
+| 112 | [Ranking](Ranking-Protocol) |
+| 115 | [Data store](Data-Store-Protocol) |
+| 116 | [Debug](Debug-Protocol) |
+| 120 | [Matchmake referee](Matchmake-Referee-Protocol) |
+| 121 | [Subscriber](Subscriber-Protocol) |
+| 122 | [Ranking 2](Ranking-Protocol-2) |
+| 123 | [AA user](AA-User-Protocol) |
+| 124 | Screening |
 
 ## Not provided by Nintendo
 | ID | Protocol |
 | --- | --- |
-| 0x0C | Back end management |
-| 0x10 | [Simple authentication](Simple-Authentication-Protocol) |
-| 0x11 | Siege |
-| 0x1C | Client settings |
-| 0x1D | Ubi account management |
-| 0x1E | Geo localization |
-| 0x1F | News |
-| 0x23 | Privileges |
-| 0x24 | Tracking / telemetry |
-| 0x27 | Localization |
-| 0x2A | Game session |
-| 0x2C | Sub account management |
-| 0x2D | IP to location |
-| 0x2E | IP to location admin |
-| 0x2F | Ubi friends |
-| 0x30 | Skill rating |
-| 0x31 | Uplay win |
-| 0x33 | Title storage |
-| 0x35 | User storage |
-| 0x37 | Player stats |
-| 0x47 | Offline game notifications |
-| 0x48 | User account management |
-| 0x54 | Siege admin |
+| 12 | Back end management |
+| 16 | [Simple authentication](Simple-Authentication-Protocol) |
+| 17 | Siege |
+| 28 | Client settings |
+| 29 | Ubi account management |
+| 30 | Geo localization |
+| 31 | News |
+| 35 | Privileges |
+| 36 | Tracking / telemetry |
+| 39 | Localization |
+| 42 | Game session |
+| 44 | Sub account management |
+| 45 | IP to location |
+| 46 | IP to location admin |
+| 47 | Ubi friends |
+| 48 | Skill rating |
+| 49 | Uplay win |
+| 51 | Title storage |
+| 53 | User storage |
+| 55 | Player stats |
+| 71 | Offline game notifications |
+| 72 | User account management |
+| 84 | Siege admin |
