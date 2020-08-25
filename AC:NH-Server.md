@@ -326,7 +326,7 @@ Response on success:
 | user_profile | String |
 | land_profile | String |
 
-### POST /api/v1/users/&lt;id&gt;/web_service_status
+### PUT /api/v1/users/&lt;id&gt;/web_service_status
 | Param | Type |
 | --- | --- |
 | status | String |
