@@ -38,7 +38,7 @@ See also: [[RMC Protocol]]
 | 121 | [Subscriber](Subscriber-Protocol) |
 | 122 | [Ranking 2](Ranking-Protocol-2) |
 | 123 | [AA user](AA-User-Protocol) |
-| 124 | Screening |
+| 124 | [Screening](Screening-Protocol) |
 
 ## Not provided by Nintendo
 | ID | Protocol |
