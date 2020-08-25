@@ -21,9 +21,9 @@ This server is at https://api.hac.lp1.acbaa.srv.nintendo.net. All request and re
 | GET | [`/api/v1/designs/<id>`](#get-apiv1designsid) |
 | PUT | `/api/v1/designs/<id>` |
 | DELETE | `/api/v1/designs/<id>` |
-| POST | `/api/v1/designs/<id>/feedback` |
+| POST | [`/api/v1/designs/<id>/feedback`](#post-apiv1designsidfeedback) |
 | GET | [`/api/v1/friend_requests`](#get-apiv1friend_requests) |
-| POST | `/api/v1/friend_requests` |
+| POST | [`/api/v1/friend_requests`](#post-apiv1friend_requests) |
 | PUT | [`/api/v1/friend_requests/<id>`](#put-apiv1friend_requestsid) |
 | GET | [`/api/v1/friends`](#get-apiv1friends) |
 | DELETE | `/api/v1/friends/<id>` |
@@ -33,14 +33,14 @@ This server is at https://api.hac.lp1.acbaa.srv.nintendo.net. All request and re
 | GET | [`/api/v1/legacy_designs`](#get-apiv1legacy_designs) |
 | DELETE | [`/api/v1/legacy_designs`](#delete-apiv1legacy_designs) |
 | GET | [`/api/v1/legacy_designs/<id>`](#get-apiv1legacy_designsid) |
-| GET | `/api/v1/message_cards` |
-| POST | `/api/v1/message_cards` |
-| GET | `/api/v1/message_cards/<id>` |
+| GET | [`/api/v1/message_cards`](#get-apiv1message_cards) |
+| POST | [`/api/v1/message_cards`](#post-apiv1message_cards) |
+| GET | [`/api/v1/message_cards/<id>`](#get-apiv1message_cardsid) |
 | POST | [`/api/v1/message_cards/delete`](#post-apiv1message_cardsdelete) |
 | POST | [`/api/v1/notification_tokens`](#post-apiv1notification_tokens) |
-| POST | `/api/v1/reports` |
+| POST | [`/api/v1/reports`](#post-apiv1reports) |
 | POST | [`/api/v1/users`](#post-apiv1users) |
-| PUT | `/api/v1/users/<id>/land` |
+| PUT | [`/api/v1/users/<id>/land`](#put-apiv1usersidland) |
 | PUT | `/api/v1/users/<id>/profile` |
 | GET | [`/api/v1/users/<id>/profile_status`](#get-apiv1usersidprofile_status) |
 | PUT | [`/api/v1/users/<id>/web_service_status`](#put-apiv1usersidweb_service_status) |
@@ -94,6 +94,11 @@ Response on success:
 | id | Uint64 |
 | body | Binary |
 
+### POST /api/v1/designs/&lt;id&gt;/feedback
+| Param | Type |
+| --- | --- |
+| type | String |
+
 ### GET /api/v1/friend_requests
 | URL Param | Description |
 | --- | --- |
@@ -113,6 +118,22 @@ Response on success:
 | user_id |
 | sent_at |
 | meta |
+
+### POST /api/v1/friend_requests
+| URL Param | Description |
+| --- | --- |
+| target_user_id | Integer |
+
+| Param | Type |
+| --- | --- |
+| meta | Binary |
+
+Response on success:
+
+| Field | Type |
+| --- | --- |
+| id | Uint64 |
+| approved | Bool |
 
 ### PUT /api/v1/friend_requests/&lt;id&gt;
 | Param | Type |
@@ -206,6 +227,50 @@ Response on success:
 | id | Uint64 |
 | body | Binary |
 
+### GET /api/v1/message_cards
+| URL Param | Description |
+| --- | --- |
+| offset | Integer |
+| limit | Integer |
+
+Response on success:
+
+| Field |
+| --- |
+| total |
+| count |
+| headers |
+
+#### Header:
+| Field |
+| --- |
+| id |
+| user_id |
+| sent_at |
+| digest |
+| meta |
+
+### POST /api/v1/message_cards
+| Param | Type |
+| --- | --- |
+| target_id | Uint64 |
+| body | Binary |
+| meta | Binary |
+
+Response on success:
+
+| Field | Type |
+| --- | --- |
+| id | Uint64 |
+
+### GET /api/v1/message_cards/&lt;id&gt;
+Response on success:
+
+| Field | Type |
+| --- | --- |
+| id | Uint64 |
+| body | Binary |
+
 ### POST /api/v1/message_cards/delete
 | Param | Type |
 | --- | --- |
@@ -217,6 +282,24 @@ Response on success:
 | --- | --- |
 | token | String |
 
+### POST /api/v1/reports
+| Param | Type |
+| --- | --- |
+| type | String |
+| category | String |
+| reason | String |
+| language | String |
+| image | Binary |
+| user_id | Uint64 |
+| ugc_data | Object |
+| context | Object |
+
+Response on success:
+
+| Field | Type |
+| --- | --- |
+| report_id | String |
+
 ### POST /api/v1/users
 | Param | Type |
 | --- | --- |
@@ -225,6 +308,12 @@ Response on success:
 | birth_date | Uint8 |
 
 | Field | Type |
+| --- | --- |
+| id | Uint64 |
+| password | String |
+
+### PUT /api/v1/users/&lt;id&gt;/land
+| Param | Type |
 | --- | --- |
 | id | Uint64 |
 | password | String |
