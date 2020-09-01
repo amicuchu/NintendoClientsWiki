@@ -2,7 +2,7 @@
 
 | Method ID | Method Name |
 | --- | --- |
-| 1 | Hello |
+| 1 | [Hello](#1-hello) |
 | 2 | [PostContent](#2-postcontent) |
 | 3 | [GetContent](#3-getcontent) |
 | 4 | Follow |
@@ -17,6 +17,15 @@
 | 13 | [UpdateUserStatus](#13-updateuserstatus) |
 | 14 | [GetFriendUserStatuses](#14-getfrienduserstatuses) |
 | 15 | [GetUserStatuses](#15-getuserstatuses) |
+
+# (1) Hello
+## Request
+| Type | Description |
+| --- | --- |
+| [String] | Unknown |
+
+## Response
+This method does not return anything.
 
 # (2) PostContent
 ## Request
