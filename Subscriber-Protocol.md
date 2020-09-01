@@ -44,7 +44,7 @@
 ## Request
 | Type | Description |
 | --- | --- |
-| [List]&lt;[SubscriberGetContentParam](#subscribergetcontentparam-structure) | Param |
+| [List]&lt;[SubscriberGetContentParam](#subscribergetcontentparam-structure)&gt; | Param |
 
 ## Response
 | Type | Description |
