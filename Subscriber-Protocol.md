@@ -12,11 +12,11 @@
 | 8 | GetFollower |
 | 9 | GetNumFollowers |
 | 10 | GetTimeline |
-| 11 | DeleteContent |
+| 11 | [DeleteContent](#11-deletecontent) |
 | 12 | [GetContentMulti](#12-getcontentmulti) |
-| 13 | UpdateUserStatus |
-| 14 | GetFriendUserStatuses |
-| 15 | GetUserStatuses |
+| 13 | [UpdateUserStatus](#13-updateuserstatus) |
+| 14 | [GetFriendUserStatuses](#14-getfrienduserstatuses) |
+| 15 | [GetUserStatuses](#15-getuserstatuses) |
 
 # (2) PostContent
 ## Request
@@ -40,6 +40,16 @@
 | --- | --- |
 | [List]&lt;[SubscriberContent](#subscribercontent-structure)&gt; | Content |
 
+# (11) DeleteContent
+## Request
+| Type | Description |
+| --- | --- |
+| [List]&lt;[String]&gt; | Unknown |
+| Uint64 | Unknown |
+
+## Response
+This method does not return anything.
+
 # (12) GetContentMulti
 ## Request
 | Type | Description |
@@ -50,6 +60,39 @@
 | Type | Description |
 | --- | --- |
 | [List]&lt;[List]&lt;[SubscriberContent](#subscribercontent-structure)&gt;&gt; | Content |
+
+# (13) UpdateUserStatus
+## Request
+| Type | Description |
+| --- | --- |
+| [List]&lt;[Unknown](#unknown-structure)&gt; | Unknown |
+| [Buffer] | Unknown |
+
+## Response
+This method does not return anything.
+
+# (14) GetFriendUserStatuses
+## Request
+| Type | Description |
+| --- | --- |
+| [Buffer] | Unknown |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[UserStatus](#userstatus-structure)&gt; | Status list |
+
+# (15) GetUserStatuses
+## Request
+| Type | Description |
+| --- | --- |
+| [List]&lt;Uint64&gt; | Unknown |
+| [Buffer] | Unknown |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[UserStatus](#userstatus-structure)&gt; | Status list |
 
 # Types
 ## SubscriberContent ([Structure])
@@ -76,6 +119,17 @@
 | [List]&lt;[String]&gt; | Unknown |
 | [String] | Unknown |
 | [qBuffer] | Unknown |
+
+## Unknown ([Structure])
+| Type | Description |
+| --- | --- |
+| [qBuffer] | Unknown |
+
+## UserStatus ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint64 | Unknown |
+| [List]&lt;[qBuffer]&gt; | Unknown |
 
 [Result]: NEX-Common-Types#result
 [String]: NEX-Common-Types#string
