@@ -140,3 +140,4 @@ This method does not return anything.
 [ResultRange]: NEX-Common-Types#resultrange-structure
 [Structure]: NEX-Common-Types#structure
 [qBuffer]: NEX-Common-Types#qbuffer
+[Buffer]: NEX-Common-Types#buffer
