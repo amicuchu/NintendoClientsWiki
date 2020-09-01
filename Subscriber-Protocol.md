@@ -38,9 +38,19 @@
 ## Response
 | Type | Description |
 | --- | --- |
-| [List]&lt;SubscriberContent&gt; | Content |
+| [List]&lt;[SubscriberContent](#subscribercontent-structure)&gt; | Content |
 
 # Types
+## SubscriberContent ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint64 | Unknown |
+| [String] | Unknown |
+| [qBuffer] | Unknown |
+| Uint64 | Unknown |
+| [List]&lt;[String]&gt; | Unknown |
+| [DateTime] | Unknown |
+
 ## SubscriberGetContentParam ([Structure])
 | Type | Description |
 | --- | --- |
