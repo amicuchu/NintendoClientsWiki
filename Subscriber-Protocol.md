@@ -13,7 +13,7 @@
 | 9 | GetNumFollowers |
 | 10 | GetTimeline |
 | 11 | DeleteContent |
-| 12 | GetContentMulti |
+| 12 | [GetContentMulti](#12-getcontentmulti) |
 | 13 | UpdateUserStatus |
 | 14 | GetFriendUserStatuses |
 | 15 | GetUserStatuses |
@@ -39,6 +39,17 @@
 | Type | Description |
 | --- | --- |
 | [List]&lt;[SubscriberContent](#subscribercontent-structure)&gt; | Content |
+
+# (12) GetContentMulti
+## Request
+| Type | Description |
+| --- | --- |
+| [List]&lt;[SubscriberGetContentParam](#subscribergetcontentparam-structure) | Param |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[List]&lt;[SubscriberContent](#subscribercontent-structure)&gt;&gt; | Content |
 
 # Types
 ## SubscriberContent ([Structure])
