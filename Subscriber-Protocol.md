@@ -4,7 +4,7 @@
 | --- | --- |
 | 1 | Hello |
 | 2 | [PostContent](#2-postcontent) |
-| 3 | GetContent |
+| 3 | [GetContent](#3-getcontent) |
 | 4 | Follow |
 | 5 | UnfollowAllAndFollow |
 | 6 | Unfollow |
@@ -29,7 +29,26 @@
 | --- | --- |
 | Uint64 | Unknown |
 
+# (3) GetContent
+## Request
+| Type | Description |
+| --- | --- |
+| [SubscriberGetContentParam](#subscribergetcontentparam-structure) | Param |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;SubscriberContent&gt; | Content |
+
 # Types
+## SubscriberGetContentParam ([Structure])
+| Type | Description |
+| --- | --- |
+| [String] | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint64 | Unknown |
+
 ## SubscriberPostContentParam ([Structure])
 | Type | Description |
 | --- | --- |
