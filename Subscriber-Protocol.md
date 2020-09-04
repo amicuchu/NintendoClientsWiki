@@ -95,7 +95,7 @@ This method does not return anything.
 ## Request
 | Type | Description |
 | --- | --- |
-| [List]&lt;Uint64&gt; | Unknown |
+| [List]&lt;[PID]&gt; | User ids |
 | [List]&lt;Uint8&gt; | Unknown |
 
 ## Response
@@ -137,7 +137,7 @@ This method does not return anything.
 ## SubscriberUserStatusInfo ([Structure])
 | Type | Description |
 | --- | --- |
-| Uint64 | Unknown |
+| [PID] | User id |
 | [List]&lt;[qBuffer]&gt; | Unknown |
 
 [Result]: NEX-Common-Types#result
