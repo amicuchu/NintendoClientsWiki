@@ -5,7 +5,7 @@
 | 1 | [StartRound](#1-startround) |
 | 2 | GetStartRoundParam |
 | 3 | [EndRound](#3-endround) |
-| 4 | [EndRoundWithoutReport](#4-endroundwithoutreport) |
+| 4 | [EndRoundWithPartialReport](#4-endroundwithpartialreport) |
 | 5 | [GetRoundParticipants](#5-getroundparticipants) |
 | 6 | GetNotSummarizedRound |
 | 7 | GetRound |
@@ -35,7 +35,7 @@
 ## Response
 This method does not return anything.
 
-# (4) EndRoundWithoutReport
+# (4) EndRoundWithPartialReport
 ## Request
 | Type | Description |
 | --- | --- |
