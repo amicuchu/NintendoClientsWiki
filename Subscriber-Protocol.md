@@ -84,7 +84,7 @@ This method does not return anything.
 ## Request
 | Type | Description |
 | --- | --- |
-| [List]&lt;Uint8&gt; | Between 0 and 7 |
+| [List]&lt;Uint8&gt; | Up to 8 different integers between 0 and 7 |
 
 ## Response
 | Type | Description |
@@ -96,7 +96,7 @@ This method does not return anything.
 | Type | Description |
 | --- | --- |
 | [List]&lt;[PID]&gt; | User ids |
-| [List]&lt;Uint8&gt; | Between 0 and 7 |
+| [List]&lt;Uint8&gt; | Up to 8 different integers between 0 and 7 |
 
 ## Response
 | Type | Description |
