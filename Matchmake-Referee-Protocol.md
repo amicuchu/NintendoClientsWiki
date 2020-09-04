@@ -15,6 +15,9 @@
 | 11 | GetStatsAll |
 | 12 | CreateStats |
 | 13 | GetOrCreateStats |
+| 14 | [ResetStats](#14-resetstats) |
+| 15 | GetEventPoint |
+| 16 | ResetEventPoint |
 
 # (1) StartRound
 ## Request
@@ -50,6 +53,13 @@ This method does not return anything.
 | Type | Description |
 | --- | --- |
 | Uint64 | Round id |
+
+## Response
+This method does not return anything.
+
+# (14) ResetStats
+## Request
+This method does not take any parameters.
 
 ## Response
 This method does not return anything.
