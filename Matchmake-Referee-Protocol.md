@@ -6,14 +6,15 @@
 | 2 | GetStartRoundParam |
 | 3 | [EndRound](#3-endround) |
 | 4 | [EndRoundWithPartialReport](#4-endroundwithpartialreport) |
-| 5 | [GetRoundParticipants](#5-getroundparticipants) |
-| 6 | GetNotSummarizedRound |
-| 7 | GetRound |
-| 8 | GetStatsPrimary |
-| 9 | GetStatsPrimaries |
-| 10 | GetStatsAll |
-| 11 | CreateStats |
-| 12 | GetOrCreateStats |
+| 5 | [EndRoundWithoutReport](#5-endroundwithoutreport) |
+| 6 | GetRoundParticipants |
+| 7 | GetNotSummarizedRound |
+| 8 | GetRound |
+| 9 | GetStatsPrimary |
+| 10 | GetStatsPrimaries |
+| 11 | GetStatsAll |
+| 12 | CreateStats |
+| 13 | GetOrCreateStats |
 
 # (1) StartRound
 ## Request
@@ -24,7 +25,7 @@
 ## Response
 | Type | Description |
 | --- | --- |
-| Uint64 | Unknown |
+| Uint64 | Round id |
 
 # (3) EndRound
 ## Request
@@ -44,17 +45,23 @@ This method does not return anything.
 ## Response
 This method does not return anything.
 
-# (5) GetRoundParticipants
+# (5) EndRoundWithoutReport
 ## Request
 | Type | Description |
 | --- | --- |
-| Uint64 | Unknown |
+| Uint64 | Round id |
 
 ## Response
 This method does not return anything.
 
 # Types
-## EndRoundInfo ([Structure])
+## EndRoundParam ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint64 | Round id |
+| [List]&lt;[EndRoundReport](#endroundreport-structure)&gt; | Reports |
+
+## EndRoundReport ([Structure])
 | Type | Description |
 | --- | --- |
 | Uint64 | Unknown |
@@ -64,12 +71,6 @@ This method does not return anything.
 | [qBuffer] | Unknown |
 | Uint8 | Unknown |
 | Uint32 | Unknown |
-
-## EndRoundParam ([Structure])
-| Type | Description |
-| --- | --- |
-| Uint64 | Unknown |
-| [List]&lt;[EndRoundInfo](#endroundinfo-structure)&gt; | Unknown |
 
 ## StartRoundParam ([Structure])
 | Type | Description |
