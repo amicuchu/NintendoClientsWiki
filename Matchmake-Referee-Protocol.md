@@ -76,7 +76,7 @@ This method does not return anything.
 | --- | --- |
 | Uint32 | Unknown |
 | Uint32 | Unknown |
-| [List]&lt;[Uint64]&gt; | Unknown |
+| [List]&lt;Uint64&gt; | Unknown |
 | Uint8 | Unknown |
 | Uint32 | Unknown |
 
