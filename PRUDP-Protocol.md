@@ -44,7 +44,7 @@ In DATA and DISCONNECT packets the packet signature is the first 4 bytes of the 
 
 | Size | Description |
 | --- | --- |
-| 0 or 16 | [Session key](#secure-server-connection) (or nothing in an authentication connection) |
+| 0, 16 or 32 | [Session key](#secure-server-connection) (or nothing in an authentication connection) |
 | 2 | [Sequence id](#sequence-id) |
 | 1 | [Fragment id](#fragment-id) |
 | | Encrypted payload |
