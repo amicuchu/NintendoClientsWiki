@@ -75,7 +75,7 @@ This method does not return anything.
 | Type | Description |
 | --- | --- |
 | [List]&lt;[Unknown](#unknown-structure)&gt; | Unknown |
-| [Buffer] | Unknown |
+| [List]&lt;Uint8&gt; | Unknown |
 
 ## Response
 This method does not return anything.
@@ -84,7 +84,7 @@ This method does not return anything.
 ## Request
 | Type | Description |
 | --- | --- |
-| [Buffer] | Unknown |
+| [List]&lt;Uint8&gt; | Unknown |
 
 ## Response
 | Type | Description |
@@ -96,7 +96,7 @@ This method does not return anything.
 | Type | Description |
 | --- | --- |
 | [List]&lt;Uint64&gt; | Unknown |
-| [Buffer] | Unknown |
+| [List]&lt;Uint8&gt; | Unknown |
 
 ## Response
 | Type | Description |
