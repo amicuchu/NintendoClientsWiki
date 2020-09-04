@@ -89,7 +89,7 @@ This method does not return anything.
 ## Response
 | Type | Description |
 | --- | --- |
-| [List]&lt;[UserStatus](#userstatus-structure)&gt; | Status list |
+| [List]&lt;[SubscriberUserStatusInfo](#subscriberuserstatusinfo-structure)&gt; | Status list |
 
 # (15) GetUserStatuses
 ## Request
@@ -101,7 +101,7 @@ This method does not return anything.
 ## Response
 | Type | Description |
 | --- | --- |
-| [List]&lt;[UserStatus](#userstatus-structure)&gt; | Status list |
+| [List]&lt;[SubscriberUserStatusInfo](#subscriberuserstatusinfo-structure)&gt; | Status list |
 
 # Types
 ## SubscriberContent ([Structure])
@@ -134,7 +134,7 @@ This method does not return anything.
 | --- | --- |
 | [qBuffer] | Unknown |
 
-## UserStatus ([Structure])
+## SubscriberUserStatusInfo ([Structure])
 | Type | Description |
 | --- | --- |
 | Uint64 | Unknown |
