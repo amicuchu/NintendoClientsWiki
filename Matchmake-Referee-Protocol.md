@@ -23,7 +23,7 @@
 ## Request
 | Type | Description |
 | --- | --- |
-| [StartRoundParam](#startroundparam-structure) | Param |
+| [MatchmakeRefereeStartRoundParam](#matchmakerefereestartroundparam-structure) | Param |
 
 ## Response
 | Type | Description |
@@ -34,7 +34,7 @@
 ## Request
 | Type | Description |
 | --- | --- |
-| [EndRoundParam](#endroundparam-structure) | Param |
+| [MatchmakeRefereeEndRoundParam](#matchmakerefereeendroundparam-structure) | Param |
 
 ## Response
 This method does not return anything.
@@ -43,7 +43,7 @@ This method does not return anything.
 ## Request
 | Type | Description |
 | --- | --- |
-| [EndRoundParam](#endroundparam-structure) | Param |
+| [MatchmakeRefereeEndRoundParam](#matchmakerefereeendroundparam-structure) | Param |
 
 ## Response
 This method does not return anything.
@@ -65,7 +65,7 @@ This method does not take any parameters.
 This method does not return anything.
 
 # Types
-## EndRoundParam ([Structure])
+## MatchmakeRefereeEndRoundParam ([Structure])
 | Type | Description |
 | --- | --- |
 | Uint64 | Round id |
@@ -82,7 +82,7 @@ This method does not return anything.
 | Uint8 | Unknown |
 | Uint32 | Unknown |
 
-## StartRoundParam ([Structure])
+## MatchmakeRefereeStartRoundParam ([Structure])
 | Type | Description |
 | --- | --- |
 | Uint32 | Unknown |
