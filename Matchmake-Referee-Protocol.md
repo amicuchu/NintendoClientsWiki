@@ -3,7 +3,7 @@
 | Method ID | Method Name |
 | --- | --- |
 | 1 | [StartRound](#1-startround) |
-| 2 | GetStartRoundParam |
+| 2 | [GetStartRoundParam](#2-getstartroundparam) |
 | 3 | [EndRound](#3-endround) |
 | 4 | [EndRoundWithPartialReport](#4-endroundwithpartialreport) |
 | 5 | [EndRoundWithoutReport](#5-endroundwithoutreport) |
@@ -29,6 +29,17 @@
 | Type | Description |
 | --- | --- |
 | Uint64 | Round id |
+
+# (2) GetStartRoundParam
+## Request
+| Type | Description |
+| --- | --- |
+| Uint64 | Round id |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [MatchmakeRefereeStartRoundParam](#matchmakerefereestartroundparam-structure) | Param |
 
 # (3) EndRound
 ## Request
