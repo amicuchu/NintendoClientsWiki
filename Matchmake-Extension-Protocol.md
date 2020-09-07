@@ -5,7 +5,6 @@ The following games have additional methods in the matchmake extension protocol:
 * [Mario Kart 8 Deluxe](Matchmake-Extension-Protocol-(MK8D))
 * [Monster Hunter XX (3DS)](Matchmake-Extension-Protocol-(MHXX))
 * [Super Smash Bros. 4](Matchmake-Extension-Protocol-(SSB4))
-* [Splatoon 2](Matchmake-Extension-Protocol-(Splatoon-2))
 
 This remainder of this page describes the methods that are not specific to any game.
 
