@@ -63,6 +63,7 @@ This remainder of this page describes the methods that are not specific to any g
 | 51 | [FindMatchmakeSessionByParticipant](#51-findmatchmakesessionbyparticipant) |
 | 52 | [BrowseMatchmakeSessionNoHolderNoResultRange](#52-browsematchmakesessionnoholdernoresultrange) |
 | 53 | [BrowseMatchmakeSessionWithHostUrlsNoHolderNoResultRange](#53-browsematchmakesessionwithhosturlsnoholdernoresultrange) |
+| 54 | FindCommunityByOwner |
 
 # (1) CloseParticipation
 ## Request
