@@ -9,8 +9,8 @@
 | 5 | [EndRoundWithoutReport](#5-endroundwithoutreport) |
 | 6 | [GetRoundParticipants](#6-getroundparticipants) |
 | 7 | [GetNotSummarizedRound](#7-getnotsummarizedround) |
-| 8 | GetRound |
-| 9 | GetStatsPrimary |
+| 8 | [GetRound](#8-getround) |
+| 9 | [GetStatsPrimary](#9-getstatsprimary) |
 | 10 | GetStatsPrimaries |
 | 11 | GetStatsAll |
 | 12 | CreateStats |
@@ -83,9 +83,30 @@ This method does not return anything.
 ## Request
 This method does not take any parameters.
 
+## Response
 | Type | Description |
 | --- | --- |
-| [List]&lt;[NotSummarizedRound](#notsummarizedround-structure)&gt; | Rounds in which you are participating |
+| [List]&lt;[RoundInfo](#roundinfo-structure)&gt; | Rounds in which you are participating |
+
+# (8) GetRound
+## Request
+| Type | Description |
+| --- | --- |
+| Uint64 | Round id |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [RoundInfo](#roundinfo-structure) | Round info |
+
+# (9) GetStatsPrimary
+## Request
+| Type | Description |
+| --- | --- |
+| [GetStatsParam](#getstatsparam-structure) | Param |
+
+## Response
+Unknown.
 
 # (14) ResetStats
 ## Request
@@ -112,6 +133,13 @@ This method does not return anything.
 | Uint8 | Unknown |
 | Uint32 | Unknown |
 
+## GetStatsParam ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+
 ## MatchmakeRefereeStartRoundParam ([Structure])
 | Type | Description |
 | --- | --- |
@@ -121,7 +149,7 @@ This method does not return anything.
 | Uint8 | Unknown (Y) |
 | Uint32 | Unknown (Z) |
 
-## NotSummarizedRound ([Structure])
+## RoundInfo ([Structure])
 | Type | Description |
 | --- | --- |
 | Uint64 | Round id |
