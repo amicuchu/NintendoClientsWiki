@@ -8,7 +8,7 @@
 | 4 | [EndRoundWithPartialReport](#4-endroundwithpartialreport) |
 | 5 | [EndRoundWithoutReport](#5-endroundwithoutreport) |
 | 6 | [GetRoundParticipants](#6-getroundparticipants) |
-| 7 | GetNotSummarizedRound |
+| 7 | [GetNotSummarizedRound](#7-getnotsummarizedround) |
 | 8 | GetRound |
 | 9 | GetStatsPrimary |
 | 10 | GetStatsPrimaries |
@@ -79,6 +79,14 @@ This method does not return anything.
 | --- | --- |
 | [List]&lt;[PID]&gt; | Participants |
 
+# (7) GetNotSummarizedRound
+## Request
+This method does not take any parameters.
+
+| Type | Description |
+| --- | --- |
+| [List]&lt;[NotSummarizedRound](#notsummarizedround-structure)&gt; | Rounds in which you are participating |
+
 # (14) ResetStats
 ## Request
 This method does not take any parameters.
@@ -107,11 +115,22 @@ This method does not return anything.
 ## MatchmakeRefereeStartRoundParam ([Structure])
 | Type | Description |
 | --- | --- |
-| Uint32 | Unknown |
+| Uint32 | Unknown (X) |
 | Uint32 | Gathering id |
 | [List]&lt;[PID]&gt; | Participants |
-| Uint8 | Unknown |
+| Uint8 | Unknown (Y) |
+| Uint32 | Unknown (Z) |
+
+## NotSummarizedRound ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint64 | Round id |
+| Uint32 | Gathering id |
 | Uint32 | Unknown |
+| Uint32 | Unknown (X) |
+| Uint32 | Unknown |
+| Uint8 | Unknown (Y) |
+| Uint32 | Unknown (Z) |
 
 [Result]: NEX-Common-Types#result
 [String]: NEX-Common-Types#string
