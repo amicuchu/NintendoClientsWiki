@@ -7,7 +7,7 @@
 | 3 | [EndRound](#3-endround) |
 | 4 | [EndRoundWithPartialReport](#4-endroundwithpartialreport) |
 | 5 | [EndRoundWithoutReport](#5-endroundwithoutreport) |
-| 6 | GetRoundParticipants |
+| 6 | [GetRoundParticipants](#6-getroundparticipants) |
 | 7 | GetNotSummarizedRound |
 | 8 | GetRound |
 | 9 | GetStatsPrimary |
@@ -68,6 +68,17 @@ This method does not return anything.
 ## Response
 This method does not return anything.
 
+# (6) GetRoundParticipants
+## Request
+| Type | Description |
+| --- | --- |
+| Uint64 | Round id |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[PID]&gt; | Participants |
+
 # (14) ResetStats
 ## Request
 This method does not take any parameters.
@@ -98,7 +109,7 @@ This method does not return anything.
 | --- | --- |
 | Uint32 | Unknown |
 | Uint32 | Gathering id |
-| [List]&lt;[PID]&gt; | User ids |
+| [List]&lt;[PID]&gt; | Participants |
 | Uint8 | Unknown |
 | Uint32 | Unknown |
 
