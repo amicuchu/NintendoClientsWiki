@@ -12,6 +12,7 @@
 | 8 | [GetRankingChart](#8-getrankingchart) |
 | 9 | [GetRankingCharts](#9-getrankingcharts) |
 | 10 | [GetEstimateScoreRank](#10-getestimatescorerank) |
+| 11 | GetEstimateMyScoreRank |
 
 # (1) PutScore
 ## Request
