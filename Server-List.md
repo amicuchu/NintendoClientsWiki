@@ -43,8 +43,7 @@ Replace '%' by one of the following:
 | - nncs1-%.n.n.srv.nintendo.net<br>- nncs2-%.n.n.srv.nintendo.net | [NAT check server](NAT-Check-Server) |
 | - api-%.znc.srv.nintendo.net | Coral (voice chat) |
 | - api.hac.%.acbaa.srv.nintendo.net | <a href="https://github.com/Kinnay/NintendoClients/wiki/AC:NH-Server">Animal Crossing API</a> |
-| - d7d-arzn.g.%.e.srv.nintendo.net | Tetris 99 (dedicated server) |
-| - d7d-ayam-b.g.%.e.srv.nintendo.net | Super Mario Bros. 35 (dedicated server) |
+| - d7d-arzn.g.%.e.srv.nintendo.net<br>- d7d-ayam-b.g.%.e.srv.nintendo.net | [Eagle (dedicated servers)](Eagle-Protocol) |
 | - ecs-%.hac.shop.nintendo.net<br>- ias-%.hac.shop.nintendo.net<br>- beach.hac.%.eshop.nintendo.net<br>- bugyo.hac.%.eshop.nintendo.ent<br>- tagaya.hac.%.eshop.nintendo.net<br>- pushmo.hac.%.eshop.nintendo.net | E-Shop |
 | - api-%.frs.srv.nintendo.net | Friends |
 | - consumer.%.npns.srv.nintendo.net<br>- broker.%.npns.srv.nintendo.net<br>- provider-%.npns.srv.nintendo.net<br>- app-a03.%.npns.srv.nintendo.net<br>- app-b01.%.npns.srv.nintendo.net | Push notifications |
