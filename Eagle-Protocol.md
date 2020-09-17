@@ -42,7 +42,7 @@ The payload has the following fields:
 | user_id | Your pid (hex string) |
 
 ## Packet Format
-Packets are encoded as a stream of bits (probably to minimize the packet size). Each packet starts with the following header:
+Packets are encoded as a stream of bits. Each packet starts with the following header:
 
 | Bits | Description |
 | --- | --- |
