@@ -62,7 +62,7 @@ The payload comes after header and relay destination, but the bit stream is firs
 
 | Payload ID | Description |
 | --- | --- |
-| 0 | Packet accepted |
+| 0 | Connection accepted |
 | 1 | [Login request](#login-request) |
 | 2 | [Login result](#login-result) |
 | 3 | Client ready |
