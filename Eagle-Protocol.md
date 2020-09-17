@@ -66,6 +66,11 @@ The payload comes after header and relay destination, but the bit stream is firs
 | 1 | [Login request](#login-request) |
 | 2 | Login result |
 | 3 | Client ready |
+| 4 | Unknown |
+| 5 | Unknown |
+| 6 | Unknown |
+| 7 | Unknown |
+| 8 | Unknown |
 | 9 | Unknown |
 
 ### Login Request
