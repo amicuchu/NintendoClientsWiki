@@ -64,7 +64,7 @@ The payload comes after header and relay destination, but the bit stream is firs
 | --- | --- |
 | 0 | Packet accepted |
 | 1 | [Login request](#login-request) |
-| 2 | Login result |
+| 2 | [Login result](#login-result) |
 | 3 | Client ready |
 | 4 | Unknown |
 | 5 | Unknown |
@@ -94,3 +94,11 @@ Login phase 1:
 | --- | --- |
 | 8 | Token string size |
 | | Token string |
+
+### Login Result
+| Bits | Description |
+| --- | --- |
+| 32 | Unknown |
+| 8 | Unknown |
+| 16 | Payload size |
+| | Payload |
