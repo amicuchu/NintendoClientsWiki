@@ -62,7 +62,7 @@ The payload comes after header and relay destination, but the bit stream is firs
 
 | Payload ID | Description |
 | --- | --- |
-| 0 | Connection accepted |
+| 0 | [Connection accepted](#connection-accepted) |
 | 1 | [Login request](#login-request) |
 | 2 | [Login result](#login-result) |
 | 3 | Client ready |
@@ -72,6 +72,12 @@ The payload comes after header and relay destination, but the bit stream is firs
 | 7 | Unknown |
 | 8 | Unknown |
 | 9 | Unknown |
+
+### Connection Accepted
+| Bits | Description |
+| --- | --- |
+| 16 | Node id |
+| 64 | Server time (in milliseconds) |
 
 ### Login Request
 | Bits | Description |
