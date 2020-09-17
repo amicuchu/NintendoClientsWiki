@@ -1,7 +1,7 @@
-[[Server List]] > Eagle (dedicated servers)
+[[Server List]] > Eagle (relay servers)
 ---
 
-Unlike most multiplayer games, Tetris 99 and Super Mario Bros. 35 use a dedicated server instead of [PIA](PIA-Overview), which seems to be called eagle. Match making is still done with [NEX](NEX-Overview-(Game-Servers)), but when the session is ready, the server sends a [notification event](Notification-Protocol) to the clients, which contains the url of the eagle server and a token.
+Unlike most multiplayer games, Tetris 99 and Super Mario Bros. 35 use a relay server instead of [PIA](PIA-Overview), which seems to be called eagle. Match making is still done with [NEX](NEX-Overview-(Game-Servers)), but when the session is ready, the server sends a [notification event](Notification-Protocol) to the clients, which contains the url of the eagle server and a token.
 
 * [Server URL](#server-url)
 * [Token Format](#token-format)
