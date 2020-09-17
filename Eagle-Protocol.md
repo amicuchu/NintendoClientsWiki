@@ -58,3 +58,10 @@ The remainder of the packet depends on the relay type and payload id.
 | 1 | This packet is relayed to a single node. The header is followed by 9 bits that hold the destination node id. |
 | 2 | This packet is relayed to multiple nodes. The header is followed by 128 bits that hold the destination nodes (one bit per node). |
 
+| Payload ID | Description |
+| --- | --- |
+| 0 | Packet accepted |
+| 1 | Login request |
+| 2 | Login result |
+| 3 | Client ready |
+| 9 | Unknown |
