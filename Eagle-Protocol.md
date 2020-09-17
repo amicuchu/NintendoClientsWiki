@@ -52,7 +52,7 @@ Packets are encoded as a stream of bits (probably to minimize the packet size). 
 
 The remainder of the packet depends on the relay type and payload id.
 
-| Relay | Description |
+| Type | Description |
 | --- | --- |
 | 0 | No relay. |
 | 1 | This packet is relayed to a single node. The header is followed by 9 bits that hold the destination node id. |
