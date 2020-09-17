@@ -82,10 +82,10 @@ Login phase 0:
 | 64 | Unknown |
 | 32 | Unknown |
 | 8 | Version string size (max 64 bits) |
-| Var | Version string |
+| | Version string |
 
 Login phase 1:
 | Bits | Description |
 | --- | --- |
 | 8 | Token string size |
-| Var | Token string |
+| | Token string |
