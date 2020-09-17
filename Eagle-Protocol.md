@@ -46,8 +46,15 @@ Packets are encoded as a stream of bits (probably to minimize the packet size). 
 
 | Bits | Description |
 | --- | --- |
-| 2 | Header type |
+| 2 | Relay type |
 | 8 | Payload id |
 | 9 | Source node id |
 
-The remainder of the packet depends on the header type and payload id.
+The remainder of the packet depends on the relay type and payload id.
+
+| Relay Type | Description |
+| --- | --- |
+| 0 | No relay. |
+| 1 | This packet is relayed to a single node. The header is followed by 9 bits that hold the destination node id. |
+| 2 | This packet is relayed to multiple nodes. The header is followed by 128 bits that hold the destination nodes (one bit per node). |
+
