@@ -5,8 +5,9 @@ Unlike most multiplayer games, Tetris 99 and Super Mario Bros. 35 use a dedicate
 
 * [Server URL](#server-url)
 * [Token Format](#token-format)
+* [Packet Format](#packet-format)
 
-### Server URL
+## Server URL
 The URL is written as follows: `<scheme>://<host>:<port>/<path>`.
 
 The scheme must be either `kdp` (see https://github.com/skywind3000/kcp), `tcp`, `tcps`, `ws` or `wss`.
@@ -22,7 +23,7 @@ The real server always uses the following URL: `wss://<server name>.g.<server en
 
 Example: `wss://d7d-arzn.g.lp1.e.srv.nintendo.net:443/EA3nJiq9BKyoxmBjJ2TkfzcRHwQe88FJ/ess-d7d-btb4mnggg9q5k2kdqb8g`
 
-### Token Format
+## Token Format
 The token is a base64-encoded JSON object that contains the following fields:
 
 | Field | Description |
@@ -39,3 +40,14 @@ The payload has the following fields:
 | server_env | Server environment (e.g. `lp1`) |
 | server_id | A string of 20 lowercase alphanumeric characters. The server of SMB35 also adds the suffix "-blue". |
 | user_id | Your pid (hex string) |
+
+## Packet Format
+Packets are encoded as a stream of bits (probably to minimize the packet size). Each packet starts with the following header:
+
+| Bits | Description |
+| --- | --- |
+| 2 | Header type |
+| 8 | Payload id |
+| 9 | Source node id |
+
+The remainder of the packet depends on the header type and payload id.
