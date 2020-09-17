@@ -63,7 +63,29 @@ The payload comes after header and relay destination, but the bit stream is firs
 | Payload ID | Description |
 | --- | --- |
 | 0 | Packet accepted |
-| 1 | Login request |
+| 1 | [Login request](#login-request) |
 | 2 | Login result |
 | 3 | Client ready |
 | 9 | Unknown |
+
+### Login Request
+| Bits | Description |
+| --- | --- |
+| 7 | Login phase (0 or 1) |
+| 1 | Unknown |
+
+Login phase 0:
+| Bits | Description |
+| --- | --- |
+| 8 | Unknown |
+| 32 | Unknown |
+| 64 | Unknown |
+| 32 | Unknown |
+| 8 | Version string size (max 64 bits) |
+| Var | Version string |
+
+Login phase 1:
+| Bits | Description |
+| --- | --- |
+| 8 | Token string size |
+| Var | Token string |
