@@ -594,6 +594,8 @@ This method does not return anything.
 [DataStoreMetaInfo]: Data-Store-Protocol#datastoremetainfo-structure
 [DataStoreKeyValue]: Data-Store-Protocol#datastorekeyvalue-structure
 [DataStoreSearchParam]: Data-Store-Protocol#datastoresearchparam-structure
+[DataStoreSearchResult]: Data-Store-Protocol#datastoresearchresult-structure
+[DataStoreCompletePostParamV1]: Data-Store-Protocol#datastorecompletepostparamv1-structure
 
 [BufferQueueParam]: #bufferqueueparam-structure
 [DataStoreAttachFileParam]: #datastoreattachfileparam-structure
