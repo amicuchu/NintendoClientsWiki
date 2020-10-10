@@ -44,6 +44,8 @@ This page describes the methods that are only seen in Super Mario Maker. The pro
 | 83 | [SetCachedRanking](#83-setcachedranking) |
 | 84 | [DeleteCachedRanking](#84-deletecachedranking) |
 | 85 | [ChangePlayablePlatform](#85-changeplayableplatform) |
+| 86 | SearchUnknownPlatformObjects |
+| 87 | ReportCourse |
 
 # (46) GetMetaByOwnerId
 ## Request
