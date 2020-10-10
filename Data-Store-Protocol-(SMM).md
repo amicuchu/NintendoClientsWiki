@@ -606,7 +606,7 @@ This method does not return anything.
 [DataStoreGetCustomRankingParam]: #datastoregetcustomrankingparam-structure
 [DataStoreGetMetaByOwnerIdParam]: #datastoregetmetabyowneridparam-structure
 [DataStoreRateCustomRankingParam]: #datastoreratecustomrankingparam-structure
-]DataStoreUploadCourseRecordParam]: #datastoreuploadcourserecordparam-structure
+[DataStoreUploadCourseRecordParam]: #datastoreuploadcourserecordparam-structure
 
 [Result]: NEX-Common-Types#result
 [String]: NEX-Common-Types#string
