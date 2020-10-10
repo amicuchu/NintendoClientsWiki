@@ -4,60 +4,112 @@ This page describes the methods that are only seen in Super Mario Maker. The pro
 
 | Method ID | Method Name |
 | --- | --- |
-| 46 | GetMetaByOwnerId |
-| 47 | CustomSearchObject |
-| 48 | RateCustomRanking |
-| 49 | GetCustomRanking |
+| 46 | [GetMetaByOwnerId](#46-getmetabyownerid) |
+| 47 | [CustomSearchObject](#47-customsearchobject) |
+| 48 | [RateCustomRanking](#48-ratecustomranking) |
+| 49 | [GetCustomRanking](#49-getcustomranking) |
 | 50 | [GetCustomRankingByDataId](#50-getcustomrankingbydataid) |
-| 51 | DeleteCustomRanking |
+| 51 | [DeleteCustomRanking](#51-deletecustomranking) |
 | 52 | [AddToBufferQueue](#52-addtobufferqueue) |
 | 53 | [AddToBufferQueues](#53-addtobufferqueues) |
 | 54 | [GetBufferQueue](#54-getbufferqueue) |
 | 55 | [GetBufferQueues](#55-getbufferqueues) |
 | 56 | [ClearBufferQueues](#56-clearbufferqueues) |
-| 57 | CompleteAttachFile |
-| 58 | CompleteAttachFileV1 |
-| 59 | PrepareAttachFile |
-| 60 | ConditionalSearchObject |
+| 57 | [CompleteAttachFile](#57-completeattachfile) |
+| 58 | [CompleteAttachFileV1](#58-completeattachfilev1) |
+| 59 | [PrepareAttachFile](#59-prepareattachfile) |
+| 60 | [ConditionalSearchObject](#60-conditionalsearchobject) |
 | 61 | [GetApplicationConfig](#61-getapplicationconfig) |
 | 62 | [SetApplicationConfig](#62-setapplicationconfig) |
 | 63 | [DeleteApplicationConfig](#63-deleteapplicationconfig) |
-| 64 | LatestCourseSearchObject |
-| 65 | FollowingsLatestCourseSearchObject |
-| 66 | RecommendedCourseSearchObject |
-| 67 | ScoreRangeCascadedSearchObject |
-| 68 | SuggestedCourseSearchObject |
-| 69 | PreparePostObjectWithOwnerIdAndDataId |
-| 70 | CompletePostObjectWithOwnerId |
-| 71 | UploadCourseRecord |
-| 72 | GetCourseRecord |
-| 73 | DeleteCourseRecord |
+| 64 | [LatestCourseSearchObject](#64-latestcoursesearchobject) |
+| 65 | [FollowingsLatestCourseSearchObject](#65-followingslatestcoursesearchobject) |
+| 66 | [RecommendedCourseSearchObject](#66-recommendedcoursesearchobject) |
+| 67 | [ScoreRangeCascadedSearchObject](#67-scorerangecascadedsearchobject) |
+| 68 | [SuggestedCourseSearchObject](#68-suggestedcoursesearchobject) |
+| 69 | [PreparePostObjectWithOwnerIdAndDataId](#69-preparepostobjectwithowneridanddataid) |
+| 70 | [CompletePostObjectWithOwnerId](#70-completepostobjectwithownerid) |
+| 71 | [UploadCourseRecord](#71-uploadcourserecord) |
+| 72 | [GetCourseRecord](#72-getcourserecord) |
+| 73 | [DeleteCourseRecord](#73-deletecourserecord) |
 | 74 | [GetApplicationConfigString](#74-getapplicationconfigstring) |
-| 75 | SetApplicationConfigString |
+| 75 | [SetApplicationConfigString](#75-setapplicationconfigstring) |
 | 76 | [GetDeletionReason](#76-getdeletionreason) |
 | 77 | [SetDeletionReason](#77-setdeletionreason) |
-| 78 | GetMetasWithCourseRecord |
+| 78 | [GetMetasWithCourseRecord](#78-getmetaswithcourserecord) |
 | 79 | [CheckRateCustomRankingCounter](#79-checkratecustomrankingcounter) |
 | 80 | [ResetRateCustomRankingCounter](#80-resetratecustomrankingcounter) |
-| 81 | BestScoreRateCourseSearchObject |
-| 82 | CTRPickUpCourseSearchObject |
-| 83 | SetCachedRanking |
-| 84 | DeleteCachedRanking |
-| 85 | ChangePlayablePlatform |
-| 86 | SearchUnknownPlatformObjects |
-| 87 | [ReportCourse](#87-reportcourse) |
+| 81 | [BestScoreRateCourseSearchObject](#81-bestscoreratecoursesearchobject) |
+| 82 | [CTRPickUpCourseSearchObject](#82-ctrpickupcoursesearchobject) |
+| 83 | [SetCachedRanking](#83-setcachedranking) |
+| 84 | [DeleteCachedRanking](#84-deletecachedranking) |
+| 85 | [ChangePlayablePlatform](#85-changeplayableplatform) |
+
+# (46) GetMetaByOwnerId
+## Request
+| Type | Name |
+| --- | --- |
+| [DataStoreGetMetaByOwnerIdParam] | param |
+
+## Response
+| Type | Name |
+| --- | --- |
+| [List]&lt;[DataStoreMetaInfo]&gt; | pMetaInfo |
+| Bool | pHasNext |
+
+# (47) CustomSearchObject
+## Request
+| Type | Name |
+| --- | --- |
+| Uint32 | condition |
+| [DataStoreSearchParam] | param |
+
+## Response
+| Type | Name |
+| --- | --- |
+| [DataStoreSearchResult] | pSearchResult |
+
+# (48) RateCustomRanking
+## Request
+| Type | Name |
+| --- | --- |
+| [List]&lt;[DataStoreRateCustomRankingParam]&gt; | params |
+
+## Response
+This method does not return anything.
+
+# (49) GetCustomRanking
+## Request
+| Type | Name |
+| --- | --- |
+| [DataStoreGetCustomRankingParam] | param |
+
+## Response
+| Type | Name |
+| --- | --- |
+| [List]&lt;[DataStoreCustomRankingResult]&gt; | pRankingResult |
+| [List]&lt;[Result]&gt; | pResults |
 
 # (50) GetCustomRankingByDataId
 ## Request
-| Type | Description |
+| Type | Name |
 | --- | --- |
-| [GetCustomRankingByDataIdParam](#getcustomrankingbydataidparam-structure) | Param |
+| [DataStoreGetCustomRankingByDataIdParam] | param |
 
 ## Response
-| Type | Description |
+| Type | Name |
 | --- | --- |
-| [List]&lt;[DataStoreObjectInfo]&gt; | Search result |
-| [List]&lt;[Result]&gt; | Results |
+| [List]&lt;[DataStoreCustomRankingResult]&gt; | pRankingResult |
+| [List]&lt;[Result]&gt; | pResults |
+
+# (51) DeleteCustomRanking
+## Request
+| Type | Name |
+| --- | --- |
+| [List]&lt;Uint64&gt; | dataIdList |
+
+## Response
+This method does not return anything.
 
 # (52) AddToBufferQueue
 ## Request
@@ -115,304 +167,812 @@ This method does not return anything.
 | --- | --- |
 | [List]&lt;[Result]&gt; | pResults |
 
-# (61) GetApplicationConfig
+# (57) CompleteAttachFile
 ## Request
-| Type | Description |
+| Type | Name |
 | --- | --- |
-| Uint32 | [Category](#applicationconfigtype) |
+| [DataStoreCompletePostParam] | param |
 
 ## Response
-| Type | Description |
+| Type | Name |
 | --- | --- |
-| [List]&lt;Uint32&gt; | Config |
+| [String] | pUrl |
+
+# (58) CompleteAttachFileV1
+## Request
+| Type | Name |
+| --- | --- |
+| [DataStoreCompletePostParamV1] | param |
+
+## Response
+| Type | Name |
+| --- | --- |
+| [String] | pUrl |
+
+# (59) PrepareAttachFile
+## Request
+| Type | Name |
+| --- | --- |
+| [DataStoreAttachFileParam] | param |
+
+## Response
+| Type | Name |
+| --- | --- |
+| [DataStoreReqPostInfo] | pReqPostInfo |
+
+# (60) ConditionalSearchObject
+## Request
+| Type | Name |
+| --- | --- |
+| Uint32 | condition |
+| [DataStoreSearchParam] | param |
+| [List]&lt;[String]&gt; | extraData |
+
+## Response
+| Type | Name |
+| --- | --- |
+| [List]&lt;[DataStoreCustomRankingResult]&gt; | pRankingResults |
+
+# (61) GetApplicationConfig
+## Request
+| Type | Name |
+| --- | --- |
+| Uint32 | applicationId |
+
+## Response
+| Type | Name |
+| --- | --- |
+| [List]&lt;Sint32&gt; | config |
 
 # (62) SetApplicationConfig
 ## Request
-| Type | Description |
+| Type | Name |
 | --- | --- |
-| Uint32 | [Category](#applicationconfigtype) |
-| Uint32 | Index |
-| Uint32 | Value |
+| Uint32 | applicationId |
+| Uint32 | key |
+| Sint32 | value |
 
 ## Response
 This method does not return anything.
 
 # (63) DeleteApplicationConfig
 ## Request
-| Type | Description |
+| Type | Name |
 | --- | --- |
-| Uint32 | [Category](#applicationconfigtype) |
-| Uint32 | Index |
+| Uint32 | applicationId |
+| Uint32 | key |
+
+## Response
+This method does not return anything.
+
+# (64) LatestCourseSearchObject
+## Request
+| Type | Name |
+| --- | --- |
+| [DataStoreSearchParam] | param |
+| [List]&lt;[String]&gt; | extraData |
+
+## Response
+| Type | Name |
+| --- | --- |
+| [List]&lt;[DataStoreCustomRankingResult]&gt; | pRankingResults |
+
+# (65) FollowingsLatestCourseSearchObject
+## Request
+| Type | Name |
+| --- | --- |
+| [DataStoreSearchParam] | param |
+| [List]&lt;[String]&gt; | extraData |
+
+## Response
+| Type | Name |
+| --- | --- |
+| [List]&lt;[DataStoreCustomRankingResult]&gt; | pRankingResults |
+
+# (66) RecommendedCourseSearchObject
+## Request
+| Type | Name |
+| --- | --- |
+| [DataStoreSearchParam] | param |
+| [List]&lt;[String]&gt; | extraData |
+
+## Response
+| Type | Name |
+| --- | --- |
+| [List]&lt;[DataStoreCustomRankingResult]&gt; | pRankingResults |
+
+# (67) ScoreRangeCascadedSearchObject
+## Request
+| Type | Name |
+| --- | --- |
+| [DataStoreSearchParam] | param |
+| [List]&lt;[String]&gt; | extraData |
+
+## Response
+| Type | Name |
+| --- | --- |
+| [List]&lt;[DataStoreCustomRankingResult]&gt; | pRankingResults |
+
+# (68) SuggestedCourseSearchObject
+## Request
+| Type | Name |
+| --- | --- |
+| [DataStoreSearchParam] | param |
+| [List]&lt;[String]&gt; | extraData |
+
+## Response
+| Type | Name |
+| --- | --- |
+| [List]&lt;[DataStoreCustomRankingResult]&gt; | pRankingResults |
+
+# (69) PreparePostObjectWithOwnerIdAndDataId
+## Request
+| Type | Name |
+| --- | --- |
+| Uint32 | ownerId |
+| Uint64 | dataId |
+| [DataStorePreparePostParam] | param |
+
+## Response
+| Type | Name |
+| --- | --- |
+| [DataStoreReqPostInfo] | pReqPostInfo |
+
+# (70) CompletePostObjectWithOwnerId
+## Request
+| Type | Name |
+| --- | --- |
+| Uint32 | ownerId |
+| [DataStoreCompletePostParam] | param |
+
+## Response
+This method does not return anything.
+
+# (71) UploadCourseRecord
+## Request
+| Type | Name |
+| --- | --- |
+| [DataStoreUploadCourseRecordParam] | param |
+
+## Response
+This method does not return anything.
+
+# (72) GetCourseRecord
+## Request
+| Type | Name |
+| --- | --- |
+| [DataStoreGetCourseRecordParam] | param |
+
+## Response
+| Type | Name |
+| --- | --- |
+| [DataStoreGetCourseRecordResult] | result |
+
+# (73) DeleteCourseRecord
+## Request
+| Type | Name |
+| --- | --- |
+| [DataStoreGetCourseRecordParam] | param |
 
 ## Response
 This method does not return anything.
 
 # (74) GetApplicationConfigString
 ## Request
-| Type | Description |
+| Type | Name |
 | --- | --- |
-| Uint32 | [Category](#applicationconfigtypestring) |
+| Uint32 | applicationId |
 
 ## Response
-| Type | Description |
+| Type | Name |
 | --- | --- |
-| [List]&lt;[String]&gt; | Config |
+| [List]&lt;[String]&gt; | config |
 
-# (76) GetDeletionReason
+# (75) SetApplicationConfigString
 ## Request
-| Type | Description |
+| Type | Name |
 | --- | --- |
-| [List]&lt;Uint64&gt; | Data ids |
-
-## Response
-| Type | Description |
-| --- | --- |
-| [List]&lt;Uint32&gt; | Deletion reasons |
-
-# (77) SetDeletionReason
-## Request
-| Type | Description |
-| --- | --- |
-| [List]&lt;Uint64&gt; | Data ids |
-| Uint32 | Deletion reason |
-
-# (79) CheckRateCustomRankingCounter
-## Request
-| Type | Description |
-| --- | --- |
-| Uint32 | Unknown |
-
-## Response
-| Type | Description |
-| --- | --- |
-| Bool | Result |
-
-# (80) ResetRateCustomRankingCounter
-## Request
-| Type | Description |
-| --- | --- |
-| Uint32 | Unknown |
+| Uint32 | applicationId |
+| Uint32 | key |
+| [String] | value |
 
 ## Response
 This method does not return anything.
 
-# (87) ReportCourse
+# (76) GetDeletionReason
 ## Request
-| Type | Description |
+| Type | Name |
 | --- | --- |
-| [ReportCourseParam](#reportcourseparam-structure) | Param |
+| [List]&lt;Uint64&gt; | dataIdLst |
+
+## Response
+| Type | Name |
+| --- | --- |
+| [List]&lt;Uint32&gt; | pDeletionReasons |
+
+# (77) SetDeletionReason
+## Request
+| Type | Name |
+| --- | --- |
+| [List]&lt;Uint64&gt; | dataIdLst |
+| Uint32 | deletionReason |
+
+## Response
+This method does not return anything.
+
+# (78) GetMetasWithCourseRecord
+## Request
+| Type | Name |
+| --- | --- |
+| [List]&lt;[DataStoreGetCourseRecordParam]&gt; | params |
+| [DataStoreGetMetaParam] | metaParam |
+
+## Response
+| Type | Name |
+| --- | --- |
+| [List]&lt;[DataStoreMetaInfo]&gt; | pMetaInfo |
+| [List]&lt;[DataStoreGetCourseRecordResult]&gt; | pCourseResults |
+| [List]&lt;[Result]&gt; | pResults |
+
+# (79) CheckRateCustomRankingCounter
+## Request
+| Type | Name |
+| --- | --- |
+| Uint32 | applicationId |
+
+## Response
+| Type | Name |
+| --- | --- |
+| Bool | isBelowThreshold |
+
+# (80) ResetRateCustomRankingCounter
+## Request
+| Type | Name |
+| --- | --- |
+| Uint32 | applicationId |
+
+## Response
+This method does not return anything.
+
+# (81) BestScoreRateCourseSearchObject
+## Request
+| Type | Name |
+| --- | --- |
+| [DataStoreSearchParam] | param |
+| [List]&lt;[String]&gt; | extraData |
+
+## Response
+| Type | Name |
+| --- | --- |
+| [List]&lt;[DataStoreCustomRankingResult]&gt; | pRankingResults |
+
+# (82) CTRPickUpCourseSearchObject
+## Request
+| Type | Name |
+| --- | --- |
+| [DataStoreSearchParam] | param |
+| [List]&lt;[String]&gt; | extraData |
+
+## Response
+| Type | Name |
+| --- | --- |
+| [List]&lt;[DataStoreCustomRankingResult]&gt; | pRankingResults |
+
+# (83) SetCachedRanking
+## Request
+| Type | Name |
+| --- | --- |
+| [String] | rankingType |
+| [List]&lt;[String]&gt; | rankingArgs |
+| [List]&lt;Uint64&gt; | dataIdLst |
+
+## Response
+This method does not return anything.
+
+# (84) DeleteCachedRanking
+## Request
+| Type | Name |
+| --- | --- |
+| [String] | rankingType |
+| [List]&lt;[String]&gt; | rankingArgs |
+
+## Response
+This method does not return anything.
+
+# (85) ChangePlayablePlatform
+## Request
+| Type | Name |
+| --- | --- |
+| [List]&lt;[DataStoreChangePlayablePlatformParam]&gt; | params |
 
 ## Response
 This method does not return anything.
 
 # Types
+## DataStorePrepareGetParamV1 ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint32 | dataId |
+| Uint32 | lockId |
+
+## DataStorePrepareGetParam ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint64 | dataId |
+| Uint32 | lockId |
+| [DataStorePersistenceTarget] | persistenceTarget |
+| Uint64 | accessPassword |
+| [List]&lt;[String]&gt; | extraData |
+
+## DataStoreReqGetInfoV1 ([Structure])
+| Type | Name |
+| --- | --- |
+| [String] | url |
+| [List]&lt;[DataStoreKeyValue]&gt; | requestHeaders |
+| Uint32 | size |
+| [Buffer] | rootCaCert |
+
+## DataStoreReqGetInfo ([Structure])
+| Type | Name |
+| --- | --- |
+| [String] | url |
+| [List]&lt;[DataStoreKeyValue]&gt; | requestHeaders |
+| Uint32 | size |
+| [Buffer] | rootCaCert |
+| Uint64 | dataId |
+
+## DataStoreReqGetAdditionalMeta ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint32 | ownerId |
+| Uint16 | dataType |
+| Uint16 | version |
+| [qBuffer] | metaBinary |
+
+## DataStorePreparePostParamV1 ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint32 | size |
+| [String] | name |
+| Uint16 | dataType |
+| [qBuffer] | metaBinary |
+| [DataStorePermission] | permission |
+| [DataStorePermission] | delPermission |
+| Uint32 | flag |
+| Uint16 | period |
+| Uint32 | referDataId |
+| [List]&lt;[String]&gt; | tags |
+| [List]&lt;[DataStoreRatingInitParamWithSlot]&gt; | ratingInitParams |
+
+## DataStorePreparePostParam ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint32 | size |
+| [String] | name |
+| Uint16 | dataType |
+| [qBuffer] | metaBinary |
+| [DataStorePermission] | permission |
+| [DataStorePermission] | delPermission |
+| Uint32 | flag |
+| Uint16 | period |
+| Uint32 | referDataId |
+| [List]&lt;[String]&gt; | tags |
+| [List]&lt;[DataStoreRatingInitParamWithSlot]&gt; | ratingInitParams |
+| [DataStorePersistenceInitParam] | persistenceInitParam |
+| [List]&lt;[String]&gt; | extraData |
+
+## DataStoreReqPostInfoV1 ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint32 | dataId |
+| [String] | url |
+| [List]&lt;[DataStoreKeyValue]&gt; | requestHeaders |
+| [List]&lt;[DataStoreKeyValue]&gt; | formFields |
+| [Buffer] | rootCaCert |
+
+## DataStoreReqPostInfo ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint64 | dataId |
+| [String] | url |
+| [List]&lt;[DataStoreKeyValue]&gt; | requestHeaders |
+| [List]&lt;[DataStoreKeyValue]&gt; | formFields |
+| [Buffer] | rootCaCert |
+
+## DataStoreCompletePostParamV1 ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint32 | dataId |
+| Bool | isSuccess |
+
+## DataStoreCompletePostParam ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint64 | dataId |
+| Bool | isSuccess |
+
+## DataStoreDeleteParam ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint64 | dataId |
+| Uint64 | updatePassword |
+
+## DataStoreChangeMetaParamV1 ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint64 | dataId |
+| Uint32 | modifiesFlag |
+| [String] | name |
+| [DataStorePermission] | permission |
+| [DataStorePermission] | delPermission |
+| Uint16 | period |
+| [qBuffer] | metaBinary |
+| [List]&lt;[String]&gt; | tags |
+| Uint64 | updatePassword |
+
+## DataStoreChangeMetaParam ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint64 | dataId |
+| Uint32 | modifiesFlag |
+| [String] | name |
+| [DataStorePermission] | permission |
+| [DataStorePermission] | delPermission |
+| Uint16 | period |
+| [qBuffer] | metaBinary |
+| [List]&lt;[String]&gt; | tags |
+| Uint64 | updatePassword |
+| Uint32 | referredCnt |
+| Uint16 | dataType |
+| Uint8 | status |
+| [DataStoreChangeMetaCompareParam] | compareParam |
+
+## DataStoreGetMetaParam ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint64 | dataId |
+| [DataStorePersistenceTarget] | persistenceTarget |
+| Uint8 | resultOption |
+| Uint64 | accessPassword |
+
+## DataStoreRatingInfo ([Structure])
+| Type | Name |
+| --- | --- |
+| Sint64 | totalValue |
+| Uint32 | count |
+| Sint64 | initialValue |
+
+## DataStoreRatingInfoWithSlot ([Structure])
+| Type | Name |
+| --- | --- |
+| Sint8 | slot |
+| [DataStoreRatingInfo] | rating |
+
+## DataStoreMetaInfo ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint64 | dataId |
+| Uint32 | ownerId |
+| Uint32 | size |
+| [String] | name |
+| Uint16 | dataType |
+| [qBuffer] | metaBinary |
+| [DataStorePermission] | permission |
+| [DataStorePermission] | delPermission |
+| [DateTime] | createdTime |
+| [DateTime] | updatedTime |
+| Uint16 | period |
+| Uint8 | status |
+| Uint32 | referredCnt |
+| Uint32 | referDataId |
+| Uint32 | flag |
+| [DateTime] | referredTime |
+| [DateTime] | expireTime |
+| [List]&lt;[String]&gt; | tags |
+| [List]&lt;[DataStoreRatingInfoWithSlot]&gt; | ratings |
+
+## DataStorePrepareUpdateParam ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint64 | dataId |
+| Uint32 | size |
+| Uint64 | updatePassword |
+| [List]&lt;[String]&gt; | extraData |
+
+## DataStoreReqUpdateInfo ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint32 | version |
+| [String] | url |
+| [List]&lt;[DataStoreKeyValue]&gt; | requestHeaders |
+| [List]&lt;[DataStoreKeyValue]&gt; | formFields |
+| [Buffer] | rootCaCert |
+
+## DataStoreCompleteUpdateParam ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint64 | dataId |
+| Uint32 | version |
+| Bool | isSuccess |
+
+## DataStoreSearchParam ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint8 | searchTarget |
+| [List]&lt;Uint32&gt; | ownerIds |
+| Uint8 | ownerType |
+| [List]&lt;Uint32&gt; | destinationIds |
+| Uint16 | dataType |
+| [DateTime] | createdAfter |
+| [DateTime] | createdBefore |
+| [DateTime] | updatedAfter |
+| [DateTime] | updatedBefore |
+| Uint32 | referDataId |
+| [List]&lt;[String]&gt; | tags |
+| Uint8 | resultOrderColumn |
+| Uint8 | resultOrder |
+| [ResultRange](NEX-Common-Types#resultrange-structure) | resultRange |
+| Uint8 | resultOption |
+| Uint32 | minimalRatingFrequency |
+| __dummy_revision | __dummy_revision1 |
+| Bool | useCache |
+
+## DataStoreSearchResult ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint32 | totalCount |
+| [List]&lt;[DataStoreMetaInfo]&gt; | result |
+| Uint8 | totalCountType |
+
+## DataStoreGetNotificationUrlParam ([Structure])
+| Type | Name |
+| --- | --- |
+| [String] | previousUrl |
+
+## DataStoreReqGetNotificationUrlInfo ([Structure])
+| Type | Name |
+| --- | --- |
+| [String] | url |
+| [String] | key |
+| [String] | query |
+| [Buffer] | rootCaCert |
+
+## DataStoreGetNewArrivedNotificationsParam ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint64 | lastNotificationId |
+| Uint16 | limit |
+
+## DataStoreNotificationV1 ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint64 | notificationId |
+| Uint32 | dataId |
+
+## DataStoreNotification ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint64 | notificationId |
+| Uint64 | dataId |
+
+## DataStoreRateObjectParam ([Structure])
+| Type | Name |
+| --- | --- |
+| Sint32 | ratingValue |
+| Uint64 | accessPassword |
+
+## DataStoreRatingTarget ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint64 | dataId |
+| Sint8 | slot |
+
+## DataStoreGetSpecificMetaParamV1 ([Structure])
+| Type | Name |
+| --- | --- |
+| [List]&lt;Uint32&gt; | dataIds |
+
+## DataStoreGetSpecificMetaParam ([Structure])
+| Type | Name |
+| --- | --- |
+| [List]&lt;Uint64&gt; | dataIds |
+
+## DataStoreSpecificMetaInfoV1 ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint32 | dataId |
+| Uint32 | ownerId |
+| Uint32 | size |
+| Uint16 | dataType |
+| Uint16 | version |
+
+## DataStoreSpecificMetaInfo ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint64 | dataId |
+| Uint32 | ownerId |
+| Uint32 | size |
+| Uint16 | dataType |
+| Uint32 | version |
+
+## DataStoreTouchObjectParam ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint64 | dataId |
+| Uint32 | lockId |
+| Uint64 | accessPassword |
+
+## DataStoreRatingLog ([Structure])
+| Type | Name |
+| --- | --- |
+| Bool | isRated |
+| Uint32 | pid |
+| Sint32 | ratingValue |
+| [DateTime] | lockExpirationTime |
+
+## DataStorePersistenceInfo ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint32 | ownerId |
+| Uint16 | persistenceSlotId |
+| Uint64 | dataId |
+
+## DataStorePasswordInfo ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint64 | dataId |
+| Uint64 | accessPassword |
+| Uint64 | updatePassword |
+
+## DataStoreFileServerObjectInfo ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint64 | dataId |
+| [DataStoreReqGetInfo] | getInfo |
+
+## DataStoreGetMetaByOwnerIdParam ([Structure])
+| Type | Name |
+| --- | --- |
+| [List]&lt;Uint32&gt; | ownerIds |
+| [List]&lt;Uint16&gt; | dataTypes |
+| Uint8 | resultOption |
+| [ResultRange](NEX-Common-Types#resultrange-structure) | resultRange |
+
+## DataStoreRateCustomRankingParam ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint64 | dataId |
+| Uint32 | applicationId |
+| Uint32 | score |
+| Uint16 | period |
+
+## DataStoreGetCustomRankingParam ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint32 | applicationId |
+| [DataStoreCustomRankingRatingCondition] | condition |
+| Uint8 | resultOption |
+| [ResultRange](NEX-Common-Types#resultrange-structure) | resultRange |
+
+## DataStoreGetCustomRankingByDataIdParam ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint32 | applicationId |
+| [List]&lt;Uint64&gt; | dataIdList |
+| Uint8 | resultOption |
+
+## DataStoreCustomRankingResult ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint32 | order |
+| Uint32 | score |
+| [DataStoreMetaInfo] | metaInfo |
+
 ## BufferQueueParam ([Structure])
 | Type | Name |
 | --- | --- |
 | Uint64 | dataId |
 | Uint32 | slot |
 
-## DataStoreObjectInfo ([Structure])
-| Type | Description |
+## DataStoreAttachFileParam ([Structure])
+| Type | Name |
 | --- | --- |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| [DataStoreMetaInfo] | Meta info |
+| [DataStorePreparePostParam] | postParam |
+| Uint64 | referDataId |
+| [String] | contentType |
 
-## GetCustomRankingByDataIdParam ([Structure])
-| Type | Description |
+## DataStoreUploadCourseRecordParam ([Structure])
+| Type | Name |
 | --- | --- |
-| Uint32 | Unknown |
-| [List]&lt;Uint64&gt; | Data ids |
-| Uint8 | Unknown |
+| Uint64 | dataId |
+| Uint8 | slot |
+| Sint32 | score |
 
-# Enums
-## ApplicationConfigType
-| Value | Description |
+## DataStoreGetCourseRecordParam ([Structure])
+| Type | Name |
 | --- | --- |
-| 0 | Settings |
-| 1 | PID |
-| 2 | First clear time |
-| 3 - 127 | Unused |
+| Uint64 | dataId |
+| Uint8 | slot |
 
-## ApplicationConfigTypeString
-| Value | Description |
+## DataStoreGetCourseRecordResult ([Structure])
+| Type | Name |
 | --- | --- |
-| 128 | Course ng word list first |
-| 129 | Course ng word list second |
-| 130 | Mii name ng word list |
-| 131 - 255 | Unused |
+| Uint64 | dataId |
+| Uint8 | slot |
+| Uint32 | firstPid |
+| Uint32 | bestPid |
+| Sint32 | bestScore |
+| [DateTime] | createdTime |
+| [DateTime] | updatedTime |
 
-<details><summary>Click to show the first word list</summary>
+## DataStoreChangePlayablePlatformParam ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint64 | dataId |
+| Uint32 | playablePlatform |
 
-```
-けされ
-消され
-削除され
-リセットされ
-BANされ
-ＢＡＮされ
-キミのコース
-君のコース
-きみのコース
-い い ね
-遊びます
-地震
-震災
-被災
-津波
-バンされ
-い~ね
-震度
-じしん
-banされ
-くわしくは
-詳しくは
-ちんちん
-ち0こ
-bicth
-い.い．ね
-ナイ～ス
-い&い
-い-いね
-いぃね
-nigger
-ngger
-star if u
-Star if u
-Star if you
-star if you
-PENlS
-マンコ
-butthole
-LILI
-vagina
-vagyna
-うんち
-うんこ
-ウンコ
-Ｉｉｎｅ
-EENE
-まんこ
-ウンチ
-niglet
-nigglet
-please like
-きんたま
-Butthole
-llね
-iいね
-give a star
-ちんぽ
-亀頭
-penis
-ｳﾝｺ
-plz more stars
-star plz
-い()ね
-PLEASE star
-Bitte Sterne
-```
-</details>
+## DataStorePersistenceTarget ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint32 | ownerId |
+| Uint16 | persistenceSlotId |
 
-<details><summary>Click to show the second word list</summary>
+## DataStoreKeyValue ([Structure])
+| Type | Name |
+| --- | --- |
+| [String] | key |
+| [String] | value |
 
-```
-ゼロから
-０から
-0から
-い　　い　　ね
-いい
-東日本
+## DataStorePermission ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint8 | permission |
+| [List]&lt;Uint32&gt; | recipientIds |
 
-大震
-```
-</details>
+## DataStoreRatingInitParamWithSlot ([Structure])
+| Type | Name |
+| --- | --- |
+| Sint8 | slot |
+| [DataStoreRatingInitParam] | param |
 
-<details><summary>Click to show the mii name word list</summary>
+## DataStorePersistenceInitParam ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint16 | persistenceSlotId |
+| Bool | deleteLastObject |
 
-```
-いいね
-下さい
-ください
-押して
-おして
-返す
-かえす
-星
+## DataStoreChangeMetaCompareParam ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint32 | comparisonFlag |
+| [String] | name |
+| [DataStorePermission] | permission |
+| [DataStorePermission] | delPermission |
+| Uint16 | period |
+| [qBuffer] | metaBinary |
+| [List]&lt;[String]&gt; | tags |
+| Uint32 | referredCnt |
+| Uint16 | dataType |
+| Uint8 | status |
 
-してくれ
-するよ
-☆くれたら
-☆あげます
-★くれたら
-★あげます
-しね
-ころす
-ころされた
-アナル
-ファック
-キンタマ
-○ね
-キチガイ
-うんこ
-KITIGAI
-金玉
-おっぱい
-☆おす
-☆押す
-★おす
-★押す
-いいする
-いいよ
-イイネ
-ケツ
-うんち
-かくせいざい
-覚せい剤
-シャブ
-きんたま
-ちんちん
-おしっこ
-ちんぽこ
-ころして
-グッド
-グット
-レ●プ
-バーカ
-きちがい
-ちんげ
-マンコ
-まんこ
-チンポ
-クズ
-ウンコ
-ナイスおねがいします
-penis
-イイね
-☆よろ
-ナイス!して
-ま/んこ
-まん/こ
-```
+## DataStoreCustomRankingRatingCondition ([Structure])
+| Type | Name |
+| --- | --- |
+| Sint8 | slot |
+| Sint32 | minValue |
+| Sint32 | maxValue |
+| __dummy_revision | __dummy_revision1 |
+| Uint32 | minCount |
+| Uint32 | maxCount |
 
-[BufferQueueParam]: #bufferqueueparam-structure
-[DataStoreObjectInfo]: #datastoreobjectinfo-structure
-
-[DataStoreGetMetaParam]: Data-Store-Protocol#datastoregetmetaparam-structure
-[DataStorePreparePostParam]: Data-Store-Protocol#datastorepreparepostparam-structure
-[DataStoreCompletePostParam]: Data-Store-Protocol#datastorecompletepostparam-structure
-[DataStoreReqGetInfo]: Data-Store-Protocol#datastorereqgetinfo-structure
-[DataStoreReqPostInfo]: Data-Store-Protocol#datastorereqpostinfo-structure
-[DataStoreMetaInfo]: Data-Store-Protocol#datastoremetainfo-structure
-
-[Result]: NEX-Common-Types#result
-[String]: NEX-Common-Types#string
-[Buffer]: NEX-Common-Types#buffer
-[qBuffer]: NEX-Common-Types#qbuffer
-[List]: NEX-Common-Types#list
-[Map]: NEX-Common-Types#map
-[DateTime]: NEX-Common-Types#datetime
-[Structure]: NEX-Common-Types#structure
-[Data]: NEX-Common-Types#anydataholder
-[PID]: NEX-Common-Types#pid
+## DataStoreRatingInitParam ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint8 | flag |
+| Uint8 | internalFlag |
+| Uint8 | lockType |
+| Sint64 | initialValue |
+| Sint32 | rangeMin |
+| Sint32 | rangeMax |
+| Sint8 | periodHour |
+| Sint16 | periodDuration |
