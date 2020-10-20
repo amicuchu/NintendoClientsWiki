@@ -45,9 +45,12 @@ Alternative name: ValidateAndRequestTicketWithCustomData
 | Type | Name | Description |
 | --- | --- | --- |
 | [String] | strUserName | Username |
-| [Data]&lt;[AuthenticationInfo](#authenticationinfo-structure)&gt; | oExtraData | Authentication info |
+| [Any]&lt;[AuthenticationInfo](#authenticationinfo-structure)&gt; | oExtraData | Authentication info |
 
 ### AuthenticationInfo ([Structure])
+| This structure inherits from [Data] |
+| --- |
+
 | Type | Name | Description |
 | --- | --- | --- |
 | [String] | m_authToken | Token, as received from the account server |
@@ -140,7 +143,7 @@ This is the reverse of the [GetPID](#4-getpid) method. It returns the name assoc
 ## Request
 | Type | Name | Description |
 | --- | --- | --- |
-| [Data] | loginData | Login data |
+| [Any] | loginData | Login data |
 
 ## Response
 | Type | Name | Description |
@@ -161,12 +164,15 @@ This is the reverse of the [GetPID](#4-getpid) method. It returns the name assoc
 | --- | --- |
 | Uint32 | Platform type (always 3) |
 | [String] | Username |
-| [Data] | [NullData](#nulldata-structure) or [AuthenticationInfo](#authenticationinfo-structure) |
+| [Any] | [NullData](#nulldata-structure) or [AuthenticationInfo](#authenticationinfo-structure) |
 | Bool | Unknown |
 | Uint32 | NEX version (e.g. 40601) |
 | Uint32 | Client version |
 
 ### NullData ([Structure])
+| This structure inherits from [Data] |
+| --- |
+
 This struct does not have any fields.
 
 ## Response
@@ -192,5 +198,6 @@ This struct does not have any fields.
 [List]: NEX-Common-Types#list
 [PID]: NEX-Common-Types#pid
 [DateTime]: NEX-Common-Types#datetime
-[Data]: NEX-Common-Types#anydataholder
+[Data]: NEX-Common-Types#data-structure
+[Any]: NEX-Common-Types#anydataholder
 [RVConnectionData]: NEX-Common-Types#rvconnectiondata-structure
