@@ -142,7 +142,7 @@ Nintendo often seems to be changing a structure without updating its version num
 A structure may inherit another structure. The child is stored right after the parent, and gets its own version header.
 
 # Data ([Structure])
-This is an empty [structure](#structure).
+This struct does not have any fields.
 
 # AnyDataHolder
 This class can hold any object derived from a given base class (usually [nn::nex::Data](#data-structure)). Some meta data is sent along with it, so the other side can properly identify and decode the object.
