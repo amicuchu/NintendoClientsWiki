@@ -10,7 +10,7 @@
 9. [StationURL](#stationurl)
 10. [Variant](#variant)
 11. [Structure](#structure)
-12. [Data](#data)
+12. [Data](#data-structure)
 13. [AnyDataHolder](#anydataholder)
 14. [RVConnectionData](#rvconnectiondata-structure)
 15. [ResultRange](#resultrange-structure)
@@ -141,11 +141,11 @@ Nintendo often seems to be changing a structure without updating its version num
 
 A structure may inherit another structure. The child is stored right after the parent, and gets its own version header.
 
-# Data
+# Data ([Structure])
 This is an empty [structure](#structure).
 
 # AnyDataHolder
-NEX has a class that can hold any object derived from nn::nex::Data. When these are transmitted as part of request or response data, some meta data is sent along with them, so the other side can properly identify and decode the object.
+This class can hold any object derived from a given base class (usually [nn::nex::Data](#data-structure)). Some meta data is sent along with it, so the other side can properly identify and decode the object.
 
 | Type | Description |
 | --- | --- |
