@@ -1,4 +1,4 @@
-## [[SOAP Services]] > ECommerceSOAP (ECS)
+## [SOAP Services](SOAP-Services.md) > ECommerceSOAP (ECS)
 
 | Platform | Server |
 | --- | --- |

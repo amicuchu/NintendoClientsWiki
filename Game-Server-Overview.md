@@ -1,1 +1,1 @@
-This page has been moved here: [[NEX Overview (Game Servers)]]
+This page has been moved here: [NEX Overview (Game Servers)](NEX-Overview-(Game-Servers).md)

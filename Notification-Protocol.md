@@ -1,4 +1,4 @@
-## [[NEX Protocols]] > Notifications (0x0E)
+## [NEX Protocols](NEX-Protocols.md) > Notifications (0x0E)
 
 | Method ID | Method Name |
 | --- | --- |
@@ -35,8 +35,8 @@
 ## Response
 This method does not return anything.
 
-[PID]: NEX-Common-Types#pid
-[String]: NEX-Common-Types#string
-[Structure]: NEX-Common-Types#structure
-[Map]: NEX-Common-Types#map
-[Variant]: NEX-Common-Types#variant
+[PID]: NEX-Common-Types.md#pid
+[String]: NEX-Common-Types.md#string
+[Structure]: NEX-Common-Types.md#structure
+[Map]: NEX-Common-Types.md#map
+[Variant]: NEX-Common-Types.md#variant

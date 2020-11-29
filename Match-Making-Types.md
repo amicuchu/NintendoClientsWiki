@@ -1,4 +1,4 @@
-[[NEX Protocols]] > Match Making Types
+[NEX Protocols](NEX-Protocols.md) > Match Making Types
 ---
 
 Since the match making methods are split across several protocols, this page documents all match making related structures in one place.
@@ -212,17 +212,17 @@ Since the match making methods are split across several protocols, this page doc
 | Uint32 | m_GatheringID |
 | Uint32 | m_MatchmakeSessionCount |
 
-[String]: NEX-Common-Types#string
-[StationURL]: NEX-Common-Types#stationurl
-[List]: NEX-Common-Types#list
-[PID]: NEX-Common-Types#pid
-[Structure]: NEX-Common-Types#structure
-[Buffer]: NEX-Common-Types#buffer
-[DateTime]: NEX-Common-Types#datetime
-[Map]: NEX-Common-Types#map
-[Variant]: NEX-Common-Types#variant
-[ResultRange]: NEX-Common-Types#resultrange-structure
-[Data]: NEX-Common-Types#anydataholder
+[String]: NEX-Common-Types.md#string
+[StationURL]: NEX-Common-Types.md#stationurl
+[List]: NEX-Common-Types.md#list
+[PID]: NEX-Common-Types.md#pid
+[Structure]: NEX-Common-Types.md#structure
+[Buffer]: NEX-Common-Types.md#buffer
+[DateTime]: NEX-Common-Types.md#datetime
+[Map]: NEX-Common-Types.md#map
+[Variant]: NEX-Common-Types.md#variant
+[ResultRange]: NEX-Common-Types.md#resultrange-structure
+[Data]: NEX-Common-Types.md#anydataholder
 
 [MatchmakeSession]: #matchmakesession-structure
 [Gathering]: #gathering-structure

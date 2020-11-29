@@ -1,4 +1,4 @@
-[[PIA Protocols]] > Session Protocol
+[PIA Protocols](PIA-Protocols.md) > Session Protocol
 ---
 | Message Type | Description |
 | --- | --- |

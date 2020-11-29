@@ -1,4 +1,4 @@
-Mario Kart 8 uses the [ENL framework](ENL-Protocol).
+Mario Kart 8 uses the [ENL framework](ENL-Protocol.md).
 
 | Record type | Description |
 | --- | --- |
@@ -24,7 +24,7 @@ Mario Kart 8 uses the [ENL framework](ENL-Protocol).
 | Offset | Type | Description |
 | --- | --- | --- |
 | 0x0 | Unk (8*12) | Unknown |
-| 0x60 | Uint32 (x4) | [Track options](Mario-Kart-8-Track-IDs) |
+| 0x60 | Uint32 (x4) | [Track options](Mario-Kart-8-Track-IDs.md) |
 | 0x70 | Uint32 | Unknown |
 | 0x74 | Uint32 | Unknown |
 | 0x78 | [PlayerInfo](#playerinfo) (x12) | Players |

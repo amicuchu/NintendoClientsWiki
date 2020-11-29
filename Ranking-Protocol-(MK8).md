@@ -1,4 +1,4 @@
-## [[NEX Protocols]] > [Ranking Protocol (0x70)](Ranking-Protocol) > MK8
+## [NEX Protocols](NEX-Protocols.md) > [Ranking Protocol (0x70)](Ranking-Protocol.md) > MK8
 
 This page describes the methods that are only seen in Mario Kart 8.
 

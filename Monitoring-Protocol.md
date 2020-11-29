@@ -1,4 +1,4 @@
-## [[NEX Protocols]] > Monitoring (0x13)
+## [NEX Protocols](NEX-Protocols.md) > Monitoring (0x13)
 
 | Method ID | Method Name |
 | --- | --- |
@@ -230,5 +230,5 @@ ip-10-7-7-231.us-west-2.compute.internal
 ip-10-7-5-184.us-west-2.compute.internal
 ```
 
-[List]: NEX-Common-Types#list
-[String]: NEX-Common-Types#string
+[List]: NEX-Common-Types.md#list
+[String]: NEX-Common-Types.md#string

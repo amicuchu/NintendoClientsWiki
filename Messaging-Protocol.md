@@ -1,4 +1,4 @@
-## [[NEX Protocols]] > Messaging (0x17)
+## [NEX Protocols](NEX-Protocols.md) > Messaging (0x17)
 
 | Method ID | Method Name |
 | --- | --- |
@@ -132,12 +132,12 @@ This method does not return anything.
 | --- | --- |
 | [qBuffer] | m_binaryBody |
 
-[String]: NEX-Common-Types#string
-[qBuffer]: NEX-Common-Types#qbuffer
-[DateTime]: NEX-Common-Types#datetime
-[Data]: NEX-Common-Types#anydataholder
-[List]: NEX-Common-Types#list
-[PID]: NEX-Common-Types#pid
-[ResultRange]: NEX-Common-Types#resultrange-structure
-[Structure]: NEX-Common-Types#structure
-[Data]: NEX-Common-Types#data
+[String]: NEX-Common-Types.md#string
+[qBuffer]: NEX-Common-Types.md#qbuffer
+[DateTime]: NEX-Common-Types.md#datetime
+[Data]: NEX-Common-Types.md#anydataholder
+[List]: NEX-Common-Types.md#list
+[PID]: NEX-Common-Types.md#pid
+[ResultRange]: NEX-Common-Types.md#resultrange-structure
+[Structure]: NEX-Common-Types.md#structure
+[Data]: NEX-Common-Types.md#data

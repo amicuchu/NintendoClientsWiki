@@ -1,4 +1,4 @@
-## [[NEX Protocols]] > Account Management (0x19)
+## [NEX Protocols](NEX-Protocols.md) > Account Management (0x19)
 
 Most methods cannot be used by normal users.
 
@@ -417,16 +417,16 @@ Some functions take a key string. This is a hex string derived from the password
 ## NintendoCreateAccountData ([Structure])
 | Type | Description |
 | --- | --- |
-| [NNAInfo](Friends-Protocol-(Wii-U)#nnainfo) | NNA info |
+| [NNAInfo](Friends-Protocol-(Wii-U).md#nnainfo) | NNA info |
 | [String] | NEX token |
 | [DateTime] | Birthday |
 | Uint64 | Unknown |
 
-[Result]: NEX-Common-Types#result
-[String]: NEX-Common-Types#string
-[PID]: NEX-Common-Types#pid
-[DateTime]: NEX-Common-Types#datetime
-[Data]: NEX-Common-Types#anydataholder
-[List]: NEX-Common-Types#list
-[ResultRange]: NEX-Common-Types#resultrange-structure
-[Structure]: NEX-Common-Types#structure
+[Result]: NEX-Common-Types.md#result
+[String]: NEX-Common-Types.md#string
+[PID]: NEX-Common-Types.md#pid
+[DateTime]: NEX-Common-Types.md#datetime
+[Data]: NEX-Common-Types.md#anydataholder
+[List]: NEX-Common-Types.md#list
+[ResultRange]: NEX-Common-Types.md#resultrange-structure
+[Structure]: NEX-Common-Types.md#structure

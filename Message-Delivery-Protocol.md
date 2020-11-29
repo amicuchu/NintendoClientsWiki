@@ -1,4 +1,4 @@
-## [[NEX Protocols]] > Message Delivery (0x1B)
+## [NEX Protocols](NEX-Protocols.md) > Message Delivery (0x1B)
 
 | Method ID | Method Name |
 | --- | --- |
@@ -13,4 +13,4 @@
 ## Response
 This method does not return anything.
 
-[Data]: NEX-Common-Types#anydataholder
+[Data]: NEX-Common-Types.md#anydataholder

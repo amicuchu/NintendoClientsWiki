@@ -1,4 +1,4 @@
-[[NEX Protocols]] > Simple Authentication (0x10)
+[NEX Protocols](NEX-Protocols.md) > Simple Authentication (0x10)
 ---
 
 Interestingly, this protocol has `Cafe` in some of its method names, even though this protocol is never used by Nintendo.
@@ -45,7 +45,7 @@ Interestingly, this protocol has `Cafe` in some of its method names, even though
 | [RVConnectionData] | pConnectionData | Connection info for secure server |
 | [String] | strReturnMsg | Response message |
 
-[Result]: NEX-Common-Types#result
-[String]: NEX-Common-Types#string
-[Data]: NEX-Common-Types#anydataholder
-[RVConnectionData]: NEX-Common-Types#rvconnectiondata-structure
+[Result]: NEX-Common-Types.md#result
+[String]: NEX-Common-Types.md#string
+[Data]: NEX-Common-Types.md#anydataholder
+[RVConnectionData]: NEX-Common-Types.md#rvconnectiondata-structure

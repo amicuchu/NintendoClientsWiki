@@ -1,9 +1,9 @@
-[[NEX Protocols]] > Friends (0x14)
+[NEX Protocols](NEX-Protocols.md) > Friends (0x14)
 ---
 
 Even though this protocol is implemented on Nintendo game servers, it is never actually used. Instead, Nintendo has implemented its own friend services:
-* [[Friends Protocol (3DS)]]
-* [[Friends Protocol (Wii U)]]<br><br>
+* [Friends Protocol (3DS)](Friends-Protocol-(3DS).md)
+* [Friends Protocol (Wii U)](Friends-Protocol-(Wii-U))<br><br>
 
 | Method ID | Method Name |
 | --- | --- |

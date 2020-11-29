@@ -1,4 +1,4 @@
-## [[NEX Protocols]] > Friends 3DS (0x65)
+## [NEX Protocols](NEX-Protocols.md) > Friends 3DS (0x65)
 Official name: NintendoFriendPresenceProtocol
 
 | Method ID | Method Name |
@@ -324,8 +324,8 @@ This method does not return anything
 | [GameKey](#gamekey) | Game key |
 | [DateTime] | Date time |
 
-[String]: NEX-Common-Types#string
-[List]: NEX-Common-Types#list
-[Buffer]: NEX-Common-Types#buffer
-[DateTime]: NEX-Common-Types#datetime
-[PID]: NEX-Common-Types#pid
+[String]: NEX-Common-Types.md#string
+[List]: NEX-Common-Types.md#list
+[Buffer]: NEX-Common-Types.md#buffer
+[DateTime]: NEX-Common-Types.md#datetime
+[PID]: NEX-Common-Types.md#pid

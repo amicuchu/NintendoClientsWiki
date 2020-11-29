@@ -1,9 +1,9 @@
-[[Server List]] > AAuth Server
+[Server List](Server-List.md) > AAuth Server
 ---
 
 This server is at: https://aauth-lp1.ndas.srv.nintendo.net
 
-The aauth server provides application authorization tokens. These are required to access game-specific servers, such as [NEX](NEX-Overview-(Game-Servers)).
+The aauth server provides application authorization tokens. These are required to access game-specific servers, such as [NEX](NEX-Overview-(Game-Servers).md).
 
 This server takes form-encoded requests and responds with json-encoding. Also, this server uses the alternative base64 table (with '-' and '_' instead of '+' and '/')
 
@@ -34,7 +34,7 @@ This request is only required if the media type is `GAMECARD`.
 
 | Param | Description |
 | --- | --- |
-| device_auth_token | Device token from [dauth server](DAuth-Server) |
+| device_auth_token | Device token from [dauth server](DAuth-Server.md) |
 
 Response on success:
 
@@ -50,7 +50,7 @@ The following parameters are always present:
 | --- | --- |
 | application_id | Title id (`%016x`) |
 | application_version | Title version (`%08x`) |
-| device_auth_token | Device token from [dauth server](DAuth-Server) |
+| device_auth_token | Device token from [dauth server](DAuth-Server.md) |
 | media_type | `GAMECARD`, `DIGITAL`, `SYSTEM` or `NO_CERT` |
 
 The following parameters depend on the media type of the game:

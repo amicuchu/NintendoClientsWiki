@@ -1,4 +1,4 @@
-## [[Server List]] > Ninja Server
+## [Server List](Server-List.md) > Ninja Server
 
 The ninja server provides an API for the eShop. The wood client certificate is need to access this server.
 

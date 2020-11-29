@@ -1,4 +1,4 @@
-[[NEX Protocols]] > Authentication (0x0A)
+[NEX Protocols](NEX-Protocols.md) > Authentication (0x0A)
 ---
 Official name: TicketGrantingProtocol
 
@@ -26,7 +26,7 @@ Alternative name: ValidateAndRequestTicket
 | --- | --- | --- |
 | [Result] | %retval% | Result code |
 | [PID] | pidPrincipal |  User pid |
-| [Buffer] | pbufResponse | [Kerberos ticket](Kerberos-Authentication#kerberos-ticket) |
+| [Buffer] | pbufResponse | [Kerberos ticket](Kerberos-Authentication.md#kerberos-ticket) |
 | [RVConnectionData] | pConnectionData | Connection info for secure server.<br><br>The Nintendo Switch allows the secure server to be at the same address as the authentication server. In that case, the secure server station url points to  0.0.0.1 with port 1. |
 | [String] | strReturnMsg | Server build name |
 
@@ -69,7 +69,7 @@ Alternative name: ValidateAndRequestTicketWithCustomData
 | --- | --- | --- |
 | [Result] | %retval% | Result code |
 | [PID] | pidPrincipal | User pid |
-| [Buffer] | pbufResponse | [Kerberos ticket](Kerberos-Authentication#kerberos-ticket) |
+| [Buffer] | pbufResponse | [Kerberos ticket](Kerberos-Authentication.md#kerberos-ticket) |
 | [RVConnectionData] | pConnectionData | Connection info for secure server.<br><br>The Nintendo Switch allows the secure server to be at the same address as the authentication server. In that case, the secure server station url points to  0.0.0.1 with port 1. |
 | [String] | strReturnMsg | Server build name |
 | [String] | pSourceKey | **Only present on Switch.** If this is a non-empty hex string, key derivation is skipped and this string is used as the key to decrypt the ticket instead. |
@@ -85,7 +85,7 @@ Alternative name: ValidateAndRequestTicketWithCustomData
 | Type | Name | Description |
 | --- | --- | --- |
 | [Result] | %retval% | Result code |
-| [Buffer] | bufResponse | [Kerberos ticket](Kerberos-Authentication#kerberos-ticket) |
+| [Buffer] | bufResponse | [Kerberos ticket](Kerberos-Authentication.md#kerberos-ticket) |
 
 # (4) GetPID
 This is the reverse of the [GetName](#5-getname) method. It looks up the pid that belongs to a given username. The username is not the same as the nintendo network id. On all normal accounts the username is the same as the user pid.
@@ -150,7 +150,7 @@ This is the reverse of the [GetPID](#4-getpid) method. It returns the name assoc
 | --- | --- | --- |
 | [Result] | %retval% | Result code |
 | [PID] | pidPrincipal | User pid |
-| [Buffer] | pbufResponse | [Kerberos ticket](Kerberos-Authentication#kerberos-ticket) |
+| [Buffer] | pbufResponse | [Kerberos ticket](Kerberos-Authentication.md#kerberos-ticket) |
 | [RVConnectionData] | pConnectionData | Connection info for secure server |
 
 # (6) ValidateAndRequestTicketWithParam
@@ -184,20 +184,20 @@ This struct does not have any fields.
 | Type | Description |
 | --- | --- |
 | [PID] | User id |
-| [Buffer] | [Kerberos ticket](Kerberos-Authentication#kerberos-ticket) |
+| [Buffer] | [Kerberos ticket](Kerberos-Authentication.md#kerberos-ticket) |
 | [StationURL] | Secure server location |
 | [DateTime] | Server time |
 | [String] | Server build name |
 | [String] | Kerberos key. If present, key derivation is skipped and this key is used to decrypt the ticket instead. |
 
-[Result]: NEX-Common-Types#result
-[String]: NEX-Common-Types#string
-[Buffer]: NEX-Common-Types#buffer
-[Structure]: NEX-Common-Types#structure
-[StationURL]: NEX-Common-Types#stationurl
-[List]: NEX-Common-Types#list
-[PID]: NEX-Common-Types#pid
-[DateTime]: NEX-Common-Types#datetime
-[Data]: NEX-Common-Types#data-structure
-[Any]: NEX-Common-Types#anydataholder
-[RVConnectionData]: NEX-Common-Types#rvconnectiondata-structure
+[Result]: NEX-Common-Types.md#result
+[String]: NEX-Common-Types.md#string
+[Buffer]: NEX-Common-Types.md#buffer
+[Structure]: NEX-Common-Types.md#structure
+[StationURL]: NEX-Common-Types.md#stationurl
+[List]: NEX-Common-Types.md#list
+[PID]: NEX-Common-Types.md#pid
+[DateTime]: NEX-Common-Types.md#datetime
+[Data]: NEX-Common-Types.md#data-structure
+[Any]: NEX-Common-Types.md#anydataholder
+[RVConnectionData]: NEX-Common-Types.md#rvconnectiondata-structure

@@ -1,4 +1,4 @@
-## [[NEX Protocols]] > [Ranking Protocol (0x70)](Ranking-Protocol) > Splatoon
+## [NEX Protocols](NEX-Protocols.md) > [Ranking Protocol (0x70)](Ranking-Protocol.md) > Splatoon
 
 This page describes the methods that are only seen in Splatoon.
 
@@ -9,15 +9,15 @@ This page describes the methods that are only seen in Splatoon.
 | 18 | UploadCompetitionRankingScore |
 | 19 | DeleteCompetitionRankingScore |
 
-[Result]: NEX-Common-Types#result
-[String]: NEX-Common-Types#string
-[Buffer]: NEX-Common-Types#buffer
-[qBuffer]: NEX-Common-Types#qbuffer
-[List]: NEX-Common-Types#list
-[Map]: NEX-Common-Types#map
-[DateTime]: NEX-Common-Types#date-time
-[Structure]: NEX-Common-Types#structure
-[Data]: NEX-Common-Types#any-data-holder
+[Result]: NEX-Common-Types.md#result
+[String]: NEX-Common-Types.md#string
+[Buffer]: NEX-Common-Types.md#buffer
+[qBuffer]: NEX-Common-Types.md#qbuffer
+[List]: NEX-Common-Types.md#list
+[Map]: NEX-Common-Types.md#map
+[DateTime]: NEX-Common-Types.md#date-time
+[Structure]: NEX-Common-Types.md#structure
+[Data]: NEX-Common-Types.md#any-data-holder
 
 [RankingScoreData]: #rankingscoredata-structure
 [RankingChangeAttributesParam]: #rankingchangeattributesparam-structure

@@ -1,11 +1,11 @@
-## [[NEX Protocols]] > Matchmake Extension (0x6D)
+## [NEX Protocols](NEX-Protocols.md) > Matchmake Extension (0x6D)
 
 The following games have additional methods in the matchmake extension protocol:
-* [Mario Kart 8](Matchmake-Extension-Protocol-(MK8))
-* [Mario Kart 8 Deluxe](Matchmake-Extension-Protocol-(MK8D))
-* [Monster Hunter XX (3DS)](Matchmake-Extension-Protocol-(MHXX))
-* [Super Mario Bros. 35](Matchmake-Extension-Protocol-(SMB35))
-* [Super Smash Bros. 4](Matchmake-Extension-Protocol-(SSB4))
+* [Mario Kart 8](Matchmake-Extension-Protocol-(MK8).md)
+* [Mario Kart 8 Deluxe](Matchmake-Extension-Protocol-(MK8D).md)
+* [Monster Hunter XX (3DS)](Matchmake-Extension-Protocol-(MHXX).md)
+* [Super Mario Bros. 35](Matchmake-Extension-Protocol-(SMB35).md)
+* [Super Smash Bros. 4](Matchmake-Extension-Protocol-(SSB4).md)
 
 This remainder of this page describes the methods that are not specific to any game.
 
@@ -655,25 +655,25 @@ This method does not return anything.
 | [List]&lt;[MatchmakeSession]&gt; | lstMatchmakeSession |
 | [List]&lt;[GatheringURLs]&gt; | lstGatheringUrls |
 
-[String]: NEX-Common-Types#string
-[Data]: NEX-Common-Types#anydataholder
-[List]: NEX-Common-Types#list
-[Buffer]: NEX-Common-Types#buffer
-[PID]: NEX-Common-Types#pid
+[String]: NEX-Common-Types.md#string
+[Data]: NEX-Common-Types.md#anydataholder
+[List]: NEX-Common-Types.md#list
+[Buffer]: NEX-Common-Types.md#buffer
+[PID]: NEX-Common-Types.md#pid
 
-[Gathering]: Match-Making-Types#gathering-structure
-[MatchmakeSessionSearchCriteria]: Match-Making-Types#matchmakesessionsearchcriteria-structure
-[ResultRange]: NEX-Common-Types#resultrange-structure
-[GatheringURLs]: Match-Making-Types#gatheringurls-structure
-[NotificationEvent]: Notification-Protocol#notificationevent-structure
-[PlayingSession]: Match-Making-Types#playingsession-structure
-[PersistentGathering]: Match-Making-Types#persistentgathering-structure
-[SimplePlayingSession]: Match-Making-Types#simpleplayingsession-structure
-[SimpleCommunity]: Match-Making-Types#simplecommunity-structure
-[CreateMatchmakeSessionParam]: Match-Making-Types#creatematchmakesessionparam-structure
-[MatchmakeSession]: Match-Making-Types#matchmakesession-structure
-[JoinMatchmakeSessionParam]: Match-Making-Types#joinmatchmakesessionparam-structure
-[AutoMatchmakeParam]: Match-Making-Types#automatchmakeparam-structure
-[UpdateMatchmakeSessionParam]: Match-Making-Types#updatematchmakesessionparam-structure
-[FindMatchmakeSessionByParticipantParam]: Match-Making-Types#findmatchmakesessionbyparticipantparam-structure
-[FindMatchmakeSessionByParticipantResult]: Match-Making-Types#findmatchmakesessionbyparticipantresult-structure
+[Gathering]: Match-Making-Types.md#gathering-structure
+[MatchmakeSessionSearchCriteria]: Match-Making-Types.md#matchmakesessionsearchcriteria-structure
+[ResultRange]: NEX-Common-Types.md#resultrange-structure
+[GatheringURLs]: Match-Making-Types.md#gatheringurls-structure
+[NotificationEvent]: Notification-Protocol.md#notificationevent-structure
+[PlayingSession]: Match-Making-Types.md#playingsession-structure
+[PersistentGathering]: Match-Making-Types.md#persistentgathering-structure
+[SimplePlayingSession]: Match-Making-Types.md#simpleplayingsession-structure
+[SimpleCommunity]: Match-Making-Types.md#simplecommunity-structure
+[CreateMatchmakeSessionParam]: Match-Making-Types.md#creatematchmakesessionparam-structure
+[MatchmakeSession]: Match-Making-Types.md#matchmakesession-structure
+[JoinMatchmakeSessionParam]: Match-Making-Types.md#joinmatchmakesessionparam-structure
+[AutoMatchmakeParam]: Match-Making-Types.md#automatchmakeparam-structure
+[UpdateMatchmakeSessionParam]: Match-Making-Types.md#updatematchmakesessionparam-structure
+[FindMatchmakeSessionByParticipantParam]: Match-Making-Types.md#findmatchmakesessionbyparticipantparam-structure
+[FindMatchmakeSessionByParticipantResult]: Match-Making-Types.md#findmatchmakesessionbyparticipantresult-structure

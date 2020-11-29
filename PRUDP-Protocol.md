@@ -160,7 +160,7 @@ The following techniques are used to achieve reliability:
 * To keep the connection alive, both client and server may send PING packets to each other after a certain amount of time has passed.
 
 ### Encryption
-**V0 and V1**: All payloads are encrypted using RC4, with separate streams for client-to-server packets and server-to-client packets. The connection to the authentication server is encrypted using a default key that's always the same: `CD&ML`. The connection to the secure server is encrypted using the session key from the [Kerberos ticket](Kerberos-Authentication).
+**V0 and V1**: All payloads are encrypted using RC4, with separate streams for client-to-server packets and server-to-client packets. The connection to the authentication server is encrypted using a default key that's always the same: `CD&ML`. The connection to the secure server is encrypted using the session key from the [Kerberos ticket](Kerberos-Authentication.md).
 
 **Lite**: Since the underlying connection is SSL-encrypted anyway, no encryption is used by PRUDP.
 
@@ -201,10 +201,10 @@ def combine_keys(key1, key2):
 ### Sandbox access key
 Every game server has a unique sandbox access key. This is used to calculate the [packet signature](#packet-signature). The only way to find the access key of a server is by disassembling a game that connects to this server.
 
-A list of game servers and their access keys can be found [here](Game-Server-List).
+A list of game servers and their access keys can be found [here](Game-Server-List.md).
 
 ### Secure server connection
-As explained on the [Game Server Overview](NEX-Overview-(Game-Servers)) page, every game server consists of an authentication server and a secure server. If a client wants to connect to the secure server it must first request a [ticket](Kerberos-Authentication) from the authentication server. The ticket contains the session key that's used in the secure server connection, among other information.
+As explained on the [Game Server Overview](NEX-Overview-(Game-Servers).md) page, every game server consists of an authentication server and a secure server. If a client wants to connect to the secure server it must first request a [ticket](Kerberos-Authentication.md) from the authentication server. The ticket contains the session key that's used in the secure server connection, among other information.
 
 The payload of the CONNECT packet should be empty while connecting to the authentication server. While connecting to the secure server, the CONNECT packet should have the following payload:
 
@@ -212,7 +212,7 @@ The payload of the CONNECT packet should be empty while connecting to the authen
 | Type | Description |
 | --- | --- |
 | [Buffer] | Kerberos ticket data |
-| [Buffer] | [Kerberos-encrypted](Kerberos-Authentication) request data |
+| [Buffer] | [Kerberos-encrypted](Kerberos-Authentication.md) request data |
 
 Request data (encrypted with session key):
 
@@ -351,7 +351,7 @@ The least significant byte of this field describes the minor version of the prot
 | 0 | Base version, no aggregate ack |
 | 1 | Aggregate ack (old version) is now supported |
 | 2 | Aggregate ack (new version) is now supported and the new signature method is used |
-| 3 | The new RVDDL version is used: [structures](NEX-Common-Types#structure) now have a version header |
+| 3 | The new RVDDL version is used: [structures](NEX-Common-Types.md#structure) now have a version header |
 | 4 | Unknown difference |
 | 5 | Unknown difference |
 | 6 | Unknown difference |
@@ -385,5 +385,5 @@ If compression is enabled, packets are compressed with zlib before they are encr
 
 [V1](#v1-format) allows the connection to be divided into multiple reliable substreams. The maximum number of substreams is decided during the connection handshake (with [option 4](#optional-data)). Every substream has its own [RC4 streams](#encryption) and its own incrementing [sequence ids](#sequence-id). Substreams only cover reliable packets. Unreliable packets do not belong to a substream.
 
-[Buffer]: NEX-Common-Types#buffer
-[PID]: NEX-Common-Types#pid
+[Buffer]: NEX-Common-Types.md#buffer
+[PID]: NEX-Common-Types.md#pid

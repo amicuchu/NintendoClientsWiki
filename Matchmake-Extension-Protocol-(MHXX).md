@@ -1,4 +1,4 @@
-## [[NEX Protocols]] > [Matchmake Extension (0x6D)](Matchmake-Extension-Protocol) > Monster Hunter XX
+## [NEX Protocols](NEX-Protocols.md) > [Matchmake Extension (0x6D)](Matchmake-Extension-Protocol.md) > Monster Hunter XX
 This page describes the methods that are only seen in Monster Hunter XX (3DS).
 
 | Method ID | Method Name |
@@ -62,7 +62,7 @@ This method does not return anything.
 | Type | Name |
 | --- | --- |
 | Uint64 | id |
-| [ResultRange](NEX-Common-Types#resultrange-structure) | resultRange |
+| [ResultRange](NEX-Common-Types.md#resultrange-structure) | resultRange |
 
 ## Response
 | Type | Name |
@@ -82,16 +82,16 @@ This method does not return anything.
 | [String] | name |
 | Uint32 | presence |
 
-[Result]: NEX-Common-Types#result
-[String]: NEX-Common-Types#string
-[Buffer]: NEX-Common-Types#buffer
-[qBuffer]: NEX-Common-Types#qbuffer
-[List]: NEX-Common-Types#list
-[Map]: NEX-Common-Types#map
-[DateTime]: NEX-Common-Types#date-time
-[Structure]: NEX-Common-Types#structure
-[Data]: NEX-Common-Types#any-data-holder
-[Variant]: NEX-Common-Types#variant
+[Result]: NEX-Common-Types.md#result
+[String]: NEX-Common-Types.md#string
+[Buffer]: NEX-Common-Types.md#buffer
+[qBuffer]: NEX-Common-Types.md#qbuffer
+[List]: NEX-Common-Types.md#list
+[Map]: NEX-Common-Types.md#map
+[DateTime]: NEX-Common-Types.md#date-time
+[Structure]: NEX-Common-Types.md#structure
+[Data]: NEX-Common-Types.md#any-data-holder
+[Variant]: NEX-Common-Types.md#variant
 
 [MatchmakeSessionSearchCriteria]: #matchmakesessionsearchcriteria-structure
 [PlayingSession]: #playingsession-structure

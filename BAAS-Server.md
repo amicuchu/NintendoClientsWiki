@@ -1,4 +1,4 @@
-[[Server List]] > BAAS Server
+[Server List](Server-List.md) > BAAS Server
 ---
 
 Server: https://e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com
@@ -54,7 +54,7 @@ This request provides an authorization token that's required for all other reque
 | Param | Description |
 | --- | --- |
 | grantType | "public_client" |
-| assertion | Device token obtained from [dauth server](DAuth-Server) |
+| assertion | Device token obtained from [dauth server](DAuth-Server.md) |
 
 Response on success:
 
@@ -71,7 +71,7 @@ This request can be used to log in on a device account that was registered with 
 | --- | --- |
 | id | Device account id |
 | password | Device account password |
-| appAuthNToken | [AAuth token](AAuth-Server) (optional) |
+| appAuthNToken | [AAuth token](AAuth-Server.md) (optional) |
 | skipOp2Verification | Unknown (optional) |
 
 Response on success:

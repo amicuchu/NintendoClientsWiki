@@ -1,4 +1,4 @@
-## [[NEX Protocols]] > [Matchmake Extension (0x6D)](Matchmake-Extension-Protocol) > SMB 35
+## [NEX Protocols](NEX-Protocols.md) > [Matchmake Extension (0x6D)](Matchmake-Extension-Protocol.md) > SMB 35
 
 This page describes the methods that are only seen in Super Mario Bros. 35.
 

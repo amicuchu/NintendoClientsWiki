@@ -1,4 +1,4 @@
-[[Server List]] > DAuth Server
+[Server List](Server-List.md) > DAuth Server
 ---
 
 This server is at: https://dauth-lp1.ndas.srv.nintendo.net
@@ -78,9 +78,9 @@ The dauth key source is: `8be45abcf987021523ca4f5e2300dbf0`
 | `146c8ac7b8a0db52` | ? |
 | `41f4a6491028e3c4` | Pushmo and Tagaya |
 | `67bf9945b45248c6` | BCAT |
-| `81333c548b2e876d` | [Account server](Account-Server-(Switch)) |
+| `81333c548b2e876d` | [Account server](Account-Server-(Switch).md) |
 | `83b72b05dc3278d7` | ? |
-| `8f849b5d34778d8e` | [[BaaS server]] |
+| `8f849b5d34778d8e` | [BaaS server](BaaS-server.md) |
 | `93af0acb26258de9` | Beach |
 | `d5b6cac2c1514c56` | Dragons |
 | `df51c436bc01c437` | Prepo |

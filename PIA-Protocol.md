@@ -86,7 +86,7 @@ All messages are padded such that their size is a multiple of 4 bytes.
 | 0x2 | 2 | Payload size |
 | 0x4 | 4 | [Destination](#destination) |
 | 0x8 | 4 | [Source station id](#station-id) |
-| 0xC | 2 | [Protocol type](PIA-Protocols) |
+| 0xC | 2 | [Protocol type](PIA-Protocols.md) |
 | 0xE | 2 | Protocol port (protocol-specific) |
 | 0x10 | 4 | Reserved (always 0) |
 | 0x14 | | Payload (protocol-specific) |
@@ -100,7 +100,7 @@ All messages are padded such that their size is a multiple of 4 bytes.
 | 0x1 | 2 | Payload size |
 | 0x3 | 8 | [Destination](#destination) |
 | 0xB | 8 | [Source station id](#station-id) |
-| 0x13 | 1 | [Protocol type](PIA-Protocols) |
+| 0x13 | 1 | [Protocol type](PIA-Protocols.md) |
 | 0x14 | 1 | Protocol port (protocol-specific) |
 | 0x15 | 3 | Padding (always 0) |
 | 0x18 | | Payload (protocol-specific) |
@@ -113,7 +113,7 @@ All messages are padded such that their size is a multiple of 4 bytes.
 | 0x0 | 1 | [Message flags](#message-flags) |
 | 0x1 | 1 | Version (always 1) |
 | 0x2 | 2 | Payload size |
-| 0x4 | 1 | [Protocol type](PIA-Protocols) |
+| 0x4 | 1 | [Protocol type](PIA-Protocols.md) |
 | 0x5 | 1 | Protocol port (protocol-specific) |
 | 0x6 | 8 | [Destination](#destination) |
 | 0xE | 8 | [Source station id](#station-id) |
@@ -127,7 +127,7 @@ All messages are padded such that their size is a multiple of 4 bytes.
 | 0x0 | 1 | [Message flags](#message-flags) |
 | 0x1 | 1 | Version (always 2) |
 | 0x2 | 2 | Payload size |
-| 0x4 | 1 | [Protocol type](PIA-Protocols) |
+| 0x4 | 1 | [Protocol type](PIA-Protocols.md) |
 | 0x5 | 3 | Protocol port (protocol-specific) |
 | 0x8 | 8 | [Destination](#destination) |
 | 0x10 | 8 | [Source station id](#station-id) |
@@ -143,7 +143,7 @@ Fields that are not present are copied from the previous message.
 | Uint8 | Flags indicating which of the following fields are present. |
 | Uint8 | [Message flags](#message-flags). *Only present if `flags & 1`.* |
 | Uint16 | Payload size. *Only present if `flags & 2`.* |
-| Uint8 | [Protocol type](PIA-Protocols). *Only present if `flags & 4`.* |
+| Uint8 | [Protocol type](PIA-Protocols.md). *Only present if `flags & 4`.* |
 | Uint24 | Protocol port (protocol-specific). *Only present if `flags & 4`.* |
 | Uint64 | [Destination](#destination). *Only present if `flags & 8`.* |
 | Uint64 | [Source station id](#station-id). *Only present if `flags & 16`.* |
@@ -173,9 +173,9 @@ Packets are encrypted and signed with the session key.
 
 | Mode | Session key |
 | --- | --- |
-| NEX | Obtained from server during [matchmaking](Match-Making-Types#matchmakesession-structure) |
+| NEX | Obtained from server during [matchmaking](Match-Making-Types.md#matchmakesession-structure) |
 | LDN | ? |
-| LAN | First 16 bytes of the HMAC-SHA256 of the slightly modified [session param](LAN-Protocol#lansessioninfo) (the last byte is incremented by 1), with the same game-specific key that's used for the [crypto challenge](LAN-Protocol#crypto-challenge). |
+| LAN | First 16 bytes of the HMAC-SHA256 of the slightly modified [session param](LAN-Protocol.md#lansessioninfo) (the last byte is incremented by 1), with the same game-specific key that's used for the [crypto challenge](LAN-Protocol.md#crypto-challenge). |
 
 **Wii U and Switch (up to 5.3):**
 

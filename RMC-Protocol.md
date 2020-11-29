@@ -1,10 +1,10 @@
-This is a simple remote method call protocol that lies on top of the [[PRUDP protocol]].
+This is a simple remote method call protocol that lies on top of the [PRUDP protocol](PRUDP-protocol.md).
 
 ## Request Format
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 4 | Size, excluding this field |
-| 0x4 | 1 | [Protocol id](NEX-Protocols), ORed with 0x80 |
+| 0x4 | 1 | [Protocol id](NEX-Protocols.md), ORed with 0x80 |
 | 0x5 | 4 | Call id, an incrementing number used to match a response to the right request |
 | 0x9 | 4 | Method id |
 | 0xD | ... | Method parameters |
@@ -13,7 +13,7 @@ This is a simple remote method call protocol that lies on top of the [[PRUDP pro
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 4 | Size, excluding this field |
-| 0x4 | 1 | [Protocol id](NEX-Protocols) |
+| 0x4 | 1 | [Protocol id](NEX-Protocols.md) |
 | 0x5 | 1 | 0=Error 1=Success |
 
 **On success:**

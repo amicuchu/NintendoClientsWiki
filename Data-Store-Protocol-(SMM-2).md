@@ -1,4 +1,4 @@
-## [[NEX Protocols]] > [Data Store (0x73)](Data-Store-Protocol) > SMM 2
+## [NEX Protocols](NEX-Protocols.md) > [Data Store (0x73)](Data-Store-Protocol.md) > SMM 2
 
 This page describes the methods that are only seen in Super Mario Maker 2.
 
@@ -1222,22 +1222,22 @@ Revision 3:
 [MiiClothes]: #miiclothes-structure
 [BattleModeRating]: #battlemoderating-structure
 
-[DataStoreGetMetaParam]: Data-Store-Protocol#datastoregetmetaparam-structure
-[DataStorePreparePostParam]: Data-Store-Protocol#datastorepreparepostparam-structure
-[DataStoreCompletePostParam]: Data-Store-Protocol#datastorecompletepostparam-structure
-[DataStoreReqGetInfo]: Data-Store-Protocol#datastorereqgetinfo-structure
-[DataStoreReqPostInfo]: Data-Store-Protocol#datastorereqpostinfo-structure
-[DataStoreMetaInfo]: Data-Store-Protocol#datastoremetainfo-structure
-[DataStoreKeyValue]: Data-Store-Protocol#datastorekeyvalue-structure
+[DataStoreGetMetaParam]: Data-Store-Protocol.md#datastoregetmetaparam-structure
+[DataStorePreparePostParam]: Data-Store-Protocol.md#datastorepreparepostparam-structure
+[DataStoreCompletePostParam]: Data-Store-Protocol.md#datastorecompletepostparam-structure
+[DataStoreReqGetInfo]: Data-Store-Protocol.md#datastorereqgetinfo-structure
+[DataStoreReqPostInfo]: Data-Store-Protocol.md#datastorereqpostinfo-structure
+[DataStoreMetaInfo]: Data-Store-Protocol.md#datastoremetainfo-structure
+[DataStoreKeyValue]: Data-Store-Protocol.md#datastorekeyvalue-structure
 
-[Result]: NEX-Common-Types#result
-[String]: NEX-Common-Types#string
-[Buffer]: NEX-Common-Types#buffer
-[qBuffer]: NEX-Common-Types#qbuffer
-[List]: NEX-Common-Types#list
-[Map]: NEX-Common-Types#map
-[DateTime]: NEX-Common-Types#datetime
-[Structure]: NEX-Common-Types#structure
-[Data]: NEX-Common-Types#anydataholder
-[PID]: NEX-Common-Types#pid
-[ResultRange]: NEX-Common-Types#resultrange-structure
+[Result]: NEX-Common-Types.md#result
+[String]: NEX-Common-Types.md#string
+[Buffer]: NEX-Common-Types.md#buffer
+[qBuffer]: NEX-Common-Types.md#qbuffer
+[List]: NEX-Common-Types.md#list
+[Map]: NEX-Common-Types.md#map
+[DateTime]: NEX-Common-Types.md#datetime
+[Structure]: NEX-Common-Types.md#structure
+[Data]: NEX-Common-Types.md#anydataholder
+[PID]: NEX-Common-Types.md#pid
+[ResultRange]: NEX-Common-Types.md#resultrange-structure

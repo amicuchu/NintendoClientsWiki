@@ -1,4 +1,4 @@
-## [[NEX Protocols]] > Nintendo Notifications (0x64)
+## [NEX Protocols](NEX-Protocols.md) > Nintendo Notifications (0x64)
 
 Method 2 is only implemented by the friend server and client. There is no known difference between them, except that the server sends some events through method 1 and others through method 2. The client treats them exactly the same.
 
@@ -62,15 +62,15 @@ This method does not return anything.
 | 35 | | | Related to friend relationships |
 | 36 | | [PersistentNotificationList] | This seems to delete persistent notifications |
 
-[Data]: NEX-Common-Types#anydataholder
-[PID]: NEX-Common-Types#pid
-[Structure]: NEX-Common-Types#structure
-[String]: NEX-Common-Types#string
-[FriendRequest]: Friends-Protocol-(Wii-U)#friendrequest
-[NintendoPresenceV2]: Friends-Protocol-(Wii-U)#nintendopresencev2
-[FriendInfo]: Friends-Protocol-(Wii-U)#friendinfo
-[NNAInfo]: Friends-Protocol-(Wii-U)#nnainfo
-[MiiV2]: Friends-Protocol-(Wii-U)#miiv2
-[PrincipalPreference]: Friends-Protocol-(Wii-U)#principalpreference
-[PersistentNotificationList]: Friends-Protocol-(Wii-U)#persistentnotificationlist
+[Data]: NEX-Common-Types.md#anydataholder
+[PID]: NEX-Common-Types.md#pid
+[Structure]: NEX-Common-Types.md#structure
+[String]: NEX-Common-Types.md#string
+[FriendRequest]: Friends-Protocol-(Wii-U).md#friendrequest
+[NintendoPresenceV2]: Friends-Protocol-(Wii-U).md#nintendopresencev2
+[FriendInfo]: Friends-Protocol-(Wii-U).md#friendinfo
+[NNAInfo]: Friends-Protocol-(Wii-U).md#nnainfo
+[MiiV2]: Friends-Protocol-(Wii-U).md#miiv2
+[PrincipalPreference]: Friends-Protocol-(Wii-U).md#principalpreference
+[PersistentNotificationList]: Friends-Protocol-(Wii-U).md#persistentnotificationlist
 [NintendoNotificationEventGeneral]: #nintendonotificationeventgeneral-structure

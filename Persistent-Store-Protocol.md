@@ -1,4 +1,4 @@
-[[NEX Protocols]] > Persistent Store (0x18)
+[NEX Protocols](NEX-Protocols.md) > Persistent Store (0x18)
 ---
 
 This protocol is implemented on Nintendo game servers, but no game seems to have the code to use this protocol.
@@ -100,7 +100,7 @@ This method does not return anything.
 | --- | --- |
 | [List]&lt;[Data]&gt; | lstData |
 
-[Buffer]: NEX-Common-Types#buffer
-[Data]: NEX-Common-Types#any-data-holder
-[List]: NEX-Common-Types#list
-[String]: NEX-Common-Types#string
+[Buffer]: NEX-Common-Types.md#buffer
+[Data]: NEX-Common-Types.md#any-data-holder
+[List]: NEX-Common-Types.md#list
+[String]: NEX-Common-Types.md#string

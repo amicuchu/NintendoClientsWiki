@@ -1,9 +1,9 @@
 Nintendo provides several eShop related services as a SOAP service:
 
-* [`CAS (CatalogingSOAP`)](CAS-Server)
-* [`ECS (ECommerceSOAP`)](ECS-Server)
-* [`IAS (IdentityAuthenticationSOAP`)](IAS-Server)
-* [`NUS (NetUpdateSOAP`)](NUS-Server)
+* [`CAS (CatalogingSOAP`)](CAS-Server.md)
+* [`ECS (ECommerceSOAP`)](ECS-Server.md)
+* [`IAS (IdentityAuthenticationSOAP`)](IAS-Server.md)
+* [`NUS (NetUpdateSOAP`)](NUS-Server.md)
 
 The common client certificate is required to access these servers.
 

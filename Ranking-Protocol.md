@@ -1,11 +1,11 @@
-## [[NEX Protocols]] > Ranking (0x70)
+## [NEX Protocols](NEX-Protocols.md) > Ranking (0x70)
 
 The following games have additional methods in the ranking protocol:
-* [Mario Kart 8](Ranking-Protocol-(MK8))
-* [Mario Kart 8 Deluxe](Ranking-Protocol-(MK8D))
-* [Super Smash Bros. 4](Ranking-Protocol-(SSB4))
-* [Splatoon](Ranking-Protocol-(Splatoon))
-* [Splatoon 2](Ranking-Protocol-(Splatoon-2))
+* [Mario Kart 8](Ranking-Protocol-(MK8).md)
+* [Mario Kart 8 Deluxe](Ranking-Protocol-(MK8D).md)
+* [Super Smash Bros. 4](Ranking-Protocol-(SSB4).md)
+* [Splatoon](Ranking-Protocol-(Splatoon).md)
+* [Splatoon 2](Ranking-Protocol-(Splatoon-2).md)
 
 This remainder of this page describes the methods that are not specific to any game.
 
@@ -285,8 +285,8 @@ This method does not return anything.
 | 1 | Global rankings around own entry |
 | 4 | Own ranking only |
 
-[Buffer]: NEX-Common-Types#buffer
-[Structure]: NEX-Common-Types#structure
-[List]: NEX-Common-Types#list
-[PID]: NEX-Common-Types#pid
-[DateTime]: NEX-Common-Types#datetime
+[Buffer]: NEX-Common-Types.md#buffer
+[Structure]: NEX-Common-Types.md#structure
+[List]: NEX-Common-Types.md#list
+[PID]: NEX-Common-Types.md#pid
+[DateTime]: NEX-Common-Types.md#datetime

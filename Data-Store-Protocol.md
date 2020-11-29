@@ -1,11 +1,11 @@
-## [[NEX Protocols]] > Data Store (0x73)
+## [NEX Protocols](NEX-Protocols.md) > Data Store (0x73)
 
 The following games have additional methods in the datastore protocol:
-* [Super Mario Maker](Data-Store-Protocol-(SMM))
-* [Super Mario Maker 2](Data-Store-Protocol-(SMM-2))
-* [Super Mario Odyssey](Data-Store-Protocol-(SMO))
-* [Super Smash Bros. 4](Data-Store-Protocol-(SSB4))
-* [Splatoon 2](Data-Store-Protocol-(Splatoon-2))
+* [Super Mario Maker](Data-Store-Protocol-(SMM).md)
+* [Super Mario Maker 2](Data-Store-Protocol-(SMM-2).md)
+* [Super Mario Odyssey](Data-Store-Protocol-(SMO).md)
+* [Super Smash Bros. 4](Data-Store-Protocol-(SSB4).md)
+* [Splatoon 2](Data-Store-Protocol-(Splatoon-2).md)
 
 This remainder of this page describes the methods that are not specific to any game.
 
@@ -977,16 +977,16 @@ This method does not return anything.
 | Sint8 | periodHour |
 | Sint16 | periodDuration |
 
-[Result]: NEX-Common-Types#result
-[String]: NEX-Common-Types#string
-[Buffer]: NEX-Common-Types#buffer
-[qBuffer]: NEX-Common-Types#qbuffer
-[List]: NEX-Common-Types#list
-[Map]: NEX-Common-Types#map
-[DateTime]: NEX-Common-Types#datetime
-[Structure]: NEX-Common-Types#structure
-[Data]: NEX-Common-Types#anydataholder
-[PID]: NEX-Common-Types#pid
+[Result]: NEX-Common-Types.md#result
+[String]: NEX-Common-Types.md#string
+[Buffer]: NEX-Common-Types.md#buffer
+[qBuffer]: NEX-Common-Types.md#qbuffer
+[List]: NEX-Common-Types.md#list
+[Map]: NEX-Common-Types.md#map
+[DateTime]: NEX-Common-Types.md#datetime
+[Structure]: NEX-Common-Types.md#structure
+[Data]: NEX-Common-Types.md#anydataholder
+[PID]: NEX-Common-Types.md#pid
 
 [DataStorePrepareGetParamV1]: #datastorepreparegetparamv1-structure
 [DataStoreReqGetInfoV1]: #datastorereqgetinfov1-structure
@@ -1032,5 +1032,5 @@ This method does not return anything.
 [DataStoreRatingInitParamWithSlot]: #datastoreratinginitparamwithslot-structure
 [DataStorePersistenceInitParam]: #datastorepersistenceinitparam-structure
 [DataStoreChangeMetaCompareParam]: #datastorechangemetacompareparam-structure
-[ResultRange]: NEX-Common-Types#resultrange-structure
+[ResultRange]: NEX-Common-Types.md#resultrange-structure
 [DataStoreRatingInitParam]: #datastoreratinginitparam-structure

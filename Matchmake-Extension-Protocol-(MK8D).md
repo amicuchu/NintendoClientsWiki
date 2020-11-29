@@ -1,4 +1,4 @@
-## [[NEX Protocols]] > [Matchmake Extension (0x6D)](Matchmake-Extension-Protocol) > MK8 Deluxe
+## [NEX Protocols](NEX-Protocols.md) > [Matchmake Extension (0x6D)](Matchmake-Extension-Protocol.md) > MK8 Deluxe
 
 This page describes the methods that are only seen in Mario Kart 8 Deluxe.
 
@@ -32,16 +32,16 @@ This page describes the methods that are only seen in Mario Kart 8 Deluxe.
 | --- | --- |
 | [List]&lt;[SimplePlayingSession]&gt; | Playing sessions |
 
-[SimplePlayingSession]: Match-Making-Types#simpleplayingsession-structure
+[SimplePlayingSession]: Match-Making-Types.md#simpleplayingsession-structure
 
-[Result]: NEX-Common-Types#result
-[String]: NEX-Common-Types#string
-[Buffer]: NEX-Common-Types#buffer
-[qBuffer]: NEX-Common-Types#qbuffer
-[List]: NEX-Common-Types#list
-[Map]: NEX-Common-Types#map
-[DateTime]: NEX-Common-Types#datetime
-[Structure]: NEX-Common-Types#structure
-[Data]: NEX-Common-Types#anydataholder
-[PID]: NEX-Common-Types#pid
-[ResultRange]: NEX-Common-Types#resultrange-structure
+[Result]: NEX-Common-Types.md#result
+[String]: NEX-Common-Types.md#string
+[Buffer]: NEX-Common-Types.md#buffer
+[qBuffer]: NEX-Common-Types.md#qbuffer
+[List]: NEX-Common-Types.md#list
+[Map]: NEX-Common-Types.md#map
+[DateTime]: NEX-Common-Types.md#datetime
+[Structure]: NEX-Common-Types.md#structure
+[Data]: NEX-Common-Types.md#anydataholder
+[PID]: NEX-Common-Types.md#pid
+[ResultRange]: NEX-Common-Types.md#resultrange-structure

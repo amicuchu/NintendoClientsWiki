@@ -1,4 +1,4 @@
-## [[NEX Protocols]] > [Data Store (0x73)](Data-Store-Protocol) > Splatoon 2
+## [NEX Protocols](NEX-Protocols.md) > [Data Store (0x73)](Data-Store-Protocol.md) > Splatoon 2
 
 This page describes the methods that are only seen in Splatoon 2.
 | Method ID | Method Name |
@@ -373,17 +373,17 @@ This method does not return anything.
 | --- | --- |
 | [Map]&lt;Sint32, [StageTimeAttackInfo]&gt; | stageInfos |
 
-[Result]: NEX-Common-Types#result
-[String]: NEX-Common-Types#string
-[Buffer]: NEX-Common-Types#buffer
-[qBuffer]: NEX-Common-Types#qbuffer
-[List]: NEX-Common-Types#list
-[Map]: NEX-Common-Types#map
-[DateTime]: NEX-Common-Types#date-time
-[Structure]: NEX-Common-Types#structure
-[Data]: NEX-Common-Types#any-data-holder
-[PID]: NEX-Common-Types#pid
-[Variant]: NEX-Common-Types#variant
+[Result]: NEX-Common-Types.md#result
+[String]: NEX-Common-Types.md#string
+[Buffer]: NEX-Common-Types.md#buffer
+[qBuffer]: NEX-Common-Types.md#qbuffer
+[List]: NEX-Common-Types.md#list
+[Map]: NEX-Common-Types.md#map
+[DateTime]: NEX-Common-Types.md#date-time
+[Structure]: NEX-Common-Types.md#structure
+[Data]: NEX-Common-Types.md#any-data-holder
+[PID]: NEX-Common-Types.md#pid
+[Variant]: NEX-Common-Types.md#variant
 
 [CoconutMeta]: #coconutmeta-structure
 [CoconutGetParam]: #coconutgetparam-structure
@@ -396,12 +396,12 @@ This method does not return anything.
 [OrderedInfo]: #orderedinfo-structure
 [TimeAttackInfo]: #timeattackinfo-structure
 [CalicoFesStatsV2]: #calicofesstatsv2-structure
-[DataStoreReqGetInfo]: Data-Store-Protocol#datastorereqgetinfo-structure
+[DataStoreReqGetInfo]: Data-Store-Protocol.md#datastorereqgetinfo-structure
 [CalicoPlayerSimple]: #calicoplayersimple-structure
 [CalicoPlayerResult]: #calicoplayerresult-structure
 [CalicoStatsBase]: #calicostatsbase-structure
 [StageTimeAttackWeapon]: #stagetimeattackweapon-structure
 [StageTimeAttackInfo]: #stagetimeattackinfo-structure
 
-[DataStoreReqGetInfo]: Data-Store-Protocol#datastorereqgetinfo-structure
-[DataStoreReqPostInfo]: Data-Store-Protocol#datastorereqpostinfo-structure
+[DataStoreReqGetInfo]: Data-Store-Protocol.md#datastorereqgetinfo-structure
+[DataStoreReqPostInfo]: Data-Store-Protocol.md#datastorereqpostinfo-structure

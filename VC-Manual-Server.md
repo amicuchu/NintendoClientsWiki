@@ -1,4 +1,4 @@
-## [[Server List]] > VC Manuals
+## [Server List](Server-List.md) > VC Manuals
 
 This server provides manuals for Wii games.
 

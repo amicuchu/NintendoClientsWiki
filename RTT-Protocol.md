@@ -1,4 +1,4 @@
-[[PIA Protocols]] > RTT Protocol
+[PIA Protocols](PIA-Protocols.md) > RTT Protocol
 ---
 
 All messages are sent through port 1 and contain the following payload:

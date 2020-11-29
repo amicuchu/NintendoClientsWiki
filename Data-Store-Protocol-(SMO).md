@@ -1,4 +1,4 @@
-## [[NEX Protocols]] > [Data Store (0x73)](Data-Store-Protocol) > SMO
+## [NEX Protocols](NEX-Protocols.md) > [Data Store (0x73)](Data-Store-Protocol.md) > SMO
 
 This page describes the methods that are only seen in Super Mario Odyssey.
 
@@ -168,15 +168,15 @@ This method does not return anything.
 [DataStoreSearchBalloonResult]: #datastoresearchballoonresult-structure
 [DataStoreFetchMyInfosBalloonResult]: #datastorefetchmyinfosballoonresult-structure
 [DataStoreFetchMyInfosAchievementResult]: #datastorefetchmyinfosachievementresult-structure
-[DataStoreRatingInfo]: Data-Store-Protocol#datastoreratinginfo-structure
+[DataStoreRatingInfo]: Data-Store-Protocol.md#datastoreratinginfo-structure
 
-[Result]: NEX-Common-Types#result
-[String]: NEX-Common-Types#string
-[Buffer]: NEX-Common-Types#buffer
-[qBuffer]: NEX-Common-Types#qbuffer
-[List]: NEX-Common-Types#list
-[Map]: NEX-Common-Types#map
-[DateTime]: NEX-Common-Types#datetime
-[Structure]: NEX-Common-Types#structure
-[Data]: NEX-Common-Types#anydataholder
-[PID]: NEX-Common-Types#pid
+[Result]: NEX-Common-Types.md#result
+[String]: NEX-Common-Types.md#string
+[Buffer]: NEX-Common-Types.md#buffer
+[qBuffer]: NEX-Common-Types.md#qbuffer
+[List]: NEX-Common-Types.md#list
+[Map]: NEX-Common-Types.md#map
+[DateTime]: NEX-Common-Types.md#datetime
+[Structure]: NEX-Common-Types.md#structure
+[Data]: NEX-Common-Types.md#anydataholder
+[PID]: NEX-Common-Types.md#pid

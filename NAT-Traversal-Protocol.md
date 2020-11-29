@@ -1,4 +1,4 @@
-[[NEX Protocols]] > NAT Traversal (0x03)
+[NEX Protocols](NEX-Protocols.md) > NAT Traversal (0x03)
 ---
 
 | Method ID | Method Name |
@@ -87,7 +87,7 @@ This method does not take any parameters.
 ## Response
 This method does not return anything.
 
-[String]: NEX-Common-Types#string
-[List]: NEX-Common-Types#list
-[StationURL]: NEX-Common-Types#stationurl
-[DateTime]: NEX-Common-Types#datetime
+[String]: NEX-Common-Types.md#string
+[List]: NEX-Common-Types.md#list
+[StationURL]: NEX-Common-Types.md#stationurl
+[DateTime]: NEX-Common-Types.md#datetime

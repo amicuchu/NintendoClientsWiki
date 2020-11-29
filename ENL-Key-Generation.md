@@ -1,4 +1,4 @@
-The page describes how [ENL](ENL-Protocol) generates the game-specific key for the [LAN protocol](LAN-Protocol). If you are only looking for the keys themselves, check out the page about the [LAN protocol](LAN-Protocol#game-specific-keys).
+The page describes how [ENL](ENL-Protocol.md) generates the game-specific key for the [LAN protocol](LAN-Protocol.md). If you are only looking for the keys themselves, check out the page about the [LAN protocol](LAN-Protocol.md#game-specific-keys).
 
 ### Algorithm
 

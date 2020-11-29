@@ -1,4 +1,4 @@
-## [[NEX Protocols]] > Secure Connection (0x0B)
+## [NEX Protocols](NEX-Protocols.md) > Secure Connection (0x0B)
 
 | Method ID | Method Name |
 | --- | --- |
@@ -107,10 +107,10 @@ This method does not return anything.
 ## Response
 This method does not return anything.
 
-[Result]: NEX-Common-Types#result
-[qBuffer]: NEX-Common-Types#qbuffer
-[List]: NEX-Common-Types#list
-[String]: NEX-Common-Types#string
-[StationURL]: NEX-Common-Types#stationurl
-[Data]: NEX-Common-Types#anydataholder
-[Structure]: NEX-Common-Types#structure
+[Result]: NEX-Common-Types.md#result
+[qBuffer]: NEX-Common-Types.md#qbuffer
+[List]: NEX-Common-Types.md#list
+[String]: NEX-Common-Types.md#string
+[StationURL]: NEX-Common-Types.md#stationurl
+[Data]: NEX-Common-Types.md#anydataholder
+[Structure]: NEX-Common-Types.md#structure

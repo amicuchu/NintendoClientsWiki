@@ -1,4 +1,4 @@
-[[NEX Protocols]] > Remote Log Device (0x01)
+[NEX Protocols](NEX-Protocols.md) > Remote Log Device (0x01)
 ---
 
 | Method ID | Method Name |
@@ -14,4 +14,4 @@
 ## Response
 This method does not return anything.
 
-[String]: NEX-Common-Types#string
+[String]: NEX-Common-Types.md#string

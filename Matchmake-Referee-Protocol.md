@@ -1,4 +1,4 @@
-## [[NEX Protocols]] > Matchmake Referee (0x78)
+## [NEX Protocols](NEX-Protocols.md) > Matchmake Referee (0x78)
 
 | Method ID | Method Name |
 | --- | --- |
@@ -160,14 +160,14 @@ This method does not return anything.
 | Uint8 | Unknown (Y) |
 | Uint32 | Unknown (Z) |
 
-[Result]: NEX-Common-Types#result
-[String]: NEX-Common-Types#string
-[Buffer]: NEX-Common-Types#buffer
-[qBuffer]: NEX-Common-Types#qbuffer
-[List]: NEX-Common-Types#list
-[Map]: NEX-Common-Types#map
-[DateTime]: NEX-Common-Types#datetime
-[Structure]: NEX-Common-Types#structure
-[Data]: NEX-Common-Types#anydataholder
-[PID]: NEX-Common-Types#pid
-[ResultRange]: NEX-Common-Types#resultrange-structure
+[Result]: NEX-Common-Types.md#result
+[String]: NEX-Common-Types.md#string
+[Buffer]: NEX-Common-Types.md#buffer
+[qBuffer]: NEX-Common-Types.md#qbuffer
+[List]: NEX-Common-Types.md#list
+[Map]: NEX-Common-Types.md#map
+[DateTime]: NEX-Common-Types.md#datetime
+[Structure]: NEX-Common-Types.md#structure
+[Data]: NEX-Common-Types.md#anydataholder
+[PID]: NEX-Common-Types.md#pid
+[ResultRange]: NEX-Common-Types.md#resultrange-structure

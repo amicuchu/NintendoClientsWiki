@@ -1,4 +1,4 @@
-## [[NEX Protocols]] > Friends Wii U (0x66)
+## [NEX Protocols](NEX-Protocols.md) > Friends Wii U (0x66)
 Official name: NintendoFriendPresenceV2Protocol
 
 | Method ID | Method Name |
@@ -393,8 +393,8 @@ Specifies which fields changed their value recently.
 [PrincipalPreference]: #principalpreference
 [PrincipalRequestBlockSetting]: #principalrequestblocksetting
 
-[DateTime]: NEX-Common-Types#datetime
-[List]: NEX-Common-Types#list
-[String]: NEX-Common-Types#string
-[Buffer]: NEX-Common-Types#buffer
-[PID]: NEX-Common-Types#pid
+[DateTime]: NEX-Common-Types.md#datetime
+[List]: NEX-Common-Types.md#list
+[String]: NEX-Common-Types.md#string
+[Buffer]: NEX-Common-Types.md#buffer
+[PID]: NEX-Common-Types.md#pid

@@ -1,4 +1,4 @@
-[[PIA Protocols]] > Mesh Protocol
+[PIA Protocols](PIA-Protocols.md) > Mesh Protocol
 ---
 
 | Protocol Port | Description |
@@ -140,5 +140,5 @@ Because this message is sent through the reliable mesh protocol it does not need
 | 0xB | 1 | Always 0 |
 | 0xC | | [StationInfo] entries |
 
-[StationAddress]: PIA-Types#stationaddress
-[StationInfo]: PIA-Types#stationinfo
+[StationAddress]: PIA-Types.md#stationaddress
+[StationInfo]: PIA-Types.md#stationinfo

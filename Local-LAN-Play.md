@@ -1,1 +1,1 @@
-This page has been moved here: [[LAN Protocol]].
+This page has been moved here: [LAN Protocol](LAN-Protocol.md).

@@ -1,4 +1,4 @@
-[[Server List]] > Account Server (Switch)
+[Server List](Server-List.md) > Account Server (Switch)
 ---
 
 This server takes form-encoded requests and responds with json-encoding.

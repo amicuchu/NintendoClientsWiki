@@ -1,4 +1,4 @@
-## [[NEX Protocols]] > Match Making (0x15)
+## [NEX Protocols](NEX-Protocols.md) > Match Making (0x15)
 
 | Method ID | Method Name |
 | --- | --- |
@@ -554,15 +554,15 @@ This method does not return anything.
 ## Response
 This method does not return anything.
 
-[String]: NEX-Common-Types#string
-[StationURL]: NEX-Common-Types#stationurl
-[List]: NEX-Common-Types#list
-[PID]: NEX-Common-Types#pid
-[Data]: NEX-Common-Types#anydataholder
-[Structure]: NEX-Common-Types#structure
-[ResultRange]: NEX-Common-Types#resultrange-structure
-[Gathering]: Match-Making-Types#gathering-structure
-[GatheringStats]: Match-Making-Types#gatheringstats-structure
-[ParticipantDetails]: Match-Making-Types#participantdetails-structure
-[Invitation]: Match-Making-Types#invitation-structure
-[DeletionEntry]: Match-Making-Types#deletionentry-structure
+[String]: NEX-Common-Types.md#string
+[StationURL]: NEX-Common-Types.md#stationurl
+[List]: NEX-Common-Types.md#list
+[PID]: NEX-Common-Types.md#pid
+[Data]: NEX-Common-Types.md#anydataholder
+[Structure]: NEX-Common-Types.md#structure
+[ResultRange]: NEX-Common-Types.md#resultrange-structure
+[Gathering]: Match-Making-Types.md#gathering-structure
+[GatheringStats]: Match-Making-Types.md#gatheringstats-structure
+[ParticipantDetails]: Match-Making-Types.md#participantdetails-structure
+[Invitation]: Match-Making-Types.md#invitation-structure
+[DeletionEntry]: Match-Making-Types.md#deletionentry-structure

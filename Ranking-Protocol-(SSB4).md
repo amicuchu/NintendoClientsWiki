@@ -1,4 +1,4 @@
-## [[NEX Protocols]] > [Ranking Protocol (0x70)](Ranking-Protocol) > SSB4
+## [NEX Protocols](NEX-Protocols.md) > [Ranking Protocol (0x70)](Ranking-Protocol.md) > SSB4
 
 This page describes the methods that are only seen in Super Smash Bros. 4. The protocol has been renamed from `RankingProtocol` to `CrossProtocol`.
 

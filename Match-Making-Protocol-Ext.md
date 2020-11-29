@@ -1,4 +1,4 @@
-## [[NEX Protocols]] > Match Making Ext (0x32)
+## [NEX Protocols](NEX-Protocols.md) > Match Making Ext (0x32)
 
 | Method ID | Method Name |
 | --- | --- |
@@ -78,9 +78,9 @@
 ## Response
 This method does not return anything.
 
-[List]: NEX-Common-Types#list
-[PID]: NEX-Common-Types#pid
-[String]: NEX-Common-Types#string
-[Structure]: NEX-Common-Types#structure
-[ParticipantDetails]: Match-Making-Types#participantdetails-structure
-[GatheringURLs]: Match-Making-Types#gatheringurls-structure
+[List]: NEX-Common-Types.md#list
+[PID]: NEX-Common-Types.md#pid
+[String]: NEX-Common-Types.md#string
+[Structure]: NEX-Common-Types.md#structure
+[ParticipantDetails]: Match-Making-Types.md#participantdetails-structure
+[GatheringURLs]: Match-Making-Types.md#gatheringurls-structure

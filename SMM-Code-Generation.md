@@ -9,7 +9,7 @@ The second field is easy: it always consists of zeros.
 
 The last two fields contain the data id that was generated when the level was uploaded. In this case: `0x3D1D4F = 4005199`.
 
-The first field contains a checksum that depends on the data id. Interestingly, the game uses the function that calculates the signature of a [PRUDP V0](PRUDP-Protocol#v0-format) packet here. This function basically returns the first four bytes of a HMAC-MD5 in reversed byte order, where the key is the MD5 hash of the [access key](Game-Server-List). In this case, the HMAC is calculated over the 8-byte data id in little endian byte order. To combine the checksum with the data id, the two most significant bytes are inserted into the first field of the level code. Because the the checksum was returned in little endian byte order, this is actually the same as the third and fourth byte of the HMAC in reversed order.
+The first field contains a checksum that depends on the data id. Interestingly, the game uses the function that calculates the signature of a [PRUDP V0](PRUDP-Protocol.md#v0-format) packet here. This function basically returns the first four bytes of a HMAC-MD5 in reversed byte order, where the key is the MD5 hash of the [access key](Game-Server-List.md). In this case, the HMAC is calculated over the 8-byte data id in little endian byte order. To combine the checksum with the data id, the two most significant bytes are inserted into the first field of the level code. Because the the checksum was returned in little endian byte order, this is actually the same as the third and fourth byte of the HMAC in reversed order.
 
 To make this clear, let's walk through the checksum algorithm step by step:
 1. The access key of Super Mario Maker is `9f2b4678`.

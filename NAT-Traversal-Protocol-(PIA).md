@@ -1,4 +1,4 @@
-[[PIA Protocols]] > NAT Traversal
+[PIA Protocols](PIA-Protocols.md) > NAT Traversal
 ---
 
 | Protocol Port | Description |
@@ -25,7 +25,7 @@
 # NatProbeData
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 4 | Connection id (from [SecureConnection.Register](https://github.com/Kinnay/NintendoClients/wiki/Secure-Protocol#1-register)) |
+| 0x0 | 4 | Connection id (from [SecureConnection.Register](Secure-Protocol#1-register)) |
 | 0x4 | 1 | Probe type (0=request 1=response) |
 | 0x5 | 3 | Padding |
 | 0x8 | 8 | System time (OSGetSystemTime on Wii U, nn::os::GetSystemTick on Switch) |

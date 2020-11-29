@@ -1,4 +1,4 @@
-## [[NEX Protocols]] > Subscriber (0x79)
+## [NEX Protocols](NEX-Protocols.md) > Subscriber (0x79)
 
 | Method ID | Method Name |
 | --- | --- |
@@ -140,13 +140,13 @@ This method does not return anything.
 | [PID] | User id |
 | [List]&lt;[qBuffer]&gt; | Unknown |
 
-[Result]: NEX-Common-Types#result
-[String]: NEX-Common-Types#string
-[PID]: NEX-Common-Types#pid
-[DateTime]: NEX-Common-Types#datetime
-[Data]: NEX-Common-Types#anydataholder
-[List]: NEX-Common-Types#list
-[ResultRange]: NEX-Common-Types#resultrange-structure
-[Structure]: NEX-Common-Types#structure
-[qBuffer]: NEX-Common-Types#qbuffer
-[Buffer]: NEX-Common-Types#buffer
+[Result]: NEX-Common-Types.md#result
+[String]: NEX-Common-Types.md#string
+[PID]: NEX-Common-Types.md#pid
+[DateTime]: NEX-Common-Types.md#datetime
+[Data]: NEX-Common-Types.md#anydataholder
+[List]: NEX-Common-Types.md#list
+[ResultRange]: NEX-Common-Types.md#resultrange-structure
+[Structure]: NEX-Common-Types.md#structure
+[qBuffer]: NEX-Common-Types.md#qbuffer
+[Buffer]: NEX-Common-Types.md#buffer

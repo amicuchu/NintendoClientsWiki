@@ -1,4 +1,4 @@
-[[PIA Protocols]] > Types
+[PIA Protocols](PIA-Protocols.md) > Types
 ---
 
 | Table of Contents |
@@ -33,14 +33,14 @@
 | [StationLocation](#stationlocation) | Local station location |
 
 ## StationLocation
-This structure holds fields that are directly taken from a [StationURL](NEX-Common-Types#station-url).
+This structure holds fields that are directly taken from a [StationURL](NEX-Common-Types.md#station-url).
 
 *Wii U and Switch (up to 5.9):*
 
 | Type | Description |
 | --- | --- |
 | [StationAddress](#stationaddress) | Station address |
-| [PID](NEX-Common-Types#pid) | PID |
+| [PID](NEX-Common-Types.md#pid) | PID |
 | Uint32 | CID |
 | Uint32 | RVCID |
 | Uint8 | Url type (1=prudp 2=prudps 3=udp) |
@@ -59,7 +59,7 @@ This structure holds fields that are directly taken from a [StationURL](NEX-Comm
 | [InetAddress](#inetaddress) | Public address |
 | [InetAddress](#inetaddress) | Local address |
 | [InetAddress](#inetaddress) | Relay address |
-| [PID](NEX-Common-Types#pid) | PID |
+| [PID](NEX-Common-Types.md#pid) | PID |
 | Uint32 | CID |
 | Uint32 | RVCID |
 | Uint8 | `0x3`: natf<br>`0xC`: natm |
@@ -76,7 +76,7 @@ This structure holds fields that are directly taken from a [StationURL](NEX-Comm
 | [InetAddress](#inetaddress) | Public address (encoding depends on size) |
 | [InetAddress](#inetaddress) | Local address (encoding depends on size) |
 | [InetAddress](#inetaddress) | Relay address (old encoding) |
-| [PID](NEX-Common-Types#pid) | PID |
+| [PID](NEX-Common-Types.md#pid) | PID |
 | Uint32 | CID |
 | Uint32 | RVCID |
 | Uint8 | `0x3`: natf<br>`0xC`: natm |

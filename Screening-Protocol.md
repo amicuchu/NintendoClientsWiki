@@ -1,4 +1,4 @@
-## [[NEX Protocols]] > Screening (0x7C)
+## [NEX Protocols](NEX-Protocols.md) > Screening (0x7C)
 
 | Method ID | Method Name |
 | --- | --- |

@@ -1,4 +1,4 @@
-## [[Server List]] > Tagaya Server
+## [Server List](Server-List.md) > Tagaya Server
 
 This server is at https://tagaya.wup.shop.nintendo.net.
 

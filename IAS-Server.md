@@ -1,4 +1,4 @@
-## [[SOAP Services]] > IdentityAuthenticationSOAP (IAS)
+## [SOAP Services](SOAP-Services.md) > IdentityAuthenticationSOAP (IAS)
 
 | Platform | Server |
 | --- | --- |

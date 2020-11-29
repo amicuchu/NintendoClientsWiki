@@ -1,4 +1,4 @@
-[[Server List]] > Account Server (Wii U)
+[Server List](Server-List.md) > Account Server (Wii U)
 ---
 
 The account server always responds with an XML body. GET requests are form-encoded. POST and PUT requests have an XML body.

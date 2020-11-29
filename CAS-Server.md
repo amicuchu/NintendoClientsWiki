@@ -1,4 +1,4 @@
-## [[SOAP Services]] > CatalogingSOAP (CAS)
+## [SOAP Services](SOAP-Services.md) > CatalogingSOAP (CAS)
 
 | Platform | Server |
 | --- | --- |

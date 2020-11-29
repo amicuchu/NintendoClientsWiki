@@ -1,5 +1,5 @@
-## [[NEX Protocols]] > Utility (0x6E)
-Splatoon 2 extends this protocol with additional methods. See [[Utility Protocol (Splatoon 2)]].
+## [NEX Protocols](NEX-Protocols.md) > Utility (0x6E)
+Splatoon 2 extends this protocol with additional methods. See [Utility Protocol (Splatoon 2)](Utility-Protocol-(Splatoon-2)).
 
 | Method ID | Method Name |
 | --- | --- |
@@ -95,11 +95,11 @@ This method does not take any parameters.
 | Uint64 | nexUniqueId |
 | Uint64 | nexUniqueIdPassword |
 
-[String]: NEX-Common-Types#string
-[Buffer]: NEX-Common-Types#buffer
-[List]: NEX-Common-Types#list
-[Map]: NEX-Common-Types#map
-[Structure]: NEX-Common-Types#structure
-[Data]: NEX-Common-Types#anydataholder
+[String]: NEX-Common-Types.md#string
+[Buffer]: NEX-Common-Types.md#buffer
+[List]: NEX-Common-Types.md#list
+[Map]: NEX-Common-Types.md#map
+[Structure]: NEX-Common-Types.md#structure
+[Data]: NEX-Common-Types.md#anydataholder
 
 [UniqueIdInfo]: #uniqueidinfo-structure

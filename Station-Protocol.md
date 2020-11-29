@@ -1,4 +1,4 @@
-[[PIA Protocols]] > Station Protocol
+[PIA Protocols](PIA-Protocols.md) > Station Protocol
 ---
 
 | Message Type | Description |
@@ -148,6 +148,6 @@ Version numbers for [connection request](#connection-request) and [response](#co
 | 0x1 | 3 | Padding |
 | 0x4 | 4 | Ack id |
 
-[StationConnectionInfo]: PIA-Types#stationconnectioninfo
-[StationLocation]: PIA-Types#stationlocation
-[IdentificationInfo]: PIA-Types#identificationinfo
+[StationConnectionInfo]: PIA-Types.md#stationconnectioninfo
+[StationLocation]: PIA-Types.md#stationlocation
+[IdentificationInfo]: PIA-Types.md#identificationinfo

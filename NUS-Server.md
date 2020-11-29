@@ -1,4 +1,4 @@
-## [[SOAP Services]] > NetUpdateSOAP (NUS)
+## [SOAP Services](SOAP-Services.md) > NetUpdateSOAP (NUS)
 
 | Platform | Server |
 | --- | --- |
