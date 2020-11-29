@@ -6,29 +6,29 @@ Since the release of the Nintendo Switch, nintendo replaced spotpass and notific
 
 Domain name | Description
 --- | ---
-`bcat-data-&lt;enviroment&gt;.cdn.nintendo.nintendo.net` | This domain contains the content which is directly delivered to intended applications
-`bcat-topics-&lt;enviroment&gt;.cdn.nintendo.nintendo.net` | This domain contains the topics avaiable including a description of it, the topics related to an application and a list of all news
-`bcat-list-&lt;enviroment&gt;.cdn.nintendo.nintendo.net` | This domain contains the listings that describe which content is avaiable to applications and how is presented inside filesystem hierarcy
+`bcat-data-<enviroment>.cdn.nintendo.nintendo.net` | This domain contains the content which is directly delivered to intended applications
+`bcat-topics-<enviroment>.cdn.nintendo.nintendo.net` | This domain contains the topics avaiable including a description of it, the topics related to an application and a list of all news
+`bcat-list-<enviroment>.cdn.nintendo.nintendo.net` | This domain contains the listings that describe which content is avaiable to applications and how is presented inside filesystem hierarcy
 
 #### Bcat container kinds
 
 Kind | URL where appears | Description
 --- | --- | ---
-Data | `https://bcat-data-&lt;enviroment&gt;.cdn.nintendo.nintendo.net/api/nx/v1/data` | The data that is delivered to applications
-News | `https://bcat-data-&lt;enviroment&gt;.cdn.nintendo.nintendo.net/api/nx/v1/news` | The standalone complete news
-News summary | `https://bcat-data-&lt;enviroment&gt;.cdn.nintendo.nintendo.net/api/nx/v2/news_summaries` | A fragment of a certain news enough to represent it in a list
-List | `https://bcat-list-&lt;enviroment&gt;.cdn.nintendo.nintendo.net/api/nx/v1/list` | A list of data containers which composes the filesystem presented to the application
-Title | `https://bcat-topics-&lt;enviroment&gt;.cdn.nintendo.nintendo.net/api/nx/v1/titles` | Contains the name of the topic associated to an application
-Topic details | `https://bcat-topics-&lt;enviroment&gt;.cdn.nintendo.nintendo.net/api/nx/v1/topics/&lt;topic id&gt;/detail` | Description of a topic
-Topic icon | `https://bcat-topics-&lt;enviroment&gt;.cdn.nintendo.nintendo.net/api/nx/v1/topics/&lt;topic id&gt;/icon` | Icon of a topic
-Catalog | `https://bcat-topics-&lt;enviroment&gt;.cdn.nintendo.nintendo.net/api/nx/v1/topics/catalog` | The list of avaiable topics
-Online archive | `https://bcat-topics-&lt;enviroment&gt;.cdn.nintendo.nintendo.net/api/nx/v2/topics/` | List of news summaries avaiable for a topic
+Data | `https://bcat-data-<enviroment>.cdn.nintendo.nintendo.net/api/nx/v1/data` | The data that is delivered to applications
+News | `https://bcat-data-<enviroment>.cdn.nintendo.nintendo.net/api/nx/v1/news` | The standalone complete news
+News summary | `https://bcat-data-<enviroment>.cdn.nintendo.nintendo.net/api/nx/v2/news_summaries` | A fragment of a certain news enough to represent it in a list
+List | `https://bcat-list-<enviroment>.cdn.nintendo.nintendo.net/api/nx/v1/list` | A list of data containers which composes the filesystem presented to the application
+Title | `https://bcat-topics-<enviroment>.cdn.nintendo.nintendo.net/api/nx/v1/titles` | Contains the name of the topic associated to an application
+Topic details | `https://bcat-topics-<enviroment>.cdn.nintendo.nintendo.net/api/nx/v1/topics/<topic id>/detail` | Description of a topic
+Topic icon | `https://bcat-topics-<enviroment>.cdn.nintendo.nintendo.net/api/nx/v1/topics/<topic id>/icon` | Icon of a topic
+Catalog | `https://bcat-topics-<enviroment>.cdn.nintendo.nintendo.net/api/nx/v1/topics/catalog` | The list of avaiable topics
+Online archive | `https://bcat-topics-<enviroment>.cdn.nintendo.nintendo.net/api/nx/v2/topics/` | List of news summaries avaiable for a topic
 
 *Paths in the previous table aren't complete, refer to individual pages of every kind*
 
 #### Flow diagram
 
-![](bcat flow.png)
+![Bcat Flow](bcat%20flow.png)
 
 #### Bcat passphrase
 

@@ -25,4 +25,4 @@ Welcome to the NintendoClients wiki!
 * [SMM Code Generation](SMM-Code-Generation.md)
 * [DDL Parse Trees](DDL-Parse-Trees.md)
 
-** This wiki is a fork of [Kinnay's wiki](https://github.com/Kinnay/NintendoClients/wiki) under MIT license **
+**This wiki is a fork of [Kinnay's wiki](https://github.com/Kinnay/NintendoClients/wiki) under MIT license**
