@@ -24,3 +24,5 @@ Welcome to the NintendoClients wiki!
 * [Mario Kart 8 Protocol](Mario-Kart-8-Protocol.md)
 * [SMM Code Generation](SMM-Code-Generation.md)
 * [DDL Parse Trees](DDL-Parse-Trees.md)
+
+** This wiki is a fork of [Kinnay's wiki](https://github.com/Kinnay/NintendoClients/wiki) under MIT license **
